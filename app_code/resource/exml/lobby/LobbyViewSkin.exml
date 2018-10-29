@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LobbyViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<e:Image id="bgImg" smoothing="true" scale9Grid="10,10,10,10" source="page_bg_jpg" width="100%" height="100%" verticalCenter="0" horizontalCenter="0"/>
+	<e:Group width="200" height="200" x="318" y="397"/>
+
+
+<e:Scroller id="game_scr" width="100%"  scrollPolicyH="off" horizontalCenter="0" top="120" locked="true">
+	<e:Group width="100%" height="100%" y="0" touchEnabled="false">
+
+		<e:Group id="bjl_grp" x="70" y="31" touchChildren="true" touchEnabled="true">
+
+
+			<e:Button id="bjl_icon" label="" x="0" y="6">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="bjl_icon" source.down="bjl_icon2"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+
+			</e:Button>
+			<e:Image id="bjl_bg" source="smallRoad" x="136" y="0" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" smoothing="true" touchEnabled="false"/>
+			<e:Label id="bjlnum_txt" text="8" x="137.63" y="9" anchorOffsetX="0" width="35" size="18" textAlign="center" rotation="0.8" textColor="0x070707" bold="true" touchEnabled="false"/>
+			<e:Label text="百家乐" x="37.5" y="178" textColor="0x0c0101" bold="true" textAlign="center"/>
+		</e:Group>
+		<e:Group id="longhu_grp" x="306" y="31" touchChildren="true" touchEnabled="false">
+
+
+			<e:Button id="longhu_icon" label="" x="0" y="6">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="lh_icon" source.down="lh_icon2"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+
+			</e:Button>
+			<e:Image id="longhu_bg" source="smallRoad" x="134" y="0" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" smoothing="true" touchEnabled="false"/>
+			<e:Label id="longhu_txt" text="4" x="135" y="9" anchorOffsetX="0" width="35" size="18" textAlign="center" rotation="0.8" textColor="0x000000" bold="true" touchEnabled="false"/>
+			<e:Label text="龙虎" x="46.5" y="178" textColor="0x0C0101" bold="true" textAlign="center"/>
+		</e:Group>
+
+		<e:Group id="nn_grp" x="70" y="260" touchChildren="true" touchEnabled="false">
+
+
+			<e:Button id="nn_icon" label="" x="0" y="6">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="nn_icon" source.down="nn_icon2"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+
+			</e:Button>
+			<e:Image id="nn_bg" source="smallRoad" x="134" y="0" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" smoothing="true" touchEnabled="false"/>
+			<e:Label id="nn_txt" text="0" x="135" y="9" anchorOffsetX="0" width="35" size="18" textAlign="center" rotation="0.8" textColor="0x000000" bold="true" touchEnabled="false"/>
+			<e:Label text="牛牛" x="46.5" y="178" textColor="0x0C0101" bold="true" textAlign="center"/>
+		</e:Group>
+	</e:Group>
+	
+	</e:Scroller>
+
+
+
+
+
+
+
+	<e:Group bottom="1" horizontalCenter="0" width="100%">
+		<e:Image source="bxbg" x="0" y="0" smoothing="true" scale9Grid="10,10,10,10" anchorOffsetX="0" width="100%" anchorOffsetY="0"/>
+		<e:Button id="rolebtn" x="47.5" y="14">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_normal" source.down="btn_light"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="messbtn" x="22" y="14" visible="false">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_normal" source.down="btn_light"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="col_btn" x="205" y="14">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_normal" source.down="btn_light"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="record_btn" x="363" y="14">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_normal" source.down="btn_light"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label text="个人信息" x="48" y="24" size="20" touchEnabled="false" visible="false"/>
+		<e:Label text="会员中心" x="73.5" y="24" size="20" touchEnabled="false"/>
+		<e:Label text="游戏记录" x="231" y="24" size="20" touchEnabled="false"/>
+		<e:Label text="会员报表" x="389" y="24" size="20" touchEnabled="false"/>
+	</e:Group>
+	<e:Group top="0" horizontalCenter="0" width="100%" locked="true">
+		<e:Image source="bxbg" x="0" y="0" smoothing="true" scale9Grid="10,10,10,10" anchorOffsetX="0" width="100%"/>
+		<e:Button id="rt_btn" label="" x="15" y="15">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="rt_btn" source.down="rt_btn2"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label text="选择游戏" x="222" y="22" size="25" textColor="0xd5db08"/>
+	</e:Group>
+
+	<e:Group width="100%" height="22" bottom="84" x="0">
+		<e:Label id="notice_lbl" text="" fontFamily="Microsoft YaHei" size="22" textColor="0xaed6ff" touchEnabled="false" x="0" height="22" y="0"/>
+		<e:Rect id="noticeMask_rec" width="100%" height="22" fillAlpha="1" x="0" y="0"/>
+	</e:Group>
+</e:Skin>

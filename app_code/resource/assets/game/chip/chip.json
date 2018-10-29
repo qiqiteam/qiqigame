@@ -1,0 +1,14 @@
+{"file":"chip.png","frames":{
+"10":{"x":1,"y":273,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"20":{"x":137,"y":205,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"50":{"x":69,"y":205,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"100":{"x":1,"y":205,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"200":{"x":137,"y":137,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"500":{"x":69,"y":137,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"1000":{"x":1,"y":137,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"2000":{"x":137,"y":69,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"5000":{"x":69,"y":69,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"10000":{"x":1,"y":69,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"20000":{"x":137,"y":1,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"50000":{"x":69,"y":1,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66},
+"100000":{"x":1,"y":1,"w":66,"h":66,"offX":0,"offY":0,"sourceW":66,"sourceH":66}}}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoginViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bgImg" x="0" y="0" source="login_jpg" width="100%" height="100%"/>
+
+
+
+
+
+
+
+	<e:Label text="隐私政策 | 服务条款" size="20" bottom="49" horizontalCenter="7.5"/>
+	<e:Label text="@2018版权归属玉和集团" size="20" horizontalCenter="7.5" bottom="24"/>
+
+
+	<e:Group verticalCenter="29.5" horizontalCenter="-2.5">
+		<e:Image x="8" y="91" source="zhanghao" touchEnabled="false"/>
+		<e:Image x="8" y="0" source="zhanghao" touchEnabled="false"/>
+		<e:EditableText id="username_txt" width="290" height="33" text="" x="93" y="15.5" anchorOffsetX="0" anchorOffsetY="0" textColor="0xffffff" size="25" restrict="0-9a-zA-Z"/>
+		<e:EditableText id="passwd_txt" width="290" height="33" text="" x="93" y="107.5" anchorOffsetX="0" anchorOffsetY="0" displayAsPassword="true" restrict="0-9a-zA-Z" textColor="0xffffff" size="25"/>
+		<e:CheckBox id="zzzh_btn" label="" x="34" y="194" selected="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ChooseExt" source.down="ChooseInt"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:CheckBox>
+		<e:Label text="记住账号" x="72" y="195.5" size="20"/>
+		<e:Label text="密码：" x="30" y="110" size="20"/>
+		<e:Label text="账号：" x="33" y="19" size="20"/>
+		<e:Button id="login_btm" label="登入" x="0" y="238.5">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="shine" source.down="btnLightL"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+
+	<e:Image source="logoicon" smoothing="true" verticalCenter="-214" horizontalCenter="-3"/>
+</e:Skin>
