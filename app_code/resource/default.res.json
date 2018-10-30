@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,bg_jpg,loding_json,Bg_dating_qiehuanzhuangshi_png,Bg_img_jpg,btn_28_png,btn_baijiale_png,btn_challenge_0_png,btn_challenge_1_png,btn_game_bg_png,btn_info_0_png,btn_info_1_png,btn_jinhua_png,btn_kefu_0_png,btn_kefu_1_png,btn_niuniu_png,btn_safebox_0_png,btn_safebox_1_png,btn_set_0_png,btn_set_1_png,btn_welfare_0_png,btn_welfare_1_png,coin_bg_png,ding_png,di_bg_png,Font_dating_majianglei_png,Font_dating_majianglei1_png,Font_dating_pukelei_png,Font_dating_pukelei1_png,Font_dating_remenwanfa_png,Font_dating_remenwanfa1_png,Font_dating_youxilei_png,Font_dating_youxilei1_png,game_class_bg_png,generalize_png,head_png,shoppingmall_png,title_bg_png,topup_png,trumpet_png,v_png",
+			"keys": "description_json,bg_jpg,loding_json,Bg_dating_qiehuanzhuangshi_png,Bg_img_jpg,btn_28_png,btn_baijiale_png,btn_challenge_0_png,btn_challenge_1_png,btn_game_bg_png,btn_info_0_png,btn_info_1_png,btn_jinhua_png,btn_kefu_0_png,btn_kefu_1_png,btn_niuniu_png,btn_safebox_0_png,btn_safebox_1_png,btn_set_0_png,btn_set_1_png,btn_welfare_0_png,btn_welfare_1_png,coin_bg_png,ding_png,di_bg_png,Font_dating_majianglei_png,Font_dating_majianglei1_png,Font_dating_pukelei_png,Font_dating_pukelei1_png,Font_dating_remenwanfa_png,Font_dating_remenwanfa1_png,Font_dating_youxilei_png,Font_dating_youxilei1_png,game_class_bg_png,generalize_png,head_png,shoppingmall_png,title_bg_png,topup_png,trumpet_png,v_png,visitor_btn_png,account_btn_png,continue_btn_png,register_btn_png,pop_ups_png,verify_btn_png,login_btn_png,Input_bg_png,title_login_png,title_prompt_png,login_bg_png",
 			"name": "preload"
 		},
 		{
@@ -324,6 +324,61 @@
 			"name": "v_png",
 			"type": "image",
 			"url": "assets/hall/v.png"
+		},
+		{
+			"name": "visitor_btn_png",
+			"type": "image",
+			"url": "assets/login/visitor_btn.png"
+		},
+		{
+			"name": "account_btn_png",
+			"type": "image",
+			"url": "assets/login/account_btn.png"
+		},
+		{
+			"name": "continue_btn_png",
+			"type": "image",
+			"url": "assets/login/continue_btn.png"
+		},
+		{
+			"name": "register_btn_png",
+			"type": "image",
+			"url": "assets/login/register_btn.png"
+		},
+		{
+			"name": "pop_ups_png",
+			"type": "image",
+			"url": "assets/login/pop_ups.png"
+		},
+		{
+			"name": "verify_btn_png",
+			"type": "image",
+			"url": "assets/login/verify_btn.png"
+		},
+		{
+			"name": "login_btn_png",
+			"type": "image",
+			"url": "assets/login/login_btn.png"
+		},
+		{
+			"name": "Input_bg_png",
+			"type": "image",
+			"url": "assets/login/Input_bg.png"
+		},
+		{
+			"name": "title_login_png",
+			"type": "image",
+			"url": "assets/login/title_login.png"
+		},
+		{
+			"name": "title_prompt_png",
+			"type": "image",
+			"url": "assets/login/title_prompt.png"
+		},
+		{
+			"name": "login_bg_png",
+			"type": "image",
+			"url": "assets/login/login_bg.png"
 		}
 	]
 }

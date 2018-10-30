@@ -3,11 +3,29 @@
  * */
 class LoginView extends eui.Component
 {
+
 	public bgImg:eui.Image;
+	public group_btn_0:eui.Group;
+	public visitor_btn:eui.Button;
+	public account_btn:eui.Button;
+	public group_btn_1:eui.Group;
+	public continue_btn:eui.Button;
+	public register_btn:eui.Button;
+	public group_btn_2:eui.Group;
 	public username_txt:eui.EditableText;
 	public passwd_txt:eui.EditableText;
 	public zzzh_btn:eui.CheckBox;
 	public login_btm:eui.Button;
+	public verify_btn:eui.Button;
+
+
+
+
+	//public bgImg:eui.Image;
+	//public username_txt:eui.EditableText;
+	//public passwd_txt:eui.EditableText;
+	//public zzzh_btn:eui.CheckBox;
+	//public login_btm:eui.Button;
 
 
 	private bjlSubscription: boolean = false;
@@ -87,7 +105,34 @@ class LoginView extends eui.Component
 		{
 			this.username_txt.text = "";
 		}
+
+		this.visitor_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
+		this.account_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
+
+		this.continue_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
+		this.register_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
+
 	}
+
+	private _onVisitorLogin(e:egret.TouchEvent):void {
+		this.group_btn_0.visible = false;
+		this.group_btn_1.visible = true;
+	}
+
+	private _onAccountLogin(e:egret.TouchEvent):void {
+		this.group_btn_0.visible = false;
+		this.group_btn_2.visible = true;
+	}
+
+	private _onContinueLogin(e:egret.TouchEvent):void {
+		xlLib.SceneMgr.instance.changeScene(Lobby);
+	}
+
+	private _onRegister(e:egret.TouchEvent):void {
+		
+	}
+
+
 
 	private onTouchHandler(evt:egret.Event):void
 	{
