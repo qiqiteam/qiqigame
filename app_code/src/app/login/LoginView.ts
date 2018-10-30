@@ -107,8 +107,8 @@ class LoginView extends eui.Component
 			data.userName = this.username_txt.text;
 			data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
 			GlobalData.md5PassWord = data.passWord;
-			xlLib.WebSocketMgr.getInstance().connect("192.168.1.36","9081");
-			xlLib.UIMgr.instance.showLoading(TipsLoading);
+			//xlLib.WebSocketMgr.getInstance().connect("192.168.1.36","9081");
+			//xlLib.UIMgr.instance.showLoading(TipsLoading);
 
 
 			xlLib.SceneMgr.instance.changeScene(Lobby);
