@@ -7,6 +7,8 @@ class LobbyView extends eui.Component {
 	public _set:eui.Button;
 	public _service:eui.Button;
 	public _information:eui.Button;
+	public _head_label:eui.Label;
+	public _label_coin:eui.Label;
 	public _generalize:eui.Button;
 	public _safebox:eui.Button;
 	public _challenge:eui.Button;
@@ -29,6 +31,7 @@ class LobbyView extends eui.Component {
 	public _mahjong_btn_area:eui.Group;
 	public _group_game:eui.Group;
 	public _game_btn_area:eui.Group;
+
 
 
 
