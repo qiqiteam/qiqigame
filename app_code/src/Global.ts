@@ -28,7 +28,7 @@
 
         debug: boolean;
 
-        scaleMode: string = "fixedWidth";
+        scaleMode: string = "exactFit";
 
         nativeStorage: any;
 
