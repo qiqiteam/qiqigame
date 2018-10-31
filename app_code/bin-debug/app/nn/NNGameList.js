@@ -26,8 +26,8 @@ var NNGameList = (function (_super) {
     };
     NNGameList.prototype.initEventListener = function () {
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        EventUtil.addEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
-        EventUtil.addEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this);
+        // EventUtil.addEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
+        // EventUtil.addEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this, )
     };
     NNGameList.prototype.onGameStatusChange = function (data) {
     };
@@ -53,8 +53,8 @@ var NNGameList = (function (_super) {
     };
     NNGameList.prototype.destroy = function () {
         this.removeEventListener(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        EventUtil.removeEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
-        EventUtil.removeEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this);
+        // EventUtil.removeEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
+        // EventUtil.removeEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this);
     };
     return NNGameList;
 }(eui.Component));

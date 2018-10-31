@@ -243,6 +243,7 @@ module xlLib {
         private onSocketOpen(event: egret.Event): void {
             this._isConnecting = false;
             this._connected = true;
+            EventUtil.dispatchEvent(EventConst.ON_SOCKET_SUC,{});
             Console.log("网络已连接" + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
         }
 
@@ -252,6 +253,7 @@ module xlLib {
             if (this._connected || this._isConnecting) {
                 this._isConnecting = false;
                 this._connected = false;
+                EventUtil.dispatchEvent(EventConst.ON_SOCKET_CLOSE,{});
                 Console.log("网络已断开" + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
             }
         }

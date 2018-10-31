@@ -95,7 +95,7 @@ module xlLib {
                     xlLib.Console.log("收到http数据：" + urlLoader.data);
 
                     if (showError) {
-                        if (data.data) {
+                        if (parseInt(data.code)==200) {
                             sucessFunc.call(this.loadList[key].thisObject, this.loadList[key].isJson ? data : urlLoader.data);
                         } else {
                             xlLib.TipsUtils.showFloatWordTips(data.message);

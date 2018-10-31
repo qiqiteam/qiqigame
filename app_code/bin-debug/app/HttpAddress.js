@@ -6,9 +6,11 @@ var HttpAddress = (function () {
     }
     return HttpAddress;
 }());
-// /**注册地址 */
-// public static registerUrl:string = Const.httpUrl + "/webuser/reg";
-/**登录地址 */
-HttpAddress.loginUrl = Const.httpUrl + "/api/guest";
+/**游客登录地址 */
+HttpAddress.guestUrl = Const.httpUrl + "/api/guest";
+/**游客登录地址 */
+HttpAddress.sendmsgUrl = Const.httpUrl + "/api/sendmsg";
+/**注册登录地址 */
+HttpAddress.login = Const.httpUrl + "/api/login";
 __reflect(HttpAddress.prototype, "HttpAddress");
 //# sourceMappingURL=HttpAddress.js.map

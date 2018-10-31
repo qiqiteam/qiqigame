@@ -244,12 +244,14 @@ var xlLib;
         WebSocketMgr.prototype.onSocketOpen = function (event) {
             this._isConnecting = false;
             this._connected = true;
+            EventUtil.dispatchEvent(EventConst.ON_SOCKET_SUC, {});
             xlLib.Console.log("网络已连接" + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
         };
         WebSocketMgr.prototype.onSocketClose = function (event) {
             if (this._connected || this._isConnecting) {
                 this._isConnecting = false;
                 this._connected = false;
+                EventUtil.dispatchEvent(EventConst.ON_SOCKET_CLOSE, {});
                 xlLib.Console.log("网络已断开" + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
             }
         };

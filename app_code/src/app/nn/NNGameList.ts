@@ -23,8 +23,8 @@ class NNGameList extends eui.Component {
 
     private initEventListener() {
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        EventUtil.addEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
-        EventUtil.addEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this, )
+        // EventUtil.addEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
+        // EventUtil.addEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this, )
     }
 
     private onGameStatusChange(data: any): void {
@@ -56,8 +56,8 @@ class NNGameList extends eui.Component {
 
     private destroy() {
         this.removeEventListener(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        EventUtil.removeEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
-        EventUtil.removeEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this);
+        // EventUtil.removeEventListener(EventConst.ON_GAME_STATUS_CHANGE, this.onGameStatusChange, this);
+        // EventUtil.removeEventListener(EventConst.ON_NN_PEARL_APPEND, this.listAutoScroll, this);
     }
 }
 
