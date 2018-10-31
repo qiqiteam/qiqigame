@@ -84,7 +84,7 @@ var LoginView = (function (_super) {
         UserInfo.getInstance().uid = info.id;
         UserInfo.getInstance().username = info.username;
         UserInfo.getInstance().goldcoins = info.goldcoins;
-        console.log("收到用户数据" + info.goldcoins);
+        // console.log("收到用户数据"+info.goldcoins);
         xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST, Const.GAME_PORT, info.id);
     };
     LoginView.prototype.onSocketFail = function (data) {

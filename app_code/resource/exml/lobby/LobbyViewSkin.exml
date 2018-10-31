@@ -39,7 +39,7 @@
 		</e:Button>
 		<e:Image x="56" y="18" scaleX="1" scaleY="1" source="v_png"/>
 		<e:Label id="_head_label" text="中国第一赌神" x="169.5" y="29" scaleX="1" scaleY="1" size="35" fontFamily="KaiTi"/>
-		<e:Label id="_label_coin" text="1000000" x="610" y="29" scaleX="1" scaleY="1" size="34" fontFamily="Arial"/>
+		<e:Label id="_coin_label" text="" x="586" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34"/>
 	</e:Group>
 	<e:Group x="151.67" y="100">
 		<e:Image x="0" y="0" scaleX="1" scaleY="1" source="title_bg_png"/>

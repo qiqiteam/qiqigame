@@ -8,7 +8,7 @@ class LobbyView extends eui.Component {
 	public _service:eui.Button;
 	public _information:eui.Button;
 	public _head_label:eui.Label;
-	public _label_coin:eui.Label;
+	public _coin_label:eui.Label;
 	public _generalize:eui.Button;
 	public _safebox:eui.Button;
 	public _challenge:eui.Button;
@@ -129,6 +129,9 @@ class LobbyView extends eui.Component {
 			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
             //EventManage.addEvent(this, btn, egret.TouchEvent.TOUCH_TAP, this.onTouchEend.bind(this, arr[i]));
         }
+
+		this._head_label.text = UserInfo.getInstance().username;
+		this._coin_label.text = ""+UserInfo.getInstance().goldcoins;
     }
 
 	private onClick(e:egret.TouchEvent):void {

@@ -91,6 +91,8 @@ var LobbyView = (function (_super) {
             btn.y = yy;
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         }
+        this._head_label.text = UserInfo.getInstance().username;
+        this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
     };
     LobbyView.prototype.onClick = function (e) {
         //EffectUtils.playEffect(e.target,2);
