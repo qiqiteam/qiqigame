@@ -2,7 +2,8 @@ class UserInfo {
     /**0：试玩的会员  非0：正式会员 */
     private puserType: number;
     public uid:number;
-
+    public username:string;
+    public goldcoins:number;
     private static _instance: UserInfo;
 
     public constructor() {}

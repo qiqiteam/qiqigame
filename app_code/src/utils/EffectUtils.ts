@@ -178,8 +178,7 @@ module EffectUtils {
         var yy = (obj.anchorOffsetY - acy);
         obj.x += xx;
         obj.y += yy;
-        var onComplete2: Function = function () {
-            this.isPlayEffectPlay = false;
+        var onComplete2: Function =  ()=> {
             obj.anchorOffsetX = acx;
             obj.anchorOffsetY = acy;
             obj.x -= xx;
@@ -189,6 +188,8 @@ module EffectUtils {
             if (cb != null) {
                 cb();
             }
+            egret.Tween.removeTweens(obj);
+            this.isPlayEffectPlay = false;
         };
         var onComplete1: Function = function () {
             egret.Tween.get(obj).to({ scaleX: 1, scaleY: 1 }, 100).call(onComplete2, this);

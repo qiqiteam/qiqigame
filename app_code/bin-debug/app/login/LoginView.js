@@ -50,9 +50,9 @@ var LoginView = (function (_super) {
         this._group_btn_2.visible = true;
     };
     LoginView.prototype._onContinueLogin = function (e) {
-        //xlLib.UIMgr.instance.showLoading(TipsLoading);
-        //xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
-        xlLib.SceneMgr.instance.changeScene(Lobby);
+        xlLib.UIMgr.instance.showLoading(TipsLoading);
+        xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl, null, null, this.onLoginSucess, this.onLoginFail);
+        // xlLib.SceneMgr.instance.changeScene(Lobby);
     };
     LoginView.prototype._onRegister = function (e) {
     };
@@ -80,7 +80,12 @@ var LoginView = (function (_super) {
         xlLib.TipsUtils.showFloatWordTips("登录失败 请检查网络环境！");
     };
     LoginView.prototype.onLoginSucess = function (data) {
-        xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST, Const.GAME_PORT, data.id);
+        var info = data.data;
+        UserInfo.getInstance().uid = info.id;
+        UserInfo.getInstance().username = info.username;
+        UserInfo.getInstance().goldcoins = info.goldcoins;
+        console.log("收到用户数据" + info.goldcoins);
+        xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST, Const.GAME_PORT, info.id);
     };
     LoginView.prototype.onSocketFail = function (data) {
         xlLib.UIMgr.instance.hideLoading(TipsLoading);

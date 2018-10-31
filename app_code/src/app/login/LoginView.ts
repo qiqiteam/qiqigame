@@ -66,9 +66,9 @@ class LoginView extends eui.Component
 	}
 
 	private _onContinueLogin(e:egret.TouchEvent):void {
-		//xlLib.UIMgr.instance.showLoading(TipsLoading);
-		//xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
-		xlLib.SceneMgr.instance.changeScene(Lobby);
+		xlLib.UIMgr.instance.showLoading(TipsLoading);
+		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+		// xlLib.SceneMgr.instance.changeScene(Lobby);
 	}
 
 	private _onRegister(e:egret.TouchEvent):void {
@@ -108,7 +108,13 @@ class LoginView extends eui.Component
 
 	private onLoginSucess(data:any):void
 	{
-	   xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST,Const.GAME_PORT,data.id);
+		var info:any = data.data;
+		UserInfo.getInstance().uid = info.id;
+		UserInfo.getInstance().username = info.username;
+		UserInfo.getInstance().goldcoins = info.goldcoins;
+		// console.log("收到用户数据"+info.goldcoins);
+		
+	    xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST,Const.GAME_PORT,info.id);
 	}
 
 	private onSocketFail(data:any):void
