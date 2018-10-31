@@ -43,6 +43,7 @@ var LoginView = (function (_super) {
         this.account_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
         this.continue_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
         this.register_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
+        this.login_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
     };
     LoginView.prototype._onVisitorLogin = function (e) {
         this.group_btn_0.visible = false;
@@ -57,30 +58,21 @@ var LoginView = (function (_super) {
     };
     LoginView.prototype._onRegister = function (e) {
     };
-    // private onTouchHandler(evt:egret.Event):void
-    // {
-    // 	if(evt.target == this.login_btm)
-    // 	{
-    // 		if(this.username_txt.text == ""||this.passwd_txt.text == "")
-    // 		{
-    // 		    xlLib.TipsUtils.showFloatWordTips("用户名或密码不能为空！");
-    //             return;
-    // 		}
-    // 		if (!GlobalData.hasNetwork) {
-    // 			xlLib.TipsUtils.showFloatWordTips("连接失败 请检查网络环境！");
-    // 			return;
-    // 		}
-    // 		var data: any = new Object;
-    // 		data.userName = this.username_txt.text;
-    // 		data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
-    // 		GlobalData.md5PassWord = data.passWord;
-    // 		//xlLib.WebSocketMgr.getInstance().connect("192.168.1.36","9081");
-    // 		xlLib.UIMgr.instance.showLoading(TipsLoading);
-    // 		
-    // 		// xlLib.SceneMgr.instance.changeScene(Lobby);
-    // 	}else if(evt.target == this.visitor_btn){
-    // 	}
-    // }
+    LoginView.prototype._onLogin = function (evt) {
+        if (this.username_txt.text == "" || this.passwd_txt.text == "") {
+            xlLib.TipsUtils.showFloatWordTips("用户名或密码不能为空！");
+            return;
+        }
+        if (!GlobalData.hasNetwork) {
+            xlLib.TipsUtils.showFloatWordTips("连接失败 请检查网络环境！");
+            return;
+        }
+        var data = new Object;
+        data.userName = this.username_txt.text;
+        data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
+        GlobalData.md5PassWord = data.passWord;
+        xlLib.UIMgr.instance.showLoading(TipsLoading);
+    };
     LoginView.prototype.onLoginFail = function (data) {
         xlLib.UIMgr.instance.hideLoading(TipsLoading);
         xlLib.TipsUtils.showFloatWordTips("登录失败 请检查网络环境！");
@@ -92,9 +84,6 @@ var LoginView = (function (_super) {
     };
     LoginView.prototype.initGameData = function (data) {
     };
-    LoginView.prototype.subTableFunc = function () {
-        xlLib.SceneMgr.instance.changeScene(Lobby);
-    };
     LoginView.prototype.initPlayerData = function (data) {
         UserInfo.getInstance().uid = data.uid;
         UserInfo.getInstance().userType = data.userType;
@@ -104,7 +93,7 @@ var LoginView = (function (_super) {
         this.account_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
         this.continue_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
         this.register_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
-        this.login_btm = null;
+        this.login_btn = null;
         this.zzzh_btn = null;
         this.passwd_txt = null;
         this.username_txt = null;

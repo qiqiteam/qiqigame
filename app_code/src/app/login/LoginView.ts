@@ -15,8 +15,9 @@ class LoginView extends eui.Component
 	public username_txt:eui.EditableText;
 	public passwd_txt:eui.EditableText;
 	public zzzh_btn:eui.CheckBox;
-	public login_btm:eui.Button;
+	public login_btn:eui.Button;
 	public verify_btn:eui.Button;
+
 
 	private bjlSubscription: boolean = false;
 	private lfSubscription: boolean = false;
@@ -56,9 +57,9 @@ class LoginView extends eui.Component
 
 		this.visitor_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
 		this.account_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
-
 		this.continue_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
 		this.register_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
+		this.login_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
 
 	}
 
@@ -73,7 +74,7 @@ class LoginView extends eui.Component
 	}
 
 	private _onContinueLogin(e:egret.TouchEvent):void {
-		xlLib.HttpManager.getInstance().send(HttpAddress.loginUrl,null,null,this.onLoginSucess,this.onLoginFail);
+		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
 	}
 
 	private _onRegister(e:egret.TouchEvent):void {
@@ -81,33 +82,23 @@ class LoginView extends eui.Component
 	}
 
 
-
-	// private onTouchHandler(evt:egret.Event):void
-	// {
-	// 	if(evt.target == this.login_btm)
-	// 	{
-			
-	// 		if(this.username_txt.text == ""||this.passwd_txt.text == "")
-	// 		{
-	// 		    xlLib.TipsUtils.showFloatWordTips("用户名或密码不能为空！");
-    //             return;
-	// 		}
-	// 		if (!GlobalData.hasNetwork) {
-	// 			xlLib.TipsUtils.showFloatWordTips("连接失败 请检查网络环境！");
-	// 			return;
-	// 		}
-	// 		var data: any = new Object;
-	// 		data.userName = this.username_txt.text;
-	// 		data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
-	// 		GlobalData.md5PassWord = data.passWord;
-	// 		//xlLib.WebSocketMgr.getInstance().connect("192.168.1.36","9081");
-	// 		xlLib.UIMgr.instance.showLoading(TipsLoading);
-	// 		
-	// 		// xlLib.SceneMgr.instance.changeScene(Lobby);
-	// 	}else if(evt.target == this.visitor_btn){
-
-	// 	}
-	// }
+	private _onLogin(evt:egret.Event):void
+	{
+		if(this.username_txt.text == ""||this.passwd_txt.text == "")
+		{
+			xlLib.TipsUtils.showFloatWordTips("用户名或密码不能为空！");
+			return;
+		}
+		if (!GlobalData.hasNetwork) {
+			xlLib.TipsUtils.showFloatWordTips("连接失败 请检查网络环境！");
+			return;
+		}
+		var data: any = new Object;
+		data.userName = this.username_txt.text;
+		data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
+		GlobalData.md5PassWord = data.passWord;
+		xlLib.UIMgr.instance.showLoading(TipsLoading);
+	}
 
 	private onLoginFail(data:any):void
 	{
@@ -122,12 +113,7 @@ class LoginView extends eui.Component
 	   xlLib.TipsUtils.showFloatWordTips("游客登录成功！");
 	}
 
-
 	private initGameData(data: any) {
-	}
-
-	private subTableFunc() {
-		xlLib.SceneMgr.instance.changeScene(Lobby);
 	}
 
 	private initPlayerData(data: any) {
@@ -141,7 +127,7 @@ class LoginView extends eui.Component
 		this.account_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
 		this.continue_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
 		this.register_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
-		this.login_btm = null;
+		this.login_btn = null;
 		this.zzzh_btn = null;
 		this.passwd_txt = null;
 		this.username_txt = null;
