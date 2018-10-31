@@ -6,7 +6,7 @@ class LodingView extends  eui.Component
     public bg_img:eui.Image;
     public load_rec:eui.Rect;
     public load_img:eui.Image;
-    public pro_img:eui.Image;
+    //public pro_img:eui.Image;
 
 
     constructor()
@@ -35,10 +35,10 @@ class LodingView extends  eui.Component
         public setProgress(loaded: number, total: number, desc?: string, resourceName?: string, force: boolean=false): void {
         if (total && total !=0)
         {
-            var widthX: number = Math.floor(319 * (loaded / total));
+            var widthX: number = Math.floor(598 * (loaded / total));
             this.load_rec.width = widthX;
             this.load_img.mask = this.load_rec;
-            this.pro_img.x = this.load_rec.width + this.load_img.x - this.pro_img.width/2;
+            //this.pro_img.x = this.load_rec.width + this.load_img.x - this.pro_img.width/2;
         }
     }
 }

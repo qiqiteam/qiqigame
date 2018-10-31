@@ -141,4 +141,3 @@ var xlLib;
     xlLib.GameDoc = GameDoc;
     __reflect(GameDoc.prototype, "xlLib.GameDoc", ["xlLib.IGameDoc"]);
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=GameDoc.js.map

@@ -177,4 +177,3 @@ var xlLib;
     xlLib.ResLoadMgr = ResLoadMgr;
     __reflect(ResLoadMgr.prototype, "xlLib.ResLoadMgr");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=ResLoadMgr.js.map

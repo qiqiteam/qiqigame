@@ -145,4 +145,3 @@ var xlLib;
     xlLib.StatistcsMgr = StatistcsMgr;
     __reflect(StatistcsMgr.prototype, "xlLib.StatistcsMgr");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=StatisticsMgr.js.map

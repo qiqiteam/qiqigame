@@ -9,6 +9,5 @@ var HttpAddress = (function () {
 // /**注册地址 */
 // public static registerUrl:string = Const.httpUrl + "/webuser/reg";
 /**登录地址 */
-HttpAddress.loginUrl = Const.httpUrl + "/api/guest";
+HttpAddress.guestUrl = Const.httpUrl + "/api/guest";
 __reflect(HttpAddress.prototype, "HttpAddress");
-//# sourceMappingURL=HttpAddress.js.map

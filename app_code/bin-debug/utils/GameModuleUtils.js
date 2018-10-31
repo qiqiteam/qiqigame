@@ -219,4 +219,3 @@ var xlLib;
     xlLib.GameModuleUtils = GameModuleUtils;
     __reflect(GameModuleUtils.prototype, "xlLib.GameModuleUtils");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=GameModuleUtils.js.map

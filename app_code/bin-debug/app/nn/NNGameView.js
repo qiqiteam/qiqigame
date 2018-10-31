@@ -29,4 +29,3 @@ var NNGameView = (function (_super) {
     return NNGameView;
 }(xlLib.GameScene));
 __reflect(NNGameView.prototype, "NNGameView");
-//# sourceMappingURL=NNGameView.js.map

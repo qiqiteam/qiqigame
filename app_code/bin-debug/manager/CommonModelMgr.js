@@ -75,4 +75,3 @@ var xlLib;
     xlLib.CommonModelMgr = CommonModelMgr;
     __reflect(CommonModelMgr.prototype, "xlLib.CommonModelMgr");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=CommonModelMgr.js.map

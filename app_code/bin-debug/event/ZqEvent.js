@@ -138,4 +138,3 @@ var xlLib;
     xlLib.ZqEvent = ZqEvent;
     __reflect(ZqEvent.prototype, "xlLib.ZqEvent");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=ZqEvent.js.map

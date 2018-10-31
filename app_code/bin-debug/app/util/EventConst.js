@@ -49,4 +49,3 @@ EventConst.ON_CARDS_JUDGE = "onGameCardsJudge";
 /** 牛牛发牌 */
 EventConst.ON_GAMECARDS_UPDATED = "onGameCardsUpdated";
 __reflect(EventConst.prototype, "EventConst");
-//# sourceMappingURL=EventConst.js.map

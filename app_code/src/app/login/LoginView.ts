@@ -5,18 +5,18 @@ class LoginView extends eui.Component
 {
 
 	public bgImg:eui.Image;
-	public group_btn_0:eui.Group;
-	public visitor_btn:eui.Button;
-	public account_btn:eui.Button;
-	public group_btn_1:eui.Group;
-	public continue_btn:eui.Button;
-	public register_btn:eui.Button;
-	public group_btn_2:eui.Group;
-	public username_txt:eui.EditableText;
-	public passwd_txt:eui.EditableText;
+	public _group_btn_0:eui.Group;
+	public _btn_visitor:eui.Button;
+	public _btn_account:eui.Button;
+	public _group_btn_1:eui.Group;
+	public _btn_continue:eui.Button;
+	public _btn_register:eui.Button;
+	public _group_btn_2:eui.Group;
+	public _phone_txt:eui.EditableText;
+	public _Verify_code_txt:eui.EditableText;
 	public zzzh_btn:eui.CheckBox;
-	public login_btn:eui.Button;
-	public verify_btn:eui.Button;
+	public _btn_login:eui.Button;
+	public _btn_verify:eui.Button;
 
 
 	private bjlSubscription: boolean = false;
@@ -48,43 +48,46 @@ class LoginView extends eui.Component
 		let username = egret.localStorage.getItem("username");
 		if(username && username != "")
 		{
-    		this.username_txt.text = username;
+    		this._phone_txt.text = username;
 		}
 		else
 		{
-			this.username_txt.text = "";
+			this._phone_txt.text = "";
 		}
 
-		this.visitor_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
-		this.account_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
-		this.continue_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
-		this.register_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
-		this.login_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
+		this._btn_visitor.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onVisitorLogin, this);
+		this._btn_account.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onAccountLogin, this);
+
+		this._btn_continue.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onContinueLogin, this);
+		this._btn_register.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
+		this._btn_login.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
 
 	}
 
-	private _onVisitorLogin(e:egret.TouchEvent):void {
-		this.group_btn_0.visible = false;
-		this.group_btn_1.visible = true;
+	private onVisitorLogin(e:egret.TouchEvent):void {
+		this._group_btn_0.visible = false;
+		this._group_btn_1.visible = true;
 	}
 
-	private _onAccountLogin(e:egret.TouchEvent):void {
-		this.group_btn_0.visible = false;
-		this.group_btn_2.visible = true;
+	private onAccountLogin(e:egret.TouchEvent):void {
+		this._group_btn_0.visible = false;
+		this._group_btn_2.visible = true;
 	}
 
-	private _onContinueLogin(e:egret.TouchEvent):void {
+	private onContinueLogin(e:egret.TouchEvent):void {
 		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+		//xlLib.SceneMgr.instance.changeScene(Lobby);
 	}
 
-	private _onRegister(e:egret.TouchEvent):void {
-		
+	private onRegister(e:egret.TouchEvent):void {
+		this._group_btn_0.visible = false;
+		this._group_btn_2.visible = true;
 	}
 
 
 	private _onLogin(evt:egret.Event):void
 	{
-		if(this.username_txt.text == ""||this.passwd_txt.text == "")
+		if(this._phone_txt.text == ""||this._Verify_code_txt.text == "")
 		{
 			xlLib.TipsUtils.showFloatWordTips("用户名或密码不能为空！");
 			return;
@@ -94,10 +97,11 @@ class LoginView extends eui.Component
 			return;
 		}
 		var data: any = new Object;
-		data.userName = this.username_txt.text;
-		data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
+		data.userName = this._phone_txt.text;
+		data.passWord = xlLib.StringUtils.md5(this._Verify_code_txt.text);
 		GlobalData.md5PassWord = data.passWord;
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
+		//xlLib.SceneMgr.instance.changeScene(Lobby);
 	}
 
 	private onLoginFail(data:any):void
@@ -123,13 +127,13 @@ class LoginView extends eui.Component
 
 	public destroy()
 	{
-		this.visitor_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
-		this.account_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
-		this.continue_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
-		this.register_btn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
-		this.login_btn = null;
+		this._btn_visitor.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onVisitorLogin, this);
+		this._btn_account.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onAccountLogin, this);
+		this._btn_continue.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onContinueLogin, this);
+		this._btn_register.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onRegister, this);
+		this._btn_login = null;
 		this.zzzh_btn = null;
-		this.passwd_txt = null;
-		this.username_txt = null;
+		this._Verify_code_txt = null;
+		this._phone_txt = null;
 	}	
 }

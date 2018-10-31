@@ -115,4 +115,3 @@ var xlLib;
     xlLib.LobbyScene = LobbyScene;
     __reflect(LobbyScene.prototype, "xlLib.LobbyScene", ["xlLib.IScene"]);
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=LobbyScene.js.map
