@@ -11,6 +11,7 @@ var __extends = (this && this.__extends) || function (d, b) {
  * */
 var LodingView = (function (_super) {
     __extends(LodingView, _super);
+    //public pro_img:eui.Image;
     function LodingView() {
         var _this = _super.call(this) || this;
         _this.skinName = "LodingViewSkin";
@@ -32,10 +33,9 @@ var LodingView = (function (_super) {
     LodingView.prototype.setProgress = function (loaded, total, desc, resourceName, force) {
         if (force === void 0) { force = false; }
         if (total && total != 0) {
-            var widthX = Math.floor(319 * (loaded / total));
+            var widthX = Math.floor(598 * (loaded / total));
             this.load_rec.width = widthX;
             this.load_img.mask = this.load_rec;
-            this.pro_img.x = this.load_rec.width + this.load_img.x - this.pro_img.width / 2;
         }
     };
     return LodingView;

@@ -9,22 +9,28 @@ class LobbyView extends eui.Component {
 	public _information:eui.Button;
 	public _generalize:eui.Button;
 	public _safebox:eui.Button;
-	public _welfare:eui.Button;
 	public _challenge:eui.Button;
-	public _topup:eui.Button;
+	public _welfare:eui.Button;
 	public _shoppingmall:eui.Button;
-	public btn_wanfa:eui.Image;
-	public btn_pk:eui.Image;
-	public btn_mahjong:eui.Image;
-	public btn_game:eui.Image;
-	public dis_wanfa:eui.Group;
-	public dis_pk:eui.Group;
-	public dis_mahjong:eui.Group;
-	public dis_game:eui.Group;
-	public group_wanfa:eui.Group;
-	public group_pk:eui.Group;
-	public group_mahjong:eui.Group;
-	public group_game:eui.Group;
+	public _topup:eui.Button;
+	public _btn_wanfa:eui.Image;
+	public _btn_pk:eui.Image;
+	public _btn_mahjong:eui.Image;
+	public _btn_game:eui.Image;
+	public _dis_wanfa:eui.Group;
+	public _dis_pk:eui.Group;
+	public _dis_mahjong:eui.Group;
+	public _dis_game:eui.Group;
+	public _group_wanfa:eui.Group;
+	public _wanfa_btn_area:eui.Group;
+	public _group_pk:eui.Group;
+	public _pk_btn_area:eui.Group;
+	public _group_mahjong:eui.Group;
+	public _mahjong_btn_area:eui.Group;
+	public _group_game:eui.Group;
+	public _game_btn_area:eui.Group;
+
+
 
 
 	constructor() {
@@ -33,49 +39,119 @@ class LobbyView extends eui.Component {
 		//this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
 		//EventUtil.addEventListener(EventConst.ON_SOCKET_CLOSE, this.onSocketClose, this);
 
-		this.btn_wanfa.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onBtnWanfa, this);
-		this.btn_pk.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onBtnPk, this);
-		this.btn_mahjong.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onBtnMahjong, this);
-		this.btn_game.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onBtnGame, this);
+		this._btn_wanfa.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnWanfa, this);
+		this._btn_pk.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnPk, this);
+		this._btn_mahjong.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnMahjong, this);
+		this._btn_game.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnGame, this);
 	}
 
 	protected childrenCreated() {
 		super.childrenCreated();
+
+		this.createGameBtn();
 	}
 
-	private _onBtnWanfa(e:egret.TouchEvent):void {
-		this._btnHide();
-		this.dis_wanfa.visible = true;
-		this.group_wanfa.visible = true;
+	private createGameBtn(): void {
+        var arr_wanfa = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
+		var arr_pk = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
+		var arr_mahjong = ["btn_28_png", "btn_28_png", "btn_28_png"];
+		var arr_game = ["btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png"];
+		var yy = 10;
+		
+        for (var i = 0; i < arr_wanfa.length; i++) {
+            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
+            var btn = new eui.Image(arr_wanfa[i]);
+            this._wanfa_btn_area.addChild(btn);
+            let num = i % 3;
+			btn.x = 70 + num*340;
+			if (num == 0 && i != 0) {
+                yy = 265;
+            }
+			btn.y = yy;
+			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+            //EventManage.addEvent(this, btn, egret.TouchEvent.TOUCH_TAP, this.onTouchEend.bind(this, arr[i]));
+        }
+		for (var i = 0; i < arr_pk.length; i++) {
+            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
+            var btn = new eui.Image(arr_pk[i]);
+            this._pk_btn_area.addChild(btn);
+            let num = i % 3;
+			btn.x = 70 + num*340;
+			if (num == 0 && i != 0) {
+                yy = 265;
+            }
+			btn.y = yy;
+			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+            //EventManage.addEvent(this, btn, egret.TouchEvent.TOUCH_TAP, this.onTouchEend.bind(this, arr[i]));
+        }
+		for (var i = 0; i < arr_mahjong.length; i++) {
+            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
+            var btn = new eui.Image(arr_mahjong[i]);
+            this._mahjong_btn_area.addChild(btn);
+            let num = i % 3;
+			btn.x = 70 + num*340;
+			if (num == 0 && i != 0) {
+                yy = 265;
+            }
+			btn.y = yy;
+			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+            //EventManage.addEvent(this, btn, egret.TouchEvent.TOUCH_TAP, this.onTouchEend.bind(this, arr[i]));
+        }
+		
+		for (var i = 0; i < arr_game.length; i++) {
+            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
+            var btn = new eui.Image(arr_game[i]);
+            this._game_btn_area.addChild(btn);
+
+			let num = i % 3;
+			btn.x = 70 + num*340;
+			if (num == 0 && i != 0) {
+                yy = 265;
+            }
+			btn.y = yy;
+			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+            //EventManage.addEvent(this, btn, egret.TouchEvent.TOUCH_TAP, this.onTouchEend.bind(this, arr[i]));
+        }
+    }
+
+	private onClick(e:egret.TouchEvent):void {
+		//EffectUtils.playEffect(e.target,2);
+		EffectUtils.playButtonEffect(e.target,null);
 	}
 
-	private _onBtnPk(e:egret.TouchEvent):void {
+	private onBtnWanfa(e:egret.TouchEvent):void {
 		this._btnHide();
-		this.dis_pk.visible = true;
-		this.group_pk.visible = true;
+		this._dis_wanfa.visible = true;
+		this._group_wanfa.visible = true;
 	}
 
-	private _onBtnMahjong(e:egret.TouchEvent):void {
+	private onBtnPk(e:egret.TouchEvent):void {
 		this._btnHide();
-		this.dis_mahjong.visible = true;
-		this.group_mahjong.visible = true;
+		this._dis_pk.visible = true;
+		this._group_pk.visible = true;
 	}
 
-	private _onBtnGame(e:egret.TouchEvent):void {
+	private onBtnMahjong(e:egret.TouchEvent):void {
 		this._btnHide();
-		this.dis_game.visible = true;
-		this.group_game.visible = true;
+		this._dis_mahjong.visible = true;
+		this._group_mahjong.visible = true;
+	}
+
+	private onBtnGame(e:egret.TouchEvent):void {
+		this._btnHide();
+		this._dis_game.visible = true;
+		this._group_game.visible = true;
 	}
 
 	private _btnHide() {
-		this.dis_wanfa.visible = false;
-		this.dis_pk.visible = false;
-		this.dis_mahjong.visible = false;
-		this.dis_game.visible = false;
-		this.group_wanfa.visible = false;
-		this.group_pk.visible = false;
-		this.group_mahjong.visible = false;
-		this.group_game.visible = false;
+		this._dis_wanfa.visible = false;
+		this._dis_pk.visible = false;
+		this._dis_mahjong.visible = false;
+		this._dis_game.visible = false;
+		this._group_wanfa.visible = false;
+		this._group_pk.visible = false;
+		this._group_mahjong.visible = false;
+		this._group_game.visible = false;
 	}
 
 	private onTouchHandler(evt: egret.Event): void {
