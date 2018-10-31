@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,bg_jpg,loding_json",
+			"keys": "description_json,bg_jpg,loding_json,Bg_dating_qiehuanzhuangshi_png,Bg_img_jpg,btn_28_png,btn_baijiale_png,btn_challenge_0_png,btn_challenge_1_png,btn_game_bg_png,btn_info_0_png,btn_info_1_png,btn_jinhua_png,btn_kefu_0_png,btn_kefu_1_png,btn_niuniu_png,btn_safebox_0_png,btn_safebox_1_png,btn_set_0_png,btn_set_1_png,btn_welfare_0_png,btn_welfare_1_png,coin_bg_png,ding_png,di_bg_png,Font_dating_majianglei_png,Font_dating_majianglei1_png,Font_dating_pukelei_png,Font_dating_pukelei1_png,Font_dating_remenwanfa_png,Font_dating_remenwanfa1_png,Font_dating_youxilei_png,Font_dating_youxilei1_png,game_class_bg_png,generalize_png,head_png,shoppingmall_png,title_bg_png,topup_png,trumpet_png,v_png,visitor_btn_png,account_btn_png,continue_btn_png,register_btn_png,pop_ups_png,verify_btn_png,login_btn_png,Input_bg_png,title_login_png,title_prompt_png,login_bg_png",
 			"name": "preload"
 		},
 		{
@@ -134,6 +134,251 @@
 			"type": "sheet",
 			"name": "gameCard_json",
 			"subkeys": "card_10A,card_10B,card_10C,card_10D,card_11A,card_11B,card_11C,card_11D,card_12A,card_12B,card_12C,card_12D,card_13A,card_13B,card_13C,card_13D,card_1A,card_1B,card_1C,card_1D,card_2A,card_2B,card_2C,card_2D,card_3A,card_3B,card_3C,card_3D,card_4A,card_4B,card_4C,card_4D,card_5A,card_5B,card_5C,card_5D,card_6A,card_6B,card_6C,card_6D,card_7A,card_7B,card_7C,card_7D,card_8A,card_8B,card_8C,card_8D,card_9A,card_9B,card_9C,card_9D,card_back"
+		},
+		{
+			"name": "Bg_dating_qiehuanzhuangshi_png",
+			"type": "image",
+			"url": "assets/hall/Bg_dating_qiehuanzhuangshi.png"
+		},
+		{
+			"name": "Bg_img_jpg",
+			"type": "image",
+			"url": "assets/hall/Bg_img.jpg"
+		},
+		{
+			"name": "btn_28_png",
+			"type": "image",
+			"url": "assets/hall/btn_28.png"
+		},
+		{
+			"name": "btn_baijiale_png",
+			"type": "image",
+			"url": "assets/hall/btn_baijiale.png"
+		},
+		{
+			"name": "btn_challenge_0_png",
+			"type": "image",
+			"url": "assets/hall/btn_challenge_0.png"
+		},
+		{
+			"name": "btn_challenge_1_png",
+			"type": "image",
+			"url": "assets/hall/btn_challenge_1.png"
+		},
+		{
+			"name": "btn_game_bg_png",
+			"type": "image",
+			"url": "assets/hall/btn_game_bg.png"
+		},
+		{
+			"name": "btn_info_0_png",
+			"type": "image",
+			"url": "assets/hall/btn_info_0.png"
+		},
+		{
+			"name": "btn_info_1_png",
+			"type": "image",
+			"url": "assets/hall/btn_info_1.png"
+		},
+		{
+			"name": "btn_jinhua_png",
+			"type": "image",
+			"url": "assets/hall/btn_jinhua.png"
+		},
+		{
+			"name": "btn_kefu_0_png",
+			"type": "image",
+			"url": "assets/hall/btn_kefu_0.png"
+		},
+		{
+			"name": "btn_kefu_1_png",
+			"type": "image",
+			"url": "assets/hall/btn_kefu_1.png"
+		},
+		{
+			"name": "btn_niuniu_png",
+			"type": "image",
+			"url": "assets/hall/btn_niuniu.png"
+		},
+		{
+			"name": "btn_safebox_0_png",
+			"type": "image",
+			"url": "assets/hall/btn_safebox_0.png"
+		},
+		{
+			"name": "btn_safebox_1_png",
+			"type": "image",
+			"url": "assets/hall/btn_safebox_1.png"
+		},
+		{
+			"name": "btn_set_0_png",
+			"type": "image",
+			"url": "assets/hall/btn_set_0.png"
+		},
+		{
+			"name": "btn_set_1_png",
+			"type": "image",
+			"url": "assets/hall/btn_set_1.png"
+		},
+		{
+			"name": "btn_welfare_0_png",
+			"type": "image",
+			"url": "assets/hall/btn_welfare_0.png"
+		},
+		{
+			"name": "btn_welfare_1_png",
+			"type": "image",
+			"url": "assets/hall/btn_welfare_1.png"
+		},
+		{
+			"name": "coin_bg_png",
+			"type": "image",
+			"url": "assets/hall/coin_bg.png"
+		},
+		{
+			"name": "ding_png",
+			"type": "image",
+			"url": "assets/hall/ding.png"
+		},
+		{
+			"name": "di_bg_png",
+			"type": "image",
+			"url": "assets/hall/di_bg.png"
+		},
+		{
+			"name": "Font_dating_majianglei_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_majianglei.png"
+		},
+		{
+			"name": "Font_dating_majianglei1_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_majianglei1.png"
+		},
+		{
+			"name": "Font_dating_pukelei_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_pukelei.png"
+		},
+		{
+			"name": "Font_dating_pukelei1_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_pukelei1.png"
+		},
+		{
+			"name": "Font_dating_remenwanfa_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_remenwanfa.png"
+		},
+		{
+			"name": "Font_dating_remenwanfa1_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_remenwanfa1.png"
+		},
+		{
+			"name": "Font_dating_youxilei_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_youxilei.png"
+		},
+		{
+			"name": "Font_dating_youxilei1_png",
+			"type": "image",
+			"url": "assets/hall/Font_dating_youxilei1.png"
+		},
+		{
+			"name": "game_class_bg_png",
+			"type": "image",
+			"url": "assets/hall/game_class_bg.png"
+		},
+		{
+			"name": "generalize_png",
+			"type": "image",
+			"url": "assets/hall/generalize.png"
+		},
+		{
+			"name": "head_png",
+			"type": "image",
+			"url": "assets/hall/head.png"
+		},
+		{
+			"name": "shoppingmall_png",
+			"type": "image",
+			"url": "assets/hall/shoppingmall.png"
+		},
+		{
+			"name": "title_bg_png",
+			"type": "image",
+			"url": "assets/hall/title_bg.png"
+		},
+		{
+			"name": "topup_png",
+			"type": "image",
+			"url": "assets/hall/topup.png"
+		},
+		{
+			"name": "trumpet_png",
+			"type": "image",
+			"url": "assets/hall/trumpet.png"
+		},
+		{
+			"name": "v_png",
+			"type": "image",
+			"url": "assets/hall/v.png"
+		},
+		{
+			"name": "visitor_btn_png",
+			"type": "image",
+			"url": "assets/login/visitor_btn.png"
+		},
+		{
+			"name": "account_btn_png",
+			"type": "image",
+			"url": "assets/login/account_btn.png"
+		},
+		{
+			"name": "continue_btn_png",
+			"type": "image",
+			"url": "assets/login/continue_btn.png"
+		},
+		{
+			"name": "register_btn_png",
+			"type": "image",
+			"url": "assets/login/register_btn.png"
+		},
+		{
+			"name": "pop_ups_png",
+			"type": "image",
+			"url": "assets/login/pop_ups.png"
+		},
+		{
+			"name": "verify_btn_png",
+			"type": "image",
+			"url": "assets/login/verify_btn.png"
+		},
+		{
+			"name": "login_btn_png",
+			"type": "image",
+			"url": "assets/login/login_btn.png"
+		},
+		{
+			"name": "Input_bg_png",
+			"type": "image",
+			"url": "assets/login/Input_bg.png"
+		},
+		{
+			"name": "title_login_png",
+			"type": "image",
+			"url": "assets/login/title_login.png"
+		},
+		{
+			"name": "title_prompt_png",
+			"type": "image",
+			"url": "assets/login/title_prompt.png"
+		},
+		{
+			"name": "login_bg_png",
+			"type": "image",
+			"url": "assets/login/login_bg.png"
 		}
 	]
 }

@@ -13,6 +13,11 @@ var LoginView = (function (_super) {
     __extends(LoginView, _super);
     function LoginView() {
         var _this = _super.call(this) || this;
+        //public bgImg:eui.Image;
+        //public username_txt:eui.EditableText;
+        //public passwd_txt:eui.EditableText;
+        //public zzzh_btn:eui.CheckBox;
+        //public login_btm:eui.Button;
         _this.bjlSubscription = false;
         _this.lfSubscription = false;
         _this.xjSubscription = false;
@@ -70,6 +75,23 @@ var LoginView = (function (_super) {
         else {
             this.username_txt.text = "";
         }
+        this.visitor_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
+        this.account_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
+        this.continue_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
+        this.register_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
+    };
+    LoginView.prototype._onVisitorLogin = function (e) {
+        this.group_btn_0.visible = false;
+        this.group_btn_1.visible = true;
+    };
+    LoginView.prototype._onAccountLogin = function (e) {
+        this.group_btn_0.visible = false;
+        this.group_btn_2.visible = true;
+    };
+    LoginView.prototype._onContinueLogin = function (e) {
+        xlLib.SceneMgr.instance.changeScene(Lobby);
+    };
+    LoginView.prototype._onRegister = function (e) {
     };
     LoginView.prototype.onTouchHandler = function (evt) {
         if (evt.target == this.login_btm) {
@@ -81,7 +103,17 @@ var LoginView = (function (_super) {
                 xlLib.TipsUtils.showFloatWordTips("连接失败 请检查网络环境！");
                 return;
             }
+<<<<<<< HEAD
             xlLib.WebSocketMgr.getInstance().send("gamestatus", { "token": xlLib.WebSocketMgr.getInstance().token, "orgi": "beimi", "userid": xlLib.WebSocketMgr.getInstance().userid }, this.onsend);
+=======
+            var data = new Object;
+            data.userName = this.username_txt.text;
+            data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
+            GlobalData.md5PassWord = data.passWord;
+            //xlLib.WebSocketMgr.getInstance().connect("192.168.1.36","9081");
+            //xlLib.UIMgr.instance.showLoading(TipsLoading);
+            xlLib.SceneMgr.instance.changeScene(Lobby);
+>>>>>>> 40cfb5b58111515fe111901747fff61f7bd1de10
         }
     };
     LoginView.prototype.onsend = function () {

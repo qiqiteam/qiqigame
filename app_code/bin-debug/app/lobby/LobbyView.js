@@ -14,12 +14,46 @@ var LobbyView = (function (_super) {
     function LobbyView() {
         var _this = _super.call(this) || this;
         _this.skinName = "LobbyViewSkin";
-        _this.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onTouchHandler, _this);
-        EventUtil.addEventListener(EventConst.ON_SOCKET_CLOSE, _this.onSocketClose, _this);
+        //this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
+        //EventUtil.addEventListener(EventConst.ON_SOCKET_CLOSE, this.onSocketClose, this);
+        _this.btn_wanfa.addEventListener(egret.TouchEvent.TOUCH_TAP, _this._onBtnWanfa, _this);
+        _this.btn_pk.addEventListener(egret.TouchEvent.TOUCH_TAP, _this._onBtnPk, _this);
+        _this.btn_mahjong.addEventListener(egret.TouchEvent.TOUCH_TAP, _this._onBtnMahjong, _this);
+        _this.btn_game.addEventListener(egret.TouchEvent.TOUCH_TAP, _this._onBtnGame, _this);
         return _this;
     }
     LobbyView.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
+    };
+    LobbyView.prototype._onBtnWanfa = function (e) {
+        this._btnHide();
+        this.dis_wanfa.visible = true;
+        this.group_wanfa.visible = true;
+    };
+    LobbyView.prototype._onBtnPk = function (e) {
+        this._btnHide();
+        this.dis_pk.visible = true;
+        this.group_pk.visible = true;
+    };
+    LobbyView.prototype._onBtnMahjong = function (e) {
+        this._btnHide();
+        this.dis_mahjong.visible = true;
+        this.group_mahjong.visible = true;
+    };
+    LobbyView.prototype._onBtnGame = function (e) {
+        this._btnHide();
+        this.dis_game.visible = true;
+        this.group_game.visible = true;
+    };
+    LobbyView.prototype._btnHide = function () {
+        this.dis_wanfa.visible = false;
+        this.dis_pk.visible = false;
+        this.dis_mahjong.visible = false;
+        this.dis_game.visible = false;
+        this.group_wanfa.visible = false;
+        this.group_pk.visible = false;
+        this.group_mahjong.visible = false;
+        this.group_game.visible = false;
     };
     LobbyView.prototype.onTouchHandler = function (evt) {
     };
