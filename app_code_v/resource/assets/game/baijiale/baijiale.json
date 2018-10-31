@@ -1,0 +1,11 @@
+{"file":"baijiale.png","frames":{
+"playerLight":{"x":543,"y":162,"w":269,"h":159,"offX":0,"offY":0,"sourceW":269,"sourceH":159},
+"bankerPairLight":{"x":816,"y":125,"w":181,"h":122,"offX":0,"offY":0,"sourceW":181,"sourceH":122},
+"bankerLight":{"x":543,"y":1,"w":271,"h":159,"offX":0,"offY":0,"sourceW":271,"sourceH":159},
+"playerPairLight":{"x":816,"y":1,"w":182,"h":122,"offX":0,"offY":0,"sourceW":182,"sourceH":122},
+"bjl_betAreaBg":{"x":1,"y":1,"w":540,"h":284,"offX":0,"offY":0,"sourceW":540,"sourceH":396},
+"tieLight":{"x":814,"y":249,"w":173,"h":122,"offX":0,"offY":0,"sourceW":173,"sourceH":122},
+"xian_zi":{"x":87,"y":287,"w":80,"h":83,"offX":0,"offY":0,"sourceW":80,"sourceH":83},
+"xiandui_zi":{"x":269,"y":287,"w":97,"h":46,"offX":0,"offY":0,"sourceW":97,"sourceH":46},
+"zhuang_zi":{"x":1,"y":287,"w":84,"h":83,"offX":0,"offY":0,"sourceW":84,"sourceH":83},
+"zhuangdui_zi":{"x":169,"y":287,"w":98,"h":46,"offX":0,"offY":0,"sourceW":98,"sourceH":46}}}

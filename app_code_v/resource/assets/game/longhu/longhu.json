@@ -1,0 +1,8 @@
+{"file":"longhu.png","frames":{
+"tigerLight":{"x":543,"y":161,"w":269,"h":158,"offX":0,"offY":0,"sourceW":269,"sourceH":158},
+"dragonLight":{"x":543,"y":1,"w":269,"h":158,"offX":0,"offY":0,"sourceW":269,"sourceH":158},
+"lh_tieLight":{"x":814,"y":1,"w":173,"h":122,"offX":0,"offY":0,"sourceW":173,"sourceH":122},
+"lh_betAreaBg":{"x":1,"y":1,"w":540,"h":162,"offX":0,"offY":122,"sourceW":540,"sourceH":396},
+"h_zi":{"x":1,"y":165,"w":38,"h":37,"offX":0,"offY":0,"sourceW":38,"sourceH":37},
+"hu_zi":{"x":814,"y":125,"w":89,"h":85,"offX":0,"offY":0,"sourceW":89,"sourceH":85},
+"long_zi":{"x":905,"y":125,"w":85,"h":84,"offX":0,"offY":0,"sourceW":85,"sourceH":84}}}
