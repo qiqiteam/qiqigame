@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LobbyViewSkin" width="828" height="1472" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image id="bgImg" scale9Grid="184,103,1104,622" horizontalCenter="0" verticalCenter="0" width="828" height="1472" source="hall_bg_png"/>
-	<e:Group width="100%" height="118" horizontalCenter="0" top="0" locked="true">
+	<e:Group width="100%" height="118" horizontalCenter="0" top="0">
 		<e:Image horizontalCenter="0" verticalCenter="-4" source="shang_di_png"/>
 		<e:Image x="20" y="2" source="head_png"/>
-		<e:Image x="502.41" source="coin_di_png" y="19"/>
+		<e:Image x="502.41" y="19" source="coin_bg_png"/>
 		<e:Label id="_head_label" text="中国第一赌神" x="134.5" y="29" size="35" textAlign="left" fontFamily="KaiTi" scaleX="1" scaleY="1"/>
 		<e:Label id="_coin_label" text="1000000" x="566.51" y="33" size="35" textAlign="center" fontFamily="Arial" scaleX="1" scaleY="1" width="200" verticalAlign="middle"/>
 	</e:Group>
-	<e:Group width="100%" height="120" horizontalCenter="0" y="130" locked="true">
+	<e:Group width="100%" height="120" horizontalCenter="0" y="130">
 		<e:Button id="_set" label="" x="25.43" verticalCenter="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -58,7 +58,7 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-	<e:Group width="100%" height="50" y="255" horizontalCenter="0" locked="true">
+	<e:Group width="100%" height="50" y="255" horizontalCenter="0">
 		<e:Image horizontalCenter="0" verticalCenter="0" source="marquee_di_png"/>
 		<e:Image horizontalCenter="-300" verticalCenter="0" source="horn_png"/>
 	</e:Group>
@@ -107,7 +107,7 @@
 			</e:Scroller>
 		</e:Group>
 	</e:Group>
-	<e:Group width="100%" horizontalCenter="0" bottom="0" height="120" locked="true">
+	<e:Group width="100%" horizontalCenter="0" bottom="0" height="120">
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="-5" x="0" y="-694" source="xia_di_png"/>
 		<e:Button id="_generalize" label="" x="0" y="5" scaleX="1" scaleY="1">
 			<e:skinName>

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,bg_jpg,loding_json,account_btn_png,account_btn_0_png,account_btn_1_png,continue_btn_png,continue_btn_0_png,continue_btn_1_png,Input_bg_png,login_jpg,login_json,login_btn_png,login_btn_0_png,login_btn_1_png,pop_ups_png,register_btn_png,register_btn_0_png,register_btn_1_png,title_login_png,title_prompt_png,verify_btn_png,verify_btn_0_png,verify_btn_1_png,visitor_btn_png,visitor_btn_0_png,visitor_btn_1_png,Bg_dating_qiehuanzhuangshi_png,Bg_img_jpg,btn_28_png,btn_baijiale_png,btn_challenge_0_png,btn_challenge_1_png,btn_game_bg_png,btn_info_0_png,btn_info_1_png,btn_jinhua_png,btn_kefu_0_png,btn_kefu_1_png,btn_niuniu_png,btn_safebox_0_png,btn_safebox_1_png,btn_set_0_png,btn_set_1_png,btn_welfare_0_png,btn_welfare_1_png,coin_bg_png,ding_png,di_bg_png,Font_dating_majianglei_png,Font_dating_majianglei1_png,Font_dating_pukelei_png,Font_dating_pukelei1_png,Font_dating_remenwanfa_png,Font_dating_remenwanfa1_png,Font_dating_youxilei_png,Font_dating_youxilei1_png,game_class_bg_png,generalize_png,generalize_0_png,generalize_1_png,head_png,shoppingmall_png,shoppingmall_0_png,shoppingmall_1_png,title_bg_png,topup_png,topup_0_png,topup_1_png,trumpet_png,v_png,information_btn_0_png,information_btn_1_png,kefu_btn_0_png,kefu_btn_1_png,marquee_di_png,safebox_btn_0_png,safebox_btn_1_png,set_btn_0_png,set_btn_1_png,shang_di_png,welfare_btn_0_png,welfare_btn_1_png,xia_di_png,Btn_dating_qiehuan1_png,Btn_dating_qiehuan1_1_png,Btn_dating_qiehuan2_png,Btn_dating_qiehuan2_1_png,Btn_dating_qiehuan3_png,Btn_dating_qiehuan3_1_png,Btn_dating_qiehuan4_png,Btn_dating_qiehuan4_1_png,challenge_btn_0_png,challenge_btn_1_png,coin_di_png,game_btn_di_png,hall_bg_png,horn_png,img (21)_png,login_bg_png,zhezhao_bg_png,loding_bg_png,bar_0_png,bar_1_png,bgMain_mp3,Special_menu_mp3",
+			"keys": "description_json,bg_jpg,loding_json,account_btn_png,account_btn_0_png,account_btn_1_png,continue_btn_png,continue_btn_0_png,continue_btn_1_png,Input_bg_png,login_jpg,login_json,login_btn_png,login_btn_0_png,login_btn_1_png,pop_ups_png,register_btn_png,register_btn_0_png,register_btn_1_png,title_login_png,title_prompt_png,verify_btn_png,verify_btn_0_png,verify_btn_1_png,visitor_btn_png,visitor_btn_0_png,visitor_btn_1_png,btn_28_png,btn_baijiale_png,btn_jinhua_png,btn_niuniu_png,coin_bg_png,generalize_0_png,generalize_1_png,head_png,shoppingmall_0_png,shoppingmall_1_png,topup_0_png,topup_1_png,trumpet_png,v_png,information_btn_0_png,information_btn_1_png,kefu_btn_0_png,kefu_btn_1_png,marquee_di_png,safebox_btn_0_png,safebox_btn_1_png,set_btn_0_png,set_btn_1_png,shang_di_png,welfare_btn_0_png,welfare_btn_1_png,xia_di_png,Btn_dating_qiehuan1_png,Btn_dating_qiehuan1_1_png,Btn_dating_qiehuan2_png,Btn_dating_qiehuan2_1_png,Btn_dating_qiehuan3_png,Btn_dating_qiehuan3_1_png,Btn_dating_qiehuan4_png,Btn_dating_qiehuan4_1_png,challenge_btn_0_png,challenge_btn_1_png,game_btn_di_png,hall_bg_png,horn_png,login_bg_png,zhezhao_bg_png,loding_bg_png,bar_0_png,bar_1_png,bgMain_mp3,Special_menu_mp3",
 			"name": "preload"
 		},
 		{
@@ -246,16 +246,6 @@
 			"url": "assets/login/visitor_btn_1.png"
 		},
 		{
-			"name": "Bg_dating_qiehuanzhuangshi_png",
-			"type": "image",
-			"url": "assets/hall/Bg_dating_qiehuanzhuangshi.png"
-		},
-		{
-			"name": "Bg_img_jpg",
-			"type": "image",
-			"url": "assets/hall/Bg_img.jpg"
-		},
-		{
 			"name": "btn_28_png",
 			"type": "image",
 			"url": "assets/hall/btn_28.png"
@@ -266,44 +256,9 @@
 			"url": "assets/hall/btn_baijiale.png"
 		},
 		{
-			"name": "btn_challenge_0_png",
-			"type": "image",
-			"url": "assets/hall/btn_challenge_0.png"
-		},
-		{
-			"name": "btn_challenge_1_png",
-			"type": "image",
-			"url": "assets/hall/btn_challenge_1.png"
-		},
-		{
-			"name": "btn_game_bg_png",
-			"type": "image",
-			"url": "assets/hall/btn_game_bg.png"
-		},
-		{
-			"name": "btn_info_0_png",
-			"type": "image",
-			"url": "assets/hall/btn_info_0.png"
-		},
-		{
-			"name": "btn_info_1_png",
-			"type": "image",
-			"url": "assets/hall/btn_info_1.png"
-		},
-		{
 			"name": "btn_jinhua_png",
 			"type": "image",
 			"url": "assets/hall/btn_jinhua.png"
-		},
-		{
-			"name": "btn_kefu_0_png",
-			"type": "image",
-			"url": "assets/hall/btn_kefu_0.png"
-		},
-		{
-			"name": "btn_kefu_1_png",
-			"type": "image",
-			"url": "assets/hall/btn_kefu_1.png"
 		},
 		{
 			"name": "btn_niuniu_png",
@@ -311,99 +266,9 @@
 			"url": "assets/hall/btn_niuniu.png"
 		},
 		{
-			"name": "btn_safebox_0_png",
-			"type": "image",
-			"url": "assets/hall/btn_safebox_0.png"
-		},
-		{
-			"name": "btn_safebox_1_png",
-			"type": "image",
-			"url": "assets/hall/btn_safebox_1.png"
-		},
-		{
-			"name": "btn_set_0_png",
-			"type": "image",
-			"url": "assets/hall/btn_set_0.png"
-		},
-		{
-			"name": "btn_set_1_png",
-			"type": "image",
-			"url": "assets/hall/btn_set_1.png"
-		},
-		{
-			"name": "btn_welfare_0_png",
-			"type": "image",
-			"url": "assets/hall/btn_welfare_0.png"
-		},
-		{
-			"name": "btn_welfare_1_png",
-			"type": "image",
-			"url": "assets/hall/btn_welfare_1.png"
-		},
-		{
 			"name": "coin_bg_png",
 			"type": "image",
 			"url": "assets/hall/coin_bg.png"
-		},
-		{
-			"name": "ding_png",
-			"type": "image",
-			"url": "assets/hall/ding.png"
-		},
-		{
-			"name": "di_bg_png",
-			"type": "image",
-			"url": "assets/hall/di_bg.png"
-		},
-		{
-			"name": "Font_dating_majianglei_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_majianglei.png"
-		},
-		{
-			"name": "Font_dating_majianglei1_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_majianglei1.png"
-		},
-		{
-			"name": "Font_dating_pukelei_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_pukelei.png"
-		},
-		{
-			"name": "Font_dating_pukelei1_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_pukelei1.png"
-		},
-		{
-			"name": "Font_dating_remenwanfa_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_remenwanfa.png"
-		},
-		{
-			"name": "Font_dating_remenwanfa1_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_remenwanfa1.png"
-		},
-		{
-			"name": "Font_dating_youxilei_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_youxilei.png"
-		},
-		{
-			"name": "Font_dating_youxilei1_png",
-			"type": "image",
-			"url": "assets/hall/Font_dating_youxilei1.png"
-		},
-		{
-			"name": "game_class_bg_png",
-			"type": "image",
-			"url": "assets/hall/game_class_bg.png"
-		},
-		{
-			"name": "generalize_png",
-			"type": "image",
-			"url": "assets/hall/generalize.png"
 		},
 		{
 			"name": "generalize_0_png",
@@ -421,11 +286,6 @@
 			"url": "assets/hall/head.png"
 		},
 		{
-			"name": "shoppingmall_png",
-			"type": "image",
-			"url": "assets/hall/shoppingmall.png"
-		},
-		{
 			"name": "shoppingmall_0_png",
 			"type": "image",
 			"url": "assets/hall/shoppingmall_0.png"
@@ -434,16 +294,6 @@
 			"name": "shoppingmall_1_png",
 			"type": "image",
 			"url": "assets/hall/shoppingmall_1.png"
-		},
-		{
-			"name": "title_bg_png",
-			"type": "image",
-			"url": "assets/hall/title_bg.png"
-		},
-		{
-			"name": "topup_png",
-			"type": "image",
-			"url": "assets/hall/topup.png"
 		},
 		{
 			"name": "topup_0_png",
@@ -581,11 +431,6 @@
 			"url": "assets/hall/challenge_btn_1.png"
 		},
 		{
-			"name": "coin_di_png",
-			"type": "image",
-			"url": "assets/hall/coin_di.png"
-		},
-		{
 			"name": "game_btn_di_png",
 			"type": "image",
 			"url": "assets/hall/game_btn_di.png"
@@ -599,11 +444,6 @@
 			"name": "horn_png",
 			"type": "image",
 			"url": "assets/hall/horn.png"
-		},
-		{
-			"name": "img (21)_png",
-			"type": "image",
-			"url": "assets/hall/img (21).png"
 		},
 		{
 			"name": "login_bg_png",
