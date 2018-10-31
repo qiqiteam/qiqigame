@@ -22,10 +22,10 @@ var GlobalData = (function () {
     };
     return GlobalData;
 }());
-/**百家乐大厅数据 */
-GlobalData.bjlTablesInfo = [];
-/**牛牛大厅数据 */
-GlobalData.nnTablesInfo = [];
+// /**百家乐大厅数据 */
+// public static bjlTablesInfo: Array<GameInformation> = [];
+// /**牛牛大厅数据 */
+// public static nnTablesInfo: Array<GameInformation> = [];
 /**md5加密后的密码 */
 GlobalData.md5PassWord = "";
 /**是否在重连 */

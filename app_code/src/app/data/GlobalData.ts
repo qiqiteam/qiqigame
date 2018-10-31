@@ -1,9 +1,9 @@
 class GlobalData {
 
-    /**百家乐大厅数据 */
-    public static bjlTablesInfo: Array<GameInformation> = [];
-    /**牛牛大厅数据 */
-    public static nnTablesInfo: Array<GameInformation> = [];
+    // /**百家乐大厅数据 */
+    // public static bjlTablesInfo: Array<GameInformation> = [];
+    // /**牛牛大厅数据 */
+    // public static nnTablesInfo: Array<GameInformation> = [];
     /**md5加密后的密码 */
     public static md5PassWord: string = "";
     /**是否在重连 */

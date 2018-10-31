@@ -57,6 +57,19 @@ module xlLib {
          */
         private _host: string = "";
         private _port: string = "";
+        /**
+         * 注册接收事件回调
+         */
+        public handlers = [];
+        public lastRecieveTime: number;
+        public appTimeStamp: number;
+        public isPinging = false;
+        public lastSendTime: number;
+        public disconnectCallback: any;
+
+        public token:string;
+        public userid:string;
+
         public get host(): string {
             return this._host;
         }
@@ -69,20 +82,68 @@ module xlLib {
         * @param host {string} 主机ip或者域名
         * @param port {string} 主机端口号
         **/
-        public connect(host: string, port: string): void {
+        public connect(host: string, port: string,id:string): void {
             if (!this._connected && !this._isConnecting) {
                 this._host = host;
                 this._port = port;
                 this.resetWebSocket();
                 this._isConnecting = true;
                 this._connected = false;
-
                 // var protocol = window.location.toString().indexOf("https") != -1 ? "wss://" : "ws://";
                 var protocol = "ws://";
-                this.ws.connectByUrl(protocol + host +":"+ port);
-                Console.log("连接: " + host + port + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
+                var requrl = protocol + host +":"+ port+"?userid="+id;
+                this.ws.connectByUrl(requrl);
+                Console.log("连接: " + requrl + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
             }
         }
+
+
+        // //**************************************************************************
+        // //客户端心跳处理
+        // //**************************************************************************
+        // public startHeartBeat(): void {
+        //     this.lastRecieveTime = this.appTimeStamp;;
+        //     //服务器响应心跳的事件监听
+        //     // this.ws.on("socket_pong", function () {
+        //     //     console.log("socket_pong");
+        //     //     this.lastRecieveTime = ClientApp.getInstance().appTimeStamp;
+        //     // });
+        //     //启动定时器开始ping服务器消息,连上后每2秒ping一次服务器
+        //     if (!this.isPinging) {
+        //         this.isPinging = true;
+
+        //         //每2秒执行一次ping服务器操作
+        //         setInterval(function () {
+        //             if (this.ws) {
+        //                 this.ping();
+        //                 console.log("客户端ping了一次网络消息");
+        //             }
+        //         }.bind(this), 2000);
+
+        //         //每7秒检查一次ping消息是否有效
+        //         setInterval(function () {
+        //             if (this.ws) {
+        //                 var CurTime = this.appTimeStamp;
+        //                 var misTime = CurTime - this.lastRecieveTime
+        //                 if (misTime > 15000) {
+        //                     this.close();
+        //                 }
+        //             }
+        //         }.bind(this), 1000);
+        //     }
+        // }
+
+
+        // //**************************************************************************
+        // //和服务器端ping网络消息
+        // //**************************************************************************
+        // private ping(): void {
+        //     if (this.ws) {
+        //         this.lastSendTime = this.appTimeStamp;
+        //         this.send("socket_ping", {});
+        //     }
+        // }
+
         /** 
         * 关闭连接
         **/
@@ -96,15 +157,67 @@ module xlLib {
                 this._isConnecting = false;
                 this._connected = false;
             }
+            if (this.ws) {
+                this.ws.removeEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);
+                this.ws.removeEventListener(egret.Event.CONNECT, this.onSocketOpen, this);
+                this.ws.removeEventListener(egret.Event.CLOSE, this.onSocketClose, this);
+                this.ws.removeEventListener(egret.IOErrorEvent.IO_ERROR, this.onSocketClose, this);
+            }
+            this.ws = null;
         }
+
+        //**************************************************************************
+        //注册网络事件处理函数
+        //**************************************************************************
+        public registerMsgHandler(msgid: string, callbackfuc?: Function,isonce:boolean = true): void {
+            if (this.handlers[msgid]) {
+                console.log("消息ID为:" + msgid + "已经注册了相同的处理回调函数");
+                return;
+            }
+            var handlerfunc =  (msgdata)=> {
+                if (msgid != "disconnect" && typeof (msgdata) == "string") {
+                    msgdata = JSON.parse(msgdata);
+                }
+                callbackfuc(msgdata);
+                if(isonce){
+                    delete this.handlers[msgid];
+                }
+            };
+            // console.log("FWTcpClient绑定消息处理函数成功: msgid=" + msgid);
+            this.handlers[msgid] = handlerfunc;
+            // if (this.ws) {
+            //     this.ws.on(msgid, handlerfunc);
+            // }
+        }
+
         /** 
         * 发送数据给服务器
         * @param cmd {string} 命令
         * @param host {any} 数据
         **/
-        public send(cmd: string, data?: any) {
+        public send(cmd: string, data:any, cb: Function, thisArg?: any, ecb?: Function,ishow: boolean = true) {
             if (this.ws.connected) {
- 
+                if (data != null && (typeof (data) == "object")) {
+                    data.command = cmd;
+                    data = JSON.stringify(data);
+                }
+                this.registerMsgHandler(cmd,(msg)=>{
+                          console.log("-----------------收到消息"+msg+"---",msg);
+                    // if (msg.code == 200) {
+                         cb.call(thisArg,msg);
+                    // }
+                    // else {
+                    //     if (ecb) {
+                    //         ecb.call(thisArg,msg);
+                    //     }
+                    //     if (ishow) {
+                    //         xlLib.TipsUtils.showFloatWordTips(msg.err);
+                    //     }
+                    // }
+                },false);
+                this.ws.writeUTF(data);
+                this.ws.flush();
+                console.log("开始发送消息---------------");
             }
             else {
                 xlLib.TipsUtils.showFloatWordTips("服务器已断开，请检查网络环境");
@@ -112,16 +225,29 @@ module xlLib {
         }
 
         private onReceiveMessage(event: egret.ProgressEvent): void {
-            var result: string = this.ws.readUTF();
-            var data:Object = JSON.parse(result);
-            console.log("-----------------收到消息"+data+"---",data);
-            
+            var msg = this.ws.readUTF();
+            let recvMsg = JSON.parse(msg);
+            if (this.handlers[recvMsg.event]) {
+                console.log("收到消息 = " + msg);
+                this.handlers[recvMsg.event](msg);
+            }
+            else if (recvMsg.event == "socket_pong") {
+                console.log("socket_pong");
+                this.lastRecieveTime = this.appTimeStamp;
+            }
+            // var result: string = this.ws.readUTF();
+            // var data:Object = JSON.parse(result);
+            // console.log("-----------------收到消息"+recvMsg+"---",recvMsg);
         }
+
         private onSocketOpen(event: egret.Event): void {
             this._isConnecting = false;
             this._connected = true;
             Console.log("网络已连接" + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
         }
+
+
+
         private onSocketClose(event: egret.Event): void {
             if (this._connected || this._isConnecting) {
                 this._isConnecting = false;

@@ -25,6 +25,7 @@ var LoginView = (function (_super) {
         EventUtil.addEventListener(EventConst.ON_SOCKET_FAIL, _this.onSocketFail, _this);
         _this.once(egret.Event.REMOVED_FROM_STAGE, _this.destroy, _this);
         _this.resize();
+        _this.onStarLogin();
         return _this;
     }
     LoginView.prototype.resize = function () {
@@ -80,14 +81,27 @@ var LoginView = (function (_super) {
                 xlLib.TipsUtils.showFloatWordTips("连接失败 请检查网络环境！");
                 return;
             }
-            var data = new Object;
-            data.userName = this.username_txt.text;
-            data.passWord = xlLib.StringUtils.md5(this.passwd_txt.text);
-            GlobalData.md5PassWord = data.passWord;
-            xlLib.WebSocketMgr.getInstance().connect("192.168.1.36", "9081");
-            xlLib.UIMgr.instance.showLoading(TipsLoading);
-            xlLib.SceneMgr.instance.changeScene(Lobby);
+            xlLib.WebSocketMgr.getInstance().send("gamestatus", { "token": xlLib.WebSocketMgr.getInstance().token, "orgi": "beimi", "userid": xlLib.WebSocketMgr.getInstance().userid }, this.onsend);
         }
+    };
+    LoginView.prototype.onsend = function () {
+    };
+    LoginView.prototype.onStarLogin = function () {
+        xlLib.HttpManager.getInstance().send(HttpAddress.loginUrl, {}, egret.URLRequestMethod.POST, function (data) {
+            if (data.data) {
+                xlLib.TipsUtils.showFloatWordTips("登录成功！");
+                xlLib.WebSocketMgr.getInstance().token = data.data.token;
+                xlLib.WebSocketMgr.getInstance().userid = data.data.id;
+                this.onConnSever(data.data.id);
+            }
+            else {
+            }
+        }, function () { }, this, false);
+    };
+    LoginView.prototype.onConnSever = function (id) {
+        xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST, Const.GAME_PORT, id);
+        // xlLib.UIMgr.instance.showLoading(TipsLoading);
+        // xlLib.SceneMgr.instance.changeScene(Lobby);
     };
     LoginView.prototype.initGameData = function (data) {
     };
