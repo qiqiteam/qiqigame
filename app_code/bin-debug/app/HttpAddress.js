@@ -13,4 +13,3 @@ HttpAddress.sendmsgUrl = Const.httpUrl + "/api/sendmsg";
 /**注册登录地址 */
 HttpAddress.login = Const.httpUrl + "/api/login";
 __reflect(HttpAddress.prototype, "HttpAddress");
-//# sourceMappingURL=HttpAddress.js.map

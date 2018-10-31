@@ -46,4 +46,3 @@ var GlobalFunction = (function () {
     return GlobalFunction;
 }());
 __reflect(GlobalFunction.prototype, "GlobalFunction");
-//# sourceMappingURL=GlobalFunction.js.map

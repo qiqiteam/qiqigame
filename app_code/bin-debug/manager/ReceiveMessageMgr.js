@@ -17,4 +17,3 @@ var xlLib;
     xlLib.ReceiveMessageMgr = ReceiveMessageMgr;
     __reflect(ReceiveMessageMgr.prototype, "xlLib.ReceiveMessageMgr");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=ReceiveMessageMgr.js.map

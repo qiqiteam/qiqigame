@@ -357,4 +357,3 @@ var xlLib;
     xlLib.SoundMgr = SoundMgr;
     __reflect(SoundMgr.prototype, "xlLib.SoundMgr");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=SoundMgr.js.map

@@ -142,4 +142,3 @@ var xlLib;
     xlLib.HttpManager = HttpManager;
     __reflect(HttpManager.prototype, "xlLib.HttpManager");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=HttpManager.js.map

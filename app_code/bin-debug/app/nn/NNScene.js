@@ -31,4 +31,3 @@ var NNScene = (function (_super) {
     return NNScene;
 }(xlLib.GameScene));
 __reflect(NNScene.prototype, "NNScene");
-//# sourceMappingURL=NNScene.js.map

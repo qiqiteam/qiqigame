@@ -23,4 +23,3 @@ var UserInfo = (function () {
     return UserInfo;
 }());
 __reflect(UserInfo.prototype, "UserInfo");
-//# sourceMappingURL=UserInfo.js.map

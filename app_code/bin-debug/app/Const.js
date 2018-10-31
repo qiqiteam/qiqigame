@@ -10,4 +10,3 @@ Const.GAME_HOST = "192.168.1.36";
 Const.GAME_PORT = "9081";
 Const.httpUrl = "http://192.168.1.36";
 __reflect(Const.prototype, "Const");
-//# sourceMappingURL=Const.js.map

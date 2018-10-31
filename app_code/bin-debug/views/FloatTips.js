@@ -39,4 +39,3 @@ var xlLib;
     xlLib.FloatTips = FloatTips;
     __reflect(FloatTips.prototype, "xlLib.FloatTips");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=FloatTips.js.map

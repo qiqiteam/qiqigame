@@ -239,4 +239,3 @@
 //         EventUtil.removeEventListener(EventConst.ON_SOCKET_FAIL, this.onLoginFail, this);
 //     }
 // } 
-//# sourceMappingURL=ReconnectManager.js.map

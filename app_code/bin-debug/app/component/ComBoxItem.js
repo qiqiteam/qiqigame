@@ -22,4 +22,3 @@ var ComBoxItem = (function (_super) {
     return ComBoxItem;
 }(eui.ItemRenderer));
 __reflect(ComBoxItem.prototype, "ComBoxItem");
-//# sourceMappingURL=ComBoxItem.js.map

@@ -173,4 +173,3 @@ var xlLib;
     xlLib.SceneMgr = SceneMgr;
     __reflect(SceneMgr.prototype, "xlLib.SceneMgr");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=SceneMgr.js.map

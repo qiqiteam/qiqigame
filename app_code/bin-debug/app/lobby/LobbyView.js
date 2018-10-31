@@ -157,4 +157,3 @@ var LobbyView = (function (_super) {
     return LobbyView;
 }(eui.Component));
 __reflect(LobbyView.prototype, "LobbyView");
-//# sourceMappingURL=LobbyView.js.map

@@ -147,4 +147,3 @@ var xlLib;
     xlLib.ScreenUtils = ScreenUtils;
     __reflect(ScreenUtils.prototype, "xlLib.ScreenUtils");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=ScreenUtils.js.map

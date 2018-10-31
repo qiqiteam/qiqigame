@@ -21,4 +21,3 @@ EventConst.ON_SOCKET_FAIL = "onSocketFail";
 /*** socket连接关闭*/
 EventConst.ON_SOCKET_CLOSE = "onSocketClose";
 __reflect(EventConst.prototype, "EventConst");
-//# sourceMappingURL=EventConst.js.map

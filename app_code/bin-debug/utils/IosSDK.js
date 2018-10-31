@@ -95,4 +95,3 @@ var xlLib;
     xlLib.IosSDK = IosSDK;
     __reflect(IosSDK.prototype, "xlLib.IosSDK");
 })(xlLib || (xlLib = {}));
-//# sourceMappingURL=IosSDK.js.map
