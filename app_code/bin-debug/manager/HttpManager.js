@@ -96,7 +96,7 @@ var xlLib;
                     var data = JSON.parse(urlLoader.data);
                     xlLib.Console.log("收到http数据：" + urlLoader.data);
                     if (showError) {
-                        if (data.result) {
+                        if (data.data) {
                             sucessFunc.call(this.loadList[key].thisObject, this.loadList[key].isJson ? data : urlLoader.data);
                         }
                         else {
