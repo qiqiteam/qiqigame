@@ -50,8 +50,9 @@ var LoginView = (function (_super) {
         this._group_btn_2.visible = true;
     };
     LoginView.prototype._onContinueLogin = function (e) {
-        xlLib.UIMgr.instance.showLoading(TipsLoading);
-        xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl, null, null, this.onLoginSucess, this.onLoginFail);
+        //xlLib.UIMgr.instance.showLoading(TipsLoading);
+        //xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+        xlLib.SceneMgr.instance.changeScene(Lobby);
     };
     LoginView.prototype._onRegister = function (e) {
     };
@@ -63,7 +64,7 @@ var LoginView = (function (_super) {
         });
     };
     LoginView.prototype._onLogin = function (evt) {
-        if (this._phone_txt.text == "" || this._Verify_code_txt.text == "") {
+        if (this._phone_txt.text == "" || this._verify_code_txt.text == "") {
             xlLib.TipsUtils.showFloatWordTips("手机号或验证码不能为空！");
             return;
         }
@@ -72,7 +73,7 @@ var LoginView = (function (_super) {
             return;
         }
         xlLib.UIMgr.instance.showLoading(TipsLoading);
-        xlLib.HttpManager.getInstance().send(HttpAddress.login, { mobile: this._phone_txt.text, verifyCode: this._Verify_code_txt.text }, null, this.onLoginSucess, this.onLoginFail);
+        xlLib.HttpManager.getInstance().send(HttpAddress.login, { mobile: this._phone_txt.text, verifyCode: this._verify_code_txt.text }, null, this.onLoginSucess, this.onLoginFail);
     };
     LoginView.prototype.onLoginFail = function (data) {
         xlLib.UIMgr.instance.hideLoading(TipsLoading);

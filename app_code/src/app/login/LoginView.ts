@@ -12,7 +12,7 @@ class LoginView extends eui.Component
 	public _btn_register:eui.Button;
 	public _group_btn_2:eui.Group;
 	public _phone_txt:eui.EditableText;
-	public _Verify_code_txt:eui.EditableText;
+	public _verify_code_txt:eui.EditableText;
 	public zzzh_btn:eui.CheckBox;
 	public _btn_login:eui.Button;
 	public _btn_verify:eui.Button;
@@ -66,8 +66,9 @@ class LoginView extends eui.Component
 	}
 
 	private _onContinueLogin(e:egret.TouchEvent):void {
-		xlLib.UIMgr.instance.showLoading(TipsLoading);
-		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+		//xlLib.UIMgr.instance.showLoading(TipsLoading);
+		//xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+		xlLib.SceneMgr.instance.changeScene(Lobby);
 	}
 
 	private _onRegister(e:egret.TouchEvent):void {
@@ -85,7 +86,7 @@ class LoginView extends eui.Component
 
 	private _onLogin(evt:egret.Event):void
 	{
-		if(this._phone_txt.text == ""||this._Verify_code_txt.text == "")
+		if(this._phone_txt.text == ""||this._verify_code_txt.text == "")
 		{
 			xlLib.TipsUtils.showFloatWordTips("手机号或验证码不能为空！");
 			return;
@@ -95,7 +96,7 @@ class LoginView extends eui.Component
 			return;
 		}
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
-		xlLib.HttpManager.getInstance().send(HttpAddress.login,{mobile:this._phone_txt.text,verifyCode:this._Verify_code_txt.text},
+		xlLib.HttpManager.getInstance().send(HttpAddress.login,{mobile:this._phone_txt.text,verifyCode:this._verify_code_txt.text},
 		null,this.onLoginSucess,this.onLoginFail);
 	}
 

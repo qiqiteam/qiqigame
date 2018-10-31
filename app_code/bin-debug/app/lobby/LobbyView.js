@@ -20,6 +20,17 @@ var LobbyView = (function (_super) {
         _this._btn_pk.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnPk, _this);
         _this._btn_mahjong.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnMahjong, _this);
         _this._btn_game.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnGame, _this);
+        _this._set.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._generalize.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._safebox.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        var musicBg = ["bgMain_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
         return _this;
     }
     LobbyView.prototype.childrenCreated = function () {
@@ -84,6 +95,10 @@ var LobbyView = (function (_super) {
     LobbyView.prototype.onClick = function (e) {
         //EffectUtils.playEffect(e.target,2);
         EffectUtils.playButtonEffect(e.target, null);
+        this.playClickSound();
+    };
+    LobbyView.prototype.onClick2 = function (e) {
+        this.playClickSound();
     };
     LobbyView.prototype.onBtnWanfa = function (e) {
         this._btnHide();
@@ -114,6 +129,7 @@ var LobbyView = (function (_super) {
         this._group_pk.visible = false;
         this._group_mahjong.visible = false;
         this._group_game.visible = false;
+        this.playClickSound();
     };
     LobbyView.prototype.onTouchHandler = function (evt) {
     };
@@ -132,6 +148,9 @@ var LobbyView = (function (_super) {
         EventUtil.removeEventListener(EventConst.ON_SOCKET_CLOSE, this.onSocketClose, this);
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
         egret.Tween.removeTweens(this);
+    };
+    LobbyView.prototype.playClickSound = function () {
+        xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
     };
     return LobbyView;
 }(eui.Component));

@@ -59,7 +59,7 @@
 		<e:Image width="173" height="42" scaleX="1" scaleY="1" source="title_login_png" horizontalCenter="0.5" top="20"/>
 		<e:Image y="138" touchEnabled="false" source="Input_bg_png" horizontalCenter="0.5" width="647"/>
 		<e:EditableText id="_phone_txt" width="290" height="45" x="124" y="147" anchorOffsetX="0" anchorOffsetY="0" textColor="0xffffff" size="25" restrict="0-9" textAlign="left" verticalAlign="middle" prompt="请输入手机号" promptColor="0xffffff"/>
-		<e:EditableText id="_Verify_code_txt" width="290" height="39" x="124" y="272" anchorOffsetX="0" anchorOffsetY="0" displayAsPassword="false" restrict="0-9" textColor="0xffffff" size="25" verticalAlign="middle" textAlign="left" promptColor="0xffffff" prompt="请输入验证码"/>
+		<e:EditableText id="_verify_code_txt" width="290" height="39" x="124" y="272" anchorOffsetX="0" anchorOffsetY="0" displayAsPassword="false" restrict="0-9" textColor="0xffffff" size="25" verticalAlign="middle" textAlign="left" promptColor="0xffffff" prompt="请输入验证码"/>
 		<e:CheckBox id="zzzh_btn" label="" x="96" y="414" selected="true" visible="false" locked="true">
 			<e:skinName>
 			<e:Skin states="up,down,disabled">

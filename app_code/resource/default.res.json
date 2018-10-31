@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,bg_jpg,loding_json,account_btn_png,account_btn_0_png,account_btn_1_png,continue_btn_png,continue_btn_0_png,continue_btn_1_png,Input_bg_png,login_jpg,login_json,login_bg_png,login_btn_png,login_btn_0_png,login_btn_1_png,pop_ups_png,register_btn_png,register_btn_0_png,register_btn_1_png,title_login_png,title_prompt_png,verify_btn_png,verify_btn_0_png,verify_btn_1_png,visitor_btn_png,visitor_btn_0_png,visitor_btn_1_png,Bg_dating_qiehuanzhuangshi_png,Bg_img_jpg,btn_28_png,btn_baijiale_png,btn_challenge_0_png,btn_challenge_1_png,btn_game_bg_png,btn_info_0_png,btn_info_1_png,btn_jinhua_png,btn_kefu_0_png,btn_kefu_1_png,btn_niuniu_png,btn_safebox_0_png,btn_safebox_1_png,btn_set_0_png,btn_set_1_png,btn_welfare_0_png,btn_welfare_1_png,coin_bg_png,ding_png,di_bg_png,Font_dating_majianglei_png,Font_dating_majianglei1_png,Font_dating_pukelei_png,Font_dating_pukelei1_png,Font_dating_remenwanfa_png,Font_dating_remenwanfa1_png,Font_dating_youxilei_png,Font_dating_youxilei1_png,game_class_bg_png,generalize_png,generalize_0_png,generalize_1_png,head_png,shoppingmall_png,shoppingmall_0_png,shoppingmall_1_png,title_bg_png,topup_png,topup_0_png,topup_1_png,trumpet_png,v_png",
+			"keys": "description_json,bg_jpg,loding_json,account_btn_png,account_btn_0_png,account_btn_1_png,continue_btn_png,continue_btn_0_png,continue_btn_1_png,Input_bg_png,login_jpg,login_json,login_bg_png,login_btn_png,login_btn_0_png,login_btn_1_png,pop_ups_png,register_btn_png,register_btn_0_png,register_btn_1_png,title_login_png,title_prompt_png,verify_btn_png,verify_btn_0_png,verify_btn_1_png,visitor_btn_png,visitor_btn_0_png,visitor_btn_1_png,Bg_dating_qiehuanzhuangshi_png,Bg_img_jpg,btn_28_png,btn_baijiale_png,btn_challenge_0_png,btn_challenge_1_png,btn_game_bg_png,btn_info_0_png,btn_info_1_png,btn_jinhua_png,btn_kefu_0_png,btn_kefu_1_png,btn_niuniu_png,btn_safebox_0_png,btn_safebox_1_png,btn_set_0_png,btn_set_1_png,btn_welfare_0_png,btn_welfare_1_png,coin_bg_png,ding_png,di_bg_png,Font_dating_majianglei_png,Font_dating_majianglei1_png,Font_dating_pukelei_png,Font_dating_pukelei1_png,Font_dating_remenwanfa_png,Font_dating_remenwanfa1_png,Font_dating_youxilei_png,Font_dating_youxilei1_png,game_class_bg_png,generalize_png,generalize_0_png,generalize_1_png,head_png,shoppingmall_png,shoppingmall_0_png,shoppingmall_1_png,title_bg_png,topup_png,topup_0_png,topup_1_png,trumpet_png,v_png,loding_bg_png,bar_0_png,bar_1_png,bgMain_mp3,Special_menu_mp3",
 			"name": "preload"
 		},
 		{
@@ -469,6 +469,31 @@
 			"name": "v_png",
 			"type": "image",
 			"url": "assets/hall/v.png"
+		},
+		{
+			"name": "loding_bg_png",
+			"type": "image",
+			"url": "assets/loding/loding_bg.png"
+		},
+		{
+			"name": "bar_0_png",
+			"type": "image",
+			"url": "assets/loding/bar_0.png"
+		},
+		{
+			"name": "bar_1_png",
+			"type": "image",
+			"url": "assets/loding/bar_1.png"
+		},
+		{
+			"name": "bgMain_mp3",
+			"type": "sound",
+			"url": "assets/sound/bgMain.mp3"
+		},
+		{
+			"name": "Special_menu_mp3",
+			"type": "sound",
+			"url": "assets/sound/Special_menu.mp3"
 		}
 	]
 }

@@ -43,6 +43,20 @@ class LobbyView extends eui.Component {
 		this._btn_pk.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnPk, this);
 		this._btn_mahjong.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnMahjong, this);
 		this._btn_game.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnGame, this);
+
+		this._set.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+
+		this._generalize.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._safebox.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+
+		let musicBg = ["bgMain_mp3"];
+		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 	}
 
 	protected childrenCreated() {
@@ -117,6 +131,11 @@ class LobbyView extends eui.Component {
 	private onClick(e:egret.TouchEvent):void {
 		//EffectUtils.playEffect(e.target,2);
 		EffectUtils.playButtonEffect(e.target,null);
+		this.playClickSound();
+	}
+
+	private onClick2(e:egret.TouchEvent):void {
+		this.playClickSound();
 	}
 
 	private onBtnWanfa(e:egret.TouchEvent):void {
@@ -152,6 +171,7 @@ class LobbyView extends eui.Component {
 		this._group_pk.visible = false;
 		this._group_mahjong.visible = false;
 		this._group_game.visible = false;
+		this.playClickSound();
 	}
 
 	private onTouchHandler(evt: egret.Event): void {
@@ -178,5 +198,9 @@ class LobbyView extends eui.Component {
 		EventUtil.removeEventListener(EventConst.ON_SOCKET_CLOSE, this.onSocketClose, this);
 		this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
 		egret.Tween.removeTweens(this);
+	}
+
+	public playClickSound() {
+		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
 	}
 }
