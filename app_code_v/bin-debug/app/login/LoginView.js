@@ -79,7 +79,12 @@ var LoginView = (function (_super) {
         xlLib.TipsUtils.showFloatWordTips("登录失败 请检查网络环境！");
     };
     LoginView.prototype.onLoginSucess = function (data) {
-        xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST, Const.GAME_PORT, data.id);
+        var info = data.data;
+        UserInfo.getInstance().uid = info.id;
+        UserInfo.getInstance().username = info.username;
+        UserInfo.getInstance().goldcoins = info.goldcoins;
+        console.log("收到用户数据" + info.goldcoins);
+        xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST, Const.GAME_PORT, info.id);
     };
     LoginView.prototype.onSocketFail = function (data) {
         xlLib.UIMgr.instance.hideLoading(TipsLoading);
@@ -89,12 +94,6 @@ var LoginView = (function (_super) {
         xlLib.UIMgr.instance.hideLoading(TipsLoading);
         xlLib.SceneMgr.instance.changeScene(Lobby);
         xlLib.TipsUtils.showFloatWordTips("游客登录成功！");
-    };
-    LoginView.prototype.initGameData = function (data) {
-    };
-    LoginView.prototype.initPlayerData = function (data) {
-        UserInfo.getInstance().uid = data.uid;
-        UserInfo.getInstance().userType = data.userType;
     };
     LoginView.prototype.destroy = function () {
         this._btn_visitor.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);

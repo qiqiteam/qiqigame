@@ -127,7 +127,7 @@ class LoginView extends eui.Component
 	{
 		xlLib.UIMgr.instance.hideLoading(TipsLoading);
 		xlLib.SceneMgr.instance.changeScene(Lobby);
-	    xlLib.TipsUtils.showFloatWordTips("游客登录成功！");
+	    xlLib.TipsUtils.showFloatWordTips("登录成功！");
 	}
 
 	private initGameData(data: any) {

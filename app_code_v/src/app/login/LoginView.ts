@@ -107,7 +107,12 @@ class LoginView extends eui.Component
 
 	private onLoginSucess(data:any):void
 	{
-	   xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST,Const.GAME_PORT,data.id);
+		var info:any = data.data;
+		UserInfo.getInstance().uid = info.id;
+		UserInfo.getInstance().username = info.username;
+		UserInfo.getInstance().goldcoins = info.goldcoins;
+		console.log("收到用户数据"+info.goldcoins);
+	   xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST,Const.GAME_PORT,info.id);
 	}
 
 	private onSocketFail(data:any):void
@@ -120,15 +125,7 @@ class LoginView extends eui.Component
 	{
 		xlLib.UIMgr.instance.hideLoading(TipsLoading);
 		xlLib.SceneMgr.instance.changeScene(Lobby);
-	    xlLib.TipsUtils.showFloatWordTips("游客登录成功！");
-	}
-
-	private initGameData(data: any) {
-	}
-
-	private initPlayerData(data: any) {
-		UserInfo.getInstance().uid = data.uid;
-		UserInfo.getInstance().userType = data.userType;
+	    xlLib.TipsUtils.showFloatWordTips("登录成功！");
 	}
 
 	public destroy()
