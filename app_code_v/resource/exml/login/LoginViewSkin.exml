@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="LoginViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="1472" height="828">
-	<e:Image id="bgImg" width="100%" height="100%" source="login_bg_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
-	<e:Group id="_group_btn_0" width="688" height="484" x="672" y="306" anchorOffsetX="0" anchorOffsetY="0">
-		<e:Button id="_btn_visitor" label="" scaleX="1" scaleY="1" verticalCenter="0" left="0">
+<e:Skin class="LoginViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="828" height="1472">
+	<e:Image id="bgImg" width="100%" height="100%" source="login_bg_png" x="0" y="0"/>
+	<e:Group id="_group_btn_0" width="836" height="307" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" bottom="0">
+		<e:Image width="836" height="307" scaleX="1" scaleY="1" source="zhezhao_bg_png" horizontalCenter="0" bottom="0"/>
+		<e:Button id="_btn_visitor" label="" scaleX="1" scaleY="1" left="60" top="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="visitor_btn_0_png" source.down="visitor_btn_1_png"/>
@@ -11,7 +12,7 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Button id="_btn_account" label="" scaleX="1" scaleY="1" verticalCenter="0" right="0">
+		<e:Button id="_btn_account" label="" scaleX="1" scaleY="1" right="60" top="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="account_btn_0_png" source.down="account_btn_1_png"/>
@@ -21,7 +22,7 @@
 
 		</e:Button>
 	</e:Group>
-	<e:Group id="_group_btn_1" width="848" height="528" anchorOffsetX="0" anchorOffsetY="0" right="68" bottom="112" visible="false">
+	<e:Group id="_group_btn_1" width="848" height="528" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="180" scaleX="0.85" scaleY="0.85" visible="false">
 		<e:Image width="100%" height="100%" x="0" y="0" source="pop_ups_png" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0"/>
 		<e:Button id="_btn_continue" label="" x="88" y="361" scaleX="1" scaleY="1">
 			<e:skinName>
@@ -54,7 +55,7 @@
 
 
 
-	<e:Group id="_group_btn_2" verticalCenter="42" horizontalCenter="254" width="848" height="528" visible="false">
+	<e:Group id="_group_btn_2" verticalCenter="180" horizontalCenter="0.5" width="848" height="528" scaleX="0.85" scaleY="0.85" visible="false">
 		<e:Image touchEnabled="false" source="pop_ups_png" horizontalCenter="0" verticalCenter="0"/>
 		<e:Image width="173" height="42" scaleX="1" scaleY="1" source="title_login_png" horizontalCenter="0.5" top="20"/>
 		<e:Image y="138" touchEnabled="false" source="Input_bg_png" horizontalCenter="0.5" width="647"/>

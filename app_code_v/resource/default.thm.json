@@ -21,6 +21,7 @@
     "resource/exml/component/ComBoxItemSkin.exml",
     "resource/exml/component/ComBoxSkin.exml",
     "resource/exml/lobby/LobbyViewSkin.exml",
+    "resource/exml/lobby/LobbyViewSkin1.exml",
     "resource/exml/login/LoginViewSkin.exml",
     "resource/exml/nn/NNCardViewSkin.exml",
     "resource/exml/nn/NNGameItemSkin.exml",

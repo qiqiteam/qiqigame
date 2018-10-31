@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="LodingViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="bg_img" x="0" y="0" source="bg_jpg" width="100%" height="100%"/>
-	<e:Group verticalCenter="-81.5" horizontalCenter="-10.5">
-		<e:Label text="游戏正在加载中，请稍后..." x="10" y="48.5" size="20" anchorOffsetX="0" width="327" textAlign="center"/>
-		<e:Image source="ProgressBarBG" x="15" y="15" scale9Grid="5,5,2,2" anchorOffsetX="0" width="322" anchorOffsetY="0" height="21"/>
-		<e:Rect id="load_rec" width="318" height="17" x="18" y="17"/>
-		<e:Image id="load_img" source="ProgressBar" x="17" y="17" scale9Grid="5,5,2,2" anchorOffsetX="0" width="318" anchorOffsetY="0" height="17" rotation="0.09"/>
-		<e:Image id="pro_img" source="ProgressBarTag" x="0" y="0"/>
+<e:Skin class="LodingViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="828" height="1472">
+	<e:Image id="bg_img" width="100%" height="100%" source="loding_bg_png" horizontalCenter="0" verticalCenter="0"/>
+	<e:Group horizontalCenter="0" bottom="145">
+
+		<e:Image x="15" y="13" scale9Grid="5,5,2,2" anchorOffsetX="0" width="605" anchorOffsetY="0" height="37" source="bar_0_png"/>
+		<e:Rect id="load_rec" width="598" height="30" x="16" y="17"/>
+		<e:Image id="load_img" x="15" y="17" scale9Grid="5,5,2,2" anchorOffsetX="0" width="598" anchorOffsetY="0" height="30" rotation="0.09" source="bar_1_png"/>
+		<e:Image id="pro_img" source="ProgressBarTag" x="0" y="0" visible="false"/>
 	</e:Group>
-	<e:Image source="logoicon" smoothing="true" verticalCenter="-193" horizontalCenter="-3"/>
+
 </e:Skin>

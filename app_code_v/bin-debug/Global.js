@@ -13,7 +13,7 @@ var xlLib;
              * 大厅模式
              */
             this.lobbyMode = false;
-            this.scaleMode = "fixedWidth";
+            this.scaleMode = "exactFit";
         }
         return initOptions;
     }());

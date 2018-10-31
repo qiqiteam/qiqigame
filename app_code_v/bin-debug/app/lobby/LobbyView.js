@@ -20,6 +20,17 @@ var LobbyView = (function (_super) {
         _this._btn_pk.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnPk, _this);
         _this._btn_mahjong.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnMahjong, _this);
         _this._btn_game.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnGame, _this);
+        _this._set.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._generalize.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._safebox.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        _this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
+        var musicBg = ["bgMain_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
         return _this;
     }
     LobbyView.prototype.childrenCreated = function () {
@@ -27,19 +38,21 @@ var LobbyView = (function (_super) {
         this.createGameBtn();
     };
     LobbyView.prototype.createGameBtn = function () {
-        var arr_wanfa = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
+        var arr_wanfa = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png", "btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
         var arr_pk = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
         var arr_mahjong = ["btn_28_png", "btn_28_png", "btn_28_png"];
         var arr_game = ["btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png"];
-        var yy = 10;
+        var yy = 0;
         for (var i = 0; i < arr_wanfa.length; i++) {
             //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_wanfa[i]);
             this._wanfa_btn_area.addChild(btn);
-            var num = i % 3;
-            btn.x = 70 + num * 340;
-            if (num == 0 && i != 0) {
-                yy = 265;
+            if (i % 2 == 0) {
+                yy = 20 + 350 * i / 2;
+                btn.x = 30;
+            }
+            else {
+                btn.x = 440;
             }
             btn.y = yy;
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -48,10 +61,12 @@ var LobbyView = (function (_super) {
             //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_pk[i]);
             this._pk_btn_area.addChild(btn);
-            var num = i % 3;
-            btn.x = 70 + num * 340;
-            if (num == 0 && i != 0) {
-                yy = 265;
+            if (i % 2 == 0) {
+                yy = 20 + 350 * i / 2;
+                btn.x = 30;
+            }
+            else {
+                btn.x = 440;
             }
             btn.y = yy;
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -60,10 +75,12 @@ var LobbyView = (function (_super) {
             //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_mahjong[i]);
             this._mahjong_btn_area.addChild(btn);
-            var num = i % 3;
-            btn.x = 70 + num * 340;
-            if (num == 0 && i != 0) {
-                yy = 265;
+            if (i % 2 == 0) {
+                yy = 20 + 350 * i / 2;
+                btn.x = 30;
+            }
+            else {
+                btn.x = 440;
             }
             btn.y = yy;
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -72,18 +89,26 @@ var LobbyView = (function (_super) {
             //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_game[i]);
             this._game_btn_area.addChild(btn);
-            var num = i % 3;
-            btn.x = 70 + num * 340;
-            if (num == 0 && i != 0) {
-                yy = 265;
+            if (i % 2 == 0) {
+                yy = 20 + 350 * i / 2;
+                btn.x = 30;
+            }
+            else {
+                btn.x = 440;
             }
             btn.y = yy;
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         }
+        this._head_label.text = UserInfo.getInstance().username;
+        this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
     };
     LobbyView.prototype.onClick = function (e) {
         //EffectUtils.playEffect(e.target,2);
         EffectUtils.playButtonEffect(e.target, null);
+        this.playClickSound();
+    };
+    LobbyView.prototype.onClick2 = function (e) {
+        this.playClickSound();
     };
     LobbyView.prototype.onBtnWanfa = function (e) {
         this._btnHide();
@@ -114,6 +139,7 @@ var LobbyView = (function (_super) {
         this._group_pk.visible = false;
         this._group_mahjong.visible = false;
         this._group_game.visible = false;
+        this.playClickSound();
     };
     LobbyView.prototype.onTouchHandler = function (evt) {
     };
@@ -132,6 +158,9 @@ var LobbyView = (function (_super) {
         EventUtil.removeEventListener(EventConst.ON_SOCKET_CLOSE, this.onSocketClose, this);
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
         egret.Tween.removeTweens(this);
+    };
+    LobbyView.prototype.playClickSound = function () {
+        xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
     };
     return LobbyView;
 }(eui.Component));

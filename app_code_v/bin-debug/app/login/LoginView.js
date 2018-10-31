@@ -50,8 +50,9 @@ var LoginView = (function (_super) {
         this._group_btn_2.visible = true;
     };
     LoginView.prototype._onContinueLogin = function (e) {
-        xlLib.UIMgr.instance.showLoading(TipsLoading);
-        xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl, null, null, this.onLoginSucess, this.onLoginFail);
+        //xlLib.UIMgr.instance.showLoading(TipsLoading);
+        //xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+        xlLib.SceneMgr.instance.changeScene(Lobby);
     };
     LoginView.prototype._onRegister = function (e) {
     };
@@ -93,7 +94,7 @@ var LoginView = (function (_super) {
     LoginView.prototype.onSocketSuc = function (data) {
         xlLib.UIMgr.instance.hideLoading(TipsLoading);
         xlLib.SceneMgr.instance.changeScene(Lobby);
-        xlLib.TipsUtils.showFloatWordTips("游客登录成功！");
+        xlLib.TipsUtils.showFloatWordTips("登录成功！");
     };
     LoginView.prototype.destroy = function () {
         this._btn_visitor.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
