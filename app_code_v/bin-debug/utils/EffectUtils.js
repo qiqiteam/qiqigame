@@ -168,6 +168,7 @@ var EffectUtils;
     }
     */
     function playButtonEffect(obj, cb) {
+        var _this = this;
         if (cb === void 0) { cb = null; }
         if (this.isPlayEffectPlay) {
             return;
@@ -181,7 +182,6 @@ var EffectUtils;
         obj.x += xx;
         obj.y += yy;
         var onComplete2 = function () {
-            this.isPlayEffectPlay = false;
             obj.anchorOffsetX = acx;
             obj.anchorOffsetY = acy;
             obj.x -= xx;
@@ -191,6 +191,8 @@ var EffectUtils;
             if (cb != null) {
                 cb();
             }
+            egret.Tween.removeTweens(obj);
+            _this.isPlayEffectPlay = false;
         };
         var onComplete1 = function () {
             egret.Tween.get(obj).to({ scaleX: 1, scaleY: 1 }, 100).call(onComplete2, this);
