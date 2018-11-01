@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PlayerInfoViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image id="bgImg" smoothing="true" scale9Grid="10,10,10,10" source="page_bg_jpg" verticalCenter="0" horizontalCenter="-0.5"/>
+</e:Skin>

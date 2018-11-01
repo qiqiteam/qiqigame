@@ -1,0 +1,4 @@
+class PlayerInfoView {
+	public constructor() {
+	}
+}
