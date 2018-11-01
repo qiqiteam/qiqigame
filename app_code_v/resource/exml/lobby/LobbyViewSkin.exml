@@ -111,16 +111,16 @@
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="-5" x="0" y="-694" source="xia_di_png"/>
 		<e:Button id="_generalize" label="" x="0" y="5" scaleX="1" scaleY="1">
 			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="generalize_0_png" source.down="generalize_0_png"/>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="generalize_0_png" source.down="generalize_1_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+				</e:Skin>
 			</e:skinName>
 		</e:Button>
 		<e:Button id="_shoppingmall" label="" x="317.94" y="5" scaleX="1" scaleY="1">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="shoppingmall_0_png" source.down="shoppingmall_0_png"/>
+				<e:Image width="100%" height="100%" source="shoppingmall_0_png" source.down="shoppingmall_1_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 				</e:Skin>
 			</e:skinName>
@@ -128,7 +128,7 @@
 		<e:Button id="_topup" label="" x="578" y="5" scaleX="1" scaleY="1">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="topup_0_png" source.down="topup_0_png"/>
+				<e:Image width="100%" height="100%" source="topup_0_png" source.down="topup_1_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 				</e:Skin>
 			</e:skinName>

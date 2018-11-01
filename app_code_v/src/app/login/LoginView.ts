@@ -68,7 +68,7 @@ class LoginView extends eui.Component
 	private _onContinueLogin(e:egret.TouchEvent):void {
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
 		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
-		// xlLib.SceneMgr.instance.changeScene(Lobby);
+		//xlLib.SceneMgr.instance.changeScene(Lobby);
 	}
 
 	private _onRegister(e:egret.TouchEvent):void {
@@ -124,6 +124,8 @@ class LoginView extends eui.Component
 
 	private onSocketSuc(data:any):void
 	{
+		let musicBg = ["bgMain_mp3"];
+		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 		xlLib.UIMgr.instance.hideLoading(TipsLoading);
 		xlLib.SceneMgr.instance.changeScene(Lobby);
 	    xlLib.TipsUtils.showFloatWordTips("登录成功！");
