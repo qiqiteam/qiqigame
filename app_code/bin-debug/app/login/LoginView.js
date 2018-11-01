@@ -50,11 +50,9 @@ var LoginView = (function (_super) {
         this._group_btn_2.visible = true;
     };
     LoginView.prototype._onContinueLogin = function (e) {
-        var musicBg = ["bgMain_mp3"];
-        xlLib.SoundMgr.instance.playBgMusic(musicBg);
-        //xlLib.UIMgr.instance.showLoading(TipsLoading);
-        //xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
-        xlLib.SceneMgr.instance.changeScene(Lobby);
+        xlLib.UIMgr.instance.showLoading(TipsLoading);
+        xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl, null, null, this.onLoginSucess, this.onLoginFail);
+        //xlLib.SceneMgr.instance.changeScene(Lobby);
     };
     LoginView.prototype._onRegister = function (e) {
     };

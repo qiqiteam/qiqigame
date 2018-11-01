@@ -62,10 +62,6 @@ declare class ComBoxItemSkin extends eui.Skin{
 }
 declare class ComBoxSkin extends eui.Skin{
 }
-declare class LobbyViewSkin extends eui.Skin{
-}
-declare class LoginViewSkin extends eui.Skin{
-}
 declare class NNCardViewSkin extends eui.Skin{
 }
 declare class NNGameItemSkin extends eui.Skin{
@@ -77,4 +73,12 @@ declare class NNListViewSkin extends eui.Skin{
 declare class NNTableItemSkin extends eui.Skin{
 }
 declare class NNViewSkin extends eui.Skin{
+}
+declare class PlayerInfoViewSkin extends eui.Skin{
+}
+declare class GameTypeItemSkin extends eui.Skin{
+}
+declare class LobbyViewSkin extends eui.Skin{
+}
+declare class LoginViewSkin extends eui.Skin{
 }

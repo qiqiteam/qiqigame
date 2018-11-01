@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LobbyViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="166bf8530b5" ></w:Config>
-	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg"/>
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
+	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg" locked="true"/>
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0" locked="true">
 		<e:Image x="-410" y="-13" scaleX="1" scaleY="1" source="ding_png"/>
 		<e:Button id="_set" label="" x="1279.27" y="11" width="136" height="64">
 			<e:skinName>
@@ -41,11 +41,11 @@
 		<e:Label id="_head_label" text="中国第一赌神" x="169.5" y="29" scaleX="1" scaleY="1" size="35" fontFamily="KaiTi"/>
 		<e:Label id="_coin_label" text="" x="586" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34"/>
 	</e:Group>
-	<e:Group x="151.67" y="100">
+	<e:Group x="151.67" y="100" locked="true">
 		<e:Image x="0" y="0" scaleX="1" scaleY="1" source="title_bg_png"/>
 		<e:Image x="211.33" y="7" scaleX="1" scaleY="1" source="trumpet_png"/>
 	</e:Group>
-	<e:Group width="100%" height="150" x="0" bottom="0">
+	<e:Group width="100%" height="150" x="0" bottom="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" bottom="0" horizontalCenter="-33" source="di_bg_png"/>
 		<e:Button id="_generalize" label="" x="16" y="15.5">
 			<e:skinName>
@@ -96,60 +96,36 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-	<e:Group width="1350" height="500" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
-		<e:Group width="276" height="500" top="0" x="0">
-			<e:Image scaleX="1" scaleY="1" height="100%" anchorOffsetX="0" width="100%" x="0" y="0" source="game_class_bg_png"/>
-			<e:Scroller width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="0" y="0" scrollPolicyH="off" scrollPolicyV="on">
-				<e:Group height="100%" width="100%" anchorOffsetY="0">
-					<e:Image source="Bg_dating_qiehuanzhuangshi_png" y="156.27" width="100%" horizontalCenter="0"/>
-					<e:Image source="Bg_dating_qiehuanzhuangshi_png" y="260.19" width="100%" horizontalCenter="0"/>
-					<e:Image source="Bg_dating_qiehuanzhuangshi_png" y="363.69" width="100%" horizontalCenter="0"/>
-					<e:Image id="_btn_wanfa" source="Font_dating_remenwanfa_png" y="56.41" horizontalCenter="0"/>
-					<e:Image id="_btn_pk" horizontalCenter="0" verticalCenter="-34" x="7.719999999999992" y="-215.5900000000001" scaleX="1" scaleY="1" source="Font_dating_pukelei_png"/>
-					<e:Image id="_btn_mahjong" horizontalCenter="0" verticalCenter="72" x="10.120000000000005" y="43.49000000000001" scaleX="1" scaleY="1" source="Font_dating_majianglei_png"/>
-					<e:Image id="_btn_game" horizontalCenter="0" verticalCenter="178" x="6.839999999999996" y="-319.49000000000007" scaleX="1" scaleY="1" source="Font_dating_youxilei_png"/>
-					<e:Group id="_dis_wanfa" width="97%" height="130" y="29.83" scaleX="1" scaleY="1" horizontalCenter="0" visible="false">
-						<e:Image scaleX="1" scaleY="1" width="100%" height="100%" scale9Grid="20,11,219,74" horizontalCenter="0" verticalCenter="0" source="btn_game_bg_png"/>
-						<e:Image scaleX="1" scaleY="1" anchorOffsetX="0" width="177.05" anchorOffsetY="0" height="54.48" horizontalCenter="0" verticalCenter="0" source="Font_dating_remenwanfa1_png"/>
-					</e:Group>
-					<e:Group id="_dis_pk" width="97%" height="98" y="166.51" scaleX="1" scaleY="1" horizontalCenter="0">
-						<e:Image x="0" y="0" scaleX="1" scaleY="1" width="100%" height="100%" source="btn_game_bg_png"/>
-						<e:Image source="Font_dating_pukelei1_png" x="51.59" y="21.76" scaleX="1" scaleY="1" anchorOffsetX="0" width="177.05" anchorOffsetY="0" height="54.48"/>
-					</e:Group>
-					<e:Group id="_dis_mahjong" width="97%" height="98" y="270.42" scaleX="1" scaleY="1" horizontalCenter="0" visible="false">
-						<e:Image x="0" y="0" scaleX="1" scaleY="1" width="100%" height="100%" source="btn_game_bg_png"/>
-						<e:Image x="51.59" y="21.76" scaleX="1" scaleY="1" anchorOffsetX="0" width="177.05" anchorOffsetY="0" height="54.48" source="Font_dating_majianglei1_png"/>
-					</e:Group>
-					<e:Group id="_dis_game" width="97%" height="98" y="374.32" scaleX="1" scaleY="1" horizontalCenter="0" visible="false">
-						<e:Image x="0" y="0" scaleX="1" scaleY="1" width="100%" height="100%" source="btn_game_bg_png"/>
-						<e:Image x="51.59" y="21.76" scaleX="1" scaleY="1" anchorOffsetX="0" width="177.05" anchorOffsetY="0" height="54.48" source="Font_dating_youxilei1_png"/>
-					</e:Group>
-				</e:Group>
-			</e:Scroller>
-		</e:Group>
-		<e:Group id="_group_wanfa" width="1074" height="100%" x="277.27" top="0" anchorOffsetX="0" visible="false">
-			<e:Scroller width="100%" height="100%" x="0" y="0" scrollPolicyV="off" scrollPolicyH="on">
+		<e:Image source="game_class_bg_png" x="52.5" y="157"/>
+	<e:TabBar id="menu_bar" x="57.5" y="161" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="470" itemRenderer="GameTypeItem" itemRendererSkinName="GameTypeItemSkin">
+		<e:layout>
+			<e:VerticalLayout/>
+		</e:layout>
+	</e:TabBar>
+    <e:ViewStack id="viewlist" selectedIndex="1" width="1092" height="505" y="156" x="344" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group id="_group_wanfa" width="100%" height="100%" anchorOffsetX="0">
+			<e:Scroller width="100%" height="100%" scrollPolicyV="off" scrollPolicyH="on">
 				<e:Group id="_wanfa_btn_area" width="100%" height="100%">
 				</e:Group>
 			</e:Scroller>
 		</e:Group>
-		<e:Group id="_group_pk" width="1074" height="100%" x="277.27" top="0" anchorOffsetX="0" y="10">
+		<e:Group id="_group_pk" width="100%" height="100%" anchorOffsetX="0">
 			<e:Scroller width="100%" height="100%" x="0" y="0" scrollPolicyV="off" scrollPolicyH="on">
-			<e:Group id="_pk_btn_area" width="100%" height="100%">
-			</e:Group>
+				<e:Group id="_pk_btn_area" width="100%" height="100%">
+				</e:Group>
 			</e:Scroller>
 		</e:Group>
-		<e:Group id="_group_mahjong" width="1074" height="100%" x="277.27" top="0" anchorOffsetX="0" y="20" visible="false">
+		<e:Group id="_group_mahjong" width="100%" height="100%" anchorOffsetX="0" y="0">
 			<e:Scroller width="100%" height="100%" x="0" y="0" scrollPolicyV="off" scrollPolicyH="on">
-			<e:Group id="_mahjong_btn_area" width="100%" height="100%">
-			</e:Group>
+				<e:Group id="_mahjong_btn_area" width="100%" height="100%">
+				</e:Group>
 			</e:Scroller>
 		</e:Group>
-		<e:Group id="_group_game" width="1074" height="100%" x="277.27" top="0" anchorOffsetX="0" y="30" visible="false">
+		<e:Group id="_group_game" width="100%" height="100%" anchorOffsetX="0" y="0">
 			<e:Scroller width="100%" height="100%" x="0" y="0" scrollPolicyV="off" scrollPolicyH="on">
-			<e:Group id="_game_btn_area" width="100%" height="100%">
-			</e:Group>
+				<e:Group id="_game_btn_area" width="100%" height="100%">
+				</e:Group>
 			</e:Scroller>
 		</e:Group>
-	</e:Group>
+    </e:ViewStack>
 </e:Skin>

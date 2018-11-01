@@ -6,8 +6,8 @@ var Const = (function () {
     }
     return Const;
 }());
-Const.GAME_HOST = "192.168.1.36";
+Const.GAME_HOST = "192.168.1.20";
 Const.GAME_PORT = "9081";
-Const.httpUrl = "http://192.168.1.36";
+Const.httpUrl = "http://192.168.1.20";
 __reflect(Const.prototype, "Const");
 //# sourceMappingURL=Const.js.map

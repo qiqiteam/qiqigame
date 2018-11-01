@@ -14,12 +14,6 @@ var LobbyView = (function (_super) {
     function LobbyView() {
         var _this = _super.call(this) || this;
         _this.skinName = "LobbyViewSkin";
-        //this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
-        //EventUtil.addEventListener(EventConst.ON_SOCKET_CLOSE, this.onSocketClose, this);
-        _this._btn_wanfa.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnWanfa, _this);
-        _this._btn_pk.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnPk, _this);
-        _this._btn_mahjong.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnMahjong, _this);
-        _this._btn_game.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onBtnGame, _this);
         _this._set.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
         _this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
         _this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
@@ -33,7 +27,17 @@ var LobbyView = (function (_super) {
     }
     LobbyView.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
+        var dataArr = [{ name: "热门玩法", down_url: "Font_dating_remenwanfa1_png", up_url: "Font_dating_remenwanfa_png" },
+            { name: "扑克类", down_url: "Font_dating_pukelei1_png", up_url: "Font_dating_pukelei_png" },
+            { name: "麻将类", down_url: "Font_dating_majianglei1_png", up_url: "Font_dating_majianglei_png" },
+            { name: "游戏类", down_url: "Font_dating_youxilei1_png", up_url: "Font_dating_youxilei_png" }];
+        this.menu_bar.dataProvider = new eui.ArrayCollection(dataArr);
+        this.menu_bar.useVirtualLayout = true;
+        this.menu_bar.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
         this.createGameBtn();
+    };
+    LobbyView.prototype.onBarItemTap = function (e) {
+        this.viewlist.selectedIndex = e.itemIndex;
     };
     LobbyView.prototype.createGameBtn = function () {
         var arr_wanfa = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
@@ -42,7 +46,6 @@ var LobbyView = (function (_super) {
         var arr_game = ["btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png"];
         var yy = 10;
         for (var i = 0; i < arr_wanfa.length; i++) {
-            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_wanfa[i]);
             this._wanfa_btn_area.addChild(btn);
             var num = i % 3;
@@ -54,7 +57,6 @@ var LobbyView = (function (_super) {
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         }
         for (var i = 0; i < arr_pk.length; i++) {
-            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_pk[i]);
             this._pk_btn_area.addChild(btn);
             var num = i % 3;
@@ -66,7 +68,6 @@ var LobbyView = (function (_super) {
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         }
         for (var i = 0; i < arr_mahjong.length; i++) {
-            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_mahjong[i]);
             this._mahjong_btn_area.addChild(btn);
             var num = i % 3;
@@ -78,7 +79,6 @@ var LobbyView = (function (_super) {
             btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         }
         for (var i = 0; i < arr_game.length; i++) {
-            //var btn = new eui.Image(GlobalData.cdnResUrl + "resource/assets/noload/" + arr[i] + ".png");
             var btn = new eui.Image(arr_game[i]);
             this._game_btn_area.addChild(btn);
             var num = i % 3;
@@ -93,38 +93,13 @@ var LobbyView = (function (_super) {
         this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
     };
     LobbyView.prototype.onClick = function (e) {
-        //EffectUtils.playEffect(e.target,2);
         EffectUtils.playButtonEffect(e.target, null);
         this.playClickSound();
     };
     LobbyView.prototype.onClick2 = function (e) {
         this.playClickSound();
     };
-    LobbyView.prototype.onBtnWanfa = function (e) {
-        this._btnHide();
-        this._dis_wanfa.visible = true;
-        this._group_wanfa.visible = true;
-    };
-    LobbyView.prototype.onBtnPk = function (e) {
-        this._btnHide();
-        this._dis_pk.visible = true;
-        this._group_pk.visible = true;
-    };
-    LobbyView.prototype.onBtnMahjong = function (e) {
-        this._btnHide();
-        this._dis_mahjong.visible = true;
-        this._group_mahjong.visible = true;
-    };
-    LobbyView.prototype.onBtnGame = function (e) {
-        this._btnHide();
-        this._dis_game.visible = true;
-        this._group_game.visible = true;
-    };
     LobbyView.prototype._btnHide = function () {
-        this._dis_wanfa.visible = false;
-        this._dis_pk.visible = false;
-        this._dis_mahjong.visible = false;
-        this._dis_game.visible = false;
         this._group_wanfa.visible = false;
         this._group_pk.visible = false;
         this._group_mahjong.visible = false;
