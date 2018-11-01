@@ -389,3 +389,4 @@ var xlLib;
     xlLib.StringUtils = StringUtils;
     __reflect(StringUtils.prototype, "xlLib.StringUtils");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=StringUtils.js.map

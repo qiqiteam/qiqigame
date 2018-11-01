@@ -250,3 +250,4 @@ var testh5 = function () {
     return b;
 };
 xlLib.Global.isH5 = testh5();
+//# sourceMappingURL=Global.js.map

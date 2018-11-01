@@ -59,3 +59,4 @@ var NNGameList = (function (_super) {
     return NNGameList;
 }(eui.Component));
 __reflect(NNGameList.prototype, "NNGameList");
+//# sourceMappingURL=NNGameList.js.map

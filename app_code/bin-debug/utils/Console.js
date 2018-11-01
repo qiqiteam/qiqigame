@@ -173,3 +173,4 @@ onerror = function (errorMessage, scriptURI, lineNumber, columnNumber, errorObj)
     xlLib.Console.error(str);
     xlLib["DebugView"].Instance.addLog(str);
 };
+//# sourceMappingURL=Console.js.map

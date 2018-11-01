@@ -29,8 +29,6 @@ var LobbyView = (function (_super) {
         _this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
         _this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
         _this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
-        var musicBg = ["bgMain_mp3"];
-        xlLib.SoundMgr.instance.playBgMusic(musicBg);
         return _this;
     }
     LobbyView.prototype.childrenCreated = function () {
@@ -157,3 +155,4 @@ var LobbyView = (function (_super) {
     return LobbyView;
 }(eui.Component));
 __reflect(LobbyView.prototype, "LobbyView");
+//# sourceMappingURL=LobbyView.js.map

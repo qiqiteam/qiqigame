@@ -60,3 +60,4 @@ var xlLib;
     xlLib.Dispatcher = Dispatcher;
     __reflect(Dispatcher.prototype, "xlLib.Dispatcher");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=Dispatcher.js.map

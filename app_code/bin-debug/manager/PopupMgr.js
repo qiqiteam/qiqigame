@@ -353,3 +353,4 @@ var xlLib;
         PopUpEffect[PopUpEffect["BOTTOM"] = 6] = "BOTTOM";
     })(PopUpEffect = xlLib.PopUpEffect || (xlLib.PopUpEffect = {}));
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=PopupMgr.js.map

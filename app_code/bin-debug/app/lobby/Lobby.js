@@ -29,3 +29,4 @@ var Lobby = (function (_super) {
     return Lobby;
 }(xlLib.LobbyScene));
 __reflect(Lobby.prototype, "Lobby");
+//# sourceMappingURL=Lobby.js.map

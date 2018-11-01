@@ -162,3 +162,4 @@
 //     //     return this.gameBetTimeOut;
 //     // }
 // } 
+//# sourceMappingURL=GameInformation.js.map

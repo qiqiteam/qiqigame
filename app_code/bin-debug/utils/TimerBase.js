@@ -88,3 +88,4 @@ var xlLib;
     xlLib.TimerBase = TimerBase;
     __reflect(TimerBase.prototype, "xlLib.TimerBase");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=TimerBase.js.map

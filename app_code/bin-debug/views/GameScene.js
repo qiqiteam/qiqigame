@@ -64,3 +64,4 @@ var xlLib;
     xlLib.GameScene = GameScene;
     __reflect(GameScene.prototype, "xlLib.GameScene", ["xlLib.IScene"]);
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=GameScene.js.map

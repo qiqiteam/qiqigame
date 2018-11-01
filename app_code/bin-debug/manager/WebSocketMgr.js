@@ -260,3 +260,4 @@ var xlLib;
     xlLib.WebSocketMgr = WebSocketMgr;
     __reflect(WebSocketMgr.prototype, "xlLib.WebSocketMgr");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=WebSocketMgr.js.map

@@ -11,3 +11,4 @@ var xlLib;
     xlLib.IUserInfo = IUserInfo;
     __reflect(IUserInfo.prototype, "xlLib.IUserInfo");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=IUserInfo.js.map

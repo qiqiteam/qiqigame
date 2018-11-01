@@ -494,3 +494,4 @@ var EffectUtils;
     }
     EffectUtils.coinsFly = coinsFly;
 })(EffectUtils || (EffectUtils = {}));
+//# sourceMappingURL=EffectUtils.js.map

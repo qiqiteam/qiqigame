@@ -23,3 +23,4 @@ var xlLib;
     xlLib.IGameConfig = IGameConfig;
     __reflect(IGameConfig.prototype, "xlLib.IGameConfig");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=IGameConfig.js.map

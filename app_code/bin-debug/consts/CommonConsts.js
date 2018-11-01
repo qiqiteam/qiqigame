@@ -14,3 +14,4 @@ var CommonConsts = (function () {
 */
 CommonConsts.LOBBY_LASTGAME = "lobby_lastGame";
 __reflect(CommonConsts.prototype, "CommonConsts");
+//# sourceMappingURL=CommonConsts.js.map

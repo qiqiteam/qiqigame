@@ -38,3 +38,4 @@ GlobalData.hasNetwork = true;
 /**重连次数 */
 GlobalData.recNum = 0;
 __reflect(GlobalData.prototype, "GlobalData");
+//# sourceMappingURL=GlobalData.js.map

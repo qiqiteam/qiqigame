@@ -244,3 +244,4 @@ var xlLib;
     xlLib.UIMgr = UIMgr;
     __reflect(UIMgr.prototype, "xlLib.UIMgr");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=UIMgr.js.map

@@ -19,3 +19,4 @@ var NNGameItem = (function (_super) {
     return NNGameItem;
 }(eui.ItemRenderer));
 __reflect(NNGameItem.prototype, "NNGameItem");
+//# sourceMappingURL=NNGameItem.js.map

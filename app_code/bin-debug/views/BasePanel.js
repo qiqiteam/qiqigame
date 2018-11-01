@@ -54,3 +54,4 @@ var xlLib;
     xlLib.BasePanel = BasePanel;
     __reflect(BasePanel.prototype, "xlLib.BasePanel");
 })(xlLib || (xlLib = {}));
+//# sourceMappingURL=BasePanel.js.map

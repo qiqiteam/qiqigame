@@ -40,3 +40,4 @@ var TipsLoading = (function (_super) {
     return TipsLoading;
 }(egret.DisplayObjectContainer));
 __reflect(TipsLoading.prototype, "TipsLoading");
+//# sourceMappingURL=TipsLoading.js.map

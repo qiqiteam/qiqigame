@@ -57,9 +57,6 @@ class LobbyView extends eui.Component {
 		this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
-
-		let musicBg = ["bgMain_mp3"];
-		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 	}
 
 	protected childrenCreated() {
