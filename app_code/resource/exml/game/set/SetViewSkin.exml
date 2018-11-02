@@ -14,19 +14,19 @@
 			<e:Button id="btn_yjfk_0" label="意见反馈" x="40" y="275" horizontalCenter="0" scaleX="1" scaleY="1"/>
 		</e:Group>
 	</e:ViewStack>
-	<e:Group id="btn_yxsz_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0">
+	<e:Group id="btn_yxsz_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0" locked="true">
 		<e:Label text="背景音乐" x="58" y="79"/>
 		<e:Label text="游戏音效" x="58" y="148"/>
 		<e:Label text="游戏特效" x="58" y="212"/>
 		<e:Label text="游戏特效是指：互动表情、斗地主所产生对应的特效等" x="96" y="289" size="20"/>
 	</e:Group>
-	<e:Group id="btn_xsjc_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+	<e:Group id="btn_xsjc_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0" locked="true">
 		<e:Label text="1、游戏大厅操作指南" x="58" y="15" size="22"/>
 		<e:Label text="1、游戏大厅操作指南" x="58" y="267" size="22"/>
 		<e:Label text="1、游戏大厅操作指南" x="336" y="267" size="22"/>
 		<e:Label text="1、游戏大厅操作指南" x="336" y="15" size="22"/>
 	</e:Group>
-	<e:Group id="btn_zhgl_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+	<e:Group id="btn_zhgl_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0" visible="false" locked="true">
 		<e:Group width="100%" height="55" horizontalCenter="0" top="0" anchorOffsetY="0" locked="true">
 			<e:Label text="您可以用以下帐号登录：" x="45" y="12"/>
 		</e:Group>
@@ -37,6 +37,16 @@
 				<e:Label text="Gabc12121256789" horizontalCenter="0" top="51" size="12"/>
 				<e:Label text="世界赌神" horizontalCenter="0" size="20" verticalCenter="0"/>
 				<e:Button label="立即登录" bottom="30" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group width="180" height="100%" x="0" y="0" visible="false">
+				<e:Label text="您是游客模式" horizontalCenter="0" top="17" size="20"/>
+				<e:Label text="请绑定手机号" horizontalCenter="0" size="20" verticalCenter="-73"/>
+				<e:Button label="立即登录" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group width="180" height="100%" left="0" verticalCenter="0" visible="false">
+				<e:Label text="您是游客模式" horizontalCenter="0" top="23" size="20"/>
+				<e:Label text="请绑定手机号" horizontalCenter="3" size="20" verticalCenter="-67"/>
+				<e:Button label="立即登录" horizontalCenter="0" verticalCenter="0"/>
 			</e:Group>
 			<e:Group width="180" height="100%" verticalCenter="0" y="10" horizontalCenter="0">
 				<e:Button label="创建新帐号" horizontalCenter="0" verticalCenter="0" x="32" y="100" scaleX="1" scaleY="1"/>
@@ -50,7 +60,7 @@
 			<e:Button label="安全退出" verticalCenter="0" right="0"/>
 		</e:Group>
 	</e:Group>
-	<e:Group id="btn_yjfk_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+	<e:Group id="btn_yjfk_1" width="608" height="386" x="211" y="128" anchorOffsetX="0" anchorOffsetY="0" visible="false" locked="true">
 		<e:EditableText width="80%" height="55%" text="" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" textAlign="left" verticalAlign="middle" size="25" prompt="请输入您要反馈的内容，限100字以内~" promptColor="0xffffff"/>
 		<e:Button label="提交" x="226" y="313"/>
 	</e:Group>
