@@ -1,7 +1,0 @@
-{"file":"loding.png","frames":{
-"logoicon":{"x":163,"y":1,"w":114,"h":114,"offX":0,"offY":0,"sourceW":114,"sourceH":114},
-"ProgressBar":{"x":349,"y":1,"w":30,"h":13,"offX":2,"offY":2,"sourceW":34,"sourceH":16},
-"ProgressBarBG":{"x":315,"y":1,"w":32,"h":15,"offX":1,"offY":1,"sourceW":34,"sourceH":16},
-"ProgressBarTag":{"x":279,"y":1,"w":34,"h":50,"offX":0,"offY":0,"sourceW":34,"sourceH":50},
-"spinner":{"x":1,"y":1,"w":160,"h":160,"offX":0,"offY":0,"sourceW":160,"sourceH":160},
-"tipsBg":{"x":1,"y":163,"w":369,"h":48,"offX":0,"offY":0,"sourceW":369,"sourceH":48}}}
