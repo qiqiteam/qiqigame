@@ -20,6 +20,7 @@
     "resource/exml/component/AlertDialogSkin.exml",
     "resource/exml/component/ComBoxItemSkin.exml",
     "resource/exml/component/ComBoxSkin.exml",
+    "resource/exml/game/message/SystemMsgViewSkin.exml",
     "resource/exml/game/nn/NNCardViewSkin.exml",
     "resource/exml/game/nn/NNGameItemSkin.exml",
     "resource/exml/game/nn/NNGameListSkin.exml",
@@ -27,6 +28,7 @@
     "resource/exml/game/nn/NNTableItemSkin.exml",
     "resource/exml/game/nn/NNViewSkin.exml",
     "resource/exml/game/playerinfo/PlayerInfoViewSkin.exml",
+    "resource/exml/game/set/SetViewSkin.exml",
     "resource/exml/lobby/GameTypeItemSkin.exml",
     "resource/exml/lobby/LobbyViewSkin.exml",
     "resource/exml/login/LoginViewSkin.exml"

@@ -14,6 +14,8 @@ var LobbyView = (function (_super) {
     function LobbyView() {
         var _this = _super.call(this) || this;
         _this.skinName = "LobbyViewSkin";
+        _this.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onTouchHandler, _this);
+        EventUtil.addEventListener(EventConst.ON_SOCKET_CLOSE, _this.onSocketClose, _this);
         _this._set.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
         _this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
         _this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onClick2, _this);
@@ -98,6 +100,35 @@ var LobbyView = (function (_super) {
     };
     LobbyView.prototype.onClick2 = function (e) {
         this.playClickSound();
+        if (e.target == this._set) {
+            console.log("_set");
+            xlLib.PopUpMgr.addPopUp(SetView, null, true, true, null, 1);
+        }
+        else if (e.target == this._service) {
+            console.log("_service");
+        }
+        else if (e.target == this._information) {
+            console.log("_information");
+            xlLib.PopUpMgr.addPopUp(SystemMsgView, null, true, true, null, 1);
+        }
+        else if (e.target == this._generalize) {
+            console.log("_generalize");
+        }
+        else if (e.target == this._safebox) {
+            console.log("_safebox");
+        }
+        else if (e.target == this._challenge) {
+            console.log("_challenge");
+        }
+        else if (e.target == this._welfare) {
+            console.log("_welfare");
+        }
+        else if (e.target == this._shoppingmall) {
+            console.log("_shoppingmall");
+        }
+        else if (e.target == this._topup) {
+            console.log("_topup");
+        }
     };
     LobbyView.prototype._btnHide = function () {
         this._group_wanfa.visible = false;

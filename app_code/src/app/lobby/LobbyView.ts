@@ -28,6 +28,8 @@ class LobbyView extends eui.Component {
 	constructor() {
 		super();
 		this.skinName = "LobbyViewSkin";
+		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
+		EventUtil.addEventListener(EventConst.ON_SOCKET_CLOSE, this.onSocketClose, this);
 		this._set.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
@@ -119,6 +121,27 @@ class LobbyView extends eui.Component {
 
 	private onClick2(e:egret.TouchEvent):void {
 		this.playClickSound();
+		if(e.target == this._set) {
+			console.log("_set");
+			xlLib.PopUpMgr.addPopUp(SetView, null, true, true, null ,1);
+		} else if(e.target == this._service) {
+			console.log("_service");
+		} else if(e.target == this._information) {
+			console.log("_information");
+			xlLib.PopUpMgr.addPopUp(SystemMsgView, null, true, true, null ,1);
+		} else if(e.target == this._generalize) {
+			console.log("_generalize");
+		} else if(e.target == this._safebox) {
+			console.log("_safebox");
+		} else if(e.target == this._challenge) {
+			console.log("_challenge");
+		} else if(e.target == this._welfare) {
+			console.log("_welfare");
+		} else if(e.target == this._shoppingmall) {
+			console.log("_shoppingmall");
+		} else if(e.target == this._topup) {
+			console.log("_topup");
+		}
 	}
 
 	private _btnHide() {

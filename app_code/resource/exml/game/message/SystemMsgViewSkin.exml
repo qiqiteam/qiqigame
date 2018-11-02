@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SystemMsgViewSkin" width="848" height="528" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="100%" height="100%" x="0" y="0" source="pop_ups_png" scale9Grid="106,66,636,396"/>
+	<e:Image width="172" height="42" source="title_prompt_png" horizontalCenter="0" y="18.18"/>
+	<e:Button id="_btn_close" label="" x="760.01" y="11.14">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_close_0_png" source.down="btn_close_1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_notice" label="系统通知" x="4" y="154.69">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_game_bg_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_push" label="推送消息" x="4" y="310.14">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_game_bg_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Scroller width="527.27" height="280.3" x="300" y="120" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyV="on" scrollPolicyH="off">
+		<e:Group id="_group_msg" width="100%" height="100%">
+
+
+
+		</e:Group>
+	</e:Scroller>
+
+	<e:Button id="_btn_delete" label="删除" x="277" y="418.14">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_game_bg_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_select_all" label="全选" x="560.64" y="418.14">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_game_bg_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

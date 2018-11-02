@@ -13,15 +13,16 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/app/Const.js",
-		"bin-debug/event/Dispatcher.js",
-		"bin-debug/views/GameDoc.js",
 		"bin-debug/views/GameScene.js",
+		"bin-debug/app/Const.js",
+		"bin-debug/views/GameDoc.js",
+		"bin-debug/event/Dispatcher.js",
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
 		"bin-debug/app/data/GameInformation.js",
 		"bin-debug/app/data/GlobalData.js",
 		"bin-debug/app/data/UserInfo.js",
+		"bin-debug/app/game/message/SystemMsgView.js",
 		"bin-debug/app/game/nn/NNCardView.js",
 		"bin-debug/app/game/nn/NNGameItem.js",
 		"bin-debug/app/game/nn/NNGameList.js",
@@ -30,6 +31,7 @@
 		"bin-debug/app/game/nn/NNScene.js",
 		"bin-debug/app/game/nn/NNView.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoView.js",
+		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/HttpAddress.js",
 		"bin-debug/app/interface/IGameInformation.js",
 		"bin-debug/app/interface/IGameRecord.js",
@@ -53,8 +55,8 @@
 		"bin-debug/interface/IGameConfig.js",
 		"bin-debug/interface/IGameDoc.js",
 		"bin-debug/interface/ILoading.js",
-		"bin-debug/interface/ILoadRes.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/interface/IOrderInfo.js",
 		"bin-debug/interface/IScene.js",
 		"bin-debug/interface/ITaskData.js",
 		"bin-debug/interface/IUI.js",
@@ -95,6 +97,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/TipsLoading.js",
-		"bin-debug/interface/IOrderInfo.js"
+		"bin-debug/interface/ILoadRes.js"
 	]
 }
