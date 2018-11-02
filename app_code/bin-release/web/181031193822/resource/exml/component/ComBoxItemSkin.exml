@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComBoxItemSkin" width="130" height="25" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="des_txt" text="" x="0" y="3.5" size="18" touchEnabled="false" width="130" textAlign="center" height="18"/>
+</e:Skin>

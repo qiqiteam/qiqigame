@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NNTableItemSkin" width="540" height="232" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*">
+	<e:Image width="540" height="55" x="0" y="0" source="nntitilebg" touchEnabled="false"/>
+	<e:Image width="540" height="177" x="5" y="55.5" source="gamehall_json.nntablebg" touchEnabled="false"/>
+	<e:Image width="54" height="46" x="0" y="55" source="nnztag" touchEnabled="false"/>
+	<e:Image width="54" height="46" x="0" y="99" source="nnxtag" touchEnabled="false"/>
+	<e:Image width="54" height="46" x="0" y="144" source="nnxtag" touchEnabled="false"/>
+	<e:Image width="54" height="46" x="0" y="188" source="nnxtag" touchEnabled="false"/>
+	<e:Label text="庄" x="11" y="63" anchorOffsetX="0" width="33" touchEnabled="false"/>
+	<e:Label text="闲1" x="4" y="107" touchEnabled="false"/>
+	<e:Label text="闲2" x="4" y="152" touchEnabled="false"/>
+	<e:Label text="闲3" x="4" y="196" touchEnabled="false"/>
+
+	<e:Label id="name_txt" text="百家乐01号" x="3" y="20" size="18" width="128" touchEnabled="false"/>
+	<e:Label id="xian1_txt" text="闲1:0" x="263" y="20" size="18" textColor="0x05d4ff" touchEnabled="false"/>
+	<e:Label id="xian2_txt" text="闲2:0" x="350" y="20" size="18" textColor="0x05d4ff" touchEnabled="false"/>
+	<e:Label id="xian3_txt" text="闲3:0" x="437" y="20" size="18" textColor="0x05d4ff" touchEnabled="false"/>
+	<e:Label id="xh_txt" text="" x="99" y="22" size="16" width="137" textAlign="center" anchorOffsetX="0" touchEnabled="false"/>
+	<e:Group id="dataGroup" width="0" height="0" x="55" y="55" anchorOffsetY="0" touchEnabled="false" touchChildren="false" touchThrough="true">
+	</e:Group>
+
+	<e:Label id="time_txt" text="20" x="486" y="12" size="38" textColor="0xfc0202" alpha="0.5" touchEnabled="false" width="52" textAlign="center"/>
+	<e:Label id="in_txt" text="点击进入游戏" x="283" y="170" anchorOffsetX="0" width="233" anchorOffsetY="0" height="37" verticalAlign="middle" textAlign="center" touchEnabled="false" alpha="0.5" textColor="0xBFA0A0" bold="true"/>
+	<e:Image id="xpz_img" source="shuffling" horizontalCenter="0" verticalCenter="18.5" touchEnabled="false"/>
+	<e:Group id="xhPanel" width="540" height="177" x="0" y="55" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<e:Rect width="540" height="177" x="0" y="-0.5" fillColor="0x303030" strokeColor="0x444444" alpha="0.8" touchChildren="false" touchEnabled="false"/>
+		<e:Button id="xhSelect1" label="" width="538" height="30" x="1" y="16">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="clickSelect" source.down="clickSelect2"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" xmlns:tween="egret.tween.*"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="xhSelect2" label="" width="538" height="30" x="1" y="74">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="clickSelect" source.down="clickSelect2"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" xmlns:tween="egret.tween.*"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="xhSelect3" label="" width="538" height="30" x="1" y="131">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="clickSelect" source.down="clickSelect2"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" xmlns:tween="egret.tween.*"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label id="xhtxt1" text="限红:5000 - 10000" x="165" y="20" size="22" width="210" textAlign="center" touchEnabled="false" textColor="0xffffff"/>
+		<e:Label id="xhtxt2" text="限红:5000 - 10000" x="165" y="78" size="22" width="210" textAlign="center" touchEnabled="false" textColor="0xffffff"/>
+		<e:Label id="xhtxt3" text="限红:5000 - 10000" x="165" y="136" size="22" width="210" textAlign="center" touchEnabled="false" textColor="0xffffff"/>
+	</e:Group>
+</e:Skin>
