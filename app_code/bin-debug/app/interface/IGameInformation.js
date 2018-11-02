@@ -1,1 +1,0 @@
-//# sourceMappingURL=IGameInformation.js.map
