@@ -84,18 +84,16 @@ class SystemMsgView extends eui.Component {
     }
 
     public onDelete(): void {
+        var temArray=[];
         for(var i=0; i<this._ver_checkBox.length; i++) {
             if(this._ver_checkBox[i].selected == true) {
-                //console.log(this._arr_msg[i]);
-                 //this._arr_msg.slice(i, i);
-                 //console.log(this._arr_msg[i].length);
-                 //let aa = new Array();
-                 delete this._arr_msg[i];
+
+            } else {
+                temArray.push(this._arr_msg[i]);
             }
         }
 
-        //console.log(this._arr_msg.length);
-        //console.log(this._arr_msg);
+        this._arr_msg = temArray;
         this.onAcceptMessage();
     }
 
