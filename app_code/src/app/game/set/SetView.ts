@@ -24,6 +24,13 @@ class SetView extends eui.Component {
 		this.btn_yjfk_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick5, this);
 	}
 
+	public childrenCreated(): void {
+		super.childrenCreated();
+
+		this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+	}
+
+
 	private onClick1(e: egret.TouchEvent): void {
 		xlLib.PopUpMgr.removePopUp(SetView, 1);
 	}
@@ -58,11 +65,6 @@ class SetView extends eui.Component {
 
 	protected partAdded(partName: string, instance: any): void {
 		super.partAdded(partName, instance);
-	}
-
-
-	protected childrenCreated(): void {
-		super.childrenCreated();
 	}
 
 	public destroy() {

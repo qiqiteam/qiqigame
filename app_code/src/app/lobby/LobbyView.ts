@@ -6,6 +6,7 @@ class LobbyView extends eui.Component {
 	public _set:eui.Button;
 	public _service:eui.Button;
 	public _information:eui.Button;
+	public _playerinfo:eui.Button;
 	public _head_label:eui.Label;
 	public _coin_label:eui.Label;
 	public _generalize:eui.Button;
@@ -25,6 +26,7 @@ class LobbyView extends eui.Component {
 	public _group_game:eui.Group;
 	public _game_btn_area:eui.Group;
 
+
 	constructor() {
 		super();
 		this.skinName = "LobbyViewSkin";
@@ -33,6 +35,7 @@ class LobbyView extends eui.Component {
 		this._set.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+		this._playerinfo.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 
 		this._generalize.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._safebox.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
@@ -124,6 +127,9 @@ class LobbyView extends eui.Component {
 		if(e.target == this._set) {
 			console.log("_set");
 			xlLib.PopUpMgr.addPopUp(SetView, null, true, true, null ,1);
+		} else if(e.target == this._playerinfo) {
+			console.log("_playerinfo");
+			xlLib.PopUpMgr.addPopUp(PlayerInfoView, null, true, true, null ,1);
 		} else if(e.target == this._service) {
 			console.log("_service");
 		} else if(e.target == this._information) {

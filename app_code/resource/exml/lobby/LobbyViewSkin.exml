@@ -2,7 +2,7 @@
 <e:Skin class="LobbyViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="166bf8530b5" ></w:Config>
 	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg" locked="true"/>
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0" locked="true">
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
 		<e:Image x="-410" y="-13" scaleX="1" scaleY="1" source="ding_png"/>
 		<e:Button id="_set" label="" x="1279.27" y="11" width="136" height="64">
 			<e:skinName>
@@ -29,7 +29,7 @@
 			</e:skinName>
 		</e:Button>
 		<e:Image x="514" y="16" scaleX="1" scaleY="1" source="coin_bg_png"/>
-		<e:Button label="" x="61" y="2" scaleX="0.9" scaleY="0.9">
+		<e:Button id="_playerinfo" label="" x="61" y="2" scaleX="0.9" scaleY="0.9">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="head_png" source.down="head_png"/>
@@ -96,13 +96,13 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-		<e:Image source="game_class_bg_png" x="52.5" y="157"/>
-	<e:TabBar id="menu_bar" x="57.5" y="161" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="470" itemRenderer="GameTypeItem" itemRendererSkinName="GameTypeItemSkin">
+		<e:Image source="game_class_bg_png" x="52.5" y="157" locked="true"/>
+	<e:TabBar id="menu_bar" x="57.5" y="161" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="470" itemRenderer="GameTypeItem" itemRendererSkinName="GameTypeItemSkin" locked="true">
 		<e:layout>
 			<e:VerticalLayout/>
 		</e:layout>
 	</e:TabBar>
-    <e:ViewStack id="viewlist" selectedIndex="1" width="1092" height="505" y="156" x="344" anchorOffsetX="0" anchorOffsetY="0">
+    <e:ViewStack id="viewlist" selectedIndex="1" width="1092" height="505" y="156" x="344" anchorOffsetX="0" anchorOffsetY="0" locked="true">
 		<e:Group id="_group_wanfa" width="100%" height="100%" anchorOffsetX="0">
 			<e:Scroller width="100%" height="100%" scrollPolicyV="off" scrollPolicyH="on">
 				<e:Group id="_wanfa_btn_area" width="100%" height="100%">
