@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SafeBoxViewSkin" width="1200" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="Bg" source="Bg_png" height="600" verticalCenter="0" right="0" anchorOffsetX="0" width="1204"/>
+	<e:Group width="1200" height="65" horizontalCenter="0" anchorOffsetY="0" y="0">
+		<e:Image source="tittleBott_png" horizontalCenter="0" anchorOffsetY="0" height="80" anchorOffsetX="0" width="420" y="0"/>
+		<e:Image source="safebox_tittle_png" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group width="250" height="510" left="14" bottom="15">
+		<e:Image source="group_bg_png" horizontalCenter="0" verticalCenter="-3" width="250" height="510"/>
+		<e:Image source="team_bg_png" width="250" height="95" top="0" left="0"/>
+		<e:Image source="team_bg_png" width="250" height="95" top="95" left="0"/>
+		<e:Image source="team_bg_png" width="250" height="95" top="190" left="0"/>
+		<e:Button id="btn_deposit" label="存入" x="51" y="28.03" anchorOffsetX="0" width="120" height="50">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="progress bar_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_out" label="取出" x="51" y="119.35" width="120" height="50">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="progress bar_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_autodeposit" label="自动存入" x="51" y="216" width="120" height="50">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="progress bar_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group id="group_deposit" width="885.33" height="510" anchorOffsetX="0" horizontalCenter="122.5" verticalCenter="30">
+		<e:Image source="carryMoney_lab_png" horizontalCenter="-304.665" top="50"/>
+		<e:Image source="safebox_lab_png" horizontalCenter="-304.165" top="120"/>
+		<e:Image source="depositMoney_lab_png" horizontalCenter="-304.665" top="190"/>
+		<e:Label id="lab_CarryMoney" text="909999999" height="30" width="300" horizontalCenter="-27.66500000000002" verticalCenter="-190"/>
+		<e:Label id="lab_safebox" text="909999999" x="265" y="120" height="30" width="300"/>
+		<e:Image source="Input_bg2_png" width="350" height="50" horizontalCenter="-32.66500000000002" verticalCenter="-50"/>
+		<e:EditableText id="input_depositMoney" width="300" height="30" text="" size="20" verticalAlign="middle" horizontalCenter="-27.66500000000002" verticalCenter="-50"/>
+		<e:Image source="bar_bg_png" horizontalCenter="-91.16500000000002" top="260"/>
+		<e:Image id="progress_bar" source="progress bar_png" horizontalCenter="-156.66500000000002" top="269"/>
+		<e:Image id="btn_set_outPW" source="setpassword_btn_png" right="23.33000000000004" verticalCenter="-118.5"/>
+		<e:Button id="btn_clear" label="" right="16.33000000000004" verticalCenter="-52.5">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="clear_up_btn_png" source.down="clear_down_btn_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_all" label="" right="16.33000000000004" verticalCenter="30.5">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="all_up_btn_png" source.down="all_down_btn_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_enter" label="" bottom="5" horizontalCenter="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="enter_up_btn_png" source.down="enter_down_btn_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group id="group_out" width="885.33" height="510" x="290" y="85" anchorOffsetX="0" visible="false">
+		<e:Image source="setpassword_btn_png" horizontalCenter="-291.665" bottom="147"/>
+		<e:Image source="Input_bg2_png" width="350" height="50" horizontalCenter="-32.66500000000002" bottom="138"/>
+		<e:EditableText id="input_password" width="300" height="30" text="请输入取出密码" x="265" y="332" verticalAlign="middle" textColor="0x110707" size="20"/>
+	</e:Group>
+	<e:Group id="group_autodeposit" width="885.33" height="510" x="300" y="95" anchorOffsetX="0" visible="false">
+		<e:Image source="carryMoney_lab_png" verticalCenter="25" horizontalCenter="-317.665"/>
+		<e:Image source="Input_bg2_png" x="225.65" y="252.5" width="380"/>
+		<e:EditableText width="300" height="30" text="1000000" textColor="0x0a0303" size="20" verticalAlign="middle" horizontalCenter="-19.66500000000002" bottom="211"/>
+		<e:Button label="" x="308" y="352" anchorOffsetX="0" width="138.67" height="60">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="enter_up_btn_png" source.down="enter_down_btn_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Button id="btn_close" label="" right="0" width="65" top="0" height="65">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="close_up_btn_png" source.down="close_down_btn_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

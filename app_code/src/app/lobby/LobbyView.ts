@@ -139,14 +139,17 @@ class LobbyView extends eui.Component {
 			console.log("_generalize");
 		} else if(e.target == this._safebox) {
 			console.log("_safebox");
+			xlLib.PopUpMgr.addPopUp(SafeBoxView, null, true, true, null ,1);
 		} else if(e.target == this._challenge) {
 			console.log("_challenge");
 		} else if(e.target == this._welfare) {
 			console.log("_welfare");
+			xlLib.PopUpMgr.addPopUp(WelfareView, null, true, true, null ,1);
 		} else if(e.target == this._shoppingmall) {
 			console.log("_shoppingmall");
 		} else if(e.target == this._topup) {
 			console.log("_topup");
+			xlLib.PopUpMgr.addPopUp(RechargeView, null, true, true, null ,1);
 		}
 	}
 

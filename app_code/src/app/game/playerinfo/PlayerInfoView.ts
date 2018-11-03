@@ -4,6 +4,7 @@
 class PlayerInfoView extends eui.Component {
 
 	public bgImg: eui.Image;
+	public group_tittle: eui.Group;
 	public group_index: eui.Group;
 	public btn_Info: eui.Button;
 	public btn_wallet: eui.Button;
@@ -13,9 +14,9 @@ class PlayerInfoView extends eui.Component {
 	public btn_vip: eui.Button;
 	public btn_boy: eui.Button;
 	public btn_girl: eui.Button;
-	public ID: eui.Label;
-	public Num_txt: eui.Label;
-	public phonenum: eui.Label;
+	public ID_txt: eui.EditableText;
+	public Num_txt: eui.EditableText;
+	public phonenum_txt: eui.EditableText;
 	public btn_copyID: eui.Button;
 	public btn_xiugai_name: eui.Button;
 	public btn_bind_number: eui.Button;
@@ -34,14 +35,25 @@ class PlayerInfoView extends eui.Component {
 	public btn_bindcard: eui.Button;
 	public group_pack: eui.Group;
 	public group_bind_number: eui.Group;
-	public Input_phone_num: eui.TextInput;
-	public Input_autu_code: eui.TextInput;
+	public Input_phone_num: eui.EditableText;
+	public Input_autu_code: eui.EditableText;
 	public btn_code: eui.Button;
 	public btn_enter: eui.Button;
 	public group_Vip: eui.Group;
 	public btn_LiKeCZ: eui.Button;
 	public group_chang_head: eui.Group;
+	public group_bindzfb: eui.Group;
+	public input_zfb_account: eui.EditableText;
+	public input_smz_name: eui.EditableText;
+	public btn_bindZFB_enter: eui.Button;
+	public group_bind_bankCard: eui.Group;
+	public input_name: eui.EditableText;
+	public input_bankCard_num: eui.EditableText;
+	public input_Enter_bankCard_num: eui.EditableText;
+	public btn_bindZFB_enter0: eui.Button;
 	public btn_return: eui.Button;
+
+
 
 
 
@@ -60,7 +72,8 @@ class PlayerInfoView extends eui.Component {
 		this.btn_vip.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickVipBtn, this);
 		this.btn_boy.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickBoyBtn, this);
 		this.btn_girl.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickGirlBtn, this);
-
+		this.btn_bindzfb.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickBindzfbBtn, this);
+		this.btn_bindcard.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickBindBanCard, this);
 	}
 
 
@@ -98,7 +111,7 @@ class PlayerInfoView extends eui.Component {
 	//点击VIp
 	private OnClickVipBtn(e: egret.TouchEvent): void {
 		this._MaxBtnHid();
-        this.group_Vip.visible = true;
+		this.group_Vip.visible = true;
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
 	}
 	//选择性别
@@ -115,9 +128,24 @@ class PlayerInfoView extends eui.Component {
 	private OnClickBindPhoneNum(e: egret.TouchEvent): void {
 		this._MaxBtnHid();
 		this.group_bind_number.visible = true;
+		this.group_tittle.visible = false;
 		this.group_index.visible = false;
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
 
+	}
+	//点击绑定支付宝按钮 
+	private OnClickBindzfbBtn(e: egret.TouchEvent): void {
+		this._MaxBtnHid();
+		this.group_tittle.visible = false;
+		this.group_bindzfb.visible = true;
+		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
+	}
+	//点击绑定银行卡按钮 
+	private OnClickBindBanCard(e: egret.TouchEvent): void {
+		this._MaxBtnHid();
+		this.group_tittle.visible = false;
+		this.group_bind_bankCard.visible = true;
+		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
 	}
 
 	private _MaxBtnHid() {
@@ -125,6 +153,8 @@ class PlayerInfoView extends eui.Component {
 		this.group_bind_number.visible = false;
 		this.group_chang_head.visible = false;
 		this.group_Vip.visible = false;
+		this.group_bindzfb.visible = false;
+		this.group_bind_bankCard.visible = false;
 	}
 
 	private _MinBtnHid() {
@@ -152,6 +182,7 @@ class PlayerInfoView extends eui.Component {
 		this.btn_vip.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickVipBtn, this);
 		this.btn_boy.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickBoyBtn, this);
 		this.btn_girl.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickGirlBtn, this);
-
+		this.btn_bindzfb.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickBindzfbBtn, this);
+		this.btn_bindcard.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickBindBanCard, this);
 	}
 }

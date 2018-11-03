@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SystemMsgItemSkin" width="955" height="179" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="889" height="100%" y="0" source="msg_bg_png" right="0"/>
+	<e:Label id="_label_content" text="我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我我" width="840" height="120" verticalCenter="0" right="25"/>
+	<e:CheckBox id="_checkBox" label="" anchorOffsetX="0" width="50" anchorOffsetY="0" height="50" verticalCenter="0" left="0">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_select_0_png" source.down="btn_select_1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:CheckBox>
+</e:Skin>

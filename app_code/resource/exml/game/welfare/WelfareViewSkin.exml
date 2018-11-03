@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WelfareViewSkin" width="848" height="528" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image width="848" height="528" x="0" y="0" source="pop_ups_png" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Button id="_btn_close" label="" x="772.52" y="10.64">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_close_0_png" source.down="btn_close_1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:TabBar id="_tabBar_meun" width="180" height="360" x="35" y="120" anchorOffsetY="0" scrollRect="(x=0,y=0,width=200,height=80)" itemRenderer="WelfareTypeItem" alpha="1" selectedIndex="0">
+		<e:layout>
+			<e:VerticalLayout/>
+		</e:layout>
+	</e:TabBar>
+
+	
+
+
+
+	<e:ViewStack id="_viewlist" width="550" height="360" x="260" y="120" anchorOffsetX="0" anchorOffsetY="0" selectedIndex="0" alpha="1">
+		<e:Group id="_group_activity" width="100%" height="100%" name="Group" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Image width="100%" height="100%" x="0" y="0" source="loding_bg_png"/>
+		</e:Group>
+		
+		<e:Group id="_group_task" width="100%" height="100%" name="Group" x="0" y="0" scaleX="1" scaleY="1" visible="false">
+			<e:Scroller id="_list_reward" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" width="100%" height="100%" scrollPolicyV="on" scrollPolicyH="off">
+			<e:Group id="_reward_area" x="0" y="0" width="100%" height="100%"/>
+			</e:Scroller>
+		</e:Group>
+
+		<e:Group id="_group_turntable" width="100%" height="100%" name="Group" x="0" y="0" scaleX="1" scaleY="1" visible="false">
+			<ns1:LotteryPanel width="640" height="800" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" scaleX="0.48" scaleY="0.48" skinName="LotterySkin"/>
+		</e:Group>
+
+        <e:Group id="_group_sign" width="100%" height="100%" name="Group" visible="false">
+					<e:Button label="立即签到" y="214.68" horizontalCenter="0">
+						<e:skinName>
+							<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="btn_common_0_png" source.down="btn_common_1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+							</e:Skin>
+						</e:skinName>
+					</e:Button>
+					<e:Label text="注：7天连续签到计算，中断重新计算天数" y="321.65" horizontalCenter="0" size="18" fontFamily="SimSun" textAlign="center" textColor="0xef460b"/>
+					<e:Label text="基础奖励：道具A、B+5 计牌器（次）+2" y="23" textAlign="center" size="18" horizontalCenter="0"/>
+					<e:Label text="基础奖励：道具A、B+5 计牌器（次）+2" y="50.66" textAlign="center" size="18" horizontalCenter="0"/>
+					<e:Image width="70" height="70" x="0" y="100" source="xiang_png"/>
+					<e:Image width="70" height="70" x="80" y="100" source="xiang_png"/>
+					<e:Image width="70" height="70" x="160" y="100" source="xiang_png"/>
+					<e:Image width="70" height="70" x="240" y="100" source="xiang_png"/>
+					<e:Image width="70" height="70" x="320" y="100" source="xiang_png"/>
+					<e:Image width="70" height="70" x="400" y="100" source="xiang_png"/>
+					<e:Image width="70" height="70" x="480" y="100" source="xiang_png"/>
+					<e:Label text="第一天" y="170" textAlign="center" size="18" x="7.98"/>
+					<e:Label text="第二天" y="170" textAlign="center" size="18" x="87.98"/>
+					<e:Label text="第三天" y="170" textAlign="center" size="18" x="167.98"/>
+					<e:Label text="第四天" y="170" textAlign="center" size="18" x="247.98"/>
+					<e:Label text="第五天" y="170" textAlign="center" size="18" x="334.63"/>
+					<e:Label text="第六天" y="170" textAlign="center" size="18" x="407.98"/>
+					<e:Label text="第七天" y="170" textAlign="center" size="18" x="487.98"/>
+				</e:Group>
+        
+	</e:ViewStack>
+</e:Skin>
