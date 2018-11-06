@@ -121,11 +121,19 @@ class LobbyView extends eui.Component {
 		EffectUtils.playButtonEffect(e.target,null);
 		this.playClickSound();
 
-		xlLib.WebSocketMgr.getInstance().send("joinroom",{userid:UserInfo.getInstance().uid,
-			token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id},(data)=>{
-				console.log(data);
+        let senddata:any = {
+			userid:UserInfo.getInstance().uid,
+			token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
+		xlLib.WebSocketMgr.getInstance().send(WebSockeAddress.joinroom,senddata,(data)=>{
+				 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 			},this);
-		
+
+		// let senddata:any = {
+		// 	userid:UserInfo.getInstance().uid,
+		// 	token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
+		// xlLib.WebSocketMgr.getInstance().send(WebSockeAddress.niuniu_start,senddata,(data)=>{
+		// 		 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
+		// 	},this);
 	}
 
 	private onClick2(e:egret.TouchEvent):void {
