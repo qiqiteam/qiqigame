@@ -68,7 +68,6 @@ class LoginView extends eui.Component
 	private _onContinueLogin(e:egret.TouchEvent):void {
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
 		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
-		//xlLib.SceneMgr.instance.changeScene(Lobby);
 	}
 
 	private _onRegister(e:egret.TouchEvent):void {
@@ -109,11 +108,7 @@ class LoginView extends eui.Component
 	private onLoginSucess(data:any):void
 	{
 		var info:any = data.data;
-		UserInfo.getInstance().uid = info.id;
-		UserInfo.getInstance().username = info.username;
-		UserInfo.getInstance().goldcoins = info.goldcoins;
-		// console.log("收到用户数据"+info.goldcoins);
-		
+		UserInfo.getInstance().initUserInfo(data);
 	    xlLib.WebSocketMgr.getInstance().connect(Const.GAME_HOST,Const.GAME_PORT,info.id);
 	}
 
@@ -130,14 +125,6 @@ class LoginView extends eui.Component
 		xlLib.UIMgr.instance.hideLoading(TipsLoading);
 		xlLib.SceneMgr.instance.changeScene(Lobby);
 	    xlLib.TipsUtils.showFloatWordTips("登录成功！");
-	}
-
-	private initGameData(data: any) {
-	}
-
-	private initPlayerData(data: any) {
-		UserInfo.getInstance().uid = data.uid;
-		UserInfo.getInstance().userType = data.userType;
 	}
 
 	public destroy()

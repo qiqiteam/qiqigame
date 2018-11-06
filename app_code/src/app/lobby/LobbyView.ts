@@ -120,6 +120,9 @@ class LobbyView extends eui.Component {
 	private onClick(e:egret.TouchEvent):void {
 		EffectUtils.playButtonEffect(e.target,null);
 		this.playClickSound();
+
+		// xlLib.WebSocketMgr.getInstance().send("joinroom",{userid:UserInfo.getInstance().uid,token:UserInfo.getInstance().token},()=>{},this);
+		
 	}
 
 	private onClick2(e:egret.TouchEvent):void {

@@ -1,9 +1,9 @@
 class UserInfo {
-    /**0：试玩的会员  非0：正式会员 */
-    private puserType: number;
     public uid:number;
     public username:string;
     public goldcoins:number;
+    public token:string;
+    public gamelist:gameData[] = [];
     private static _instance: UserInfo;
 
     public constructor() {}
@@ -14,13 +14,20 @@ class UserInfo {
         }
         return this._instance;
     }
-    
-    public set userType(type: number) {
-        this.puserType = type;
-    }
 
-    public get userType(): number {
-        return this.puserType;
-    }
-
+    public  initUserInfo(data:any):void
+	{
+        var info:any = data.data;
+		this.uid = info.id;
+		this.username = info.username;
+		this.goldcoins = info.goldcoins;
+		this.token = info.token;
+        let gamedata:gameData;
+        for(let index:number = 0;index<data.games.length;index++)
+        {
+           gamedata = new gameData();
+           gamedata.initData(data.games[index]);
+           this.gamelist.push(gamedata);
+        }
+	}
 }

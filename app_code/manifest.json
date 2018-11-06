@@ -13,14 +13,17 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/views/GameDoc.js",
-		"bin-debug/views/GameScene.js",
 		"bin-debug/app/Const.js",
 		"bin-debug/event/Dispatcher.js",
+		"bin-debug/views/GameDoc.js",
+		"bin-debug/views/GameScene.js",
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
+		"bin-debug/app/data/gameData.js",
 		"bin-debug/app/data/GameInformation.js",
 		"bin-debug/app/data/GlobalData.js",
+		"bin-debug/app/data/playWayData.js",
+		"bin-debug/app/data/typeData.js",
 		"bin-debug/app/data/UserInfo.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
@@ -58,7 +61,7 @@
 		"bin-debug/app/component/ComBoxItem.js",
 		"bin-debug/event/Event.js",
 		"bin-debug/event/ZqEvent.js",
-		"bin-debug/event/ZqListener.js",
+		"bin-debug/app/component/ComBox.js",
 		"bin-debug/Global.js",
 		"bin-debug/interface/DefaultConfig.js",
 		"bin-debug/interface/IGameConfig.js",
@@ -106,6 +109,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/TipsLoading.js",
-		"bin-debug/app/component/ComBox.js"
+		"bin-debug/event/ZqListener.js"
 	]
 }
