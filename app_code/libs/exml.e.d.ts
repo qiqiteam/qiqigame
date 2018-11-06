@@ -82,11 +82,15 @@ declare class NNViewSkin extends eui.Skin{
 }
 declare class PlayerInfoViewSkin extends eui.Skin{
 }
+declare class RechargeTypeItemSkin extends eui.Skin{
+}
 declare class RechargeViewSkin extends eui.Skin{
 }
 declare class orderinquirySkin extends eui.Skin{
 }
 declare class SafeBoxViewSkin extends eui.Skin{
+}
+declare class SetTypeItemSkin extends eui.Skin{
 }
 declare class SetViewSkin extends eui.Skin{
 }

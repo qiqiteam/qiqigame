@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LoginViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="1472" height="828">
-	<e:Image id="bgImg" width="100%" height="100%" source="login_bg_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
+	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="login_bg_jpg" locked="true"/>
 	<e:Group id="_group_btn_0" width="688" height="484" x="672" y="306" anchorOffsetX="0" anchorOffsetY="0">
 		<e:Button id="_btn_visitor" label="" scaleX="1" scaleY="1" verticalCenter="0" left="0">
 			<e:skinName>

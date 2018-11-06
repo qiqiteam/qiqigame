@@ -16,75 +16,71 @@
 		</e:Button>
 
 	</e:Group>
-	<e:Group width="350" height="616" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="5" locked="true">
-		<e:Group width="100%" height="100%" name="Group" x="0" y="0" scaleX="1" scaleY="1" locked="true">
-			<e:Button id="btn_yxsz_0" label="" y="31" horizontalCenter="0" x="40" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_game settings_1_png" source.down="btn_game settings_1_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="btn_xsjc_0" label="" x="40" y="203" horizontalCenter="0" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_xsjc_0_png" source.down="btn_xsjc_0_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="btn_zhgl_0" label="" x="40" y="311" horizontalCenter="0" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="img_accountmanagement_png" source.down="img_accountmanagement_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="btn_yjfk_0" label="" x="40" y="441" horizontalCenter="0" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_yjfk_0_png" source.down="btn_yjfk_0_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
+	<e:Group width="350" height="616" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="5">
+		<e:Image width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="group_bg_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="0"/>
+		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="120"/>
+		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="240"/>
+		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="360"/>
+		<e:TabBar id="_Set_meun" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" itemRenderer="SetTypeItem" scrollRect="(x=0,y=0,width=299,height=109)" selectedIndex="0">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:TabBar>
+
+	</e:Group>
+
+
+
+
+	<e:ViewStack id="_viewlist_set" width="988" height="620" x="352" y="76" selectedIndex="0">
+		<e:Group id="btn_yxsz_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true">
+			<e:Label text="游戏特效是指：互动表情、斗地主所产生对应的特效等" size="23" horizontalCenter="0" bottom="62" textColor="0x8e8a8a"/>
+			<e:Image source="btn_Afterallmusic_0_png" x="83" y="80"/>
+			<e:Image source="img_specialeffectsofgame_png" x="82" y="250"/>
+			<e:Image source="img_Thegamesound_png" x="548" y="80"/>
+			<e:Group width="180" height="50" x="275" y="80">
+			<e:Image source="img (1)_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="img (4)_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="img (3)_png" left="0" verticalCenter="0"/>
+			<e:Label text="开" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group width="180" height="50" x="730" y="80">
+			<e:Image source="img (1)_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="img (4)_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+			<e:Image source="img (3)_png" verticalCenter="0" right="0"/>
+			<e:Label text="关" horizontalCenter="0" verticalCenter="0" x="60" y="6" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="180" height="50" x="275" y="250">
+			<e:Image source="img (1)_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="img (4)_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
+			<e:Image source="img (3)_png" verticalCenter="0" right="0"/>
+			<e:Label text="关" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
 		</e:Group>
-	</e:Group>
-
-	<e:Group id="btn_yxsz_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" right="0" bottom="0" locked="true">
-
-
-
-		<e:Label text="游戏特效是指：互动表情、斗地主所产生对应的特效等" size="23" horizontalCenter="0" bottom="62" textColor="0x8e8a8a"/>
-		<e:Image source="btn_Afterallmusic_0_png" x="83" y="79"/>
-		<e:Image source="img_specialeffectsofgame_png" x="82" y="246"/>
-		<e:Image source="img_Thegamesound_png" x="548" y="84.5"/>
-	</e:Group>
-	<e:Group id="btn_xsjc_1" width="988" height="620" x="352" y="76" anchorOffsetX="0" anchorOffsetY="0" locked="true" visible="false">
-		<e:Label text="1、游戏大厅操作指南" x="56" y="99" size="30"/>
-		<e:Label text="1、游戏大厅操作指南" x="46" y="427" size="30"/>
-		<e:Label text="1、游戏大厅操作指南" x="506" y="427" size="30"/>
-		<e:Label text="1、游戏大厅操作指南" x="508" y="99" size="30"/>
-	</e:Group>
-	<e:Group id="btn_zhgl_1" width="988" height="620" x="352" y="76" anchorOffsetX="0" anchorOffsetY="0" locked="true" visible="false">
-		<e:Group width="100%" height="110" horizontalCenter="0" top="0" anchorOffsetY="0">
+		<e:Group id="btn_xsjc_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+			<e:Label text="1、游戏大厅操作指南" x="56" y="99" size="30"/>
+			<e:Label text="1、游戏大厅操作指南" x="46" y="427" size="30"/>
+			<e:Label text="1、游戏大厅操作指南" x="506" y="427" size="30"/>
+			<e:Label text="1、游戏大厅操作指南" x="508" y="99" size="30"/>
+		</e:Group>
+		<e:Group id="btn_zhgl_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+			<e:Group width="100%" height="110" horizontalCenter="0" top="0" anchorOffsetY="0" locked="true">
 			<e:Label text="您可以用以下帐号登录：" x="45" verticalCenter="0" size="35"/>
-		</e:Group>
-		<e:Group width="100%" height="384" horizontalCenter="0" y="110" anchorOffsetY="0" x="0" scaleX="1" scaleY="1">
+			</e:Group>
+			<e:Group width="100%" height="384" horizontalCenter="0" y="110" anchorOffsetY="0" x="0" scaleX="1" scaleY="1">
 			<e:Group width="300" height="100%" left="0" verticalCenter="0">
 				<e:Label text="ID：" horizontalCenter="0" top="13" size="20"/>
 				<e:Label text="呢称：" horizontalCenter="3" size="20" verticalCenter="-30"/>
 				<e:Label text="Gabc12121256789" horizontalCenter="0" top="51" size="12"/>
 				<e:Label text="世界赌神" horizontalCenter="0" size="20" verticalCenter="0"/>
 				<e:Button label="立即登录" bottom="30" horizontalCenter="0" width="198">
-					<e:skinName>
-						<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
-						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-						</e:Skin>
-					</e:skinName>
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
 				</e:Button>
 			</e:Group>
 			<e:Group width="180" height="100%" x="0" y="0" visible="false">
@@ -92,49 +88,49 @@
 				<e:Label text="请绑定手机号" horizontalCenter="0" size="20" verticalCenter="-73"/>
 				<e:Button label="立即登录" horizontalCenter="0" verticalCenter="0"/>
 			</e:Group>
-
 			<e:Group width="300" height="100%" verticalCenter="0" y="10" horizontalCenter="0">
 				<e:Button label="创建新帐号" horizontalCenter="0" verticalCenter="0" x="32" y="100" scaleX="1" scaleY="1" width="198">
-					<e:skinName>
-						<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
-						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-						</e:Skin>
-					</e:skinName>
-				</e:Button>
-			</e:Group>
-			<e:Group width="300" height="100%" verticalCenter="0" y="10" right="0">
-				<e:Button label="创建新帐号" horizontalCenter="0" verticalCenter="0" x="22" y="93" scaleX="1" scaleY="1" width="198">
-					<e:skinName>
-						<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
-						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-						</e:Skin>
-					</e:skinName>
-				</e:Button>
-			</e:Group>
-		</e:Group>
-		<e:Group width="100%" height="124" bottom="0" horizontalCenter="0" x="0" y="-25" scaleX="1" scaleY="1" anchorOffsetY="0">
-			<e:Label text="每个帐号可以创建两个关联帐号" size="30" horizontalCenter="0" verticalCenter="0"/>
-			<e:Button label="安全退出" verticalCenter="0" right="0" width="198">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
+				</e:Button>
+			</e:Group>
+			<e:Group width="300" height="100%" verticalCenter="0" y="10" right="0">
+				<e:Button label="创建新帐号" horizontalCenter="0" verticalCenter="0" x="22" y="93" scaleX="1" scaleY="1" width="198">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+			</e:Group>
+			</e:Group>
+			<e:Group width="100%" height="124" bottom="0" horizontalCenter="0" x="0" y="-25" scaleX="1" scaleY="1" anchorOffsetY="0">
+			<e:Label text="每个帐号可以创建两个关联帐号" size="30" horizontalCenter="0" verticalCenter="0"/>
+			<e:Button label="安全退出" verticalCenter="0" right="0" width="198">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
 			</e:Button>
+			</e:Group>
 		</e:Group>
-	</e:Group>
-	<e:Group id="btn_yjfk_1" width="988" height="620" x="352" y="76" anchorOffsetX="0" anchorOffsetY="0" locked="true" visible="false">
-		<e:EditableText width="80%" height="55%" text="" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" textAlign="left" verticalAlign="middle" size="25" prompt="请输入您要反馈的内容，限100字以内~" promptColor="0xffffff"/>
-		<e:Button label="提交" horizontalCenter="0" bottom="110" width="198">
+		<e:Group id="btn_yjfk_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+			<e:EditableText width="80%" height="55%" text="" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" textAlign="left" verticalAlign="top" size="25" prompt="请输入您要反馈的内容，限100字以内~" promptColor="0xffffff" locked="true"/>
+			<e:Button label="提交" horizontalCenter="0" bottom="71" width="198">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 				</e:Skin>
 			</e:skinName>
-		</e:Button>
-	</e:Group>
+			</e:Button>
+		</e:Group>
+	</e:ViewStack>
 </e:Skin>
