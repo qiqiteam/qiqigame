@@ -202,22 +202,21 @@ module xlLib {
                     data = JSON.stringify(data);
                 }
                 this.registerMsgHandler(cmd,(msg)=>{
-                          console.log("-----------------收到消息"+msg+"---",msg);
-                    // if (msg.code == 200) {
+                    if (msg.code == 200) {
                          cb.call(thisArg,msg);
-                    // }
-                    // else {
-                    //     if (ecb) {
-                    //         ecb.call(thisArg,msg);
-                    //     }
-                    //     if (ishow) {
-                    //         xlLib.TipsUtils.showFloatWordTips(msg.err);
-                    //     }
-                    // }
+                    }
+                    else {
+                        if (ecb) {
+                            ecb.call(thisArg,msg);
+                        }
+                        if (ishow) {
+                            xlLib.TipsUtils.showFloatWordTips(msg.message);
+                        }
+                    }
                 },false);
                 this.ws.writeUTF(data);
                 this.ws.flush();
-                console.log("开始发送消息---------------");
+                console.log("开始发送消息---------------"+data);
             }
             else {
                 xlLib.TipsUtils.showFloatWordTips("服务器已断开，请检查网络环境");
@@ -227,11 +226,11 @@ module xlLib {
         private onReceiveMessage(event: egret.ProgressEvent): void {
             var msg = this.ws.readUTF();
             let recvMsg = JSON.parse(msg);
-            if (this.handlers[recvMsg.event]) {
+            if (this.handlers[recvMsg.command]) {
                 console.log("收到消息 = " + msg);
-                this.handlers[recvMsg.event](msg);
+                this.handlers[recvMsg.command](msg);
             }
-            else if (recvMsg.event == "socket_pong") {
+            else if (recvMsg.command == "socket_pong") {
                 console.log("socket_pong");
                 this.lastRecieveTime = this.appTimeStamp;
             }

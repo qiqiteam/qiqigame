@@ -2,7 +2,7 @@ class gameData {
 	public id:string;
 	public code:string;
 	public name:string;
-    public types:typeData[];
+	public types:typeData[] = [];
 	public initData(data:any):void
 	{
        this.id = data.id;

@@ -121,7 +121,10 @@ class LobbyView extends eui.Component {
 		EffectUtils.playButtonEffect(e.target,null);
 		this.playClickSound();
 
-		// xlLib.WebSocketMgr.getInstance().send("joinroom",{userid:UserInfo.getInstance().uid,token:UserInfo.getInstance().token},()=>{},this);
+		xlLib.WebSocketMgr.getInstance().send("joinroom",{userid:UserInfo.getInstance().uid,
+			token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id},(data)=>{
+				console.log(data);
+			},this);
 		
 	}
 
