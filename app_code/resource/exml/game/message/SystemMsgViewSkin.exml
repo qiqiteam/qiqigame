@@ -15,11 +15,11 @@
 	<e:Group width="311" height="593" x="20" y="88">
 		<e:Image width="311" height="593" source="btn_bg_png" x="0" y="0" scaleX="1" scaleY="1"/>
 
-		<e:Image id="_image_notice" horizontalCenter="0.5" source="title_push_png" y="40" visible="false"/>
-		<e:Image id="_btn_notice" width="299" height="109" source="btn_notice_png" horizontalCenter="0" top="0" visible="false"/>
-		<e:Image id="_image_push" y="152" horizontalCenter="0.5" source="title_push_png" visible="false"/>
-		<e:Image id="_btn_push" width="299" height="109" y="112" source="btn_notice_png" horizontalCenter="0" visible="false"/>
-		<e:TabBar id="_tabBar_meun" height="100%" x="0" y="0" scaleX="1" scaleY="1" width="100%" selectedIndex="0" itemRenderer="SystemMsgTypeItem" scrollRect="(x=0,y=0,width=299,height=109)">
+
+
+
+
+		<e:TabBar id="_tabBar_meun" height="100%" x="6.08" y="6.08" scaleX="1" scaleY="1" width="100%" selectedIndex="0" itemRenderer="SystemMsgTypeItem" scrollRect="(x=0,y=0,width=299,height=109)">
 			<e:layout>
 			<e:VerticalLayout/>
 			</e:layout>
@@ -44,19 +44,21 @@
 	<e:Button id="_btn_delete" label="" x="450" y="555">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_delete_0_png" source.down="btn_delete_0_png"/>
+			<e:Image width="100%" height="100%" source="btn_delete_0_png" source.down="btn_delete_1_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 		</e:skinName>
+
 
 	</e:Button>
 	<e:Button id="_btn_select_all" label="" x="900" y="555">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_all_select_0_png" source.down="btn_all_select_0_png"/>
+			<e:Image width="100%" height="100%" source="btn_all_select_0_png" source.down="btn_all_select_1_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 		</e:skinName>
+
 
 	</e:Button>
 </e:Skin>

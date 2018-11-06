@@ -1,12 +1,9 @@
-/**
- * 福利类型Item
- */
-class WelfareTypeItem extends eui.ItemRenderer {
+class RoomTypeItem extends eui.ItemRenderer {
 	public icon_img:eui.Image;
 
 	constructor() {
 		super();
-		this.skinName = "WelfareTypeItemSkin";
+		this.skinName = "RoomTypeItemSkin";
 	}
 
 	protected childrenCreated() {
