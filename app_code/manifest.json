@@ -13,10 +13,10 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/views/GameDoc.js",
-		"bin-debug/views/GameScene.js",
 		"bin-debug/app/Const.js",
 		"bin-debug/event/Dispatcher.js",
+		"bin-debug/views/GameDoc.js",
+		"bin-debug/views/GameScene.js",
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
 		"bin-debug/app/data/GameInformation.js",
@@ -34,8 +34,10 @@
 		"bin-debug/app/game/nn/NNView.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoView.js",
 		"bin-debug/app/game/recharge/orderinquiry.js",
+		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
 		"bin-debug/app/game/safebox/SafeBoxView.js",
+		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/welfare/AwardItem.js",
 		"bin-debug/app/game/welfare/LotteryPanel.js",
@@ -58,7 +60,7 @@
 		"bin-debug/app/component/ComBoxItem.js",
 		"bin-debug/event/Event.js",
 		"bin-debug/event/ZqEvent.js",
-		"bin-debug/event/ZqListener.js",
+		"bin-debug/app/component/ComBox.js",
 		"bin-debug/Global.js",
 		"bin-debug/interface/DefaultConfig.js",
 		"bin-debug/interface/IGameConfig.js",
@@ -106,6 +108,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/TipsLoading.js",
-		"bin-debug/app/component/ComBox.js"
+		"bin-debug/event/ZqListener.js"
 	]
 }

@@ -2,32 +2,36 @@ class SetView extends eui.Component {
 
 	public bgImg: eui.Image;
 	public btn_return: eui.Button;
-	public btn_yxsz_0: eui.Button;
-	public btn_xsjc_0: eui.Button;
-	public btn_zhgl_0: eui.Button;
-	public btn_yjfk_0: eui.Button;
+	public _Set_meun: eui.TabBar;
+	public _viewlist_set: eui.ViewStack;
 	public btn_yxsz_1: eui.Group;
 	public btn_xsjc_1: eui.Group;
 	public btn_zhgl_1: eui.Group;
 	public btn_yjfk_1: eui.Group;
 
 
-
-
 	public constructor() {
 		super();
 		this.skinName = "SetViewSkin";
-		this.btn_return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick1, this);
-		this.btn_yxsz_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
-		this.btn_xsjc_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick3, this);
-		this.btn_zhgl_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick4, this);
-		this.btn_yjfk_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick5, this);
 	}
 
 	public childrenCreated(): void {
 		super.childrenCreated();
 
-		this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+		let dataArr: any[] = [{ name: "游戏设置", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" },
+		{ name: "新手指导", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" },
+		{ name: "账号管理", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" },
+		{ name: "意见反馈", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" }];
+		this._Set_meun.dataProvider = new eui.ArrayCollection(dataArr);
+		this._Set_meun.useVirtualLayout = true;
+		this._Set_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
+
+		this.btn_return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick1, this);
+
+	}
+
+	private onBarItemTap(e: eui.ItemTapEvent): void {
+		this._viewlist_set.selectedIndex = e.itemIndex;
 	}
 
 
@@ -35,44 +39,13 @@ class SetView extends eui.Component {
 		xlLib.PopUpMgr.removePopUp(SetView, 1);
 	}
 
-	private onClick2(e: egret.TouchEvent): void {
-		this.btn_yxsz_1.visible = true;
-		this.btn_xsjc_1.visible = false;
-		this.btn_zhgl_1.visible = false;
-		this.btn_yjfk_1.visible = false;
-	}
-
-	private onClick3(e: egret.TouchEvent): void {
-		this.btn_yxsz_1.visible = false;
-		this.btn_xsjc_1.visible = true;
-		this.btn_zhgl_1.visible = false;
-		this.btn_yjfk_1.visible = false;
-	}
-
-	private onClick4(e: egret.TouchEvent): void {
-		this.btn_yxsz_1.visible = false;
-		this.btn_xsjc_1.visible = false;
-		this.btn_zhgl_1.visible = true;
-		this.btn_yjfk_1.visible = false;
-	}
-
-	private onClick5(e: egret.TouchEvent): void {
-		this.btn_yxsz_1.visible = false;
-		this.btn_xsjc_1.visible = false;
-		this.btn_zhgl_1.visible = false;
-		this.btn_yjfk_1.visible = true;
-	}
-
 	protected partAdded(partName: string, instance: any): void {
 		super.partAdded(partName, instance);
 	}
 
 	public destroy() {
+		this._Set_meun.removeEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
 		this.btn_return.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick1, this);
-		this.btn_yxsz_0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
-		this.btn_xsjc_0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick3, this);
-		this.btn_zhgl_0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick4, this);
-		this.btn_yjfk_0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick5, this);
 	}
 
 }
