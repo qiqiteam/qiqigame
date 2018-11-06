@@ -13,7 +13,6 @@ class WelfareView extends eui.Component {
     public _group_turntable:eui.Group;
     public _group_sign:eui.Group;
 
-
     constructor () {
         super()
 
@@ -22,16 +21,16 @@ class WelfareView extends eui.Component {
 
     public childrenCreated() {
         super.childrenCreated();
-
+        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         //let lottery = new LotteryPanel;
         //lottery.x = 400;
         //lottery.y = 300;
         //this.addChild(lottery);
-        let dataArr:any[] = [{name:"精彩活动",down_url:"btn_common_0_png",up_url:"btn_common_1_png"},
-		{name:"每日任务",down_url:"btn_common_0_png",up_url:"btn_common_1_png"},
-		{name:"幸运轮盘",down_url:"btn_common_0_png",up_url:"btn_common_1_png"},
-		{name:"每日签到",down_url:"btn_common_0_png",up_url:"btn_common_1_png"}];
+        let dataArr:any[] = [{name:"精彩活动",down_url:"btn_huodong_png",up_url:"title_huodong_png"},
+		{name:"每日任务",down_url:"btn_huodong_png",up_url:"title_huodong_png"},
+		{name:"幸运轮盘",down_url:"btn_huodong_png",up_url:"title_huodong_png"},
+		{name:"每日签到",down_url:"btn_huodong_png",up_url:"title_huodong_png"}];
 		this._tabBar_meun.dataProvider = new eui.ArrayCollection(dataArr);
 		this._tabBar_meun.useVirtualLayout = true;
 		this._tabBar_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
@@ -61,7 +60,7 @@ class WelfareView extends eui.Component {
 
     public destroy():void {
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.dispose,this);
-        
+        this._tabBar_meun.removeEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
 	}
 
 }

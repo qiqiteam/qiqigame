@@ -34,14 +34,15 @@ class SystemMsgView extends eui.Component {
 
     public childrenCreated() {
         super.childrenCreated();
+        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         //this._image_notice.addEventListener(egret.TouchEvent.TOUCH_TAP, this.switchMode, this);
         //this._image_push.addEventListener(egret.TouchEvent.TOUCH_TAP, this.switchMode, this);
         this._btn_select_all.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSelectAll, this);
         this._btn_delete.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDelete, this);
 
-        let dataArr:any[] = [{name:"系统通知",down_url:"btn_notice_png",up_url:"title_push_png"},
-		{name:"推送消息",down_url:"btn_notice_png",up_url:"title_push_png"}];
+        let dataArr:any[] = [{name:"系统通知",down_url:"btn_notice_0_png",up_url:"btn_notice_1_png"},
+		{name:"推送消息",down_url:"btn_push_0_png",up_url:"btn_push_1_png"}];
 		this._tabBar_meun.dataProvider = new eui.ArrayCollection(dataArr);
 		this._tabBar_meun.useVirtualLayout = true;
 		this._tabBar_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
@@ -55,7 +56,6 @@ class SystemMsgView extends eui.Component {
         this._arr_msg = this.arr_msg_1;
         this._group_msg = this._group_msg_notice;
         this.onAcceptMessage();
-        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
     }
 
     private onBarItemTap(e: eui.ItemTapEvent): void {
@@ -135,6 +135,7 @@ class SystemMsgView extends eui.Component {
         //this._image_push.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.dispose,this);
         this._btn_select_all.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.dispose,this);
         this._btn_delete.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.dispose,this);
+        this._tabBar_meun.removeEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
         this._group_msg = null;
         this._arr_msg = [];
         this._ver_item = [];

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RoomViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="_bg_img" width="1472" height="828" x="0" y="0" source="room_bg_png"/>
+	<e:Group width="270" height="620" x="0" y="136">
+		<e:Image width="281" height="687" x="-4" y="-54" source="room_menu_bg_png"/>
+		<e:TabBar id="_room_tab" width="256" height="620" x="0" y="0" scaleX="1" scaleY="1" itemRenderer="RoomTypeItem" selectedIndex="0" scrollRect="(x=0,y=0,width=256,height=110)">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:TabBar>
+	</e:Group>
+	<e:Group width="1474" height="70" x="0" bottom="0" locked="true">
+		<e:Button id="_btn_record" label="" scaleX="1" scaleY="1" x="1273" y="4">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="root_record_btn_0_png" source.down="root_record_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group width="1472" height="133" x="0" y="0" locked="true">
+		<e:Image x="0" y="0" source="room_shang_di_png" width="1472" height="133" scaleX="1" scaleY="1"/>
+		<e:Button id="_btn_close" label="" x="60" y="30" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="room_close_png" source.down="room_close_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Image x="358" y="21" scaleX="1" scaleY="1" source="title_niuniu_png"/>
+		<e:Image x="606" y="22" scaleX="1" scaleY="1" source="coin_rect_png"/>
+		<e:Label text="8888888" x="690" y="30" scaleX="1" scaleY="1" size="40" textAlign="center"/>
+		<e:Button id="_btn_menu" label="" x="1066" y="22" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="room_meun_btn_0_png" source.down="room_meun_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_rule" label="" x="1270" y="22" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="room_rule_btn_0_png" source.down="room_rule_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+	</e:Group>
+
+
+	<e:ViewStack id="_room_viewStack" width="1200" height="620" selectedIndex="0" x="272" y="134">
+		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Group id="_room_area_1">
+			</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Group id="_room_area_2">
+			</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Group id="_room_area_3">
+			</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Group id="_room_area_4">
+			</e:Group>
+			</e:Scroller>
+		</e:Group>
+
+
+	</e:ViewStack>
+</e:Skin>

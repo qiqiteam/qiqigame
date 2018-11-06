@@ -53,6 +53,8 @@
 		"bin-debug/app/lobby/GameTypeItem.js",
 		"bin-debug/app/lobby/Lobby.js",
 		"bin-debug/app/lobby/LobbyView.js",
+		"bin-debug/app/lobby/RoomTypeItem.js",
+		"bin-debug/app/lobby/RoomView.js",
 		"bin-debug/app/LodingView.js",
 		"bin-debug/app/login/LoginView.js",
 		"bin-debug/app/util/EventConst.js",
