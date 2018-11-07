@@ -120,6 +120,29 @@ module xlLib {
         }
 
         /**
+         * 设置按钮变灰
+         * 	xlLib.DisplayUtils.setButtonEnabled(this._btn_visitor,false);
+         */ 
+        public static setButtonEnabled(btn:eui.Button,enabled:boolean):void
+        {
+            if(!enabled)
+            {
+                var colorMatrix = [
+                    0.3,0.6,0,0,0,
+                    0.3,0.6,0,0,0,
+                    0.3,0.6,0,0,0,
+                    0,0,0,1,0
+                ];
+                var colorFlilter = new egret.ColorMatrixFilter(colorMatrix);
+                btn.filters = [colorFlilter];
+            }else{
+                btn.filters = [];
+            }
+            btn.enabled = enabled;
+        }
+
+
+        /**
          * 删除龙骨动画
          */ 
         public static destoryDragonBonesArmature(armature:any,animationName: string) {
