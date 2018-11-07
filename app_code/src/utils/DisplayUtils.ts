@@ -123,7 +123,7 @@ module xlLib {
          * 设置按钮变灰
          * 	xlLib.DisplayUtils.setButtonEnabled(this._btn_visitor,false);
          */ 
-        public static setButtonEnabled(btn:eui.Button,enabled:boolean):void
+        public static setComponentEnabled(btn:eui.Component,enabled:boolean):void
         {
             if(!enabled)
             {
