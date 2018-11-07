@@ -28,6 +28,15 @@ class SetView extends eui.Component {
 
 		this.btn_return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick1, this);
 
+		var toggleSwitch = new EToggleSwitch(this,"switchOff_png","switchOn_png","switchBar_png", this.toggleCallback);
+		toggleSwitch.x = 500;
+		toggleSwitch.y = 400;
+        this.addChild(toggleSwitch);
+
+	}
+
+	private toggleCallback() {
+		console.log("fffff");
 	}
 
 	private onBarItemTap(e: eui.ItemTapEvent): void {
