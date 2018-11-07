@@ -128,6 +128,10 @@ class LobbyView extends eui.Component {
 				 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 			},this);
 
+
+		xlLib.WebSocketMgr.getInstance().registerMsgHandler(WebSockeAddress.hog,()=>{
+			
+		});
 		// let senddata:any = {
 		// 	userid:UserInfo.getInstance().uid,
 		// 	token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
