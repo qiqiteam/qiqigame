@@ -4,9 +4,8 @@
 class SafeBoxView extends eui.Component {
 
     public Bg: eui.Image;
-    public btn_deposit: eui.Button;
-    public btn_out: eui.Button;
-    public btn_autodeposit: eui.Button;
+    public _safebox_meun: eui.TabBar;
+    public _viewstack_safebox: eui.ViewStack;
     public group_deposit: eui.Group;
     public lab_CarryMoney: eui.Label;
     public lab_safebox: eui.Label;
@@ -17,47 +16,50 @@ class SafeBoxView extends eui.Component {
     public btn_all: eui.Button;
     public btn_enter: eui.Button;
     public group_out: eui.Group;
+    public lab_CarryMoney01: eui.Label;
+    public lab_safebox01: eui.Label;
+    public input_depositMoney01: eui.EditableText;
+    public progress_bar01: eui.Image;
+    public btn_set_outPW01: eui.Image;
+    public btn_clear01: eui.Button;
+    public btn_all01: eui.Button;
+    public btn_enter01: eui.Button;
     public input_password: eui.EditableText;
     public group_autodeposit: eui.Group;
+    public cheakbox_deposit01: eui.CheckBox;
+    public cheakbox_deposit02: eui.CheckBox;
     public btn_close: eui.Button;
-
-
 
 
     public constructor() {
         super();
         this.skinName = "SafeBoxViewSkin";
-        this.btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickCloBtn, this);
-        this.btn_deposit.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickDeposit, this);
-        this.btn_out.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickOutBtn, this);
-        this.btn_autodeposit.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickAutoBtn, this);
+
     }
 
+    protected childrenCreated(): void {
+        super.childrenCreated();
+        this.btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickCloBtn, this);
 
+
+        let dataArr: any[] = [{ name: "存入", down_url: "deposit_down_btn_png", up_url: "deposit_up_btn_png" },
+        { name: "取出", down_url: "out_down_btn_png", up_url: "out_up_btn_png" },
+        { name: "自动存入", down_url: "autodeposit_down_btn_png", up_url: "autodeposit_up_btn_png" }];
+        this._safebox_meun.dataProvider = new eui.ArrayCollection(dataArr);
+        this._safebox_meun.useVirtualLayout = true;
+        this._safebox_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
+    }
+
+    private onBarItemTap(e: eui.ItemTapEvent): void {
+        this._viewstack_safebox.selectedIndex = e.itemIndex;
+        xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
+    }
     //点击返回按钮
     private OnClickCloBtn(e: egret.TouchEvent): void {
         xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
         xlLib.PopUpMgr.removePopUp(SafeBoxView, 1);
     }
-    //点击存入按钮
-    private OnClickDeposit(e: egret.TouchEvent): void {
-        this._MaxBtnHid();
-        this.group_deposit.visible = true;
-        xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
-    }
-    //点击取出按钮
-    private OnClickOutBtn(e: egret.TouchEvent): void {
-        this._MaxBtnHid();
-        this.group_deposit.visible = true;
-        this.group_out.visible = true;
-        xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
-    }
-    //点击自动存按钮
-    private OnClickAutoBtn(e: egret.TouchEvent): void {
-        this._MaxBtnHid();
-        this.group_autodeposit.visible = true;
-        xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
-    }
+
     private _MaxBtnHid() {
         this.group_deposit.visible = false;
         this.group_out.visible = false;
@@ -71,13 +73,8 @@ class SafeBoxView extends eui.Component {
     protected partAdded(partName: string, instance: any): void {
         super.partAdded(partName, instance);
     }
-    protected childrenCreated(): void {
-        super.childrenCreated();
-    }
+
     public destroy() {
         this.btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickCloBtn, this);
-        this.btn_deposit.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickDeposit, this);
-        this.btn_out.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickOutBtn, this);
-        this.btn_autodeposit.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickAutoBtn, this);
     }
 }

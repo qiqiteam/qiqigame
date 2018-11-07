@@ -53,25 +53,25 @@
 
 	<e:ViewStack id="_room_viewStack" width="1200" height="620" selectedIndex="0" x="272" y="134">
 		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
-			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1" scrollPolicyV="off" scrollPolicyH="on">
 			<e:Group id="_room_area_1">
 			</e:Group>
 			</e:Scroller>
 		</e:Group>
 		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
-			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1" scrollPolicyV="off" scrollPolicyH="on">
 			<e:Group id="_room_area_2">
 			</e:Group>
 			</e:Scroller>
 		</e:Group>
 		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
-			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1" scrollPolicyV="off" scrollPolicyH="on">
 			<e:Group id="_room_area_3">
 			</e:Group>
 			</e:Scroller>
 		</e:Group>
 		<e:Group width="1200" height="620" x="0" y="0" scaleX="1" scaleY="1">
-			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Scroller width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1" scrollPolicyV="off" scrollPolicyH="on">
 			<e:Group id="_room_area_4">
 			</e:Group>
 			</e:Scroller>

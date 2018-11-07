@@ -80,6 +80,8 @@ declare class NNTableItemSkin extends eui.Skin{
 }
 declare class NNViewSkin extends eui.Skin{
 }
+declare class PlayerInfoTypeItemSkin extends eui.Skin{
+}
 declare class PlayerInfoViewSkin extends eui.Skin{
 }
 declare class RechargeTypeItemSkin extends eui.Skin{
@@ -87,6 +89,8 @@ declare class RechargeTypeItemSkin extends eui.Skin{
 declare class RechargeViewSkin extends eui.Skin{
 }
 declare class orderinquirySkin extends eui.Skin{
+}
+declare class SafeBoxTypeItemSkin extends eui.Skin{
 }
 declare class SafeBoxViewSkin extends eui.Skin{
 }

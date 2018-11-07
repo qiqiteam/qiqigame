@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="SetViewSkin" width="1340" height="696" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image id="bgImg" horizontalCenter="0" verticalCenter="0" width="100%" height="100%" source="img_bg_png"/>
-	<e:Group width="100%" height="75" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" top="0">
+	<e:Group width="100%" height="75" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" top="0" locked="true">
 		<e:Image horizontalCenter="0" verticalCenter="0" source="img_bottom_png"/>
 		<e:Image source="img_set_png" horizontalCenter="0" verticalCenter="0"/>
 
@@ -16,7 +16,7 @@
 		</e:Button>
 
 	</e:Group>
-	<e:Group width="350" height="616" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="5">
+	<e:Group width="350" height="616" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="5" locked="true">
 		<e:Image width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="group_bg_png" x="0" y="0" scaleX="1" scaleY="1"/>
 		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="0"/>
 		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="120"/>
@@ -33,30 +33,15 @@
 
 
 
-	<e:ViewStack id="_viewlist_set" width="988" height="620" x="352" y="76" selectedIndex="0">
+	<e:ViewStack id="_viewlist_set" width="988" height="620" x="352" y="76" selectedIndex="2">
 		<e:Group id="btn_yxsz_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true">
 			<e:Label text="游戏特效是指：互动表情、斗地主所产生对应的特效等" size="23" horizontalCenter="0" bottom="62" textColor="0x8e8a8a"/>
 			<e:Image source="btn_Afterallmusic_0_png" x="83" y="80"/>
 			<e:Image source="img_specialeffectsofgame_png" x="82" y="250"/>
 			<e:Image source="img_Thegamesound_png" x="548" y="80"/>
-			<e:Group width="180" height="50" x="275" y="80">
-			<e:Image source="img (1)_png" horizontalCenter="0" verticalCenter="0"/>
-			<e:Image source="img (4)_png" horizontalCenter="0" verticalCenter="0"/>
-			<e:Image source="img (3)_png" left="0" verticalCenter="0"/>
-			<e:Label text="开" horizontalCenter="0" verticalCenter="0"/>
-			</e:Group>
-			<e:Group width="180" height="50" x="730" y="80">
-			<e:Image source="img (1)_png" horizontalCenter="0" verticalCenter="0"/>
-			<e:Image source="img (4)_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
-			<e:Image source="img (3)_png" verticalCenter="0" right="0"/>
-			<e:Label text="关" horizontalCenter="0" verticalCenter="0" x="60" y="6" scaleX="1" scaleY="1"/>
-			</e:Group>
-			<e:Group width="180" height="50" x="275" y="250">
-			<e:Image source="img (1)_png" horizontalCenter="0" verticalCenter="0"/>
-			<e:Image source="img (4)_png" horizontalCenter="0" verticalCenter="0" visible="false"/>
-			<e:Image source="img (3)_png" verticalCenter="0" right="0"/>
-			<e:Label text="关" horizontalCenter="0" verticalCenter="0"/>
-			</e:Group>
+
+
+
 		</e:Group>
 		<e:Group id="btn_xsjc_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
 			<e:Label text="1、游戏大厅操作指南" x="56" y="99" size="30"/>
@@ -83,19 +68,27 @@
 				</e:skinName>
 				</e:Button>
 			</e:Group>
-			<e:Group width="180" height="100%" x="0" y="0" visible="false">
+			<e:Group width="296" height="100%" x="0" y="0" anchorOffsetX="0" visible="false">
 				<e:Label text="您是游客模式" horizontalCenter="0" top="17" size="20"/>
 				<e:Label text="请绑定手机号" horizontalCenter="0" size="20" verticalCenter="-73"/>
-				<e:Button label="立即登录" horizontalCenter="0" verticalCenter="0"/>
+				<e:Button label="立即登录" width="189" horizontalCenter="0" verticalCenter="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
 			</e:Group>
 			<e:Group width="300" height="100%" verticalCenter="0" y="10" horizontalCenter="0">
 				<e:Button label="创建新帐号" horizontalCenter="0" verticalCenter="0" x="32" y="100" scaleX="1" scaleY="1" width="198">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+
 				</e:Button>
 			</e:Group>
 			<e:Group width="300" height="100%" verticalCenter="0" y="10" right="0">

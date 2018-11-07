@@ -28,10 +28,36 @@ class SetView extends eui.Component {
 
 		this.btn_return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick1, this);
 
-		var toggleSwitch = new EToggleSwitch(this,"switchOff_png","switchOn_png","switchBar_png", this.toggleCallback);
-		toggleSwitch.x = 500;
-		toggleSwitch.y = 400;
-        this.addChild(toggleSwitch);
+		var toggleSwitch0 = new EToggleSwitch(this, "switchOff_png", "switchOn_png", "switchBar_png", this.toggleCallback);
+		toggleSwitch0.x = 285;
+		toggleSwitch0.y = 75;
+
+		var toggleSwitch1 = new EToggleSwitch(this, "switchOff_png", "switchOn_png", "switchBar_png", this.toggleCallback);
+		toggleSwitch1.x = 736;
+		toggleSwitch1.y = 75;
+
+		var toggleSwitch2 = new EToggleSwitch(this, "switchOff_png", "switchOn_png", "switchBar_png", this.toggleCallback);
+		toggleSwitch2.x = 285;
+		toggleSwitch2.y = 245;
+
+		var txt0 = new eui.Label();
+		txt0.text = "开";
+		txt0.x = 360;
+		txt0.y = 85;
+
+		var txt1 = new eui.Label();
+		txt1.text = "开";
+		txt1.x = 811;
+		txt1.y = 85;
+
+		var txt2 = new eui.Label();
+		txt2.text = "开";
+		txt2.x = 360;
+		txt2.y = 255;
+
+		
+		this.btn_yxsz_1.addChild(toggleSwitch0); this.btn_yxsz_1.addChild(toggleSwitch1); this.btn_yxsz_1.addChild(toggleSwitch2);
+		this.btn_yxsz_1.addChild(txt0); this.btn_yxsz_1.addChild(txt1); this.btn_yxsz_1.addChild(txt2);
 
 	}
 

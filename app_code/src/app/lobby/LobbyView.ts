@@ -118,10 +118,13 @@ class LobbyView extends eui.Component {
     }
 
 	private onClick(e:egret.TouchEvent):void {
-		EffectUtils.playButtonEffect(e.target,null);
+		EffectUtils.playButtonEffect(e.target,this.clickCallback);
 		this.playClickSound();
+	}
 
-        let senddata:any = {
+	private clickCallback() {
+		xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
+		let senddata:any = {
 			userid:UserInfo.getInstance().uid,
 			token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
 		xlLib.WebSocketMgr.getInstance().send(WebSockeAddress.joinroom,senddata,(data)=>{
@@ -150,6 +153,7 @@ class LobbyView extends eui.Component {
 			xlLib.PopUpMgr.addPopUp(PlayerInfoView, null, true, true, null ,1);
 		} else if(e.target == this._service) {
 			console.log("_service");
+			xlLib.TipsUtils.showFloatWordTips("敬请期待！");
 		} else if(e.target == this._information) {
 			console.log("_information");
 			xlLib.PopUpMgr.addPopUp(SystemMsgView, null, true, true, null ,1);
@@ -160,6 +164,7 @@ class LobbyView extends eui.Component {
 			xlLib.PopUpMgr.addPopUp(SafeBoxView, null, true, true, null ,1);
 		} else if(e.target == this._challenge) {
 			console.log("_challenge");
+			xlLib.TipsUtils.showFloatWordTips("敬请期待！");
 		} else if(e.target == this._welfare) {
 			console.log("_welfare");
 			xlLib.PopUpMgr.addPopUp(WelfareView, null, true, true, null ,1);
