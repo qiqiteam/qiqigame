@@ -96,6 +96,15 @@ class RoomView extends eui.Component {
     private onClick(e:egret.TouchEvent):void {
 		EffectUtils.playButtonEffect(e.target,null);
 		this.playClickSound();
+
+        let senddata:any = {
+            userid:UserInfo.getInstance().uid,
+            token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
+            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_start,senddata,(data)=>{
+            xlLib.TipsUtils.showFloatWordTips("开始牛牛！");
+        },this);
+
+
 	}
 
     private onBarItemTap(e: eui.ItemTapEvent): void {

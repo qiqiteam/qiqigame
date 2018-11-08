@@ -1,13 +1,5 @@
 class EventConst 
 {
-	// /*** 获取TOKEN成功*/
-	// public static ON_GET_TOKEN_SUCCES:string = "onTokenSucces";
-    // /*** 获取TOKEN失败*/
-	// public static ON_GET_TOKEN_FAIL:string = "onTokenFail";
-	// /*** 登录成功*/
-	// public static ON_LOGIN_SUCCES:string = "onLoginSucces";
-	// /*** 登录失败*/
-	// public static ON_LOGIN_FAIL:string = "onLoginFail";
     /*** socket连接成功*/
 	public static ON_SOCKET_SUC:string = "onSocketSuc";
 	/*** socket连接失败*/
@@ -15,35 +7,25 @@ class EventConst
 	/*** socket连接关闭*/
 	public static ON_SOCKET_CLOSE:string = "onSocketClose";
 
-	// /**更新下注通知(所有人) */
-    // public static ON_USER_BET_ORDER_UPDATA:string = "onUserBetOrderUpdate";
- 	// /*** 彩池更新*/
-	// public static ON_GAME_POTS_UPDATAED:string = "onGamePotsUpdated";
-	// /*** 游戏状态改变*/
-	// public static ON_GAME_STATUS_CHANGE: string = "onGameStatusChange";
-	// /*** 游戏结算*/
-	// public static ON_CHECK_OUT: string = "onCheckout";
-	// /*** 余额更新广播*/
-	// public static ON_UPDATE_USER_BALANCE: string = "onUpdateUserBalance";
-	// /*** 换台事件*/
-	// public static ON_CHANGE_GAME_TABLE: string = "onChangeGameTalbe";
-	// /** 修改昵称 */
-	// public static CHANGE_NICKNAME: string = "changeNickname";
-	// /** 返回大厅 */
-	// public static ON_BLACKLOBBY: string = "onBlackLobby";
-	// /** 及时通知 */
-	// public static ON_NOTIFY: string = "onNotify";
-	// /** 游戏限红更新 用户为非api账号并且在三合一的台子中 */
-	// public static ON_GAME_LIMIT_CHANGE:string = "onGameLimitChange";
-
-	// /** 牛牛珠子刷新 */
-	// public static ON_NN_PEARL_APPEND: string = "onNNPearlAppend";
-
-	// /** 牛牛定位广播 */
-	// public static ON_LOCATE_MESSAGE:string = "onGameLocateMessage";
-	// /** 牛牛牌型结果 */
-	// public static ON_CARDS_JUDGE:string = "onGameCardsJudge";
-	// /** 牛牛发牌 */
-	// public static ON_GAMECARDS_UPDATED:string = "onGameCardsUpdated";
+	//---------------------------------------请求发送数据
+	/**加入房间 */
+    public static joinroom:string = "joinroom";
+	/**开始牛牛游戏*/
+    public static niuniu_start:string = "niuniu_start";
+	/**抢庄*/
+    public static niuniu_dohog:string = "niuniu_dohog";
+	/**投注倍数*/
+    public static erbagang_bet:string = "erbagang_bet"
+    //---------------------------------------回包监听数据
+	/**监听抢庄按钮*/
+    public static hog:string = "hog";
+    /**用户抢庄数*/
+    public static hognum:string = "hognum";  
+    /**庄家*/
+    public static banker:string = "banker";  
+    /**倍数列表*/
+    public static bet:string = "bet";  
+    /**用户倍数*/
+    public static betnum:string = "betnum";  
 
 }
