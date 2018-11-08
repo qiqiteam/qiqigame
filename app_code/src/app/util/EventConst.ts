@@ -7,7 +7,7 @@ class EventConst
 	/*** socket连接关闭*/
 	public static ON_SOCKET_CLOSE:string = "onSocketClose";
 
-	//---------------------------------------请求发送数据
+	//------------------C to S---------------------请求发送服务器协议
 	/**加入房间 */
     public static joinroom:string = "joinroom";
 	/**开始牛牛游戏*/
@@ -16,7 +16,11 @@ class EventConst
     public static niuniu_dohog:string = "niuniu_dohog";
 	/**投注倍数*/
     public static erbagang_bet:string = "erbagang_bet"
-    //---------------------------------------回包监听数据
+
+
+
+    
+    //------------------S to C---------------------服务端回包监听数据
 	/**监听抢庄按钮*/
     public static hog:string = "hog";
     /**用户抢庄数*/
