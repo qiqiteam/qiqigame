@@ -31,6 +31,8 @@
     "resource/exml/game/nn/NNViewSkin.exml",
     "resource/exml/game/playerinfo/PlayerInfoTypeItemSkin.exml",
     "resource/exml/game/playerinfo/PlayerInfoViewSkin.exml",
+    "resource/exml/game/qznn_exml/BaiRenNiuNiuSkin.exml",
+    "resource/exml/game/qznn_exml/Robzhuang.exml",
     "resource/exml/game/recharge/RechargeTypeItemSkin.exml",
     "resource/exml/game/recharge/RechargeView.exml",
     "resource/exml/game/recharge/orderinquiry.exml",
