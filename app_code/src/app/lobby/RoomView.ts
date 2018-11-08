@@ -99,7 +99,7 @@ class RoomView extends eui.Component {
 	}
 
     private clickCallback() {
-        //xlLib.PopUpMgr.addPopUp(Robzhuang, null, true, true, null ,1);
+        
         xlLib.PopUpMgr.addPopUp(NiuNiuView, null, true, true, null ,1);
 	
 	let senddata:any = {

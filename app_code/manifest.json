@@ -13,10 +13,10 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/app/Const.js",
-		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/views/GameDoc.js",
 		"bin-debug/views/GameScene.js",
+		"bin-debug/app/Const.js",
+		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
@@ -38,6 +38,9 @@
 		"bin-debug/app/game/nn/NNView.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoTypeItem.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoView.js",
+		"bin-debug/app/game/qznn/NiuNiuUtil.js",
+		"bin-debug/app/game/qznn/NiuNiuView.js",
+		"bin-debug/app/game/qznn/Robzhuang.js",
 		"bin-debug/app/game/recharge/orderinquiry.js",
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
@@ -64,7 +67,7 @@
 		"bin-debug/app/util/EventConst.js",
 		"bin-debug/app/util/EventUtil.js",
 		"bin-debug/app/util/GlobalFunction.js",
-		"bin-debug/app/component/ComBox.js",
+		"bin-debug/AssetAdapter.js",
 		"bin-debug/consts/CommonConsts.js",
 		"bin-debug/event/Dispatcher.js",
 		"bin-debug/event/Event.js",
@@ -116,6 +119,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/AssetAdapter.js"
+		"bin-debug/app/component/ComBox.js"
 	]
 }

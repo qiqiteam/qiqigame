@@ -18,10 +18,10 @@ class SetView extends eui.Component {
 	public childrenCreated(): void {
 		super.childrenCreated();
 
-		let dataArr: any[] = [{ name: "游戏设置", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" },
-		{ name: "新手指导", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" },
-		{ name: "账号管理", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" },
-		{ name: "意见反馈", down_url: "btn_settings_1_png", up_url: "btn_xsjc_0_png" }];
+		let dataArr: any[] = [{ name: "游戏设置", down_url: "btn_settings_1_png", up_url: "btn_settings_0_png" },
+		{ name: "新手教程", down_url: "btn_xsjc_1_png", up_url: "btn_xsjc_0_png" },
+		{ name: "账号管理", down_url: "btn_accountmanagement_1_png", up_url: "btn_accountmanagement_0_png" },
+		{ name: "意见反馈", down_url: "btn_yjfk_1_png", up_url: "btn_yjfk_0_png" }];
 		this._Set_meun.dataProvider = new eui.ArrayCollection(dataArr);
 		this._Set_meun.useVirtualLayout = true;
 		this._Set_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
@@ -44,18 +44,21 @@ class SetView extends eui.Component {
 		txt0.text = "开";
 		txt0.x = 360;
 		txt0.y = 85;
+		txt0.touchEnabled = false;
 
 		var txt1 = new eui.Label();
 		txt1.text = "开";
 		txt1.x = 811;
 		txt1.y = 85;
+		txt1.touchEnabled = false;
 
 		var txt2 = new eui.Label();
 		txt2.text = "开";
 		txt2.x = 360;
 		txt2.y = 255;
+		txt2.touchEnabled = false;
 
-		
+
 		this.btn_yxsz_1.addChild(toggleSwitch0); this.btn_yxsz_1.addChild(toggleSwitch1); this.btn_yxsz_1.addChild(toggleSwitch2);
 		this.btn_yxsz_1.addChild(txt0); this.btn_yxsz_1.addChild(txt1); this.btn_yxsz_1.addChild(txt2);
 
