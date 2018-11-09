@@ -15,11 +15,14 @@ module xlLib {
 	}
 
 	public initPushMessage() {
+		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.players,this.onMessage);
         xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hog,this.onMessage);
         xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hognum,this.onMessage);
 		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.banker,this.onMessage);
 		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.bet,this.onMessage);
 		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.betnum,this.onMessage);
+		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.cards,this.onMessage);
+		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.summary,this.onMessage);
 	}
 
 	private onMessage(msg:any):void
