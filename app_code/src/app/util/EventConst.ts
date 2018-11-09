@@ -19,8 +19,10 @@ class EventConst
 
     
     //------------------S to C---------------------服务端回包监听数据
-	/**用户数据*/
+	/**所有玩家列表*/
     public static players:string = "players";
+    /**新玩家加入*/
+    public static newplayer:string = "newplayer";
 	/**监听抢庄按钮*/
     public static hog:string = "hog";
     /**用户抢庄数*/
