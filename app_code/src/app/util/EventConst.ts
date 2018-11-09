@@ -17,10 +17,12 @@ class EventConst
 	/**投注倍数*/
     public static erbagang_bet:string = "erbagang_bet"
 
-
-
     
     //------------------S to C---------------------服务端回包监听数据
+	/**所有玩家列表*/
+    public static players:string = "players";
+    /**新玩家加入*/
+    public static newplayer:string = "newplayer";
 	/**监听抢庄按钮*/
     public static hog:string = "hog";
     /**用户抢庄数*/
@@ -30,6 +32,10 @@ class EventConst
     /**倍数列表*/
     public static bet:string = "bet";  
     /**用户倍数*/
-    public static betnum:string = "betnum";  
-
+    public static betnum:string = "betnum";
+    /**牌面信息*/
+    public static cards:string = "cards";
+    /**结算*/
+    public static summary:string = "summary"; 
+      
 }
