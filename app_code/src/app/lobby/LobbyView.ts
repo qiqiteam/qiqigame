@@ -124,7 +124,7 @@ class LobbyView extends eui.Component {
 
 	private clickCallback() {
 
-		xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
+		// xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
 
 		let senddata:any = {
 			userid:UserInfo.getInstance().uid,

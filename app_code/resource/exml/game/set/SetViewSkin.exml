@@ -16,7 +16,7 @@
 		</e:Button>
 
 	</e:Group>
-	<e:Group width="350" height="616" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="5" locked="true">
+	<e:Group width="310" height="616" anchorOffsetX="0" anchorOffsetY="0" left="0" bottom="5">
 		<e:Image width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="group_bg_png" x="0" y="0" scaleX="1" scaleY="1"/>
 		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="0"/>
 		<e:Image width="100%" height="120" source="team_bg_png" horizontalCenter="0" y="120"/>
@@ -33,23 +33,23 @@
 
 
 
-	<e:ViewStack id="_viewlist_set" width="988" height="620" x="352" y="76" selectedIndex="0">
-		<e:Group id="btn_yxsz_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true">
+	<e:ViewStack id="_viewlist_set" width="1025.88" height="620" x="314.12" y="76" selectedIndex="0" anchorOffsetX="0">
+		<e:Group id="btn_yxsz_1" width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true">
 			<e:Label text="游戏特效是指：互动表情、斗地主所产生对应的特效等" size="23" horizontalCenter="0" bottom="62" textColor="0x8e8a8a"/>
-			<e:Image x="83" y="80" source="img_Afterallmusic_png"/>
+			<e:Image x="83" y="80" source="img_Afterallmusic_png" width="135" height="38"/>
 			<e:Image source="img_specialeffectsofgame_png" x="82" y="250"/>
 			<e:Image source="img_Thegamesound_png" x="548" y="80"/>
 
 
 
 		</e:Group>
-		<e:Group id="btn_xsjc_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+		<e:Group id="btn_xsjc_1" width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
 			<e:Label text="1、游戏大厅操作指南" x="56" y="99" size="30"/>
 			<e:Label text="1、游戏大厅操作指南" x="46" y="427" size="30"/>
 			<e:Label text="1、游戏大厅操作指南" x="506" y="427" size="30"/>
 			<e:Label text="1、游戏大厅操作指南" x="508" y="99" size="30"/>
 		</e:Group>
-		<e:Group id="btn_zhgl_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+		<e:Group id="btn_zhgl_1" width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
 			<e:Group width="100%" height="110" horizontalCenter="0" top="0" anchorOffsetY="0" locked="true">
 			<e:Label text="您可以用以下帐号登录：" x="45" verticalCenter="0" size="35"/>
 			</e:Group>
@@ -115,7 +115,7 @@
 			</e:Button>
 			</e:Group>
 		</e:Group>
-		<e:Group id="btn_yjfk_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+		<e:Group id="btn_yjfk_1" width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
 			<e:EditableText width="80%" height="55%" text="" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" textAlign="left" verticalAlign="top" size="25" prompt="请输入您要反馈的内容，限100字以内~" promptColor="0xffffff" locked="true"/>
 			<e:Button label="提交" horizontalCenter="0" bottom="71" width="198">
 			<e:skinName>

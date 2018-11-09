@@ -90,6 +90,8 @@ declare class BaiRenNiuNiuSkin extends eui.Skin{
 }
 declare class RobzhuangSkin extends eui.Skin{
 }
+declare class RobzhuangSkin111 extends eui.Skin{
+}
 declare class RechargeTypeItemSkin extends eui.Skin{
 }
 declare class RechargeViewSkin extends eui.Skin{
