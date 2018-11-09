@@ -33,10 +33,10 @@
 
 
 
-	<e:ViewStack id="_viewlist_set" width="988" height="620" x="352" y="76" selectedIndex="2">
+	<e:ViewStack id="_viewlist_set" width="988" height="620" x="352" y="76" selectedIndex="0">
 		<e:Group id="btn_yxsz_1" width="988" height="620" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" locked="true">
 			<e:Label text="游戏特效是指：互动表情、斗地主所产生对应的特效等" size="23" horizontalCenter="0" bottom="62" textColor="0x8e8a8a"/>
-			<e:Image source="btn_Afterallmusic_0_png" x="83" y="80"/>
+			<e:Image x="83" y="80" source="img_Afterallmusic_png"/>
 			<e:Image source="img_specialeffectsofgame_png" x="82" y="250"/>
 			<e:Image source="img_Thegamesound_png" x="548" y="80"/>
 
@@ -104,13 +104,14 @@
 			</e:Group>
 			<e:Group width="100%" height="124" bottom="0" horizontalCenter="0" x="0" y="-25" scaleX="1" scaleY="1" anchorOffsetY="0">
 			<e:Label text="每个帐号可以创建两个关联帐号" size="30" horizontalCenter="0" verticalCenter="0"/>
-			<e:Button label="安全退出" verticalCenter="0" right="0" width="198">
+			<e:Button label="" verticalCenter="0" right="0" width="217">
 				<e:skinName>
-				<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_tuichu_1_png" source.down="btn_tuichu_1_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
+					</e:Skin>
 				</e:skinName>
+
 			</e:Button>
 			</e:Group>
 		</e:Group>

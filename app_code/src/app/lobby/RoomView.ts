@@ -99,15 +99,14 @@ class RoomView extends eui.Component {
 	}
 
     private clickCallback() {
-        xlLib.PopUpMgr.addPopUp(Robzhuang, null, true, true, null ,1);
-       
+        
+        xlLib.PopUpMgr.addPopUp(NiuNiuView, null, true, true, null ,1);
 	
 	let senddata:any = {
             userid:UserInfo.getInstance().uid,
             token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
             xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_start,senddata,(data)=>{
-            xlLib.TipsUtils.showFloatWordTips("开始牛牛！"); 
-             xlLib.PopUpMgr.addPopUp(NiuNiuView, null, true, true, null ,1);
+            xlLib.TipsUtils.showFloatWordTips("开始牛牛！");
         },this);
     }
 
