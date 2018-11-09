@@ -26,6 +26,7 @@
 		"bin-debug/app/data/playWayData.js",
 		"bin-debug/app/data/typeData.js",
 		"bin-debug/app/data/UserInfo.js",
+		"bin-debug/app/game/brnn/BrnnMainView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
 		"bin-debug/app/game/message/SystemMsgView.js",
@@ -38,6 +39,9 @@
 		"bin-debug/app/game/nn/NNView.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoTypeItem.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoView.js",
+		"bin-debug/app/game/qznn/NiuNiuUtil.js",
+		"bin-debug/app/game/qznn/NiuNiuView.js",
+		"bin-debug/app/game/qznn/Robzhuang.js",
 		"bin-debug/app/game/recharge/orderinquiry.js",
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
@@ -49,6 +53,7 @@
 		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
+		"bin-debug/app/game/zhajh/ZhajhMainView.js",
 		"bin-debug/app/HttpAddress.js",
 		"bin-debug/app/interface/IGameInformation.js",
 		"bin-debug/app/interface/IGameRecord.js",
@@ -62,9 +67,9 @@
 		"bin-debug/app/login/LoginView.js",
 		"bin-debug/app/component/ComBoxItem.js",
 		"bin-debug/app/util/EventConst.js",
-		"bin-debug/app/util/EventUtil.js",
-		"bin-debug/app/util/GlobalFunction.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/util/GlobalFunction.js",
+		"bin-debug/AssetAdapter.js",
 		"bin-debug/consts/CommonConsts.js",
 		"bin-debug/event/Dispatcher.js",
 		"bin-debug/event/Event.js",
@@ -116,6 +121,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/AssetAdapter.js"
+		"bin-debug/app/util/EventUtil.js"
 	]
 }

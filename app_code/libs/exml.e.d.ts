@@ -62,6 +62,8 @@ declare class ComBoxItemSkin extends eui.Skin{
 }
 declare class ComBoxSkin extends eui.Skin{
 }
+declare class BrnnMainViewSkin extends eui.Skin{
+}
 declare class SystemMsgItemSkin extends eui.Skin{
 }
 declare class SystemMsgTypeItemSkin extends eui.Skin{
@@ -109,6 +111,8 @@ declare class LotterySkin extends eui.Skin{
 declare class WelfareTypeItemSkin extends eui.Skin{
 }
 declare class WelfareViewSkin extends eui.Skin{
+}
+declare class ZhajhMainSceneView extends eui.Skin{
 }
 declare class GameTypeItemSkin extends eui.Skin{
 }
