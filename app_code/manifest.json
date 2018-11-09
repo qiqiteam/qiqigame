@@ -13,10 +13,10 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/app/Const.js",
-		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/views/GameDoc.js",
 		"bin-debug/views/GameScene.js",
+		"bin-debug/app/Const.js",
+		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
@@ -67,7 +67,7 @@
 		"bin-debug/app/login/LoginView.js",
 		"bin-debug/app/component/ComBoxItem.js",
 		"bin-debug/app/util/EventConst.js",
-		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/util/EventUtil.js",
 		"bin-debug/app/util/GlobalFunction.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/consts/CommonConsts.js",
@@ -121,6 +121,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/util/EventUtil.js"
+		"bin-debug/app/component/ComBox.js"
 	]
 }
