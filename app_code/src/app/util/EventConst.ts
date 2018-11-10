@@ -15,8 +15,14 @@ class EventConst
 	/**抢庄*/
     public static niuniu_dohog:string = "niuniu_dohog";
 	/**投注倍数*/
-    public static erbagang_bet:string = "erbagang_bet"
-
+    public static erbagang_bet:string = "erbagang_bet";
+    
+	/**检查是否有上次加入房间*/
+    public static baijialegamestatus:string = "baijialegamestatus";
+    /**加入房间*/
+    public static baijialejoinroom:string = "baijialejoinroom";
+	/**押注*/
+    public static baijialebeton:string = "baijialebeton";
     
     //------------------S to C---------------------服务端回包监听数据
 	/**所有玩家列表*/
@@ -37,5 +43,22 @@ class EventConst
     public static cards:string = "cards";
     /**结算*/
     public static summary:string = "summary"; 
+
+    /**（开始匹配20秒倒计时）*/
+    public static startGame:string = "startGame"; 
+        /**（可以开始下注15秒倒计时）*/
+    public static startBeton:string = "startBeton"; 
+        /**(开始发牌)*/
+    public static baccaratDeil:string = "baccaratDeil"; 
+        /**("庄家补牌")*/
+    public static bankerFillTheCard:string = "bankerFillTheCard";
+        /**("闲家补牌")*/
+    public static homeFillTheCard:string = "homeFillTheCard";
+        /**(参数异常)*/
+    public static theNumberOfTooMuch:string = "theNumberOfTooMuch";
+        /**( 金币变为**)*/
+    public static acquisitionGolb:string = "acquisitionGolb";
+        /**(退出房间)*/
+    public static leave:string = "leave";
       
 }
