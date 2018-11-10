@@ -30,6 +30,7 @@ class SafeBoxView extends eui.Component {
     public cheakbox_deposit02: eui.CheckBox;
     public btn_close: eui.Button;
 
+    public toggle:EToggleSwitch;
 
     public constructor() {
         super();
@@ -48,12 +49,26 @@ class SafeBoxView extends eui.Component {
         this._safebox_meun.dataProvider = new eui.ArrayCollection(dataArr);
         this._safebox_meun.useVirtualLayout = true;
         this._safebox_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
+
+
+        this.toggle=new EToggleSwitch(this,"ts_off_bg_png","ts_on_bg_png","toggleswitch_btn_png");
+        this.toggle.x=350;
+        this.toggle.y=65;
+        this.group_autodeposit.addChild(this.toggle);
     }
 
     private onBarItemTap(e: eui.ItemTapEvent): void {
         this._viewstack_safebox.selectedIndex = e.itemIndex;
         xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
     }
+
+    //toggleswitch事件绑定
+    private OnToggleSwitch(e:egret.TouchEvent) {
+
+        
+    }
+
+
     //点击返回按钮
     private OnClickCloBtn(e: egret.TouchEvent): void {
         xlLib.SoundMgr.instance.playSound("Special_menu_mp3");

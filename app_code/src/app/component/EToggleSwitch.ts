@@ -1,7 +1,5 @@
   /**
     * 滑动按钮类
-    * by dily
-    * (c) copyright 2014 - 2035
     * All Rights Reserved. 
     * 可以有图片，文字，动画
     */

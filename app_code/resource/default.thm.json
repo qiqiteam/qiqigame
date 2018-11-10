@@ -21,6 +21,7 @@
     "resource/exml/component/ComBoxItemSkin.exml",
     "resource/exml/component/ComBoxSkin.exml",
     "resource/exml/game/brnn/BrnnMainViewSkin.exml",
+    "resource/exml/game/erbagang/ErBaGangViewSkin.exml",
     "resource/exml/game/message/SystemMsgItemSkin.exml",
     "resource/exml/game/message/SystemMsgTypeItemSkin.exml",
     "resource/exml/game/message/SystemMsgViewSkin.exml",
