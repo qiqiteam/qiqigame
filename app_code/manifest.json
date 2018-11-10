@@ -27,6 +27,7 @@
 		"bin-debug/app/data/typeData.js",
 		"bin-debug/app/data/UserInfo.js",
 		"bin-debug/app/game/brnn/BrnnMainView.js",
+		"bin-debug/app/game/erbagang/ErBaGangView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
 		"bin-debug/app/game/message/SystemMsgView.js",

@@ -83,9 +83,9 @@ class PlayerInfoView extends eui.Component {
 		this.btn_wxti_return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClickWxtsRetu, this);
 		this.btn_xiugai_name.addEventListener(egret.TouchEvent.TOUCH_TAP,this.OnclickCangeName,this);
 
-		let dataArr: any[] = [{ name: "基本资料", down_url: "info_down_btn_png", up_url: "info_up_btn_png" },
-		{ name: "我的钱包", down_url: "btn_mywallet_down_png", up_url: "info_down_btn_png" },
-		{ name: "我的背包", down_url: "btn_mypack_down.png", up_url: "pack_down_btn_png" }];
+		let dataArr: any[] = [{ name: "基本资料", down_url: "btn_info_down_png", up_url: "btn_info_up_png" },
+		{ name: "我的钱包", down_url: "btn_mywallet_down_png", up_url: "btn_mywallet_up_png" },
+		{ name: "我的背包", down_url: "btn_pack_down_png", up_url: "btn_pack_up_png" }];
 		this._playerInfo_meun.dataProvider = new eui.ArrayCollection(dataArr);
 		this._playerInfo_meun.useVirtualLayout = true;
 		this._playerInfo_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);

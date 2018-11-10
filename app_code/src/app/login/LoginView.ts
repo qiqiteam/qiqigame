@@ -68,7 +68,8 @@ class LoginView extends eui.Component
 	private _onContinueLogin(e:egret.TouchEvent):void {
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
 		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
-		// xlLib.PopUpMgr.addPopUp(LobbyView, null, true, true, null ,1);
+
+	    //xlLib.PopUpMgr.addPopUp(LobbyView, null, true, true, null ,1);
 	}
 
 	private _onRegister(e:egret.TouchEvent):void {
