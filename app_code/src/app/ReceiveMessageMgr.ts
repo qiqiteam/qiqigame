@@ -16,6 +16,7 @@ module xlLib {
 
 	public initPushMessage() {
 		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.players,this.onMessage);
+		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.newplayer,this.onMessage);
         xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hog,this.onMessage);
         xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hognum,this.onMessage);
 		xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.banker,this.onMessage);
@@ -33,7 +34,7 @@ module xlLib {
 				//EventUtil.dispatchEvent(msg.command,msg);
 				// return ;
 			default:
-			    console.log("收到服务器推送："+msg.command);
+			    // console.log("收到服务器推送："+msg.command);
 				EventUtil.dispatchEvent(msg.command,msg);
 				return;
 		}

@@ -1,12 +1,12 @@
 class UserInfo {
-    public uid:number;
-    public username:string;
-    public goldcoins:number;
-    public token:string;
-    public gamelist:gameData[] = [];
+    public uid: number;
+    public username: string;
+    public goldcoins: number;
+    public token: string;
+    public gamelist: gameData[] = [];
     private static _instance: UserInfo;
 
-    public constructor() {}
+    public constructor() { }
 
     public static getInstance(): UserInfo {
         if (!this._instance) {
@@ -15,19 +15,30 @@ class UserInfo {
         return this._instance;
     }
 
-    public  initUserInfo(data:any):void
-	{
-        var info:any = data.data;
-		this.uid = info.id;
-		this.username = info.username;
-		this.goldcoins = info.goldcoins;
-		this.token = info.token;
-        let gamedata:gameData;
-        for(let index:number = 0;index<data.games.length;index++)
-        {
-           gamedata = new gameData();
-           gamedata.initData(data.games[index]);
-           this.gamelist.push(gamedata);
+    /**根据游戏类型 查找游戏数据*/
+    public getGameDataByCode(code: string): gameData {
+        let gamedata: gameData;
+        for (let index: number = 0; index < this.gamelist.length; index++) {
+            if (this.gamelist[index].code == code) {
+                gamedata = this.gamelist[index];
+                break;
+            }
         }
-	}
+        return gamedata;
+    }
+
+    /**初始化用户数据*/
+    public initUserInfo(data: any): void {
+        var info: any = data.data;
+        this.uid = info.id;
+        this.username = info.username;
+        this.goldcoins = info.goldcoins;
+        this.token = info.token;
+        let gamedata: gameData;
+        for (let index: number = 0; index < data.games.length; index++) {
+            gamedata = new gameData();
+            gamedata.initData(data.games[index]);
+            this.gamelist.push(gamedata);
+        }
+    }
 }

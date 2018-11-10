@@ -123,16 +123,7 @@ class LobbyView extends eui.Component {
 	}
 
 	private clickCallback() {
-
-		// xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
-
-		let senddata:any = {
-			userid:UserInfo.getInstance().uid,
-			token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
-		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
-				 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
-				  xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
-			},this);
+		xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
 	}
 
 	private onClick2(e:egret.TouchEvent):void {

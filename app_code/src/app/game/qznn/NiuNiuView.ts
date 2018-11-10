@@ -1410,7 +1410,7 @@ public _btn_close:eui.Button;
 	}
 
     public dispose(): void {
-        xlLib.PopUpMgr.removePopUp(this, 1);
+         xlLib.SceneMgr.instance.changeScene(Lobby);
     }
 
     public destroy():void {
