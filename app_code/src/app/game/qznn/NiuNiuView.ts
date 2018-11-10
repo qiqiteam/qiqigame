@@ -340,6 +340,7 @@ public _btn_close:eui.Button;
 
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        		this.resize();
     }
 
     private initData(): void {
@@ -394,6 +395,11 @@ public _btn_close:eui.Button;
             this.orginPlayerCardPos[index] = cardPos;
         }
     }
+
+	public resize(): void 
+	{
+
+	}
 
     private addEvent(): void {
         //EventManage.addButtonEvent(this, this.btnClose, egret.TouchEvent.TOUCH_TAP, this.onTouchClose.bind(this));
