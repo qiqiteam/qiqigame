@@ -107,7 +107,8 @@ class RoomView extends eui.Component {
             token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
             xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_start,senddata,(data)=>{
             xlLib.TipsUtils.showFloatWordTips("开始牛牛！");
-            xlLib.PopUpMgr.addPopUp(Robzhuang, null, true, true, null ,1);
+            // xlLib.PopUpMgr.addPopUp(Robzhuang, null, true, true, null ,1);
+          		xlLib.SceneMgr.instance.changeScene(NiuNiuScene);
         },this);
     }
 
