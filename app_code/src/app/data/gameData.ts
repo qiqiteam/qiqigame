@@ -16,5 +16,17 @@ class gameData {
 			this.types.push(typedata);
 		}
 	}
+
+	/**根据游戏类型 查找游戏数据*/
+    public gettypeDataByCode(code: string): typeData {
+        let typedata: typeData;
+        for (let index: number = 0; index < this.types.length; index++) {
+            if (this.types[index].code == code) {
+                typedata = this.types[index];
+                break;
+            }
+        }
+        return typedata;
+    }
 	public constructor() {}
 }

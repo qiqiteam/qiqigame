@@ -99,10 +99,11 @@ class RoomView extends eui.Component {
 	}
 
     private clickCallback() {
-        //----------------------------------------
+        let gameData:gameData = UserInfo.getInstance().getGameDataByCode(Const.GAME_NIUNIU);
+        let typeData:typeData = gameData.gettypeDataByCode(Const.TYPE_NIUNIU);
         let senddata:any = {
 			userid:UserInfo.getInstance().uid,
-			token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
+        token:UserInfo.getInstance().token,playway:typeData.playways};
 		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
                 xlLib.SceneMgr.instance.changeScene(QZNNScene);
                 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");

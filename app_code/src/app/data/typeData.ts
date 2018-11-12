@@ -3,6 +3,7 @@ class typeData {
 	public id:string;
 	public name:string;
 	public playways:playWayData[] = [];
+	
 	public initData(data:any):void
 	{
 		this.id = data.id;
