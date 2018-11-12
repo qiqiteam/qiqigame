@@ -347,6 +347,9 @@ public _btn_voice:eui.Button;
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         this.resize();
+
+        this.labelHead0.text = UserInfo.getInstance().username;
+		this.labelGold0.text = ""+UserInfo.getInstance().goldcoins;
     }
 
     private initData(): void {
@@ -1434,7 +1437,7 @@ public _btn_voice:eui.Button;
 	}
 
     public dispose(): void {
-        xlLib.PopUpMgr.removePopUp(this, 1);
+        xlLib.SceneMgr.instance.changeScene(Lobby);
     }
 
     public destroy():void {
