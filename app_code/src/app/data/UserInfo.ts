@@ -17,10 +17,10 @@ class UserInfo {
     }
     
     /**根据游戏类型 查找游戏数据*/
-    public getGameDataByCode(code: string): gameData {
+    public getGameDataByindex(indexstr: string): gameData {
         let gamedata: gameData;
         for (let index: number = 0; index < this.gamelist.length; index++) {
-            if (this.gamelist[index].code == code) {
+            if (this.gamelist[index].indexStr == indexstr) {
                 gamedata = this.gamelist[index];
                 break;
             }
@@ -31,7 +31,6 @@ class UserInfo {
     public addPlayes(data):void
     {
         for(let i=0; i<data.player.length; i++) {
-            //console.log(data.player[i]);
             this.playes.push(data.player[i]);
         }
     }

@@ -19,8 +19,11 @@ class Const {
     //炸金花
     public static GAME_ZHAJINHUA:string  = "zhajinhua";
     //---------------------------游戏类型
-    //经典牛牛
-    public static TYPE_NIUNIU:string  = "niuniu";
+    //抢庄牛牛
+    public static TYPE_QZNN:string  = "qznn";
     //千人牛牛
     public static TYPE_QRNIUNIU:string  = "qrniuniu";
+    //---------------------------房间类型
+    //抢庄牛牛--初级场
+    public static PLAYWAY_CHUJICHANG:string  = "chujichang";
 }

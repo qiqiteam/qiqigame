@@ -104,11 +104,12 @@ class RoomView extends eui.Component {
 
     private clickCallback() {
         //----------------------------------------
-        let gameData:gameData = UserInfo.getInstance().getGameDataByCode(Const.GAME_NIUNIU);
-        let typeData:typeData = gameData.gettypeDataByCode(Const.TYPE_NIUNIU);
+        let gameData:gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+        let typeData:typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+        let playway:playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
         let senddata:any = {
 			userid:UserInfo.getInstance().uid,
-        token:UserInfo.getInstance().token,playway:typeData.playways};
+        token:UserInfo.getInstance().token,playway:playway.id};
 		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
                 xlLib.SceneMgr.instance.changeScene(QZNNScene);
                 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");

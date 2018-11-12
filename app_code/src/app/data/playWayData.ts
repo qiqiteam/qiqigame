@@ -15,6 +15,7 @@ class playWayData {
 	public roomtitle:string;
 	public score:number;
 	public shuffle:boolean;
+	public indexStr:string;
 	public  initData(data:any):void
 	{
       	this.changecard = data.changecard;
@@ -33,6 +34,7 @@ class playWayData {
 		this.roomtitle = data.roomtitle;
 		this.score = data.score;
 		this.shuffle = data.shuffle;
+		this.indexStr= data.indexStr;
 	}
 	public constructor() {}
 }

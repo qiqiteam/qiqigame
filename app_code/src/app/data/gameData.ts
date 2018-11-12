@@ -2,12 +2,14 @@ class gameData {
 	public id:string;
 	public code:string;
 	public name:string;
+	public indexStr:string;
 	public types:typeData[] = [];
 	public initData(data:any):void
 	{
        this.id = data.id;
 	   this.code = data.code;
 	   this.name = data.name;
+	   this.indexStr = data.indexStr;
 	   let typedata:any;
 		for(let index:number = 0;index<data.types.length;index++)
 		{
@@ -18,10 +20,10 @@ class gameData {
 	}
 
 	/**根据游戏类型 查找游戏数据*/
-    public gettypeDataByCode(code: string): typeData {
+    public getTypeDataByindex(indexstr: string): typeData {
         let typedata: typeData;
         for (let index: number = 0; index < this.types.length; index++) {
-            if (this.types[index].code == code) {
+            if (this.types[index].indexStr == indexstr) {
                 typedata = this.types[index];
                 break;
             }
