@@ -10,7 +10,8 @@ class SafeBoxView extends eui.Component {
     public lab_CarryMoney: eui.Label;
     public lab_safebox: eui.Label;
     public input_depositMoney: eui.EditableText;
-    public progress_bar: eui.Image;
+    public des_pr_bg: eui.Image;
+    public des_pr_bar: eui.Image;
     public btn_set_outPW: eui.Image;
     public btn_clear: eui.Button;
     public btn_all: eui.Button;
@@ -19,7 +20,8 @@ class SafeBoxView extends eui.Component {
     public lab_CarryMoney01: eui.Label;
     public lab_safebox01: eui.Label;
     public input_depositMoney01: eui.EditableText;
-    public progress_bar01: eui.Image;
+    public out_pr_bg: eui.Image;
+    public out_pr_bar: eui.Image;
     public btn_set_outPW01: eui.Image;
     public btn_clear01: eui.Button;
     public btn_all01: eui.Button;
@@ -30,7 +32,8 @@ class SafeBoxView extends eui.Component {
     public cheakbox_deposit02: eui.CheckBox;
     public btn_close: eui.Button;
 
-    public toggle:EToggleSwitch;
+
+    public toggle: EToggleSwitch;
 
     public constructor() {
         super();
@@ -51,10 +54,11 @@ class SafeBoxView extends eui.Component {
         this._safebox_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
 
 
-        this.toggle=new EToggleSwitch(this,"ts_off_bg_png","ts_on_bg_png","toggleswitch_btn_png");
-        this.toggle.x=350;
-        this.toggle.y=65;
+        this.toggle = new EToggleSwitch(this, "ts_off_bg_png", "ts_on_bg_png", "toggleswitch_btn_png");
+        this.toggle.x = 350;
+        this.toggle.y = 65;
         this.group_autodeposit.addChild(this.toggle);
+        this.toggle.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnToggleSwitch, this);
     }
 
     private onBarItemTap(e: eui.ItemTapEvent): void {
@@ -63,9 +67,14 @@ class SafeBoxView extends eui.Component {
     }
 
     //toggleswitch事件绑定
-    private OnToggleSwitch(e:egret.TouchEvent) {
+    private OnToggleSwitch(e: egret.TouchEvent) {
+        if (this.toggle.getSelected()) {
+            console.log("关闭");
+        }
+        else {
+            console.log("打开");
+        }
 
-        
     }
 
 
@@ -85,6 +94,15 @@ class SafeBoxView extends eui.Component {
 
     }
 
+    /*public setProgress(loaded: number, total: number, desc?: string, resourceName?: string, force: boolean=false): void {
+        if (total && total !=0)
+        {
+            var widthX: number = Math.floor(598 * (loaded / total));
+            this.des_pr_bg.width = widthX;
+            this.out_pr_bar.mask = this.des_pr_bg;
+            //this.pro_img.x = this.load_rec.width + this.load_img.x - this.pro_img.width/2;
+        }
+    }*/
     protected partAdded(partName: string, instance: any): void {
         super.partAdded(partName, instance);
     }

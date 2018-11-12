@@ -21,10 +21,10 @@ class RechargeView extends eui.Component implements eui.UIComponent {
 	protected childrenCreated(): void {
 		super.childrenCreated();
 
-		let dataArr: any[] = [{ name: "定额支付宝", down_url: "btn_fixationAlipay_0_png", up_url: "btn_Theofficialagent_0_png" },
-		{ name: "支付宝", down_url: "btn_fixationAlipay_0_png", up_url: "btn_Theofficialagent_0_png" },
-		{ name: "银联", down_url: "btn_fixationAlipay_0_png", up_url: "btn_Theofficialagent_0_png" },
-		{ name: "官方代理", down_url: "btn_fixationAlipay_0_png", up_url: "btn_Theofficialagent_0_png" }];
+		let dataArr: any[] = [{ name: "定额支付宝", down_url: "btn_fixationAlipay_1_png", up_url: "btn_fixationAlipay_0_png" },
+		{ name: "支付宝", down_url: "btn_Alipay_1_png", up_url: "btn_Alipay_0_png" },
+		{ name: "银联", down_url: "btn_Unionpay_1_png", up_url: "btn_Unionpay_0_png" },
+		{ name: "官方代理", down_url: "btn_Theofficialagent_1_png", up_url: "btn_Theofficialagent_0_png" }];
 		this._recharge_meun.dataProvider = new eui.ArrayCollection(dataArr);
 		this._recharge_meun.useVirtualLayout = true;
 		this._recharge_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);

@@ -37,7 +37,7 @@ class Main extends xlLib.GameDoc {
         super.start();
 
         egret.lifecycle.addLifecycleListener((context) => {
-            // custom lifecycle plugin
+             //custom lifecycle plugin
         })
 
         egret.lifecycle.onPause = () => {

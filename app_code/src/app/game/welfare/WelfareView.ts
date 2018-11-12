@@ -27,10 +27,10 @@ class WelfareView extends eui.Component {
         //lottery.x = 400;
         //lottery.y = 300;
         //this.addChild(lottery);
-        let dataArr:any[] = [{name:"精彩活动",down_url:"btn_huodong_png",up_url:"title_huodong_png"},
-		{name:"每日任务",down_url:"btn_huodong_png",up_url:"title_huodong_png"},
-		{name:"幸运轮盘",down_url:"btn_huodong_png",up_url:"title_huodong_png"},
-		{name:"每日签到",down_url:"btn_huodong_png",up_url:"title_huodong_png"}];
+        let dataArr:any[] = [{name:"精彩活动",down_url:"title_huodong_1_png",up_url:"title_huodong_0_png"},
+		{name:"每日任务",down_url:"title_renwu_1_png",up_url:"title_renwu_0_png"},
+		{name:"幸运轮盘",down_url:"title_zhuanpan_1_png",up_url:"title_zhuanpan_0_png"},
+		{name:"每日签到",down_url:"title_qiandao_1_png",up_url:"title_qiandao_0_png"}];
 		this._tabBar_meun.dataProvider = new eui.ArrayCollection(dataArr);
 		this._tabBar_meun.useVirtualLayout = true;
 		this._tabBar_meun.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);

@@ -104,7 +104,7 @@ class RoomView extends eui.Component {
 			userid:UserInfo.getInstance().uid,
 			token:UserInfo.getInstance().token,playway:UserInfo.getInstance().gamelist[0].types[0].playways[0].id};
 		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
-                xlLib.SceneMgr.instance.changeScene(NiuNiuScene);
+                xlLib.SceneMgr.instance.changeScene(QZNNScene);
                 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 			},this);
 	// let senddata:any = {
@@ -113,7 +113,7 @@ class RoomView extends eui.Component {
     //         xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_start,senddata,(data)=>{
     //         xlLib.TipsUtils.showFloatWordTips("开始牛牛！");
     //         // xlLib.PopUpMgr.addPopUp(Robzhuang, null, true, true, null ,1);
-    //       		xlLib.SceneMgr.instance.changeScene(NiuNiuScene);
+    //       		xlLib.SceneMgr.instance.changeScene(QZNNScene);
     //     },this);
     }
 

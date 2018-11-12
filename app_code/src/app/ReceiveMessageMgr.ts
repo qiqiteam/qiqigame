@@ -33,8 +33,18 @@ module xlLib {
 			    //处理逻辑----------
 				//EventUtil.dispatchEvent(msg.command,msg);
 				// return ;
+			case EventConst.players:
+		   		console.log(msg);
+		   		UserInfo.getInstance().addPlayes(msg);
+			   	EventUtil.dispatchEvent(msg.command,msg);
+				return ;
+			case EventConst.newplayer:
+		   		console.log(msg);
+		   		// UserInfo.getInstance().addPlayes(msg);
+			   	// EventUtil.dispatchEvent(msg.command,msg);
+				return ;
 			default:
-			    // console.log("收到服务器推送："+msg.command);
+			    console.log("收到服务器推送："+msg.command);
 				EventUtil.dispatchEvent(msg.command,msg);
 				return;
 		}
