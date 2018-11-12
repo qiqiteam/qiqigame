@@ -35,7 +35,7 @@
 		</e:Button>
 		<e:Image x="358" y="21" scaleX="1" scaleY="1" source="title_niuniu_png"/>
 		<e:Image x="606" y="22" scaleX="1" scaleY="1" source="coin_rect_png"/>
-		<e:Label text="8888888" x="690" y="30" scaleX="1" scaleY="1" size="40" textAlign="center"/>
+		<e:Label id="_coin_label" text="8888888" x="690" y="30" scaleX="1" scaleY="1" size="40" textAlign="center"/>
 		<e:Button id="_btn_menu" label="" x="1066" y="22" scaleX="1" scaleY="1">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
