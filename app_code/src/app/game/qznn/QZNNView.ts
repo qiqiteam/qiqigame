@@ -549,10 +549,14 @@ class QZNNView extends eui.Component {
         this.cardEffect();
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
+        this.addPlayers(null);
         //this.addPlayers(UserInfo.getInstance().playes);
     }
 
     private addPlayers(data): void {
+        if( UserInfo.getInstance().playes.length==0){
+            return;
+        }
         //设置自己信息
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
@@ -574,7 +578,7 @@ class QZNNView extends eui.Component {
 
         //设置其他玩家信息
         for (let i = 1; i < UserInfo.getInstance().playes.length; i++) {
-            if (data[i] != null) {
+            if (UserInfo.getInstance().playes[i] != null) {
                 this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
             } else {
                 //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
