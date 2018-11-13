@@ -339,7 +339,7 @@ class QZNNView extends eui.Component {
     protected childrenCreated(): void {
         //this.setTouchEnabled();
         this.getOrginCardPos();
-        // this.addEvent();
+        this.addEvent();
         this.initData();
 
         // //this.setCountdown();
@@ -368,7 +368,9 @@ class QZNNView extends eui.Component {
         this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
 
     }
-
+    /**
+     * 数据初始化
+     */
     private initData(): void {
         this.labBankerRank.text = '';
         this.labBankerLastNum.text = '';
@@ -401,7 +403,9 @@ class QZNNView extends eui.Component {
         this._image_double_5.touchEnabled = false;
     }
 
-    //获取原始扑克的位置
+    /**
+     * 获取原始扑克的位置
+     */
     private getOrginCardPos(): void {
         for (var i = 0; i < 5; i++) {
             var card: eui.Image = this['bankerCard_' + i];
@@ -436,6 +440,9 @@ class QZNNView extends eui.Component {
 
     }
     public onClick(e: egret.TouchEvent): void {
+
+        EffectUtils.playButtonEffect(e.target, null);
+
         if (e.target == this._btn_begin) {
             console.log("_btn_begin");
             let senddata: any = {
@@ -444,7 +451,8 @@ class QZNNView extends eui.Component {
             };
             xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_start, senddata, (data) => {
                 this._btn_begin.visible = false;
-                this._group_qiang.visible = true;
+                // this._group_qiang.visible = true;
+                UserInfo.getInstance().isGameStart = true;
             }, this);
         } else if (e.target == this._btn_buqiang) {
             console.log("_btn_buqiang");
@@ -463,19 +471,19 @@ class QZNNView extends eui.Component {
             this.sendamessage(EventConst.niuniu_dohog, 4);
         } else if (e.target == this._btn_double_1) {
             console.log("_btn_double_1");
-            this.sendamessage(EventConst.niuniu_dobet, 1);
+            this.sendamessage1(EventConst.niuniu_dobet, 1);
         } else if (e.target == this._btn_double_2) {
             console.log("_btn_double_2");
-            this.sendamessage(EventConst.niuniu_dobet, 2);
+            this.sendamessage1(EventConst.niuniu_dobet, 2);
         } else if (e.target == this._btn_double_3) {
             console.log("_btn_double_3");
-            this.sendamessage(EventConst.niuniu_dobet, 3);
+            this.sendamessage1(EventConst.niuniu_dobet, 3);
         } else if (e.target == this._btn_double_4) {
             console.log("_btn_double_4");
-            this.sendamessage(EventConst.niuniu_dobet, 4);
+            this.sendamessage1(EventConst.niuniu_dobet, 4);
         } else if (e.target == this._btn_double_5) {
             console.log("_btn_double_5");
-            this.sendamessage(EventConst.niuniu_dobet, 5);
+            this.sendamessage1(EventConst.niuniu_dobet, 5);
         }
     }
 
@@ -487,9 +495,26 @@ class QZNNView extends eui.Component {
             data: bet,
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
-            this._group_qiang.visible = false;
-            this._btn_switch.visible = true;
+
         }, this);
+        this._group_qiang.visible = false;
+    }
+
+    private sendamessage1(sendstr: string, bet: number): void {
+        let senddata: any = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+            data: bet,
+        };
+        xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
+
+        }, this);
+
+        this._btn_double_1.touchEnabled = false;
+        this._btn_double_2.touchEnabled = false;
+        this._btn_double_3.touchEnabled = false;
+        this._btn_double_4.touchEnabled = false;
+        this._btn_double_5.touchEnabled = false;
     }
 
     private addEvent(): void {
@@ -526,37 +551,53 @@ class QZNNView extends eui.Component {
         //EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_MAIN, this.updateDataGold.bind(this));
 
 
-        var data = {
-            pokes: [{ num: 3, type: 10, value: [406, 202, 301, 408, 303] },
-            { num: 3, type: 10, value: [201, 307, 412, 308, 104] },
-            { num: 1, type: 0, value: [313, 208, 409, 304, 105] },
-            { num: 1, type: 4, value: [402, 305, 203, 213, 404] },
-            { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-            { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-            { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-            { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-            { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-            { num: 2, type: 9, value: [112, 211, 212, 204, 205] }],
-            result: [1, 0, 0, 0],
-            bankerWin: 0,
-            rate: "0.05",
-            bomb: "0"
-        };
-        this.cdNum = 5;
+        // var data = {
+        //     pokes: [{ num: 3, type: 10, value: [406, 202, 301, 408, 303] },
+        //     { num: 3, type: 10, value: [201, 307, 412, 308, 104] },
+        //     { num: 1, type: 0, value: [313, 208, 409, 304, 105] },
+        //     { num: 1, type: 4, value: [402, 305, 203, 213, 404] },
+        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
+        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
+        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
+        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
+        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
+        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] }],
+        //     result: [1, 0, 0, 0],
+        //     bankerWin: 0,
+        //     rate: "0.05",
+        //     bomb: "0"
+        // };
+        // this.cdNum = 5;
 
-        this.setGameResult(data);
-        this.setCountdown();
-        this.cardEffect();
+        // this.setGameResult(data);
+        // this.setCountdown();
+        // this.cardEffect();
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        this.addPlayers(null);
+        EventUtil.addEventListener(EventConst.hog, this.onHogBack, this);
+        EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
+        EventUtil.addEventListener(EventConst.cards, this.ards, this);
+        EventUtil.addEventListener(EventConst.summary, this.over, this);
         //this.addPlayers(UserInfo.getInstance().playes);
     }
 
-    private addPlayers(data): void {
-        if( UserInfo.getInstance().playes.length==0){
-            return;
+    private onHogBack(data: any): void {
+        this._group_qiang.visible = true;
+    }
+    private onHogBack1(data: any): void {
+        this._btn_switch.visible = true;
+    }
+    private over(data: any): void {
+        UserInfo.getInstance().isGameStart = false;
+    }
+    private ards(msg: any): void {
+        // var  EventConst.cards;
+        for (let i = 0; i < msg.nonList; i++) {
+            console.log(msg[i].nonList);
         }
+
+    }
+    private addPlayers(data): void {
         //设置自己信息
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
@@ -578,7 +619,7 @@ class QZNNView extends eui.Component {
 
         //设置其他玩家信息
         for (let i = 1; i < UserInfo.getInstance().playes.length; i++) {
-            if (UserInfo.getInstance().playes[i] != null) {
+            if (data[i] != null) {
                 this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
             } else {
                 //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
@@ -591,7 +632,9 @@ class QZNNView extends eui.Component {
     //private setHandsel(num): void {
     //this.labHandsel.text = QuickManage.moneyStr(num);
     //}
-
+    /**
+     * 定时器
+     */
     private setCountdown(): void {
         this.cdTimer = new egret.Timer(1000);
         this.cdTimer.addEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
@@ -658,7 +701,7 @@ class QZNNView extends eui.Component {
             //TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
         }
     }
-    /*
+
     public onMsgListen(data): void {
         var msg = data.msg
         console.log('onMsgListen: ' + msg.type, '_niuniuMsgListen_');
@@ -688,18 +731,22 @@ class QZNNView extends eui.Component {
                 this.updateHandsel(msg);
                 break;
             case 7://通知庄 名次
-                this.updateBankerRank(msg);
+                //this.updateBankerRank(msg);
                 break;
         }
-    }*/
+    }
 
-    //获取结算数据，显示结果面板时设置
+    /**
+     * 获取结算数据，显示结果面板时设置
+     */
     private setGameResult(data): void {
         //this.grpCountdown.visible = false;
         this.cardResult = data;
     }
 
-    //同步座位
+    /**
+     * 同步座位
+     */
     private updataSeat(type, data): void {
         if (type == 1) {
             this['imghead' + data.seat].source = data.headurl;
@@ -1095,7 +1142,9 @@ class QZNNView extends eui.Component {
     private flyIndex0: number = 0;  //扑克位置(东西南北)
     private flyIndex1: number = 0;  //扑克(指定位置1，2，3)
     private flyBankerIndex: number = 0;
-
+    /**
+     * 显示发牌
+     */
     private cardEffect(): void {
         this.isCardEffectShow = true;
         this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
@@ -1523,14 +1572,17 @@ class QZNNView extends eui.Component {
     }
 
     public dispose(): void {
-        
+        if (UserInfo.getInstance().isGameStart) {
+            xlLib.TipsUtils.showFloatWordTips("游戏中！");
+            return;
+        }
         let senddata: any = {
-                userid: UserInfo.getInstance().uid,
-                token: UserInfo.getInstance().token,
-            };
-            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
-                xlLib.SceneMgr.instance.changeScene(Lobby);
-            }, this);
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+        };
+        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
+            xlLib.SceneMgr.instance.changeScene(Lobby);
+        }, this);
     }
 
     public destroy(): void {
