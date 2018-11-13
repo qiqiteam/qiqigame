@@ -1518,12 +1518,31 @@ class QZNNView extends eui.Component {
     }
 
     public dispose(): void {
-        xlLib.SceneMgr.instance.changeScene(Lobby);
+        
+        let senddata: any = {
+                userid: UserInfo.getInstance().uid,
+                token: UserInfo.getInstance().token,
+            };
+            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
+                xlLib.SceneMgr.instance.changeScene(Lobby);
+            }, this);
     }
 
     public destroy(): void {
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+
+        this._btn_begin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_buqiang.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
     }
 }
 
