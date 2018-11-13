@@ -487,7 +487,8 @@ class QZNNView extends eui.Component {
             data: bet,
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
-
+            this._group_qiang.visible = false;
+            this._btn_switch.visible = true;
         }, this);
     }
 
