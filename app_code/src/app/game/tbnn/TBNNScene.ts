@@ -3,11 +3,11 @@
  */
 class TBNNScene extends xlLib.GameScene 
 {
-    private TBNNView: TBNNScene;
+    private TBNNView: TBNNView;
     constructor()
     {
         super();
-        this.TBNNView = new TBNNScene();
+        this.TBNNView = new TBNNView();
         this.uiLayer.addChild(this.TBNNView);
     }
 

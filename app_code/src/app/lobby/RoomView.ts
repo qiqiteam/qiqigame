@@ -103,6 +103,8 @@ class RoomView extends eui.Component {
     }
 
     private clickCallback() {
+        //xlLib.SceneMgr.instance.changeScene(TBNNScene);
+        //xlLib.SceneMgr.instance.changeScene(QZNNScene);
         //----------------------------------------
         let gameData:gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
         let typeData:typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);

@@ -84,6 +84,10 @@ declare class NNTableItemSkin extends eui.Skin{
 }
 declare class NNViewSkin extends eui.Skin{
 }
+declare class InfoBoxItemSkin extends eui.Skin{
+}
+declare class InfoBoxSkin extends eui.Skin{
+}
 declare class PlayerInfoTypeItemSkin extends eui.Skin{
 }
 declare class PlayerInfoViewSkin extends eui.Skin{
@@ -105,6 +109,10 @@ declare class SafeBoxViewSkin extends eui.Skin{
 declare class SetTypeItemSkin extends eui.Skin{
 }
 declare class SetViewSkin extends eui.Skin{
+}
+declare class TBNNHeadSkin extends eui.Skin{
+}
+declare class TBNNViewSkin extends eui.Skin{
 }
 declare class AwardItemSkin extends eui.Skin{
 }
