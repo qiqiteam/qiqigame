@@ -195,7 +195,7 @@ module xlLib {
         * @param cmd {string} 命令
         * @param host {any} 数据
         **/
-        public send(cmd: string, data:any, cb: Function, thisArg?: any, ecb?: Function,ishow: boolean = true) {
+        public send(cmd: string, data:any, cb: Function, thisArg?: any, ecb?: Function,ishow: boolean = false) {
             if (this.ws.connected) {
                 if (data != null && (typeof (data) == "object")) {
                     data.command = cmd;
@@ -213,7 +213,7 @@ module xlLib {
                             xlLib.TipsUtils.showFloatWordTips(msg.message);
                         }
                     }
-                },false);
+                });
                 this.ws.writeUTF(data);
                 this.ws.flush();
                 console.log("开始发送消息---------------"+data);
