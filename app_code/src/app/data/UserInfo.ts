@@ -4,7 +4,8 @@ class UserInfo {
     public goldcoins:number;
     public token:string;
     public gamelist:gameData[] = [];
-    public playes:any[] = [];//玩家数据表
+    public playes:PlayerData[] = [];//玩家数据表
+    public myPlayer:PlayerData;
     private static _instance: UserInfo;
 
     public constructor() {}
@@ -31,7 +32,14 @@ class UserInfo {
     public addPlayes(data):void
     {
         for(let i=0; i<data.player.length; i++) {
-            this.playes.push(data.player[i]);
+            if(data.player[i].uid = this.uid){
+                this.myPlayer = new PlayerData();
+                this.myPlayer.initData(data.player[i]);
+            }else{
+                let player= new PlayerData();
+                player.initData(data.player[i]);
+                this.playes.push(player);
+            }
         }
     }
 

@@ -472,10 +472,6 @@ public _btn_voice:eui.Button;
 
     private addPlayers(data):void
     {
-        if(UserInfo.getInstance().playes == []) {
-
-        }
-
         //设置自己信息
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
@@ -490,16 +486,15 @@ public _btn_voice:eui.Button;
         //this.labelGold0.text = "1888888";
         this.imghead0.source = "F1_03_png";
 
-        console.log(data._obj);
         
-        this.labelHead0.text = data._obj.player[0].username;
-        this.labelGold0.text = data._obj.player[0].goldcoins;
+        this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
+        this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins+"";
         //this.imghead0.source = data[0].headimg;
         
         //设置其他玩家信息
-        for (let i=1; i<10; i++) {
+        for (let i=1; i<UserInfo.getInstance().playes.length; i++) {
             if(data[i] != null) {
-                this['grpHead' + i].setUserInfo(data._obj.player[i].username, data._obj.player[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
+                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
             } else {
                 //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
                 this['grpHead' + i].setUserInfo("", "", "");
