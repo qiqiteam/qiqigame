@@ -138,6 +138,8 @@ class PlayerInfoView extends eui.Component {
 		this.group_bind_number.visible = true;
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
 
+		
+
 	}
 	//点击绑定支付宝按钮 
 	private OnClickBindzfbBtn(e: egret.TouchEvent): void {
@@ -152,6 +154,19 @@ class PlayerInfoView extends eui.Component {
 		this._MinBtnHid();
 		this.group_bind_bankCard.visible = true;
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
+
+		let xialak:InfoBox=new InfoBox();
+		xialak.x=420;
+		xialak.y=410;
+		let infolist:Array<InfoBoxData> = [new InfoBoxData({id:1,name:"建设银行",data:null}),new InfoBoxData({id:2,name:"招商银行",data:null}),
+		new InfoBoxData({id:3,name:"中国银行",data:null}),new InfoBoxData({id:4,name:"平安银行",data:null}),new InfoBoxData({id:5,name:"工商银行",data:null})];
+		xialak.setInfoBoxData(infolist,this.selectIndexFunction,this);
+		this.group_bind_bankCard.addChild(xialak);
+	}
+
+	private selectIndexFunction():void
+	{
+
 	}
 	//点击更换支付宝按钮 
 	private OnClickChangezfb(e: egret.TouchEvent): void {
