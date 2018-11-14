@@ -19,8 +19,8 @@
 
 
 	</e:Group>
-	<e:ViewStack id="_viewstack_safebox" width="1000" height="593" x="340" y="88" selectedIndex="1">
-		<e:Group id="group_deposit" width="1000" height="593" anchorOffsetX="0" x="0" y="0" scaleX="1" scaleY="1" visible="false">
+	<e:ViewStack id="_viewstack_safebox" width="1000" height="593" x="340" y="88" selectedIndex="0" locked="true">
+		<e:Group id="group_deposit" width="1000" height="593" anchorOffsetX="0" x="0" y="0" scaleX="1" scaleY="1" locked="true">
 			<e:Image source="carryMoney_lab_png" horizontalCenter="-304.665" top="50" width="156" height="36"/>
 			<e:Image source="safebox_lab_png" horizontalCenter="-304.5" top="130"/>
 			<e:Image source="depositMoney_lab_png" horizontalCenter="-304.665" top="210"/>
@@ -57,7 +57,7 @@
 			</e:skinName>
 			</e:Button>
 		</e:Group>
-		<e:Group id="group_out" width="1000" height="593" anchorOffsetX="0" x="0" y="0" scaleX="1" scaleY="1">
+		<e:Group id="group_out" width="1000" height="593" anchorOffsetX="0" x="0" y="0" scaleX="1" scaleY="1" visible="false" locked="true">
 			<e:Image source="carryMoney_lab_png" horizontalCenter="-304.665" top="50" width="156" height="36"/>
 			<e:Image source="safebox_lab_png" horizontalCenter="-304.5" top="130"/>
 			<e:Image source="depositMoney_lab_png" horizontalCenter="-304.665" top="210"/>
@@ -94,7 +94,7 @@
 			</e:Button>
 			<e:Image horizontalCenter="-307" source="password_lab_png" anchorOffsetY="0" height="55.34" anchorOffsetX="0" width="151.67" y="380"/>
 			<e:Image source="Input_bg2_png" width="350" height="65" horizontalCenter="-33" bottom="150"/>
-			<e:EditableText id="input_password" width="300" height="30" text="请输入取出密码" x="322" y="393.1" verticalAlign="middle" textColor="0x110707" size="20"/>
+			<e:EditableText id="input_password" width="300" height="30" x="322" y="393.1" verticalAlign="middle" textColor="0x110707" size="20" prompt="请输入取出密码" promptColor="0xfcf4f4"/>
 		</e:Group>
 
 		<e:Group id="group_autodeposit" width="1000" height="593" anchorOffsetX="0" right="0" bottom="15" x="0" y="0" scaleX="1" scaleY="1" visible="false">

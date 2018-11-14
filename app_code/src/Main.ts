@@ -36,17 +36,17 @@ class Main extends xlLib.GameDoc {
     public start() {
         super.start();
 
-        egret.lifecycle.addLifecycleListener((context) => {
+        //egret.lifecycle.addLifecycleListener((context) => {
              //custom lifecycle plugin
-        })
+        //})
 
-        egret.lifecycle.onPause = () => {
+        //egret.lifecycle.onPause = () => {
             // egret.ticker.pause();
-        }
+        //}
 
-        egret.lifecycle.onResume = () => {
+        //egret.lifecycle.onResume = () => {
             // egret.ticker.resume();
-        }
+        //}
         
         //inject the custom material parser
         //注入自定义的素材解析器

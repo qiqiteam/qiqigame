@@ -122,6 +122,10 @@ declare class WelfareTypeItemSkin extends eui.Skin{
 }
 declare class WelfareViewSkin extends eui.Skin{
 }
+declare class ZJHHeadSkin extends eui.Skin{
+}
+declare class ZJHViewSkin extends eui.Skin{
+}
 declare class ZhajhMainSceneView extends eui.Skin{
 }
 declare class GameTypeItemSkin extends eui.Skin{

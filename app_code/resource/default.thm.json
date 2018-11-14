@@ -50,6 +50,8 @@
     "resource/exml/game/welfare/LotterySkin.exml",
     "resource/exml/game/welfare/WelfareTypeItemSkin.exml",
     "resource/exml/game/welfare/WelfareViewSkin.exml",
+    "resource/exml/game/zhajinhua/ZJHHeadSkin.exml",
+    "resource/exml/game/zhajinhua/ZJHViewSkin.exml",
     "resource/exml/game/zhajinhua/ZhajhMainSceneView.exml",
     "resource/exml/lobby/GameTypeItemSkin.exml",
     "resource/exml/lobby/LobbyViewSkin.exml",

@@ -65,14 +65,17 @@
 		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
-		"bin-debug/app/game/zhajh/ZhajhMainView.js",
+		"bin-debug/app/game/zjh/ZJHHead.js",
+		"bin-debug/app/game/zjh/ZJHScene.js",
+		"bin-debug/app/game/zjh/ZJHUtil.js",
+		"bin-debug/app/game/zjh/ZJHView.js",
 		"bin-debug/app/HttpAddress.js",
 		"bin-debug/app/interface/IGameInformation.js",
 		"bin-debug/app/interface/IGameRecord.js",
 		"bin-debug/app/interface/IGameTableData.js",
 		"bin-debug/app/lobby/GameTypeItem.js",
-		"bin-debug/app/lobby/Lobby.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/lobby/LobbyView.js",
 		"bin-debug/app/lobby/RoomTypeItem.js",
 		"bin-debug/app/lobby/RoomView.js",
 		"bin-debug/app/LodingView.js",
@@ -132,6 +135,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/lobby/LobbyView.js"
+		"bin-debug/app/lobby/Lobby.js"
 	]
 }

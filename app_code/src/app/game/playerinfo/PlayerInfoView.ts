@@ -159,7 +159,9 @@ class PlayerInfoView extends eui.Component {
 		xialak.x=420;
 		xialak.y=410;
 		let infolist:Array<InfoBoxData> = [new InfoBoxData({id:1,name:"建设银行",data:null}),new InfoBoxData({id:2,name:"招商银行",data:null}),
-		new InfoBoxData({id:3,name:"中国银行",data:null}),new InfoBoxData({id:4,name:"平安银行",data:null}),new InfoBoxData({id:5,name:"工商银行",data:null})];
+		new InfoBoxData({id:3,name:"中国银行",data:null}),new InfoBoxData({id:4,name:"平安银行",data:null}),new InfoBoxData({id:5,name:"工商银行",data:null}),
+		new InfoBoxData({id:6,name:"农业银行",data:null}),new InfoBoxData({id:7,name:"渤海银行",data:null}),new InfoBoxData({id:8,name:"汉口银行",data:null})
+		];
 		xialak.setInfoBoxData(infolist,this.selectIndexFunction,this);
 		this.group_bind_bankCard.addChild(xialak);
 	}

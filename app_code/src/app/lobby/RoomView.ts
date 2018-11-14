@@ -113,7 +113,7 @@ class RoomView extends eui.Component {
 			userid:UserInfo.getInstance().uid,
         token:UserInfo.getInstance().token,playway:playway.id};
 		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
-                xlLib.SceneMgr.instance.changeScene(QZNNScene);
+                xlLib.SceneMgr.instance.changeScene(ZJHScene);
                 xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 			},this);
 	// let senddata:any = {
