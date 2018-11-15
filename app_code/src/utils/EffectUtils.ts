@@ -438,9 +438,10 @@ module EffectUtils {
     }
 
     /**
-     * 金币飞行的效
+     * 金币飞行的效果
+     * 
      */
-    export function coinsFly(obj: egret.DisplayObjectContainer, startX, startY, endX = 140, endY = 64): void {
+    export function coinsFly(obj: egret.DisplayObjectContainer,goldsrc:string,fuc:Function=null, startX, startY, endX = 140, endY = 64): void {
         var interval: number = 0;
         var coinsNum: number = 0;
         var flyEffect: Function = function () {
@@ -450,7 +451,7 @@ module EffectUtils {
                 return;
             }
             coinsNum++;
-            var coin: eui.Image = new eui.Image('gold');
+            var coin: eui.Image = new eui.Image(goldsrc);
             coin.x = startX;
             coin.y = startY;
             coin.scaleX = 0.6;
@@ -460,6 +461,7 @@ module EffectUtils {
                 .wait(100)
                 .call(function () {
                     obj.removeChild(coin);
+                    fuc&&fuc();
                 }, [obj, coin])
         }
         interval = setInterval(flyEffect.bind(this), 100);
