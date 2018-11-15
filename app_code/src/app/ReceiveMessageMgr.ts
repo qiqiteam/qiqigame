@@ -22,7 +22,6 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.banker, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.bet, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.betnum, this.onMessage);
-			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.cards, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.summary, this.onMessage);
 		}
 
@@ -39,8 +38,8 @@ module xlLib {
 					return;
 				case EventConst.newplayer:
 					console.log(msg);
-					// UserInfo.getInstance().addPlayes(msg);
-					// EventUtil.dispatchEvent(msg.command,msg);
+					UserInfo.getInstance().joinRoomPlayer(msg);
+					EventUtil.dispatchEvent(msg.command,msg);
 					return;
 				default:
 					console.log("收到服务器推送：" + msg.command);

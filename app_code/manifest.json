@@ -26,7 +26,6 @@
 		"bin-debug/app/data/InfoBoxData.js",
 		"bin-debug/app/data/PlayerData.js",
 		"bin-debug/app/data/playWayData.js",
-		"bin-debug/app/data/SummaryData.js",
 		"bin-debug/app/data/typeData.js",
 		"bin-debug/app/data/UserInfo.js",
 		"bin-debug/app/EventConst.js",

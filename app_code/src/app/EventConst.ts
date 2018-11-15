@@ -41,9 +41,7 @@ class EventConst
     public static bet:string = "bet";  
     /**用户倍数*/
     public static betnum:string = "betnum";
-    /**牌面信息*/
-    public static cards:string = "cards";
-    /**结算*/
+    /**牌面信息+结算*/
     public static summary:string = "summary"; 
 
     /**（开始匹配20秒倒计时）*/

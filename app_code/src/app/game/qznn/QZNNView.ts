@@ -284,6 +284,7 @@ class QZNNView extends eui.Component {
 
     public _btn_switch: eui.Button;
     public _btn_begin: eui.Button;
+    public _my_img_zhuang: eui.Image;
 
 
     //public labHandsel: eui.BitmapLabel;
@@ -361,7 +362,7 @@ class QZNNView extends eui.Component {
 
 
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
         // this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
@@ -439,9 +440,8 @@ class QZNNView extends eui.Component {
     public resize(): void {
 
     }
+    /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
-
-        EffectUtils.playButtonEffect(e.target, null);
 
         if (e.target == this._btn_begin) {
             console.log("_btn_begin");
@@ -472,18 +472,23 @@ class QZNNView extends eui.Component {
         } else if (e.target == this._btn_double_1) {
             console.log("_btn_double_1");
             this.sendamessage1(EventConst.niuniu_dobet, 1);
+            this._btn_switch.visible = false;
         } else if (e.target == this._btn_double_2) {
             console.log("_btn_double_2");
             this.sendamessage1(EventConst.niuniu_dobet, 2);
+            this._btn_switch.visible = false;
         } else if (e.target == this._btn_double_3) {
             console.log("_btn_double_3");
             this.sendamessage1(EventConst.niuniu_dobet, 3);
+            this._btn_switch.visible = false;
         } else if (e.target == this._btn_double_4) {
             console.log("_btn_double_4");
             this.sendamessage1(EventConst.niuniu_dobet, 4);
+            this._btn_switch.visible = false;
         } else if (e.target == this._btn_double_5) {
             console.log("_btn_double_5");
             this.sendamessage1(EventConst.niuniu_dobet, 5);
+            this._btn_switch.visible = false;
         }
     }
 
@@ -516,7 +521,7 @@ class QZNNView extends eui.Component {
         this._btn_double_4.touchEnabled = false;
         this._btn_double_5.touchEnabled = false;
     }
-
+    /**注册事件 */
     private addEvent(): void {
         //EventManage.addButtonEvent(this, this.btnClose, egret.TouchEvent.TOUCH_TAP, this.onTouchClose.bind(this));
         //EventManage.addButtonEvent(this, this.btnCharge, egret.TouchEvent.TOUCH_TAP, this.onTouchCharge.bind(this));
@@ -574,30 +579,63 @@ class QZNNView extends eui.Component {
         // this.cardEffect();
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
+        EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+
         EventUtil.addEventListener(EventConst.hog, this.onHogBack, this);
         EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
-        EventUtil.addEventListener(EventConst.cards, this.ards, this);
+        // EventUtil.addEventListener(EventConst.cards, this.ards, this);
         EventUtil.addEventListener(EventConst.summary, this.over, this);
-        //this.addPlayers(UserInfo.getInstance().playes);
+        EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
     }
 
     private onHogBack(data: any): void {
         this._group_qiang.visible = true;
     }
     private onHogBack1(data: any): void {
+        this._group_qiang.visible = false;
         this._btn_switch.visible = true;
     }
     private over(data: any): void {
-        UserInfo.getInstance().isGameStart = false;
+
+        // console.log(data);
+
+        let result = {
+            pokes: [],
+            result: [1, 0, 0, 0],
+            bankerWin: 0,
+            rate: "0.05",
+            bomb: "0"
+        };
+        for (let i = 0; i < data._obj.players.length; i++) {
+            let err = {
+                num: data._obj.players[i].pai.ratio,
+                type: data._obj.players[i].pai.niu,
+                value: data._obj.players[i].cardsList
+            };
+            result.pokes.push(err);
+        }
+
+        this.cardResult = result;
+        this.cardEffect();
+        UserInfo.getInstance().isGameStart = false;  //游戏状态
     }
-    private ards(msg: any): void {
-        // var  EventConst.cards;
-        for (let i = 0; i < msg.nonList; i++) {
-            console.log(msg[i].nonList);
+    /**设置庄家 */
+    private acceptbanker(data: any): void {
+
+        let num = UserInfo.getInstance().findSeatNumber(data._obj.index);
+
+        if (num == 0) {
+            this._my_img_zhuang.visible = true;
+        } else {
+            this['grpHead' + num].setZhuang(true);
         }
 
     }
+    /**
+     * 自己加入房间
+     */
     private addPlayers(data): void {
+
         //设置自己信息
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
@@ -608,18 +646,15 @@ class QZNNView extends eui.Component {
         this.grpHead0.addChild(mask2);
         this.imghead0.mask = mask2;
 
-        //this.labelHead0.text = "世界第二赌神";
-        //this.labelGold0.text = "1888888";
-        this.imghead0.source = "F1_03_png";
-
-
-        this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
-        this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
-        //this.imghead0.source = data[0].headimg;
+        if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
+            this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
+            this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
+            this.imghead0.source = "F1_03_png";
+        }
 
         //设置其他玩家信息
-        for (let i = 1; i < UserInfo.getInstance().playes.length; i++) {
-            if (data[i] != null) {
+        for (let i = 1; i < 10; i++) {
+            if (data._obj.player[i] != null) {
                 this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
             } else {
                 //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
@@ -627,6 +662,20 @@ class QZNNView extends eui.Component {
             }
         }
     }
+
+    //加入房间新玩家
+    public playerJoinRoom(data): void {
+        console.log(data._obj.player.id);
+        console.log(UserInfo.getInstance().myPlayer.id);
+
+
+        if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
+
+        } else {
+            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "F4_03_png");
+        }
+    }
+
 
     //设置彩金
     //private setHandsel(num): void {
@@ -742,6 +791,7 @@ class QZNNView extends eui.Component {
     private setGameResult(data): void {
         //this.grpCountdown.visible = false;
         this.cardResult = data;
+
     }
 
     /**
@@ -1146,6 +1196,9 @@ class QZNNView extends eui.Component {
      * 显示发牌
      */
     private cardEffect(): void {
+        this._btn_switch.visible = false;
+        this._group_qiang.visible = false;
+
         this.isCardEffectShow = true;
         this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
     }
@@ -1300,7 +1353,7 @@ class QZNNView extends eui.Component {
         else {
             //this.showGameResult();
         }
-        this.cdTimer.start();
+        //this.cdTimer.start();
     }
 
     //============================================  Game Result
@@ -1571,7 +1624,7 @@ class QZNNView extends eui.Component {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     }
 
-    public dispose(): void {
+    public Onquit(): void {
         if (UserInfo.getInstance().isGameStart) {
             xlLib.TipsUtils.showFloatWordTips("游戏中！");
             return;
@@ -1587,7 +1640,7 @@ class QZNNView extends eui.Component {
 
     public destroy(): void {
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         this._btn_begin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);

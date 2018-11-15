@@ -169,7 +169,7 @@ module xlLib {
         //**************************************************************************
         //注册网络事件处理函数
         //**************************************************************************
-        public registerMsgHandler(msgid: string, callbackfuc?: Function,isonce:boolean = true): void {
+        public registerMsgHandler(msgid: string, callbackfuc?: Function,isonce:boolean = false): void {
             if (this.handlers[msgid]) {
                 console.log("消息ID为:" + msgid + "已经注册了相同的处理回调函数");
                 return;

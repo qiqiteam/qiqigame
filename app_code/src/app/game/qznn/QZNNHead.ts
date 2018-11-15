@@ -6,7 +6,7 @@ class QZNNHead extends eui.Component {
     public imghead:eui.Image;
     public labelName:eui.Label;
     public labelGold:eui.Label;
-
+    public img_zhuang:eui.Image;
 
     constructor() {
         super();
@@ -36,6 +36,10 @@ class QZNNHead extends eui.Component {
         this.imghead.source = _imghead;
         this.labelName.text = _name;
         this.labelGold.text = _gold;
+    }
+
+    public setZhuang(value:boolean):void {
+        this.img_zhuang.visible = value;
     }
 
     public destroy():void {

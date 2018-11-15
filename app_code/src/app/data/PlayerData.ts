@@ -16,6 +16,8 @@ class PlayerData {
 	public updatetime:string;
 	public username:string;
 	public goldcoins:number;
+	public id:string;
+	public index:number;
 	public initData(data:any):void
 	{
 		this.integral = data.id;
@@ -36,6 +38,8 @@ class PlayerData {
 		this.updatetime= data.updatetime;
 		this.username= data.username;
 		this.goldcoins = data.goldcoins;
+		this.id = data.id;
+		this.index = data.index;
 	}
 	public constructor() {}
 }
