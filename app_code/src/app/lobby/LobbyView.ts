@@ -18,14 +18,12 @@ class LobbyView extends eui.Component {
 	public menu_bar:eui.TabBar;
 	public viewlist:eui.ViewStack;
 	public _group_wanfa:eui.Group;
-	public _wanfa_btn_area:eui.Group;
 	public _group_pk:eui.Group;
-	public _pk_btn_area:eui.Group;
 	public _group_mahjong:eui.Group;
-	public _mahjong_btn_area:eui.Group;
 	public _group_game:eui.Group;
-	public _game_btn_area:eui.Group;
 
+    private gamelistView:GameIconListView;
+	private gameIconDataList:GameIconData[][];
 
 	constructor() {
 		super();
@@ -47,6 +45,15 @@ class LobbyView extends eui.Component {
 
 	protected childrenCreated() {
 		super.childrenCreated();
+
+		this._head_label.text = UserInfo.getInstance().username;
+		this._coin_label.text = ""+UserInfo.getInstance().goldcoins;
+        this.initMenuBar();
+        this.initGameIconList();
+	}
+
+	private initMenuBar():void
+	{
 		let dataArr:any[] = [{name:"热门玩法",down_url:"Font_dating_remenwanfa1_png",up_url:"Font_dating_remenwanfa_png"},
 		{name:"扑克类",down_url:"Font_dating_pukelei1_png",up_url:"Font_dating_pukelei_png"},
 		{name:"麻将类",down_url:"Font_dating_majianglei1_png",up_url:"Font_dating_majianglei_png"},
@@ -54,78 +61,55 @@ class LobbyView extends eui.Component {
 		this.menu_bar.dataProvider = new eui.ArrayCollection(dataArr);
 		this.menu_bar.useVirtualLayout = true;
 		this.menu_bar.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
-		this.createGameBtn();
+	}
+
+	private initGameIconList():void
+	{  
+		let holdgameList:GameIconData[] = [new GameIconData().initData({
+                url:"btn_niuniu_png"}),
+			new GameIconData().initData({
+                url:"btn_jinhua_png"}),
+			new GameIconData().initData({
+                url:"btn_baijiale_png"})
+			];
+		let pkList:GameIconData[] = [new GameIconData().initData({
+                url:"btn_niuniu_png"}),
+			new GameIconData().initData({
+                url:"btn_jinhua_png"}),
+			new GameIconData().initData({
+                url:"btn_baijiale_png"})
+			];
+		let mahjongList:GameIconData[] = [new GameIconData().initData({
+                url:"btn_28_png"}),
+			new GameIconData().initData({
+                url:"btn_28_png"}),
+			new GameIconData().initData({
+                url:"btn_28_png"})
+			];
+		let allgameList:GameIconData[] = [new GameIconData().initData({
+                url:"btn_jinhua_png"}),
+			new GameIconData().initData({
+                url:"btn_jinhua_png"}),
+			new GameIconData().initData({
+                url:"btn_jinhua_png"})
+			];
+		this.gameIconDataList = [holdgameList,pkList,mahjongList,[]];
+		this.gamelistView = new GameIconListView();
+		this.setIconListData(this.viewlist.selectedIndex);
+	}
+
+	public setIconListData(index:number):void
+	{
+       let container:any= this.viewlist.getElementAt(index);
+	   this.gamelistView.setData(this.gameIconDataList[index]);
+	   container.addChild(this.gamelistView);
 	}
 
 	private onBarItemTap(e: eui.ItemTapEvent): void {
 		this.viewlist.selectedIndex = e.itemIndex;
+		this.setIconListData(this.viewlist.selectedIndex);
     }
-
-	private createGameBtn(): void {
-        var arr_wanfa = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
-		var arr_pk = ["btn_niuniu_png", "btn_jinhua_png", "btn_baijiale_png"];
-		var arr_mahjong = ["btn_28_png", "btn_28_png", "btn_28_png"];
-		var arr_game = ["btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png", "btn_jinhua_png"];
-		var yy = 10;
-		
-        for (var i = 0; i < arr_wanfa.length; i++) {
-            var btn = new eui.Image(arr_wanfa[i]);
-            this._wanfa_btn_area.addChild(btn);
-            let num = i % 3;
-			btn.x = 70 + num*340;
-			if (num == 0 && i != 0) {
-                yy = 265;
-            }
-			btn.y = yy;
-			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        }
-		for (var i = 0; i < arr_pk.length; i++) {
-            var btn = new eui.Image(arr_pk[i]);
-            this._pk_btn_area.addChild(btn);
-            let num = i % 3;
-			btn.x = 70 + num*340;
-			if (num == 0 && i != 0) {
-                yy = 265;
-            }
-			btn.y = yy;
-			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        }
-		for (var i = 0; i < arr_mahjong.length; i++) {
-            var btn = new eui.Image(arr_mahjong[i]);
-            this._mahjong_btn_area.addChild(btn);
-            let num = i % 3;
-			btn.x = 70 + num*340;
-			if (num == 0 && i != 0) {
-                yy = 265;
-            }
-			btn.y = yy;
-			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        }
-		
-		for (var i = 0; i < arr_game.length; i++) {
-            var btn = new eui.Image(arr_game[i]);
-            this._game_btn_area.addChild(btn);
-			let num = i % 3;
-			btn.x = 70 + num*340;
-			if (num == 0 && i != 0) {
-                yy = 265;
-            }
-			btn.y = yy;
-			btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        }
-		this._head_label.text = UserInfo.getInstance().username;
-		this._coin_label.text = ""+UserInfo.getInstance().goldcoins;
-    }
-
-	private onClick(e:egret.TouchEvent):void {
-		EffectUtils.playButtonEffect(e.target,this.clickCallback);
-		this.playClickSound();
-	}
-
-	private clickCallback() {
-		xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
-	}
-
+	
 	private onClick2(e:egret.TouchEvent):void {
 		this.playClickSound();
 		if(e.target == this._set) {
@@ -157,14 +141,6 @@ class LobbyView extends eui.Component {
 			console.log("_topup");
 			xlLib.PopUpMgr.addPopUp(RechargeView, null, true, true, null ,1);
 		}
-	}
-
-	private _btnHide() {
-		this._group_wanfa.visible = false;
-		this._group_pk.visible = false;
-		this._group_mahjong.visible = false;
-		this._group_game.visible = false;
-		this.playClickSound();
 	}
 
 	private onTouchHandler(evt: egret.Event): void {

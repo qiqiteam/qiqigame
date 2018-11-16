@@ -21,6 +21,7 @@
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
 		"bin-debug/app/data/gameData.js",
+		"bin-debug/app/data/GameIconData.js",
 		"bin-debug/app/data/GameInformation.js",
 		"bin-debug/app/data/GlobalData.js",
 		"bin-debug/app/data/InfoBoxData.js",
@@ -72,8 +73,10 @@
 		"bin-debug/app/interface/IGameInformation.js",
 		"bin-debug/app/interface/IGameRecord.js",
 		"bin-debug/app/interface/IGameTableData.js",
-		"bin-debug/app/lobby/GameTypeItem.js",
+		"bin-debug/app/lobby/GameIconItem.js",
+		"bin-debug/app/lobby/GameIconListView.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/lobby/Lobby.js",
 		"bin-debug/app/lobby/LobbyView.js",
 		"bin-debug/app/lobby/RoomTypeItem.js",
 		"bin-debug/app/lobby/RoomView.js",
@@ -134,6 +137,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/lobby/Lobby.js"
+		"bin-debug/app/lobby/GameTypeItem.js"
 	]
 }

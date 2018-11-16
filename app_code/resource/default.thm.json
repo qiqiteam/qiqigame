@@ -53,6 +53,8 @@
     "resource/exml/game/zhajinhua/ZJHHeadSkin.exml",
     "resource/exml/game/zhajinhua/ZJHViewSkin.exml",
     "resource/exml/game/zhajinhua/ZhajhMainSceneView.exml",
+    "resource/exml/lobby/GameIconItemSkin.exml",
+    "resource/exml/lobby/GameIconListViewSkin.exml",
     "resource/exml/lobby/GameTypeItemSkin.exml",
     "resource/exml/lobby/LobbyViewSkin.exml",
     "resource/exml/lobby/RoomTypeItemSkin.exml",
