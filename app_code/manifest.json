@@ -30,6 +30,10 @@
 		"bin-debug/app/data/typeData.js",
 		"bin-debug/app/data/UserInfo.js",
 		"bin-debug/app/EventConst.js",
+		"bin-debug/app/game/bjl/BJLHead.js",
+		"bin-debug/app/game/bjl/BJLScene.js",
+		"bin-debug/app/game/bjl/BJLUtil.js",
+		"bin-debug/app/game/bjl/BJLView.js",
 		"bin-debug/app/game/brnn/BrnnMainView.js",
 		"bin-debug/app/game/erbagang/ErBaGangView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
@@ -73,9 +77,9 @@
 		"bin-debug/app/interface/IGameInformation.js",
 		"bin-debug/app/interface/IGameRecord.js",
 		"bin-debug/app/interface/IGameTableData.js",
-		"bin-debug/app/lobby/GameIconItem.js",
-		"bin-debug/app/lobby/GameIconListView.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/lobby/GameIconListView.js",
+		"bin-debug/app/lobby/GameTypeItem.js",
 		"bin-debug/app/lobby/Lobby.js",
 		"bin-debug/app/lobby/LobbyView.js",
 		"bin-debug/app/lobby/RoomTypeItem.js",
@@ -137,6 +141,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/lobby/GameTypeItem.js"
+		"bin-debug/app/lobby/GameIconItem.js"
 	]
 }

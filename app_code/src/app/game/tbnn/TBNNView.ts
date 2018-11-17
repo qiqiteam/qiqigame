@@ -343,7 +343,7 @@ class TBNNView extends eui.Component {
         this.addEvent();
         this.initData();
 
-        // //this.setCountdown();
+        this.setCountdown();
         // //this.onTouchBet(0);
         // //PanelManage.openChat(this, 112, 300, "10003");
         // //this.joinCallback(this.r);
@@ -633,8 +633,8 @@ class TBNNView extends eui.Component {
             this.resetGame();
 
 
-            this.cdNum = 5;
-            this.cardEffect();
+            //this.cdNum = 5;
+            //this.cardEffect();
         }
         if (this.cdNum < 10) {
             this.labCountdown0.text = '0';
@@ -1283,7 +1283,8 @@ class TBNNView extends eui.Component {
         else {
             //this.showGameResult();
         }
-        //this.cdTimer.start();
+        this.cdTimer.start();
+        this.cdNum = 5;
 
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
         /*
@@ -1536,7 +1537,7 @@ class TBNNView extends eui.Component {
             egret.Tween.removeTweens(card);
 
         }
-        for (var index = 0; index < 9; index++) {
+        for (var index = 0; index < this.cardResult.pokes.length-1; index++) {
             //this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
             this.labCardTypeBanker.visible = false;
@@ -1560,6 +1561,7 @@ class TBNNView extends eui.Component {
         //for (let i = 0; i < 4; i++) {
         //this['labTipsClick' + i].visible = true;
         //}
+        this._btn_begin.visible = true;
         this.isCanBets = true;
         this.isBets = false;
         this.imgBaoZhuang.visible = false;
@@ -1648,6 +1650,9 @@ class TBNNView extends eui.Component {
             token: UserInfo.getInstance().token,
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
+            //if (this.parent) {
+            //    this.parent.removeChild(this);
+            //}
             xlLib.SceneMgr.instance.changeScene(Lobby);
         }, this);
     }

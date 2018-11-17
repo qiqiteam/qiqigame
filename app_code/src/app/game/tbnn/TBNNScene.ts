@@ -1,5 +1,5 @@
 /**
- * 牛牛场景界面
+ * 通比牛牛场景界面
  */
 class TBNNScene extends xlLib.GameScene 
 {

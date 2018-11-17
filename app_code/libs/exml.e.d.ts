@@ -62,6 +62,10 @@ declare class ComBoxItemSkin extends eui.Skin{
 }
 declare class ComBoxSkin extends eui.Skin{
 }
+declare class BJLHeadSkin extends eui.Skin{
+}
+declare class BJLViewSkin extends eui.Skin{
+}
 declare class BrnnMainViewSkin extends eui.Skin{
 }
 declare class ErBaGangViewSkin extends eui.Skin{
