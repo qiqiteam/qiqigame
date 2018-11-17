@@ -643,10 +643,11 @@
 	</e:Button>
 	<e:Button id="_btn_prepare" label="" x="893" y="395">
 		<e:skinName>
-		<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_yuyin_0_png" source.down="btn_yuyin_0_png"/>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="_btn_start_png" source.down="_btn_start_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-		</e:Skin>
+			</e:Skin>
 		</e:skinName>
+
 	</e:Button>
 </e:Skin>

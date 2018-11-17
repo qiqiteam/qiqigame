@@ -96,8 +96,9 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-		<e:Image source="game_class_bg_png" x="52.5" y="157" locked="true"/>
-	<e:Scroller  x="57.5" y="161" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="470" scrollPolicyV="on" scrollPolicyH="off" locked="true">
+		<e:Image source="game_class_bg_png" x="52.5" y="157"/>
+	<e:Image x="52.5" y="137" source="game_class_bg1_png"/>
+	<e:Scroller  x="57.5" y="181" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="448" scrollPolicyV="on" scrollPolicyH="off">
 		<e:TabBar id="menu_bar" width="100%" height="100%" itemRenderer="GameTypeItem">
 			<e:layout>
 				<e:VerticalLayout/>

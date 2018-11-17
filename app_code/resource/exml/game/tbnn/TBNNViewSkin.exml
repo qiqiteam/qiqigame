@@ -716,10 +716,11 @@
 	<e:Button id="_btn_begin" label="" horizontalCenter="0" verticalCenter="0">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="all_up_btn_png" source.down="all_down_btn_png"/>
+			<e:Image width="100%" height="100%" source="_btn_start_png" source.down="_btn_start_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 		</e:skinName>
+
 	</e:Button>
 
 </e:Skin>
