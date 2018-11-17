@@ -285,7 +285,7 @@ class QZNNView extends eui.Component {
     public _btn_switch: eui.Button;
     public _btn_begin: eui.Button;
     public _my_img_zhuang: eui.Image;
-
+    public _group_di: eui.Group;
 
     //public labHandsel: eui.BitmapLabel;
     //private grpSelectBet: eui.Group;    //筹码底背景
@@ -337,6 +337,17 @@ class QZNNView extends eui.Component {
     private lastTouchBetTime: number = 0;
 
     private isCardEffectShow: boolean = false; //是否正在显示扑克动画
+
+    //-----------------------------------------------
+
+    private zhaungIndex: number = 0;    //庄的位置
+
+
+
+
+
+    //-----------------------------------------------
+
     protected childrenCreated(): void {
         //this.setTouchEnabled();
         this.getOrginCardPos();
@@ -402,6 +413,14 @@ class QZNNView extends eui.Component {
         this._image_double_3.touchEnabled = false;
         this._image_double_4.touchEnabled = false;
         this._image_double_5.touchEnabled = false;
+
+
+        //-----------------------------------------------
+        this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
+
+
+
+        //-----------------------------------------------
     }
 
     /**
@@ -592,6 +611,7 @@ class QZNNView extends eui.Component {
         this._group_qiang.visible = true;
     }
     private onHogBack1(data: any): void {
+        this.showGameTips(2);
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
     }
@@ -610,7 +630,9 @@ class QZNNView extends eui.Component {
             let err = {
                 num: data._obj.players[i].pai.ratio,
                 type: data._obj.players[i].pai.niu,
-                value: data._obj.players[i].cardsList
+                value: data._obj.players[i].cardsList,
+                win: data._obj.players[i].win,
+                score: data._obj.players[i].score
             };
             result.pokes.push(err);
         }
@@ -623,6 +645,7 @@ class QZNNView extends eui.Component {
     private acceptbanker(data: any): void {
 
         let num = UserInfo.getInstance().findSeatNumber(data._obj.index);
+        this.zhaungIndex = num;
 
         if (num == 0) {
             this._my_img_zhuang.visible = true;
@@ -1214,7 +1237,7 @@ class QZNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
         egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
         if (this.flyIndex1 == 4) {
-            if (this.flyIndex0 == 8) {
+            if (this.flyIndex0 == this.cardResult.pokes.length-2) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
@@ -1253,7 +1276,7 @@ class QZNNView extends eui.Component {
 
     private effectPlayerIndex = 0;
     private playerCardRotation(): void {
-        if (this.effectPlayerIndex == 9) {
+        if (this.effectPlayerIndex == this.cardResult.pokes.length-1) {
             clearInterval(this.interval)
             this.effectPlayerIndex = 0;
             this.bankerCardRotation();
@@ -1354,6 +1377,78 @@ class QZNNView extends eui.Component {
             //this.showGameResult();
         }
         //this.cdTimer.start();
+
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
+
+        let zhuangPos = {
+            x:this['grpHead' + this.zhaungIndex].x,
+            y:this['grpHead' + this.zhaungIndex].y
+        }
+        if(this.zhaungIndex == 0) {
+            zhuangPos.x = this._group_di.x + 15 + 145;
+            zhuangPos.y = this._group_di.y - 35 + 103;
+        } else {
+            zhuangPos.x = zhuangPos.x + 21;
+            zhuangPos.y = zhuangPos.y + 110;
+        }
+        let pos = {
+            x:0,
+            y:0
+        }
+        let numPos = {
+            x:0,
+            y:0
+        }
+
+        for(let i=0; i<this.cardResult.pokes.length; i++) {
+            if(i==0) {
+                pos.x = this._group_di.x + 15 + 145;
+                pos.y = this._group_di.y - 35 + 103;
+                numPos.x = pos.x+42;
+                numPos.y = pos.y+2;
+            } else {
+                pos.x = this['grpHead' + i].x + 21;
+                pos.y = this['grpHead' + i].y + 110;
+                numPos.x = pos.x + 30;
+                numPos.y = pos.y + 5;
+            }
+
+            if(this.cardResult.pokes[i].win == true) {
+                xlLib.TipsUtils.showTipsDownToUp("+" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
+                this.updatePlayerGold(i, this.cardResult.pokes[i].score, true);
+            } else {
+                xlLib.TipsUtils.showTipsDownToUp("-" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
+                this.updatePlayerGold(i, this.cardResult.pokes[i].score, false);
+            }
+
+            if(this.zhaungIndex == i) {
+                continue;
+            }
+            
+            if(this.cardResult.pokes[i].win == true) {
+                EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+            } else {
+                EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+            }
+        }
+    }
+
+    /**更新玩家金币 */
+    public updatePlayerGold(num:number, gold:number, result:boolean):void {
+
+        let _gold = UserInfo.getInstance().playes[num].goldcoins;
+        if(result == true) {
+            _gold = _gold+gold;
+        } else {
+            _gold = _gold-gold;
+        }
+        UserInfo.getInstance().playes[num].goldcoins = _gold;
+        if(num==0) {
+            this.labelGold0.text = _gold + "";
+        } else {
+            this['grpHead' + num].setGold(_gold);
+        }
+        
     }
 
     //============================================  Game Result

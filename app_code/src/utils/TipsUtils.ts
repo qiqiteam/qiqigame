@@ -1,11 +1,11 @@
 module xlLib {
     export class TipsUtils {
         //从下到上弹出
-        public static showTipsDownToUp(str: any = "", isWarning: boolean = false): void {
+        public static showTipsDownToUp(str: any = "", x, y, isWarning: boolean = false): void {
             var effectTips;
             if (typeof (str) == "string") {
                 effectTips = new egret.TextField();
-                effectTips.size = 24;
+                effectTips.size = 32;
 
                 if (isWarning) {
                     effectTips.textColor = Global.TextColors.red;
@@ -15,15 +15,17 @@ module xlLib {
                 effectTips.alpha = 0;
 
                 effectTips.text = str;
-                effectTips.strokeColor = 0x000000;
+                effectTips.strokeColor = 0xFFFF00;
                 effectTips.stroke = 2;
-                effectTips.bold = true;
+                //effectTips.bold = true;
                 effectTips.textAlign = egret.HorizontalAlign.CENTER;
             } else
                 effectTips = str;
 
-            effectTips.y = egret.MainContext.instance.stage.stageHeight / 2;
-            effectTips.x = egret.MainContext.instance.stage.stageWidth / 2 - effectTips.width / 2;
+            //effectTips.y = egret.MainContext.instance.stage.stageHeight / 2;
+            //effectTips.x = egret.MainContext.instance.stage.stageWidth / 2 - effectTips.width / 2;
+            effectTips.y = y;
+            effectTips.x = x;
             if (SceneMgr.instance.currentScene != null && SceneMgr.instance.currentScene.tipsLayer !=null) {
                 if (!SceneMgr.instance.currentScene.tipsLayer.contains(effectTips)) {
                     SceneMgr.instance.currentScene.tipsLayer.addChild(effectTips);

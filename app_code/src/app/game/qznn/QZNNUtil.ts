@@ -279,6 +279,8 @@ class QZNNUtil {
                 return 'nn.openCard';  //开牌
             case 8:
                 return 'nn.stake';   //筹码
+            case 9:
+                return 'gold_diaoluo';   //金币飞起
         }
     }
 }

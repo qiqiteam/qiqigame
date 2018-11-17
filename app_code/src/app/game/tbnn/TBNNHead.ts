@@ -4,6 +4,7 @@
 class TBNNHead extends eui.Component {
 
     public imghead:eui.Image;
+    public img_gold:eui.Image;
     public labelName:eui.Label;
     public labelGold:eui.Label;
 
@@ -36,6 +37,11 @@ class TBNNHead extends eui.Component {
         this.imghead.source = _imghead;
         this.labelName.text = _name;
         this.labelGold.text = _gold;
+    }
+
+
+    public setGold(gold:number):void {
+        this.labelGold.text = gold+"";
     }
 
     public destroy():void {

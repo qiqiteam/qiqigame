@@ -136,27 +136,26 @@ module EffectUtils {
     * effectType      动画类型 1：从下到上弹出 2：从左至右弹出 3：从右至左弹出 4：从中间弹出渐渐消失 5：从大变小 等等
     * isWarning       是否是警告，警告是红色
     */
-    /*
     export function showTips(str: string = "", effectType: number = 1, isWarning: boolean = false): void {
         switch (effectType) {
             case 1: {
-                TipsUtils.showTipsDownToUp(str, isWarning);
+                //xlLib.TipsUtils.showTipsDownToUp(str, isWarning);
                 break;
             }
             case 2: {
-                TipsUtils.showTipsLeftOrRight(str, isWarning, true);
+                xlLib.TipsUtils.showTipsLeftOrRight(str, isWarning, true);
                 break;
             }
             case 3: {
-                TipsUtils.showTipsLeftOrRight(str, isWarning, false);
+                xlLib.TipsUtils.showTipsLeftOrRight(str, isWarning, false);
                 break;
             }
             case 4: {
-                TipsUtils.showTipsFromCenter(str, isWarning);
+                xlLib.TipsUtils.showTipsFromCenter(str, isWarning);
                 break;
             }
             case 5: {
-                TipsUtils.showTipsBigToSmall(str, isWarning);
+                xlLib.TipsUtils.showTipsBigToSmall(str, isWarning);
                 break;
             }
             default: {
@@ -165,7 +164,7 @@ module EffectUtils {
         }
 
     }
-    */
+
     export function playButtonEffect(obj, cb = null): void {
         if (this.isPlayEffectPlay) {
             return;
@@ -441,13 +440,15 @@ module EffectUtils {
      * 金币飞行的效果
      * 
      */
-    export function coinsFly(obj: egret.DisplayObjectContainer,goldsrc:string,fuc:Function=null, startX, startY, endX = 140, endY = 64): void {
+    /*
+    export function coinsFly(obj: egret.DisplayObjectContainer,goldsrc:string,num:number,fuc:Function=null, startX, startY, endX = 140, endY = 64): void {
         var interval: number = 0;
         var coinsNum: number = 0;
         var flyEffect: Function = function () {
-            if (coinsNum > 8) {
+            if (coinsNum > num) {
                 clearInterval(interval);
                 coinsNum = 0;
+                fuc&&fuc();
                 return;
             }
             coinsNum++;
@@ -461,7 +462,34 @@ module EffectUtils {
                 .wait(100)
                 .call(function () {
                     obj.removeChild(coin);
-                    fuc&&fuc();
+                }, [obj, coin]);
+        }
+        interval = setInterval(flyEffect.bind(this), 100);
+    }*/
+
+    /**
+     * 金币飞行的效
+     */
+    export function coinsFly(obj: egret.DisplayObjectContainer, startX, startY, endX = 140, endY = 64): void {
+        var interval: number = 0;
+        var coinsNum: number = 0;
+        var flyEffect: Function = function () {
+            if (coinsNum > 8) {
+                clearInterval(interval);
+                coinsNum = 0;
+                return;
+            }
+            coinsNum++;
+            var coin: eui.Image = new eui.Image('gold');
+            coin.x = startX;
+            coin.y = startY;
+            coin.scaleX = 0.6;
+            coin.scaleY = 0.6;
+            obj.addChild(coin);
+            egret.Tween.get(coin).to({ x: endX, y: endY, scaleX: 1.1, scaleY: 1.1 }, 600)
+                .wait(100)
+                .call(function () {
+                    obj.removeChild(coin);
                 }, [obj, coin])
         }
         interval = setInterval(flyEffect.bind(this), 100);
