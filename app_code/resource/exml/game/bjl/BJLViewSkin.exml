@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BJLViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Image x="0" bottom="0"  source="bg_bjl_png" locked="true"/>
+	<e:Image x="0" bottom="0"  source="bg_bjl_jpg"/>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0" />
 
 	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
