@@ -65,35 +65,24 @@ class LobbyView extends eui.Component {
 
 	private initGameIconList():void
 	{  
-		let holdgameList:GameIconData[] = [new GameIconData().initData({
-                url:"btn_niuniu_png"}),
-			new GameIconData().initData({
-                url:"btn_jinhua_png"}),
-			new GameIconData().initData({
-                url:"btn_baijiale_png"})
+		let holdgameList:GameIconData[] = [
+			new GameIconData().initData({name:"牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU}),
+			new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isOpen:true,game:Const.GAME_ZHAJINHUA}),
+			new GameIconData().initData({name:"百家乐",url:"btn_baijiale_png",isOpen:true,game:Const.GAME_BAIJIALE}),
+			new GameIconData().initData({name:"二八杠",url:"btn_28_png",isopen:true,game:Const.GAME_ERBAGANG})
 			];
-		let pkList:GameIconData[] = [new GameIconData().initData({
-                url:"btn_niuniu_png"}),
-			new GameIconData().initData({
-                url:"btn_jinhua_png"}),
-			new GameIconData().initData({
-                url:"btn_baijiale_png"})
+		let pkList:GameIconData[] = [
+			new GameIconData().initData({name:"牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU}),
+			new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isOpen:true,game:Const.GAME_ZHAJINHUA}),
+			new GameIconData().initData({name:"百家乐",url:"btn_baijiale_png",isOpen:true,game:Const.GAME_BAIJIALE})
 			];
-		let mahjongList:GameIconData[] = [new GameIconData().initData({
-                url:"btn_28_png"}),
-			new GameIconData().initData({
-                url:"btn_28_png"}),
-			new GameIconData().initData({
-                url:"btn_28_png"})
+		let mahjongList:GameIconData[] = [
+			new GameIconData().initData({name:"二八杠",url:"btn_28_png",isOpen:false})
+		];
+		let allgameList:GameIconData[] = [
+			new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isopen:true,game:Const.GAME_ZHAJINHUA,isOpen:false})
 			];
-		let allgameList:GameIconData[] = [new GameIconData().initData({
-                url:"btn_jinhua_png"}),
-			new GameIconData().initData({
-                url:"btn_jinhua_png"}),
-			new GameIconData().initData({
-                url:"btn_jinhua_png"})
-			];
-		this.gameIconDataList = [holdgameList,pkList,mahjongList,[]];
+		this.gameIconDataList = [holdgameList,pkList,mahjongList,allgameList];
 		this.gamelistView = new GameIconListView();
 		this.setIconListData(this.viewlist.selectedIndex);
 	}
