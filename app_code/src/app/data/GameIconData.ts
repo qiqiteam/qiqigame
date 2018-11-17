@@ -8,6 +8,8 @@ class GameIconData {
 	{
        this.url = data.url;
 	   this.isOpen = data.isOpen;
+	   this.game = data.game;
+	   this.type = data.type;
 	   return this;
 	}
 	public constructor() {}

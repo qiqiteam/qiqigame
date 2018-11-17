@@ -25,6 +25,12 @@ class Const {
     public static TYPE_TBNN:string  = "tbnn";
     /**千人牛牛 */
     public static TYPE_QRNIUNIU:string  = "qrniuniu";
+    /**经典炸金花 */
+    public static TYPE_JINGDIANJINHUA:string  = "jingdianjinhua";
+    /**经典百家乐 */
+    public static TYPE_JINGDIANBAIJIALE:string  = "jingdianbaijiale";
+    /**经典二八杠 */
+    public static TYPE_ERBAGANGJINDIAN:string  ="erbagangjindian";
     //---------------------------房间类型
     /**抢庄牛牛--初级场 */
     public static PLAYWAY_CHUJICHANG:string  = "chujichang";

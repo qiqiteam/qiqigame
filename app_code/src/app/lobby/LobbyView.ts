@@ -66,21 +66,23 @@ class LobbyView extends eui.Component {
 	private initGameIconList():void
 	{  
 		let holdgameList:GameIconData[] = [
-			new GameIconData().initData({name:"牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU}),
-			new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isOpen:true,game:Const.GAME_ZHAJINHUA}),
-			new GameIconData().initData({name:"百家乐",url:"btn_baijiale_png",isOpen:true,game:Const.GAME_BAIJIALE}),
-			new GameIconData().initData({name:"二八杠",url:"btn_28_png",isopen:true,game:Const.GAME_ERBAGANG})
+				new GameIconData().initData({name:"抢庄牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU,type:Const.TYPE_QZNN}),
+				new GameIconData().initData({name:"通比牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU,type:Const.TYPE_TBNN}),
+				new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isOpen:true,game:Const.GAME_ZHAJINHUA,type:Const.TYPE_JINGDIANJINHUA}),
+				new GameIconData().initData({name:"百家乐",url:"btn_baijiale_png",isOpen:true,game:Const.GAME_BAIJIALE,type:Const.TYPE_JINGDIANBAIJIALE}),
+				new GameIconData().initData({name:"二八杠",url:"btn_28_png",isopen:true,game:Const.GAME_ERBAGANG,type:Const.TYPE_ERBAGANGJINDIAN})
 			];
 		let pkList:GameIconData[] = [
-			new GameIconData().initData({name:"牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU}),
-			new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isOpen:true,game:Const.GAME_ZHAJINHUA}),
-			new GameIconData().initData({name:"百家乐",url:"btn_baijiale_png",isOpen:true,game:Const.GAME_BAIJIALE})
+				new GameIconData().initData({name:"抢庄牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU,type:Const.TYPE_QZNN}),
+				new GameIconData().initData({name:"通比牛牛",url:"btn_niuniu_png",isOpen:true,game:Const.GAME_NIUNIU,type:Const.TYPE_TBNN}),
+				new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isOpen:true,game:Const.GAME_ZHAJINHUA,type:Const.TYPE_JINGDIANJINHUA}),
+				new GameIconData().initData({name:"百家乐",url:"btn_baijiale_png",isOpen:true,game:Const.GAME_BAIJIALE,type:Const.TYPE_JINGDIANBAIJIALE})
 			];
 		let mahjongList:GameIconData[] = [
-			new GameIconData().initData({name:"二八杠",url:"btn_28_png",isOpen:false})
+				new GameIconData().initData({name:"二八杠",url:"btn_28_png",isOpen:true,game:Const.GAME_ERBAGANG,type:Const.TYPE_ERBAGANGJINDIAN})
 		];
 		let allgameList:GameIconData[] = [
-			new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isopen:true,game:Const.GAME_ZHAJINHUA,isOpen:false})
+				new GameIconData().initData({name:"炸金花",url:"btn_jinhua_png",isopen:true,game:Const.GAME_ZHAJINHUA,type:Const.TYPE_JINGDIANJINHUA}),
 			];
 		this.gameIconDataList = [holdgameList,pkList,mahjongList,allgameList];
 		this.gamelistView = new GameIconListView();

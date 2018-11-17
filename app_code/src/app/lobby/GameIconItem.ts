@@ -26,7 +26,7 @@ class GameIconItem extends eui.Component {
 			return;
 		}
 		let rommView:RoomView = xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
-		// rommView
+		rommView.setGameIconData(this.icondata);
 	}
 
 	public setGameIconData(icondata:GameIconData):void
