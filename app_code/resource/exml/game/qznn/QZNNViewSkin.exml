@@ -549,7 +549,7 @@
 		<e:Rect height="30" width="330" y="-10" horizontalCenter="0" strokeWeight="1" />
 		<e:Label id="grpCaijinLabel" y="-8" horizontalCenter="0" bold="true" textColor="0xFFFF00" />
 	</e:Group>
-	<e:Group width="1364" height="104" y="724" x="108">
+	<e:Group id="_group_di" width="1364" height="104" y="724" x="108">
 		<e:Image width="1364" height="104" x="0" y="0" source="img_di_png"/>
 
 		<e:Group id="grpHead0" scaleX="1" scaleY="1" x="15" y="-35">
