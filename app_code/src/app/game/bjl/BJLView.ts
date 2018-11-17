@@ -338,15 +338,6 @@ class BJLView extends eui.Component {
         // //this.onTouchBet(0);
         // //PanelManage.openChat(this, 112, 300, "10003");
         // //this.joinCallback(this.r);
-
-        this._image_10zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._image_20zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._image_50zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._image_100zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._image_500zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-
-        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
         // this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
@@ -473,10 +464,17 @@ class BJLView extends eui.Component {
 
     /**监听服务器事件 */
     private addEvent(): void {
+        this._image_10zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_20zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_50zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_100zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_500zhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+
+        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
-
         EventUtil.addEventListener(EventConst.startGame, this.onStartGameBack, this);
         EventUtil.addEventListener(EventConst.onBJLjoinroom, this.onBJLjoinroomBack, this);
         EventUtil.addEventListener(EventConst.startBeton, this.onStartBetonBack, this);
@@ -1598,18 +1596,41 @@ class BJLView extends eui.Component {
             xlLib.TipsUtils.showFloatWordTips("游戏中！");
             return;
         }
-        let senddata: any = {
-            userid: UserInfo.getInstance().uid,
-            token: UserInfo.getInstance().token,
-        };
-        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
-            xlLib.SceneMgr.instance.changeScene(Lobby);
-        }, this);
+        //let senddata: any = {
+        //    userid: UserInfo.getInstance().uid,
+        //    token: UserInfo.getInstance().token,
+        //};
+        xlLib.SceneMgr.instance.changeScene(Lobby);
+        //xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
+        //    xlLib.SceneMgr.instance.changeScene(Lobby);
+        //}, this);
     }
 
     public destroy(): void {
-        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
+
+         this._image_10zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_20zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_50zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_100zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_500zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+
+        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+
+        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
+        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.startGame, this.onStartGameBack, this);
+        EventUtil.removeEventListener(EventConst.onBJLjoinroom, this.onBJLjoinroomBack, this);
+        EventUtil.removeEventListener(EventConst.startBeton, this.onStartBetonBack, this);
+        EventUtil.removeEventListener(EventConst.baccaratDeil, this.onBaccaratDeilBack, this);
+        EventUtil.removeEventListener(EventConst.bankerFillTheCard, this.onBankerFillTheCardBack, this);
+        EventUtil.removeEventListener(EventConst.homeFillTheCard, this.onHomeFillTheCardBack, this);
+        EventUtil.removeEventListener(EventConst.theNumberOfTooMuch, this.onTheNumberOfTooMuchBack, this);
+        EventUtil.removeEventListener(EventConst.acquisitionGolb, this.onAcquisitionGolbBack, this);
+        EventUtil.removeEventListener(EventConst.staticEndAll, this.onStaticEndAllBack, this);
+        if(this.cdTimer != null) {
+            this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
+        }
     }
 }
 

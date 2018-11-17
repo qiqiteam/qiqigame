@@ -13,7 +13,8 @@ class ZJHScene extends xlLib.GameScene
 
     public destroy()
     {
-    super.destroy();
+        this.ZJHView.destroy();
+        super.destroy();
     }
     /**
      * 添加适配

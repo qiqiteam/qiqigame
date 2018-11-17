@@ -23,6 +23,21 @@ class EventConst {
     /**离开房间 */
     public static niuniu_leave: string = "niuniu_leave";
 
+    /**准备 */
+    public static prepare:string ="prepare";
+    /**比牌 */
+    public static compareCard:string ="compareCard";
+    /**全压 */
+    public static pressure:string ="pressure";
+    /**弃牌 */
+    public static abandon:string ="abandon";
+    /**看牌 */
+    public static seecard:string ="seecard";
+    /**发牌 */
+    public static play:string="play";
+     /**(下注)*/
+    public static botpour:string ="botpour";
+    
     //------------------S to C---------------------服务端回包监听数据
     /**所有玩家列表*/
     public static players: string = "players";
@@ -66,4 +81,12 @@ class EventConst {
     /**(退出房间)*/
     public static leave: string = "leave";
 
+          /**(检查玩家是否中途退出房间)*/
+    public static gamestatus:string ="gamestatus";
+
+     /**(游戏类型)*/
+    public static gambleType:string ="gambleType";
+   
+      
+      
 }

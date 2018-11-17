@@ -3,49 +3,52 @@
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<e:Image x="0" bottom="2"  source="bg_zjh_jpg" locked="true"/>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true"/>
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
-		<e:Image id="bankerCard_0" x="688.56" y="543.24" scaleX="1" scaleY="1" source="card_101" width="48" height="63" />
-		<e:Image id="bankerCard_1" x="715.56" y="543.24" scaleX="1" scaleY="1" source="card_101" width="48" height="63" />
-		<e:Image id="bankerCard_2" x="743.56" y="543.24" scaleX="1" scaleY="1" source="card_101" width="48" height="63" />
-		<e:Image id="grpCard8_0" source="card_101" x="1060.04" y="520" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard8_1" x="1081.04" y="520" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard8_2" x="1101.04" y="520" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard7_0" source="card_101" x="1104.61" y="390" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard7_1" x="1125.61" y="390" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard7_2" x="1145.61" y="390" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard6_0" source="card_101" x="1072.15" y="270" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard6_1" x="1093.15" y="270" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard6_2" x="1113.15" y="270" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard5_0" source="card_101" x="919.72" y="210" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard5_1" x="940.72" y="210" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard5_2" x="960.72" y="210" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard4_0" source="card_101" x="690.99" y="210" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard4_1" x="711.99" y="210" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard4_2" x="731.99" y="210" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard3_0" source="card_101" x="451.82" y="210" scaleX="1" scaleY="1" />
-		<e:Image id="grpCard3_1" x="472.82" y="210" scaleX="1" scaleY="1" source="card_101" />
-		<e:Image id="grpCard3_2" x="492.82" y="210" scaleX="1" scaleY="1" source="card_101" />
-		<e:Image id="grpCard2_0" source="card_101" x="302.19" y="270" scaleX="1" scaleY="1" />
-		<e:Image id="grpCard2_1" x="323.19" y="270" scaleX="1" scaleY="1" source="card_101" />
-		<e:Image id="grpCard2_2" x="343.19" y="270" scaleX="1" scaleY="1" source="card_101" />
-		<e:Image id="grpCard1_0" source="card_101" x="279.64" y="390" scaleX="1" scaleY="1" />
-		<e:Image id="grpCard1_1" x="300.64" y="390" scaleX="1" scaleY="1" source="card_101" />
-		<e:Image id="grpCard1_2" x="320.64" y="390" scaleX="1" scaleY="1" source="card_101" />
-		<e:Image id="grpCard0_0" source="card_101" x="340.11" y="520" scaleX="1" scaleY="1" />
-		<e:Image id="grpCard0_1" x="361.11" y="520" scaleX="1" scaleY="1" source="card_101" />
-		<e:Image id="grpCard0_2" x="381.11" y="520" scaleX="1" scaleY="1" source="card_101" />
-		<e:Label id="labCardTypeBanker" y="580" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" x="699.42" scaleX="1" scaleY="1"/>
-		<e:Label id="labCardType0" text="豹子" x="345.57" y="557.9400000000002" size="24" bold="true" textAlign="center" width="82" textColor="0xffcc0c" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label x="285.15" y="425.65" text="豹子" textAlign="center" bold="true" width="82" size="24" id="labCardType1" textColor="0xffcc0c" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label id="labCardType2" y="305" text="豹子" textAlign="center" bold="true" width="82" size="24" x="314" textColor="0xffcc0c" stroke="1"/>
-		<e:Label x="455.39" y="247" text="豹子" textAlign="center" bold="true" width="82" size="24" id="labCardType3" textColor="0xffcc0c" stroke="1"/>
-		<e:Label x="695.92" y="247.52" text="豹子" textAlign="center" bold="true" width="82" size="24" id="labCardType4" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label x="925.04" y="247.04" text="豹子" textAlign="center" bold="true" width="82" size="24" id="labCardType5" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label x="1079" y="306.04" text="豹子" textAlign="center" bold="true" width="82" size="24" id="labCardType6" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label x="1110.56" y="426" text="豹子" textAlign="center" bold="true" width="82" size="24" id="labCardType7" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label x="1066" y="556" text="豹子" textAlign="center" bold="true" width="82" size="24" id="labCardType8" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" visible="false">
+
+
+
+		<e:Image id="grpCard9_0" source="card_101" x="1060.04" y="520" scaleX="1" scaleY="1"/>
+		<e:Image id="grpCard9_1" x="1081.04" y="520" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard9_2" x="1101.04" y="520" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard8_0" source="card_101" x="1104.61" y="390" scaleX="1" scaleY="1"/>
+		<e:Image id="grpCard8_1" x="1125.61" y="390" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard8_2" x="1145.61" y="390" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard7_0" source="card_101" x="1072.15" y="270" scaleX="1" scaleY="1"/>
+		<e:Image id="grpCard7_1" x="1093.15" y="270" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard7_2" x="1113.15" y="270" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard6_0" source="card_101" x="919.72" y="210" scaleX="1" scaleY="1"/>
+		<e:Image id="grpCard6_1" x="940.72" y="210" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard6_2" x="960.72" y="210" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard5_0" source="card_101" x="690.99" y="210" scaleX="1" scaleY="1"/>
+		<e:Image id="grpCard5_1" x="711.99" y="210" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard5_2" x="731.99" y="210" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard4_0" source="card_101" x="451.82" y="210" scaleX="1" scaleY="1" />
+		<e:Image id="grpCard4_1" x="472.82" y="210" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard4_2" x="492.82" y="210" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard3_0" source="card_101" x="302.19" y="270" scaleX="1" scaleY="1" />
+		<e:Image id="grpCard3_1" x="323.19" y="270" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard3_2" x="343.19" y="270" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard2_0" source="card_101" x="279.64" y="390" scaleX="1" scaleY="1" />
+		<e:Image id="grpCard2_1" x="300.64" y="390" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard2_2" x="320.64" y="390" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard1_0" source="card_101" x="340.11" y="520" scaleX="1" scaleY="1" />
+		<e:Image id="grpCard1_1" x="361.11" y="520" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard1_2" x="381.11" y="520" scaleX="1" scaleY="1" source="card_101" />
+		<e:Image id="grpCard0_0" x="688.56" y="543.24" scaleX="1" scaleY="1" source="card_101" width="48" height="63"/>
+		<e:Image id="grpCard0_1" x="715.56" y="543.24" scaleX="1" scaleY="1" source="card_101" width="48" height="63"/>
+		<e:Image id="grpCard0_2" x="743.56" y="543.24" scaleX="1" scaleY="1" source="card_101" width="48" height="63"/>
+		<e:Label id="labCardType0" y="580" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" x="699.42" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType1" text="豹子" x="345.57" y="557.9400000000002" size="24" bold="true" textAlign="center" width="82" textColor="0xffcc0c" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType2" x="285.15" y="425.65" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xffcc0c" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType3" y="305" text="豹子" textAlign="center" bold="true" width="82" size="24" x="314" textColor="0xffcc0c" stroke="1"/>
+		<e:Label id="labCardType4" x="455.39" y="247" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xffcc0c" stroke="1"/>
+		<e:Label id="labCardType5" x="695.92" y="247.52" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType6" x="925.04" y="247.04" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType7" x="1079" y="306.04" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType8" x="1110.56" y="426" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType9" x="1066" y="556" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
 	</e:Group>
-	<e:Group x="0" y="0" width="1472" height="828" locked="true">
+	<e:Group x="0" y="0" width="1472" height="828">
 		<ns1:ZJHHead id="grpHead1" width="20" height="20" x="150" y="510" skinName="ZJHHeadSkin" scaleX="1" scaleY="1"/>
 		<ns1:ZJHHead id="grpHead2" width="20" height="20" x="50" y="350" skinName="ZJHHeadSkin" scaleX="1" scaleY="1"/>
 		<ns1:ZJHHead id="grpHead3" width="20" height="20" x="130" y="150" skinName="ZJHHeadSkin" scaleX="1" scaleY="1"/>
@@ -56,7 +59,7 @@
 		<ns1:ZJHHead id="grpHead8" width="20" height="20" x="1280" y="350" skinName="ZJHHeadSkin" scaleX="1" scaleY="1"/>
 		<ns1:ZJHHead id="grpHead9" width="20" height="20" x="1180" y="510" skinName="ZJHHeadSkin" scaleX="1" scaleY="1"/>
 	</e:Group>
-	<e:Group x="0" y="0" visible="false" locked="true">
+	<e:Group x="0" y="0" locked="true" visible="false">
 		<e:Image x="0" y="0" source="jh.titlebg" />
 		<e:Image x="115" y="63" anchorOffsetX="0" source="hall.goldbg" />
 		<e:Image source="gold" y="64.3" x="104" />
@@ -515,12 +518,13 @@
 		<e:Image id="grpTipsInfo" source="d2" y="0" x="0" />
 	</e:Group>
 	<e:Image id="imgBaoZhuang" horizontalCenter="2" verticalCenter="0.5" source="jh.baozhuang"  visible="false"/>
-	<e:Group width="1364" height="104" y="724" x="108">
+
+	<e:Group width="1364" height="104" y="724" x="108" touchEnabled="false">
 		<e:Image x="0" y="0" source="bg_zjh_buttom_png"/>
 		<e:Group id="grpHead0" width="320" height="139" x="15" y="-35">
 		<e:Image source="img_tx_png"/>
 		<e:Image id="imghead0" x="0" y="0" source="F1_03_png" width="135" height="135"/>
-		<e:Label id="labelHead0" text="世界第一赌神" x="150.02" y="61" size="25" fontFamily="SimHei" textAlign="center" textColor="0xf2b354"/>
+		<e:Label id="labelHead0" text="世界第一赌神" x="150.02" y="61" size="25" fontFamily="SimHei" textAlign="center" textColor="0xf2b354" wordWrap="true"/>
 		<e:Label id="labelGold0" text="1000000" x="191.84" y="104.33" textColor="0xf4d727" textAlign="center"/>
 		<e:Image x="145" y="103" source="img_jinbi_png"/>
 		</e:Group>
@@ -540,7 +544,7 @@
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Button id="_btn_genzhu0" label="" x="680" y="18" width="150">
+		<e:Button id="_btn_jiazhu" label="" x="680" y="18" width="150">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="btn_zjh_up01_bg_png" source.down="btn_zjh_up01_bg_png"/>
@@ -548,7 +552,33 @@
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Button id="_btn_jiazhu" label="" x="840" y="18">
+		<e:Button id="_btn_X1" label="" x="673.47" y="-49.5" width="67" height="39">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="img_X1_0_png" source.down="img_X2_0_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+
+		</e:Button>
+		<e:Button id="_btn_X0" label="" x="556.22" y="-45.58" width="67" height="39">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="img_X1_0_png" source.down="img_X1_0_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_X2" label="" x="777.42" y="-47.1" width="67" height="39">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="img_X2_0_png" source.down="img_X1_0_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+
+		</e:Button>
+		<e:Button id="_btn_quanxia" label="" x="840" y="18">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="btn_zjh_up02_bg_png" source.down="btn_zjh_up02_bg_png"/>
@@ -572,12 +602,12 @@
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Image x="388" y="35" source="lab_calldown_png"/>
-		<e:Image x="556" y="35" source="lab_genzhu_png"/>
-		<e:Image x="716" y="35" source="lab_jiazhu_png"/>
-		<e:Image x="872" y="35" source="lab_qx20w_png"/>
-		<e:Image x="1090" y="35" source="lab_zjh_up_seecard_png"/>
-		<e:Image x="1240" y="35" source="lab_zjh_up_discard_png"/>
+		<e:Image x="388" y="35" source="lab_calldown_png" touchEnabled="false"/>
+		<e:Image x="556" y="35" source="lab_genzhu_png" touchEnabled="false"/>
+		<e:Image x="716" y="35" source="lab_jiazhu_png" touchEnabled="false"/>
+		<e:Image x="872" y="35" source="lab_qx20w_png" touchEnabled="false"/>
+		<e:Image x="1090" y="35" source="lab_zjh_up_seecard_png" touchEnabled="false"/>
+		<e:Image x="1240" y="35" source="lab_zjh_up_discard_png" touchEnabled="false"/>
 	</e:Group>
 	<e:Button id="_btn_close" label="" x="15" y="20">
 		<e:skinName>
@@ -609,6 +639,14 @@
 			<e:Image width="100%" height="100%" source="btn_yuyin_0_png" source.down="btn_yuyin_0_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_prepare" label="" x="893" y="395">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_yuyin_0_png" source.down="btn_yuyin_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
 		</e:skinName>
 	</e:Button>
 </e:Skin>

@@ -13,7 +13,8 @@ class TBNNScene extends xlLib.GameScene
 
     public destroy()
     {
-    super.destroy();
+        this.TBNNView.destroy();
+        super.destroy();
     }
     /**
      * 添加适配

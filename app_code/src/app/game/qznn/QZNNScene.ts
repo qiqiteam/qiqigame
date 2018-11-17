@@ -13,7 +13,8 @@ class QZNNScene extends xlLib.GameScene
 
     public destroy()
     {
-    super.destroy();
+        this.QZNNView.destroy();
+        super.destroy();
     }
     /**
      * 添加适配

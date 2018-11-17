@@ -13,7 +13,8 @@ class BJLScene extends xlLib.GameScene
 
     public destroy()
     {
-    super.destroy();
+        this.BJLView.destroy();
+        super.destroy();
     }
     /**
      * 添加适配

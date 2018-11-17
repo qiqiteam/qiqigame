@@ -74,8 +74,9 @@ class ZJHUtil {
         }
     }
 
-    public getCoinsPos(index): egret.Point {
+    public getCoinsPos(): egret.Point {
         var point: egret.Point = new egret.Point();
+        /*
         switch (index) {
             case 1:
                 point.x = 190;
@@ -94,28 +95,31 @@ class ZJHUtil {
                 point.y = 650;
                 break;
         }
+        */
+        point.x = 700;
+        point.y = 300;
         return point;
     }
 
     public getCardType(index): string {
         switch (index) {
-            case 32:
+            case 1:
                 return '豹子';
-            case 16:
+            case 2:
                 return '同花顺';
-            case 8:
+            case 3:
                 return '金花';
             case 4:
                 return '顺子';
-            case 2:
+            case 5:
                 return '对子';
-            case 1:
+            case 6:
                 return '单张';
         }
     }
 
     //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(num): Array<eui.Image> {
+    public coinsType(pos:egret.Point, num): Array<eui.Image> {
         var coinArr = [];
         var coinNum: number = 0;
         var src: string = '';
@@ -146,9 +150,9 @@ class ZJHUtil {
         }
         for (var i = 0; i < Math.round(coinNum); i++) {
             var coin: eui.Image = new eui.Image(src);
-            var p: egret.Point = this.coinPos();
-            coin.x = p.x;
-            coin.y = p.y;
+            //var p: egret.Point = this.coinPos();
+            coin.x = pos.x;
+            coin.y = pos.y;
             coinArr.push(coin);
         }
         return coinArr;
