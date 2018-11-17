@@ -122,7 +122,7 @@
                     panel.scaleY = 0.5;
                     panel.x = panel.x + popUpWidth / 4;
                     panel.y = panel.y + popUpHeight / 4;
-                    egret.Tween.get(panel).to({ alpha: 1, scaleX: 1, scaleY: 1, x: panel.x - popUpWidth / 4, y: panel.y - popUpHeight / 4 }, 300, egret.Ease.backOut);
+                    egret.Tween.get(panel).to({ alpha: 1, scaleX: 1, scaleY: 1, x: panel.x - popUpWidth / 4, y: panel.y - popUpHeight / 4 }, 600, egret.Ease.backOut);
                     break;
                 case PopUpEffect.CENTER_S:
                     panel.alpha = 0;

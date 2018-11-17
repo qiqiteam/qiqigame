@@ -133,7 +133,6 @@ class RoomView extends eui.Component {
         let senddata:any = {
 			userid:UserInfo.getInstance().uid,
         token:UserInfo.getInstance().token,playway:playway.id};
-        
          switch(this.gameIconData.type){
            case Const.TYPE_QZNN:
                 xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
@@ -157,7 +156,6 @@ class RoomView extends eui.Component {
                 xlLib.TipsUtils.showFloatWordTips("该功能暂未开放！");
            break;
         }
-
     }
 
     // private onBarItemTap(e: eui.ItemTapEvent): void {
