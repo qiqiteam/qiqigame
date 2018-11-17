@@ -372,7 +372,7 @@ class QZNNView extends eui.Component {
         this._btn_qiang_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
 
-        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
         // this.resize();
 

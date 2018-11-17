@@ -324,7 +324,7 @@ class ZJHView extends eui.Component {
         //this.joinCallback(this.r);
         //PanelManage.openChat(this, 112, 315, "10002");
 
-        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         this.resize();
 

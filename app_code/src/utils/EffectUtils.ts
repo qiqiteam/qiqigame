@@ -165,7 +165,7 @@ module EffectUtils {
 
     }
 
-    export function playButtonEffect(obj, cb = null): void {
+    export function playButtonEffect(obj, cb: Function, thisArg?: any): void {
         if (this.isPlayEffectPlay) {
             return;
         }
@@ -185,7 +185,7 @@ module EffectUtils {
             obj.scaleX = 1;
             obj.scaleY = 1;
             if (cb != null) {
-                cb();
+                 cb.call(thisArg);
             }
             egret.Tween.removeTweens(obj);
             this.isPlayEffectPlay = false;

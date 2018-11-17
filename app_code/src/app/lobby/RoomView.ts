@@ -186,6 +186,7 @@ class RoomView extends eui.Component {
     }
 
     public destroy(): void {
+        this.gameIconData = null;
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         // this._room_tab.removeEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
     }
