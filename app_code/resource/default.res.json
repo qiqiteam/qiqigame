@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bar_0_png,bar_1_png,loding_bg_png",
+			"keys": "bar_0_png,bar_1_png,loding_bg_png,loding_json",
 			"name": "preload"
 		},
 		{
@@ -2578,6 +2578,12 @@
 			"url": "assets/common/_btn_start.png",
 			"type": "image",
 			"name": "_btn_start_png"
+		},
+		{
+			"url": "assets/loding/loding.json",
+			"type": "sheet",
+			"name": "loding_json",
+			"subkeys": "spinner,tipsBg"
 		}
 	]
 }
