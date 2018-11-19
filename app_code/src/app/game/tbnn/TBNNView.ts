@@ -348,15 +348,6 @@ class TBNNView extends eui.Component {
         // //PanelManage.openChat(this, 112, 300, "10003");
         // //this.joinCallback(this.r);
 
-        this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-
-        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
         // this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
@@ -504,14 +495,20 @@ class TBNNView extends eui.Component {
     /**注册事件 */
     private addEvent(): void {
 
+	this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+
+        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
-
-        // EventUtil.addEventListener(EventConst.hog, this.onHogBack, this);
         EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
-
         EventUtil.addEventListener(EventConst.summary, this.over, this);
-        // EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
     }
 
     // private onHogBack(data: any): void {
@@ -1658,20 +1655,18 @@ class TBNNView extends eui.Component {
     }
 
     public destroy(): void {
-        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
-
         this._btn_begin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_buqiang.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+
+        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
+        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
+        EventUtil.removeEventListener(EventConst.summary, this.over, this);
         if(this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }

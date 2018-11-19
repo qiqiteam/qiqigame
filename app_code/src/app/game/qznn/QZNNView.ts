@@ -358,22 +358,6 @@ class QZNNView extends eui.Component {
         // //this.onTouchBet(0);
         // //PanelManage.openChat(this, 112, 300, "10003");
         // //this.joinCallback(this.r);
-
-        this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_buqiang.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_qiang_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-
-
-        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
         // this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
@@ -542,67 +526,28 @@ class QZNNView extends eui.Component {
     }
     /**注册事件 */
     private addEvent(): void {
-        //EventManage.addButtonEvent(this, this.btnClose, egret.TouchEvent.TOUCH_TAP, this.onTouchClose.bind(this));
-        //EventManage.addButtonEvent(this, this.btnCharge, egret.TouchEvent.TOUCH_TAP, this.onTouchCharge.bind(this));
-        //EventManage.addButtonEvent(this, this.btnUpBanker, egret.TouchEvent.TOUCH_TAP, this.onTouchUpBank.bind(this));
-        //EventManage.addButtonEvent(this, this.btnDownBanker, egret.TouchEvent.TOUCH_TAP, this.onTouchDownBank.bind(this));
-        //EventManage.addEvent(this, this.grpBankerInfo, egret.TouchEvent.TOUCH_TAP, this.getBankerList.bind(this));
-        //EventManage.addEvent(this, this.grpBankerList, egret.TouchEvent.TOUCH_TAP, this.onTouchCloseBankerList.bind(this));
-
-        //EventManage.addButtonEvent(this, this.btnCardType, egret.TouchEvent.TOUCH_TAP, this.onTouchCardType.bind(this));
-        //EventManage.addButtonEvent(this, this.btnCardHistroy, egret.TouchEvent.TOUCH_TAP, this.onTouchCardHistory.bind(this));
-        //EventManage.addButtonEvent(this, this.secondClose, egret.TouchEvent.TOUCH_TAP, this.onTouchCloseSecondPanel.bind(this));
-
-        //EventManage.addEvent(this, this.btnRedBox, egret.TouchEvent.TOUCH_TAP, this.onTouchRedBox.bind(this));
-        /*
-        for (var i = 0; i < 8; i++) {
-            if (i < 6) {
-                EventManage.addEvent(this, this['btnBet' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchBet.bind(this, i));
-                this['labBet' + i].touchEnabled = false;
-            }
-            if (i < 4) {
-                EventManage.addEvent(this, this['effectTouch' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSelectIndex.bind(this, i));
-                this['labBetsPool' + i].text = '0';
-                this['labBetsSelf' + i].text = '0';
-            }
-            EventManage.addButtonEvent(this, this['grpHead' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSeat.bind(this, i));
-            this['imghead' + i].source = '';
-            this['labelHead' + i].text = '';
-        }*/
-
-        //EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.OPERTE_REDBOX_COMPLETE, this.operateBoxComplete.bind(this));
-        //EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_PAY, this.updatePayData.bind(this));
-        //EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_MAIN, this.updateDataGold.bind(this));
+	this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_buqiang.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_qiang_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
 
-        // var data = {
-        //     pokes: [{ num: 3, type: 10, value: [406, 202, 301, 408, 303] },
-        //     { num: 3, type: 10, value: [201, 307, 412, 308, 104] },
-        //     { num: 1, type: 0, value: [313, 208, 409, 304, 105] },
-        //     { num: 1, type: 4, value: [402, 305, 203, 213, 404] },
-        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] },
-        //     { num: 2, type: 9, value: [112, 211, 212, 204, 205] }],
-        //     result: [1, 0, 0, 0],
-        //     bankerWin: 0,
-        //     rate: "0.05",
-        //     bomb: "0"
-        // };
-        // this.cdNum = 5;
+        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
-        // this.setGameResult(data);
-        // this.setCountdown();
-        // this.cardEffect();
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
 
         EventUtil.addEventListener(EventConst.hog, this.onHogBack, this);
         EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
-        // EventUtil.addEventListener(EventConst.cards, this.ards, this);
         EventUtil.addEventListener(EventConst.summary, this.over, this);
         EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
     }
@@ -1740,9 +1685,6 @@ class QZNNView extends eui.Component {
     }
 
     public destroy(): void {
-        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
-
         this._btn_begin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1754,6 +1696,15 @@ class QZNNView extends eui.Component {
         this._btn_qiang_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_qiang_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_qiang_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+
+        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
+        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+
+        EventUtil.removeEventListener(EventConst.hog, this.onHogBack, this);
+        EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
+        EventUtil.removeEventListener(EventConst.summary, this.over, this);
+        EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
         if(this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }

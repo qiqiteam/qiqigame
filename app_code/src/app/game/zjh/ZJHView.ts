@@ -323,10 +323,7 @@ class ZJHView extends eui.Component {
         // Net.send(Protocol.JOIN_GOLDEN_GAME, {}, this.joinCallback.bind(this));  //请求初始化数据
         //this.joinCallback(this.r);
         //PanelManage.openChat(this, 112, 315, "10002");
-
-        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
-        this.resize();
+        //this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
@@ -504,19 +501,15 @@ class ZJHView extends eui.Component {
         //this.setGameResult(data);
         //this.setCountdown();
         //this.cardEffect();
-
+	// this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.play, this.playpai, this);
         EventUtil.addEventListener(EventConst.gambleType, this.gametype, this);
-        //EventUtil.addEventListener(EventConst.botpour, this.bottompour, this);
-
-        //this.addPlayers(UserInfo.getInstance().playes);
 
         this._btn_prepare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        //this._btn_kanpai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onKanPaiClick, this);
         this._btn_kanpai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        //this._btn_genzhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGenZhuClick, this);//跟注加注动作
 
         this._btn_jiazhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_X1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
@@ -1593,9 +1586,7 @@ class ZJHView extends eui.Component {
     }
 
     public destroy(): void {
-        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
-        this._btn_prepare.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
         EventUtil.removeEventListener(EventConst.play, this.playpai, this);
