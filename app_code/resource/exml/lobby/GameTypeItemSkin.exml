@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="GameTypeItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled">
+<e:Skin class="GameTypeItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled" width="263" height="98">
 	<e:Image id="bg_img" x="0" y="0" scaleX="1" scaleY="1" source="" source.down="btn_game_bg_png" width="263" height="98"/>
 	<e:Image id="icon_img" source.down="{data.down_url}" source.up="{data.up_url}" x="41.97" y="20.76" scaleX="1" scaleY="1" anchorOffsetX="0" width="177.05" anchorOffsetY="0" height="54.48"/>
 </e:Skin>

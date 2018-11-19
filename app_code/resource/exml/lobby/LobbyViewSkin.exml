@@ -97,8 +97,8 @@
 		</e:Button>
 	</e:Group>
 		<e:Image source="game_class_bg_png" x="52.5" y="157" locked="true"/>
-	<e:Scroller  x="57.5" y="161" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="470" scrollPolicyV="on" scrollPolicyH="off" locked="true">
-		<e:TabBar id="menu_bar" width="100%" height="100%" itemRenderer="GameTypeItem">
+	<e:Scroller  x="57" y="206" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="400" scrollPolicyV="on" scrollPolicyH="off">
+		<e:TabBar id="menu_bar" width="100%" height="100%" itemRenderer="GameTypeItem" y="-1" x="1">
 			<e:layout>
 				<e:VerticalLayout/>
 			</e:layout>
