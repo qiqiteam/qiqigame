@@ -13,10 +13,10 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/app/Const.js",
-		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/views/GameDoc.js",
 		"bin-debug/views/GameScene.js",
+		"bin-debug/app/Const.js",
+		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
@@ -34,7 +34,11 @@
 		"bin-debug/app/game/bjl/BJLScene.js",
 		"bin-debug/app/game/bjl/BJLUtil.js",
 		"bin-debug/app/game/bjl/BJLView.js",
+		"bin-debug/app/game/brnn/BRNNHead.js",
 		"bin-debug/app/game/brnn/BrnnMainView.js",
+		"bin-debug/app/game/brnn/BRNNScene.js",
+		"bin-debug/app/game/brnn/BRNNUtil.js",
+		"bin-debug/app/game/brnn/BRNNView.js",
 		"bin-debug/app/game/erbagang/ErBaGangView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
@@ -54,6 +58,10 @@
 		"bin-debug/app/game/qznn/QZNNScene.js",
 		"bin-debug/app/game/qznn/QZNNUtil.js",
 		"bin-debug/app/game/qznn/QZNNView.js",
+		"bin-debug/app/game/rbg/RBGHead.js",
+		"bin-debug/app/game/rbg/RBGScene.js",
+		"bin-debug/app/game/rbg/RBGUtil.js",
+		"bin-debug/app/game/rbg/RBGView.js",
 		"bin-debug/app/game/recharge/orderinquiry.js",
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
@@ -77,7 +85,7 @@
 		"bin-debug/app/interface/IGameInformation.js",
 		"bin-debug/app/interface/IGameRecord.js",
 		"bin-debug/app/interface/IGameTableData.js",
-		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/lobby/GameIconItem.js",
 		"bin-debug/app/lobby/GameIconListView.js",
 		"bin-debug/app/lobby/GameTypeItem.js",
 		"bin-debug/app/lobby/Lobby.js",
@@ -141,6 +149,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/lobby/GameIconItem.js"
+		"bin-debug/app/component/ComBox.js"
 	]
 }

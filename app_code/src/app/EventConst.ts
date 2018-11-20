@@ -86,7 +86,10 @@ class EventConst {
 
     /**(游戏类型)*/
     public static gambleType: string = "gambleType";
-
+    /**(玩家下注)*/
+    //public static botpour:string ="botpour";
+    /**(结算)*/
+    public static settlement:string ="settlement";
 
 
 }

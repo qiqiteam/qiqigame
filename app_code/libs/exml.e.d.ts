@@ -66,7 +66,9 @@ declare class BJLHeadSkin extends eui.Skin{
 }
 declare class BJLViewSkin extends eui.Skin{
 }
-declare class BrnnMainViewSkin extends eui.Skin{
+declare class BRNNHeadSkin extends eui.Skin{
+}
+declare class BRNNViewSkin extends eui.Skin{
 }
 declare class ErBaGangViewSkin extends eui.Skin{
 }
@@ -99,6 +101,10 @@ declare class PlayerInfoViewSkin extends eui.Skin{
 declare class QZNNHeadSkin extends eui.Skin{
 }
 declare class QZNNViewSkin extends eui.Skin{
+}
+declare class RBGHeadSkin extends eui.Skin{
+}
+declare class RBGViewSkin extends eui.Skin{
 }
 declare class RechargeTypeItemSkin extends eui.Skin{
 }

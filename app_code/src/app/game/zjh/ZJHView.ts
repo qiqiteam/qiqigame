@@ -238,6 +238,7 @@ class ZJHView extends eui.Component {
     public _btn_quanxia: eui.Button;
     public _btn_kanpai: eui.Button;
     public _btn_qipai: eui.Button;
+    public _btn_bipai: eui.Button;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
     public _btn_chat: eui.Button;
@@ -357,9 +358,9 @@ class ZJHView extends eui.Component {
 
         //this._btn_gendaodi.touchEnabled = false;
         //this._btn_genzhu.touchEnabled = false;
-        //this._btn_jiazhu.touchEnabled = false;
+        this._btn_jiazhu.visible = false;
         //this._btn_quanxia20.touchEnabled = false;
-        this._btn_kanpai.touchEnabled = false;
+        this._btn_kanpai.visible = false;
         //this._btn_qipai.touchEnabled = false;
         this._btn_X0.visible = false;
         this._btn_X1.visible = false;
@@ -439,8 +440,14 @@ class ZJHView extends eui.Component {
                     value: data.cardtype //牌值
                 };
                 this.onKanPaiClick(poke);
-                this._btn_kanpai.visible=false;
+                this._btn_kanpai.visible = false;
             }, this);
+        } else if (e.target == this._btn_genzhu) {
+            this.sendamessage(EventConst.botpour, 1);
+            this.onGenZhuClick();
+            xlLib.TipsUtils.showFloatWordTips("跟注");
+            this._btn_genzhu.visible = false;
+            this._btn_X0.visible = false;
         } else if (e.target == this._btn_jiazhu) {
             this._btn_X1.visible = true;
             this._btn_X2.visible = true;
@@ -450,16 +457,54 @@ class ZJHView extends eui.Component {
                 this.onGenZhuClick();
             }
             xlLib.TipsUtils.showFloatWordTips("加注1.5倍");
+            this._btn_jiazhu.visible = false;
+            this._btn_X1.visible = false;
+            this._btn_X2.visible = false;
         } else if (e.target == this._btn_X2) {
             this.sendamessage(EventConst.botpour, 3);
             this.onGenZhuClick();
             xlLib.TipsUtils.showFloatWordTips("加注2倍");
+            this._btn_jiazhu.visible = false;
+            this._btn_X1.visible = false;
+            this._btn_X2.visible = false;
         } else if (e.target == this._btn_gendaodi) {
+
             xlLib.TipsUtils.showFloatWordTips("跟到底");
         } else if (e.target == this._btn_quanxia) {
+
             xlLib.TipsUtils.showFloatWordTips("全下");
         } else if (e.target == this._btn_qipai) {
+            /*let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
+            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
+            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+
+            let senddata: any = {
+                userid: UserInfo.getInstance().uid,
+                token: UserInfo.getInstance().token,
+                playway: playway.id
+            };
+            xlLib.WebSocketMgr.getInstance().send(EventConst.seecard, senddata, (data) => {
+                let poke = {
+                    type: data.cardGenre,//牌型
+                    value: data.cardtype //牌值
+                };
+                for (var i = 0; i < 3; i++) {
+                    var card = this['grpCard' + 0 + '_' + i];
+                    card.source = 'card_100';
+                    egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
+                        this[0].source = 'card_' + this[1];
+                        egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
+                    }, [card, poke.value[i]]);
+                    xlLib.DisplayUtils.setComponentEnabled(card, false);
+                }
+
+            }, this);*/
+            //this.sendamessage2(EventConst.seecard);
+            this.sendamessage2(EventConst.abandon);
             xlLib.TipsUtils.showFloatWordTips("弃牌");
+        } else if (e.target == this._btn_bipai) {
+
+            xlLib.TipsUtils.showFloatWordTips("比牌");
         }
 
     }
@@ -477,6 +522,35 @@ class ZJHView extends eui.Component {
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
 
         }, this);
+    }
+    private sendamessage2(sendstr: string): void {
+        let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
+            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
+            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+
+            let senddata: any = {
+                userid: UserInfo.getInstance().uid,
+                token: UserInfo.getInstance().token,
+                playway: playway.id
+            };
+            xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
+                let poke = {
+                    type: data.cardGenre,//牌型
+                    value: data.cardtype //牌值
+                };
+                for (var i = 0; i < 3; i++) {
+                    let val=poke.value[i];
+                    var card = this['grpCard' + 0 + '_' + i];
+                    card.source = 'card_100';
+                    egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
+                        this[0].source = 'card_' + this[1];
+                        egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
+                    }, [card, val]);
+                    xlLib.DisplayUtils.setComponentEnabled(card, false);
+                }
+
+            }, this);
+            this._btn_kanpai.visible=false;
     }
     private addEvent(): void {
         /*
@@ -501,12 +575,20 @@ class ZJHView extends eui.Component {
         //this.setGameResult(data);
         //this.setCountdown();
         //this.cardEffect();
-	// this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.play, this.playpai, this);
         EventUtil.addEventListener(EventConst.gambleType, this.gametype, this);
+        EventUtil.addEventListener(EventConst.pressure, this.ALLIN, this);
+        EventUtil.addEventListener(EventConst.seecard, this.kanpai, this);
+        EventUtil.addEventListener(EventConst.botpour, this.otherplayerxiazhu, this);
+        EventUtil.addEventListener(EventConst.abandon, this.discard, this);
+        EventUtil.addEventListener(EventConst.settlement, this.settleaccount, this);
+
+
+
 
         this._btn_prepare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_kanpai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
@@ -517,6 +599,7 @@ class ZJHView extends eui.Component {
         this._btn_gendaodi.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_quanxia.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_qipai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_bipai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
 
 
 
@@ -532,17 +615,42 @@ class ZJHView extends eui.Component {
 
         this._btn_kanpai.touchEnabled = true;
     }
-     /**判断是否下注 */
+    /**看牌 */
+    private kanpai(data: any): void {
+        if (data._obj.command == "seecard" && UserInfo.getInstance().uid != data._obj.userId) {
+            let seatnum = UserInfo.getInstance().findSeatNumber(data._obj.index);
+
+            this['labCardType' + seatnum].text = '看牌';
+
+            var cardPos = [];
+            for (var j = 0; j < 3; j++) {
+                var card: eui.Image = this['grpCard' + seatnum + '_' + j];
+                card.source = '';
+                card.anchorOffsetX = card.width / 2;
+                card.x += card.width / 2;
+                var pos: egret.Point = new egret.Point;
+                pos.x = card.x + 24;
+                pos.y = card.y;
+                cardPos[j] = pos;
+            }
+            this.orginPlayerCardPos[seatnum] = cardPos;
+        }
+
+    }
+    /**判断是否下注 */
     private gametype(data: any): void {
         console.log(data);
+        //if (data._obj.command == "gambleType" && UserInfo.getInstance().uid == data._obj.id) {
         if (data._obj.followPour == 0)//不可以下注
         {
             this._btn_jiazhu.touchEnabled = false;
+            this._btn_jiazhu.visible = false;
             this._btn_X1.visible = false;
             this._btn_X2.visible = false;
 
         } else if (data._obj.followPour == 1) {
             console.log("可以加注*********************************");
+            this._btn_jiazhu.visible = true;
             //this._btn_jiazhu.touchEnabled=true;
             let betarr: string[] = data._obj.limit.split(",");
             if (betarr.length == 1) {
@@ -568,14 +676,55 @@ class ZJHView extends eui.Component {
             // }
 
         }
+        // }
 
     }
 
-    private over(data: any): void {
-        // let arr={
-        //   value:data.
-        //}
-        //    this.pailist.push();
+    /**其他玩家下注*/
+    private otherplayerxiazhu(data: any): void {
+        if (data._obj.command == "botpour" && UserInfo.getInstance().uid != data._obj.id) {
+            this.onPlayerGenZhu(data._obj.index, 10000);
+        }
+    }
+    /**全压*/
+    private ALLIN(data: any): void {
+        if (data._obj.command == "pressure" && UserInfo.getInstance().uid != data._obj.id) {
+
+        }
+    }
+
+    /*玩家弃牌*/
+    private discard(data: any): void {
+        if (data._obj.command == "abandon" && UserInfo.getInstance().uid != data._obj.userId) {
+            let seatnum = UserInfo.getInstance().findSeatNumber(data._obj.index);
+
+            this['labCardType' + seatnum].text = '弃牌';
+            var cardPos = [];
+            for (var j = 0; j < 3; j++) {
+                var card = this['grpCard' + seatnum + '_' + j];
+                card.source = 'card_100';
+                card.anchorOffsetX = card.width / 2;
+                card.x += card.width / 2;
+                var pos: egret.Point = new egret.Point;
+                pos.x = card.x + 24;
+                pos.y = card.y;
+                cardPos[j] = pos;
+                xlLib.DisplayUtils.setComponentEnabled(card, false);
+            }
+            this.orginPlayerCardPos[seatnum] = cardPos;
+            //xlLib.DisplayUtils.setComponentEnabled(card, false); 
+            //自己不进行任何操作 视为弃牌状态 
+        } else if (data._obj.command == "abandon" && UserInfo.getInstance().uid == data._obj.userId) {
+            
+            //this.sendamessage2(EventConst.seecard);
+            this.sendamessage2(EventConst.abandon);
+            xlLib.TipsUtils.showFloatWordTips("自动弃牌");
+
+        }
+    }
+    /**结算 */
+    private settleaccount(data: any): void {
+        console.log("结算");
 
     }
     /**下注 */
@@ -633,8 +782,8 @@ class ZJHView extends eui.Component {
             this.imghead0.source = "F1_03_png";
         }
 
-        //设置其他玩家信息
-        for (let i = 1; i < 10; i++) {
+        //设置其他玩家信息  for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < 5; i++) {
             if (data._obj.player[i] != null) {
                 this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
             } else {
@@ -1194,9 +1343,9 @@ class ZJHView extends eui.Component {
         }
     }
 
-    private zhangIndex: number = 2;//庄的位置
+    private zhangIndex: number = 4;//庄的位置
     private flyIntval: number = 0;  //
-    private flyIndex0: number = 2;  //扑克位置(东西南北)
+    private flyIndex0: number = 4;  //扑克位置(东西南北)
     private flyIndex1: number = 0;  //扑克(指定位置1，2，3)
     //private flyBankerIndex: number = 0;
 
@@ -1215,22 +1364,26 @@ class ZJHView extends eui.Component {
         var pos = this.orginPlayerCardPos[this.flyIndex0][this.flyIndex1];
         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(6));
         egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
+        // if (this.flyIndex0 == 9) {
         if (this.flyIndex1 == 2) {
-            if (this.flyIndex0 == 9) {
+            if (this.flyIndex0 == 4) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 if (this.zhangIndex == 0) {
                     clearInterval(this.flyIntval);
+                    this._btn_kanpai.visible = true;
                     return;
                 }
             } else if (this.flyIndex0 == this.zhangIndex - 1) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
+                this._btn_kanpai.visible = true;
                 return;
             } else {
                 this.flyIndex1 = 0;
                 this.flyIndex0++;
+
             }
         }
         else {
@@ -1599,7 +1752,8 @@ class ZJHView extends eui.Component {
         this._btn_gendaodi.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_quanxia.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_qipai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        if(this.cdTimer != null) {
+        this._btn_bipai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }
     }

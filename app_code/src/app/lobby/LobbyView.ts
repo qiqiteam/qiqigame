@@ -51,8 +51,8 @@ class LobbyView extends eui.Component {
 
 		this._head_label.text = UserInfo.getInstance().username;
 		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
-		// this.initMenuBar();
-		// this.initGameIconList();
+		this.initMenuBar();
+		this.initGameIconList();
 
 		
 		// let test0: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("bjl_game_18_bg_png");

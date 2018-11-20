@@ -37,6 +37,13 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.acquisitionGolb, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.staticEndAll, this.onMessage);
 			
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.seecard, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.botpour, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.pressure, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.abandon, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.settlement, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.leave, this.onMessage);
+			
 		}
 
 		private onMessage(msg: any): void {
