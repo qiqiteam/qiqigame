@@ -426,36 +426,38 @@ class BJLView extends eui.Component {
     }
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
-
         if (e.target == this._image_10zhu) {
             console.log("_image_10zhu");
-            this.sendamessage(EventConst.onCatch, 10);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.baijialebeton, 10, 1);
+            xlLib.TipsUtils.showFloatWordTips("加注10");
         } else if (e.target == this._image_20zhu) {
             console.log("_image_20zhu");
-            this.sendamessage(EventConst.onCatch, 20);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.baijialebeton, 20, 1);
+            xlLib.TipsUtils.showFloatWordTips("加注20");
         } else if (e.target == this._image_50zhu) {
             console.log("_image_50zhu");
-            this.sendamessage(EventConst.onCatch, 50);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.baijialebeton, 50, 1);
+            xlLib.TipsUtils.showFloatWordTips("加注50");
         } else if (e.target == this._image_100zhu) {
             console.log("_image_100zhu");
-            this.sendamessage(EventConst.onCatch, 100);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.baijialebeton, 100, 1);
+            xlLib.TipsUtils.showFloatWordTips("加注100");
         } else if (e.target == this._image_500zhu) {
             console.log("_image_500zhu");
-            this.sendamessage(EventConst.onCatch, 500);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.baijialebeton, 500, 1);
+            xlLib.TipsUtils.showFloatWordTips("加注500");
         }
+        this.onGenZhuClick();
+        // this._btn_switch.visible = false;
     }
-    /**发送请求 sendstr：命令  bet：几倍 注数*/
-    private sendamessage(sendstr: string, bet: number): void {
+    /**发送请求 sendstr：命令 extparams：{ "moneys": 金额, "types": 押注类型 }*/
+    private sendamessage(sendstr: string, money: number, type: number): void {
 
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token,
-            data: bet,
+            playway: Const.PLAYWAY_CHUJICHANG,
+            extparams: { "moneys": money, "types": type }
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
 
@@ -478,26 +480,16 @@ class BJLView extends eui.Component {
         EventUtil.addEventListener(EventConst.startGame, this.onStartGameBack, this);
         EventUtil.addEventListener(EventConst.onBJLjoinroom, this.onBJLjoinroomBack, this);
         EventUtil.addEventListener(EventConst.startBeton, this.onStartBetonBack, this);
+        EventUtil.addEventListener(EventConst.onCatch, this.onbaijialebetonBack, this);
         EventUtil.addEventListener(EventConst.baccaratDeil, this.onBaccaratDeilBack, this);
-        EventUtil.addEventListener(EventConst.bankerFillTheCard, this.onBankerFillTheCardBack, this);
-        EventUtil.addEventListener(EventConst.homeFillTheCard, this.onHomeFillTheCardBack, this);
         EventUtil.addEventListener(EventConst.theNumberOfTooMuch, this.onTheNumberOfTooMuchBack, this);
         EventUtil.addEventListener(EventConst.acquisitionGolb, this.onAcquisitionGolbBack, this);
         EventUtil.addEventListener(EventConst.staticEndAll, this.onStaticEndAllBack, this);
 
-
-
-        var data = {
-            pokes: [{ value: [406, 202, 0] },
-                    { value: [112, 211, 0] }]
-        };
-        this.cardResult = data;
-        this.cardEffect();
-
     }
     /**开始匹配5秒倒计时 */
     private onStartGameBack(data: any): void {
-        console.log("开始匹配20秒倒计时");
+        console.log("开始匹50秒倒计时");
     }
     /**赔率 */
     private onBJLjoinroomBack(data: any): void {
@@ -505,32 +497,25 @@ class BJLView extends eui.Component {
     }
     /**可以开始下注5秒倒计时*/
     private onStartBetonBack(data: any): void {
-        console.log("可以开始下注15秒倒计时");
+        console.log("可以开始下注5秒倒计时");
+        this.showGameTips(2);
         this._btn_switch.visible = true;
+    }
+    /**有人下注 也有可能是参数错误等异常信息*/
+    private onbaijialebetonBack(data: any): void {
+        console.log("有人下注 也有可能是参数错误等异常信息");
     }
     /**第一次(开始发牌) */
     private onBaccaratDeilBack(msg: any): void {
+        this._btn_switch.visible = false;
         var data = {
-            pokes: [{ value: [406, 202] },
-                    { value: [112, 211] }],
-            result: [1, 0],
-            bankerWin: 0,
-            rate: "0.05",
-            bomb: "0"
+            pokes: [{ value: [msg._obj.bankerCard[0], msg._obj.bankerCard[1], msg._obj.bankerCard[2]] },
+            { value: [msg._obj.playerCard[0], msg._obj.playerCard[1], msg._obj.playerCard[2]] }],
         };
         this.cdNum = 5;
 
-        this.setGameResult(data);
-        this.setCountdown();
+        this.cardResult = data;
         this.cardEffect();
-    }
-    /**庄家补牌 */
-    private onBankerFillTheCardBack(data: any): void {
-        console.log("庄家补牌");
-    }
-    /**闲家补牌 */
-    private onHomeFillTheCardBack(data: any): void {
-        console.log("闲家补牌");
     }
     /**参数异常 */
     private onTheNumberOfTooMuchBack(data: any): void {
@@ -624,6 +609,20 @@ class BJLView extends eui.Component {
         }
     }
 
+    /**自己点击跟注 */
+    private onGenZhuClick() {
+        var p: egret.Point = new egret.Point();
+        p.x = 268;
+        p.y = 792;
+        this.showCoins(p, 10000);
+    }
+    /**其他玩家跟注 */
+    private onPlayerGenZhu(index, gold) {
+        var p: egret.Point = new egret.Point();
+        p.x = this["grpHead" + index].x + 21;
+        p.y = this["grpHead" + index].y + 110;
+        this.showCoins(p, gold);
+    }
 
     //设置彩金
     //private setHandsel(num): void {
@@ -848,7 +847,7 @@ class BJLView extends eui.Component {
                     if (list[i].score == this.poolBetArray[i])
                         continue;
                     if (this.isCanBets) {
-                        this.showCoins(list[i].score - this.poolBetArray[i], i);//list[i].score
+                        //this.showCoins(list[i].score - this.poolBetArray[i], i);//list[i].score
                     }
                     if (parseInt(this['labBetsPool' + (i - 1)].text) < (list[i].score / 10000)) {
                         //this['labBetsPool' + (i - 1)].text = QuickManage.moneyStr(list[i].score);
@@ -1112,21 +1111,23 @@ class BJLView extends eui.Component {
     }
 
     //显示筹码
-    private showCoins(num, index): void {
+    private showCoins(pos: egret.Point, num): void {
         var isRemove: boolean = false;
-        this.playClickSound(BJLUtil.getInstance().getSoundEffect(8));
-        var point: egret.Point = BJLUtil.getInstance().getCoinsPos(index);
-        var arr = BJLUtil.getInstance().coinsType(num);
-        if (this.coinsNumArr[index] < 50) {
-            this.coinsNumArr[index] = parseInt(this.coinsNumArr[index]) + arr.length;
-            isRemove = false;
-        }
-        else {
-            isRemove = true;
-        }
+        this.playClickSound(ZJHUtil.getInstance().getSoundEffect(8));
+        //var point: egret.Point = ZJHUtil.getInstance().getCoinsPos(index);
+        var point: egret.Point = ZJHUtil.getInstance().getCoinsPos();
+
+        var arr = ZJHUtil.getInstance().coinsType(pos, num);
+        //if (this.coinsNumArr[index] < 50) {
+        //    this.coinsNumArr[index] = parseInt(this.coinsNumArr[index]) + arr.length;
+        //    isRemove = false;
+        //}
+        //else {
+        //    isRemove = true;
+        //}
         for (var i = 0; i < arr.length; i++) {
-            var tx = point.x + Math.random() * 50;
-            var ty = point.y + Math.random() * 50;
+            var tx = point.x + Math.random() * 80;
+            var ty = point.y + Math.random() * 80;
             this.grpCoins.addChild(arr[i]);
             egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call(function () {
                 if (this[0]) {
@@ -1142,6 +1143,7 @@ class BJLView extends eui.Component {
 
     private flyIndex0: number = 0;  //扑克位置(东西南北)
     private flyIndex1: number = 0;  //扑克(指定位置1，2，3)
+
     /**
      * 显示发牌
      */
@@ -1164,7 +1166,7 @@ class BJLView extends eui.Component {
         card.x += card.width / 2;
         var pos = this.orginPlayerCardPos[this.flyIndex0][this.flyIndex1];
         this.playClickSound(BJLUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400).call(this.playerCardRotation,this);
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400).call(this.playerCardRotation, this);
 
     }
 
@@ -1176,20 +1178,31 @@ class BJLView extends eui.Component {
         egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
             this[0].source = 'nn.card_' + this[1];
             egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-        }, [card, poke[this.flyIndex0].value[this.flyIndex1]]).call(this.cycleCallback,this);
+        }, [card, poke[this.flyIndex0].value[this.flyIndex1]]).call(this.cycleCallback, this);
 
     }
 
-    private cycleCallback():void {
-        if(this.flyIndex0==1) {
-            this.flyIndex0 = 0
+    private cycleCallback(): void {
+        if (this.flyIndex0 == 1) {
+            this.flyIndex0 = 0;
             this.flyIndex1++;
         } else {
             this.flyIndex0++;
         }
-        if(this.flyIndex1>2) {
+
+        if (this.cardResult.pokes[this.flyIndex0].value[this.flyIndex1] == -1) {
+            //this.flyIndex0 = 0;
+            //this.flyIndex1 = 0;
+            this.cycleCallback();
+            return;
+        }
+
+        if (this.flyIndex1 > 2) {
             this.flyIndex0 = 0;
             this.flyIndex1 = 0;
+            if (this.flyIntval != 0) {
+                clearInterval(this.flyIntval);
+            }
             return;
         }
         this.playCardFly();
@@ -1596,19 +1609,19 @@ class BJLView extends eui.Component {
             xlLib.TipsUtils.showFloatWordTips("游戏中！");
             return;
         }
-        //let senddata: any = {
+        // let senddata: any = {
         //    userid: UserInfo.getInstance().uid,
         //    token: UserInfo.getInstance().token,
-        //};
+        // };
         xlLib.SceneMgr.instance.changeScene(Lobby);
-        //xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
+        // xlLib.WebSocketMgr.getInstance().send(EventConst.leave, senddata, (data) => {
         //    xlLib.SceneMgr.instance.changeScene(Lobby);
-        //}, this);
+        // }, this);
     }
 
     public destroy(): void {
 
-         this._image_10zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._image_10zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._image_20zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._image_50zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._image_100zhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1623,12 +1636,10 @@ class BJLView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onBJLjoinroom, this.onBJLjoinroomBack, this);
         EventUtil.removeEventListener(EventConst.startBeton, this.onStartBetonBack, this);
         EventUtil.removeEventListener(EventConst.baccaratDeil, this.onBaccaratDeilBack, this);
-        EventUtil.removeEventListener(EventConst.bankerFillTheCard, this.onBankerFillTheCardBack, this);
-        EventUtil.removeEventListener(EventConst.homeFillTheCard, this.onHomeFillTheCardBack, this);
         EventUtil.removeEventListener(EventConst.theNumberOfTooMuch, this.onTheNumberOfTooMuchBack, this);
         EventUtil.removeEventListener(EventConst.acquisitionGolb, this.onAcquisitionGolbBack, this);
         EventUtil.removeEventListener(EventConst.staticEndAll, this.onStaticEndAllBack, this);
-        if(this.cdTimer != null) {
+        if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }
     }

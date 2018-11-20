@@ -2,9 +2,9 @@
 <e:Skin class="LobbyViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="166bf8530b5" ></w:Config>
 	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg" locked="true"/>
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0" locked="true">
-		<e:Image x="-410" y="-13" scaleX="1" scaleY="1" source="ding_png"/>
-		<e:Button id="_set" label="" x="1279.27" y="11" width="136" height="64">
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
+		<e:Image scaleX="1" scaleY="1" source="ding_png" horizontalCenter="0" top="0" locked="true"/>
+		<e:Button id="_set" label="" x="1279.27" y="9" width="136" height="64">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="btn_set_0_png" source.down="btn_set_1_png"/>
@@ -12,7 +12,7 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_service" label="" x="941.79" y="11" scaleX="1" scaleY="1">
+		<e:Button id="_service" label="" x="1091.79" y="3" scaleX="1" scaleY="1">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="btn_kefu_0_png" source.down="btn_kefu_1_png"/>
@@ -20,16 +20,9 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_information" label="" x="1107.75" y="11">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_info_0_png" source.down="btn_info_1_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Image x="514" y="16" scaleX="1" scaleY="1" source="coin_bg_png"/>
-		<e:Button id="_playerinfo" label="" x="61" y="2" scaleX="0.9" scaleY="0.9">
+
+		<e:Image scaleX="1" scaleY="1" source="coin_bg_png" horizontalCenter="0" y="17"/>
+		<e:Button id="_playerinfo" label="" x="42.76" y="2" scaleX="0.8" scaleY="0.8">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="head_png" source.down="head_png"/>
@@ -37,17 +30,17 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Image x="44" y="4" scaleX="0.5" scaleY="0.5" source="v_png"/>
-		<e:Label id="_head_label" text="中国第一赌神" x="169.5" y="29" scaleX="1" scaleY="1" size="35" fontFamily="KaiTi"/>
-		<e:Label id="_coin_label" text="" x="586" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34"/>
+		<e:Image x="383.37" y="4" source="v_png"/>
+		<e:Label id="_head_label" text="中国第一赌神" x="151.26" y="29" scaleX="1" scaleY="1" size="35" fontFamily="KaiTi"/>
+		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
 	</e:Group>
 	<e:Group x="151.67" y="100">
 		<e:Image x="0" y="0" scaleX="1" scaleY="1" source="title_bg_png"/>
 		<e:Image x="211.33" y="7" scaleX="1" scaleY="1" source="trumpet_png"/>
 	</e:Group>
 	<e:Group width="100%" height="150" x="0" bottom="0">
-		<e:Image scaleX="1" scaleY="1" bottom="0" horizontalCenter="-33" source="di_bg_png"/>
-		<e:Button id="_generalize" label="" x="16" y="15.5">
+		<e:Image scaleX="1" scaleY="1" bottom="0" horizontalCenter="0" source="di_bg_png"/>
+		<e:Button id="_generalize" label="" x="16" y="35.26">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="generalize_0_png" source.down="generalize_1_png"/>
@@ -55,7 +48,7 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_safebox" label="" x="373.57" y="24.5">
+		<e:Button id="_safebox" label="" x="361.41" y="56">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="btn_safebox_0_png" source.down="btn_safebox_1_png"/>
@@ -63,7 +56,15 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_challenge" label="" x="548.5" y="24.5">
+		<e:Button id="_information" label="" x="723.14" y="56">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_info_0_png" source.down="btn_info_1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_challenge" label="" x="536.34" y="54.9" visible="false">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="btn_challenge_0_png" source.down="btn_challenge_1_png"/>
@@ -71,7 +72,7 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_welfare" label="" x="736" y="24.5">
+		<e:Button id="_welfare" label="" x="541.96" y="56">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="btn_welfare_0_png" source.down="btn_welfare_1_png"/>
@@ -79,7 +80,7 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_shoppingmall" label="" x="946" y="7">
+		<e:Button id="_shoppingmall" label="" x="946" y="26.76">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="shoppingmall_0_png" source.down="shoppingmall_1_png"/>
@@ -87,7 +88,7 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_topup" label="" x="1207" y="9">
+		<e:Button id="_topup" label="" x="1207" y="28.76">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="topup_0_png" source.down="topup_1_png"/>
@@ -115,4 +116,12 @@
 		<e:Group id="_group_game" width="100%" height="100%" anchorOffsetX="0" y="0">
 		</e:Group>
     </e:ViewStack>
+	<e:Group width="100%" height="534" y="152.88" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" visible="false">
+		<e:Group id="_group" width="275" height="100%" x="42.56" scaleX="1" scaleY="1" verticalCenter="0">
+			<e:Image width="275" height="534" source="qznn_game_830_bg_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
+		</e:Group>
+		<e:Scroller width="1092" height="534" x="346.66" verticalCenter="0" scrollPolicyH="on">
+			<e:Group id="_sceoller"/>
+		</e:Scroller>
+	</e:Group>
 </e:Skin>

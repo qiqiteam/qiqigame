@@ -53,6 +53,7 @@ class BJLUtil {
 
     public getCoinsPos(index): egret.Point {
         var point: egret.Point = new egret.Point();
+        /*
         switch (index) {
             case 1:
                 point.x = 195;
@@ -71,6 +72,9 @@ class BJLUtil {
                 point.y = 633;
                 break;
         }
+        */
+        point.x = 700;
+        point.y = 300;
         return point;
     }
 
@@ -171,65 +175,41 @@ class BJLUtil {
         }
     }
 
-    //筹码类型
-    public coinsType(num): Array<eui.Image> {
+    //筹码类型        1000w   5000w   1y  3y  5y
+    public coinsType(pos:egret.Point, num): Array<eui.Image> {
         var coinArr = [];
         var coinNum: number = 0;
         var src: string = '';
         num = Math.round(num / 10000);
         if (num > 0 && num < 10) {  //1w
             coinNum = num;
-            src = 'nn.b1a';
+            src = 'b1a';
         }
-        else if (num > 9 && num < 100) {    //10w
+        else if (num > 9 && num < 100) {   //1000w---10w
             coinNum = num / 10;
-            src = 'nn.b2a';
+            src = 'b2a';
         }
-        else if (num > 99 && num < 1000) {  //100w
+        else if (num > 99 && num < 1000) {   //5000w---100w
             coinNum = num / 100;
-            src = 'nn.b3a';
+            src = 'b3a';
         }
-        else if (num > 999 && num < 5000) { //1000w
+        else if (num > 999 && num < 10000) { //1y----1000w
             coinNum = num / 1000;
-            src = 'nn.b4a';
+            src = 'b4a';
         }
-        else if (num > 4999 && num < 10000) { //5000w
-            coinNum = num / 5000;
-            src = 'nn.b5a';
-        }
-        else {  //1y
+        else if (num > 9999 && num < 100000) { //3y---1y
             coinNum = num / 10000;
-            src = 'nn.b6a';
+            src = 'b5a';
         }
-        // if (num > 9 && num < 50) {
-        //     coinNum = num / 10;
-        //     src = 'nn.b1a';
-        // }
-        // else if (num > 49 && num < 100) {
-        //     coinNum = num / 50;
-        //     src = 'nn.b2a';
-        // }
-        // else if (num > 99 && num < 500) {
-        //     coinNum = num / 100;
-        //     src = 'nn.b3a';
-        // }
-        // else if (num > 499 && num < 1000) {
-        //     coinNum = num / 500;
-        //     src = 'nn.b4a';
-        // }
-        // else if (num > 999 && num < 5000) {
-        //     coinNum = num / 1000;
-        //     src = 'nn.b5a';
-        // }
-        // else {
-        //     coinNum = num / 5000;
-        //     src = 'nn.b6a';
-        // }
+        else {  //5y
+            coinNum = num / 50000;
+            src = 'b6a';
+        }
         for (var i = 0; i < Math.round(coinNum); i++) {
             var coin: eui.Image = new eui.Image(src);
-            var p: egret.Point = this.coinPos();
-            coin.x = p.x;
-            coin.y = p.y;
+            //var p: egret.Point = this.coinPos();
+            coin.x = pos.x;
+            coin.y = pos.y;
             coinArr.push(coin);
         }
         return coinArr;

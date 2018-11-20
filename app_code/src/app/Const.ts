@@ -1,10 +1,10 @@
 class Const {
     //正式版本----------------------------------------
-    // public static GAME_HOST:string = "192.168.1.26";
-    public static GAME_HOST:string = "47.52.138.199";
+    public static GAME_HOST:string = "192.168.1.47";
+    // public static GAME_HOST:string = "47.52.138.199";
     public static GAME_PORT:string = "9081";
-    // public static httpUrl:string = "http://192.168.1.26:80";
-    public static httpUrl:string = "http://47.52.138.199:80";
+    public static httpUrl:string = "http://192.168.1.47:80";
+    // public static httpUrl:string = "http://47.52.138.199:80";
     // //测试服----------------------------------------
     // public static GAME_HOST:string = "192.168.1.36";
     // public static GAME_PORT:string = "9081";
@@ -34,6 +34,6 @@ class Const {
     /**经典二八杠 */
     public static TYPE_ERBAGANGJINDIAN:string  ="erbagangjindian";
     //---------------------------房间类型
-    /**抢庄牛牛--初级场 */
+    /**初级场 */
     public static PLAYWAY_CHUJICHANG:string  = "chujichang";
 }
