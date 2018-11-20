@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bar_0_png,bar_1_png,loding_bg_png,loding_json",
+			"keys": "bar_0_png,bar_1_png,loding_bg_png,loding_json,zjh_game_230_bg_png,bjl_game_18_bg_png,ebg_game_720_bg_png,tbnn_game_870_bg_png,brnn_game_930_bg_png",
 			"name": "preload"
 		},
 		{
@@ -2704,6 +2704,31 @@
 			"url": "assets/hall/qznn_game_830_bg.png",
 			"type": "image",
 			"name": "qznn_game_830_bg_png"
+		},
+		{
+			"name": "zjh_game_230_bg_png",
+			"type": "image",
+			"url": "assets/hall/zjh_game_230_bg.png"
+		},
+		{
+			"name": "bjl_game_18_bg_png",
+			"type": "image",
+			"url": "assets/hall/bjl_game_18_bg.png"
+		},
+		{
+			"name": "ebg_game_720_bg_png",
+			"type": "image",
+			"url": "assets/hall/ebg_game_720_bg.png"
+		},
+		{
+			"name": "tbnn_game_870_bg_png",
+			"type": "image",
+			"url": "assets/hall/tbnn_game_870_bg.png"
+		},
+		{
+			"name": "brnn_game_930_bg_png",
+			"type": "image",
+			"url": "assets/hall/brnn_game_930_bg.png"
 		}
 	]
 }

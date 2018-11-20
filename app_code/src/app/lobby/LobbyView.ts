@@ -51,8 +51,27 @@ class LobbyView extends eui.Component {
 
 		this._head_label.text = UserInfo.getInstance().username;
 		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
-		this.initMenuBar();
-		this.initGameIconList();
+		// this.initMenuBar();
+		// this.initGameIconList();
+
+		
+		// let test0: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("bjl_game_18_bg_png");
+		// test0.x = 10; test0.y = 8;
+		// let test1: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("brnn_game_930_bg_png");
+		// test1.x = 280; test1.y = 8;
+		// let test2: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("tbnn_game_870_bg_png");
+		// test2.x = 550; test2.y = 8;
+		// let test3: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("ebg_game_720_bg_png");
+		// test3.x = 810; test3.y = 8;
+		// let test4: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("bjl_game_18_bg_png");
+		// test4.x = 10; test4.y = 293;
+		// let test5: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("zjh_game_230_bg_png");
+		// test5.x = 280; test5.y = 293;
+		// let test6: egret.Bitmap = xlLib.DisplayUtils.createBitmapByName("bjl_game_18_bg_png");
+		// test6.x = 550; test6.y = 293;
+		// this._sceoller.addChild(test0);this._sceoller.addChild(test1);this._sceoller.addChild(test2);
+		// this._sceoller.addChild(test3);this._sceoller.addChild(test4);this._sceoller.addChild(test5);
+		// this._sceoller.addChild(test6);
 
 		// let effect0: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_830_effect_logo", "game_830_effect_logo");
 		// effect0.play(-1); effect0.x = 160; effect0.y = 5;
@@ -66,18 +85,18 @@ class LobbyView extends eui.Component {
 		// let effect: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_230_effect", "game_230_effect");
 		// effect.play(-1); effect.x = 0; effect.y = 0;
 		// let effect1: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_610_effect", "game_610_effect");
-		// effect1.play(-1); effect1.x = 280; effect1.y = 0;
+		// effect1.play(-1); effect1.x = 270; effect1.y = 0;
 		// let effect2: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_630_effect", "game_630_effect");
-		// effect2.play(-1); effect2.x = 560; effect2.y = 0;
+		// effect2.play(-1); effect2.x = 540; effect2.y = 0;
 		// let effect3: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_720_effect", "game_720_effect");
-		// effect3.play(-1); effect3.x = 840; effect3.y = 0;
+		// effect3.play(-1); effect3.x = 810; effect3.y = 0;
 
 		// let effect4: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_730_effect", "game_730_effect");
 		// effect4.play(-1); effect4.x = 0; effect4.y = 285;
 		// let effect5: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_910_effect", "game_910_effect");
-		// effect5.play(-1); effect5.x = 280; effect5.y = 285;
+		// effect5.play(-1); effect5.x = 270; effect5.y = 285;
 		// let effect6: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("game_920_effect", "game_920_effect");
-		// effect6.play(-1); effect6.x = 560; effect6.y = 285;
+		// effect6.play(-1); effect6.x = 540; effect6.y = 285;
 
 		// this._group.addChild(effect0); this._group.addChild(effect01); this._group.addChild(effect111);
 		// this._sceoller.addChild(effect11); this._sceoller.addChild(effect); this._sceoller.addChild(effect1);
