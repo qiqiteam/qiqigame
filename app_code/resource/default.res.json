@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bar_0_png,bar_1_png,loding_bg_png,loding_json,zjh_game_230_bg_png,bjl_game_18_bg_png,ebg_game_720_bg_png,tbnn_game_870_bg_png,brnn_game_930_bg_png,effcet_hot2_json,effcet_hot2_png,game_230_effect2_json,game_230_effect2_png,game_610_effect2_json,game_610_effect2_png,game_630_effect2_json,game_630_effect2_png,game_720_effect2_json,game_720_effect2_png,game_720_effect_logo2_json,game_720_effect_logo2_png,game_730_effect2_json,game_730_effect2_png,game_830_effect2_json,game_830_effect2_png,game_830_effect_logo2_json,game_830_effect_logo2_png,game_910_effect2_json,game_910_effect2_png,game_920_effect2_json,game_920_effect2_png,bjl_game_18_bg2_png,brnn_game_930_bg2_png,btn_xuanzhe_02_png,btn_xuanzhe_12_png,ebg_game_720_bg2_png,qznn_game_830_bg2_png,tbnn_game_870_bg2_png,zjh_game_230_bg2_png,btn_bipai_png,btn_quanxia_png,btn_xuanzhe_03_png,btn_xuanzhe_13_png,coin_bg2_png,left_list_1_png,nn_left_bg_png,qznn__base_score_png,qznn__base_score_0_png,qznn__base_score_1_png,qznn__base_score_2_png,qznn__base_score_3_png,qznn__base_score_4_png,qznn__base_score_5_png,qznn__base_score_6_png,qznn__base_score_7_png,qznn__base_score_8_png,qznn__base_score_9_png,qznn__base_score1_png,qznn_btn_bg1_看图王_png,qznn_effcet_pic_person_png,qznn_pic1_png,qznn_pic2_png,qznn_pic3_png,qznn_pic4_png,qznn_pic5_png,qznn_pic6_png,qznn_right_bg_png,room_bg_jpg,room_close2_png,room_menu_bg2_png,room_meun_btn_02_png,room_rule_btn_02_png,room_shang_di2_png,root_record_btn_02_png,system_flag_png,title_baijiale2_png,title_bairenniuniu_png,title_erbagang2_png,title_qiangzhuangniuniu_png,title_tongbiniuniu2_png,title_zhajinhuua_png,btn_xuanzhe_04_png,btn_xuanzhe_14_png,coin_bg3_png,left_list_12_png,nn_left_bg2_png,qznn_btn_bg1_看图王2_png,qznn_effcet_pic_person2_png,qznn_pic12_png,qznn_pic22_png,qznn_pic32_png,qznn_pic42_png,qznn_pic52_png,qznn_pic62_png,qznn_right_bg2_png,qznn__base_score2_png,qznn__base_score12_png,qznn__base_score_02_png,qznn__base_score_12_png,qznn__base_score_22_png,qznn__base_score_32_png,qznn__base_score_42_png,qznn__base_score_52_png,qznn__base_score_62_png,qznn__base_score_72_png,qznn__base_score_82_png,qznn__base_score_92_png,room_bg2_jpg,room_close3_png,room_menu_bg3_png,room_meun_btn_03_png,room_rule_btn_03_png,room_shang_di3_png,root_record_btn_03_png,system_flag2_png,title_baijiale3_png,title_bairenniuniu2_png,title_erbagang3_png,title_qiangzhuangniuniu2_png,title_tongbiniuniu3_png,title_zhajinhuua2_png,btn_caidan_png,btn_caidan1_png,btn_fanhui_png,btn_fanhui1_png,btn_huangseanniu_png,btn_huangseanniu1_png,btn_liaotian_png,btn_liaotian1_png,btn_yuyin_png,btn_yuyin1_png,eff_youxikaishi_1_png,eff_youxikaishi_10_png,eff_youxikaishi_11_png,eff_youxikaishi_12_png,eff_youxikaishi_2_png,eff_youxikaishi_3_png,eff_youxikaishi_4_png,eff_youxikaishi_5_png,eff_youxikaishi_6_png,eff_youxikaishi_7_png,eff_youxikaishi_8_png,eff_youxikaishi_9_png,img_0_png,img_1_png,img_2_png,img_3_png,img_4_png,img_5_png,img_6_png,img_7_png,img_8_png,img_9_png,Img_pipeizhong_1_png,Img_pipeizhong_2_png,Img_pipeizhong_3_png,Img_pipeizhong_4_png,Img_pipeizhong_5_png,img_X_png,nn_banker0_png,nn_banker1_png,nn_banker10_png,nn_banker11_png,nn_banker12_png,nn_banker2_png,nn_banker3_png,nn_banker4_png,nn_banker5_png,nn_banker6_png,nn_banker7_png,nn_banker8_png,nn_banker9_png,nn_victoryEffect_0_png,nn_victoryEffect_1_png,nn_victoryEffect_10_png,nn_victoryEffect_11_png,nn_victoryEffect_13_png,nn_victoryEffect_14_png,nn_victoryEffect_15_png,nn_victoryEffect_16_png,nn_victoryEffect_17_png,nn_victoryEffect_18_png,nn_victoryEffect_19_png,nn_victoryEffect_2_png,nn_victoryEffect_20_png,nn_victoryEffect_21_png,nn_victoryEffect_22_png,nn_victoryEffect_3_png,nn_victoryEffect_4_png,nn_victoryEffect_5_png,nn_victoryEffect_6_png,nn_victoryEffect_7_png,nn_victoryEffect_8_png,nn_victoryEffect_9_png,qznntype0_tex_png,qznntype0_tex1_png,qznntype0_tex2_png,qznntype0_tex3_png,qznntype0_tex4_png,qznntype0_tex5_png,qznntype1_tex_png,qznntype1_tex1_png,qznntype1_tex2_png,qznntype1_tex3_png,qznntype1_tex4_png,qznntype1_tex5_png,qznntype1_tex6_png,qznntype2_tex_png,qznntype2_tex1_png,qznntype2_tex2_png,qznntype2_tex3_png,qznntype3_tex_png,qznntype3_tex1_png,qznntype3_tex2_png,qznntype3_tex3_png,qznntype3_tex4_png,qznntype3_tex5_png",
+			"keys": "bar_0_png,bar_1_png,loding_bg_png,loding_json,zjh_game_230_bg_png,bjl_game_18_bg_png,ebg_game_720_bg_png,tbnn_game_870_bg_png,brnn_game_930_bg_png,effcet_hot2_json,effcet_hot2_png,game_230_effect2_json,game_230_effect2_png,game_610_effect2_json,game_610_effect2_png,game_630_effect2_json,game_630_effect2_png,game_720_effect2_json,game_720_effect2_png,game_720_effect_logo2_json,game_720_effect_logo2_png,game_730_effect2_json,game_730_effect2_png,game_830_effect2_json,game_830_effect2_png,game_830_effect_logo2_json,game_830_effect_logo2_png,game_910_effect2_json,game_910_effect2_png,game_920_effect2_json,game_920_effect2_png,bjl_game_18_bg2_png,brnn_game_930_bg2_png,btn_xuanzhe_02_png,btn_xuanzhe_12_png,ebg_game_720_bg2_png,qznn_game_830_bg2_png,tbnn_game_870_bg2_png,zjh_game_230_bg2_png,btn_bipai_png,btn_quanxia_png,btn_xuanzhe_03_png,btn_xuanzhe_13_png,coin_bg2_png,left_list_1_png,nn_left_bg_png,qznn__base_score_png,qznn__base_score_0_png,qznn__base_score_1_png,qznn__base_score_2_png,qznn__base_score_3_png,qznn__base_score_4_png,qznn__base_score_5_png,qznn__base_score_6_png,qznn__base_score_7_png,qznn__base_score_8_png,qznn__base_score_9_png,qznn__base_score1_png,qznn_btn_bg1_看图王_png,qznn_effcet_pic_person_png,qznn_pic1_png,qznn_pic2_png,qznn_pic3_png,qznn_pic4_png,qznn_pic5_png,qznn_pic6_png,qznn_right_bg_png,room_bg_jpg,room_close2_png,room_menu_bg2_png,room_meun_btn_02_png,room_rule_btn_02_png,room_shang_di2_png,root_record_btn_02_png,system_flag_png,title_baijiale2_png,title_bairenniuniu_png,title_erbagang2_png,title_qiangzhuangniuniu_png,title_tongbiniuniu2_png,title_zhajinhuua_png,btn_xuanzhe_04_png,btn_xuanzhe_14_png,coin_bg3_png,left_list_12_png,nn_left_bg2_png,qznn_btn_bg1_看图王2_png,qznn_effcet_pic_person2_png,qznn_pic12_png,qznn_pic22_png,qznn_pic32_png,qznn_pic42_png,qznn_pic52_png,qznn_pic62_png,qznn_right_bg2_png,qznn__base_score2_png,qznn__base_score12_png,qznn__base_score_02_png,qznn__base_score_12_png,qznn__base_score_22_png,qznn__base_score_32_png,qznn__base_score_42_png,qznn__base_score_52_png,qznn__base_score_62_png,qznn__base_score_72_png,qznn__base_score_82_png,qznn__base_score_92_png,room_bg2_jpg,room_close3_png,room_menu_bg3_png,room_meun_btn_03_png,room_rule_btn_03_png,room_shang_di3_png,root_record_btn_03_png,system_flag2_png,title_baijiale3_png,title_bairenniuniu2_png,title_erbagang3_png,title_qiangzhuangniuniu2_png,title_tongbiniuniu3_png,title_zhajinhuua2_png,btn_caidan_png,btn_caidan1_png,btn_fanhui_png,btn_fanhui1_png,btn_huangseanniu_png,btn_huangseanniu1_png,btn_liaotian_png,btn_liaotian1_png,btn_yuyin_png,btn_yuyin1_png,img_0_png,img_1_png,img_2_png,img_3_png,img_4_png,img_5_png,img_6_png,img_7_png,img_8_png,img_9_png,Img_pipeizhong_1_png,Img_pipeizhong_2_png,Img_pipeizhong_3_png,Img_pipeizhong_4_png,Img_pipeizhong_5_png,img_X_png,qznntype0_tex1_png,qznntype0_tex2_png,qznntype0_tex3_png,qznntype0_tex4_png,qznntype0_tex5_png,qznntype1_tex_png,qznntype1_tex1_png,qznntype1_tex2_png,qznntype1_tex3_png,qznntype1_tex4_png,qznntype1_tex5_png,qznntype1_tex6_png,qznntype2_tex_png,qznntype2_tex1_png,qznntype2_tex2_png,qznntype2_tex3_png,qznntype3_tex_png,qznntype3_tex1_png,room_zjh_bg_jpg,zjh_effcet_pic_person_png,zjh_pic1_png,zjh_pic2_png,zjh_pic3_png,zjh_pic4_png",
 			"name": "preload"
 		},
 		{
@@ -3326,66 +3326,6 @@
 			"url": "assets/game/qznn/btn_yuyin1.png"
 		},
 		{
-			"name": "eff_youxikaishi_1_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_1.png"
-		},
-		{
-			"name": "eff_youxikaishi_10_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_10.png"
-		},
-		{
-			"name": "eff_youxikaishi_11_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_11.png"
-		},
-		{
-			"name": "eff_youxikaishi_12_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_12.png"
-		},
-		{
-			"name": "eff_youxikaishi_2_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_2.png"
-		},
-		{
-			"name": "eff_youxikaishi_3_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_3.png"
-		},
-		{
-			"name": "eff_youxikaishi_4_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_4.png"
-		},
-		{
-			"name": "eff_youxikaishi_5_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_5.png"
-		},
-		{
-			"name": "eff_youxikaishi_6_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_6.png"
-		},
-		{
-			"name": "eff_youxikaishi_7_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_7.png"
-		},
-		{
-			"name": "eff_youxikaishi_8_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_8.png"
-		},
-		{
-			"name": "eff_youxikaishi_9_png",
-			"type": "image",
-			"url": "assets/game/qznn/eff_youxikaishi_9.png"
-		},
-		{
 			"name": "img_0_png",
 			"type": "image",
 			"url": "assets/game/qznn/img_0.png"
@@ -3464,186 +3404,6 @@
 			"name": "img_X_png",
 			"type": "image",
 			"url": "assets/game/qznn/img_X.png"
-		},
-		{
-			"name": "nn_banker0_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker0.png"
-		},
-		{
-			"name": "nn_banker1_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker1.png"
-		},
-		{
-			"name": "nn_banker10_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker10.png"
-		},
-		{
-			"name": "nn_banker11_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker11.png"
-		},
-		{
-			"name": "nn_banker12_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker12.png"
-		},
-		{
-			"name": "nn_banker2_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker2.png"
-		},
-		{
-			"name": "nn_banker3_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker3.png"
-		},
-		{
-			"name": "nn_banker4_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker4.png"
-		},
-		{
-			"name": "nn_banker5_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker5.png"
-		},
-		{
-			"name": "nn_banker6_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker6.png"
-		},
-		{
-			"name": "nn_banker7_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker7.png"
-		},
-		{
-			"name": "nn_banker8_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker8.png"
-		},
-		{
-			"name": "nn_banker9_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_banker9.png"
-		},
-		{
-			"name": "nn_victoryEffect_0_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_0.png"
-		},
-		{
-			"name": "nn_victoryEffect_1_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_1.png"
-		},
-		{
-			"name": "nn_victoryEffect_10_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_10.png"
-		},
-		{
-			"name": "nn_victoryEffect_11_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_11.png"
-		},
-		{
-			"name": "nn_victoryEffect_13_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_13.png"
-		},
-		{
-			"name": "nn_victoryEffect_14_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_14.png"
-		},
-		{
-			"name": "nn_victoryEffect_15_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_15.png"
-		},
-		{
-			"name": "nn_victoryEffect_16_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_16.png"
-		},
-		{
-			"name": "nn_victoryEffect_17_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_17.png"
-		},
-		{
-			"name": "nn_victoryEffect_18_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_18.png"
-		},
-		{
-			"name": "nn_victoryEffect_19_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_19.png"
-		},
-		{
-			"name": "nn_victoryEffect_2_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_2.png"
-		},
-		{
-			"name": "nn_victoryEffect_20_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_20.png"
-		},
-		{
-			"name": "nn_victoryEffect_21_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_21.png"
-		},
-		{
-			"name": "nn_victoryEffect_22_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_22.png"
-		},
-		{
-			"name": "nn_victoryEffect_3_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_3.png"
-		},
-		{
-			"name": "nn_victoryEffect_4_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_4.png"
-		},
-		{
-			"name": "nn_victoryEffect_5_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_5.png"
-		},
-		{
-			"name": "nn_victoryEffect_6_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_6.png"
-		},
-		{
-			"name": "nn_victoryEffect_7_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_7.png"
-		},
-		{
-			"name": "nn_victoryEffect_8_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_8.png"
-		},
-		{
-			"name": "nn_victoryEffect_9_png",
-			"type": "image",
-			"url": "assets/game/qznn/nn_victoryEffect_9.png"
-		},
-		{
-			"name": "qznntype0_tex_png",
-			"type": "image",
-			"url": "assets/game/qznn/qznntype0_tex.png"
 		},
 		{
 			"name": "qznntype0_tex1_png",
@@ -3736,24 +3496,34 @@
 			"url": "assets/game/qznn/qznntype3_tex1.png"
 		},
 		{
-			"name": "qznntype3_tex2_png",
+			"name": "room_zjh_bg_jpg",
 			"type": "image",
-			"url": "assets/game/qznn/qznntype3_tex2.png"
+			"url": "assets/zjhRoom/room_zjh_bg.jpg"
 		},
 		{
-			"name": "qznntype3_tex3_png",
+			"name": "zjh_effcet_pic_person_png",
 			"type": "image",
-			"url": "assets/game/qznn/qznntype3_tex3.png"
+			"url": "assets/zjhRoom/zjh_effcet_pic_person.png"
 		},
 		{
-			"name": "qznntype3_tex4_png",
+			"name": "zjh_pic1_png",
 			"type": "image",
-			"url": "assets/game/qznn/qznntype3_tex4.png"
+			"url": "assets/zjhRoom/zjh_pic1.png"
 		},
 		{
-			"name": "qznntype3_tex5_png",
+			"name": "zjh_pic2_png",
 			"type": "image",
-			"url": "assets/game/qznn/qznntype3_tex5.png"
+			"url": "assets/zjhRoom/zjh_pic2.png"
+		},
+		{
+			"name": "zjh_pic3_png",
+			"type": "image",
+			"url": "assets/zjhRoom/zjh_pic3.png"
+		},
+		{
+			"name": "zjh_pic4_png",
+			"type": "image",
+			"url": "assets/zjhRoom/zjh_pic4.png"
 		}
 	]
 }

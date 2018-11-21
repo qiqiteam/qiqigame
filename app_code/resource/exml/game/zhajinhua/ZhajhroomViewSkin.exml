@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="ZhajhroomViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="166bf8530b5" ></w:Config>
-	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg" locked="true"/>
+	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="room_zjh_bg_jpg"/>
 	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" locked="true">
-		<e:Image width="348" height="690" scaleX="1" scaleY="1" source="qznn_effcet_pic_person_png" y="138" x="415.23"/>
+		<e:Image width="417" height="672" scaleX="1" scaleY="1" x="415.23" source="zjh_effcet_pic_person_png" bottom="0"/>
 	</e:Group>
 	<e:Group width="100%" height="96" top="0" horizontalCenter="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" source="ding_png" horizontalCenter="0" top="0" locked="true"/>
@@ -52,11 +52,14 @@
 	</e:Group>
 	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0" locked="true">
 
-		<e:Image source="qznn_pic1_png" y="56.88" anchorOffsetX="0" width="400" anchorOffsetY="0" height="150" horizontalCenter="0"/>
-		<e:Image source="qznn_pic2_png" y="224.88" width="400" height="150" horizontalCenter="0"/>
-		<e:Image source="qznn_pic4_png" y="560.91" width="400" height="150" horizontalCenter="0"/>
+		<e:Image y="56.88" anchorOffsetX="0" width="465" anchorOffsetY="0" height="158" source="zjh_pic1_png" x="81"/>
+		<e:Image source="zjh_pic4_png" y="557" x="81"/>
+		<e:Image source="zjh_pic2_png" y="223.57666666666663" scaleX="1" scaleY="1" x="81"/>
+		<e:Image source="zjh_pic3_png" y="390.2433333333333" scaleX="1" scaleY="1" x="81"/>
 
-		<e:Image source="qznn_pic3_png" y="392.91" width="400" height="150" horizontalCenter="0"/>
+
+
+
 
 	</e:Group>
 
