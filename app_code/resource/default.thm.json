@@ -40,6 +40,7 @@
     "resource/exml/game/playerinfo/PlayerInfoTypeItemSkin.exml",
     "resource/exml/game/playerinfo/PlayerInfoViewSkin.exml",
     "resource/exml/game/qznn/QZNNViewSkin.exml",
+    "resource/exml/game/qznn/QZNNroomViewSkin.exml",
     "resource/exml/game/rbg/RBGHeadSkin.exml",
     "resource/exml/game/rbg/RBGViewSkin.exml",
     "resource/exml/game/recharge/RechargeTypeItemSkin.exml",
@@ -51,6 +52,7 @@
     "resource/exml/game/set/SetViewSkin.exml",
     "resource/exml/game/tbnn/TBNNHeadSkin.exml",
     "resource/exml/game/tbnn/TBNNViewSkin.exml",
+    "resource/exml/game/tbnn/TBNNroomViewSkin.exml",
     "resource/exml/game/welfare/AwardItemSkin.exml",
     "resource/exml/game/welfare/LotterySkin.exml",
     "resource/exml/game/welfare/WelfareTypeItemSkin.exml",
@@ -58,6 +60,7 @@
     "resource/exml/game/zhajinhua/ZJHHeadSkin.exml",
     "resource/exml/game/zhajinhua/ZJHViewSkin.exml",
     "resource/exml/game/zhajinhua/ZhajhMainSceneView.exml",
+    "resource/exml/game/zhajinhua/ZhajhroomViewSkin.exml",
     "resource/exml/lobby/GameIconItemSkin.exml",
     "resource/exml/lobby/GameIconListViewSkin.exml",
     "resource/exml/lobby/GameTypeItemSkin.exml",
@@ -79,6 +82,7 @@
     "eui.ToggleSwitch": "resource/eui_skins/ToggleSwitchSkin.exml",
     "eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml",
     "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
-    "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml"
+    "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
+    "QZNNROOMSkin": "resource/eui_skins/QZNNROOMSkin.exml"
   }
 }

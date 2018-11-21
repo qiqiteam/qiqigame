@@ -2,7 +2,7 @@
 <e:Skin class="LobbyViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="166bf8530b5" ></w:Config>
 	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg" locked="true"/>
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0" locked="true">
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
 		<e:Image scaleX="1" scaleY="1" source="ding_png" horizontalCenter="0" top="0" locked="true"/>
 		<e:Button id="_set" label="" x="1278.58" y="1">
 			<e:skinName>
