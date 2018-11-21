@@ -106,16 +106,16 @@
 		<e:Image width="154" height="76" x="540.24" y="57.52" touchEnabled="false" source="btn_welfare_0_png"/>
 		<e:Image width="154" height="76" x="724.44" y="57.52" touchEnabled="false" source="btn_info_0_png"/>
 	</e:Group>
-		<e:Image source="game_class_bg_png" x="52.5" y="157" locked="true"/>
-	<e:Image x="52.5" y="137" source="game_class_bg1_png" locked="true"/>
-	<e:Scroller  x="57.5" y="181" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="448" scrollPolicyV="on" scrollPolicyH="off">
+		<e:Image source="game_class_bg_png" x="52.5" y="157" locked="true" visible="false"/>
+	<e:Image x="52.5" y="137" source="game_class_bg1_png" locked="true" visible="false"/>
+	<e:Scroller  x="57.5" y="181" anchorOffsetX="0" anchorOffsetY="0"  width="265" height="448" scrollPolicyV="on" scrollPolicyH="off" visible="false">
 		<e:TabBar id="menu_bar" width="100%" height="100%" itemRenderer="GameTypeItem">
 			<e:layout>
 				<e:VerticalLayout/>
 			</e:layout>
 		</e:TabBar>
 	</e:Scroller>
-    <e:ViewStack id="viewlist" selectedIndex="0" width="1092" height="505" y="156" x="344" anchorOffsetX="0" anchorOffsetY="0" locked="true">
+    <e:ViewStack id="viewlist" selectedIndex="0" width="1092" height="505" y="156" x="344" anchorOffsetX="0" anchorOffsetY="0" locked="true" visible="false">
 		<e:Group id="_group_wanfa" width="100%" height="100%" anchorOffsetX="0">
 		</e:Group>
 		<e:Group id="_group_pk" width="100%" height="100%" anchorOffsetX="0">
@@ -125,7 +125,7 @@
 		<e:Group id="_group_game" width="100%" height="100%" anchorOffsetX="0" y="0">
 		</e:Group>
     </e:ViewStack>
-	<e:Group width="100%" height="534" y="152.88" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" visible="false">
+	<e:Group width="100%" height="534" y="152.88" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" locked="true">
 		<e:Group id="_group" width="275" height="100%" x="42.56" scaleX="1" scaleY="1" verticalCenter="0">
 			<e:Image width="275" height="534" source="qznn_game_830_bg_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
 		</e:Group>
