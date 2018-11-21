@@ -102,6 +102,8 @@ declare class QZNNHeadSkin extends eui.Skin{
 }
 declare class QZNNViewSkin extends eui.Skin{
 }
+declare class QZNNroomViewSkin extends eui.Skin{
+}
 declare class RBGHeadSkin extends eui.Skin{
 }
 declare class RBGViewSkin extends eui.Skin{
@@ -124,6 +126,8 @@ declare class TBNNHeadSkin extends eui.Skin{
 }
 declare class TBNNViewSkin extends eui.Skin{
 }
+declare class TBNNroomViewSkin extends eui.Skin{
+}
 declare class AwardItemSkin extends eui.Skin{
 }
 declare class LotterySkin extends eui.Skin{
@@ -137,6 +141,8 @@ declare class ZJHHeadSkin extends eui.Skin{
 declare class ZJHViewSkin extends eui.Skin{
 }
 declare class ZhajhMainSceneView extends eui.Skin{
+}
+declare class ZhajhroomViewSkin extends eui.Skin{
 }
 declare class GameIconItemSkin extends eui.Skin{
 }
