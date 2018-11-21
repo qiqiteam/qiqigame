@@ -106,14 +106,4 @@
 		<e:Image width="154" height="76" x="540.24" y="57.52" touchEnabled="false" source="btn_welfare_0_png"/>
 		<e:Image width="154" height="76" x="724.44" y="57.52" touchEnabled="false" source="btn_info_0_png"/>
 	</e:Group>
-
-
-
-
-	<e:Group id="gamelist_grp" width="100%" y="152.88" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
-		<e:Group id="_group" width="275" height="100%" x="42.56" scaleX="1" scaleY="1" verticalCenter="0">
-			<e:Image width="275" height="534" source="qznn_game_830_bg_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
-		</e:Group>
-
-	</e:Group>
 </e:Skin>

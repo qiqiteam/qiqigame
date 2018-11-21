@@ -152,6 +152,8 @@ declare class GameTypeItemSkin extends eui.Skin{
 }
 declare class LobbyViewSkin extends eui.Skin{
 }
+declare class QznnIconItemSkin extends eui.Skin{
+}
 declare class RoomTypeItemSkin extends eui.Skin{
 }
 declare class RoomViewSkin extends eui.Skin{

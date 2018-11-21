@@ -65,6 +65,7 @@
     "resource/exml/lobby/GameIconListViewSkin.exml",
     "resource/exml/lobby/GameTypeItemSkin.exml",
     "resource/exml/lobby/LobbyViewSkin.exml",
+    "resource/exml/lobby/QznnIconItemSkin.exml",
     "resource/exml/lobby/RoomTypeItemSkin.exml",
     "resource/exml/lobby/RoomViewSkin.exml",
     "resource/exml/login/LoginViewSkin.exml"

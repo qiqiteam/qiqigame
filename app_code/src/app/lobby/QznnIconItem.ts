@@ -1,4 +1,4 @@
-class GameIconItem extends eui.Component {
+class QznnIconItem extends eui.Component {
 	public bg_img:eui.Image;
 	public icon_img:eui.Image;
     private icondata:GameIconData;
@@ -6,7 +6,7 @@ class GameIconItem extends eui.Component {
 	private  effectIcon: egret.MovieClip;
 	constructor() {
 		super();
-		this.skinName = "GameIconItemSkin";
+		this.skinName = "QznnIconItemSkin";
 	}
 
 	protected childrenCreated() {
@@ -54,8 +54,8 @@ class GameIconItem extends eui.Component {
 			this.effecthot.y = 0;
 			this.addChild(this.effecthot);
 		}
-        if(icondata.game==Const.GAME_ERBAGANG){
-			this.effectIcon = xlLib.DisplayUtils.createMovieClicp("game_720_effect_logo", "game_720_effect_logo");
+        if(icondata.game==Const.GAME_NIUNIU){
+			this.effectIcon = xlLib.DisplayUtils.createMovieClicp("game_830_effect_logo", "game_830_effect_logo");
 			this.effectIcon.play(-1);
 			this.effectIcon.x = 130; 
            	this.addChild(this.effectIcon);
