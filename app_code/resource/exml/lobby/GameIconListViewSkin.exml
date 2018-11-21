@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="GameIconListViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled" width="1092" height="505">
+<e:Skin class="GameIconListViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled" width="1092" height="555">
 	<e:Scroller id="scroller" width="100%" height="100%" scrollPolicyV="off" scrollPolicyH="on">
 		<e:Group id="gamelist_grp" width="100%" height="100%"/>
 

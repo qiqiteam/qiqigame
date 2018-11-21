@@ -9,7 +9,7 @@ class GameIconItem extends eui.Component {
 
 	protected childrenCreated() {
 		super.childrenCreated();
-			this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
+		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
 	}
 
 	private onEnterGame(e:egret.TouchEvent):void 
@@ -33,5 +33,13 @@ class GameIconItem extends eui.Component {
 	{
 		this.icondata = icondata;
         this.bg_img.source = icondata.url;
+        if(icondata.ishot)
+		{
+			let effecthot: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp("effcet_hot", "effcet_hot");
+			effecthot.play(-1);
+			effecthot.x = 25;
+			effecthot.y = 0;
+			this.addChild(effecthot);
+		}
 	}
 }
