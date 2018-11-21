@@ -78,18 +78,6 @@ declare class SystemMsgTypeItemSkin extends eui.Skin{
 }
 declare class SystemMsgViewSkin extends eui.Skin{
 }
-declare class NNCardViewSkin extends eui.Skin{
-}
-declare class NNGameItemSkin extends eui.Skin{
-}
-declare class NNGameListSkin extends eui.Skin{
-}
-declare class NNListViewSkin extends eui.Skin{
-}
-declare class NNTableItemSkin extends eui.Skin{
-}
-declare class NNViewSkin extends eui.Skin{
-}
 declare class InfoBoxItemSkin extends eui.Skin{
 }
 declare class InfoBoxSkin extends eui.Skin{

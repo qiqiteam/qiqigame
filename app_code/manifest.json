@@ -13,10 +13,10 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/views/GameDoc.js",
-		"bin-debug/views/GameScene.js",
 		"bin-debug/app/Const.js",
 		"bin-debug/app/ReceiveMessageMgr.js",
+		"bin-debug/views/GameDoc.js",
+		"bin-debug/views/GameScene.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",
 		"bin-debug/app/data/ComBoxData.js",
@@ -43,13 +43,6 @@
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
 		"bin-debug/app/game/message/SystemMsgView.js",
-		"bin-debug/app/game/nn/NNCardView.js",
-		"bin-debug/app/game/nn/NNGameItem.js",
-		"bin-debug/app/game/nn/NNGameList.js",
-		"bin-debug/app/game/nn/NNGameView.js",
-		"bin-debug/app/game/nn/NNListView.js",
-		"bin-debug/app/game/nn/NNScene.js",
-		"bin-debug/app/game/nn/NNView.js",
 		"bin-debug/app/game/playerinfo/InfoBox.js",
 		"bin-debug/app/game/playerinfo/InfoBoxItem.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoTypeItem.js",
@@ -83,10 +76,10 @@
 		"bin-debug/app/game/zjh/ZJHroomView.js",
 		"bin-debug/app/game/zjh/ZJHScene.js",
 		"bin-debug/app/game/zjh/ZJHUtil.js",
-		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/game/zjh/ZJHView.js",
 		"bin-debug/app/HttpAddress.js",
 		"bin-debug/app/interface/IGameInformation.js",
-		"bin-debug/app/interface/IGameRecord.js",
+		"bin-debug/app/component/ComBox.js",
 		"bin-debug/app/interface/IGameTableData.js",
 		"bin-debug/app/lobby/GameIconItem.js",
 		"bin-debug/app/lobby/GameIconListView.js",
@@ -153,6 +146,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/game/zjh/ZJHView.js"
+		"bin-debug/app/interface/IGameRecord.js"
 	]
 }
