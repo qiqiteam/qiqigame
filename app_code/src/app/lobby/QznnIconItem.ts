@@ -38,7 +38,7 @@ class QznnIconItem extends eui.Component {
  			xlLib.TipsUtils.showFloatWordTips("该功能暂时开放！");
 			return;
 		}
-		let rommView:RoomView = xlLib.PopUpMgr.addPopUp(RoomView, null, true, true, null ,1);
+		let rommView:QZNNroomView = xlLib.PopUpMgr.addPopUp(QZNNroomView, null, true, true, null ,1);
 		rommView.setGameIconData(this.icondata);
 	}
 

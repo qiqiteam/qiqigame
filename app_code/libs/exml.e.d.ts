@@ -64,13 +64,21 @@ declare class ComBoxSkin extends eui.Skin{
 }
 declare class BJLHeadSkin extends eui.Skin{
 }
+declare class BJLRoomMenuItemSkin extends eui.Skin{
+}
 declare class BJLViewSkin extends eui.Skin{
+}
+declare class BJLroomViewSkin extends eui.Skin{
 }
 declare class BRNNHeadSkin extends eui.Skin{
 }
 declare class BRNNViewSkin extends eui.Skin{
 }
+declare class BRNNroomViewSkin extends eui.Skin{
+}
 declare class ErBaGangViewSkin extends eui.Skin{
+}
+declare class ErBaGangroomViewSkin extends eui.Skin{
 }
 declare class SystemMsgItemSkin extends eui.Skin{
 }
