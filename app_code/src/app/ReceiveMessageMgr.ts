@@ -39,6 +39,7 @@ module xlLib {
 			
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.seecard, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.botpour, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.compareCard, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.pressure, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.abandon, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.settlement, this.onMessage);

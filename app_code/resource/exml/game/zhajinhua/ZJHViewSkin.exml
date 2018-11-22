@@ -47,6 +47,11 @@
 		<e:Label id="labCardType7" x="1079" y="306.04" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
 		<e:Label id="labCardType8" x="1110.56" y="426" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
 		<e:Label id="labCardType9" x="1066" y="556" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labstatus0" x="697.18" y="566" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xd00ddb" verticalAlign="middle"/>
+		<e:Label id="labstatus1" x="346.57" y="542.63" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
+		<e:Label id="labstatus2" x="286.87" y="414.74" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
+		<e:Label id="labstatus3" x="309.03" y="295.95" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
+		<e:Label id="labstatus4" x="458.44" y="233.22" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
 	</e:Group>
 	<e:Group x="0" y="0" width="1472" height="828">
 		<ns1:ZJHHead id="grpHead1" width="20" height="20" x="150" y="510" skinName="ZJHHeadSkin" scaleX="1" scaleY="1"/>
@@ -97,10 +102,11 @@
 	<e:Image id="effectTouch2" source="u6" y="619.6" x="166" width="131" height="124" alpha="0"  visible="false"/>
 	<e:Image id="effectTouch1" source="u6" y="485.8" x="344" width="131" height="124" alpha="0"  visible="false"/>
 	<e:Image id="effectTouch0" source="u6" y="485.4" x="168" width="131" height="124" alpha="0"  visible="false"/>
-	<e:Group id="grpCountdown" y="412" x="706" locked="true">
+	<e:Group id="grpCountdown" y="412" x="706">
 		<e:Image source="a20" y="0" x="0" />
 		<e:BitmapLabel id="labCountdown0" x="9" y="11" font="bitmapnum0_fnt" text="0" width="20" />
 		<e:BitmapLabel id="labCountdown1" x="32" y="11" font="bitmapnum0_fnt" text="0" width="20" anchorOffsetX="0" />
+		<e:Label id="timeTxt" text="10" x="-126" y="-48" scaleX="1" scaleY="1" textColor="0xfc1c07" bold="true" anchorOffsetX="0" width="53.7" anchorOffsetY="0" height="42.12" size="40"/>
 	</e:Group>
 	<e:Group x="0" y="889.31" visible="false">
 		<e:Image source="u1" x="0" y="0" locked="true" />
@@ -459,60 +465,7 @@
 			</e:Group>
 		</e:Group>
 	</e:Group>
-	<e:Group id="grpResult" x="131" y="417" visible="false">
-		<e:Image source="a11" x="0" y="0" />
-		<e:Group id="grpMax" x="0" y="3">
-			<e:Image source="a14" y="0" x="0" locked="true" />
-			<e:Image id="grpMaxHead" source="head" x="33" y="39" width="70" height="70" />
-			<e:Label id="grpMaxGold" text="123456789万" x="116.67" y="76" size="30" anchorOffsetX="0" width="249.67"
-			         textColor="0xfaee0a" bold="true" italic="true" />
-			<e:Label id="grpMaxName" text="名字名字" x="117.67" y="42.67" textColor="0xFAEE0A" size="24" anchorOffsetX="0"
-			         width="261.67" bold="true" italic="true" />
-		</e:Group>
-		<e:Group x="2" y="118">
-			<e:Image source="a13" y="0" x="0" locked="true" />
-			<e:Image id="grpBankerHead" source="head" x="30" y="5" width="80" height="80" />
-			<e:Label id="labelBankerType" text="顺子" x="265" y="12" size="20" width="71" textAlign="center" textColor="0xfa0a1f"
-			         bold="true" />
-			<e:Label id="grpBankerBeishu" text="11倍" x="336" y="12" textColor="0xfaee0a" size="20" bold="true" />
-			<e:Label id="grpBankerGold" text="123456789万" x="124.67" y="48" size="30" anchorOffsetX="0" width="238.67"
-			         textColor="0xcf3536" bold="true" italic="true" />
-			<e:Label id="grpBankerName" text="名字名字名字" x="120.34" y="12" textColor="0x49CF35" size="20" anchorOffsetX="0"
-			         width="147.67" />
-		</e:Group>
-		<e:Group x="2" y="210">
-			<e:Image source="a12" x="0" y="0" />
-			<e:Label text="倍率" x="38" y="49" size="16" locked="true" />
-			<e:Label text="押注" x="38" y="69" size="16" locked="true" />
-			<e:Label text="输赢" x="38" y="88" size="16" locked="true" visible="false" />
-			<e:Group x="80" y="49.7">
-				<e:Label id="labResult0_0" text="2倍" x="0" y="0" size="16" textColor="0xfaee0a" width="70" textAlign="center" />
-				<e:Label id="labResult1_0" text="0" x="0" y="20" size="16" textColor="0xfaee0a" width="70" textAlign="center" />
-				<e:Label id="labResult2_0" text="0" x="0" y="39" size="16" width="70" textAlign="center" visible="false" />
-			</e:Group>
-			<e:Group x="157" y="49.7">
-				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_1" />
-				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_1" />
-				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_1" visible="false" />
-			</e:Group>
-			<e:Group x="232" y="49.7">
-				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_2" />
-				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_2" />
-				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_2" visible="false" />
-			</e:Group>
-			<e:Group x="308" y="49.7">
-				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_3" />
-				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_3" />
-				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_3" visible="false" />
-			</e:Group>
-			<e:Label id="labResultValue" text="结算：9999999" x="10" y="108" size="24" bold="true" width="364" textAlign="center"
-			         italic="true" />
-			<e:Label id="resultType0" text="标签" x="78" y="23" size="24" width="76" bold="true" textAlign="center" />
-			<e:Label id="resultType1" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="155" />
-			<e:Label id="resultType2" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="231" />
-			<e:Label id="resultType3" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="307" />
-		</e:Group>
-	</e:Group>
+
 	<e:Group id="grpTips" x="0" y="567" visible="false">
 		<e:Image id="grpTipsbg" source="d1" y="0" x="0" />
 		<e:Image id="grpTipsInfo" source="d2" y="0" x="0" />
@@ -528,6 +481,71 @@
 		<e:Label id="labelGold0" text="1000000" x="191.84" y="104.33" textColor="0xf4d727" textAlign="center"/>
 		<e:Image x="145" y="103" source="img_jinbi_png"/>
 		</e:Group>
+		<e:Group id="grp_btncmbar" width="839.39" height="120" y="-113.44" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" visible="false">
+			<e:TabBar id="tabbar1" width="839.39" height="120" x="0" y="0" itemRendererSkinName="chipSkin" scrollRect="(x=0,y=0,width=129,height=134) ">
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+			</e:TabBar>
+		</e:Group>
+		<e:Group id="grp_btncm" width="839.39" height="120" y="-123.44" anchorOffsetX="0" anchorOffsetY="0" x="262">
+			<e:Button id="_btn_jiacm_1" label="" x="1.3299999999999272" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="gf_icon_chip_green_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="_btn_jiacm_2" label="" x="147.71000000000004" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="gf_icon_chip_green_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="_btn_jiacm_3" label="" x="296.14" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="gf_icon_chip_cyan_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="_btn_jiacm_4" label="" x="434.95000000000005" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="gf_icon_chip_pink_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="_btn_jiacm_5" label="" x="575.8799999999999" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="gf_icon_chip_purple_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="_btn_jiacm_6" label="" x="708.64" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="gf_icon_chip_blue_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Label id="labchip1" text="2" x="34.22" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xffffff" height="40" size="40" bold="true" touchEnabled="false"/>
+			<e:Label text="3" x="183.61" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip2" touchEnabled="false"/>
+			<e:Label text="4" x="331.49" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip3" touchEnabled="false"/>
+			<e:Label text="5" x="470.29" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip4" touchEnabled="false"/>
+			<e:Label text="6" x="610.58" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip5" touchEnabled="false"/>
+			<e:Label id="labchip6" text="7" x="741.78" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" touchEnabled="false"/>
+
+		</e:Group>
+
 		<e:Button id="_btn_gendaodi" label="" x="360" y="18" width="150">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -552,32 +570,15 @@
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Button id="_btn_X1" label="" x="673.47" y="-49.5" width="67" height="39">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="img_X1_0_png" source.down="img_X2_0_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
 
-		</e:Button>
-		<e:Button id="_btn_X0" label="" x="556.22" y="-45.58" width="67" height="39">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="img_X1_0_png" source.down="img_X1_0_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="_btn_X2" label="" x="777.42" y="-47.1" width="67" height="39">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="img_X2_0_png" source.down="img_X1_0_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
 
-		</e:Button>
+
+
+
+
+
+
+
 		<e:Button id="_btn_quanxia" label="" x="840" y="18">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -594,7 +595,7 @@
 			</e:Skin>
 		</e:skinName>
 		</e:Button>
-		<e:Button id="_btn_kanpai" label="" x="608" y="-162">
+		<e:Button id="_btn_kanpai" label="" x="594.32" y="-165.04">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="lab_zjh_up_seecard_png" source.down="lab_zjh_up_seecard_png"/>
@@ -616,6 +617,54 @@
 		<e:Image x="908.37" y="35" touchEnabled="false" source="btn_quanxia_png"/>
 		<e:Image x="1090" y="35" touchEnabled="false" source="btn_bipai_png"/>
 		<e:Image x="1240" y="35" source="lab_zjh_up_discard_png" touchEnabled="false"/>
+	</e:Group>
+	<e:Group id="grpResult" x="497.74" y="286.69" visible="false">
+		<e:Image source="a11" x="0" y="0"/>
+		<e:Group id="grpMax" x="0" y="3">
+		<e:Image source="a14" y="0" x="0" locked="true"/>
+		<e:Image id="grpMaxHead" source="head" x="33" y="39" width="70" height="70"/>
+		<e:Label id="grpMaxGold" text="123456789万" x="116.67" y="76" size="30" anchorOffsetX="0" width="249.67" textColor="0xfaee0a" bold="true" italic="true"/>
+		<e:Label id="grpMaxName" text="名字名字" x="117.67" y="42.67" textColor="0xFAEE0A" size="24" anchorOffsetX="0" width="261.67" bold="true" italic="true"/>
+		</e:Group>
+		<e:Group x="2" y="118">
+		<e:Image source="a13" y="0" x="0" locked="true"/>
+		<e:Image id="grpBankerHead" source="head" x="30" y="5" width="80" height="80"/>
+		<e:Label id="labelBankerType" text="顺子" x="265" y="12" size="20" width="71" textAlign="center" textColor="0xfa0a1f" bold="true"/>
+		<e:Label id="grpBankerBeishu" text="11倍" x="336" y="12" textColor="0xfaee0a" size="20" bold="true"/>
+		<e:Label id="grpBankerGold" text="123456789万" x="124.67" y="48" size="30" anchorOffsetX="0" width="238.67" textColor="0xcf3536" bold="true" italic="true"/>
+		<e:Label id="grpBankerName" text="名字名字名字" x="120.34" y="12" textColor="0x49CF35" size="20" anchorOffsetX="0" width="147.67"/>
+		</e:Group>
+		<e:Group x="2" y="210">
+		<e:Image source="a12" x="0" y="0"/>
+		<e:Label text="倍率" x="38" y="49" size="16" locked="true"/>
+		<e:Label text="押注" x="38" y="69" size="16" locked="true"/>
+		<e:Label text="输赢" x="38" y="88" size="16" locked="true" visible="false"/>
+		<e:Group x="80" y="49.7">
+			<e:Label id="labResult0_0" text="2倍" x="0" y="0" size="16" textColor="0xfaee0a" width="70" textAlign="center"/>
+			<e:Label id="labResult1_0" text="0" x="0" y="20" size="16" textColor="0xfaee0a" width="70" textAlign="center"/>
+			<e:Label id="labResult2_0" text="0" x="0" y="39" size="16" width="70" textAlign="center" visible="false"/>
+		</e:Group>
+		<e:Group x="157" y="49.7">
+			<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_1"/>
+			<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_1"/>
+			<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_1" visible="false"/>
+		</e:Group>
+		<e:Group x="232" y="49.7">
+			<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_2"/>
+			<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_2"/>
+			<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_2" visible="false"/>
+		</e:Group>
+		<e:Group x="308" y="49.7">
+			<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_3"/>
+			<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_3"/>
+			<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_3" visible="false"/>
+		</e:Group>
+		<e:Label id="labResultValue" text="结算：9999999" x="10" y="108" size="24" bold="true" width="364" textAlign="center" italic="true"/>
+		<e:Label id="resultType0" text="标签" x="78" y="23" size="24" width="76" bold="true" textAlign="center"/>
+		<e:Label id="resultType1" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="155"/>
+		<e:Label id="resultType2" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="231"/>
+		<e:Label id="resultType3" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="307"/>
+		</e:Group>
 	</e:Group>
 	<e:Button id="_btn_close" label="" x="15" y="20">
 		<e:skinName>

@@ -13,9 +13,9 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
+		"bin-debug/app/Const.js",
 		"bin-debug/views/GameDoc.js",
 		"bin-debug/views/GameScene.js",
-		"bin-debug/app/Const.js",
 		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",
@@ -77,6 +77,7 @@
 		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
+		"bin-debug/app/game/zjh/ZJHChipskin.js",
 		"bin-debug/app/game/zjh/ZJHHead.js",
 		"bin-debug/app/game/zjh/ZJHScene.js",
 		"bin-debug/app/game/zjh/ZJHUtil.js",

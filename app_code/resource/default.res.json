@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bar_0_png,bar_1_png,loding_bg_png,loding_json,zjh_game_230_bg_png,bjl_game_18_bg_png,ebg_game_720_bg_png,tbnn_game_870_bg_png,brnn_game_930_bg_png,effcet_hot2_json,effcet_hot2_png,game_230_effect2_json,game_230_effect2_png,game_610_effect2_json,game_610_effect2_png,game_630_effect2_json,game_630_effect2_png,game_720_effect2_json,game_720_effect2_png,game_720_effect_logo2_json,game_720_effect_logo2_png,game_730_effect2_json,game_730_effect2_png,game_830_effect2_json,game_830_effect2_png,game_830_effect_logo2_json,game_830_effect_logo2_png,game_910_effect2_json,game_910_effect2_png,game_920_effect2_json,game_920_effect2_png,bjl_game_18_bg2_png,brnn_game_930_bg2_png,btn_xuanzhe_02_png,btn_xuanzhe_12_png,ebg_game_720_bg2_png,qznn_game_830_bg2_png,tbnn_game_870_bg2_png,zjh_game_230_bg2_png,btn_bipai_png,btn_quanxia_png",
+			"keys": "bar_0_png,bar_1_png,loding_bg_png,loding_json,zjh_game_230_bg_png,bjl_game_18_bg_png,ebg_game_720_bg_png,tbnn_game_870_bg_png,brnn_game_930_bg_png,effcet_hot2_json,effcet_hot2_png,game_230_effect2_json,game_230_effect2_png,game_610_effect2_json,game_610_effect2_png,game_630_effect2_json,game_630_effect2_png,game_720_effect2_json,game_720_effect2_png,game_720_effect_logo2_json,game_720_effect_logo2_png,game_730_effect2_json,game_730_effect2_png,game_830_effect2_json,game_830_effect2_png,game_830_effect_logo2_json,game_830_effect_logo2_png,game_910_effect2_json,game_910_effect2_png,game_920_effect2_json,game_920_effect2_png,bjl_game_18_bg2_png,brnn_game_930_bg2_png,btn_xuanzhe_02_png,btn_xuanzhe_12_png,ebg_game_720_bg2_png,qznn_game_830_bg2_png,tbnn_game_870_bg2_png,zjh_game_230_bg2_png,btn_bipai_png,btn_quanxia_png,gf_icon_chip_blue_png,gf_icon_chip_cyan_png,gf_icon_chip_green_png,gf_icon_chip_grey_png,gf_icon_chip_pink_png,gf_icon_chip_purple_png",
 			"name": "preload"
 		},
 		{
@@ -2706,189 +2706,219 @@
 			"name": "qznn_game_830_bg_png"
 		},
 		{
-			"name": "zjh_game_230_bg_png",
+			"url": "assets/hall/zjh_game_230_bg.png",
 			"type": "image",
-			"url": "assets/hall/zjh_game_230_bg.png"
+			"name": "zjh_game_230_bg_png"
 		},
 		{
-			"name": "bjl_game_18_bg_png",
+			"url": "assets/hall/bjl_game_18_bg.png",
 			"type": "image",
-			"url": "assets/hall/bjl_game_18_bg.png"
+			"name": "bjl_game_18_bg_png"
 		},
 		{
-			"name": "ebg_game_720_bg_png",
+			"url": "assets/hall/ebg_game_720_bg.png",
 			"type": "image",
-			"url": "assets/hall/ebg_game_720_bg.png"
+			"name": "ebg_game_720_bg_png"
 		},
 		{
-			"name": "tbnn_game_870_bg_png",
+			"url": "assets/hall/tbnn_game_870_bg.png",
 			"type": "image",
-			"url": "assets/hall/tbnn_game_870_bg.png"
+			"name": "tbnn_game_870_bg_png"
 		},
 		{
-			"name": "brnn_game_930_bg_png",
+			"url": "assets/hall/brnn_game_930_bg.png",
 			"type": "image",
-			"url": "assets/hall/brnn_game_930_bg.png"
+			"name": "brnn_game_930_bg_png"
 		},
 		{
-			"name": "effcet_hot2_json",
+			"url": "assets/effects/effcet_hot/effcet_hot.json",
 			"type": "json",
-			"url": "assets/effects/effcet_hot/effcet_hot.json"
+			"name": "effcet_hot2_json"
 		},
 		{
-			"name": "effcet_hot2_png",
+			"url": "assets/effects/effcet_hot/effcet_hot.png",
 			"type": "image",
-			"url": "assets/effects/effcet_hot/effcet_hot.png"
+			"name": "effcet_hot2_png"
 		},
 		{
-			"name": "game_230_effect2_json",
+			"url": "assets/effects/game_230_effect/game_230_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_230_effect/game_230_effect.json"
+			"name": "game_230_effect2_json"
 		},
 		{
-			"name": "game_230_effect2_png",
+			"url": "assets/effects/game_230_effect/game_230_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_230_effect/game_230_effect.png"
+			"name": "game_230_effect2_png"
 		},
 		{
-			"name": "game_610_effect2_json",
+			"url": "assets/effects/game_610_effect/game_610_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_610_effect/game_610_effect.json"
+			"name": "game_610_effect2_json"
 		},
 		{
-			"name": "game_610_effect2_png",
+			"url": "assets/effects/game_610_effect/game_610_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_610_effect/game_610_effect.png"
+			"name": "game_610_effect2_png"
 		},
 		{
-			"name": "game_630_effect2_json",
+			"url": "assets/effects/game_630_effect/game_630_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_630_effect/game_630_effect.json"
+			"name": "game_630_effect2_json"
 		},
 		{
-			"name": "game_630_effect2_png",
+			"url": "assets/effects/game_630_effect/game_630_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_630_effect/game_630_effect.png"
+			"name": "game_630_effect2_png"
 		},
 		{
-			"name": "game_720_effect2_json",
+			"url": "assets/effects/game_720_effect/game_720_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_720_effect/game_720_effect.json"
+			"name": "game_720_effect2_json"
 		},
 		{
-			"name": "game_720_effect2_png",
+			"url": "assets/effects/game_720_effect/game_720_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_720_effect/game_720_effect.png"
+			"name": "game_720_effect2_png"
 		},
 		{
-			"name": "game_720_effect_logo2_json",
+			"url": "assets/effects/game_720_effect_logo/game_720_effect_logo.json",
 			"type": "json",
-			"url": "assets/effects/game_720_effect_logo/game_720_effect_logo.json"
+			"name": "game_720_effect_logo2_json"
 		},
 		{
-			"name": "game_720_effect_logo2_png",
+			"url": "assets/effects/game_720_effect_logo/game_720_effect_logo.png",
 			"type": "image",
-			"url": "assets/effects/game_720_effect_logo/game_720_effect_logo.png"
+			"name": "game_720_effect_logo2_png"
 		},
 		{
-			"name": "game_730_effect2_json",
+			"url": "assets/effects/game_730_effect/game_730_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_730_effect/game_730_effect.json"
+			"name": "game_730_effect2_json"
 		},
 		{
-			"name": "game_730_effect2_png",
+			"url": "assets/effects/game_730_effect/game_730_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_730_effect/game_730_effect.png"
+			"name": "game_730_effect2_png"
 		},
 		{
-			"name": "game_830_effect2_json",
+			"url": "assets/effects/game_830_effect/game_830_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_830_effect/game_830_effect.json"
+			"name": "game_830_effect2_json"
 		},
 		{
-			"name": "game_830_effect2_png",
+			"url": "assets/effects/game_830_effect/game_830_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_830_effect/game_830_effect.png"
+			"name": "game_830_effect2_png"
 		},
 		{
-			"name": "game_830_effect_logo2_json",
+			"url": "assets/effects/game_830_effect_logo/game_830_effect_logo.json",
 			"type": "json",
-			"url": "assets/effects/game_830_effect_logo/game_830_effect_logo.json"
+			"name": "game_830_effect_logo2_json"
 		},
 		{
-			"name": "game_830_effect_logo2_png",
+			"url": "assets/effects/game_830_effect_logo/game_830_effect_logo.png",
 			"type": "image",
-			"url": "assets/effects/game_830_effect_logo/game_830_effect_logo.png"
+			"name": "game_830_effect_logo2_png"
 		},
 		{
-			"name": "game_910_effect2_json",
+			"url": "assets/effects/game_910_effect/game_910_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_910_effect/game_910_effect.json"
+			"name": "game_910_effect2_json"
 		},
 		{
-			"name": "game_910_effect2_png",
+			"url": "assets/effects/game_910_effect/game_910_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_910_effect/game_910_effect.png"
+			"name": "game_910_effect2_png"
 		},
 		{
-			"name": "game_920_effect2_json",
+			"url": "assets/effects/game_920_effect/game_920_effect.json",
 			"type": "json",
-			"url": "assets/effects/game_920_effect/game_920_effect.json"
+			"name": "game_920_effect2_json"
 		},
 		{
-			"name": "game_920_effect2_png",
+			"url": "assets/effects/game_920_effect/game_920_effect.png",
 			"type": "image",
-			"url": "assets/effects/game_920_effect/game_920_effect.png"
+			"name": "game_920_effect2_png"
 		},
 		{
-			"name": "bjl_game_18_bg2_png",
+			"url": "assets/hall/bjl_game_18_bg.png",
 			"type": "image",
-			"url": "assets/hall/bjl_game_18_bg.png"
+			"name": "bjl_game_18_bg2_png"
 		},
 		{
-			"name": "brnn_game_930_bg2_png",
+			"url": "assets/hall/brnn_game_930_bg.png",
 			"type": "image",
-			"url": "assets/hall/brnn_game_930_bg.png"
+			"name": "brnn_game_930_bg2_png"
 		},
 		{
-			"name": "btn_xuanzhe_02_png",
+			"url": "assets/hall/btn_xuanzhe_0.png",
 			"type": "image",
-			"url": "assets/hall/btn_xuanzhe_0.png"
+			"name": "btn_xuanzhe_02_png"
 		},
 		{
-			"name": "btn_xuanzhe_12_png",
+			"url": "assets/hall/btn_xuanzhe_1.png",
 			"type": "image",
-			"url": "assets/hall/btn_xuanzhe_1.png"
+			"name": "btn_xuanzhe_12_png"
 		},
 		{
-			"name": "ebg_game_720_bg2_png",
+			"url": "assets/hall/ebg_game_720_bg.png",
 			"type": "image",
-			"url": "assets/hall/ebg_game_720_bg.png"
+			"name": "ebg_game_720_bg2_png"
 		},
 		{
-			"name": "qznn_game_830_bg2_png",
+			"url": "assets/hall/qznn_game_830_bg.png",
 			"type": "image",
-			"url": "assets/hall/qznn_game_830_bg.png"
+			"name": "qznn_game_830_bg2_png"
 		},
 		{
-			"name": "tbnn_game_870_bg2_png",
+			"url": "assets/hall/tbnn_game_870_bg.png",
 			"type": "image",
-			"url": "assets/hall/tbnn_game_870_bg.png"
+			"name": "tbnn_game_870_bg2_png"
 		},
 		{
-			"name": "zjh_game_230_bg2_png",
+			"url": "assets/hall/zjh_game_230_bg.png",
 			"type": "image",
-			"url": "assets/hall/zjh_game_230_bg.png"
+			"name": "zjh_game_230_bg2_png"
 		},
 		{
-			"name": "btn_bipai_png",
+			"url": "assets/game/zhajh/btn_bipai.png",
 			"type": "image",
-			"url": "assets/game/zhajh/btn_bipai.png"
+			"name": "btn_bipai_png"
 		},
 		{
-			"name": "btn_quanxia_png",
+			"url": "assets/game/zhajh/btn_quanxia.png",
 			"type": "image",
-			"url": "assets/game/zhajh/btn_quanxia.png"
+			"name": "btn_quanxia_png"
+		},
+		{
+			"name": "gf_icon_chip_blue_png",
+			"type": "image",
+			"url": "assets/game/zhajh/gf_icon_chip_blue.png"
+		},
+		{
+			"name": "gf_icon_chip_cyan_png",
+			"type": "image",
+			"url": "assets/game/zhajh/gf_icon_chip_cyan.png"
+		},
+		{
+			"name": "gf_icon_chip_green_png",
+			"type": "image",
+			"url": "assets/game/zhajh/gf_icon_chip_green.png"
+		},
+		{
+			"name": "gf_icon_chip_grey_png",
+			"type": "image",
+			"url": "assets/game/zhajh/gf_icon_chip_grey.png"
+		},
+		{
+			"name": "gf_icon_chip_pink_png",
+			"type": "image",
+			"url": "assets/game/zhajh/gf_icon_chip_pink.png"
+		},
+		{
+			"name": "gf_icon_chip_purple_png",
+			"type": "image",
+			"url": "assets/game/zhajh/gf_icon_chip_purple.png"
 		}
 	]
 }
