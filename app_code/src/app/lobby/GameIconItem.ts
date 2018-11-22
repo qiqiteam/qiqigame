@@ -4,6 +4,7 @@ class GameIconItem extends eui.Component {
     private icondata:GameIconData;
 	private  effecthot: egret.MovieClip;
 	private  effectIcon: egret.MovieClip;
+	private  effectmask:egret.MovieClip;
 	constructor() {
 		super();
 		this.skinName = "GameIconItemSkin";
@@ -27,7 +28,7 @@ class GameIconItem extends eui.Component {
 
 	private onEnterGame(e:egret.TouchEvent):void 
 	{
-		EffectUtils.playButtonEffect(e.target,()=>{
+		EffectUtils.playButtonEffect(this,()=>{
 			this.clickCallback()
 		});
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
@@ -80,7 +81,16 @@ class GameIconItem extends eui.Component {
 			this.effectIcon.play(-1);
 			this.effectIcon.x = 130; 
            	this.addChild(this.effectIcon);
+		    this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_720_effect", "game_720_effect");
+		}else if(icondata.game==Const.GAME_ZHAJINHUA){
+			 this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_610_effect", "game_610_effect");
+		}else{
+ 			this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_230_effect", "game_230_effect");
 		}
-
+		this.effectmask.touchEnabled = false;
+		this.effectmask.play(-1);
+		this.effectmask.x = -12;
+		this.effectmask.y = -12;
+  		this.addChild(this.effectmask);
 	}
 }

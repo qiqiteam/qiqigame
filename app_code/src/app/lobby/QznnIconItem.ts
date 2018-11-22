@@ -4,6 +4,7 @@ class QznnIconItem extends eui.Component {
     private icondata:GameIconData;
 	private  effecthot: egret.MovieClip;
 	private  effectIcon: egret.MovieClip;
+	private  effectmask:egret.MovieClip;
 	constructor() {
 		super();
 		this.skinName = "QznnIconItemSkin";
@@ -27,7 +28,7 @@ class QznnIconItem extends eui.Component {
 
 	private onEnterGame(e:egret.TouchEvent):void 
 	{
-		EffectUtils.playButtonEffect(e.target,()=>{
+		EffectUtils.playButtonEffect(this,()=>{
 			this.clickCallback()
 		});
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
@@ -60,6 +61,11 @@ class QznnIconItem extends eui.Component {
 			this.effectIcon.x = 130; 
            	this.addChild(this.effectIcon);
 		}
-
+		this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_830_effect", "game_830_effect");
+		this.effectmask.touchEnabled = false;
+		this.effectmask.play(-1);
+		this.effectmask.x = 20;
+		this.effectmask.y = -9;
+  		this.addChild(this.effectmask);
 	}
 }

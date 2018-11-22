@@ -44,6 +44,11 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.settlement, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.leave, this.onMessage);
 			
+
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.niuniu_deskbet, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.niuniu_player, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.stopbet, this.onMessage);
+			
 		}
 
 		private onMessage(msg: any): void {
