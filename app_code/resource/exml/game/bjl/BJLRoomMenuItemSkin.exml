@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BJLRoomMenuItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled">
+	<e:Image id="bgImg" scaleX="1" scaleY="1" y="0" source="baccarat_hall_column_selected2_png" x="0"/>
+	<e:Image id="txtImg" scaleX="1" scaleY="1" y="9.5" x="20.5" source="baccarat_hall_title1_0_png"  source.down="baccarat_hall_title1_0_png" source.up="baccarat_hall_title1_1_png" />
+</e:Skin>

@@ -1,5 +1,10 @@
 {
-  "global": {
-    "globalAutoLayerMarkEnable": false
-  }
+    "global": {
+        "globalAutoLayerMarkEnable": true
+    },
+    "16734e2d1b3": {
+        "path": "..\\resource\\exml\\game\\qznn\\QZNNROOMSkin.ts",
+        "class": "QZNNROOMSkin",
+        "parentPath": ""
+    }
 }

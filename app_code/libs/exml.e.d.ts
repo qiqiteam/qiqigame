@@ -64,31 +64,27 @@ declare class ComBoxSkin extends eui.Skin{
 }
 declare class BJLHeadSkin extends eui.Skin{
 }
+declare class BJLRoomMenuItemSkin extends eui.Skin{
+}
 declare class BJLViewSkin extends eui.Skin{
+}
+declare class BJLroomViewSkin extends eui.Skin{
 }
 declare class BRNNHeadSkin extends eui.Skin{
 }
 declare class BRNNViewSkin extends eui.Skin{
 }
+declare class BRNNroomViewSkin extends eui.Skin{
+}
 declare class ErBaGangViewSkin extends eui.Skin{
+}
+declare class ErBaGangroomViewSkin extends eui.Skin{
 }
 declare class SystemMsgItemSkin extends eui.Skin{
 }
 declare class SystemMsgTypeItemSkin extends eui.Skin{
 }
 declare class SystemMsgViewSkin extends eui.Skin{
-}
-declare class NNCardViewSkin extends eui.Skin{
-}
-declare class NNGameItemSkin extends eui.Skin{
-}
-declare class NNGameListSkin extends eui.Skin{
-}
-declare class NNListViewSkin extends eui.Skin{
-}
-declare class NNTableItemSkin extends eui.Skin{
-}
-declare class NNViewSkin extends eui.Skin{
 }
 declare class InfoBoxItemSkin extends eui.Skin{
 }
@@ -101,6 +97,8 @@ declare class PlayerInfoViewSkin extends eui.Skin{
 declare class QZNNHeadSkin extends eui.Skin{
 }
 declare class QZNNViewSkin extends eui.Skin{
+}
+declare class QZNNroomViewSkin extends eui.Skin{
 }
 declare class RBGHeadSkin extends eui.Skin{
 }
@@ -124,6 +122,8 @@ declare class TBNNHeadSkin extends eui.Skin{
 }
 declare class TBNNViewSkin extends eui.Skin{
 }
+declare class TBNNroomViewSkin extends eui.Skin{
+}
 declare class AwardItemSkin extends eui.Skin{
 }
 declare class LotterySkin extends eui.Skin{
@@ -138,7 +138,7 @@ declare class ZJHViewSkin extends eui.Skin{
 }
 declare class ZhajhMainSceneView extends eui.Skin{
 }
-declare class chipSkin extends eui.Skin{
+declare class ZhajhroomViewSkin extends eui.Skin{
 }
 declare class GameIconItemSkin extends eui.Skin{
 }
@@ -147,6 +147,8 @@ declare class GameIconListViewSkin extends eui.Skin{
 declare class GameTypeItemSkin extends eui.Skin{
 }
 declare class LobbyViewSkin extends eui.Skin{
+}
+declare class QznnIconItemSkin extends eui.Skin{
 }
 declare class RoomTypeItemSkin extends eui.Skin{
 }

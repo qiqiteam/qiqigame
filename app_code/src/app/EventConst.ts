@@ -90,6 +90,11 @@ class EventConst {
     //public static botpour:string ="botpour";
     /**(结算)*/
     public static settlement:string ="settlement";
-
+    /**其他用户下注数*/ 
+    public static niuniu_deskbet:string ="niuniu_deskbet";
+    /**前20名玩家列表*/ 
+    public static niuniu_player:string ="niuniu_player";
+    /**停止下注*/ 
+    public static stopbet:string ="stopbet";	
 
 }
