@@ -19,10 +19,20 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.newplayer, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hog, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hognum, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.banker, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.bet, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.betnum, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.summary, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.players, this.onMessage, this);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.newplayer, this.onMessage, this);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hog, this.onMessage, this);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hognum, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.banker, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.bet, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.betnum, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.summary, this.onMessage, this);
+
+
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.play, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onBJLjoinroom, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.baccaratDeil, this.onMessage);
@@ -34,14 +44,25 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.dealCatch, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.beginBteon, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.bsogc, this.onMessage, this);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.gameOverSucces, this.onMessage, this);
+
+
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.gambleType, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.seecard, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.botpour, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.pressure, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.abandon, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.settlement, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.leave, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.seecard, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.botpour, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.compareCard, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.pressure, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.abandon, this.onMessage, this);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.settlement, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.leave, this.onMessage, this);
+
+
 		}
 
 		private onMessage(msg: any): void {

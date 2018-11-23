@@ -376,7 +376,7 @@ class BJLView extends eui.Component {
         this._wanjia.visible = false;
 
         this._btn_switch.visible = false;
-        UserInfo.getInstance().isGameStart = true;
+        // UserInfo.getInstance().isGameStart = true;
         // this._btn_switch.visible = true;
 
         //this.grpCard.visible = false;
@@ -520,6 +520,7 @@ class BJLView extends eui.Component {
         EventUtil.addEventListener(EventConst.bsogc, this.onbsogcBack, this);
         EventUtil.addEventListener(EventConst.acquisitionGolb, this.onAcquisitionGolbBack, this);
         EventUtil.addEventListener(EventConst.beginBteon, this.onBeginBteonBack, this);
+        EventUtil.addEventListener(EventConst.gameOverSucces, this.ongameOverSuccesBack, this);
 
     }
     /**赔率 */
@@ -591,9 +592,9 @@ class BJLView extends eui.Component {
     }
     /**5秒后开始下注,处理结算动画 */
     private onBeginBteonBack(data: any): void {
-        UserInfo.getInstance().isGameStart = false;  //游戏状态
+        // UserInfo.getInstance().isGameStart = false;  //游戏状态
         this.startCountDown(data._obj.seconds);
-        xlLib.TipsUtils.showFloatWordTips("5秒后开始下注,处理结算动画!");
+        // xlLib.TipsUtils.showFloatWordTips("5秒后开始下注,处理结算动画!");
         this.resetGame();
     }
     private over(data: any): void {
@@ -618,9 +619,18 @@ class BJLView extends eui.Component {
 
         this.cardResult = result;
         this.cardEffect();
-        UserInfo.getInstance().isGameStart = false;  //游戏状态
+        // UserInfo.getInstance().isGameStart = false;  //游戏状态
     }
-
+    
+    /**退出房间 */
+    private ongameOverSuccesBack(data: any): void {
+        if (data._obj.code == 200) {
+            xlLib.SceneMgr.instance.changeScene(Lobby);
+            xlLib.TipsUtils.showFloatWordTips(data._obj.reminder + "!");
+        } else {
+            xlLib.TipsUtils.showFloatWordTips(data._obj.reminder + "!");
+        }
+    }
     // /**设置庄家 */
     // private acceptbanker(data: any): void {
 
@@ -1714,17 +1724,13 @@ class BJLView extends eui.Component {
     }
 
     public Onquit(): void {
-        if (UserInfo.getInstance().isGameStart) {
-            xlLib.TipsUtils.showFloatWordTips("游戏中！");
-            return;
-        }
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token,
         };
         // xlLib.SceneMgr.instance.changeScene(Lobby);
-        xlLib.WebSocketMgr.getInstance().send(EventConst.gameOverSucces, senddata, (data) => {
-            xlLib.SceneMgr.instance.changeScene(Lobby);
+        xlLib.WebSocketMgr.getInstance().send(EventConst.BaccaratOnleave, senddata, (data) => {
+
         }, this);
     }
 
