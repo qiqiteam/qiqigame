@@ -66,6 +66,8 @@ declare class BJLHeadSkin extends eui.Skin{
 }
 declare class BJLRoomMenuItemSkin extends eui.Skin{
 }
+declare class BJLTypeItemSkin extends eui.Skin{
+}
 declare class BJLViewSkin extends eui.Skin{
 }
 declare class BJLroomViewSkin extends eui.Skin{
