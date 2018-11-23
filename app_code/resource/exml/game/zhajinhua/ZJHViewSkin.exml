@@ -482,11 +482,11 @@
 		<e:Image x="145" y="103" source="img_jinbi_png"/>
 		</e:Group>
 		<e:Group id="grp_btncmbar" width="839.39" height="120" y="-113.44" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" visible="false">
-			<e:TabBar id="tabbar1" width="839.39" height="120" x="0" y="0" itemRendererSkinName="chipSkin" scrollRect="(x=0,y=0,width=129,height=134) ">
+			
 			<e:layout>
 				<e:HorizontalLayout/>
 			</e:layout>
-			</e:TabBar>
+
 		</e:Group>
 		<e:Group id="grp_btncm" width="839.39" height="120" y="-123.44" anchorOffsetX="0" anchorOffsetY="0" x="262">
 			<e:Button id="_btn_jiacm_1" label="" x="1.3299999999999272" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">

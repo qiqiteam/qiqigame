@@ -140,8 +140,6 @@ declare class ZhajhMainSceneView extends eui.Skin{
 }
 declare class ZhajhroomViewSkin extends eui.Skin{
 }
-declare class chipSkin extends eui.Skin{
-}
 declare class GameIconItemSkin extends eui.Skin{
 }
 declare class GameIconListViewSkin extends eui.Skin{
