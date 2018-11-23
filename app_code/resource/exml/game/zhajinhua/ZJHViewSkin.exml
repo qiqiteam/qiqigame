@@ -7,21 +7,21 @@
 
 
 
-		<e:Image id="grpCard9_0" source="card_101" x="1060.04" y="520" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard9_1" x="1081.04" y="520" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard9_2" x="1101.04" y="520" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard8_0" source="card_101" x="1104.61" y="390" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard8_1" x="1125.61" y="390" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard8_2" x="1145.61" y="390" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard7_0" source="card_101" x="1072.15" y="270" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard7_1" x="1093.15" y="270" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard7_2" x="1113.15" y="270" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard6_0" source="card_101" x="919.72" y="210" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard6_1" x="940.72" y="210" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard6_2" x="960.72" y="210" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard5_0" source="card_101" x="690.99" y="210" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard5_1" x="711.99" y="210" scaleX="1" scaleY="1" source="card_101"/>
-		<e:Image id="grpCard5_2" x="731.99" y="210" scaleX="1" scaleY="1" source="card_101"/>
+		<e:Image id="grpCard9_0" source="card_101" x="1060.04" y="520" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image id="grpCard9_1" x="1081.04" y="520" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard9_2" x="1101.04" y="520" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard8_0" source="card_101" x="1104.61" y="390" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image id="grpCard8_1" x="1125.61" y="390" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard8_2" x="1145.61" y="390" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard7_0" source="card_101" x="1072.15" y="270" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image id="grpCard7_1" x="1093.15" y="270" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard7_2" x="1113.15" y="270" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard6_0" source="card_101" x="919.72" y="210" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image id="grpCard6_1" x="940.72" y="210" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard6_2" x="960.72" y="210" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard5_0" source="card_101" x="690.99" y="210" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image id="grpCard5_1" x="711.99" y="210" scaleX="1" scaleY="1" source="card_101" visible="false"/>
+		<e:Image id="grpCard5_2" x="731.99" y="210" scaleX="1" scaleY="1" source="card_101" visible="false"/>
 		<e:Image id="grpCard4_0" source="card_101" x="451.82" y="210" scaleX="1" scaleY="1" />
 		<e:Image id="grpCard4_1" x="472.82" y="210" scaleX="1" scaleY="1" source="card_101" />
 		<e:Image id="grpCard4_2" x="492.82" y="210" scaleX="1" scaleY="1" source="card_101" />
@@ -42,11 +42,11 @@
 		<e:Label id="labCardType2" x="285.15" y="425.65" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xffcc0c" stroke="1" scaleX="1" scaleY="1"/>
 		<e:Label id="labCardType3" y="305" text="豹子" textAlign="center" bold="true" width="82" size="24" x="314" textColor="0xffcc0c" stroke="1"/>
 		<e:Label id="labCardType4" x="455.39" y="247" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xffcc0c" stroke="1"/>
-		<e:Label id="labCardType5" x="695.92" y="247.52" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label id="labCardType6" x="925.04" y="247.04" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label id="labCardType7" x="1079" y="306.04" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label id="labCardType8" x="1110.56" y="426" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
-		<e:Label id="labCardType9" x="1066" y="556" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1"/>
+		<e:Label id="labCardType5" x="695.92" y="247.52" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1" visible="false"/>
+		<e:Label id="labCardType6" x="925.04" y="247.04" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1" visible="false"/>
+		<e:Label id="labCardType7" x="1079" y="306.04" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1" visible="false"/>
+		<e:Label id="labCardType8" x="1110.56" y="426" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1" visible="false"/>
+		<e:Label id="labCardType9" x="1066" y="556" text="豹子" textAlign="center" bold="true" width="82" size="24" textColor="0xFFCC0C" stroke="1" scaleX="1" scaleY="1" visible="false"/>
 		<e:Label id="labstatus0" x="697.18" y="566" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xd00ddb" verticalAlign="middle"/>
 		<e:Label id="labstatus1" x="346.57" y="542.63" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
 		<e:Label id="labstatus2" x="286.87" y="414.74" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
@@ -106,7 +106,7 @@
 		<e:Image source="a20" y="0" x="0" />
 		<e:BitmapLabel id="labCountdown0" x="9" y="11" font="bitmapnum0_fnt" text="0" width="20" />
 		<e:BitmapLabel id="labCountdown1" x="32" y="11" font="bitmapnum0_fnt" text="0" width="20" anchorOffsetX="0" />
-		<e:Label id="timeTxt" text="10" x="-126" y="-48" scaleX="1" scaleY="1" textColor="0xfc1c07" bold="true" anchorOffsetX="0" width="53.7" anchorOffsetY="0" height="42.12" size="40"/>
+		<e:Label id="timeTxt" text="10" x="-126" y="-48" scaleX="1" scaleY="1" textColor="0xfc1c07" bold="true" anchorOffsetX="0" width="53.7" anchorOffsetY="0" height="42.12" size="40" visible="false"/>
 	</e:Group>
 	<e:Group x="0" y="889.31" visible="false">
 		<e:Image source="u1" x="0" y="0" locked="true" />
@@ -481,15 +481,9 @@
 		<e:Label id="labelGold0" text="1000000" x="191.84" y="104.33" textColor="0xf4d727" textAlign="center"/>
 		<e:Image x="145" y="103" source="img_jinbi_png"/>
 		</e:Group>
-		<e:Group id="grp_btncmbar" width="839.39" height="120" y="-113.44" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" visible="false">
-			
-			<e:layout>
-				<e:HorizontalLayout/>
-			</e:layout>
 
-		</e:Group>
 		<e:Group id="grp_btncm" width="839.39" height="120" y="-123.44" anchorOffsetX="0" anchorOffsetY="0" x="262">
-			<e:Button id="_btn_jiacm_1" label="" x="1.3299999999999272" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+			<e:Button id="_btn_jiacm_1" label="" x="1.3299999999999272" width="129" height="134" scaleX="1" scaleY="1" top="0">
 				<e:skinName>
 				<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="gf_icon_chip_green_png"/>
@@ -497,7 +491,7 @@
 				</e:Skin>
 				</e:skinName>
 			</e:Button>
-			<e:Button id="_btn_jiacm_2" label="" x="147.71000000000004" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+			<e:Button id="_btn_jiacm_2" label="" x="147.71000000000004" width="129" height="134" scaleX="1" scaleY="1" top="0">
 				<e:skinName>
 				<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="gf_icon_chip_green_png"/>
@@ -505,7 +499,7 @@
 				</e:Skin>
 				</e:skinName>
 			</e:Button>
-			<e:Button id="_btn_jiacm_3" label="" x="296.14" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+			<e:Button id="_btn_jiacm_3" label="" x="296.14" width="129" height="134" scaleX="1" scaleY="1" top="0">
 				<e:skinName>
 				<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="gf_icon_chip_cyan_png"/>
@@ -513,7 +507,7 @@
 				</e:Skin>
 				</e:skinName>
 			</e:Button>
-			<e:Button id="_btn_jiacm_4" label="" x="434.95000000000005" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+			<e:Button id="_btn_jiacm_4" label="" x="434.95000000000005" width="129" height="134" scaleX="1" scaleY="1" top="0">
 				<e:skinName>
 				<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="gf_icon_chip_pink_png"/>
@@ -521,7 +515,7 @@
 				</e:Skin>
 				</e:skinName>
 			</e:Button>
-			<e:Button id="_btn_jiacm_5" label="" x="575.8799999999999" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+			<e:Button id="_btn_jiacm_5" label="" x="575.8799999999999" width="129" height="134" scaleX="1" scaleY="1" top="0">
 				<e:skinName>
 				<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="gf_icon_chip_purple_png"/>
@@ -529,7 +523,7 @@
 				</e:Skin>
 				</e:skinName>
 			</e:Button>
-			<e:Button id="_btn_jiacm_6" label="" x="708.64" y="15.149999999999977" width="129" height="134" scaleX="1" scaleY="1">
+			<e:Button id="_btn_jiacm_6" label="" x="708.64" width="129" height="134" scaleX="1" scaleY="1" top="0">
 				<e:skinName>
 				<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="gf_icon_chip_blue_png"/>
@@ -537,12 +531,12 @@
 				</e:Skin>
 				</e:skinName>
 			</e:Button>
-			<e:Label id="labchip1" text="2" x="34.22" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xffffff" height="40" size="40" bold="true" touchEnabled="false"/>
-			<e:Label text="3" x="183.61" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip2" touchEnabled="false"/>
-			<e:Label text="4" x="331.49" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip3" touchEnabled="false"/>
-			<e:Label text="5" x="470.29" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip4" touchEnabled="false"/>
-			<e:Label text="6" x="610.58" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip5" touchEnabled="false"/>
-			<e:Label id="labchip6" text="7" x="741.78" y="53" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" touchEnabled="false"/>
+			<e:Label id="labchip1" text="2" x="34.22" y="37" width="60" verticalAlign="middle" textAlign="center" textColor="0xffffff" height="40" size="40" bold="true" touchEnabled="false"/>
+			<e:Label text="3" x="183.61" y="37" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip2" touchEnabled="false"/>
+			<e:Label text="4" x="331.49" y="37" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip3" touchEnabled="false"/>
+			<e:Label text="5" x="470.29" y="37" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip4" touchEnabled="false"/>
+			<e:Label text="6" x="610.58" y="37" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" id="labchip5" touchEnabled="false"/>
+			<e:Label id="labchip6" text="7" x="741.78" y="37" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" touchEnabled="false"/>
 
 		</e:Group>
 
@@ -618,7 +612,7 @@
 		<e:Image x="1090" y="35" touchEnabled="false" source="btn_bipai_png"/>
 		<e:Image x="1240" y="35" source="lab_zjh_up_discard_png" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="grpResult" x="497.74" y="286.69" visible="false">
+	<e:Group id="grpResult" y="225.99" horizontalCenter="0" visible="false" locked="true">
 		<e:Image source="a11" x="0" y="0"/>
 		<e:Group id="grpMax" x="0" y="3">
 		<e:Image source="a14" y="0" x="0" locked="true"/>
@@ -706,5 +700,13 @@
 			</e:Skin>
 		</e:skinName>
 
+	</e:Button>
+	<e:Button id="_btn_continuegame" label="" y="605" x="609">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="_btn_start_png" source.down="_btn_start_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
 	</e:Button>
 </e:Skin>

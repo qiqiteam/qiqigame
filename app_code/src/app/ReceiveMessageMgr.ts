@@ -37,13 +37,16 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.acquisitionGolb, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.staticEndAll, this.onMessage);
 			
-			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.seecard, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.otherSeecard, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.otherBotpour, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.botpour, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.compareCard, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.pressure, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.abandon, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.otherAbandon, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.settlement, this.onMessage);
-			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.leave, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.gameOver, this.onMessage);//游戏结束
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.leave, this.onMessage);//离开房间
 			
 
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.niuniu_deskbet, this.onMessage);

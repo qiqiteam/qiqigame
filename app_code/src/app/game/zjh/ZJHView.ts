@@ -250,6 +250,7 @@ class ZJHView extends eui.Component {
     public _btn_meun: eui.Button;
     public _btn_chat: eui.Button;
     public _btn_voice: eui.Button;
+    public _btn_continuegame: eui.Button;
 
     public _btn_prepare: eui.Button;
     public grp_btncm: eui.Button;
@@ -261,7 +262,7 @@ class ZJHView extends eui.Component {
     public _btn_jiacm_5: eui.Button;
     public _btn_jiacm_6: eui.Button;
     public timeTxt: eui.Label;
-
+    private kanpaistatue: boolean;
 
 
     public labHandsel: eui.BitmapLabel;
@@ -344,13 +345,6 @@ class ZJHView extends eui.Component {
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
-
-        /*let dataArr: any[] = [{ name: "基本资料", down_url: "gf_icon_chip_green_png", up_url: "gf_icon_chip_green_png" },
-        { name: "我的钱包", down_url: "btn_mywallet_down_png", up_url: "btn_mywallet_up_png" },
-        { name: "我的背包", down_url: "btn_pack_down_png", up_url: "btn_pack_up_png" }];
-        this.grp_btncmbar.dataProvider = new eui.ArrayCollection(dataArr);
-        this.grp_btncmbar.useVirtualLayout = true;
-        this.grp_btncmbar.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);*/
     }
 
     private initData(): void {
@@ -372,20 +366,17 @@ class ZJHView extends eui.Component {
         this.imgBaoZhuang.visible = false;
         this.grpCardType.touchChildren = false;
         this.grpCardType.touchEnabled = false;
-        //this.grpCaijin.visible = false;
-        this.grpCard.visible = true;
 
+        this.kanpaistatue = false;
         this.grpCard.visible = true;
-
         this._btn_prepare.visible = true;
-
-        //this._btn_gendaodi.touchEnabled = false;
-        //this._btn_genzhu.touchEnabled = false;
         this._btn_jiazhu.visible = false;
-        //this._btn_quanxia20.touchEnabled = false;
         this._btn_kanpai.visible = false;
-        //this._btn_qipai.touchEnabled = false;
+        this._btn_qipai.visible = false;
         this.grp_btncm.visible = false;
+        this._btn_continuegame.visible = false;
+
+
 
     }
 
@@ -464,6 +455,7 @@ class ZJHView extends eui.Component {
                 };
                 this.onKanPaiClick(poke);
                 this._btn_kanpai.visible = false;
+                this.kanpaistatue = true;
             }, this);
         } else if (e.target == this._btn_genzhu) {
             this.sendamessage(EventConst.botpour, 1);
@@ -476,6 +468,7 @@ class ZJHView extends eui.Component {
             this.sendamessage(EventConst.botpour, 2);
             this.onGenZhuClick();
             xlLib.TipsUtils.showFloatWordTips("加注2金币");
+
             this._btn_jiazhu.visible = false;
             this.grp_btncm.visible = false;
         } else if (e.target == this._btn_jiacm_2) {
@@ -488,7 +481,7 @@ class ZJHView extends eui.Component {
             this.sendamessage(EventConst.botpour, 4);
             this.onGenZhuClick();
             xlLib.TipsUtils.showFloatWordTips("加注4金币");
-            this._btn_jiazhu.visible = false; 4
+            this._btn_jiazhu.visible = false;
             this.grp_btncm.visible = false;
         } else if (e.target == this._btn_jiacm_4) {
             this.sendamessage(EventConst.botpour, 5);
@@ -532,8 +525,15 @@ class ZJHView extends eui.Component {
 
             }, this);
 
+        } else if (e.target == this._btn_continuegame) {
+            this.sendamessage(EventConst.joinroom, null);
+            xlLib.SceneMgr.instance.changeScene(ZJHScene);
+            xlLib.TipsUtils.showFloatWordTips("继续游戏");
         }
 
+    }
+    private residueGolds() {
+        
     }
     private sendamessage(sendstr: string, bet: number): void {
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
@@ -547,7 +547,7 @@ class ZJHView extends eui.Component {
             data: bet
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
-
+        
         }, this);
     }
     private sendamessage2(sendstr: string): void {
@@ -603,22 +603,22 @@ class ZJHView extends eui.Component {
         //this.setCountdown();
         //this.cardEffect();
         // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.play, this.playpai, this);
         EventUtil.addEventListener(EventConst.gambleType, this.gametype, this);
-        EventUtil.addEventListener(EventConst.seecard, this.kanpai, this);
+        EventUtil.addEventListener(EventConst.otherSeecard, this.kanpai, this);
         EventUtil.addEventListener(EventConst.compareCard, this.Thancard, this);
         EventUtil.addEventListener(EventConst.pressure, this.ALLIN, this);
-        EventUtil.addEventListener(EventConst.botpour, this.otherplayerxiazhu, this);
+        EventUtil.addEventListener(EventConst.otherBotpour, this.otherplayerxiazhu, this);
+        EventUtil.addEventListener(EventConst.botpour, this.xiazhu, this);
+        EventUtil.addEventListener(EventConst.otherAbandon, this.otherdiscard, this);
         EventUtil.addEventListener(EventConst.abandon, this.discard, this);
         EventUtil.addEventListener(EventConst.settlement, this.settleaccount, this);
-        EventUtil.addEventListener(EventConst.leave, this.gameover, this);
+        EventUtil.addEventListener(EventConst.gameOver, this.gameover, this);
+        EventUtil.addEventListener(EventConst.leave, this.leaveroom, this);
 
-
-
-
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         this._btn_prepare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_kanpai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiazhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
@@ -632,6 +632,7 @@ class ZJHView extends eui.Component {
         this._btn_quanxia.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_qipai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_bipai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_continuegame.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
 
     }
     private addtime: number;//计时器从0+到10
@@ -648,11 +649,13 @@ class ZJHView extends eui.Component {
     }
     /**倒计时处理*/
     private timerFunc(evt: egret.TimerEvent): void {
-        if (this.time >= 0 && this.time <= 12) {
+        if (this.time >= 0 && this.time <= 15) {
 
             this.time--;
-            this.addtime = 10 - this.time;
-            console.log("addtime", 10 - this.time);
+            this.addtime = 15 - this.time;
+            console.log("addtime", 15 - this.time);
+            //console.log(this.time);
+
         }
         else {
             this.clearTime();
@@ -667,8 +670,6 @@ class ZJHView extends eui.Component {
             this.timer = null;
         }
     }
-
-    
     /**发牌 */
     private playpai(data: any): void {
 
@@ -680,7 +681,7 @@ class ZJHView extends eui.Component {
     }
     /**看牌 */
     private kanpai(data: any): void {
-        if (data.param.command == "seecard" && UserInfo.getInstance().uid != data.param.userId) {
+        if (data.param.command == "otherSeecard" && UserInfo.getInstance().uid != data.param.userId) {
             let seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
             this['labstatus' + seatnum].text = '已看牌';
         }
@@ -691,8 +692,11 @@ class ZJHView extends eui.Component {
     private gametype(data: any): void {
         this.numtime = data.param.seconds;
         console.log(data);
+        if (this.kanpaistatue == false) {
+            this.startCountDown(this.numtime);
+        }
         this._btn_bipai.visible = true;
-        this.startCountDown(this.numtime);
+
 
         let betarr: string[] = data.param.limit.split(",");
         if (betarr.length >= 1) {
@@ -704,11 +708,21 @@ class ZJHView extends eui.Component {
              }*/
         }
     }
+    /**玩家下注*/
+    private xiazhu(data: any): void {
+        if (data.param.command == "botpour" && UserInfo.getInstance().uid == data.param.id) {
+            UserInfo.getInstance().goldcoins=data.param.golds;
+            this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
 
+        }
+    }
     /**其他玩家下注*/
     private otherplayerxiazhu(data: any): void {
-        if (data.param.command == "botpour" && UserInfo.getInstance().uid != data.param.id) {
+        if (data.param.command == "otherBotpour" && UserInfo.getInstance().uid != data.param.id) {
             this.onPlayerGenZhu(data.param.index, 10000);
+            if (data.param.code == "200") {
+               
+            }
         }
     }
     /**全压*/
@@ -728,9 +742,9 @@ class ZJHView extends eui.Component {
         }
     }
 
-    /**玩家弃牌*/
-    private discard(data: any): void {
-        if (data.param.command == "abandon" && UserInfo.getInstance().uid != data.param.userId) {
+    /**其他玩家弃牌*/
+    private otherdiscard(data: any): void {
+        if (data.param.command == "otherAbandon" && UserInfo.getInstance().uid != data.param.userId) {
             let seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
             this['labCardType' + seatnum].text = '弃牌';
             this['labstatus' + seatnum].text = '';
@@ -748,8 +762,11 @@ class ZJHView extends eui.Component {
             }
             this.orginPlayerCardPos[seatnum] = cardPos;
             //xlLib.DisplayUtils.setComponentEnabled(card, false); 
-            //自己不进行任何操作超过操作时间 视为弃牌状态 
-        } else if (data.param.command == "abandon" && UserInfo.getInstance().uid == data.param.userId && this.addtime >= this.numtime) {
+        }
+    }
+    /**玩家弃牌*///自己不进行任何操作超过操作时间 视为弃牌状态 
+    private discard(data: any): void {
+        if (data.param.command == "abandon" && UserInfo.getInstance().uid == data.param.userId && this.addtime >= this.numtime) {
             console.log(this.addtime);
             let poke = {
                 type: data.param.cardGenre,//牌型
@@ -766,9 +783,11 @@ class ZJHView extends eui.Component {
                 xlLib.DisplayUtils.setComponentEnabled(card, false);
             }
             xlLib.TipsUtils.showFloatWordTips("自动弃牌");
-
+            this._btn_kanpai.visible = false;
         }
     }
+
+
     /**结算 */
     private settleaccount(data: any): void {
         console.log("结算");
@@ -777,6 +796,11 @@ class ZJHView extends eui.Component {
     }
     /**游戏结束*/
     private gameover(data: any): void {
+        console.log(data);
+        this._btn_continuegame.visible = true;
+    }
+    /**离开房间*/
+    private leaveroom(data: any): void {
         console.log(data);
     }
     //加入房间新玩家
@@ -956,6 +980,7 @@ class ZJHView extends eui.Component {
                 if (this.zhangIndex == 0) {
                     clearInterval(this.flyIntval);
                     this._btn_kanpai.visible = true;
+                    this._btn_qipai.visible=true;
                     return;
                 }
             } else if (this.flyIndex0 == this.zhangIndex - 1) {
@@ -963,6 +988,7 @@ class ZJHView extends eui.Component {
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
                 this._btn_kanpai.visible = true;
+                this._btn_qipai.visible=true;
                 return;
             } else {
                 this.flyIndex1 = 0;
@@ -1106,6 +1132,16 @@ class ZJHView extends eui.Component {
         EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
         EventUtil.removeEventListener(EventConst.play, this.playpai, this);
         EventUtil.removeEventListener(EventConst.gambleType, this.gametype, this);
+        EventUtil.removeEventListener(EventConst.otherSeecard, this.kanpai, this);
+        EventUtil.removeEventListener(EventConst.compareCard, this.Thancard, this);
+        EventUtil.removeEventListener(EventConst.pressure, this.ALLIN, this);
+        EventUtil.removeEventListener(EventConst.otherBotpour, this.otherplayerxiazhu, this);
+        EventUtil.removeEventListener(EventConst.botpour, this.xiazhu, this);
+        EventUtil.removeEventListener(EventConst.otherAbandon, this.otherdiscard, this);
+        EventUtil.removeEventListener(EventConst.abandon, this.discard, this);
+        EventUtil.removeEventListener(EventConst.settlement, this.settleaccount, this);
+        EventUtil.removeEventListener(EventConst.gameOver, this.gameover, this);
+        EventUtil.removeEventListener(EventConst.leave, this.leaveroom, this);
         this._btn_prepare.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_kanpai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiazhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);

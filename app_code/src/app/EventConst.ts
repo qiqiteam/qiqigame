@@ -23,20 +23,20 @@ class EventConst {
     /**离开房间 */
     public static niuniu_leave: string = "niuniu_leave";
 
-    /**准备 */
+     /**准备 */
     public static prepare: string = "prepare";
-    /**比牌 */
-    public static compareCard: string = "compareCard";
-    /**全压 */
-    public static pressure: string = "pressure";
-    /**弃牌 */
-    public static abandon: string = "abandon";
-    /**看牌 */
-    public static seecard: string = "seecard";
     /**发牌 */
     public static play: string = "play";
     /**(下注)*/
     public static botpour: string = "botpour";
+    /**全压 */
+    public static pressure: string = "pressure";
+    /**看牌 */
+    public static seecard: string = "seecard";
+    /**比牌 */
+    public static compareCard: string = "compareCard";
+    /**弃牌 */
+    public static abandon: string = "abandon";
 
     //------------------S to C---------------------服务端回包监听数据
     /**所有玩家列表*/
@@ -96,5 +96,15 @@ class EventConst {
     public static niuniu_player:string ="niuniu_player";
     /**停止下注*/ 
     public static stopbet:string ="stopbet";	
+
+    /**(金花其他下注)*/
+    public static otherBotpour: string = "otherBotpour";
+    /**(金花其他看牌)*/
+    public static otherSeecard: string = "otherSeecard";
+    /**(金花其他弃牌)*/
+    public static otherAbandon: string = "otherAbandon";
+    /**(游戏结束)*/
+    public static gameOver: string = "gameOver";
+    
 
 }
