@@ -660,13 +660,14 @@
 		<e:Label id="resultType3" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="307"/>
 		</e:Group>
 	</e:Group>
-	<e:Button id="_btn_close" label="" x="15" y="20">
+	<e:Button id="_btn_close" label="" x="17" y="23">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_fanhui_0_png" source.down="btn_fanhui_0_png"/>
+			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 		</e:skinName>
+
 	</e:Button>
 	<e:Button id="_btn_meun" label="" x="1365" y="20">
 		<e:skinName>
