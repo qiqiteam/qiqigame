@@ -33,6 +33,7 @@
 		"bin-debug/app/game/bjl/BJLHead.js",
 		"bin-debug/app/game/bjl/BJLroomView.js",
 		"bin-debug/app/game/bjl/BJLScene.js",
+		"bin-debug/app/game/bjl/BJLTypeItem.js",
 		"bin-debug/app/game/bjl/BJLUtil.js",
 		"bin-debug/app/game/bjl/BJLView.js",
 		"bin-debug/app/game/brnn/BRNNHead.js",

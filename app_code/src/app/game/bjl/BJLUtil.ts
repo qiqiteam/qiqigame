@@ -13,7 +13,7 @@ class BJLUtil {
         return this.instance;
     }
 
-    //获取筹码数量    1w  10w     100w    1000w   5000w   1y
+    //获取筹码数量    1w  10w   100w   1000w  1y  5y
     public getBetNumber(index): number {
         switch (index) {
             case 0:
@@ -21,13 +21,13 @@ class BJLUtil {
             case 1:
                 return Math.pow(10, 5);
             case 2:
-                return Math.pow(10, 6);
+                return 5 * Math.pow(10, 6);
             case 3:
                 return Math.pow(10, 7);
             case 4:
-                return 5 * Math.pow(10, 7);
+                return 1 * Math.pow(10, 8);
             case 5:
-                return Math.pow(10, 8);
+                return 5 * Math.pow(10, 8);
         }
     }
 
@@ -36,147 +36,106 @@ class BJLUtil {
         var src = '';
         switch (type) {
             case 2:
-                src = 'nn.d2'
+                src = 'd2'
                 break;
             case 3:
-                src = 'nn.d3'
+                src = 'd3'
                 break;
             case 4:
-                src = 'nn.d4'
+                src = 'd4'
                 break;
             case 5:
-                src = 'nn.d5'
+                src = 'd5'
                 break;
         }
         return src;
     }
 
-    public getCoinsPos(index): egret.Point {
-        var point: egret.Point = new egret.Point();
-        /*
-        switch (index) {
+    public getSoundEffect(type): string {
+        switch (type) {
+            case 0:
+                return 'bgm';    //背景音乐
             case 1:
-                point.x = 195;
-                point.y = 523;
-                break;
+                return 'jh.jackpot'; //自己赢得最多
             case 2:
-                point.x = 383;
-                point.y = 523;
-                break;
+                return 'jh.start';   //下注开始
             case 3:
-                point.x = 195;
-                point.y = 633;
-                break;
+                return 'jh.end'; //下注结束
             case 4:
-                point.x = 383;
-                point.y = 633;
+                return 'jh.ts';  //通杀
+            case 5:
+                return 'jh.tp';  //通赔
+            case 6:
+                return 'jh.dealCard';  //发牌
+            case 7:
+                return 'jh.openCard';  //开牌
+            case 8:
+                return 'jh.stake';   //筹码
+        }
+    }
+
+    public getCoinsPos(index: Number): egret.Point {
+        var point: egret.Point = new egret.Point();
+        switch (index) {
+            case 1:                 // 1是庄家赢
+                point.x = 1090;
+                point.y = 270;
+                break;
+            case 2:                 // 2是闲家赢
+                point.x = 330;
+                point.y = 270;
+                break;
+            case 3:                 // 3是上庄赢
+                point.x = 630;
+                point.y = 310;
+                break;
+            case 4:                 // 4是上庄输
+                point.x = 805;
+                point.y = 310;
+                break;
+            case 5:                 // 5是和
+                point.x = 670;
+                point.y = 510;
+                break;
+            case 6:                 // 6是庄对
+                point.x = 1190;
+                point.y = 510;
+                break;
+            case 7:                 // 7是闲队
+                point.x = 210;
+                point.y = 510;
+                break;
+            case 8:                 // 8是大
+                point.x = 400;
+                point.y = 510;
+                break;
+            case 9:                 // 9是小
+                point.x = 1000;
+                point.y = 510;
                 break;
         }
-        */
-        point.x = 700;
-        point.y = 300;
         return point;
     }
 
-    public getCardType2(index): string {
-        switch (index) {
-            case 0:
-                return '无牛';
-            case 1:
-                return '牛一';
-            case 2:
-                return '牛二';
-            case 3:
-                return '牛三';
-            case 4:
-                return '牛四';
-            case 5:
-                return '牛五';
-            case 6:
-                return '牛六';
-            case 7:
-                return '牛七';
-            case 8:
-                return '牛八';
-            case 9:
-                return '牛九';
-            case 10:
-                return '牛牛';
-            case 11:
-                return '四炸';
-            case 12:
-                return '五花牛';
-            case 13:
-                return '五小牛';
-        }
-    }
     public getCardType(index): string {
         switch (index) {
-            case 0:
-                return 'nn.n1';
             case 1:
-                return 'nn.n2';
+                return '豹子';
             case 2:
-                return 'nn.n3';
+                return '同花顺';
             case 3:
-                return 'nn.n4';
+                return '金花';
             case 4:
-                return 'nn.n5';
+                return '顺子';
             case 5:
-                return 'nn.n6';
+                return '对子';
             case 6:
-                return 'nn.n7';
-            case 7:
-                return 'nn.n8';
-            case 8:
-                return 'nn.n9';
-            case 9:
-                return 'nn.n10';
-            case 10:
-                return 'nn.n11';
-            case 11:
-                return 'nn.n13';
-            case 12:
-                return 'nn.n14';
-            case 13:
-                return 'nn.n12';
-        }
-    }
-    public getCardMusicType(index): string {
-        switch (index) {
-            case 0:
-                return 'nn.niu0';
-            case 1:
-                return 'nn.niu1';
-            case 2:
-                return 'nn.niu2';
-            case 3:
-                return 'nn.niu3';
-            case 4:
-                return 'nn.niu4';
-            case 5:
-                return 'nn.niu5';
-            case 6:
-                return 'nn.niu6';
-            case 7:
-                return 'nn.niu7';
-            case 8:
-                return 'nn.niu8';
-            case 9:
-                return 'nn.niu9';
-            case 10:
-                return 'nn.niuniu';
-            case 11:
-                return 'nn.playNiuZhadan';
-            case 12:
-                return 'nn.playNiu5hua';
-            case 13:
-                return 'nn.playNiuXiao5';
+                return '单张';
         }
     }
 
     //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(pos:egret.Point, num): Array<eui.Image> {
+    public coinsType(pos: egret.Point, num): Array<eui.Image> {
         var coinArr = [];
         var coinNum: number = 0;
         var src: string = '';
@@ -237,28 +196,5 @@ class BJLUtil {
                 break;
         }
         return p;
-    }
-
-    public getSoundEffect(type): string {
-        switch (type) {
-            case 0:
-                return 'bgm';    //背景音乐
-            case 1:
-                return 'nn.jackpot'; //自己赢得最多
-            case 2:
-                return 'nn.start';   //下注开始
-            case 3:
-                return 'nn.end'; //下注结束
-            case 4:
-                return 'nn.ts';  //通杀
-            case 5:
-                return 'nn.tp';  //通赔
-            case 6:
-                return 'nn.dealCard';  //发牌
-            case 7:
-                return 'nn.openCard';  //开牌
-            case 8:
-                return 'nn.stake';   //筹码
-        }
     }
 }

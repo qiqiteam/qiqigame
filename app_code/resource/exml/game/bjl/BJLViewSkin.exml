@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BJLViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Image x="0" bottom="0"  source="bg_bjl_jpg"/>
-	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0" />
+	<e:Image x="0" bottom="0"  source="bg_bjl_jpg" locked="true"/>
+	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true"/>
 
 	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
 		<e:Image id="grpCard_0_0" x="230.6" y="212" scaleX="1" scaleY="1" width="119" height="157" source="img_puke_7_png"/>
@@ -17,7 +17,7 @@
 
 
 	</e:Group>
-	<e:Group x="0" y="0" width="1472" height="828">
+	<e:Group id="_wanjia" x="0" y="0" width="1472" height="828" locked="true" visible="false">
 		<ns1:QZNNHead id="grpHead1" width="20" height="20" x="100" y="534" skinName="QZNNHeadSkin"/>
 		<ns1:QZNNHead id="grpHead2" width="20" height="20" x="14" y="309" skinName="QZNNHeadSkin"/>
 		<ns1:QZNNHead id="grpHead3" width="20" height="20" x="146" y="74" skinName="QZNNHeadSkin"/>
@@ -59,7 +59,7 @@
 	<e:Image id="btnCardType" x="13" y="125" source="nn.btncardtype"  locked="true" visible="false"/>
 	<e:Image id="btnRedBox" source="nn.btnred" x="21" y="857" scaleX="1" scaleY="1" anchorOffsetX="0" width="122"
 	         anchorOffsetY="0" height="36"  locked="true" visible="false"/>
-	<e:Group id="grpBankerInfo" x="119" y="104.29" width="398" height="100" visible="false" locked="true">
+	<e:Group id="grpBankerInfo" x="119" y="104.29" width="398" height="100" locked="true" visible="false">
 		<e:Image x="0" y="0" source="nn.bankerbg" />
 		<e:Image id="btnDownBanker" x="264" y="25" height="33" source="nn.btnDownBanker" name="btnDownBanker" />
 		<e:Image id="btnBankerDown" x="354" y="62" source="nn.btndownlist" />
@@ -75,12 +75,16 @@
 		<e:Image id="btnVip0" source="vipbg" x="45" y="73"/>
 		<e:Label id="labBankerVip" text="VIP 15" x="47" y="78" size="16" width="50" textAlign="center" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="grpCountdown" horizontalCenter="127.5" verticalCenter="-185.5" locked="true">
+	<e:Group id="grpCountdown" horizontalCenter="127.5" verticalCenter="-185.5" locked="true" visible="false">
 		<e:Image y="-4.56" x="-7.6"  source="bg_timer_png"/>
 		<e:BitmapLabel id="labCountdown0" x="14.97" y="16.15" text="0" width="14.3" font="nnBitmapCountdown_fnt"
 		               anchorOffsetX="0" />
 		<e:BitmapLabel id="labCountdown1" x="29.77" y="16.15" text="0" width="14.3" font="nnBitmapCountdown_fnt"
 		               anchorOffsetX="0" />
+	</e:Group>
+	<e:Group id="grpCountdown0" horizontalCenter="127.5" verticalCenter="-185.5" locked="true">
+		<e:Image y="-4.56" x="-7.6" source="bg_timer_png"/>
+		<e:Label id="timeTxt" text="0" size="26" horizontalCenter="-4" verticalCenter="-1.5" textColor="0xbf0b0b"/>
 	</e:Group>
 	<e:Group x="0" y="877.31" visible="false" locked="true">
 		<e:Image x="0" y="0" source="nn.bottom" />
@@ -502,7 +506,7 @@
 		<e:Rect height="30" width="330" y="-10" horizontalCenter="0" strokeWeight="1" />
 		<e:Label id="grpCaijinLabel" y="-8" horizontalCenter="0" bold="true" textColor="0xFFFF00" />
 	</e:Group>
-	<e:Group width="1364" height="104" y="724" x="108">
+	<e:Group width="1364" height="104" y="724" x="108" locked="true">
 		<e:Image width="1364" height="104" x="0" y="0" source="img_dibu_png"/>
 
 		<e:Group id="grpHead0" scaleX="1" scaleY="1" x="15" y="-35">
@@ -514,13 +518,18 @@
 			<e:Image id="_my_img_zhuang" x="101.32" y="-7.34" source="img_zhuang_png" scaleX="0.6" scaleY="0.6" visible="false"/>
 		</e:Group>
 
-		<e:Group id="_btn_switch" width="1024.94" height="100%" anchorOffsetX="0" x="338" y="0">
+		<e:Group id="_btn_switch" width="1024.94" height="100%" anchorOffsetX="0" x="338" y="0" visible="false">
 			<e:Image id="_image_10zhu" x="54.43999999999994" scaleX="1" scaleY="1" source="img_10zhu_png" y="-30"/>
 			<e:Image id="_image_20zhu" x="251.82999999999993" scaleX="1" scaleY="1" source="img_20zhu_png" y="-31"/>
 			<e:Image id="_image_50zhu" x="450.32000000000005" scaleX="1" scaleY="1" source="img_50zhu_png" y="-32" alpha="1"/>
 			<e:Image id="_image_100zhu" x="655.3099999999998" scaleX="1" scaleY="1" source="img_100zhu_png" y="-31"/>
 			<e:Image id="_image_500zhu" x="852.78" scaleX="1" scaleY="1" source="img_500zhu_png" y="-31"/>
 		</e:Group>
+		<e:TabBar id="_Set_meun" width="1000" height="134" x="360" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="BJLTypeItemSkin" y="-30">
+			<e:layout>
+				<e:HorizontalLayout gap="80"/>
+			</e:layout>
+		</e:TabBar>
 
 
 
@@ -537,7 +546,7 @@
 
 	</e:Group>
 
-	<e:Button id="_btn_close" label="" x="15" y="20">
+	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="btn_fanhui_0_png" source.down="btn_fanhui_0_png"/>
@@ -545,7 +554,7 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="_btn_meun" label="" x="1365" y="20">
+	<e:Button id="_btn_meun" label="" x="1365" y="20" locked="true">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="btn_caidan_0_png" source.down="btn_caidan_0_png"/>
@@ -554,7 +563,7 @@
 		</e:skinName>
 	</e:Button>
 
-	<e:Button id="_btn_voice" label="" x="15" y="715">
+	<e:Button id="_btn_voice" label="" x="15" y="715" locked="true">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="btn_liaotian_0_png" source.down="btn_liaotian_0_png"/>
