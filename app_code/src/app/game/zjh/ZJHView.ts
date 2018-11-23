@@ -639,7 +639,7 @@ class ZJHView extends eui.Component {
     /**开始倒计时*/
     private startCountDown(time: number): void {
         // this.timeTxt.text = 10-time + "";
-        this.timeTxt.visible = true;
+        //this.timeTxt.visible = true;
         this.time = time;
         if (this.timer == null) {
             this.timer = new egret.Timer(1000);
