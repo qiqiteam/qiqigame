@@ -7,7 +7,7 @@ class EventConst {
     public static ON_SOCKET_CLOSE: string = "onSocketClose";
 
     //------------------C to S---------------------请求发送服务器协议
-    /**百家乐加入房间 */
+    /**加入房间 */
     public static joinroom: string = "joinroom";
     /**开始牛牛游戏*/
     public static niuniu_start: string = "niuniu_start";
@@ -15,13 +15,19 @@ class EventConst {
     public static niuniu_dohog: string = "niuniu_dohog";
     /**投注倍数*/
     public static niuniu_dobet: string = "niuniu_dobet";
+    /**牛牛离开房间 */
+    public static niuniu_leave: string = "niuniu_leave";
 
+    /**百家乐房间列表 */
+    public static BaccaratEfcsh: string = "BaccaratEfcsh";
     /**检查是否有上次加入房间*/
     public static baijialegamestatus: string = "gamestatus";
-    /**押注*/
+    /**百家乐加入房间 */
+    public static BaccaratJoinroom: string = "BaccaratJoinroom";
+    /**百家乐押注*/
     public static baijialebeton: string = "baijialebeton";
-    /**离开房间 */
-    public static niuniu_leave: string = "niuniu_leave";
+    /**百家乐离开房间 */
+    public static BaccaratOnleave: string = "BaccaratOnleave";
 
      /**准备 */
     public static prepare: string = "prepare";
@@ -56,30 +62,44 @@ class EventConst {
     /**牌面信息+结算*/
     public static summary: string = "summary";
 
-    /**（金币最多的6个玩家）*/
-    public static golbMaxSex: string = "golbMaxSex";
-    /**（开始匹配5秒倒计时）*/
-    public static startGame: string = "startGame";
+    // /**时间*/
+    // public static roomTime: string = "roomTime";
+
+    /**进入百家乐房间成功of失败*/
+    public static baccaratOnJoinRoom: string = "baccaratOnJoinRoom";
+    /**进入百家乐房间列表成功of失败*/
+    public static parteySuccess: string = "parteySuccess";
     /**（赔率）*/
     public static onBJLjoinroom: string = "onBJLjoinroom";
     /**（可以开始下注5秒倒计时）*/
     public static startBeton: string = "startBeton";
-    /**有人下注  也有可能是参数错误等异常信息*/
+    /**自己下注*/
     public static onCatch: string = "onCatch";
+    /**其他玩家下注*/
+    public static dealCatch: string = "dealCatch";
     /**(开始发牌)*/
     public static baccaratDeil: string = "baccaratDeil";
     /**("参数异常")*/
     public static theNumberOfTooMuch: string = "theNumberOfTooMuch";
-    /**("5秒后开始结算")*/
-    public static staticEndAll: string = "staticEndAll";
+    /**(5秒后开始下注,处理结算动画)*/
+    public static beginBteon: string = "beginBteon";
+    /**( 金币不足**)*/
+    public static bsogc: string = "bsogc";
     /**( 金币变为**)*/
     public static acquisitionGolb: string = "acquisitionGolb";
     /**( 5局之后不下注将要被踢出房间，当前第三局：)*/
     public static isStartBeton: string = "isStartBeton";
     /**( 你被请出房间**)*/
     public static isStartBetonST: string = "isStartBetonST";
-    /**(退出房间)*/
-    public static leave: string = "leave";
+     /**(百家乐退出房间)*/
+    public static gameOverSucces: string = "gameOverSucces";
+
+
+
+    
+
+
+
 
     /**(检查玩家是否中途退出房间)*/
     public static gamestatus: string = "gamestatus";
@@ -90,12 +110,8 @@ class EventConst {
     //public static botpour:string ="botpour";
     /**(结算)*/
     public static settlement:string ="settlement";
-    /**其他用户下注数*/ 
-    public static niuniu_deskbet:string ="niuniu_deskbet";
-    /**前20名玩家列表*/ 
-    public static niuniu_player:string ="niuniu_player";
-    /**停止下注*/ 
-    public static stopbet:string ="stopbet";	
+    /**(退出房间)*/
+    public static leave: string = "leave";
 
     /**(金花其他下注)*/
     public static otherBotpour: string = "otherBotpour";

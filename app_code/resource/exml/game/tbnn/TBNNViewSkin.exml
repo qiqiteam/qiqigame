@@ -577,7 +577,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Image id="_image_double_1" x="54.43999999999994" y="33.92000000000007" source="img_X1_0_png" scaleX="1" scaleY="1"/>
+			<e:Image id="_image_double_1" x="4.42" y="12.64" source="img_X1_0_png" scaleX="1" scaleY="1"/>
 			<e:Button id="_btn_double_2" label="" x="172.64999999999998" y="18" scaleX="1" scaleY="1">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -586,7 +586,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Image id="_image_double_2" x="213.82999999999993" y="33.92000000000007" source="img_X2_0_png" scaleX="1" scaleY="1"/>
+			<e:Image id="_image_double_2" x="163.81" y="12.64" source="img_X2_0_png" scaleX="1" scaleY="1"/>
 			<e:Button id="_btn_double_3" label="" x="331.1400000000001" y="18" scaleX="1" scaleY="1">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -595,7 +595,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Image id="_image_double_3" x="372.32000000000005" y="33.92000000000007" source="img_X3_0_png" scaleX="1" scaleY="1"/>
+			<e:Image id="_image_double_3" x="322.3" y="12.64" source="img_X3_0_png" scaleX="1" scaleY="1"/>
 			<e:Button id="_btn_double_4" label="" x="491.13" y="18" scaleX="1" scaleY="1">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -604,7 +604,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Image id="_image_double_4" x="532.3099999999998" y="33.92000000000007" source="img_X4_0_png" scaleX="1" scaleY="1"/>
+			<e:Image id="_image_double_4" x="482.29" y="12.64" source="img_X4_0_png" scaleX="1" scaleY="1"/>
 			<e:Button id="_btn_double_5" label="" x="649.5999999999999" y="18" scaleX="1" scaleY="1">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -613,7 +613,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Image id="_image_double_5" x="690.78" y="33.92000000000007" source="img_X5_0_png" scaleX="1" scaleY="1"/>
+			<e:Image id="_image_double_5" x="640.76" y="12.64" source="img_X5_0_png" scaleX="1" scaleY="1"/>
 		</e:Group>
 
 

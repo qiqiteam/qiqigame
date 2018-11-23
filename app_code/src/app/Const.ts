@@ -1,9 +1,11 @@
 class Const {
-    //正式版本----------------------------------------
+    //测试服----------------------------------------
     public static GAME_HOST:string = "192.168.1.26";
-    //  public static GAME_HOST:string = "47.52.138.199";
     public static GAME_PORT:string = "9081";
     public static httpUrl:string = "http://192.168.1.26:80";
+    //正式版本----------------------------------------
+    //  public static GAME_HOST:string = "47.52.138.199";
+    // public static GAME_PORT:string = "9081";
     //  public static httpUrl:string = "http://47.52.138.199:80";
     // //测试服----------------------------------------
     // public static GAME_HOST:string = "192.168.1.36";
@@ -26,7 +28,7 @@ class Const {
     /**通比牛牛 */
     public static TYPE_TBNN:string  = "tbnn";
     /**千人牛牛 */
-    public static TYPE_QRNIUNIU:string  = "qrnn";
+    public static TYPE_QRNIUNIU:string  = "qrniuniu";
     /**经典炸金花 */
     public static TYPE_JINGDIANJINHUA:string  = "jingdianjinhua";
     /**经典百家乐 */
@@ -36,4 +38,5 @@ class Const {
     //---------------------------房间类型
     /**初级场 */
     public static PLAYWAY_CHUJICHANG:string  = "chujichang";
+
 }

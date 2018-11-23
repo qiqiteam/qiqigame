@@ -9,61 +9,259 @@ class BRNNView extends eui.Component {
     }
     //private r: any = null;
 
-    public titleHead: eui.Image;
-    public titleName: eui.Label;
-    public titleLabMoney: eui.BitmapLabel;
-    public btnClose: eui.Image;
-    public btnCharge: eui.Image;
-    public btnCardType: eui.Image;
-    public btnCardHistroy: eui.Image;
-    public labHandsel: eui.BitmapLabel;
-    public btnBankerDown: eui.Image;
-    public btnUpBanker: eui.Image;
-    public btnDownBanker: eui.Image;
-    public bankerHead: eui.Image;
-    public labBankerMoney: eui.BitmapLabel;
-    public bankerName: eui.Label;
-    public grpCountdown: eui.Group;
-    public labCountdown0: eui.BitmapLabel;
-    public labCountdown1: eui.BitmapLabel;
-    public grpSecondPanel: eui.Group;
-    public grpHistory: eui.Group;
-    public grpCardType: eui.Group;
-    public secondClose: eui.Image;
+  public effectSelect0:eui.Image;
+public labTipsClick0:eui.Label;
+public labCardResult0:eui.Label;
+public labBetsPool0:eui.Label;
+public labBetsSelf0:eui.Label;
+public effectTouch0:eui.Image;
+public effectSelect1:eui.Image;
+public labTipsClick1:eui.Label;
+public labCardResult1:eui.Label;
+public labBetsPool1:eui.Label;
+public labBetsSelf1:eui.Label;
+public effectTouch1:eui.Image;
+public effectSelect2:eui.Image;
+public labTipsClick2:eui.Label;
+public labCardResult2:eui.Label;
+public labBetsPool2:eui.Label;
+public labBetsSelf2:eui.Label;
+public effectTouch2:eui.Image;
+public effectSelect3:eui.Image;
+public labTipsClick3:eui.Label;
+public labCardResult3:eui.Label;
+public labBetsPool3:eui.Label;
+public labBetsSelf3:eui.Label;
+public effectTouch3:eui.Image;
+public grpCoins:eui.Group;
+public grpCard:eui.Group;
+public bankerCard_0:eui.Image;
+public bankerCard_1:eui.Image;
+public bankerCard_2:eui.Image;
+public bankerCard_3:eui.Image;
+public bankerCard_4:eui.Image;
+public grpCard_0_0:eui.Image;
+public grpCard_0_1:eui.Image;
+public grpCard_0_2:eui.Image;
+public grpCard_0_3:eui.Image;
+public grpCard_0_4:eui.Image;
+public grpCard_1_0:eui.Image;
+public grpCard_1_1:eui.Image;
+public grpCard_1_2:eui.Image;
+public grpCard_1_3:eui.Image;
+public grpCard_1_4:eui.Image;
+public grpCard_2_0:eui.Image;
+public grpCard_2_1:eui.Image;
+public grpCard_2_2:eui.Image;
+public grpCard_2_3:eui.Image;
+public grpCard_2_4:eui.Image;
+public grpCard_3_0:eui.Image;
+public grpCard_3_1:eui.Image;
+public grpCard_3_2:eui.Image;
+public grpCard_3_3:eui.Image;
+public grpCard_3_4:eui.Image;
+public labCardTypeBanker:eui.Image;
+public labCardType0:eui.Image;
+public labCardType1:eui.Image;
+public labCardType2:eui.Image;
+public labCurChip:eui.Label;
+public labCardType3:eui.Image;
+public btnCharge:eui.Image;
+public titleName:eui.Label;
+public maskhead:eui.Group;
+public titleHead:eui.Image;
+public btnVip:eui.Image;
+public labTitleVip:eui.Label;
+public titleLabMoney:eui.BitmapLabel;
+public btnClose:eui.Image;
+public btnCardHistroy:eui.Image;
+public btnCardType:eui.Image;
+public btnRedBox:eui.Image;
+public labHandsel:eui.BitmapLabel;
+public grpBankerInfo:eui.Group;
+public btnDownBanker:eui.Image;
+public btnBankerDown:eui.Image;
+public btnUpBanker:eui.Image;
+public bankerHead:eui.Image;
+public labBankerMoney:eui.BitmapLabel;
+public bankerName:eui.Label;
+public labBankerLastNum:eui.Label;
+public labBankerRank:eui.Label;
+public btnVip0:eui.Image;
+public labBankerVip:eui.Label;
+public grpCountdown:eui.Group;
+public labCountdown0:eui.BitmapLabel;
+public labCountdown1:eui.BitmapLabel;
+public btnBet0:eui.Image;
+public btnBet1:eui.Image;
+public btnBet2:eui.Image;
+public btnBet3:eui.Image;
+public btnBet4:eui.Image;
+public btnBet5:eui.Image;
+public labBet0:eui.Label;
+public labBet1:eui.Label;
+public labBet2:eui.Label;
+public labBet3:eui.Label;
+public labBet4:eui.Label;
+public labBet5:eui.Label;
+public grpBankerList:eui.Group;
+public bankerListItem0:eui.Group;
+public itemRank0:eui.Label;
+public itemName0:eui.Label;
+public itemMoney0:eui.Label;
+public itemVip0:eui.BitmapLabel;
+public bankerListItem1:eui.Group;
+public itemRank1:eui.Label;
+public itemName1:eui.Label;
+public itemMoney1:eui.Label;
+public itemVip1:eui.BitmapLabel;
+public bankerListItem2:eui.Group;
+public itemRank2:eui.Label;
+public itemName2:eui.Label;
+public itemMoney2:eui.Label;
+public itemVip2:eui.BitmapLabel;
+public bankerListItem3:eui.Group;
+public itemRank3:eui.Label;
+public itemName3:eui.Label;
+public itemMoney3:eui.Label;
+public itemVip3:eui.BitmapLabel;
+public bankerListItem4:eui.Group;
+public itemRank4:eui.Label;
+public itemName4:eui.Label;
+public itemMoney4:eui.Label;
+public itemVip4:eui.BitmapLabel;
+public bankerListItem5:eui.Group;
+public itemRank5:eui.Label;
+public itemName5:eui.Label;
+public itemMoney5:eui.Label;
+public itemVip5:eui.BitmapLabel;
+public bankerListItem6:eui.Group;
+public itemRank6:eui.Label;
+public itemName6:eui.Label;
+public itemMoney6:eui.Label;
+public itemVip6:eui.BitmapLabel;
+public bankerListItem7:eui.Group;
+public itemRank7:eui.Label;
+public itemName7:eui.Label;
+public itemMoney7:eui.Label;
+public itemVip7:eui.BitmapLabel;
+public bankerListItem8:eui.Group;
+public itemRank8:eui.Label;
+public itemName8:eui.Label;
+public itemMoney8:eui.Label;
+public itemVip8:eui.BitmapLabel;
+public bankerListItem9:eui.Group;
+public itemRank9:eui.Label;
+public itemName9:eui.Label;
+public itemMoney9:eui.Label;
+public itemVip9:eui.BitmapLabel;
+public grpSecondPanel:eui.Group;
+public grpHistory:eui.Group;
+public grpHistroy0:eui.Group;
+public grpHistroy0_0:eui.Image;
+public grpHistroy1_0:eui.Image;
+public grpHistroy2_0:eui.Image;
+public grpHistroy3_0:eui.Image;
+public grpHistroy1:eui.Group;
+public grpHistroy0_1:eui.Image;
+public grpHistroy1_1:eui.Image;
+public grpHistroy2_1:eui.Image;
+public grpHistroy3_1:eui.Image;
+public grpHistroy2:eui.Group;
+public grpHistroy0_2:eui.Image;
+public grpHistroy1_2:eui.Image;
+public grpHistroy2_2:eui.Image;
+public grpHistroy3_2:eui.Image;
+public grpHistroy3:eui.Group;
+public grpHistroy0_3:eui.Image;
+public grpHistroy1_3:eui.Image;
+public grpHistroy2_3:eui.Image;
+public grpHistroy3_3:eui.Image;
+public grpHistroy4:eui.Group;
+public grpHistroy0_4:eui.Image;
+public grpHistroy1_4:eui.Image;
+public grpHistroy2_4:eui.Image;
+public grpHistroy3_4:eui.Image;
+public grpHistroy5:eui.Group;
+public grpHistroy0_5:eui.Image;
+public grpHistroy1_5:eui.Image;
+public grpHistroy2_5:eui.Image;
+public grpHistroy3_5:eui.Image;
+public grpHistroy6:eui.Group;
+public grpHistroy0_6:eui.Image;
+public grpHistroy1_6:eui.Image;
+public grpHistroy2_6:eui.Image;
+public grpHistroy3_6:eui.Image;
+public grpHistroy7:eui.Group;
+public grpHistroy0_7:eui.Image;
+public grpHistroy1_7:eui.Image;
+public grpHistroy2_7:eui.Image;
+public grpHistroy3_7:eui.Image;
+public grpHistroy8:eui.Group;
+public grpHistroy0_8:eui.Image;
+public grpHistroy1_8:eui.Image;
+public grpHistroy2_8:eui.Image;
+public grpHistroy3_8:eui.Image;
+public grpHistroy9:eui.Group;
+public grpHistroy0_9:eui.Image;
+public grpHistroy1_9:eui.Image;
+public grpHistroy2_9:eui.Image;
+public grpHistroy3_9:eui.Image;
+public grpCardType:eui.Group;
+public secondClose:eui.Image;
+public grpResult:eui.Group;
+public grpMax:eui.Group;
+public grpMaxHead:eui.Image;
+public grpMaxGold:eui.Label;
+public grpMaxName:eui.Label;
+public grpBankerHead:eui.Image;
+public grpBankerType:eui.Image;
+public labelBankerType:eui.Label;
+public grpBankerBeishu:eui.Label;
+public grpBankerGold:eui.Label;
+public grpBankerName:eui.Label;
+public labResult0_0:eui.Label;
+public labResult1_0:eui.Label;
+public labResult2_0:eui.Label;
+public labResult0_1:eui.Label;
+public labResult1_1:eui.Label;
+public labResult2_1:eui.Label;
+public labResult0_2:eui.Label;
+public labResult1_2:eui.Label;
+public labResult2_2:eui.Label;
+public labResult0_3:eui.Label;
+public labResult1_3:eui.Label;
+public labResult2_3:eui.Label;
+public labResultValue:eui.Label;
+public resultType0:eui.Label;
+public resultType1:eui.Label;
+public resultType2:eui.Label;
+public resultType3:eui.Label;
+public grpTips:eui.Group;
+public grpTipsbg:eui.Image;
+public grpTipsInfo:eui.Image;
+public imgBaoZhuang:eui.Image;
+public grpCaijin:eui.Group;
+public grpCaijinLabel:eui.Label;
+public _group_di:eui.Group;
+public grpHead0:eui.Group;
+public imghead0:eui.Image;
+public labelHead0:eui.Label;
+public labelGold0:eui.Label;
+public _my_img_zhuang:eui.Image;
+public _btn_switch:eui.Group;
+public _btn_double_1:eui.Button;
+public _btn_double_2:eui.Button;
+public _btn_double_3:eui.Button;
+public _btn_double_4:eui.Button;
+public _btn_double_5:eui.Button;
+public _btn_record:eui.Button;
+public _btn_close:eui.Button;
+public _btn_meun:eui.Button;
+public _btn_chat:eui.Button;
+public _btn_voice:eui.Button;
 
-    public grpResult: eui.Group;
-    public grpMax: eui.Group;
-    public grpMaxHead: eui.Image;
-    public grpMaxGold: eui.Label;
-    public grpMaxName: eui.Label;
-    public grpBankerHead: eui.Image;
-    public grpBankerType: eui.Image;
-    public grpBankerBeishu: eui.Label;
-    public grpBankerGold: eui.Label;
-    public grpBankerName: eui.Label;
 
-    public grpCoins: eui.Group;
-    public grpTips: eui.Group;
-    public grpTipsbg: eui.Image;
-    public grpTipsInfo: eui.Image;
-
-    private labResultValue: eui.Label;
-    private grpSelectBet: eui.Group;    //筹码底背景
-    private grpBankerList: eui.Group;
-    private labelBankerType: eui.Label;
-    private labBankerLastNum: eui.Label;
-    private labBankerRank: eui.Label;
-    private imgBaoZhuang: eui.Image;
-    private labTitleVip: eui.BitmapLabel;
-    private labBankerVip: eui.BitmapLabel;
-    private btnRedBox: eui.Image;
-
-    private labCardTypeBanker: eui.Image;
-    public grpCaijin: eui.Group;
-    public grpCaijinLabel: eui.Label;
-    public grpBankerInfo: eui.Group;
-    public labCurChip: eui.Label;
-    public grpCard: eui.Group;
 
     //-----------------------------------------------
     private interval: number = -1;      // 游戏计时器间隔
@@ -213,6 +411,94 @@ class BRNNView extends eui.Component {
         EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_PAY, this.updatePayData.bind(this));
         EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_MAIN, this.updateDataGold.bind(this));
         */
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP,this.buttonClose,this);
+        EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
+        EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
+        EventUtil.addEventListener(EventConst.summary, this.over, this);
+    }
+
+        /**
+     * 自己加入房间
+     */
+    private addPlayers(data): void {
+
+        //设置自己信息
+        var mask2: egret.Shape = new egret.Shape;
+        mask2.graphics.beginFill(0xff0000);
+        mask2.graphics.drawCircle(62, 62, 62);
+        mask2.graphics.endFill();
+        mask2.x = this.imghead0.x + 6;
+        mask2.y = this.imghead0.y + 5;
+        this.grpHead0.addChild(mask2);
+        this.imghead0.mask = mask2;
+
+        if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
+            this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
+            this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
+            this.imghead0.source = "F1_03_png";
+        }
+
+        // //设置其他玩家信息
+        // for (let i = 1; i < 10; i++) {
+        //     if (data._obj.player[i] != null) {
+        //         this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
+        //     } else {
+        //         //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
+        //         this['grpHead' + i].setUserInfo("", "", "");
+        //     }
+        // }
+    }
+
+    private over(data: any): void {
+
+        // console.log(data);
+
+        let result = {
+            pokes: [],
+            result: [1, 0, 0, 0],
+            bankerWin: 0,
+            rate: "0.05",
+            bomb: "0"
+        };
+        for (let i = 0; i < data._obj.players.length; i++) {
+            let err = {
+                num: data._obj.players[i].pai.ratio,
+                type: data._obj.players[i].pai.niu,
+                value: data._obj.players[i].cardsList,
+                win: data._obj.players[i].win,
+                score: data._obj.players[i].score
+            };
+            result.pokes.push(err);
+        }
+
+        this.cardResult = result;
+        this.cardEffect();
+        UserInfo.getInstance().isGameStart = false;  //游戏状态
+    }
+
+      private onHogBack1(data: any): void {
+        // this._group_qiang.visible = false;
+        this.showGameTips(2);
+        this._btn_switch.visible = true;
+    }
+
+     //加入房间新玩家
+    public playerJoinRoom(data): void {
+        console.log(data._obj.player.id);
+        console.log(UserInfo.getInstance().myPlayer.id);
+
+
+        if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
+
+        } else {
+            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "F4_03_png");
+        }
+    }
+
+    private buttonClose():void
+    {
+        xlLib.SceneMgr.instance.changeScene(Lobby);
     }
 
     public resize(): void {
