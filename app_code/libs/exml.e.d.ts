@@ -104,6 +104,8 @@ declare class QZNNroomViewSkin extends eui.Skin{
 }
 declare class RBGHeadSkin extends eui.Skin{
 }
+declare class RBGMahjongSkin extends eui.Skin{
+}
 declare class RBGViewSkin extends eui.Skin{
 }
 declare class RechargeTypeItemSkin extends eui.Skin{

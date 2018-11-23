@@ -311,9 +311,9 @@ public _btn_voice:eui.Button;
     protected childrenCreated(): void {
         //this.setTouchEnabled();
         this.getOrginCardPos();
+        //this.setCountdown();
         this.addEvent();
         this.initData();
-        this.setCountdown();
         //this.onTouchBet(0);
         //this.setSelfInfo();
         //PanelManage.openChat(this, 112, 300, "10003");
@@ -391,31 +391,106 @@ public _btn_voice:eui.Button;
         EventManage.addButtonEvent(this, this.secondClose, egret.TouchEvent.TOUCH_TAP, this.onTouchCloseSecondPanel.bind(this));
 
         EventManage.addEvent(this, this.btnRedBox, egret.TouchEvent.TOUCH_TAP, this.onTouchRedBox.bind(this));
-
         for (var i = 0; i < 8; i++) {
             if (i < 6) {
-                EventManage.addEvent(this, this['btnBet' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchBet.bind(this, i));
+                EventUtil.addEvent(this, this['btnBet' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchBet.bind(this, i));
                 this['labBet' + i].touchEnabled = false;
             }
             if (i < 4) {
-                EventManage.addEvent(this, this['effectTouch' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSelectIndex.bind(this, i));
+                EventUtil.addEvent(this, this['effectTouch' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSelectIndex.bind(this, i));
                 this['labBetsPool' + i].text = '0';
                 this['labBetsSelf' + i].text = '0';
             }
-            EventManage.addButtonEvent(this, this['grpHead' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSeat.bind(this, i));
+            EventUtil.addButtonEvent(this, this['grpHead' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSeat.bind(this, i));
             this['imghead' + i].source = '';
             this['labelHead' + i].text = '';
         }
-
         EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.OPERTE_REDBOX_COMPLETE, this.operateBoxComplete.bind(this));
         EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_PAY, this.updatePayData.bind(this));
         EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_MAIN, this.updateDataGold.bind(this));
         */
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP,this.buttonClose,this);
+        this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        for (var i = 0; i < 4; i++) {
+            this['labBetsPool' + i].text = '';
+            this['labBetsSelf' + i].text = '';
+        }
+
+
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP,this.buttonClose,this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
         EventUtil.addEventListener(EventConst.summary, this.over, this);
+
+        var data =  {
+            pokes:[{num:3,type:10,value:[406,202,301,408,303]},
+                {num:3,type:10,value:[201,307,412,308,104]},
+                {num:1,type:0,value:[313,208,409,304,105]},
+                {num:1,type:4,value:[402,305,203,213,404]},
+                {num:2,type:9,value:[112,211,212,204,205]}],
+            result:[1,0,0,0],
+            bankerWin:0,
+            rate:"0.05",
+            bomb:"0"
+        };
+        this.cdNum = 0;
+
+        this.cardResult = data;
+        this.setCountdown();
+        this.addPlayers(data);
+        //this.cardEffect();
+        this.setStartBet();
+    }
+
+    /**准备 开始回调 */
+    public onClick(e: egret.TouchEvent): void {
+
+        if (e.target == this._btn_double_1) {
+            console.log("_btn_double_1");
+            
+            this.onTouchBet(1);
+        } else if (e.target == this._btn_double_2) {
+            console.log("_btn_double_2");
+            
+            this.onTouchBet(2);
+        } else if (e.target == this._btn_double_3) {
+            console.log("_btn_double_3");
+            
+            this.onTouchBet(3);
+        } else if (e.target == this._btn_double_4) {
+            console.log("_btn_double_4");
+            
+            this.onTouchBet(4);
+        } else if (e.target == this._btn_double_5) {
+            console.log("_btn_double_5");
+            
+            this.onTouchBet(5);
+        } else if (e.target == this.effectTouch0) {
+            console.log("effectTouch0");
+            
+            this.onTouchSelectIndex(0);
+        } else if (e.target == this.effectTouch1) {
+            console.log("effectTouch1");
+            
+            this.onTouchSelectIndex(1);
+        } else if (e.target == this.effectTouch2) {
+            console.log("effectTouch2");
+            
+            this.onTouchSelectIndex(2);
+        } else if (e.target == this.effectTouch3) {
+            console.log("effectTouch3");
+            
+            this.onTouchSelectIndex(3);
+        }
     }
 
         /**
@@ -433,11 +508,15 @@ public _btn_voice:eui.Button;
         this.grpHead0.addChild(mask2);
         this.imghead0.mask = mask2;
 
-        if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
-            this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
-            this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
-            this.imghead0.source = "F1_03_png";
-        }
+        this.labelHead0.text = "中国第一赌神";
+        this.labelGold0.text = 8888888 + "";
+        this.imghead0.source = "F1_03_png";
+
+        //if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
+        //    this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
+        //    this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
+        //    this.imghead0.source = "F1_03_png";
+        //}
 
         // //设置其他玩家信息
         // for (let i = 1; i < 10; i++) {
@@ -479,8 +558,8 @@ public _btn_voice:eui.Button;
 
       private onHogBack1(data: any): void {
         // this._group_qiang.visible = false;
-        this.showGameTips(2);
-        this._btn_switch.visible = true;
+        //this.showGameTips(2);
+        //this._btn_switch.visible = true;
     }
 
      //加入房间新玩家
@@ -540,6 +619,8 @@ public _btn_voice:eui.Button;
         else {
             this.cdTimer.stop();
             this.cdNum = 0;
+
+            this.cardEffect();
         }
         if (this.cdNum < 10) {
             this.labCountdown0.text = '0'
@@ -828,29 +909,48 @@ public _btn_voice:eui.Button;
             }
         }).bind(this));
     }
-
+*/
     //筹码选择
     private onTouchBet(index): void {
-        if (this.isBanker) {
-            TipsManage.showTips('您是庄家，不能下注！');
-            return;
-        }
-        if (!this.isCoinsReturn) {
-            console.log('touche  Bet++++++++++++++')
-            TipsManage.showTips('操作过于频繁，请稍等！');
-            return;
-        }
+        //if (this.isBanker) {
+        //    TipsManage.showTips('您是庄家，不能下注！');
+        //    return;
+        //}
+        //if (!this.isCoinsReturn) {
+        //    console.log('touche  Bet++++++++++++++')
+        //    TipsManage.showTips('操作过于频繁，请稍等！');
+        //    return;
+        //}
         if (this.lastTouchBetIndex == index) {
             return;
         }
         if (this.lastTouchBetIndex != -1) {
-            this['btnBet' + this.lastTouchBetIndex].scaleX = this['btnBet' + this.lastTouchBetIndex].scaleY = 1;
+            this['_btn_double_' + this.lastTouchBetIndex].scaleX = this['_btn_double_' + this.lastTouchBetIndex].scaleY = 1;
         }
         this.lastTouchBetIndex = index;
-        this['btnBet' + index].scaleX = this['btnBet' + index].scaleY = 1.2;
-        this.betsNum = NiuNiuUtil.getInstance().getBetNumber(index);
-        this.labCurChip.text = '注码：' + this['labBet' + index].text;
+        this['_btn_double_' + index].scaleX = this['_btn_double_' + index].scaleY = 1.1;
+        this.betsNum = this.getBetNumber(index);
+        //this.labCurChip.text = '注码：' + this['labBet' + index].text;
     }
+
+    //获取筹码数量    1w  10w     100w    1000w   5000w   1y
+    public getBetNumber(index): number {
+        switch (index) {
+            case 0:
+                return Math.pow(10, 4);
+            case 1:
+                return Math.pow(10, 5);
+            case 2:
+                return Math.pow(10, 6);
+            case 3:
+                return Math.pow(10, 7);
+            case 4:
+                return 5 * Math.pow(10, 7);
+            case 5:
+                return Math.pow(10, 8);
+        }
+    }
+
 
     private onTouchSelectIndex(index): void {
         if (this.isCardEffectShow)
@@ -860,45 +960,67 @@ public _btn_voice:eui.Button;
             return;
         }
         this.lastTouchBetTime = curTime;
-        if (this.isBanker) {
-            TipsManage.showTips('您是庄家，不能下注！');
-            return;
-        }
-        if (!this.isCoinsReturn) {
+        //if (this.isBanker) {
+            //TipsManage.showTips('您是庄家，不能下注！');
+            //return;
+        //}
+        //if (!this.isCoinsReturn) {
             // console.log('touche  select ========================')
-            TipsManage.showTips('操作过于频繁，请稍等！');
-            return;
-        }
-        if (this.isCanBets) {
+            //TipsManage.showTips('操作过于频繁，请稍等！');
+            //return;
+        //}
+        //if (this.isCanBets) {
             this.betsPostion = index + 1;
             this.isCoinsReturn = false;
             // console.log('下注位置：' + this.betsPostion + '  金额：' + this.betsNum);
-            Net.send(Protocol.NIUNIU_BET_GOLD, { betId: this.betsPostion, gold: this.betsNum }, this.betGlodCallback.bind(this), false);
-        }
+            //Net.send(Protocol.NIUNIU_BET_GOLD, { betId: this.betsPostion, gold: this.betsNum }, this.betGlodCallback.bind(this), false);
+        //}
+        this.betGlodCallback();
     }
 
     //下注
-    private betGlodCallback(msg): void {
+    private betGlodCallback(): void {
         this.isCoinsReturn = true;
-        if (msg.code == 200) {
+        //if (msg.code == 200) {
             this.isBets = true;
-            GlobalData.user.gold = (parseInt(GlobalData.user.gold) - this.betsNum) + '';
-            this.titleLabMoney.text = QuickManage.moneyStr(parseInt(GlobalData.user.gold));
+            //GlobalData.user.gold = (parseInt(GlobalData.user.gold) - this.betsNum) + '';
+            //this.titleLabMoney.text = QuickManage.moneyStr(parseInt(GlobalData.user.gold));
+
             // console.log('下注成功 index：' + this.betsPostion + '  金额：' + this.betsNum);
             this.selfbetsNum[this.betsPostion] = parseInt(this.selfbetsNum[this.betsPostion]) + this.betsNum
             this.poolBetArray[this.betsPostion] = parseInt(this.poolBetArray[this.betsPostion]) + this.betsNum;
-            this['labBetsPool' + (this.betsPostion - 1)].text = QuickManage.moneyStr(this.poolBetArray[this.betsPostion]);
+            this['labBetsPool' + (this.betsPostion - 1)].text = this.moneyStr(this.poolBetArray[this.betsPostion]);
             this.showCoins(this.betsNum, this.betsPostion);
             //同步自己的金币
             for (var i = 0; i < 4; i++) {
-                this['labBetsSelf' + i].text = QuickManage.moneyStr(this.selfbetsNum[i + 1]);
+                this['labBetsSelf' + i].text = this.moneyStr(this.selfbetsNum[i + 1]);
             }
-        }
-        else {
-            TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
+        //}
+        //else {
+        //    TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
+        //}
+    }
+
+    private moneyStr(money: number): string {
+        if (money >= 10000 && money < 100000000) {
+            return this.get2Num(money / 10000) + "万";
+        } else if (money >= 100000000) {
+            return this.get2Num(money / 100000000) + "亿";
+        } else {
+            return money + "";
         }
     }
 
+    private get2Num(num: number): string {
+        var str = num.toFixed(3);
+        str = str.substr(0, str.length - 1);;
+        var arr = str.split(".");
+        if (arr[1] + "" == "00") {
+            return arr[0] + "";
+        }
+        return str + "";
+    }
+/*
     private isFirstSetBanker: boolean = true;
     //设置庄家的消息
     private setBankerInfo(banker): void {
@@ -987,7 +1109,7 @@ public _btn_voice:eui.Button;
             egret.Tween.get(this).to({ alpha: 0 }, 400);
         }, this.grpTipsbg);
         egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ x: -640 }, 400);
+            egret.Tween.get(this).to({ x: -1640 }, 400);
         }, this.grpTipsInfo);
     }
 
@@ -1009,9 +1131,9 @@ public _btn_voice:eui.Button;
             var ty = point.y + Math.random() * 50;
             this.grpCoins.addChild(arr[i]);
             egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call(function () {
-                if (this[0]) {
-                    this[1].parent.removeChild(this[1]);
-                }
+                //if (this[0]) {
+                //    this[1].parent.removeChild(this[1]);
+                //}
             }, [isRemove, arr[i]]);
         }
     }
@@ -1029,8 +1151,8 @@ public _btn_voice:eui.Button;
     private playCardFly(): void {
         var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
         card.source = 'nn.card_100';
-        card.x = 296;
-        card.y = 340;
+        card.x = 713.5;
+        card.y = 250;
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
         var pos = this.orginPlayerCardPos[this.flyIndex0][this.flyIndex1];
@@ -1062,8 +1184,8 @@ public _btn_voice:eui.Button;
             return;
         }
         var card: eui.Image = this['bankerCard_' + this.flyBankerIndex];
-        card.x = 296;
-        card.y = 340;
+        card.x = 713.5;
+        card.y = 250;
         card.source = 'nn.card_100';
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
@@ -1220,7 +1342,7 @@ public _btn_voice:eui.Button;
             var betss = parseInt(data.pokes[i + 1].num)
             this['resultType' + i].text = BRNNUtil.getInstance().getCardType2(data.pokes[i + 1].type);
             this['labResult0_' + i].text = betss + '倍';//倍率
-            //this['labResult1_' + i].text = QuickManage.moneyStr(this.selfbetsNum[i + 1]); //押注
+            this['labResult1_' + i].text = this.moneyStr(this.selfbetsNum[i + 1]); //押注
             var gold = this.selfbetsNum[i + 1];
             if (gold != 0) {
                 this['labResult2_' + i].text = '';
@@ -1332,8 +1454,8 @@ public _btn_voice:eui.Button;
 
     private resetGame(): void {
         for (var i = 0; i < 4; i++) {
-            this['labBetsPool' + i].text = '0';
-            this['labBetsSelf' + i].text = '0';
+            this['labBetsPool' + i].text = '';
+            this['labBetsSelf' + i].text = '';
             egret.Tween.removeTweens(this['effectSelect' + i]);
         }
         for (var i = 0; i < 5; i++) {
@@ -1374,6 +1496,10 @@ public _btn_voice:eui.Button;
         this.grpCaijin.visible = false;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
+
+        this.cdNum = 10;
+        this.cdTimer.start();
+
     }
 
     //========================== Second Panel ==============================
@@ -1462,6 +1588,22 @@ public _btn_voice:eui.Button;
     }
 
     public destroy(): void {
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.buttonClose,this);
+        this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.effectTouch3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.buttonClose,this);
+        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
+        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
+        EventUtil.removeEventListener(EventConst.summary, this.over, this);
         
         if(this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);

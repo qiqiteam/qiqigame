@@ -13,9 +13,9 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
+		"bin-debug/views/GameScene.js",
 		"bin-debug/app/Const.js",
 		"bin-debug/views/GameDoc.js",
-		"bin-debug/views/GameScene.js",
 		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",
@@ -57,6 +57,7 @@
 		"bin-debug/app/game/qznn/QZNNUtil.js",
 		"bin-debug/app/game/qznn/QZNNView.js",
 		"bin-debug/app/game/rbg/RBGHead.js",
+		"bin-debug/app/game/rbg/RBGMahjong.js",
 		"bin-debug/app/game/rbg/RBGScene.js",
 		"bin-debug/app/game/rbg/RBGUtil.js",
 		"bin-debug/app/game/rbg/RBGView.js",
@@ -81,7 +82,7 @@
 		"bin-debug/app/game/zjh/ZJHScene.js",
 		"bin-debug/app/game/zjh/ZJHUtil.js",
 		"bin-debug/app/game/zjh/ZJHView.js",
-		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/HttpAddress.js",
 		"bin-debug/app/interface/IGameInformation.js",
 		"bin-debug/app/interface/IGameRecord.js",
 		"bin-debug/app/interface/IGameTableData.js",
@@ -150,6 +151,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/HttpAddress.js"
+		"bin-debug/app/component/ComBox.js"
 	]
 }

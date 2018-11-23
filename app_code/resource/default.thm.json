@@ -42,6 +42,7 @@
     "resource/exml/game/qznn/QZNNViewSkin.exml",
     "resource/exml/game/qznn/QZNNroomViewSkin.exml",
     "resource/exml/game/rbg/RBGHeadSkin.exml",
+    "resource/exml/game/rbg/RBGMahjongSkin.exml",
     "resource/exml/game/rbg/RBGViewSkin.exml",
     "resource/exml/game/recharge/RechargeTypeItemSkin.exml",
     "resource/exml/game/recharge/RechargeView.exml",

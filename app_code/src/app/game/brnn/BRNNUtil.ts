@@ -55,20 +55,20 @@ class BRNNUtil {
         var point: egret.Point = new egret.Point();
         switch (index) {
             case 1:
-                point.x = 195;
-                point.y = 523;
+                point.x = 340;
+                point.y = 300;
                 break;
             case 2:
-                point.x = 383;
-                point.y = 523;
+                point.x = 570;
+                point.y = 300;
                 break;
             case 3:
-                point.x = 195;
-                point.y = 633;
+                point.x = 810;
+                point.y = 300;
                 break;
             case 4:
-                point.x = 383;
-                point.y = 633;
+                point.x = 1050;
+                point.y = 300;
                 break;
         }
         return point;
