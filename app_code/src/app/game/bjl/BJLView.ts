@@ -595,7 +595,10 @@ class BJLView extends eui.Component {
         // UserInfo.getInstance().isGameStart = false;  //游戏状态
         this.startCountDown(data._obj.seconds);
         // xlLib.TipsUtils.showFloatWordTips("5秒后开始下注,处理结算动画!");
-        this.resetGame();
+         setTimeout(()=>{
+				         this.resetGame();
+			    }, 3000);
+
     }
     private over(data: any): void {
 
