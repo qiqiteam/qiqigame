@@ -1,6 +1,6 @@
 module xlLib {
-	export class WebSocketMgr {
-		private static _instance: WebSocketMgr;
+    export class WebSocketMgr {
+        private static _instance: WebSocketMgr;
         /**
          * WebSocket管理器
          */
@@ -67,8 +67,8 @@ module xlLib {
         public lastSendTime: number;
         public disconnectCallback: any;
 
-        public token:string;
-        public userid:string;
+        public token: string;
+        public userid: string;
 
         public get host(): string {
             return this._host;
@@ -82,7 +82,7 @@ module xlLib {
         * @param host {string} 主机ip或者域名
         * @param port {string} 主机端口号
         **/
-        public connect(host: string, port: string,id:string): void {
+        public connect(host: string, port: string, id: string): void {
             if (!this._connected && !this._isConnecting) {
                 this._host = host;
                 this._port = port;
@@ -91,7 +91,7 @@ module xlLib {
                 this._connected = false;
                 // var protocol = window.location.toString().indexOf("https") != -1 ? "wss://" : "ws://";
                 var protocol = "ws://";
-                var requrl = protocol + host +":"+ port+"?userid="+id;
+                var requrl = protocol + host + ":" + port + "?userid=" + id;
                 this.ws.connectByUrl(requrl);
                 Console.log("连接: " + requrl + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
             }
@@ -169,25 +169,80 @@ module xlLib {
         //**************************************************************************
         //注册网络事件处理函数
         //**************************************************************************
-        public registerMsgHandler(msgid: string, callbackfuc?: Function,isonce:boolean = false): void {
-            // if (this.handlers[msgid]) {
-            //     console.log("消息ID为:" + msgid + "已经注册了相同的处理回调函数");
-            //     return;
-            // }
-            var handlerfunc =  (msgdata)=> {
-                if (msgid != "disconnect" && typeof (msgdata) == "string") {
-                    msgdata = JSON.parse(msgdata);
+        public registerMsgHandler(msgid: string, callbackfuc: Function,thisObject?: any,isonce:boolean=false): void {
+            this.addEvent(msgid,callbackfuc,thisObject,isonce);
+        }
+
+
+        //**************************************************************************
+        //移除网络事件处理函数
+        //**************************************************************************
+        public removeMsgHandler(msgid: string, callbackfuc: Function,thisObject: any): void {
+            this.removeEvent(msgid,callbackfuc,thisObject);
+        }
+          /**
+         * 监听事件
+         * @type 事件类型
+         * @listener 回调函数
+         * @thisObject 回调执行对象
+         */
+        private addEvent(type:string, listener:Function, thisObject:any,isonce:boolean=false){
+            var arr:Array<any> = this.handlers[type];
+            if(arr == null){
+                arr = [];
+                this.handlers[type] = arr;
+            }else{
+                var len = arr.length;
+                for(var i=0;i<len;i++){
+                    if(arr[i][0] == listener && arr[i][1] == thisObject){
+                        return;
+                    }
                 }
-                callbackfuc(msgdata);
-                if(isonce){
-                    delete this.handlers[msgid];
+            }
+            arr.push([listener,thisObject,isonce]);
+        }
+
+        /**
+         * 移除事件
+         * @type 事件类型
+         * @listener 回调函数
+         * @thisObject 回调执行对象
+         */
+        private removeEvent(type:string ,listener, thisObject:any){
+            var arr:Array<any> = this.handlers[type];
+            if(arr != null){
+                var len = arr.length;
+                for(var i = len-1; i>=0;i--){
+                    if(arr[i][0] == listener && arr[i][1] == thisObject){
+                        arr.splice(i,1);
+                    }
                 }
-            };
-            // console.log("FWTcpClient绑定消息处理函数成功: msgid=" + msgid);
-            this.handlers[msgid] = handlerfunc;
-            // if (this.ws) {
-            //     this.ws.on(msgid, handlerfunc);
-            // }
+            }
+            if(arr && arr.length == 0){
+                this.handlers[type] = null;
+                delete this.handlers[type];
+            }
+        }
+
+        /** 
+         * 发送数据给服务器
+         * @param cmd {string} 命令
+         * @param host {any} 数据
+         **/
+        public send(cmd: string, data: any, cb: Function, thisArg?: any, ecb?: Function, ishow: boolean = false) {
+            this.sendMes(cmd, data, (msg) => {
+                if (msg.code == 200) {
+                    cb.call(thisArg, msg);
+                }
+                else {
+                    if (ecb) {
+                        ecb.call(thisArg, msg);
+                    }
+                    if (ishow) {
+                        xlLib.TipsUtils.showFloatWordTips(msg.message);
+                    }
+                }
+            }, thisArg, ecb, ishow);
         }
 
         /** 
@@ -195,28 +250,16 @@ module xlLib {
         * @param cmd {string} 命令
         * @param host {any} 数据
         **/
-        public send(cmd: string, data:any, cb: Function, thisArg?: any, ecb?: Function,ishow: boolean = false) {
+        public sendMes(cmd: string, data: any, cb: Function, thisArg?: any, ecb?: Function, ishow: boolean = false) {
             if (this.ws.connected) {
                 if (data != null && (typeof (data) == "object")) {
                     data.command = cmd;
                     data = JSON.stringify(data);
                 }
-                this.registerMsgHandler(cmd,(msg)=>{
-                    if (msg.code == 200) {
-                         cb.call(thisArg,msg);
-                    }
-                    else {
-                        if (ecb) {
-                            ecb.call(thisArg,msg);
-                        }
-                        if (ishow) {
-                            xlLib.TipsUtils.showFloatWordTips(msg.message);
-                        }
-                    }
-                });
+                this.registerMsgHandler(cmd,cb,thisArg,true);
                 this.ws.writeUTF(data);
                 this.ws.flush();
-                console.log("开始发送消息---------------"+data);
+                console.log("开始发送消息---------------" + data);
             }
             else {
                 xlLib.TipsUtils.showFloatWordTips("服务器已断开，请检查网络环境");
@@ -228,33 +271,57 @@ module xlLib {
             let recvMsg = JSON.parse(msg);
             if (this.handlers[recvMsg.command]) {
                 console.log("收到消息 = " + msg);
-                this.handlers[recvMsg.command](msg);
+                this.sendEvent(recvMsg.command,recvMsg);
             }
-            else if (recvMsg.command == "socket_pong") {
-                console.log("socket_pong");
-                this.lastRecieveTime = this.appTimeStamp;
-            }
+            // else if (recvMsg.command == "socket_pong") {
+            //     console.log("socket_pong");
+            //     this.lastRecieveTime = this.appTimeStamp;
+            // }
             // var result: string = this.ws.readUTF();
             // var data:Object = JSON.parse(result);
             // console.log("-----------------收到消息"+recvMsg+"---",recvMsg);
         }
 
+          /**
+         * 发送事件
+         * @type 事件类型
+         * @args 携带数据
+         */
+        private sendEvent(type:string,...args:any[]){
+            let arr:Array<any> = this.handlers[type];
+            if(arr != null){
+                let len = arr.length;
+                let listen:Function;
+                let thisObject:any;
+                let isonce:boolean;
+                for(let i=0;i<len;i++){
+                    let msg = arr[i];
+                    listen = msg[0];
+                    thisObject = msg[1];
+                    isonce = msg[2];
+                    listen.apply(thisObject, args);
+                    if(isonce)
+                    {
+                        arr.splice(i,1);
+                    }
+                }
+            }
+        }
+
         private onSocketOpen(event: egret.Event): void {
             this._isConnecting = false;
             this._connected = true;
-            EventUtil.dispatchEvent(EventConst.ON_SOCKET_SUC,{});
+            EventUtil.dispatchEvent(EventConst.ON_SOCKET_SUC, {});
             Console.log("网络已连接" + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
         }
-
-
 
         private onSocketClose(event: egret.Event): void {
             if (this._connected || this._isConnecting) {
                 this._isConnecting = false;
                 this._connected = false;
-                EventUtil.dispatchEvent(EventConst.ON_SOCKET_CLOSE,{});
+                EventUtil.dispatchEvent(EventConst.ON_SOCKET_CLOSE, {});
                 Console.log("网络已断开" + "  time：" + xlLib.Utils.formatDate(new Date(), "yyyy-MM-dd hh:mm:ss"));
             }
         }
-	}
+    }
 }
