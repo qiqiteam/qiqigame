@@ -117,7 +117,40 @@ class ZJHUtil {
                 return '单张';
         }
     }
-
+    /**显示玩家加注类型 */
+    public getChipType(index): number {
+        switch (index) {
+            case 1:
+                return 2;//2金币
+            case 2:
+                return 3;
+            case 3:
+                return 4;
+            case 4:
+                return 5;
+            case 5:
+                return 6;
+            case 6:
+                return 7;
+        }
+    }
+    /**显示玩家操作状态*/
+     public getplayerstatue(index): string {
+        switch (index) {
+            case 1:
+                return '豹子';
+            case 2:
+                return '同花顺';
+            case 3:
+                return '金花';
+            case 4:
+                return '顺子';
+            case 5:
+                return '对子';
+            case 6:
+                return '单张';
+        }
+    }
     //筹码类型        1000w   5000w   1y  3y  5y
     public coinsType(pos:egret.Point, num): Array<eui.Image> {
         var coinArr = [];

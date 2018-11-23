@@ -90,7 +90,7 @@ class GameIconItem extends eui.Component {
 		this.effectmask.touchEnabled = false;
 		this.effectmask.play(-1);
 		this.effectmask.x = -12;
-		this.effectmask.y = -12;
+		this.effectmask.y = -11;
   		this.addChild(this.effectmask);
 	}
 }
