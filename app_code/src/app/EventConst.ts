@@ -43,6 +43,15 @@ class EventConst {
     public static compareCard: string = "compareCard";
     /**弃牌 */
     public static abandon: string = "abandon";
+    /**二八杠 */
+    /**开始游戏 */
+    public static erbagang_start: string = "erbagang_start";
+    /**抢庄*/
+    public static erbagang_hog: string = "erbagang_hog";
+    /**投注倍数*/
+    public static erbagang_bet: string = "erbagang_bet";
+    /**返回骰子*/
+    //public static dice: string = "dice";
 
     //------------------S to C---------------------服务端回包监听数据
     /**所有玩家列表*/

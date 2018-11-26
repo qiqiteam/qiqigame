@@ -35,7 +35,7 @@ class ErBaGangroomView extends eui.Component implements  eui.UIComponent {
 			userid:UserInfo.getInstance().uid,
         token:UserInfo.getInstance().token,playway:playway.id};
 		 xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
-                    xlLib.SceneMgr.instance.changeScene(TBNNScene);
+                    xlLib.SceneMgr.instance.changeScene(RBGScene);
                     xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
         },this);
 	}

@@ -410,6 +410,9 @@ class ZJHView extends eui.Component {
             }
             this.orginPlayerCardPos[index] = cardPos;
         }
+        for (let i = 1; i < 10; i++) {
+            this['grpHead' + i].setUserInfo("", "", "");
+        }
     }
 
     public resize(): void {

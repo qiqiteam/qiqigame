@@ -1,0 +1,11 @@
+{"file":"bar_game_countdown.png","frames":{
+"8":{"x":201,"y":1,"w":97,"h":119,"offX":0,"offY":0,"sourceW":97,"sourceH":119},
+"9":{"x":398,"y":1,"w":96,"h":119,"offX":0,"offY":0,"sourceW":96,"sourceH":119},
+"0":{"x":102,"y":1,"w":97,"h":119,"offX":0,"offY":0,"sourceW":97,"sourceH":119},
+"1":{"x":385,"y":122,"w":79,"h":117,"offX":0,"offY":1,"sourceW":79,"sourceH":119},
+"2":{"x":193,"y":122,"w":94,"h":118,"offX":0,"offY":1,"sourceW":94,"sourceH":119},
+"3":{"x":1,"y":120,"w":94,"h":119,"offX":0,"offY":0,"sourceW":94,"sourceH":119},
+"4":{"x":1,"y":1,"w":99,"h":117,"offX":0,"offY":1,"sourceW":99,"sourceH":119},
+"5":{"x":97,"y":122,"w":94,"h":118,"offX":0,"offY":1,"sourceW":94,"sourceH":119},
+"6":{"x":300,"y":1,"w":96,"h":119,"offX":0,"offY":0,"sourceW":96,"sourceH":119},
+"7":{"x":289,"y":122,"w":94,"h":116,"offX":0,"offY":2,"sourceW":94,"sourceH":119}}}

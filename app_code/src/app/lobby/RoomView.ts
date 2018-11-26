@@ -160,7 +160,10 @@ class RoomView extends eui.Component {
                 },this);
            break;
            case Const.TYPE_ERBAGANGJINDIAN:
-                xlLib.TipsUtils.showFloatWordTips("该功能暂未开放！");
+                xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom,senddata,(data)=>{
+                    xlLib.SceneMgr.instance.changeScene(RBGScene);
+                    xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
+                },this);
            break;
         }
 

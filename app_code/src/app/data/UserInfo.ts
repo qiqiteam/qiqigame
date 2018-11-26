@@ -82,7 +82,7 @@ class UserInfo {
         }
 
         if(index<this.playes[0].index) {
-            num = 10-(this.playes[0].index-index);
+            num = this.playes.length-(this.playes[0].index-index);
         } else {
             num = index - this.playes[0].index;
         }

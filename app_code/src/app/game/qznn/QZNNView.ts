@@ -438,6 +438,9 @@ class QZNNView extends eui.Component {
             }
             this.orginPlayerCardPos[index] = cardPos;
         }
+        for (let i = 1; i < 10; i++) {
+            this['grpHead' + i].setUserInfo("", "", "");
+        }
     }
 
     public resize(): void {
@@ -621,7 +624,7 @@ class QZNNView extends eui.Component {
         }
 
         //设置其他玩家信息
-        for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < UserInfo.getInstance().playes.length; i++) {
             if (data._obj.player[i] != null) {
                 this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
             } else {
