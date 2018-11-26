@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg",
+			"keys": "loding_json,loding_bg_jpg,btn_Q5_0_png,img_beijing_jpg,img_BQ_png,img_BQ_0_png,img_XB_png,nn_por_smallbg_png,progressTimerFontBg_png,qznntype0_tex_png,qznn_btn_beishu1_png,qznn_btn_beishu2_png,qznn_btn_buqiang_png,qznn_game_desk_0_png,qznn_num_frame_png,resumeGameBg_png,resumeGameFont_png,selectedBankerIcon_png,women7_png",
 			"name": "preload"
 		},
 		{
@@ -2896,6 +2896,91 @@
 			"type": "sheet",
 			"name": "room_zjh_json",
 			"subkeys": "zjh_effcet_pic_person,zjh_pic1,zjh_pic2,zjh_pic3,zjh_pic4"
+		},
+		{
+			"name": "btn_Q5_0_png",
+			"type": "image",
+			"url": "assets/game/qznn/btn_Q5_0.png"
+		},
+		{
+			"name": "img_beijing_jpg",
+			"type": "image",
+			"url": "assets/game/qznn/img_beijing.jpg"
+		},
+		{
+			"name": "img_BQ_png",
+			"type": "image",
+			"url": "assets/game/qznn/img_BQ.png"
+		},
+		{
+			"name": "img_BQ_0_png",
+			"type": "image",
+			"url": "assets/game/qznn/img_BQ_0.png"
+		},
+		{
+			"name": "img_XB_png",
+			"type": "image",
+			"url": "assets/game/qznn/img_XB.png"
+		},
+		{
+			"name": "nn_por_smallbg_png",
+			"type": "image",
+			"url": "assets/game/qznn/nn_por_smallbg.png"
+		},
+		{
+			"name": "progressTimerFontBg_png",
+			"type": "image",
+			"url": "assets/game/qznn/progressTimerFontBg.png"
+		},
+		{
+			"name": "qznntype0_tex_png",
+			"type": "image",
+			"url": "assets/game/qznn/qznntype0_tex.png"
+		},
+		{
+			"name": "qznn_btn_beishu1_png",
+			"type": "image",
+			"url": "assets/game/qznn/qznn_btn_beishu1.png"
+		},
+		{
+			"name": "qznn_btn_beishu2_png",
+			"type": "image",
+			"url": "assets/game/qznn/qznn_btn_beishu2.png"
+		},
+		{
+			"name": "qznn_btn_buqiang_png",
+			"type": "image",
+			"url": "assets/game/qznn/qznn_btn_buqiang.png"
+		},
+		{
+			"name": "qznn_game_desk_0_png",
+			"type": "image",
+			"url": "assets/game/qznn/qznn_game_desk_0.png"
+		},
+		{
+			"name": "qznn_num_frame_png",
+			"type": "image",
+			"url": "assets/game/qznn/qznn_num_frame.png"
+		},
+		{
+			"name": "resumeGameBg_png",
+			"type": "image",
+			"url": "assets/game/qznn/resumeGameBg.png"
+		},
+		{
+			"name": "resumeGameFont_png",
+			"type": "image",
+			"url": "assets/game/qznn/resumeGameFont.png"
+		},
+		{
+			"name": "selectedBankerIcon_png",
+			"type": "image",
+			"url": "assets/game/qznn/selectedBankerIcon.png"
+		},
+		{
+			"name": "women7_png",
+			"type": "image",
+			"url": "assets/game/qznn/women7.png"
 		}
 	]
 }

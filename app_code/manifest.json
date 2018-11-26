@@ -57,6 +57,7 @@
 		"bin-debug/app/game/qznn/QZNNUtil.js",
 		"bin-debug/app/game/qznn/QZNNView.js",
 		"bin-debug/app/game/rbg/RBGHead.js",
+		"bin-debug/app/game/rbg/RBGMahjong.js",
 		"bin-debug/app/game/rbg/RBGScene.js",
 		"bin-debug/app/game/rbg/RBGUtil.js",
 		"bin-debug/app/game/rbg/RBGView.js",

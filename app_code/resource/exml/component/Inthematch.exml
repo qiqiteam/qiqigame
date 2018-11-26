@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="InthematchSkin" width="1280" height="380" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="1674ebbb283" ></w:Config>
+	<e:Image source="Img_pipeizhong_1_png" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="Img_pipeizhong_2_png" x="360" y="150"/>
+	<e:Image source="Img_pipeizhong_3_png" x="474" y="150"/>
+	<e:Image source="Img_pipeizhong_4_png" x="588" y="150"/>
+	<e:Image id="_dian_0" source="Img_pipeizhong_5_png" x="702" y="150"/>
+	<e:Image id="_dian_1" source="Img_pipeizhong_5_png" x="816" y="150"/>
+	<e:Image id="_dian_2" source="Img_pipeizhong_5_png" x="930" y="150"/>
+</e:Skin>

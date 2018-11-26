@@ -6,5 +6,10 @@
         "path": "..\\resource\\exml\\game\\qznn\\QZNNROOMSkin.ts",
         "class": "QZNNROOMSkin",
         "parentPath": ""
+    },
+    "1674ebbb283": {
+        "path": "..\\resource\\exml\\component\\Inthematch.ts",
+        "class": "Inthematch",
+        "parentPath": ""
     }
 }

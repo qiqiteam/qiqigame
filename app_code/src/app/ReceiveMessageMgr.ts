@@ -15,6 +15,7 @@ module xlLib {
 		}
 
 		public initPushMessage() {
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onGameStatusChange, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.players, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.newplayer, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hog, this.onMessage);

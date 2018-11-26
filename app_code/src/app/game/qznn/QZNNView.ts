@@ -35,51 +35,9 @@ class QZNNView extends eui.Component {
     public grpCard_2_3: eui.Image;
     public grpCard_2_4: eui.Image;
     public labCardType2: eui.Image;
-    public grpCard_3_0: eui.Image;
-    public grpCard_3_1: eui.Image;
-    public grpCard_3_2: eui.Image;
-    public grpCard_3_3: eui.Image;
-    public grpCard_3_4: eui.Image;
-    public labCardType3: eui.Image;
-    public grpCard_4_0: eui.Image;
-    public grpCard_4_1: eui.Image;
-    public grpCard_4_2: eui.Image;
-    public grpCard_4_3: eui.Image;
-    public grpCard_4_4: eui.Image;
-    public labCardType4: eui.Image;
-    public grpCard_5_0: eui.Image;
-    public grpCard_5_1: eui.Image;
-    public grpCard_5_2: eui.Image;
-    public grpCard_5_3: eui.Image;
-    public grpCard_5_4: eui.Image;
-    public labCardType5: eui.Image;
-    public grpCard_6_0: eui.Image;
-    public grpCard_6_1: eui.Image;
-    public grpCard_6_2: eui.Image;
-    public grpCard_6_3: eui.Image;
-    public grpCard_6_4: eui.Image;
-    public labCardType6: eui.Image;
-    public grpCard_7_0: eui.Image;
-    public grpCard_7_1: eui.Image;
-    public grpCard_7_2: eui.Image;
-    public grpCard_7_3: eui.Image;
-    public grpCard_7_4: eui.Image;
-    public labCardType7: eui.Image;
-    public grpCard_8_0: eui.Image;
-    public grpCard_8_1: eui.Image;
-    public grpCard_8_2: eui.Image;
-    public grpCard_8_3: eui.Image;
-    public grpCard_8_4: eui.Image;
-    public labCardType8: eui.Image;
     public grpHead1: QZNNHead;
     public grpHead2: QZNNHead;
     public grpHead3: QZNNHead;
-    public grpHead4: QZNNHead;
-    public grpHead5: QZNNHead;
-    public grpHead6: QZNNHead;
-    public grpHead7: QZNNHead;
-    public grpHead8: QZNNHead;
-    public grpHead9: QZNNHead;
     public btnCharge: eui.Image;
     public titleName: eui.Label;
     public maskhead: eui.Group;
@@ -260,7 +218,6 @@ class QZNNView extends eui.Component {
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
-    public _btn_record: eui.Button;
     public _btn_double_1: eui.Button;
     public _image_double_1: eui.Image;
     public _btn_double_2: eui.Button;
@@ -271,6 +228,7 @@ class QZNNView extends eui.Component {
     public _image_double_4: eui.Image;
     public _btn_double_5: eui.Button;
     public _image_double_5: eui.Image;
+    public _btn_record: eui.Button;
     public _group_qiang: eui.Group;
     public _btn_buqiang: eui.Button;
     public _btn_qiang_1: eui.Button;
@@ -279,8 +237,9 @@ class QZNNView extends eui.Component {
     public _btn_qiang_4: eui.Button;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
-    public _btn_chat: eui.Button;
-    public _btn_voice: eui.Button;
+
+
+
 
     public _btn_switch: eui.Button;
     public _btn_begin: eui.Button;
@@ -388,7 +347,7 @@ class QZNNView extends eui.Component {
         this.grpCaijin.visible = false;
         this.grpCard.visible = true;
 
-        this._btn_begin.visible = true;
+        // this._btn_begin.visible = true;
         this._btn_switch.visible = false;
         this._group_qiang.visible = false;
 
@@ -422,7 +381,7 @@ class QZNNView extends eui.Component {
             this.orginBankerCardPos[i] = pos;
         }
         this.labCardTypeBanker.visible = false;
-        for (var index = 0; index < 9; index++) {
+        for (var index = 0; index < 3; index++) {
             //this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
             var cardPos = [];
@@ -438,7 +397,7 @@ class QZNNView extends eui.Component {
             }
             this.orginPlayerCardPos[index] = cardPos;
         }
-        for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < 4; i++) {
             this['grpHead' + i].setUserInfo("", "", "");
         }
     }
@@ -497,7 +456,7 @@ class QZNNView extends eui.Component {
             this._btn_switch.visible = false;
         }
     }
-
+    /**投注  sendstr 命令 bet 倍数 0~4 */
     private sendamessage(sendstr: string, bet: number): void {
 
         let senddata: any = {
@@ -510,7 +469,7 @@ class QZNNView extends eui.Component {
         }, this);
         this._group_qiang.visible = false;
     }
-
+    /**抢庄 sendstr 命令 bet 倍数 0~5*/
     private sendamessage1(sendstr: string, bet: number): void {
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
@@ -529,7 +488,7 @@ class QZNNView extends eui.Component {
     }
     /**注册事件 */
     private addEvent(): void {
-	this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -542,7 +501,6 @@ class QZNNView extends eui.Component {
         this._btn_qiang_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
 
-        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
 
@@ -550,19 +508,29 @@ class QZNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
 
         EventUtil.addEventListener(EventConst.hog, this.onHogBack, this);
-        EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
+        EventUtil.addEventListener(EventConst.bet, this.onbetBack, this);
         EventUtil.addEventListener(EventConst.summary, this.over, this);
         EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
+
+        EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+
     }
 
+    /**游戏状态 */
+    private GameStatus(data: any): void {
+        console.log(data);
+    }
+    /**监听抢庄按钮 */
     private onHogBack(data: any): void {
         this._group_qiang.visible = true;
     }
-    private onHogBack1(data: any): void {
+    /**倍数列表 */
+    private onbetBack(data: any): void {
         this.showGameTips(2);
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
     }
+    /**牌面信息+结算 */
     private over(data: any): void {
 
         // console.log(data);
@@ -600,7 +568,6 @@ class QZNNView extends eui.Component {
         } else {
             this['grpHead' + num].setZhuang(true);
         }
-
     }
     /**
      * 自己加入房间
@@ -620,13 +587,13 @@ class QZNNView extends eui.Component {
         if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
             this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
             this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
-            this.imghead0.source = "F1_03_png";
+            this.imghead0.source = "women7_png";
         }
 
         //设置其他玩家信息
         for (let i = 1; i < UserInfo.getInstance().playes.length; i++) {
             if (data._obj.player[i] != null) {
-                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
+                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "women7_png");//data._obj.player[i].headimg
             } else {
                 //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
                 this['grpHead' + i].setUserInfo("", "", "");
@@ -634,7 +601,7 @@ class QZNNView extends eui.Component {
         }
     }
 
-    //加入房间新玩家
+    /**加入房间新玩家 */
     public playerJoinRoom(data): void {
         console.log(data._obj.player.id);
         console.log(UserInfo.getInstance().myPlayer.id);
@@ -643,7 +610,7 @@ class QZNNView extends eui.Component {
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
 
         } else {
-            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "F4_03_png");
+            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "women7_png");
         }
     }
 
@@ -1185,7 +1152,7 @@ class QZNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
         egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
         if (this.flyIndex1 == 4) {
-            if (this.flyIndex0 == this.cardResult.pokes.length-2) {
+            if (this.flyIndex0 == this.cardResult.pokes.length - 2) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
@@ -1224,7 +1191,7 @@ class QZNNView extends eui.Component {
 
     private effectPlayerIndex = 0;
     private playerCardRotation(): void {
-        if (this.effectPlayerIndex == this.cardResult.pokes.length-1) {
+        if (this.effectPlayerIndex == this.cardResult.pokes.length - 1) {
             clearInterval(this.interval)
             this.effectPlayerIndex = 0;
             this.bankerCardRotation();
@@ -1330,10 +1297,10 @@ class QZNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
 
         let zhuangPos = {
-            x:this['grpHead' + this.zhaungIndex].x,
-            y:this['grpHead' + this.zhaungIndex].y
+            x: this['grpHead' + this.zhaungIndex].x,
+            y: this['grpHead' + this.zhaungIndex].y
         }
-        if(this.zhaungIndex == 0) {
+        if (this.zhaungIndex == 0) {
             zhuangPos.x = this._group_di.x + 15 + 145;
             zhuangPos.y = this._group_di.y - 35 + 103;
         } else {
@@ -1341,20 +1308,20 @@ class QZNNView extends eui.Component {
             zhuangPos.y = zhuangPos.y + 110;
         }
         let pos = {
-            x:0,
-            y:0
+            x: 0,
+            y: 0
         }
         let numPos = {
-            x:0,
-            y:0
+            x: 0,
+            y: 0
         }
 
-        for(let i=0; i<this.cardResult.pokes.length; i++) {
-            if(i==0) {
+        for (let i = 0; i < this.cardResult.pokes.length; i++) {
+            if (i == 0) {
                 pos.x = this._group_di.x + 15 + 145;
                 pos.y = this._group_di.y - 35 + 103;
-                numPos.x = pos.x+42;
-                numPos.y = pos.y+2;
+                numPos.x = pos.x + 42;
+                numPos.y = pos.y + 2;
             } else {
                 pos.x = this['grpHead' + i].x + 21;
                 pos.y = this['grpHead' + i].y + 110;
@@ -1362,7 +1329,7 @@ class QZNNView extends eui.Component {
                 numPos.y = pos.y + 5;
             }
 
-            if(this.cardResult.pokes[i].win == true) {
+            if (this.cardResult.pokes[i].win == true) {
                 xlLib.TipsUtils.showTipsDownToUp("+" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
                 this.updatePlayerGold(i, this.cardResult.pokes[i].score, true);
             } else {
@@ -1370,11 +1337,11 @@ class QZNNView extends eui.Component {
                 this.updatePlayerGold(i, this.cardResult.pokes[i].score, false);
             }
 
-            if(this.zhaungIndex == i) {
+            if (this.zhaungIndex == i) {
                 continue;
             }
-            
-            if(this.cardResult.pokes[i].win == true) {
+
+            if (this.cardResult.pokes[i].win == true) {
                 EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
                 EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
@@ -1383,21 +1350,21 @@ class QZNNView extends eui.Component {
     }
 
     /**更新玩家金币 */
-    public updatePlayerGold(num:number, gold:number, result:boolean):void {
+    public updatePlayerGold(num: number, gold: number, result: boolean): void {
 
         let _gold = UserInfo.getInstance().playes[num].goldcoins;
-        if(result == true) {
-            _gold = _gold+gold;
+        if (result == true) {
+            _gold = _gold + gold;
         } else {
-            _gold = _gold-gold;
+            _gold = _gold - gold;
         }
         UserInfo.getInstance().playes[num].goldcoins = _gold;
-        if(num==0) {
+        if (num == 0) {
             this.labelGold0.text = _gold + "";
         } else {
             this['grpHead' + num].setGold(_gold);
         }
-        
+
     }
 
     //============================================  Game Result
@@ -1565,7 +1532,7 @@ class QZNNView extends eui.Component {
             card.source = '';
             egret.Tween.removeTweens(card);
         }
-        for (var index = 0; index < this.cardResult.pokes.length-1; index++) {
+        for (var index = 0; index < this.cardResult.pokes.length - 1; index++) {
             //this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
             this.labCardTypeBanker.visible = false;
@@ -1575,7 +1542,7 @@ class QZNNView extends eui.Component {
                 card.source = '';
                 egret.Tween.removeTweens(card);
             }
-            this['grpHead' + (index+1)].setZhuang(false);
+            this['grpHead' + (index + 1)].setZhuang(false);
         }
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
@@ -1669,7 +1636,7 @@ class QZNNView extends eui.Component {
     public playClickSound(res): void {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     }
-
+    /**返回游戏大厅 */
     public Onquit(): void {
         if (UserInfo.getInstance().isGameStart) {
             xlLib.TipsUtils.showFloatWordTips("游戏中！");
@@ -1705,10 +1672,11 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
 
         EventUtil.removeEventListener(EventConst.hog, this.onHogBack, this);
-        EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
+        EventUtil.removeEventListener(EventConst.bet, this.onbetBack, this);
         EventUtil.removeEventListener(EventConst.summary, this.over, this);
         EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
-        if(this.cdTimer != null) {
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.acceptbanker, this);
+        if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }
     }

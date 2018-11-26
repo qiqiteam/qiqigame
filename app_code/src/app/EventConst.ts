@@ -7,6 +7,10 @@ class EventConst {
     public static ON_SOCKET_CLOSE: string = "onSocketClose";
 
     //------------------C to S---------------------请求发送服务器协议
+
+    /**游戏状态 */
+    public static onGameStatusChange: string = "onGameStatusChange";
+
     /**加入房间 */
     public static joinroom: string = "joinroom";
     /**开始牛牛游戏*/
