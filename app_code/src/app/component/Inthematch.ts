@@ -26,9 +26,11 @@ class Inthematch extends eui.Component implements eui.UIComponent {
 		this._dian_0.visible = false;
 		this._dian_1.visible = false;
 		this._dian_2.visible = false;
+		this.startCountDown(0);
 	}
 	/**开始倒计时*/
 	private startCountDown(time: number): void {
+		this.time = time;
 		if (this.timer == null) {
 			this.timer = new egret.Timer(1000);
 			this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
