@@ -1,0 +1,15 @@
+{"file":"baccarat_hall.png","frames":{
+"baccarat_hall_btn_column":{"x":1,"y":597,"w":597,"h":54,"offX":0,"offY":0,"sourceW":597,"sourceH":54},
+"baccarat_hall_btn_enter":{"x":302,"y":653,"w":83,"h":81,"offX":0,"offY":2,"sourceW":83,"sourceH":83},
+"baccarat_hall_column_selected2":{"x":1,"y":653,"w":150,"h":55,"offX":0,"offY":0,"sourceW":150,"sourceH":57},
+"baccarat_hall_person":{"x":620,"y":1,"w":356,"h":683,"offX":0,"offY":0,"sourceW":356,"sourceH":683},
+"baccarat_hall_right_bg":{"x":1,"y":1,"w":617,"h":594,"offX":0,"offY":0,"sourceW":617,"sourceH":594},
+"baccarat_hall_selected2":{"x":153,"y":653,"w":147,"h":56,"offX":0,"offY":0,"sourceW":147,"sourceH":57},
+"baccarat_hall_title1_0":{"x":1,"y":710,"w":104,"h":27,"offX":1,"offY":1,"sourceW":105,"sourceH":28},
+"baccarat_hall_title1_1":{"x":805,"y":686,"w":105,"h":28,"offX":0,"offY":0,"sourceW":105,"sourceH":28},
+"baccarat_hall_title2_0":{"x":701,"y":686,"w":102,"h":29,"offX":1,"offY":1,"sourceW":103,"sourceH":31},
+"baccarat_hall_title2_1":{"x":492,"y":653,"w":103,"h":31,"offX":0,"offY":0,"sourceW":103,"sourceH":31},
+"baccarat_hall_title3_0":{"x":912,"y":686,"w":102,"h":28,"offX":1,"offY":1,"sourceW":103,"sourceH":30},
+"baccarat_hall_title3_1":{"x":596,"y":686,"w":103,"h":30,"offX":0,"offY":0,"sourceW":103,"sourceH":30},
+"baccarat_hall_title4_0":{"x":492,"y":686,"w":102,"h":31,"offX":0,"offY":0,"sourceW":102,"sourceH":31},
+"baccarat_hall_title4_1":{"x":387,"y":653,"w":103,"h":33,"offX":0,"offY":0,"sourceW":103,"sourceH":33}}}

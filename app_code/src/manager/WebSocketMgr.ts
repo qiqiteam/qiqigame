@@ -297,6 +297,10 @@ module xlLib {
                 for(let i=0;i<len;i++){
                     let msg = arr[i];
                     listen = msg[0];
+                    if(!listen)
+                    {
+                       continue;
+                    }
                     thisObject = msg[1];
                     isonce = msg[2];
                     listen.apply(thisObject, args);
