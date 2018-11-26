@@ -1,4 +1,5 @@
-class Inthematch extends eui.Component implements eui.UIComponent {
+/**匹配中... */
+class Inthematch extends eui.Component {
 	public constructor() {
 		super();
 		this.skinName = "InthematchSkin";

@@ -308,20 +308,16 @@ class QZNNView extends eui.Component {
     //-----------------------------------------------
 
     protected childrenCreated(): void {
-        //this.setTouchEnabled();
+        
         this.getOrginCardPos();
         this.addEvent();
         this.initData();
 
-        this.setCountdown();
-        // //this.onTouchBet(0);
-        // //PanelManage.openChat(this, 112, 300, "10003");
-        // //this.joinCallback(this.r);
-        // this.resize();
-
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
-
+        
+        xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        
     }
     /**
      * 数据初始化
