@@ -12,6 +12,7 @@ class Inthematch extends eui.Component implements eui.UIComponent {
 	public timer: egret.Timer;  //计时器
 
 	protected partAdded(partName: string, instance: any): void {
+		this.clearTime();
 		super.partAdded(partName, instance);
 	}
 
@@ -19,12 +20,8 @@ class Inthematch extends eui.Component implements eui.UIComponent {
 	protected childrenCreated(): void {
 		super.childrenCreated();
 		this.initData();
-
-		for (let i = 0; i < 3; i++) {
-			this['_dian_' + i].visible = true;
-		}
-		
 	}
+
 	private initData() {
 		this._dian_0.visible = false;
 		this._dian_1.visible = false;
@@ -32,8 +29,6 @@ class Inthematch extends eui.Component implements eui.UIComponent {
 	}
 	/**开始倒计时*/
 	private startCountDown(time: number): void {
-
-		this.time = time;
 		if (this.timer == null) {
 			this.timer = new egret.Timer(1000);
 			this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
@@ -44,15 +39,12 @@ class Inthematch extends eui.Component implements eui.UIComponent {
 
 	/**倒计时处理*/
 	private timerFunc(evt: egret.TimerEvent): void {
-		if (this.time >= 0) {
-
-			this.time--;
+		for(let i:number=0;i<this.time%3;i++){
+            this['_dian_' + i].visible = true;
 		}
-		else {
-
-			this.clearTime();
-		}
+		this.time++;
 	}
+
 	/**清除倒计时*/
 	private clearTime(): void {
 		if (this.timer) {
