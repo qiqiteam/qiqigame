@@ -1,4 +1,4 @@
-class Inthematch extends eui.Component implements eui.UIComponent {
+class Inthematch extends eui.Component{
 	public constructor() {
 		super();
 		this.skinName = "InthematchSkin";
@@ -41,7 +41,10 @@ class Inthematch extends eui.Component implements eui.UIComponent {
 
 	/**倒计时处理*/
 	private timerFunc(evt: egret.TimerEvent): void {
-		for(let i:number=0;i<this.time%3;i++){
+		this._dian_0.visible = false;
+		this._dian_1.visible = false;
+		this._dian_2.visible = false;
+		for(let i:number=0;i<=this.time%3;i++){
             this['_dian_' + i].visible = true;
 		}
 		this.time++;
