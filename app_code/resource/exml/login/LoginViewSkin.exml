@@ -90,12 +90,12 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Button id="_btn_black" label="" x="655" y="454" scaleX="1" scaleY="1">
+		<e:Button id="_btn_black" label="" x="763" y="-2" scaleX="1" scaleY="1">
 			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="room_close" source.down="room_close"/>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_ cancel_0_png" source.down="btn_ cancel_1_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+				</e:Skin>
 			</e:skinName>
 		</e:Button>
 	</e:Group>

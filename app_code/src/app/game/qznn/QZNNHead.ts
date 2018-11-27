@@ -7,8 +7,7 @@ class QZNNHead extends eui.Component {
     public img_gold:eui.Image;
     public labelName:eui.Label;
     public labelGold:eui.Label;
-    public img_zhuang:eui.Image;
-
+    private nnbankerEff: egret.MovieClip;
     constructor() {
         super();
         this.skinName = "QZNNHeadSkin";
@@ -40,7 +39,30 @@ class QZNNHead extends eui.Component {
     }
 
     public setZhuang(value:boolean):void {
-        this.img_zhuang.visible = value;
+        if(value){
+          this.addNNbankerEff();
+        }
+    }
+
+    private removeNNbankerEff():void
+    {
+        if(this.nnbankerEff){
+            this.nnbankerEff.stop();
+            if(this.nnbankerEff.parent){
+                this.nnbankerEff.parent.removeChild(this.nnbankerEff);
+            }
+        }
+    }
+
+    private addNNbankerEff()
+    {
+        if(!this.nnbankerEff ){
+            this.nnbankerEff = xlLib.DisplayUtils.createMovieClicp('nn_banker', 'nn_banker');
+            this.nnbankerEff.x = 90;
+            this.nnbankerEff.y = 70;
+        }
+        this.addChild(this.nnbankerEff);
+        this.nnbankerEff.play(1);
     }
 
     public setGold(gold:number):void {
@@ -48,6 +70,6 @@ class QZNNHead extends eui.Component {
     }
 
     public destroy():void {
-
+       this.removeNNbankerEff();
 	}
 }

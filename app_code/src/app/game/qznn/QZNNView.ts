@@ -9,261 +9,260 @@ class QZNNView extends eui.Component {
     }
     private r: any = null;
 
-    public grpCoins: eui.Group;
-    public _pingpai: eui.Group;
-    public _zhi_0: eui.Label;
-    public _zhi_1: eui.Label;
-    public _zhi_2: eui.Label;
-    public _zhi_3: eui.Label;
-    public _youniu: eui.Button;
-    public _meiniu: eui.Button;
-    public _puke_0: eui.Image;
-    public _puke_1: eui.Image;
-    public _puke_2: eui.Image;
-    public _puke_3: eui.Image;
-    public _puke_4: eui.Image;
-    public grpCard: eui.Group;
-    public bankerCard_0: eui.Image;
-    public bankerCard_1: eui.Image;
-    public bankerCard_2: eui.Image;
-    public bankerCard_3: eui.Image;
-    public bankerCard_4: eui.Image;
-    public labCardTypeBanker: eui.Image;
-    public grpCard_0_0: eui.Image;
-    public grpCard_0_1: eui.Image;
-    public grpCard_0_2: eui.Image;
-    public grpCard_0_3: eui.Image;
-    public grpCard_0_4: eui.Image;
-    public labCardType0: eui.Image;
-    public grpCard_1_0: eui.Image;
-    public grpCard_1_1: eui.Image;
-    public grpCard_1_2: eui.Image;
-    public grpCard_1_3: eui.Image;
-    public grpCard_1_4: eui.Image;
-    public labCardType1: eui.Image;
-    public grpCard_2_0: eui.Image;
-    public grpCard_2_1: eui.Image;
-    public grpCard_2_2: eui.Image;
-    public grpCard_2_3: eui.Image;
-    public grpCard_2_4: eui.Image;
-    public labCardType2: eui.Image;
-    public grpHead1: QZNNHead;
-    public grpHead2: QZNNHead;
-    public grpHead3: QZNNHead;
-    public btnCharge: eui.Image;
-    public titleName: eui.Label;
-    public maskhead: eui.Group;
-    public titleHead: eui.Image;
-    public btnVip: eui.Image;
-    public labTitleVip: eui.Label;
-    public titleLabMoney: eui.BitmapLabel;
-    public btnClose: eui.Image;
-    public btnCardHistroy: eui.Image;
-    public btnCardType: eui.Image;
-    public btnRedBox: eui.Image;
-    public grpBankerInfo: eui.Group;
-    public btnDownBanker: eui.Image;
-    public btnBankerDown: eui.Image;
-    public btnUpBanker: eui.Image;
-    public bankerHead: eui.Image;
-    public labBankerMoney: eui.BitmapLabel;
-    public bankerName: eui.Label;
-    public labBankerLastNum: eui.Label;
-    public labBankerRank: eui.Label;
-    public btnVip0: eui.Image;
-    public labBankerVip: eui.Label;
-    public grpCountdown: eui.Group;
-    public timeTxt: eui.Label;
-    public btnBet0: eui.Image;
-    public btnBet1: eui.Image;
-    public btnBet2: eui.Image;
-    public btnBet3: eui.Image;
-    public btnBet4: eui.Image;
-    public btnBet5: eui.Image;
-    public labBet0: eui.Label;
-    public labBet1: eui.Label;
-    public labBet2: eui.Label;
-    public labBet3: eui.Label;
-    public labBet4: eui.Label;
-    public labBet5: eui.Label;
-    public grpBankerList: eui.Group;
-    public bankerListItem0: eui.Group;
-    public itemRank0: eui.Label;
-    public itemName0: eui.Label;
-    public itemMoney0: eui.Label;
-    public itemVip0: eui.BitmapLabel;
-    public bankerListItem1: eui.Group;
-    public itemRank1: eui.Label;
-    public itemName1: eui.Label;
-    public itemMoney1: eui.Label;
-    public itemVip1: eui.BitmapLabel;
-    public bankerListItem2: eui.Group;
-    public itemRank2: eui.Label;
-    public itemName2: eui.Label;
-    public itemMoney2: eui.Label;
-    public itemVip2: eui.BitmapLabel;
-    public bankerListItem3: eui.Group;
-    public itemRank3: eui.Label;
-    public itemName3: eui.Label;
-    public itemMoney3: eui.Label;
-    public itemVip3: eui.BitmapLabel;
-    public bankerListItem4: eui.Group;
-    public itemRank4: eui.Label;
-    public itemName4: eui.Label;
-    public itemMoney4: eui.Label;
-    public itemVip4: eui.BitmapLabel;
-    public bankerListItem5: eui.Group;
-    public itemRank5: eui.Label;
-    public itemName5: eui.Label;
-    public itemMoney5: eui.Label;
-    public itemVip5: eui.BitmapLabel;
-    public bankerListItem6: eui.Group;
-    public itemRank6: eui.Label;
-    public itemName6: eui.Label;
-    public itemMoney6: eui.Label;
-    public itemVip6: eui.BitmapLabel;
-    public bankerListItem7: eui.Group;
-    public itemRank7: eui.Label;
-    public itemName7: eui.Label;
-    public itemMoney7: eui.Label;
-    public itemVip7: eui.BitmapLabel;
-    public bankerListItem8: eui.Group;
-    public itemRank8: eui.Label;
-    public itemName8: eui.Label;
-    public itemMoney8: eui.Label;
-    public itemVip8: eui.BitmapLabel;
-    public bankerListItem9: eui.Group;
-    public itemRank9: eui.Label;
-    public itemName9: eui.Label;
-    public itemMoney9: eui.Label;
-    public itemVip9: eui.BitmapLabel;
-    public grpSecondPanel: eui.Group;
-    public grpHistory: eui.Group;
-    public grpHistroy0: eui.Group;
-    public grpHistroy0_0: eui.Image;
-    public grpHistroy1_0: eui.Image;
-    public grpHistroy2_0: eui.Image;
-    public grpHistroy3_0: eui.Image;
-    public grpHistroy1: eui.Group;
-    public grpHistroy0_1: eui.Image;
-    public grpHistroy1_1: eui.Image;
-    public grpHistroy2_1: eui.Image;
-    public grpHistroy3_1: eui.Image;
-    public grpHistroy2: eui.Group;
-    public grpHistroy0_2: eui.Image;
-    public grpHistroy1_2: eui.Image;
-    public grpHistroy2_2: eui.Image;
-    public grpHistroy3_2: eui.Image;
-    public grpHistroy3: eui.Group;
-    public grpHistroy0_3: eui.Image;
-    public grpHistroy1_3: eui.Image;
-    public grpHistroy2_3: eui.Image;
-    public grpHistroy3_3: eui.Image;
-    public grpHistroy4: eui.Group;
-    public grpHistroy0_4: eui.Image;
-    public grpHistroy1_4: eui.Image;
-    public grpHistroy2_4: eui.Image;
-    public grpHistroy3_4: eui.Image;
-    public grpHistroy5: eui.Group;
-    public grpHistroy0_5: eui.Image;
-    public grpHistroy1_5: eui.Image;
-    public grpHistroy2_5: eui.Image;
-    public grpHistroy3_5: eui.Image;
-    public grpHistroy6: eui.Group;
-    public grpHistroy0_6: eui.Image;
-    public grpHistroy1_6: eui.Image;
-    public grpHistroy2_6: eui.Image;
-    public grpHistroy3_6: eui.Image;
-    public grpHistroy7: eui.Group;
-    public grpHistroy0_7: eui.Image;
-    public grpHistroy1_7: eui.Image;
-    public grpHistroy2_7: eui.Image;
-    public grpHistroy3_7: eui.Image;
-    public grpHistroy8: eui.Group;
-    public grpHistroy0_8: eui.Image;
-    public grpHistroy1_8: eui.Image;
-    public grpHistroy2_8: eui.Image;
-    public grpHistroy3_8: eui.Image;
-    public grpHistroy9: eui.Group;
-    public grpHistroy0_9: eui.Image;
-    public grpHistroy1_9: eui.Image;
-    public grpHistroy2_9: eui.Image;
-    public grpHistroy3_9: eui.Image;
-    public grpCardType: eui.Group;
-    public secondClose: eui.Image;
-    public grpResult: eui.Group;
-    public grpMax: eui.Group;
-    public grpMaxHead: eui.Image;
-    public grpMaxGold: eui.Label;
-    public grpMaxName: eui.Label;
-    public grpBankerHead: eui.Image;
-    public grpBankerType: eui.Image;
-    public labelBankerType: eui.Label;
-    public grpBankerBeishu: eui.Label;
-    public grpBankerGold: eui.Label;
-    public grpBankerName: eui.Label;
-    public labResult0_0: eui.Label;
-    public labResult1_0: eui.Label;
-    public labResult2_0: eui.Label;
-    public labResult0_1: eui.Label;
-    public labResult1_1: eui.Label;
-    public labResult2_1: eui.Label;
-    public labResult0_2: eui.Label;
-    public labResult1_2: eui.Label;
-    public labResult2_2: eui.Label;
-    public labResult0_3: eui.Label;
-    public labResult1_3: eui.Label;
-    public labResult2_3: eui.Label;
-    public labResultValue: eui.Label;
-    public resultType0: eui.Label;
-    public resultType1: eui.Label;
-    public resultType2: eui.Label;
-    public resultType3: eui.Label;
-    public grpTips: eui.Group;
-    public grpTipsbg: eui.Image;
-    public grpTipsInfo: eui.Image;
-    public imgBaoZhuang: eui.Image;
-    public grpCaijin: eui.Group;
-    public grpCaijinLabel: eui.Label;
-    public grpHead0: eui.Group;
-    public imghead0: eui.Image;
-    public _my_img_zhuang: eui.Image;
-    public labelHead0: eui.Label;
-    public labelGold0: eui.Label;
-    public _btn_close: eui.Button;
-    public _btn_meun: eui.Button;
-    public _whether_: eui.Group;
-    public _whether_0: eui.Image;
-    public _img_0: eui.Image;
-    public _whether_3: eui.Image;
-    public _img_3: eui.Image;
-    public _whether_2: eui.Image;
-    public _img_2: eui.Image;
-    public _whether_1: eui.Image;
-    public _img_1: eui.Image;
-    public _xiabei: eui.Group;
-    public _xiabei_0_0: eui.Image;
-    public _xiabei_0: eui.Image;
-    public _xiabei_0_1: eui.Image;
-    public _xiabei_1: eui.Image;
-    public _xiabei_0_2: eui.Image;
-    public _xiabei_2: eui.Image;
-    public _xiabei_0_3: eui.Image;
-    public _xiabei_3: eui.Image;
-    public _group_qiang: eui.Group;
-    public _btn_buqiang: eui.Button;
-    public _btn_qiang_1: eui.Button;
-    public _btn_qiang_2: eui.Button;
-    public _btn_qiang_3: eui.Button;
-    public _btn_qiang_4: eui.Button;
-    public _btn_switch: eui.Group;
-    public _btn_double_1: eui.Button;
-    public _btn_double_2: eui.Button;
-    public _btn_double_3: eui.Button;
-    public _btn_double_4: eui.Button;
-    public _btn_double_5: eui.Button;
-    public _jixu: eui.Group;
-    public _btn_begin: eui.Button;
+   public grpCoins:eui.Group;
+    public grpCard:eui.Group;
+    public bankerCard_0:eui.Image;
+    public bankerCard_1:eui.Image;
+    public bankerCard_2:eui.Image;
+    public bankerCard_3:eui.Image;
+    public bankerCard_4:eui.Image;
+    public labCardTypeBanker:eui.Image;
+    public grpCard_0_0:eui.Image;
+    public grpCard_0_1:eui.Image;
+    public grpCard_0_2:eui.Image;
+    public grpCard_0_3:eui.Image;
+    public grpCard_0_4:eui.Image;
+    public labCardType0:eui.Image;
+    public grpCard_1_0:eui.Image;
+    public grpCard_1_1:eui.Image;
+    public grpCard_1_2:eui.Image;
+    public grpCard_1_3:eui.Image;
+    public grpCard_1_4:eui.Image;
+    public labCardType1:eui.Image;
+    public grpCard_2_0:eui.Image;
+    public grpCard_2_1:eui.Image;
+    public grpCard_2_2:eui.Image;
+    public grpCard_2_3:eui.Image;
+    public grpCard_2_4:eui.Image;
+    public labCardType2:eui.Image;
+    public grpHead1:QZNNHead;
+    public grpHead2:QZNNHead;
+    public grpHead3:QZNNHead;
+    public btnCharge:eui.Image;
+    public titleName:eui.Label;
+    public maskhead:eui.Group;
+    public titleHead:eui.Image;
+    public btnVip:eui.Image;
+    public labTitleVip:eui.Label;
+    public titleLabMoney:eui.BitmapLabel;
+    public btnClose:eui.Image;
+    public btnCardHistroy:eui.Image;
+    public btnCardType:eui.Image;
+    public btnRedBox:eui.Image;
+    public grpBankerInfo:eui.Group;
+    public btnDownBanker:eui.Image;
+    public btnBankerDown:eui.Image;
+    public btnUpBanker:eui.Image;
+    public bankerHead:eui.Image;
+    public labBankerMoney:eui.BitmapLabel;
+    public bankerName:eui.Label;
+    public labBankerLastNum:eui.Label;
+    public labBankerRank:eui.Label;
+    public btnVip0:eui.Image;
+    public labBankerVip:eui.Label;
+    public grpCountdown:eui.Group;
+    public timeTxt:eui.Label;
+    public btnBet0:eui.Image;
+    public btnBet1:eui.Image;
+    public btnBet2:eui.Image;
+    public btnBet3:eui.Image;
+    public btnBet4:eui.Image;
+    public btnBet5:eui.Image;
+    public labBet0:eui.Label;
+    public labBet1:eui.Label;
+    public labBet2:eui.Label;
+    public labBet3:eui.Label;
+    public labBet4:eui.Label;
+    public labBet5:eui.Label;
+    public grpBankerList:eui.Group;
+    public bankerListItem0:eui.Group;
+    public itemRank0:eui.Label;
+    public itemName0:eui.Label;
+    public itemMoney0:eui.Label;
+    public itemVip0:eui.BitmapLabel;
+    public bankerListItem1:eui.Group;
+    public itemRank1:eui.Label;
+    public itemName1:eui.Label;
+    public itemMoney1:eui.Label;
+    public itemVip1:eui.BitmapLabel;
+    public bankerListItem2:eui.Group;
+    public itemRank2:eui.Label;
+    public itemName2:eui.Label;
+    public itemMoney2:eui.Label;
+    public itemVip2:eui.BitmapLabel;
+    public bankerListItem3:eui.Group;
+    public itemRank3:eui.Label;
+    public itemName3:eui.Label;
+    public itemMoney3:eui.Label;
+    public itemVip3:eui.BitmapLabel;
+    public bankerListItem4:eui.Group;
+    public itemRank4:eui.Label;
+    public itemName4:eui.Label;
+    public itemMoney4:eui.Label;
+    public itemVip4:eui.BitmapLabel;
+    public bankerListItem5:eui.Group;
+    public itemRank5:eui.Label;
+    public itemName5:eui.Label;
+    public itemMoney5:eui.Label;
+    public itemVip5:eui.BitmapLabel;
+    public bankerListItem6:eui.Group;
+    public itemRank6:eui.Label;
+    public itemName6:eui.Label;
+    public itemMoney6:eui.Label;
+    public itemVip6:eui.BitmapLabel;
+    public bankerListItem7:eui.Group;
+    public itemRank7:eui.Label;
+    public itemName7:eui.Label;
+    public itemMoney7:eui.Label;
+    public itemVip7:eui.BitmapLabel;
+    public bankerListItem8:eui.Group;
+    public itemRank8:eui.Label;
+    public itemName8:eui.Label;
+    public itemMoney8:eui.Label;
+    public itemVip8:eui.BitmapLabel;
+    public bankerListItem9:eui.Group;
+    public itemRank9:eui.Label;
+    public itemName9:eui.Label;
+    public itemMoney9:eui.Label;
+    public itemVip9:eui.BitmapLabel;
+    public grpSecondPanel:eui.Group;
+    public grpHistory:eui.Group;
+    public grpHistroy0:eui.Group;
+    public grpHistroy0_0:eui.Image;
+    public grpHistroy1_0:eui.Image;
+    public grpHistroy2_0:eui.Image;
+    public grpHistroy3_0:eui.Image;
+    public grpHistroy1:eui.Group;
+    public grpHistroy0_1:eui.Image;
+    public grpHistroy1_1:eui.Image;
+    public grpHistroy2_1:eui.Image;
+    public grpHistroy3_1:eui.Image;
+    public grpHistroy2:eui.Group;
+    public grpHistroy0_2:eui.Image;
+    public grpHistroy1_2:eui.Image;
+    public grpHistroy2_2:eui.Image;
+    public grpHistroy3_2:eui.Image;
+    public grpHistroy3:eui.Group;
+    public grpHistroy0_3:eui.Image;
+    public grpHistroy1_3:eui.Image;
+    public grpHistroy2_3:eui.Image;
+    public grpHistroy3_3:eui.Image;
+    public grpHistroy4:eui.Group;
+    public grpHistroy0_4:eui.Image;
+    public grpHistroy1_4:eui.Image;
+    public grpHistroy2_4:eui.Image;
+    public grpHistroy3_4:eui.Image;
+    public grpHistroy5:eui.Group;
+    public grpHistroy0_5:eui.Image;
+    public grpHistroy1_5:eui.Image;
+    public grpHistroy2_5:eui.Image;
+    public grpHistroy3_5:eui.Image;
+    public grpHistroy6:eui.Group;
+    public grpHistroy0_6:eui.Image;
+    public grpHistroy1_6:eui.Image;
+    public grpHistroy2_6:eui.Image;
+    public grpHistroy3_6:eui.Image;
+    public grpHistroy7:eui.Group;
+    public grpHistroy0_7:eui.Image;
+    public grpHistroy1_7:eui.Image;
+    public grpHistroy2_7:eui.Image;
+    public grpHistroy3_7:eui.Image;
+    public grpHistroy8:eui.Group;
+    public grpHistroy0_8:eui.Image;
+    public grpHistroy1_8:eui.Image;
+    public grpHistroy2_8:eui.Image;
+    public grpHistroy3_8:eui.Image;
+    public grpHistroy9:eui.Group;
+    public grpHistroy0_9:eui.Image;
+    public grpHistroy1_9:eui.Image;
+    public grpHistroy2_9:eui.Image;
+    public grpHistroy3_9:eui.Image;
+    public grpCardType:eui.Group;
+    public secondClose:eui.Image;
+    public grpResult:eui.Group;
+    public grpMax:eui.Group;
+    public grpMaxHead:eui.Image;
+    public grpMaxGold:eui.Label;
+    public grpMaxName:eui.Label;
+    public grpBankerHead:eui.Image;
+    public grpBankerType:eui.Image;
+    public labelBankerType:eui.Label;
+    public grpBankerBeishu:eui.Label;
+    public grpBankerGold:eui.Label;
+    public grpBankerName:eui.Label;
+    public labResult0_0:eui.Label;
+    public labResult1_0:eui.Label;
+    public labResult2_0:eui.Label;
+    public labResult0_1:eui.Label;
+    public labResult1_1:eui.Label;
+    public labResult2_1:eui.Label;
+    public labResult0_2:eui.Label;
+    public labResult1_2:eui.Label;
+    public labResult2_2:eui.Label;
+    public labResult0_3:eui.Label;
+    public labResult1_3:eui.Label;
+    public labResult2_3:eui.Label;
+    public labResultValue:eui.Label;
+    public resultType0:eui.Label;
+    public resultType1:eui.Label;
+    public resultType2:eui.Label;
+    public resultType3:eui.Label;
+    public grpTips:eui.Group;
+    public grpTipsbg:eui.Image;
+    public grpTipsInfo:eui.Image;
+    public imgBaoZhuang:eui.Image;
+    public grpCaijin:eui.Group;
+    public grpCaijinLabel:eui.Label;
+    public grpHead0:eui.Group;
+    public imghead0:eui.Image;
+    public labelHead0:eui.Label;
+    public labelGold0:eui.Label;
+    public _btn_close:eui.Button;
+    public _btn_meun:eui.Button;
+    public _whether_:eui.Group;
+    public _whether_0:eui.Image;
+    public _img_0:eui.Image;
+    public _whether_3:eui.Image;
+    public _img_3:eui.Image;
+    public _whether_2:eui.Image;
+    public _img_2:eui.Image;
+    public _whether_1:eui.Image;
+    public _img_1:eui.Image;
+    public _xiabei:eui.Group;
+    public _xiabei_0_0:eui.Image;
+    public _xiabei_0:eui.Image;
+    public _xiabei_0_1:eui.Image;
+    public _xiabei_1:eui.Image;
+    public _xiabei_0_2:eui.Image;
+    public _xiabei_2:eui.Image;
+    public _xiabei_0_3:eui.Image;
+    public _xiabei_3:eui.Image;
+    public _group_qiang:eui.Group;
+    public _btn_buqiang:eui.Button;
+    public _btn_qiang_1:eui.Button;
+    public _btn_qiang_2:eui.Button;
+    public _btn_qiang_3:eui.Button;
+    public _btn_qiang_4:eui.Button;
+    public _btn_switch:eui.Group;
+    public _btn_double_1:eui.Button;
+    public _btn_double_2:eui.Button;
+    public _btn_double_3:eui.Button;
+    public _btn_double_4:eui.Button;
+    public _btn_double_5:eui.Button;
+    public _jixu:eui.Group;
+    public _btn_begin:eui.Button;
+    public _pingpai:eui.Group;
+    public _zhi_0:eui.Label;
+    public _zhi_1:eui.Label;
+    public _zhi_2:eui.Label;
+    public _zhi_3:eui.Label;
+    public _youniu:eui.Button;
+    public _meiniu:eui.Button;
+    public _puke_0:eui.Image;
+    public _puke_1:eui.Image;
+    public _puke_2:eui.Image;
+    public _puke_3:eui.Image;
+    public _puke_4:eui.Image;
 
 
 
@@ -339,8 +338,8 @@ class QZNNView extends eui.Component {
     private Puke_2: boolean = true;  // 代表 _puke_2 选中true
     private Puke_3: boolean = true;  // 代表 _puke_3 选中true
     private Puke_4: boolean = true;  // 代表 _puke_4 选中true
-
-
+    private gamestarEff: egret.MovieClip;
+    private nnbankerEff: egret.MovieClip;
 
     //-----------------------------------------------
 
@@ -561,7 +560,7 @@ class QZNNView extends eui.Component {
     /**游戏状态 */
     private GameStatus(data: any): void {
         switch (data._obj.roomStatus) {
-            case 0: ; break;    //庄家
+            case 0: ; break;    //
             case 1: ; break;
             case 2: ; break;    //已开始
             case 3: this.onHogBack(data); break;    //抢庄
@@ -577,6 +576,21 @@ class QZNNView extends eui.Component {
         this.grpCountdown.visible = true;
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = true;
+
+        if(!this.gamestarEff){
+            this.gamestarEff = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
+            this.gamestarEff.x = 100;
+            this.gamestarEff.y = 200;
+            this.gamestarEff.play(1);
+        }
+        this.addChild(this.gamestarEff);
+        this.gamestarEff.addEventListener(egret.Event.COMPLETE,(e:egret.Event)=>{
+            this.gamestarEff.stop();
+            if(this.gamestarEff.parent)
+            {
+              this.gamestarEff.parent.removeChild(this.gamestarEff);
+            }
+        },this);
     }
     /**监听下注 */
     private onbetBack(data: any): void {
@@ -683,18 +697,26 @@ class QZNNView extends eui.Component {
     }
     /**设置庄家 */
     private acceptbanker(data: any): void {
-
-        // var niuniu: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp('nn_banker', 'nn_banker');
-
         let num = UserInfo.getInstance().findSeatNumber(data._obj.index);
         this.zhaungIndex = num;
-
         if (num == 0) {
-            this._my_img_zhuang.visible = true;
+            this.addNNbankerEff();
         } else {
             this['grpHead' + num].setZhuang(true);
         }
     }
+
+    private addNNbankerEff()
+    {
+        if(!this.nnbankerEff ){
+            this.nnbankerEff = xlLib.DisplayUtils.createMovieClicp('nn_banker', 'nn_banker');
+            this.nnbankerEff.x = 90;
+            this.nnbankerEff.y = 80;
+        }
+        this['grpHead0'].addChild(this.nnbankerEff);
+        this.nnbankerEff.play(1);
+    }
+
     /**
      * 自己加入房间
      */
@@ -1792,7 +1814,6 @@ class QZNNView extends eui.Component {
         //for (let i = 0; i < 4; i++) {
         //this['labTipsClick' + i].visible = true;
         //}
-        this._my_img_zhuang.visible = false;
         this._btn_begin.visible = true;
         this.isCanBets = true;
         this.isBets = false;
@@ -1801,8 +1822,19 @@ class QZNNView extends eui.Component {
         this.grpCaijin.visible = false;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
+        this.removeNNbankerEff();
         // this.labCountdown0.text = '0';
         // this.labCountdown1.text = '0';
+    }
+
+    private removeNNbankerEff():void
+    {
+        if(this.nnbankerEff){
+            this.nnbankerEff.stop();
+            if(this.nnbankerEff.parent){
+                this.nnbankerEff.parent.removeChild(this.nnbankerEff);
+            }
+        }
     }
 
     //========================== Second Panel ==============================
@@ -1914,10 +1946,11 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
         EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
-
+        
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }
+        this.removeNNbankerEff();
     }
 }
 
