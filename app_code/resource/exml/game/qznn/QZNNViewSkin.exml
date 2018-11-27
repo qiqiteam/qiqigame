@@ -5,13 +5,13 @@
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" width="100%" height="100%" source="img_beijing_jpg"/>
 		<e:Image source="qznn_game_desk_0_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
 	</e:Group>
-	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  visible="false"/>
+	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true" visible="false"/>
 	<e:Group id="_pingpai" width="681.82" height="327.27" y="458" x="486" anchorOffsetX="0" anchorOffsetY="0" locked="true" visible="false">
 		<e:Image source="qznn_num_frame_png" y="73.48999999999995" scaleX="1" scaleY="1" x="27"/>
 		<e:Image source="nn_btn_youniu1_png" x="524.07" y="114"/>
 		<e:Image source="nn_btn_meiniu1_png" x="524.07" y="204.27"/>
 	</e:Group>
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
 
 		<e:Image id="bankerCard_0" x="630.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
 		<e:Image id="bankerCard_1" x="652.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
@@ -74,7 +74,7 @@
 
 
 	</e:Group>
-	<e:Group x="0" y="0" width="1472" height="828">
+	<e:Group x="0" y="0" width="1472" height="828" locked="true">
 		<ns1:QZNNHead id="grpHead1" width="20" height="20" x="43.89" y="313" skinName="QZNNHeadSkin"/>
 		<ns1:QZNNHead id="grpHead2" width="20" height="20" y="88.11" skinName="QZNNHeadSkin" x="663.68"/>
 		<ns1:QZNNHead id="grpHead3" width="20" height="20" x="1270.15" y="313" skinName="QZNNHeadSkin"/>
@@ -131,9 +131,9 @@
 		<e:Image id="btnVip0" source="vipbg" x="45" y="73"/>
 		<e:Label id="labBankerVip" text="VIP 15" x="47" y="78" size="16" width="50" textAlign="center" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="grpCountdown" horizontalCenter="3" verticalCenter="8.5" locked="true" visible="false">
+	<e:Group id="grpCountdown" horizontalCenter="3" verticalCenter="8.5">
 		<e:Image y="0" x="0"  source="progressTimerFontBg_png" width="109"/>
-		<e:Label id="timeTxt" text="0" size="80" textColor="0xefb61c" bold="true" x="32" y="15"/>
+		<e:Label id="timeTxt" text="00" size="63" textColor="0xefb61c" bold="true" y="22.6" height="63" width="71" x="19"/>
 
 
 	</e:Group>
@@ -591,15 +591,7 @@
 	</e:Button>
 
 
-	<e:Button id="_btn_begin" label="" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="_btn_start_png" source.down="_btn_start_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
 
-	</e:Button>
 	<e:Group id="_whether_" width="1472" height="828" y="0" x="0" locked="true" visible="false">
 		<e:Image id="_whether_0" x="386" y="601" source="img_BQ_0_png"/>
 		<e:Image id="_img_0" x="422" y="600" source="img_1_png"/>
@@ -729,6 +721,17 @@
 		<e:Image x="623.59" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png" visible="false"/>
 		<e:Image x="648.86" touchEnabled="false" verticalCenter="-2" source="img_XB_5_png"/>
 		<e:Image source="img_XBei_png" x="669.62" y="18" touchEnabled="false"/>
+	</e:Group>
+	<e:Group id="_jixu" width="226" height="81" y="716.6" x="623" locked="true" visible="false">
+		<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="0" y="0">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="resumeGameBg_png" source.down="resumeGameBg_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="resumeGameFont_png" touchEnabled="false" scaleX="1" scaleY="1" x="43" y="23"/>
 	</e:Group>
 
 </e:Skin>

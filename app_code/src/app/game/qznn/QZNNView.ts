@@ -221,7 +221,6 @@ class QZNNView extends eui.Component {
     public labelGold0: eui.Label;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
-    public _btn_begin: eui.Button;
     public _whether_: eui.Group;
     public _whether_0: eui.Image;
     public _img_0: eui.Image;
@@ -252,6 +251,9 @@ class QZNNView extends eui.Component {
     public _btn_double_3: eui.Button;
     public _btn_double_4: eui.Button;
     public _btn_double_5: eui.Button;
+    public _jixu: eui.Group;
+    public _btn_begin: eui.Button;
+
 
 
 
@@ -389,6 +391,7 @@ class QZNNView extends eui.Component {
         this._xiabei_0_3.visible = false;
         this._xiabei_3.visible = false;
         this._pingpai.visible = false;
+        this._jixu.visible = false;
 
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
@@ -439,67 +442,36 @@ class QZNNView extends eui.Component {
     }
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
-
         if (e.target == this._btn_begin) {
-            console.log("_btn_begin");
-            let senddata: any = {
-                userid: UserInfo.getInstance().uid,
-                token: UserInfo.getInstance().token,
-            };
-            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_start, senddata, (data) => {
-                this._btn_begin.visible = false;
-                // this._group_qiang.visible = true;
-                UserInfo.getInstance().isGameStart = true;
-            }, this);
+            // console.log("_btn_begin");
         } else if (e.target == this._btn_buqiang) {
-            console.log("_btn_buqiang");
+            // console.log("_btn_buqiang");
             this.sendamessage(EventConst.niuniu_dohog, 0);
-
-
         } else if (e.target == this._btn_qiang_1) {
-            console.log("_btn_qiang_1");
+            // console.log("_btn_qiang_1");
             this.sendamessage(EventConst.niuniu_dohog, 1);
-
-
         } else if (e.target == this._btn_qiang_2) {
-            console.log("_btn_qiang_2");
+            // console.log("_btn_qiang_2");
             this.sendamessage(EventConst.niuniu_dohog, 1);
-
-
         } else if (e.target == this._btn_qiang_3) {
-            console.log("_btn_qiang_3");
+            // console.log("_btn_qiang_3");
             this.sendamessage(EventConst.niuniu_dohog, 1);
-
-
         } else if (e.target == this._btn_qiang_4) {
-            console.log("_btn_qiang_4");
+            // console.log("_btn_qiang_4");
             this.sendamessage(EventConst.niuniu_dohog, 4);
-
-
         } else if (e.target == this._btn_double_1) {
-            console.log("_btn_double_1");
+            // console.log("_btn_double_1");
             this.sendamessage1(EventConst.niuniu_dobet, 1);
-
-
-
-
         } else if (e.target == this._btn_double_2) {
-            console.log("_btn_double_2");
+            // console.log("_btn_double_2");
             this.sendamessage1(EventConst.niuniu_dobet, 2);
-
-
         } else if (e.target == this._btn_double_3) {
-            console.log("_btn_double_3");
+            // console.log("_btn_double_3");
             this.sendamessage1(EventConst.niuniu_dobet, 3);
-
-
-
         } else if (e.target == this._btn_double_4) {
-            console.log("_btn_double_4");
+            // console.log("_btn_double_4");
             this.sendamessage1(EventConst.niuniu_dobet, 4);
-
         } else if (e.target == this._btn_double_5) {
-
             this.sendamessage1(EventConst.niuniu_dobet, 5);
         }
     }
@@ -584,13 +556,14 @@ class QZNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
-        if(data._obj.roomStatus == 4){
+        if (data._obj.roomStatus == 4) {
             this.acceptbanker(data);
         }
 
     }
     /**牌面信息+结算 */
     private over(data: any): void {
+        this.startCountDown(data._obj.seconds);
         let result = {
             pokes: [],
             result: [1, 0, 0, 0],
@@ -748,7 +721,12 @@ class QZNNView extends eui.Component {
 
     /**开始倒计时*/
     private startCountDown(time: number): void {
-        this.timeTxt.text = time + "";
+        if (time < 10) {
+            this.timeTxt.text = "0" + time;
+        } else {
+            this.timeTxt.text = "" + time;
+        }
+
 
         this.timeTxt.visible = true;
         this.time = time;
@@ -763,11 +741,11 @@ class QZNNView extends eui.Component {
     /**倒计时处理*/
     private timerFunc(evt: egret.TimerEvent): void {
         if (this.time >= 0) {
-            this.timeTxt.text = this.time + "";
+            this.timeTxt.text = "0" + this.time;
             this.time--;
         }
         else {
-            this.timeTxt.text = "0";
+            this.timeTxt.text = "00";
             this.clearTime();
         }
     }
