@@ -699,6 +699,28 @@ class QZNNView extends eui.Component {
     private acceptbanker(data: any): void {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.index);
         this.zhaungIndex = num;
+        let img:eui.Image = new eui.Image("selectedBankerIcon_png");
+        img.x = 15;
+        img.y = 0;
+        img.width = 150;
+        img.height = 150;
+        for(let i=0;i<=14;i++){
+            let index:Number = parseInt((Math.random()*4)+"");
+            setTimeout(()=> {
+                if(i==14){
+                  if(img.parent){
+                        img.parent.removeChild(img);
+                        this.randomZhuan(num);
+                  }
+                }else{
+                    this['grpHead' + index].addChild(img);
+                }
+            }, i*100);
+        }
+    }
+
+    private randomZhuan(num):void
+    {
         if (num == 0) {
             this.addNNbankerEff();
         } else {

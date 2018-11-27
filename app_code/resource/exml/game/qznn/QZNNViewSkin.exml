@@ -756,6 +756,7 @@
 		<e:Image id="_puke_2" source="brnn_card_13_png" x="687.41" y="636"/>
 		<e:Image id="_puke_3" source="brnn_card_13_png" x="821.25" y="636"/>
 		<e:Image id="_puke_4" source="brnn_card_13_png" x="954.91" y="636"/>
+				<e:Image source="nn_tipBg_png" x="502.52" y="474.39"/>
 	</e:Group>
 
 </e:Skin>
