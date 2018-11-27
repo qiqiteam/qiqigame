@@ -1270,7 +1270,7 @@ class QZNNView extends eui.Component {
         //设置庄家的消息
         private setBankerInfo(banker): void {
             if (banker.sys == 1) {
-                this.bankerHead.source = 'nn.head';
+                this.bankerHead.source = 'qznn_head';
                 this.bankerHead.width = this.bankerHead.height = 55;
                 this.bankerName.text = '萌萌哒';
                 this.labBankerMoney.text = QuickManage.moneyStr(88888880000);
@@ -1400,7 +1400,7 @@ class QZNNView extends eui.Component {
 
     private playCardFly(): void {
         var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
-        card.source = 'nn.card_100';
+        card.source = 'qznn_card_100';
         card.x = 713.5;
         card.y = 300;
         card.anchorOffsetX = card.width / 2;
@@ -1436,7 +1436,7 @@ class QZNNView extends eui.Component {
         var card: eui.Image = this['bankerCard_' + this.flyBankerIndex];
         card.x = 713.5;
         card.y = 300;
-        card.source = 'nn.card_100';
+        card.source = 'qznn_card_100';
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
         this.orginBankerCardPos;
@@ -1459,9 +1459,9 @@ class QZNNView extends eui.Component {
         var index = this.effectPlayerIndex;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
-            card.source = 'nn.card_100';
+            card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'nn.card_' + this[1];
+                this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke[index + 1].value[i]]);
             // console.log('poke_' + this.effectPlayerIndex + ': ' + poke[this.effectPlayerIndex].value[i]);
@@ -1491,9 +1491,9 @@ class QZNNView extends eui.Component {
         var poke = this.cardResult.pokes[0];
         for (var i = 0; i < 5; i++) {
             var card = this['bankerCard_' + i];
-            card.source = 'nn.card_100';
+            card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'nn.card_' + this[1];
+                this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke.value[i]])
             // console.log('poke_banker: ' + poke.value[i]);
@@ -1857,7 +1857,7 @@ class QZNNView extends eui.Component {
                 this['grpHistroy' + i].visible = true;
                 var arr = list[i];
                 for (var j = 0; j < 4; j++) {
-                    this['grpHistroy' + j + '_' + i].source = arr[j] == 1 ? 'nn.a8' : 'nn.a7';
+                    this['grpHistroy' + j + '_' + i].source = arr[j] == 1 ? 'qznn_a8' : 'qznn_a7';
                 }
             }
             else {

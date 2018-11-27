@@ -7,32 +7,32 @@
 	</e:Group>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true" visible="false"/>
 
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
 
-		<e:Image id="bankerCard_0" x="630.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_1" x="652.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_2" x="674.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_3" x="696.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_4" x="718.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="labCardTypeBanker" source="nn.n1" x="641.1" y="662.27" scaleX="1" scaleY="1" width="98" height="44"/>
-		<e:Image id="grpCard_0_0" x="213.5" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50" verticalCenter="0"/>
-		<e:Image id="grpCard_0_1" x="235.5" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50" verticalCenter="0"/>
-		<e:Image id="grpCard_0_2" x="257.5" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50" verticalCenter="0"/>
-		<e:Image id="grpCard_0_3" x="279.5" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50" verticalCenter="0"/>
-		<e:Image id="grpCard_0_4" x="301.5" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50" verticalCenter="0"/>
-		<e:Image id="labCardType0" source="nn.n1" x="222.5" width="98" height="44" scaleX="1" scaleY="1" verticalCenter="0"/>
-		<e:Image id="grpCard_1_0" x="830.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_1" x="852.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_2" x="874.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_3" x="896.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_4" x="918.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="labCardType1" source="nn.n1" x="842.55" y="173.34" width="98" height="44" scaleX="1" scaleY="1"/>
-		<e:Image id="grpCard_2_0" x="1151.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_1" x="1173.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_2" x="1195.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_3" x="1217.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_4" x="1239.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="labCardType2" source="nn.n1" x="1166.07" y="372.75" width="98" height="44" scaleX="1" scaleY="1"/>
+		<e:Image id="bankerCard_0" x="637" y="664" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="bankerCard_1" x="672.9" y="664" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="bankerCard_2" x="709.9" y="664" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="bankerCard_3" x="745.9" y="664" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="bankerCard_4" x="782" y="664" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="labCardTypeBanker" source="nn.n1" x="692" y="717" scaleX="1" scaleY="1" width="98" height="44"/>
+		<e:Image id="grpCard_0_0" x="199.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" verticalCenter="0"/>
+		<e:Image id="grpCard_0_1" x="232" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+		<e:Image id="grpCard_0_2" x="264" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+		<e:Image id="grpCard_0_3" x="296" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+		<e:Image id="grpCard_0_4" x="328.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" verticalCenter="0"/>
+		<e:Image id="labCardType0" source="nn.n1" x="246.5" width="98" height="44" scaleX="1" scaleY="1" verticalCenter="25"/>
+		<e:Image id="grpCard_1_0" x="820.55" y="154.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_1" x="854" y="154.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_2" x="887" y="154.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_3" x="920" y="154.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_4" x="952.55" y="154.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="labCardType1" source="nn.n1" x="860.55" y="205.34" width="98" height="44" scaleX="1" scaleY="1"/>
+		<e:Image id="grpCard_2_0" x="1086.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_1" x="1118" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_2" x="1151" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_3" x="1183" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_4" x="1215.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="labCardType2" source="nn.n1" x="1144.07" y="414.75" width="98" height="44" scaleX="1" scaleY="1"/>
 
 
 
@@ -553,7 +553,7 @@
 		<e:Rect height="30" width="330" y="-10" horizontalCenter="0" strokeWeight="1" />
 		<e:Label id="grpCaijinLabel" y="-8" horizontalCenter="0" bold="true" textColor="0xFFFF00" />
 	</e:Group>
-	<e:Group id="grpHead0" scaleX="1" scaleY="1" x="201.36" y="590.51" width="180" anchorOffsetY="0" height="209">
+	<e:Group id="grpHead0" scaleX="1" scaleY="1" x="201.36" y="590.51" width="180" anchorOffsetY="0" height="209" locked="true">
 		<e:Image y="15.2" source="nn_por_smallbg_png" x="27"/>
 		<e:Image id="imghead0" width="126" height="126" y="15.2" x="23" source="women7_png"/>
 
@@ -729,7 +729,7 @@
 		</e:Button>
 		<e:Image source="resumeGameFont_png" touchEnabled="false" scaleX="1" scaleY="1" x="43" y="23"/>
 	</e:Group>
-	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0">
+	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" locked="true">
 		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513"/>
 		<e:Label id="_zhi_0" text="10" x="544" y="546" textColor="0xe21b1b" bold="true"/>
 		<e:Label text="10" x="660" y="546" textColor="0xE21B1B" id="_zhi_1" bold="true"/>
