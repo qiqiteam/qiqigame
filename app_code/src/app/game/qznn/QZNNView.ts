@@ -264,8 +264,10 @@ class QZNNView extends eui.Component {
     public _puke_3:eui.Image;
     public _puke_4:eui.Image;
 
+    public arr: eui.Image[] = [null, null, null];
+    public score: number[] = [1, 2, 3, 4, 5];
 
-
+    public arr_fen: number[] = [0, 0, 0];
 
 
 
@@ -413,6 +415,17 @@ class QZNNView extends eui.Component {
         this.Puke_2 = false;
         this.Puke_3 = false;
         this.Puke_4 = false;
+        this._puke_0.name = '405';
+        this._puke_1.name = '312';
+        this._puke_2.name = '409';
+        this._puke_3.name = '205';
+
+        this.arr = [];
+
+        this._zhi_0.text = "";
+        this._zhi_1.text = "";
+        this._zhi_2.text = "";
+        this._zhi_3.text = "";
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
 
@@ -550,24 +563,25 @@ class QZNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
         EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
 
-        // this._puke_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
-        // this._puke_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
-        // this._puke_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
-        // this._puke_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
-        // this._puke_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        this._puke_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        this._puke_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        this._puke_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        this._puke_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        this._puke_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
     }
 
     /**游戏状态 */
     private GameStatus(data: any): void {
         switch (data._obj.roomStatus) {
-            case 0: ; break;    //
+            case 0: ; break;    //庄家
             case 1: ; break;
             case 2: ; break;    //已开始
             case 3: this.onHogBack(data); break;    //抢庄
             case 4: this.onbetBack(data); break;    //下注
             case 5: ; break;
-            case 6: this.over(data); break;    //结算
-            case 7: ; break;    //游戏结束
+            case 6: this.over(data) ; break;    //发送牌型
+            case 7: ; break;    //结算
+            case 8: ; break;    //游戏结束
         }
     }
     /**监听抢庄 */
@@ -622,7 +636,6 @@ class QZNNView extends eui.Component {
             };
             result.pokes.push(err);
         }
-
         this.cardResult = result;
         this.cardEffect();
         UserInfo.getInstance().isGameStart = false;  //游戏状态
@@ -791,67 +804,43 @@ class QZNNView extends eui.Component {
     }
     /**算牌 */
     private Suapai(e: egret.TouchEvent) {
-        if (this.num >= 3) {
-            for (let i = 1; i < 5; i++) {
-                if(this['Puke_'+i]){
-                    console.log('111');
-                }else{
-                     this['Puke_'+i].touchEnabled =false;
+
+        //如果有，就踢出去
+        for (let i = 0; i < 3; i++) {
+            if (this.arr[i] == e.target) {
+                this.arr[i].y += 40;
+                this.arr[i] = null;
+                //分数踢出
+                this["_zhi_" + i].text = "";
+                this.arr_fen[i] = 0;
+                this.calculatescore();
+                return;
+            }
+        }
+
+        for (let i = 0; i < 3; i++) {
+            if (this.arr[i] != null) {
+                continue;
+            }
+
+            for (let j = 0; j < 5; j++) {
+                if (e.target == this["_puke_" + j]) {
+                    this.arr[i] = this["_puke_" + j];
+                    this["_puke_" + j].y -= 40;
+                    this["_zhi_" + i].text = this.score[j];
+                    this.arr_fen[i] = this.score[j];
+                    this.calculatescore();
+                    return;
                 }
             }
-            return;
         }
-        if (e.target == this._puke_0) {
-            if (this.Puke_0) {
-                this.Puke_0 = false;
-                this.num--;
-                this._puke_0.y += 40;
-            } else {
-                this.Puke_0 = true;
-                this.num++;
-                this._puke_0.y -= 40;
-            }
-        } else if (e.target == this._puke_1) {
-            if (this.Puke_1) {
-                this.Puke_1 = false;
-                this.num--;
-                this._puke_1.y += 40;
-            } else {
-                this.Puke_1 = true;
-                this.num++;
-                this._puke_1.y -= 40;
-            }
-        } else if (e.target == this._puke_2) {
-            if (this.Puke_2) {
-                this.Puke_2 = false;
-                this.num--;
-                this._puke_2.y += 40;
-            } else {
-                this.Puke_2 = true;
-                this.num++;
-                this._puke_2.y -= 40;
-            }
-        } else if (e.target == this._puke_3) {
-            if (this.Puke_3) {
-                this.Puke_3 = false;
-                this.num--;
-                this._puke_3.y += 40;
-            } else {
-                this.Puke_3 = true;
-                this.num++;
-                this._puke_3.y -= 40;
-            }
-        } else if (e.target == this._puke_4) {
-            if (this.Puke_4) {
-                this.Puke_4 = false;
-                this.num--;
-                this._puke_4.y += 50;
-            } else {
-                this.Puke_4 = true;
-                this.num++;
-                this._puke_4.y -= 50;
-            }
-        }
+
+    }
+    /**计算分数 */
+    private calculatescore() {
+
+        var aaa = this.arr_fen[0] + this.arr_fen[1] + this.arr_fen[2];
+        this._zhi_3.text = aaa + '';
     }
     /**开始倒计时*/
     private startCountDown(time: number): void {
