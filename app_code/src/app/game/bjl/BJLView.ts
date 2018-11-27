@@ -510,7 +510,7 @@ class BJLView extends eui.Component {
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.onBJLjoinroom, this.ononBJLjoinroomBack, this);
         EventUtil.addEventListener(EventConst.startBeton, this.onStartBetonBack, this);
         EventUtil.addEventListener(EventConst.onCatch, this.onbaijialebetonBack, this);
@@ -1751,7 +1751,7 @@ class BJLView extends eui.Component {
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.removeEventListener(EventConst.onBJLjoinroom, this.ononBJLjoinroomBack, this);
         EventUtil.removeEventListener(EventConst.startBeton, this.onStartBetonBack, this);
         EventUtil.removeEventListener(EventConst.onCatch, this.onbaijialebetonBack, this);

@@ -38,6 +38,7 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 		if (!this.gameIconData) {
 			return;
 		}
+		// xlLib.SceneMgr.instance.changeScene(QZNNScene);
 		let gameData: gameData = UserInfo.getInstance().getGameDataByindex(this.gameIconData.game);
 		let typeData: typeData = gameData.getTypeDataByindex(this.gameIconData.type);
 		let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);

@@ -506,7 +506,7 @@ class TBNNView extends eui.Component {
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
         EventUtil.addEventListener(EventConst.summary, this.over, this);
     }
@@ -1664,7 +1664,7 @@ class TBNNView extends eui.Component {
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
         EventUtil.removeEventListener(EventConst.summary, this.over, this);
         if(this.cdTimer != null) {

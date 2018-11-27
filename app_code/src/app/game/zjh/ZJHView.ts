@@ -607,7 +607,7 @@ class ZJHView extends eui.Component {
         //this.cardEffect();
         // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.play, this.playpai, this);
         EventUtil.addEventListener(EventConst.gambleType, this.gametype, this);
         EventUtil.addEventListener(EventConst.otherSeecard, this.kanpai, this);
@@ -1132,7 +1132,7 @@ class ZJHView extends eui.Component {
     public destroy(): void {
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.removeEventListener(EventConst.play, this.playpai, this);
         EventUtil.removeEventListener(EventConst.gambleType, this.gametype, this);
         EventUtil.removeEventListener(EventConst.otherSeecard, this.kanpai, this);

@@ -8,8 +8,7 @@ class EventConst {
 
     //------------------C to S---------------------请求发送服务器协议
 
-    /**游戏状态 */
-    public static onGameStatusChange: string = "onGameStatusChange";
+   
 
     /**加入房间 */
     public static joinroom: string = "joinroom";
@@ -58,10 +57,19 @@ class EventConst {
     //public static dice: string = "dice";
 
     //------------------S to C---------------------服务端回包监听数据
+
+     /**游戏状态 */
+    public static onGameStatusChange: string = "onGameStatusChange";
     /**所有玩家列表*/
     public static players: string = "players";
     /**新玩家加入*/
-    public static newplayer: string = "newplayer";
+    public static onNewUserEnterGame: string = "onNewUserEnterGame";
+    /**抢庄通知(所有人)*/
+    public static onUserBetOrderUpdate: string = "onUserBetOrderUpdate";
+    /**下注通知(所有人)*/
+    public static onUserHogOrderUpdate: string = "onUserHogOrderUpdate";
+
+    
     /**监听抢庄按钮*/
     public static hog: string = "hog";
     /**用户抢庄数*/
