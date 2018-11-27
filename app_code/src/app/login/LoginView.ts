@@ -16,7 +16,7 @@ class LoginView extends eui.Component
 	public zzzh_btn:eui.CheckBox;
 	public _btn_login:eui.Button;
 	public _btn_verify:eui.Button;
-
+	public _btn_black:eui.Button;
 
 	private bjlSubscription: boolean = false;
 	private lfSubscription: boolean = false;
@@ -50,9 +50,15 @@ class LoginView extends eui.Component
 		this._btn_register.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
 		this._btn_login.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
 		this._btn_verify.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onGetCode,this);
+		this._btn_black.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBlack,this);
 
 		EventUtil.addEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);
 		EventUtil.addEventListener(EventConst.ON_SOCKET_FAIL, this.onSocketFail, this);
+	}
+
+	private onBlack(e:egret.TouchEvent):void {
+		this._group_btn_0.visible = true;
+		this._group_btn_2.visible = false;
 	}
 
 	private _onVisitorLogin(e:egret.TouchEvent):void {

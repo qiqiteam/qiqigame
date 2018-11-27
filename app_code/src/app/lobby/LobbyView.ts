@@ -38,6 +38,8 @@ class LobbyView extends eui.Component {
 		this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+
+		this._topup.skinName = "";
 	}
 
 	protected childrenCreated() {
