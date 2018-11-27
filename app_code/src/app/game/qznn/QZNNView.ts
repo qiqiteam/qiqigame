@@ -11,6 +11,17 @@ class QZNNView extends eui.Component {
 
     public grpCoins: eui.Group;
     public _pingpai: eui.Group;
+    public _zhi_0: eui.Label;
+    public _zhi_1: eui.Label;
+    public _zhi_2: eui.Label;
+    public _zhi_3: eui.Label;
+    public _youniu: eui.Button;
+    public _meiniu: eui.Button;
+    public _puke_0: eui.Image;
+    public _puke_1: eui.Image;
+    public _puke_2: eui.Image;
+    public _puke_3: eui.Image;
+    public _puke_4: eui.Image;
     public grpCard: eui.Group;
     public bankerCard_0: eui.Image;
     public bankerCard_1: eui.Image;
@@ -322,7 +333,12 @@ class QZNNView extends eui.Component {
 
     private zhaungIndex: number = 0;    //庄的位置
 
-
+    private num: number = 0;         //代表几个被选中
+    private Puke_0: boolean = true;  // 代表 _puke_0 选中true
+    private Puke_1: boolean = true;  // 代表 _puke_1 选中true
+    private Puke_2: boolean = true;  // 代表 _puke_2 选中true
+    private Puke_3: boolean = true;  // 代表 _puke_3 选中true
+    private Puke_4: boolean = true;  // 代表 _puke_4 选中true
 
 
 
@@ -390,9 +406,14 @@ class QZNNView extends eui.Component {
         this._xiabei_2.visible = false;
         this._xiabei_0_3.visible = false;
         this._xiabei_3.visible = false;
-        this._pingpai.visible = false;
         this._jixu.visible = false;
 
+        this._pingpai.visible = false;
+        this.Puke_0 = false;
+        this.Puke_1 = false;
+        this.Puke_2 = false;
+        this.Puke_3 = false;
+        this.Puke_4 = false;
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
 
@@ -528,7 +549,13 @@ class QZNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        // EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
+        EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
+
+        // this._puke_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        // this._puke_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        // this._puke_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        // this._puke_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+        // this._puke_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
     }
 
     /**游戏状态 */
@@ -718,7 +745,70 @@ class QZNNView extends eui.Component {
         var niuniu: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
         this.addChild(niuniu);
     }
-
+    /**算牌 */
+    private Suapai(e: egret.TouchEvent) {
+        if (this.num >= 3) {
+            for (let i = 1; i < 5; i++) {
+                if(this['Puke_'+i]){
+                    console.log('111');
+                }else{
+                     this['Puke_'+i].touchEnabled =false;
+                }
+            }
+            return;
+        }
+        if (e.target == this._puke_0) {
+            if (this.Puke_0) {
+                this.Puke_0 = false;
+                this.num--;
+                this._puke_0.y += 40;
+            } else {
+                this.Puke_0 = true;
+                this.num++;
+                this._puke_0.y -= 40;
+            }
+        } else if (e.target == this._puke_1) {
+            if (this.Puke_1) {
+                this.Puke_1 = false;
+                this.num--;
+                this._puke_1.y += 40;
+            } else {
+                this.Puke_1 = true;
+                this.num++;
+                this._puke_1.y -= 40;
+            }
+        } else if (e.target == this._puke_2) {
+            if (this.Puke_2) {
+                this.Puke_2 = false;
+                this.num--;
+                this._puke_2.y += 40;
+            } else {
+                this.Puke_2 = true;
+                this.num++;
+                this._puke_2.y -= 40;
+            }
+        } else if (e.target == this._puke_3) {
+            if (this.Puke_3) {
+                this.Puke_3 = false;
+                this.num--;
+                this._puke_3.y += 40;
+            } else {
+                this.Puke_3 = true;
+                this.num++;
+                this._puke_3.y -= 40;
+            }
+        } else if (e.target == this._puke_4) {
+            if (this.Puke_4) {
+                this.Puke_4 = false;
+                this.num--;
+                this._puke_4.y += 50;
+            } else {
+                this.Puke_4 = true;
+                this.num++;
+                this._puke_4.y -= 50;
+            }
+        }
+    }
     /**开始倒计时*/
     private startCountDown(time: number): void {
         if (time < 10) {
@@ -1823,7 +1913,7 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        // EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
+        EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
 
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);

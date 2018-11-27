@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,btn_Q5_0_png,img_beijing_jpg,img_BQ_png,img_BQ_0_png,img_XB_png,nn_por_smallbg_png,progressTimerFontBg_png,qznntype0_tex_png,qznn_btn_beishu1_png,qznn_btn_beishu2_png,qznn_btn_buqiang_png,qznn_game_desk_0_png,qznn_num_frame_png,resumeGameBg_png,resumeGameFont_png,selectedBankerIcon_png,women7_png,img_XB_9_png,img_XB_1_png,img_XB_2_png,img_XB_3_png,img_XB_4_png,img_XB_5_png,img_XB_6_png,img_XB_7_png,img_XB_8_png,nn_btn_youniu1_png,nn_btn_meiniu1_png,nn_banker_json,nn_banker_png,img_BQ_0_9_png,img_BQ_0_0_png,img_BQ_0_1_png,img_BQ_0_2_png,img_BQ_0_3_png,img_BQ_0_4_png,img_BQ_0_5_png,img_BQ_0_6_png,img_BQ_0_7_png,img_BQ_0_8_png,img_yingfen_9_png,img_shufen_0_png,img_shufen_1_png,img_shufen_2_png,img_shufen_3_png,img_shufen_4_png,img_shufen_5_png,img_shufen_6_png,img_shufen_7_png,img_shufen_8_png,img_shufen_9_png,img_XB_0_png,img_yingfen_._png,img_yingfen_+_png,img_yingfen_0_png,img_yingfen_1_png,img_yingfen_2_png,img_yingfen_3_png,img_yingfen_4_png,img_yingfen_5_png,img_yingfen_6_png,img_yingfen_7_png,img_yingfen_8_png,img_BQ_bei_png,img_XBei_png,eff_youxikaishi_json,eff_youxikaishi_png",
+			"keys": "loding_json,loding_bg_jpg,btn_Q5_0_png,img_beijing_jpg,img_BQ_png,img_BQ_0_png,img_XB_png,nn_por_smallbg_png,progressTimerFontBg_png,qznntype0_tex_png,qznn_btn_beishu1_png,qznn_btn_beishu2_png,qznn_btn_buqiang_png,qznn_game_desk_0_png,qznn_num_frame_png,resumeGameBg_png,resumeGameFont_png,selectedBankerIcon_png,women7_png,img_XB_9_png,img_XB_1_png,img_XB_2_png,img_XB_3_png,img_XB_4_png,img_XB_5_png,img_XB_6_png,img_XB_7_png,img_XB_8_png,nn_btn_youniu1_png,nn_btn_meiniu1_png,nn_banker_json,nn_banker_png,img_BQ_0_9_png,img_BQ_0_0_png,img_BQ_0_1_png,img_BQ_0_2_png,img_BQ_0_3_png,img_BQ_0_4_png,img_BQ_0_5_png,img_BQ_0_6_png,img_BQ_0_7_png,img_BQ_0_8_png,img_yingfen_9_png,img_shufen_0_png,img_shufen_1_png,img_shufen_2_png,img_shufen_3_png,img_shufen_4_png,img_shufen_5_png,img_shufen_6_png,img_shufen_7_png,img_shufen_8_png,img_shufen_9_png,img_XB_0_png,img_yingfen_._png,img_yingfen_+_png,img_yingfen_0_png,img_yingfen_1_png,img_yingfen_2_png,img_yingfen_3_png,img_yingfen_4_png,img_yingfen_5_png,img_yingfen_6_png,img_yingfen_7_png,img_yingfen_8_png,img_BQ_bei_png,img_XBei_png,eff_youxikaishi_json,eff_youxikaishi_png,brnn_card_13_png",
 			"name": "preload"
 		},
 		{
@@ -3231,6 +3231,11 @@
 			"name": "eff_youxikaishi_png",
 			"type": "image",
 			"url": "assets/effects/eff_youxikaishi/eff_youxikaishi.png"
+		},
+		{
+			"name": "brnn_card_13_png",
+			"type": "image",
+			"url": "assets/game/qznn/brnn_card_13.png"
 		}
 	]
 }

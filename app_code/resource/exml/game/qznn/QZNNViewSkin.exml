@@ -6,11 +6,7 @@
 		<e:Image source="qznn_game_desk_0_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
 	</e:Group>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true" visible="false"/>
-	<e:Group id="_pingpai" width="681.82" height="327.27" y="458" x="486" anchorOffsetX="0" anchorOffsetY="0" locked="true" visible="false">
-		<e:Image source="qznn_num_frame_png" y="73.48999999999995" scaleX="1" scaleY="1" x="27"/>
-		<e:Image source="nn_btn_youniu1_png" x="524.07" y="114"/>
-		<e:Image source="nn_btn_meiniu1_png" x="524.07" y="204.27"/>
-	</e:Group>
+
 	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
 
 		<e:Image id="bankerCard_0" x="630.1" y="648.27" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
@@ -25,12 +21,12 @@
 		<e:Image id="grpCard_0_3" x="279.5" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50" verticalCenter="0"/>
 		<e:Image id="grpCard_0_4" x="301.5" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50" verticalCenter="0"/>
 		<e:Image id="labCardType0" source="nn.n1" x="222.5" width="98" height="44" scaleX="1" scaleY="1" verticalCenter="0"/>
-		<e:Image id="grpCard_1_0" x="692.55" y="241.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_1" x="714.55" y="241.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_2" x="736.55" y="241.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_3" x="758.55" y="241.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_4" x="780.55" y="241.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="labCardType1" source="nn.n1" x="704.55" y="255.34" width="98" height="44" scaleX="1" scaleY="1"/>
+		<e:Image id="grpCard_1_0" x="830.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_1" x="852.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_2" x="874.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_3" x="896.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_4" x="918.55" y="159.34" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="labCardType1" source="nn.n1" x="842.55" y="173.34" width="98" height="44" scaleX="1" scaleY="1"/>
 		<e:Image id="grpCard_2_0" x="1151.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
 		<e:Image id="grpCard_2_1" x="1173.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
 		<e:Image id="grpCard_2_2" x="1195.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
@@ -131,7 +127,7 @@
 		<e:Image id="btnVip0" source="vipbg" x="45" y="73"/>
 		<e:Label id="labBankerVip" text="VIP 15" x="47" y="78" size="16" width="50" textAlign="center" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="grpCountdown" horizontalCenter="3" verticalCenter="8.5">
+	<e:Group id="grpCountdown" horizontalCenter="3" verticalCenter="8.5" locked="true">
 		<e:Image y="0" x="0"  source="progressTimerFontBg_png" width="109"/>
 		<e:Label id="timeTxt" text="00" size="63" textColor="0xefb61c" bold="true" y="22.6" height="63" width="71" x="19"/>
 
@@ -732,6 +728,34 @@
 			</e:skinName>
 		</e:Button>
 		<e:Image source="resumeGameFont_png" touchEnabled="false" scaleX="1" scaleY="1" x="43" y="23"/>
+	</e:Group>
+	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0">
+		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513"/>
+		<e:Label id="_zhi_0" text="10" x="544" y="546" textColor="0xe21b1b" bold="true"/>
+		<e:Label text="10" x="660" y="546" textColor="0xE21B1B" id="_zhi_1" bold="true"/>
+		<e:Label text="10" x="774" y="546" textColor="0xE21B1B" id="_zhi_2" bold="true"/>
+		<e:Label text="30" x="894" y="546" textColor="0xE21B1B" id="_zhi_3" bold="true"/>
+		<e:Button id="_youniu" label="" x="1141" y="656">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="nn_btn_youniu1_png" source.down="nn_btn_youniu1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_meiniu" label="" x="1141" y="736">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="nn_btn_meiniu1_png" source.down="nn_btn_meiniu1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Image id="_puke_0" source="brnn_card_13_png" x="420" y="636"/>
+		<e:Image id="_puke_1" source="brnn_card_13_png" x="553.75" y="636"/>
+		<e:Image id="_puke_2" source="brnn_card_13_png" x="687.41" y="636"/>
+		<e:Image id="_puke_3" source="brnn_card_13_png" x="821.25" y="636"/>
+		<e:Image id="_puke_4" source="brnn_card_13_png" x="954.91" y="636"/>
 	</e:Group>
 
 </e:Skin>
