@@ -1395,7 +1395,7 @@ class QZNNView extends eui.Component {
         this._group_qiang.visible = false;
 
         this.isCardEffectShow = true;
-        this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
+        this.flyIntval = setInterval(this.playCardFly.bind(this),60);
     }
 
     private playCardFly(): void {
@@ -1414,7 +1414,7 @@ class QZNNView extends eui.Component {
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
                 this.flyBankerIndex = 0;
-                this.flyIntval = setInterval(this.bankerCardFly.bind(this), 200);
+                this.flyIntval = setInterval(this.bankerCardFly.bind(this), 60);
             }
             else {
                 this.flyIndex1 = 0;
