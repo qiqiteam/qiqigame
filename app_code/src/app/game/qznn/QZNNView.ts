@@ -473,10 +473,25 @@ class QZNNView extends eui.Component {
     public resize(): void {
 
     }
+
+    private onRestartGame():void
+    {
+       let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+        let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+        let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+        let senddata: any = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token, playway: playway.id
+        };
+        xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, (data) => {
+        }, this);
+    }
+
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
         if (e.target == this._btn_begin) {
             // console.log("_btn_begin");
+           this.onRestartGame();
         } else if (e.target == this._btn_buqiang) {
             // console.log("_btn_buqiang");
             this.sendamessage(EventConst.niuniu_dohog, 0);
