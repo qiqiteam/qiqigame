@@ -556,20 +556,20 @@ class QZNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
+        // EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
     }
 
     /**游戏状态 */
     private GameStatus(data: any): void {
         switch (data._obj.roomStatus) {
-            case 0: ; break;    //未准备
+            case 0: ; break;    //庄家
             case 1: ; break;
             case 2: ; break;    //已开始
             case 3: this.onHogBack(data); break;    //抢庄
             case 4: this.onbetBack(data); break;    //下注
             case 5: ; break;
             case 6: this.over(data); break;    //结算
-            case 6: ; break;    //游戏结束
+            case 7: ; break;    //游戏结束
         }
     }
     /**监听抢庄 */
@@ -584,8 +584,9 @@ class QZNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
-
-        this._whether_.visible = false;
+        if(data._obj.roomStatus == 4){
+            this.acceptbanker(data);
+        }
 
     }
     /**牌面信息+结算 */
@@ -614,8 +615,11 @@ class QZNNView extends eui.Component {
     }
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
-        // this._whether_.visible = false;
         console.log(data._obj.index + "号下注");
+        this._whether_.visible = false;
+        if (UserInfo.getInstance().uid == data._obj.userid) {
+            this._btn_switch.visible = false;
+        }
         if (data._obj.code == 200) {
             this.jiazhu(data._obj.hogOrBet, data._obj.index)
         }
@@ -623,6 +627,9 @@ class QZNNView extends eui.Component {
     /**更新抢庄通知(所有人) */
     private OnHogUpdate(data: any): void {
         console.log(data._obj.index + "号抢庄");
+        if (UserInfo.getInstance().uid == data._obj.userid) {
+            this._group_qiang.visible = false;
+        }
         if (data._obj.code == 200) {
             this.qiangzhuang(data._obj.hogOrBet, data._obj.index)
         }
@@ -1838,7 +1845,7 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
+        // EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
 
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
