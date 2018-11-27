@@ -10,6 +10,7 @@ class QZNNView extends eui.Component {
     private r: any = null;
 
     public grpCoins: eui.Group;
+    public _pingpai: eui.Group;
     public grpCard: eui.Group;
     public bankerCard_0: eui.Image;
     public bankerCard_1: eui.Image;
@@ -61,8 +62,7 @@ class QZNNView extends eui.Component {
     public btnVip0: eui.Image;
     public labBankerVip: eui.Label;
     public grpCountdown: eui.Group;
-    public labCountdown0: eui.BitmapLabel;
-    public labCountdown1: eui.BitmapLabel;
+    public timeTxt: eui.Label;
     public btnBet0: eui.Image;
     public btnBet1: eui.Image;
     public btnBet2: eui.Image;
@@ -216,35 +216,54 @@ class QZNNView extends eui.Component {
     public grpCaijinLabel: eui.Label;
     public grpHead0: eui.Group;
     public imghead0: eui.Image;
+    public _my_img_zhuang: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
-    public _btn_double_1: eui.Button;
-    public _image_double_1: eui.Image;
-    public _btn_double_2: eui.Button;
-    public _image_double_2: eui.Image;
-    public _btn_double_3: eui.Button;
-    public _image_double_3: eui.Image;
-    public _btn_double_4: eui.Button;
-    public _image_double_4: eui.Image;
-    public _btn_double_5: eui.Button;
-    public _image_double_5: eui.Image;
-    public _btn_record: eui.Button;
+    public _btn_close: eui.Button;
+    public _btn_meun: eui.Button;
+    public _btn_begin: eui.Button;
+    public _whether_: eui.Group;
+    public _whether_0: eui.Image;
+    public _img_0: eui.Image;
+    public _whether_3: eui.Image;
+    public _img_3: eui.Image;
+    public _whether_2: eui.Image;
+    public _img_2: eui.Image;
+    public _whether_1: eui.Image;
+    public _img_1: eui.Image;
+    public _xiabei: eui.Group;
+    public _xiabei_0_0: eui.Image;
+    public _xiabei_0: eui.Image;
+    public _xiabei_0_1: eui.Image;
+    public _xiabei_1: eui.Image;
+    public _xiabei_0_2: eui.Image;
+    public _xiabei_2: eui.Image;
+    public _xiabei_0_3: eui.Image;
+    public _xiabei_3: eui.Image;
     public _group_qiang: eui.Group;
     public _btn_buqiang: eui.Button;
     public _btn_qiang_1: eui.Button;
     public _btn_qiang_2: eui.Button;
     public _btn_qiang_3: eui.Button;
     public _btn_qiang_4: eui.Button;
-    public _btn_close: eui.Button;
-    public _btn_meun: eui.Button;
+    public _btn_switch: eui.Group;
+    public _btn_double_1: eui.Button;
+    public _btn_double_2: eui.Button;
+    public _btn_double_3: eui.Button;
+    public _btn_double_4: eui.Button;
+    public _btn_double_5: eui.Button;
 
 
 
 
-    public _btn_switch: eui.Button;
-    public _btn_begin: eui.Button;
-    public _my_img_zhuang: eui.Image;
-    public _group_di: eui.Group;
+
+    ///----------------------------------------------------------------
+
+    public time: number;        //秒数
+    public timer: egret.Timer;  //计时器  
+
+    //----------------------------------------------------------------
+
 
     //public labHandsel: eui.BitmapLabel;
     //private grpSelectBet: eui.Group;    //筹码底背景
@@ -308,16 +327,18 @@ class QZNNView extends eui.Component {
     //-----------------------------------------------
 
     protected childrenCreated(): void {
-        
+
         this.getOrginCardPos();
         this.addEvent();
         this.initData();
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
-        
+
         xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
-        
+
+
+
     }
     /**
      * 数据初始化
@@ -346,13 +367,28 @@ class QZNNView extends eui.Component {
         // this._btn_begin.visible = true;
         this._btn_switch.visible = false;
         this._group_qiang.visible = false;
+        this.grpCountdown.visible = false;
 
-        this._image_double_1.touchEnabled = false;
-        this._image_double_2.touchEnabled = false;
-        this._image_double_3.touchEnabled = false;
-        this._image_double_4.touchEnabled = false;
-        this._image_double_5.touchEnabled = false;
+        this._whether_.visible = true;
+        this._whether_0.visible = false;
+        this._whether_1.visible = false;
+        this._whether_2.visible = false;
+        this._whether_3.visible = false;
+        this._img_0.visible = false;
+        this._img_1.visible = false;
+        this._img_2.visible = false;
+        this._img_3.visible = false;
 
+        this._xiabei.visible = true;
+        this._xiabei_0_0.visible = false;
+        this._xiabei_0.visible = false;
+        this._xiabei_0_1.visible = false;
+        this._xiabei_1.visible = false;
+        this._xiabei_0_2.visible = false;
+        this._xiabei_2.visible = false;
+        this._xiabei_0_3.visible = false;
+        this._xiabei_3.visible = false;
+        this._pingpai.visible = false;
 
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
@@ -418,38 +454,53 @@ class QZNNView extends eui.Component {
         } else if (e.target == this._btn_buqiang) {
             console.log("_btn_buqiang");
             this.sendamessage(EventConst.niuniu_dohog, 0);
+
+
         } else if (e.target == this._btn_qiang_1) {
             console.log("_btn_qiang_1");
             this.sendamessage(EventConst.niuniu_dohog, 1);
+
+
         } else if (e.target == this._btn_qiang_2) {
             console.log("_btn_qiang_2");
-            this.sendamessage(EventConst.niuniu_dohog, 2);
+            this.sendamessage(EventConst.niuniu_dohog, 1);
+
+
         } else if (e.target == this._btn_qiang_3) {
-            console.log("_btn_buqiang");
-            this.sendamessage(EventConst.niuniu_dohog, 3);
+            console.log("_btn_qiang_3");
+            this.sendamessage(EventConst.niuniu_dohog, 1);
+
+
         } else if (e.target == this._btn_qiang_4) {
             console.log("_btn_qiang_4");
             this.sendamessage(EventConst.niuniu_dohog, 4);
+
+
         } else if (e.target == this._btn_double_1) {
             console.log("_btn_double_1");
             this.sendamessage1(EventConst.niuniu_dobet, 1);
-            this._btn_switch.visible = false;
+
+
+
+
         } else if (e.target == this._btn_double_2) {
             console.log("_btn_double_2");
             this.sendamessage1(EventConst.niuniu_dobet, 2);
-            this._btn_switch.visible = false;
+
+
         } else if (e.target == this._btn_double_3) {
             console.log("_btn_double_3");
             this.sendamessage1(EventConst.niuniu_dobet, 3);
-            this._btn_switch.visible = false;
+
+
+
         } else if (e.target == this._btn_double_4) {
             console.log("_btn_double_4");
             this.sendamessage1(EventConst.niuniu_dobet, 4);
-            this._btn_switch.visible = false;
+
         } else if (e.target == this._btn_double_5) {
-            console.log("_btn_double_5");
+
             this.sendamessage1(EventConst.niuniu_dobet, 5);
-            this._btn_switch.visible = false;
         }
     }
     /**投注  sendstr 命令 bet 倍数 0~4 */
@@ -501,36 +552,44 @@ class QZNNView extends eui.Component {
 
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
-
-        EventUtil.addEventListener(EventConst.hog, this.onHogBack, this);
-        EventUtil.addEventListener(EventConst.bet, this.onbetBack, this);
-        EventUtil.addEventListener(EventConst.summary, this.over, this);
-        EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
-
+        EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
-
+        EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
+        EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
+        EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
     }
 
     /**游戏状态 */
     private GameStatus(data: any): void {
-        console.log(data);
+        switch (data._obj.roomStatus) {
+            case 0: ; break;    //未准备
+            case 1: ; break;
+            case 2: ; break;    //已开始
+            case 3: this.onHogBack(data); break;    //抢庄
+            case 4: this.onbetBack(data); break;    //下注
+            case 5: ; break;
+            case 6: this.over(data); break;    //结算
+            case 6: ; break;    //游戏结束
+        }
     }
-    /**监听抢庄按钮 */
+    /**监听抢庄 */
     private onHogBack(data: any): void {
+        xlLib.PopUpMgr.removePopUp(Inthematch, 1);
+        this.grpCountdown.visible = true;
+        this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = true;
     }
-    /**倍数列表 */
+    /**监听下注 */
     private onbetBack(data: any): void {
-        this.showGameTips(2);
+        this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
+
+        this._whether_.visible = false;
+
     }
     /**牌面信息+结算 */
     private over(data: any): void {
-
-        // console.log(data);
-
         let result = {
             pokes: [],
             result: [1, 0, 0, 0],
@@ -553,8 +612,72 @@ class QZNNView extends eui.Component {
         this.cardEffect();
         UserInfo.getInstance().isGameStart = false;  //游戏状态
     }
+    /**更新下注通知(所有人) */
+    private OnBetUpdate(data: any): void {
+        // this._whether_.visible = false;
+        console.log(data._obj.index + "号下注");
+        if (data._obj.code == 200) {
+            this.jiazhu(data._obj.hogOrBet, data._obj.index)
+        }
+    }
+    /**更新抢庄通知(所有人) */
+    private OnHogUpdate(data: any): void {
+        console.log(data._obj.index + "号抢庄");
+        if (data._obj.code == 200) {
+            this.qiangzhuang(data._obj.hogOrBet, data._obj.index)
+        }
+    }
+    /**是否抢庄 */
+    private qiangzhuang(data: number, num: number) {
+        switch (data) {
+            case 0: this['_whether_' + num].visible = true;
+                this['_whether_' + num].source = 'img_BQ_png';
+                break;
+            case 1: this['_whether_' + num].visible = true;
+                this['_img_' + num].visible = true;
+                break;
+            case 2: this['_whether_' + num].visible = true;
+                this['_img_' + num].visible = true;
+                this['_img_' + num].source = 'img_2_png';
+                break;
+            case 3: this['_whether_' + num].visible = true;
+                this['_img_' + num].visible = true;
+                this['_img_' + num].source = 'img_3_png';
+                break;
+            case 4: this['_whether_' + num].visible = true;
+                this['_img_' + num].visible = true;
+                this['_img_' + num].source = 'img_4_png';
+                break;
+        }
+    }
+    /**是否下注 */
+    private jiazhu(data: number, num: number) {
+        switch (data) {
+            case 1: this['_xiabei_0_' + num].visible = true;
+                this['_xiabei_' + num].visible = true;
+                break;
+            case 2: this['_xiabei_0_' + num].visible = true;
+                this['_xiabei_' + num].visible = true;
+                this['_xiabei_' + num].source = 'img_XB_2_png';
+                break;
+            case 3: this['_xiabei_0_' + num].visible = true;
+                this['_xiabei_' + num].visible = true;
+                this['_xiabei_' + num].source = 'img_XB_3_png';
+                break;
+            case 4: this['_xiabei_0_' + num].visible = true;
+                this['_xiabei_' + num].visible = true;
+                this['_xiabei_' + num].source = 'img_XB_4_png';
+                break;
+            case 5: this['_xiabei_0_' + num].visible = true;
+                this['_xiabei_' + num].visible = true;
+                this['_xiabei_' + num].source = 'img_XB_5_png';
+                break;
+        }
+    }
     /**设置庄家 */
     private acceptbanker(data: any): void {
+
+        // var niuniu: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp('nn_banker', 'nn_banker');
 
         let num = UserInfo.getInstance().findSeatNumber(data._obj.index);
         this.zhaungIndex = num;
@@ -597,7 +720,7 @@ class QZNNView extends eui.Component {
         }
     }
 
-    /**加入房间新玩家 */
+    /**新玩家加入 */
     public playerJoinRoom(data): void {
         console.log(data._obj.player.id);
         console.log(UserInfo.getInstance().myPlayer.id);
@@ -607,6 +730,47 @@ class QZNNView extends eui.Component {
 
         } else {
             this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "women7_png");
+        }
+    }
+
+    /**游戏开始 */
+    private Gamestart() {
+        var niuniu: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
+        this.addChild(niuniu);
+    }
+
+    /**开始倒计时*/
+    private startCountDown(time: number): void {
+        this.timeTxt.text = time + "";
+
+        this.timeTxt.visible = true;
+        this.time = time;
+        if (this.timer == null) {
+            this.timer = new egret.Timer(1000);
+            this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+            this.timer.start();
+        }
+    }
+
+
+    /**倒计时处理*/
+    private timerFunc(evt: egret.TimerEvent): void {
+        if (this.time >= 0) {
+            this.timeTxt.text = this.time + "";
+            this.time--;
+        }
+        else {
+            this.timeTxt.text = "0";
+            this.clearTime();
+        }
+    }
+    /**清除倒计时*/
+    private clearTime(): void {
+        if (this.timer) {
+            this.timer.stop();
+            // this.timeTxt.visible = false;
+            this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+            this.timer = null;
         }
     }
 
@@ -641,12 +805,12 @@ class QZNNView extends eui.Component {
             //this.cardEffect();
         }
         if (this.cdNum < 10) {
-            this.labCountdown0.text = '0';
-            this.labCountdown1.text = this.cdNum + '';
+            // this.labCountdown0.text = '0';
+            // this.labCountdown1.text = this.cdNum + '';
         }
         else {
-            this.labCountdown0.text = (this.cdNum + '').split('')[0];
-            this.labCountdown1.text = (this.cdNum + '').split('')[1];
+            // this.labCountdown0.text = (this.cdNum + '').split('')[0];
+            // this.labCountdown1.text = (this.cdNum + '').split('')[1];
         }
     }
 
@@ -1287,7 +1451,7 @@ class QZNNView extends eui.Component {
         else {
             //this.showGameResult();
         }
-        this.cdTimer.start();
+        // this.cdTimer.start();
         this.cdNum = 5;
 
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
@@ -1297,8 +1461,8 @@ class QZNNView extends eui.Component {
             y: this['grpHead' + this.zhaungIndex].y
         }
         if (this.zhaungIndex == 0) {
-            zhuangPos.x = this._group_di.x + 15 + 145;
-            zhuangPos.y = this._group_di.y - 35 + 103;
+            // zhuangPos.x = this._group_di.x + 15 + 145;
+            // zhuangPos.y = this._group_di.y - 35 + 103;
         } else {
             zhuangPos.x = zhuangPos.x + 21;
             zhuangPos.y = zhuangPos.y + 110;
@@ -1314,8 +1478,8 @@ class QZNNView extends eui.Component {
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
             if (i == 0) {
-                pos.x = this._group_di.x + 15 + 145;
-                pos.y = this._group_di.y - 35 + 103;
+                // pos.x = this._group_di.x + 15 + 145;
+                // pos.y = this._group_di.y - 35 + 103;
                 numPos.x = pos.x + 42;
                 numPos.y = pos.y + 2;
             } else {
@@ -1562,8 +1726,8 @@ class QZNNView extends eui.Component {
         this.grpCaijin.visible = false;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
-        this.labCountdown0.text = '0';
-        this.labCountdown1.text = '0';
+        // this.labCountdown0.text = '0';
+        // this.labCountdown1.text = '0';
     }
 
     //========================== Second Panel ==============================
@@ -1651,27 +1815,31 @@ class QZNNView extends eui.Component {
     }
 
     public destroy(): void {
+
         this._btn_begin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+
         this._btn_buqiang.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_qiang_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_qiang_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_qiang_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_qiang_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+
+
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
-        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
 
-        EventUtil.removeEventListener(EventConst.hog, this.onHogBack, this);
-        EventUtil.removeEventListener(EventConst.bet, this.onbetBack, this);
-        EventUtil.removeEventListener(EventConst.summary, this.over, this);
+        EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
+        EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
+        EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
         EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
-        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.acceptbanker, this);
+
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }

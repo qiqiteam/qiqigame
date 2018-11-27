@@ -490,7 +490,7 @@ public _btn_begin:eui.Button;
 
         /**服务器回调 */
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.addEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
 
         /**显示抢庄*/
         EventUtil.addEventListener(EventConst.hog, this.onHogBack, this);
@@ -1743,7 +1743,7 @@ public _btn_begin:eui.Button;
 
         /**清除服务器回调 */
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.removeEventListener(EventConst.newplayer, this.playerJoinRoom, this);
+        EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
 
         /**显示抢庄*/
         EventUtil.removeEventListener(EventConst.hog, this.onHogBack, this);

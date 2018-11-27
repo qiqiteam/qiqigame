@@ -20,7 +20,7 @@ class QZNNHead extends eui.Component {
 
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
-        mask2.graphics.drawCircle(46, 46, 46);
+        mask2.graphics.drawCircle(62, 62, 62);
         mask2.graphics.endFill();
         mask2.x = this.imghead.x+3;
         mask2.y = this.imghead.y+3;

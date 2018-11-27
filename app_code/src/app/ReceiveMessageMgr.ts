@@ -15,9 +15,12 @@ module xlLib {
 		}
 
 		public initPushMessage() {
+			
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserBetOrderUpdate, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserHogOrderUpdate, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onGameStatusChange, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.players, this.onMessage);
-			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.newplayer, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onNewUserEnterGame, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hog, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.hognum, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.banker, this.onMessage);
@@ -63,7 +66,7 @@ module xlLib {
 					UserInfo.getInstance().addPlayes(msg);
 					EventUtil.dispatchEvent(msg.command, msg);
 					return;
-				case EventConst.newplayer:
+				case EventConst.onNewUserEnterGame:
 					console.log(msg);
 					UserInfo.getInstance().joinRoomPlayer(msg);
 					EventUtil.dispatchEvent(msg.command, msg);
