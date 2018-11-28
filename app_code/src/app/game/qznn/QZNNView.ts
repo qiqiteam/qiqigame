@@ -520,9 +520,9 @@ class QZNNView extends eui.Component {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
                     this._my_pai.visible = true;
-                } else {
-                    this.ppcuowu();
                 }
+            } else {
+                this.ppcuowu();
             }
         }
         else if (e.target == this._meiniu) {
@@ -574,12 +574,6 @@ class QZNNView extends eui.Component {
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
 
         }, this);
-
-        this._btn_double_1.touchEnabled = false;
-        this._btn_double_2.touchEnabled = false;
-        this._btn_double_3.touchEnabled = false;
-        this._btn_double_4.touchEnabled = false;
-        this._btn_double_5.touchEnabled = false;
     }
     /**注册事件 */
     private addEvent(): void {
