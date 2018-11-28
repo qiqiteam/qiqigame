@@ -545,6 +545,7 @@ class QZNNView extends eui.Component {
             this.pinpaicuowu.x = 1150;
             this.pinpaicuowu.y = 520;
             this.pinpaicuowu.frameRate = 10;
+            this.pinpaicuowu.touchEnabled = false;
         }
         this.pinpaicuowu.play(1);
         this.addChild(this.pinpaicuowu);
@@ -646,7 +647,7 @@ class QZNNView extends eui.Component {
             this.gamestarEff.x = xlLib.Global.screenWidth / 2;
             this.gamestarEff.y = xlLib.Global.screenHeight / 2;
             this.gamestarEff.frameRate = 15;
-
+            this.gamestarEff.touchEnabled = false;
         }
         this.gamestarEff.play(1);
         this.addChild(this.gamestarEff);
@@ -667,6 +668,7 @@ class QZNNView extends eui.Component {
             this.nnvictoryEffect.x = xlLib.Global.screenWidth / 2;
             this.nnvictoryEffect.y = xlLib.Global.screenHeight / 2;
             this.nnvictoryEffect.frameRate = 10;
+            this.nnvictoryEffect.touchEnabled = false;
         }
         this.nnvictoryEffect.play(1);
         this.addChild(this.nnvictoryEffect);
@@ -684,6 +686,7 @@ class QZNNView extends eui.Component {
             this.tongsha.x = xlLib.Global.screenWidth / 2;
             this.tongsha.y = xlLib.Global.screenHeight / 2;
             this.tongsha.frameRate = 10;
+            this.tongsha.touchEnabled = false;
         }
         this.tongsha.play(1);
         this.addChild(this.tongsha);
@@ -839,6 +842,7 @@ class QZNNView extends eui.Component {
             this.nnbankerEff.x = 90;
             this.nnbankerEff.y = 80;
             this.nnbankerEff.frameRate = 10;
+            this.nnbankerEff.touchEnabled = false;
         }
         this['grpHead0'].addChild(this.nnbankerEff);
         this.nnbankerEff.play(1);
