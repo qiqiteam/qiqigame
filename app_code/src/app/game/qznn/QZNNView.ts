@@ -538,15 +538,14 @@ class QZNNView extends eui.Component {
     private ppcuowu() {
         if (!this.pinpaicuowu) {
             this.pinpaicuowu = xlLib.DisplayUtils.createMovieClicp('pinpaicuowu', 'pinpaicuowu');
-            this.pinpaicuowu.x = 1150;
-            this.pinpaicuowu.y = 550;
+            this.pinpaicuowu.x = 1200;
+            this.pinpaicuowu.y = 580;
             this.pinpaicuowu.frameRate = 10;
             this.pinpaicuowu.touchEnabled = false;
         }
         this.pinpaicuowu.play(1);
         this.addChild(this.pinpaicuowu);
         this.pinpaicuowu.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
-            this.pinpaicuowu.stop();
             if (this.pinpaicuowu.parent) {
                 this.pinpaicuowu.parent.removeChild(this.pinpaicuowu);
             }
