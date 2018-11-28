@@ -53,9 +53,7 @@ class Main extends xlLib.GameDoc {
         let assetAdapter = new AssetAdapter();
         egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
-
         RES.setMaxLoadingThread(4);
-
         /**初始化xlLib */
         let option = new xlLib.initOptions();
         if(DEBUG){
@@ -69,10 +67,42 @@ class Main extends xlLib.GameDoc {
         xlLib.UIMgr.instance.tipsLoadUI = TipsLoading;
         xlLib.ReceiveMessageMgr.getInstance().initPushMessage();
         // initialize the Resource loading library
+        xlLib.ResUtils.getRes("resource/loading.png",this.onLodingComplete,this);
+    }
+ 
+    private  loadingIcon: egret.Bitmap;
+    private onLodingComplete(texture:egret.Texture,url:string):void
+    {
+        if(!this.loadingIcon){
+            this.loadingIcon= new egret.Bitmap();
+            this.loadingIcon.texture = texture;
+            this.loadingIcon.x = xlLib.Global.screenWidth >> 1;
+            this.loadingIcon.y = xlLib.Global.screenHeight >> 1;
+            this.loadingIcon.anchorOffsetX = this.loadingIcon.width/2;
+            this.loadingIcon.anchorOffsetY = this.loadingIcon.height/2;
+        }
+        this.addChild(this.loadingIcon);
+        this.starRotation();
         //初始化Resource资源加载库
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.loadConfig("resource/default.res.json", "resource/");
     }
+
+    private starRotation():void
+    {
+        egret.Tween.get(this.loadingIcon).to({ rotation:this.loadingIcon.rotation+40}, 100).call(this.starRotation,this);
+    }
+
+    private removeLodingIcon():void
+    {
+         egret.Tween.removeTweens(this.loadingIcon);
+         if(this.loadingIcon&&this.loadingIcon.parent){
+            this.loadingIcon.parent.removeChild(this.loadingIcon);
+         }
+         this.loadingIcon = null;
+         RES.destroyRes("resource/loading.png");
+    }
+
 
     /**
      * 配置文件加载完成,开始预加载皮肤主题资源和preload资源组。
@@ -165,6 +195,7 @@ class Main extends xlLib.GameDoc {
         } else if(xlLib.Utils.isIOS) {
             xlLib.IosSDK.init();
         }
+        this.removeLodingIcon();
         xlLib.ResLoadMgr.instance.load("game", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
         // xlLib.WebSocketMgr.getInstance().connect("47.91.221.49", ":3010");
 
