@@ -266,11 +266,12 @@ class QZNNView extends eui.Component {
     public _puke_4: eui.Image;
 
     public arr: eui.Image[] = [null, null, null];
-    public score: number[] = [1, 2, 3, 4, 5];
 
-    public arr_fen: number[] = [0, 0, 0];
+    public score: number[] = [1, 2, 3, 4, 5];   //牌值
 
+    public arr_fen: number[] = [0, 0, 0];       //记分器
 
+    public thisoneself = this;                  //自身
 
     ///----------------------------------------------------------------
 
@@ -1475,11 +1476,16 @@ class QZNNView extends eui.Component {
                 card_my.source = 'qznn_card_100';
                 egret.Tween.get(card_my).to({ scaleX: 0 }, 300).call(function () {
                     this[0].source = 'qznn_card_' + this[1];
-
-                    // this.score[i] = this[1];
-                   
                     egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
                 }, [card_my, poke.value[i]])
+
+                var str = poke.value[i].toString();
+                str = str.slice(1);
+                var intnum = parseInt(str);
+                if (intnum > 10) {
+                    intnum = 10;
+                }
+                this.score[i] = intnum;
 
                 var card_banker = this['bankerCard_' + i];
                 card_banker.source = 'qznn_card_100';
