@@ -543,7 +543,7 @@ class QZNNView extends eui.Component {
             this.pinpaicuowu.frameRate = 10;
             this.pinpaicuowu.touchEnabled = false;
         }
-        this.pinpaicuowu.play(1);
+        this.pinpaicuowu.gotoAndPlay(0,1);
         this.addChild(this.pinpaicuowu);
         this.pinpaicuowu.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.pinpaicuowu.parent) {
@@ -638,7 +638,7 @@ class QZNNView extends eui.Component {
             this.gamestarEff.frameRate = 15;
             this.gamestarEff.touchEnabled = false;
         }
-        this.gamestarEff.play(1);
+        this.gamestarEff.gotoAndPlay(0,1);
         this.addChild(this.gamestarEff);
         this.gamestarEff.addEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
     }
@@ -659,7 +659,7 @@ class QZNNView extends eui.Component {
             this.nnvictoryEffect.frameRate = 10;
             this.nnvictoryEffect.touchEnabled = false;
         }
-        this.nnvictoryEffect.play(1);
+        this.nnvictoryEffect.gotoAndPlay(0,1);
         this.addChild(this.nnvictoryEffect);
         this.nnvictoryEffect.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.nnvictoryEffect.stop();
@@ -677,7 +677,7 @@ class QZNNView extends eui.Component {
             this.tongsha.frameRate = 10;
             this.tongsha.touchEnabled = false;
         }
-        this.tongsha.play(1);
+        this.tongsha.gotoAndPlay(0,1);
         this.addChild(this.tongsha);
         this.tongsha.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.tongsha.stop();
@@ -834,7 +834,7 @@ class QZNNView extends eui.Component {
             this.nnbankerEff.touchEnabled = false;
         }
         this['grpHead0'].addChild(this.nnbankerEff);
-        this.nnbankerEff.play(1);
+        this.nnbankerEff.gotoAndPlay(0,1);
     }
 
     /**
