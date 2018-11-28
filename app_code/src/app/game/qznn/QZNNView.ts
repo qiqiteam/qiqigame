@@ -342,7 +342,8 @@ class QZNNView extends eui.Component {
 
     private gamestarEff: egret.MovieClip;
     private nnbankerEff: egret.MovieClip;
-
+    private nnvictoryEffect: egret.MovieClip;
+    private tongsha: egret.MovieClip;
     //-----------------------------------------------
 
     protected childrenCreated(): void {
@@ -614,19 +615,56 @@ class QZNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = true;
 
-        if (!this.gamestarEff) {
+        if(!this.gamestarEff){
             this.gamestarEff = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
-            this.gamestarEff.x = 100;
-            this.gamestarEff.y = 200;
+            this.gamestarEff.x = xlLib.Global.screenWidth/2;
+            this.gamestarEff.y = xlLib.Global.screenHeight/2;
             this.gamestarEff.play(1);
         }
         this.addChild(this.gamestarEff);
-        this.gamestarEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
+        this.gamestarEff.addEventListener(egret.Event.COMPLETE,(e:egret.Event)=>{
             this.gamestarEff.stop();
-            if (this.gamestarEff.parent) {
-                this.gamestarEff.parent.removeChild(this.gamestarEff);
+            if(this.gamestarEff.parent)
+            {
+              this.gamestarEff.parent.removeChild(this.gamestarEff);
             }
-        }, this);
+        },this);
+    }
+
+    private addNNVictoryEffect():void
+    {
+        if(!this.nnvictoryEffect){
+            this.nnvictoryEffect = xlLib.DisplayUtils.createMovieClicp('nn_victoryEffect', 'nn_victoryEffect');
+            this.nnvictoryEffect.x = xlLib.Global.screenWidth/2;
+            this.nnvictoryEffect.y = xlLib.Global.screenHeight/2;
+            this.nnvictoryEffect.play(1);
+        }
+        this.addChild(this.nnvictoryEffect);
+        this.nnvictoryEffect.addEventListener(egret.Event.COMPLETE,(e:egret.Event)=>{
+            this.nnvictoryEffect.stop();
+            if(this.nnvictoryEffect.parent)
+            {
+              this.nnvictoryEffect.parent.removeChild(this.nnvictoryEffect);
+            }
+        },this);
+    }
+
+    private addTongsha():void
+    {
+         if(!this.tongsha){
+            this.tongsha = xlLib.DisplayUtils.createMovieClicp('tongsha', 'tongsha');
+            this.tongsha.x = xlLib.Global.screenWidth/2;
+            this.tongsha.y = xlLib.Global.screenHeight/2;
+            this.tongsha.play(1);
+        }
+        this.addChild(this.tongsha);
+        this.tongsha.addEventListener(egret.Event.COMPLETE,(e:egret.Event)=>{
+            this.tongsha.stop();
+            if(this.tongsha.parent)
+            {
+              this.tongsha.parent.removeChild(this.tongsha);
+            }
+        },this);
     }
     /**监听下注 */
     private onbetBack(data: any): void {
@@ -794,7 +832,7 @@ class QZNNView extends eui.Component {
         }
 
         //设置其他玩家信息
-        for (let i = 1; i < UserInfo.getInstance().playes.length; i++) {
+        for (let i = 1; i < data._obj.player.length; i++) {
             if (data._obj.player[i] != null) {
                 this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "women7_png");//data._obj.player[i].headimg
             } else {
@@ -1884,9 +1922,19 @@ class QZNNView extends eui.Component {
         this.grpCaijin.visible = false;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
-        this.removeNNbankerEff();
+        this.removeEff(this.nnbankerEff);
         // this.labCountdown0.text = '0';
         // this.labCountdown1.text = '0';
+    }
+
+    private removeEff(eff:egret.MovieClip):void
+    {
+        if(eff){
+            eff.stop();
+            if(eff.parent){
+                eff.parent.removeChild(eff);
+            }
+        }
     }
 
     private removeNNbankerEff(): void {
@@ -2008,10 +2056,14 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
         EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
 
+          
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }
-        this.removeNNbankerEff();
+        this.removeEff(this.nnbankerEff);
+        this.removeEff(this.nnvictoryEffect);
+        this.removeEff(this.tongsha);
+        this.removeEff(this.gamestarEff);
     }
 }
 
