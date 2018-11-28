@@ -596,7 +596,7 @@
 
 
 
-	<e:Group id="_whether_" width="1472" height="828" y="0" x="0" locked="true" visible="false">
+	<e:Group id="_whether_" width="1472" height="828" y="0" x="0" visible="false" locked="true">
 		<e:Image id="_whether_0" x="386" y="601" source="img_BQ_0_png"/>
 		<e:Image id="_img_0" x="422" y="600" source="img_1_png"/>
 		<e:Image id="_whether_3" x="1096" y="324" source="img_BQ_0_png"/>
@@ -606,7 +606,7 @@
 		<e:Image id="_whether_1" x="232" y="318" source="img_BQ_0_png"/>
 		<e:Image id="_img_1" x="268" y="317" source="img_1_png"/>
 	</e:Group>
-	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" visible="false" locked="true">
 		<e:Image id="_xiabei_0_0" source="img_XB_png" x="351" y="585"/>
 		<e:Image id="_xiabei_0" x="412" y="600" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_1" source="img_XB_png" x="219" y="305"/>

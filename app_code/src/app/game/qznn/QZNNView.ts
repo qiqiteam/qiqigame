@@ -518,16 +518,16 @@ class QZNNView extends eui.Component {
             this.sendamessage1(EventConst.niuniu_dobet, 5);
         }
         else if (e.target == this._youniu) {
-
             var intnum1 = this.arr_fen[0] + this.arr_fen[1] + this.arr_fen[2]
             console.log(intnum1);
-            if (intnum1 % 10 == 0) {
-                this._pingpai.visible = false;
-                this._my_pai.visible = true;
-            } else {
-                this.ppcuowu();
+            if (intnum1 != 0) {
+                if (intnum1 % 10 == 0) {
+                    this._pingpai.visible = false;
+                    this._my_pai.visible = true;
+                } else {
+                    this.ppcuowu();
+                }
             }
-
         }
         else if (e.target == this._meiniu) {
             if (this.niu != 0) {
@@ -757,6 +757,7 @@ class QZNNView extends eui.Component {
         switch (data) {
             case 0: this['_whether_' + num].visible = true;
                 this['_whether_' + num].source = 'img_BQ_png';
+                this['_img_' + num].visible = false;
                 break;
             case 1: this['_whether_' + num].visible = true;
                 this['_img_' + num].visible = true;
@@ -780,6 +781,7 @@ class QZNNView extends eui.Component {
         switch (data) {
             case 1: this['_xiabei_0_' + num].visible = true;
                 this['_xiabei_' + num].visible = true;
+                this['_xiabei_' + num].source = 'img_XB_1_png';
                 break;
             case 2: this['_xiabei_0_' + num].visible = true;
                 this['_xiabei_' + num].visible = true;
@@ -1081,7 +1083,7 @@ class QZNNView extends eui.Component {
                 this.updataSeat(2, msg.seat);
                 break;
             case 6://同步彩金
-                this.updateHandsel(msg);
+                //this.updateHandsel(msg);
                 break;
             case 7://通知庄 名次
                 //this.updateBankerRank(msg);
@@ -1114,6 +1116,7 @@ class QZNNView extends eui.Component {
     }
 
     //同步彩金 （包含庄结算输赢）
+    /*
     private updateHandsel(data): void {
         if (this.cardResult == null)
             return;
@@ -1125,8 +1128,8 @@ class QZNNView extends eui.Component {
         for (let i = 0; i < 4; i++) {
             this['labTipsClick' + i].visible = false;
         }
-        this.cardEffect();
-    }
+        //this.cardEffect();
+    }*/
 
     //同步庄的顺位
     /*
@@ -1558,7 +1561,6 @@ class QZNNView extends eui.Component {
                     intnum = 10;
                 }
                 this.score[i] = intnum;
-
                 var card_banker = this['bankerCard_' + i];
                 card_banker.source = 'qznn_card_100';
                 // console.log('poke_banker: ' + poke.value[i]);
@@ -1630,6 +1632,8 @@ class QZNNView extends eui.Component {
         for (var i = 0; i < 5; i++) {
             var card = this['bankerCard_' + i];
             card.source = 'qznn_card_100';
+            //card.x = this.orginBankerCardPos[i].x;
+            //card.y = this.orginBankerCardPos[i].y;
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
@@ -1766,6 +1770,7 @@ class QZNNView extends eui.Component {
 
     public victoryEffect(): void {
         clearInterval(this.interval);
+        this.interval = 0;
         if (this.game_result == 1) {
             this.addNNVictoryEffect();
             this.game_result = 0;
@@ -1931,27 +1936,23 @@ class QZNNView extends eui.Component {
 
     private resetGame(): void {
 
-        this._xiabei.visible = true;
-        this._xiabei_0_0.visible = false;
-        this._xiabei_0.visible = false;
-        this._xiabei_0_1.visible = false;
-        this._xiabei_1.visible = false;
-        this._xiabei_0_2.visible = false;
-        this._xiabei_2.visible = false;
-        this._xiabei_0_3.visible = false;
-        this._xiabei_3.visible = false;
-        this._jixu.visible = false;
-
+        this.initData();
         for (var i = 0; i < 5; i++) {
             // this['bankerCard_' + i].source = '';
             let card_banker: eui.Image = this['bankerCard_' + i];
             card_banker.source = '';
             egret.Tween.removeTweens(card_banker);
+            card_banker.x = this.orginBankerCardPos[i].x;
+            card_banker.y = this.orginBankerCardPos[i].y;
 
             let card_pin: eui.Image = this['_puke_' + i];
             card_pin.source = '';
             egret.Tween.removeTweens(card_pin);
+
         }
+        this._pingpai.visible = false;
+        this._my_pai.visible = false;
+
         this.labCardTypeBanker.visible = false;
         for (var index = 0; index < this.cardResult.pokes.length - 1; index++) {
             //this['labCardResult' + index].text = '';
@@ -1963,6 +1964,12 @@ class QZNNView extends eui.Component {
                 egret.Tween.removeTweens(card);
             }
             this['grpHead' + (index + 1)].setZhuang(false);
+
+            this["_xiabei_" + index].visible = false;
+            this["_xiabei_0_" + index].visible = false;
+
+            this["_whether_" + index].visible = false;
+            this["_img_" + index].visible = false;
         }
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
@@ -1988,6 +1995,23 @@ class QZNNView extends eui.Component {
         this.removeEff(this.nnbankerEff);
         // this.labCountdown0.text = '0';
         // this.labCountdown1.text = '0';
+
+
+        this.arr = [null, null, null];
+        this.score = [0, 0, 0, 0, 0];
+        this.arr_fen = [0, 0, 0];
+        this.game_result = 0;
+        this.niu = 0;
+        this.time = 0;
+        this._jixu.visible = false;
+        this.startCardRotation = false;
+        this.zhaungIndex = 0;    //庄的位置
+
+        //this.gamestarEff=null;
+        //this.nnbankerEff=null;
+        //this.nnvictoryEffect=null;
+        //this.tongsha=null;
+        //this.pinpaicuowu=null;
     }
 
     private removeEff(eff: egret.MovieClip): void {
@@ -2107,7 +2131,8 @@ class QZNNView extends eui.Component {
         this._btn_qiang_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_qiang_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
-
+        this._youniu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this)
+        this._meiniu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this)
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
 
