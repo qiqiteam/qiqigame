@@ -360,7 +360,7 @@ class QZNNView extends eui.Component {
 
         xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
 
-
+        UserInfo.getInstance().isGameStart = true;
 
     }
     /**
@@ -485,7 +485,7 @@ class QZNNView extends eui.Component {
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, (data) => {
         }, this);
-
+        UserInfo.getInstance().isGameStart = true;
         this.resetGame();
     }
 
@@ -498,9 +498,9 @@ class QZNNView extends eui.Component {
         } else if (e.target == this._btn_qiang_1) {
             this.sendamessage(EventConst.niuniu_dohog, 1);
         } else if (e.target == this._btn_qiang_2) {
-            this.sendamessage(EventConst.niuniu_dohog, 1);
+            this.sendamessage(EventConst.niuniu_dohog, 2);
         } else if (e.target == this._btn_qiang_3) {
-            this.sendamessage(EventConst.niuniu_dohog, 1);
+            this.sendamessage(EventConst.niuniu_dohog, 3);
         } else if (e.target == this._btn_qiang_4) {
             this.sendamessage(EventConst.niuniu_dohog, 4);
         } else if (e.target == this._btn_double_1) {
@@ -520,6 +520,8 @@ class QZNNView extends eui.Component {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
                     this._my_pai.visible = true;
+                } else {
+                    this.ppcuowu();
                 }
             } else {
                 this.ppcuowu();
@@ -543,7 +545,7 @@ class QZNNView extends eui.Component {
             this.pinpaicuowu.frameRate = 10;
             this.pinpaicuowu.touchEnabled = false;
         }
-        this.pinpaicuowu.gotoAndPlay(0,1);
+        this.pinpaicuowu.gotoAndPlay(0, 1);
         this.addChild(this.pinpaicuowu);
         this.pinpaicuowu.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.pinpaicuowu.parent) {
@@ -626,6 +628,7 @@ class QZNNView extends eui.Component {
     }
     /**监听抢庄 */
     private onHogBack(data: any): void {
+
         xlLib.PopUpMgr.removePopUp(Inthematch, 1);
         this.grpCountdown.visible = true;
         this.startCountDown(data._obj.seconds);
@@ -638,7 +641,7 @@ class QZNNView extends eui.Component {
             this.gamestarEff.frameRate = 15;
             this.gamestarEff.touchEnabled = false;
         }
-        this.gamestarEff.gotoAndPlay(0,1);
+        this.gamestarEff.gotoAndPlay(0, 1);
         this.addChild(this.gamestarEff);
         this.gamestarEff.addEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
     }
@@ -659,7 +662,7 @@ class QZNNView extends eui.Component {
             this.nnvictoryEffect.frameRate = 10;
             this.nnvictoryEffect.touchEnabled = false;
         }
-        this.nnvictoryEffect.gotoAndPlay(0,1);
+        this.nnvictoryEffect.gotoAndPlay(0, 1);
         this.addChild(this.nnvictoryEffect);
         this.nnvictoryEffect.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.nnvictoryEffect.stop();
@@ -677,7 +680,7 @@ class QZNNView extends eui.Component {
             this.tongsha.frameRate = 10;
             this.tongsha.touchEnabled = false;
         }
-        this.tongsha.gotoAndPlay(0,1);
+        this.tongsha.gotoAndPlay(0, 1);
         this.addChild(this.tongsha);
         this.tongsha.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.tongsha.stop();
@@ -721,7 +724,6 @@ class QZNNView extends eui.Component {
         }
         this.cardResult = result;
         this.cardEffect();
-        UserInfo.getInstance().isGameStart = false;  //游戏状态
     }
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
@@ -753,6 +755,7 @@ class QZNNView extends eui.Component {
                 break;
             case 1: this['_whether_' + num].visible = true;
                 this['_img_' + num].visible = true;
+                this['_img_' + num].source = 'img_1_png';
                 break;
             case 2: this['_whether_' + num].visible = true;
                 this['_img_' + num].visible = true;
@@ -834,7 +837,7 @@ class QZNNView extends eui.Component {
             this.nnbankerEff.touchEnabled = false;
         }
         this['grpHead0'].addChild(this.nnbankerEff);
-        this.nnbankerEff.gotoAndPlay(0,1);
+        this.nnbankerEff.gotoAndPlay(0, 1);
     }
 
     /**
@@ -1772,6 +1775,8 @@ class QZNNView extends eui.Component {
             this.game_result = 0;
         }
         this._jixu.visible = true;
+
+        UserInfo.getInstance().isGameStart = false;
     }
 
     //============================================  Game Result
@@ -2097,16 +2102,17 @@ class QZNNView extends eui.Component {
             xlLib.TipsUtils.showFloatWordTips("游戏中！");
             return;
         }
-        let senddata: any = {
-            userid: UserInfo.getInstance().uid,
-            token: UserInfo.getInstance().token,
-        };
-        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
-            //if (this.parent) {
-            //    this.parent.removeChild(this);
-            //}
-            xlLib.SceneMgr.instance.changeScene(Lobby);
-        }, this);
+        xlLib.SceneMgr.instance.changeScene(Lobby);
+        // let senddata: any = {
+        //     userid: UserInfo.getInstance().uid,
+        //     token: UserInfo.getInstance().token,
+        // };
+        // xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
+        //     //if (this.parent) {
+        //     //    this.parent.removeChild(this);
+        //     //}
+        //     xlLib.SceneMgr.instance.changeScene(Lobby);
+        // }, this);
     }
 
     public destroy(): void {

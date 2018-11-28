@@ -574,29 +574,12 @@
 
 
 
-	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
-
-
-	</e:Button>
-	<e:Button id="_btn_meun" label="" x="1365" y="20" locked="true">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
-
-	</e:Button>
 
 
 
-	<e:Group id="_whether_" width="1472" height="828" y="0" x="0" visible="false" locked="true">
+
+
+	<e:Group id="_whether_" width="1472" height="828" y="0" x="0" locked="true">
 		<e:Image id="_whether_0" x="386" y="601" source="img_BQ_0_png"/>
 		<e:Image id="_img_0" x="422" y="600" source="img_1_png"/>
 		<e:Image id="_whether_3" x="1096" y="324" source="img_BQ_0_png"/>
@@ -606,7 +589,7 @@
 		<e:Image id="_whether_1" x="232" y="318" source="img_BQ_0_png"/>
 		<e:Image id="_img_1" x="268" y="317" source="img_1_png"/>
 	</e:Group>
-	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" visible="false" locked="true">
+	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
 		<e:Image id="_xiabei_0_0" source="img_XB_png" x="351" y="585"/>
 		<e:Image id="_xiabei_0" x="412" y="600" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_1" source="img_XB_png" x="219" y="305"/>
@@ -726,7 +709,7 @@
 		<e:Image x="648.86" touchEnabled="false" verticalCenter="-2" source="img_XB_5_png"/>
 		<e:Image source="img_XBei_png" x="669.62" y="18" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="_jixu" width="226" height="81" y="716.6" x="623" locked="true">
+	<e:Group id="_jixu" width="226" height="81" y="716.6" x="623" locked="true" visible="false">
 		<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="0" y="0">
 			<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -737,7 +720,7 @@
 		</e:Button>
 		<e:Image source="resumeGameFont_png" touchEnabled="false" scaleX="1" scaleY="1" x="43" y="23"/>
 	</e:Group>
-	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0">
+	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" locked="true" visible="false">
 		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513" locked="true"/>
 		<e:Label id="_zhi_0" text="10" x="544" y="546" bold="true" textColor="0xffffff"/>
 		<e:Label text="10" x="660" y="546" id="_zhi_1" bold="true" textColor="0xffffff"/>
@@ -769,5 +752,21 @@
 		</e:Button>
 
 	</e:Group>
+	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_meun" label="" x="1365" y="20" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
 
 </e:Skin>
