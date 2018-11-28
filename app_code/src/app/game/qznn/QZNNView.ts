@@ -271,8 +271,7 @@ class QZNNView extends eui.Component {
 
     public arr_fen: number[] = [0, 0, 0];       //记分器
 
-    public thisoneself = this;                  //自身
-
+    public game_result: number = 0;
     ///----------------------------------------------------------------
 
     public time: number;        //秒数
@@ -598,15 +597,15 @@ class QZNNView extends eui.Component {
     /**游戏状态 */
     private GameStatus(data: any): void {
         switch (data._obj.roomStatus) {
-            case 0: ; break;    //
+            case 0: ; break;
             case 1: ; break;
-            case 2: ; break;    //已开始
+            case 2: ; break;
             case 3: this.onHogBack(data); break;    //抢庄
             case 4: this.onbetBack(data); break;    //下注
             case 5: ; break;
-            case 6: this.over(data); break;    //发送牌型
-            case 7: ; break;    //结算
-            case 8: ; break;    //游戏结束
+            case 6: this.over(data); break;    //发送牌型 结算
+            case 7: ; break;
+            case 8: ; break;
         }
     }
     /**监听抢庄 */
@@ -616,56 +615,54 @@ class QZNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = true;
 
-        if(!this.gamestarEff){
+        if (!this.gamestarEff) {
             this.gamestarEff = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
-            this.gamestarEff.x = xlLib.Global.screenWidth/2;
-            this.gamestarEff.y = xlLib.Global.screenHeight/2;
+            this.gamestarEff.x = xlLib.Global.screenWidth / 2;
+            this.gamestarEff.y = xlLib.Global.screenHeight / 2;
+            this.gamestarEff.frameRate = 15;
             this.gamestarEff.play(1);
         }
         this.addChild(this.gamestarEff);
-        this.gamestarEff.addEventListener(egret.Event.COMPLETE,(e:egret.Event)=>{
+        this.gamestarEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.gamestarEff.stop();
-            if(this.gamestarEff.parent)
-            {
-              this.gamestarEff.parent.removeChild(this.gamestarEff);
+            if (this.gamestarEff.parent) {
+                this.gamestarEff.parent.removeChild(this.gamestarEff);
             }
-        },this);
+        }, this);
     }
 
-    private addNNVictoryEffect():void
-    {
-        if(!this.nnvictoryEffect){
+    private addNNVictoryEffect(): void {
+        if (!this.nnvictoryEffect) {
             this.nnvictoryEffect = xlLib.DisplayUtils.createMovieClicp('nn_victoryEffect', 'nn_victoryEffect');
-            this.nnvictoryEffect.x = xlLib.Global.screenWidth/2;
-            this.nnvictoryEffect.y = xlLib.Global.screenHeight/2;
+            this.nnvictoryEffect.x = xlLib.Global.screenWidth / 2;
+            this.nnvictoryEffect.y = xlLib.Global.screenHeight / 2;
+            this.nnvictoryEffect.frameRate = 10;
             this.nnvictoryEffect.play(1);
         }
         this.addChild(this.nnvictoryEffect);
-        this.nnvictoryEffect.addEventListener(egret.Event.COMPLETE,(e:egret.Event)=>{
+        this.nnvictoryEffect.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.nnvictoryEffect.stop();
-            if(this.nnvictoryEffect.parent)
-            {
-              this.nnvictoryEffect.parent.removeChild(this.nnvictoryEffect);
+            if (this.nnvictoryEffect.parent) {
+                this.nnvictoryEffect.parent.removeChild(this.nnvictoryEffect);
             }
-        },this);
+        }, this);
     }
 
-    private addTongsha():void
-    {
-         if(!this.tongsha){
+    private addTongsha(): void {
+        if (!this.tongsha) {
             this.tongsha = xlLib.DisplayUtils.createMovieClicp('tongsha', 'tongsha');
-            this.tongsha.x = xlLib.Global.screenWidth/2;
-            this.tongsha.y = xlLib.Global.screenHeight/2;
+            this.tongsha.x = xlLib.Global.screenWidth / 2;
+            this.tongsha.y = xlLib.Global.screenHeight / 2;
+            this.tongsha.frameRate = 10;
             this.tongsha.play(1);
         }
         this.addChild(this.tongsha);
-        this.tongsha.addEventListener(egret.Event.COMPLETE,(e:egret.Event)=>{
+        this.tongsha.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.tongsha.stop();
-            if(this.tongsha.parent)
-            {
-              this.tongsha.parent.removeChild(this.tongsha);
+            if (this.tongsha.parent) {
+                this.tongsha.parent.removeChild(this.tongsha);
             }
-        },this);
+        }, this);
     }
     /**监听下注 */
     private onbetBack(data: any): void {
@@ -679,6 +676,7 @@ class QZNNView extends eui.Component {
     }
     /**牌面信息+结算 */
     private over(data: any): void {
+        this.game_result = data._obj.result;
         this.startCountDown(data._obj.seconds);
         let result = {
             pokes: [],
@@ -932,6 +930,9 @@ class QZNNView extends eui.Component {
                 this._my_pai.visible = true;
                 this.interval = setInterval(this.playerCardRotation.bind(this), 800);
             }
+
+            
+
             this.timeTxt.text = "00";
             this.clearTime();
         }
@@ -1586,7 +1587,7 @@ class QZNNView extends eui.Component {
             }
         }
         this.effectPlayerIndex++;
-        this._jixu.visible = true;
+        
     }
 
     private bankerCardRotation(): void {
@@ -1624,6 +1625,15 @@ class QZNNView extends eui.Component {
     }
 
     private blinkEffect(): void {
+        if (this.game_result == 1) {
+            this.addNNVictoryEffect();
+            this.game_result = 0;
+        } else if (this.game_result == 2) {
+            this.addTongsha();
+            this.game_result = 0;
+        }
+        this._jixu.visible = true;
+
         clearInterval(this.interval);
         var result = this.cardResult.result;
         for (var i = 0; i < 4; i++) {
@@ -1933,11 +1943,10 @@ class QZNNView extends eui.Component {
         // this.labCountdown1.text = '0';
     }
 
-    private removeEff(eff:egret.MovieClip):void
-    {
-        if(eff){
+    private removeEff(eff: egret.MovieClip): void {
+        if (eff) {
             eff.stop();
-            if(eff.parent){
+            if (eff.parent) {
                 eff.parent.removeChild(eff);
             }
         }
@@ -2062,7 +2071,7 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
         EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
 
-          
+
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }
