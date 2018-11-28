@@ -1,6 +1,6 @@
 {"mc":{
 	"eff_youxikaishi":{
-		"frameRate":10,
+		"frameRate":24,
 		"labels":[
 			{"name":"eff_youxikaishi","frame":1,"end":12}
 			
@@ -12,77 +12,77 @@
 			
 			{
 			"res":"eff_youxikaishi_1",
-			"x":75,
-			"y":44
+			"x":-543,
+			"y":-127
 			},
 			{
 			"res":"eff_youxikaishi_2",
-			"x":75,
-			"y":44
+			"x":-543,
+			"y":-127
 			},
 			{
 			"res":"eff_youxikaishi_3",
-			"x":75,
-			"y":52
+			"x":-543,
+			"y":-119
 			},
 			{
 			"res":"eff_youxikaishi_4",
-			"x":75,
-			"y":56
+			"x":-543,
+			"y":-115
 			},
 			{
 			"res":"eff_youxikaishi_5",
-			"x":75,
-			"y":56
+			"x":-543,
+			"y":-115
 			},
 			{
 			"res":"eff_youxikaishi_6",
-			"x":75,
-			"y":56
+			"x":-543,
+			"y":-115
 			},
 			{
 			"res":"eff_youxikaishi_7",
-			"x":75,
-			"y":56
+			"x":-543,
+			"y":-115
 			},
 			{
 			"res":"eff_youxikaishi_8",
-			"x":75,
-			"y":57
+			"x":-543,
+			"y":-114
 			},
 			{
 			"res":"eff_youxikaishi_9",
-			"x":75,
-			"y":57
+			"x":-543,
+			"y":-114
 			},
 			{
 			"res":"eff_youxikaishi_10",
-			"x":75,
-			"y":57
+			"x":-543,
+			"y":-114
 			},
 			{
 			"res":"eff_youxikaishi_11",
-			"x":75,
-			"y":57
+			"x":-543,
+			"y":-114
 			},
 			{
 			"res":"eff_youxikaishi_12",
-			"x":75,
-			"y":56
+			"x":-543,
+			"y":-115
 			}
 			]
 }},
 	"res":{
-		"eff_youxikaishi_8":{"x":2264,"y":499,"w":1130,"h":227},
-		"eff_youxikaishi_10":{"x":1132,"y":499,"w":1130,"h":228},
-		"eff_youxikaishi_1":{"x":1132,"y":259,"w":1130,"h":238},
-		"eff_youxikaishi_6":{"x":1132,"y":729,"w":1130,"h":226},
-		"eff_youxikaishi_5":{"x":2264,"y":0,"w":1130,"h":252},
-		"eff_youxikaishi_12":{"x":0,"y":730,"w":1130,"h":226},
-		"eff_youxikaishi_11":{"x":0,"y":498,"w":1130,"h":230},
-		"eff_youxikaishi_4":{"x":1132,"y":0,"w":1130,"h":257},
-		"eff_youxikaishi_3":{"x":0,"y":0,"w":1130,"h":264},
-		"eff_youxikaishi_9":{"x":0,"y":266,"w":1130,"h":230},
-		"eff_youxikaishi_2":{"x":2264,"y":254,"w":1130,"h":243},
-		"eff_youxikaishi_7":{"x":2264,"y":728,"w":1130,"h":226}
+		"eff_youxikaishi_4":{"x":1133,"y":1,"w":1130,"h":257},
+		"eff_youxikaishi_1":{"x":1133,"y":260,"w":1130,"h":238},
+		"eff_youxikaishi_8":{"x":2265,"y":500,"w":1130,"h":227},
+		"eff_youxikaishi_5":{"x":2265,"y":1,"w":1130,"h":252},
+		"eff_youxikaishi_7":{"x":1133,"y":730,"w":1130,"h":226},
+		"eff_youxikaishi_3":{"x":1,"y":1,"w":1130,"h":264},
+		"eff_youxikaishi_10":{"x":1133,"y":500,"w":1130,"h":228},
+		"eff_youxikaishi_9":{"x":1,"y":267,"w":1130,"h":230},
+		"eff_youxikaishi_2":{"x":2265,"y":255,"w":1130,"h":243},
+		"eff_youxikaishi_6":{"x":2265,"y":729,"w":1130,"h":226},
+		"eff_youxikaishi_11":{"x":1,"y":499,"w":1130,"h":230},
+		"eff_youxikaishi_12":{"x":1,"y":731,"w":1130,"h":226}
 	}}
