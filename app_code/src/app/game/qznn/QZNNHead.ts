@@ -60,6 +60,7 @@ class QZNNHead extends eui.Component {
             this.nnbankerEff = xlLib.DisplayUtils.createMovieClicp('nn_banker', 'nn_banker');
             this.nnbankerEff.x = 90;
             this.nnbankerEff.y = 70;
+            this.nnbankerEff.frameRate = 10;
         }
         this.addChild(this.nnbankerEff);
         this.nnbankerEff.play(1);

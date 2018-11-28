@@ -267,11 +267,13 @@ class QZNNView extends eui.Component {
 
     public arr: eui.Image[] = [null, null, null];
 
-    public score: number[] = [1, 2, 3, 4, 5];   //牌值
+    public score: number[] = [0, 0, 0, 0, 0];   //牌值
 
     public arr_fen: number[] = [0, 0, 0];       //记分器
 
     public game_result: number = 0;
+
+    public niu: number = 0;                    //有没有牛
     ///----------------------------------------------------------------
 
     public time: number;        //秒数
@@ -344,6 +346,7 @@ class QZNNView extends eui.Component {
     private nnbankerEff: egret.MovieClip;
     private nnvictoryEffect: egret.MovieClip;
     private tongsha: egret.MovieClip;
+    private pinpaicuowu: egret.MovieClip;
     //-----------------------------------------------
 
     protected childrenCreated(): void {
@@ -474,7 +477,7 @@ class QZNNView extends eui.Component {
     public resize(): void {
 
     }
-
+    /**继续游戏 */
     private onRestartGame(): void {
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
         let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
@@ -485,50 +488,72 @@ class QZNNView extends eui.Component {
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, (data) => {
         }, this);
+
+        this.resetGame();
     }
 
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
         if (e.target == this._btn_begin) {
-            // console.log("_btn_begin");
             this.onRestartGame();
         } else if (e.target == this._btn_buqiang) {
-            // console.log("_btn_buqiang");
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
-            // console.log("_btn_qiang_1");
             this.sendamessage(EventConst.niuniu_dohog, 1);
         } else if (e.target == this._btn_qiang_2) {
-            // console.log("_btn_qiang_2");
             this.sendamessage(EventConst.niuniu_dohog, 1);
         } else if (e.target == this._btn_qiang_3) {
-            // console.log("_btn_qiang_3");
             this.sendamessage(EventConst.niuniu_dohog, 1);
         } else if (e.target == this._btn_qiang_4) {
-            // console.log("_btn_qiang_4");
             this.sendamessage(EventConst.niuniu_dohog, 4);
         } else if (e.target == this._btn_double_1) {
-            // console.log("_btn_double_1");
             this.sendamessage1(EventConst.niuniu_dobet, 1);
         } else if (e.target == this._btn_double_2) {
-            // console.log("_btn_double_2");
             this.sendamessage1(EventConst.niuniu_dobet, 2);
         } else if (e.target == this._btn_double_3) {
-            // console.log("_btn_double_3");
             this.sendamessage1(EventConst.niuniu_dobet, 3);
         } else if (e.target == this._btn_double_4) {
-            // console.log("_btn_double_4");
             this.sendamessage1(EventConst.niuniu_dobet, 4);
         } else if (e.target == this._btn_double_5) {
             this.sendamessage1(EventConst.niuniu_dobet, 5);
         }
         else if (e.target == this._youniu) {
-            //parseInt(this._zhi_3.text)
-            console.log(parseInt(this._zhi_3.text));
-        }
-        else if (e.target == this._meiniu) {
+
+            var intnum1 = this.arr_fen[0] + this.arr_fen[1] + this.arr_fen[2]
+            console.log(intnum1);
+            if (intnum1 % 10 == 0) {
+                this._pingpai.visible = false;
+                this._my_pai.visible = true;
+            } else {
+                this.ppcuowu();
+            }
 
         }
+        else if (e.target == this._meiniu) {
+            if (this.niu != 0) {
+                this.ppcuowu();
+            } else {
+                this._pingpai.visible = false;
+                this._my_pai.visible = true;
+            }
+        }
+    }
+    /**拼牌错误 */
+    private ppcuowu() {
+        if (!this.pinpaicuowu) {
+            this.pinpaicuowu = xlLib.DisplayUtils.createMovieClicp('pinpaicuowu', 'pinpaicuowu');
+            this.pinpaicuowu.x = 1150;
+            this.pinpaicuowu.y = 520;
+            this.pinpaicuowu.frameRate = 10;
+        }
+        this.pinpaicuowu.play(1);
+        this.addChild(this.pinpaicuowu);
+        this.pinpaicuowu.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
+            this.pinpaicuowu.stop();
+            if (this.pinpaicuowu.parent) {
+                this.pinpaicuowu.parent.removeChild(this.pinpaicuowu);
+            }
+        }, this);
     }
     /**投注  sendstr 命令 bet 倍数 0~4 */
     private sendamessage(sendstr: string, bet: number): void {
@@ -575,6 +600,7 @@ class QZNNView extends eui.Component {
         this._btn_qiang_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         this._youniu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this)
+        this._meiniu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this)
 
 
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
@@ -620,15 +646,19 @@ class QZNNView extends eui.Component {
             this.gamestarEff.x = xlLib.Global.screenWidth / 2;
             this.gamestarEff.y = xlLib.Global.screenHeight / 2;
             this.gamestarEff.frameRate = 15;
-            this.gamestarEff.play(1);
+
         }
+        this.gamestarEff.play(1);
         this.addChild(this.gamestarEff);
-        this.gamestarEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
-            this.gamestarEff.stop();
-            if (this.gamestarEff.parent) {
-                this.gamestarEff.parent.removeChild(this.gamestarEff);
-            }
-        }, this);
+        this.gamestarEff.addEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
+    }
+
+    public onGameStartEvent(e: egret.Event): void {
+        this.gamestarEff.stop();
+        if (this.gamestarEff.parent) {
+            this.gamestarEff.parent.removeChild(this.gamestarEff);
+        }
+        this.gamestarEff.removeEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
     }
 
     private addNNVictoryEffect(): void {
@@ -637,8 +667,8 @@ class QZNNView extends eui.Component {
             this.nnvictoryEffect.x = xlLib.Global.screenWidth / 2;
             this.nnvictoryEffect.y = xlLib.Global.screenHeight / 2;
             this.nnvictoryEffect.frameRate = 10;
-            this.nnvictoryEffect.play(1);
         }
+        this.nnvictoryEffect.play(1);
         this.addChild(this.nnvictoryEffect);
         this.nnvictoryEffect.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.nnvictoryEffect.stop();
@@ -654,8 +684,8 @@ class QZNNView extends eui.Component {
             this.tongsha.x = xlLib.Global.screenWidth / 2;
             this.tongsha.y = xlLib.Global.screenHeight / 2;
             this.tongsha.frameRate = 10;
-            this.tongsha.play(1);
         }
+        this.tongsha.play(1);
         this.addChild(this.tongsha);
         this.tongsha.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             this.tongsha.stop();
@@ -676,6 +706,8 @@ class QZNNView extends eui.Component {
     }
     /**牌面信息+结算 */
     private over(data: any): void {
+
+        this.niu = data._obj.players[0].pai.niu;
         this.game_result = data._obj.result;
         this.startCountDown(data._obj.seconds);
         let result = {
@@ -804,6 +836,7 @@ class QZNNView extends eui.Component {
             this.nnbankerEff = xlLib.DisplayUtils.createMovieClicp('nn_banker', 'nn_banker');
             this.nnbankerEff.x = 90;
             this.nnbankerEff.y = 80;
+            this.nnbankerEff.frameRate = 10;
         }
         this['grpHead0'].addChild(this.nnbankerEff);
         this.nnbankerEff.play(1);
@@ -931,7 +964,7 @@ class QZNNView extends eui.Component {
                 this.interval = setInterval(this.playerCardRotation.bind(this), 800);
             }
 
-            
+
 
             this.timeTxt.text = "00";
             this.clearTime();
@@ -1587,7 +1620,7 @@ class QZNNView extends eui.Component {
             }
         }
         this.effectPlayerIndex++;
-        
+
     }
 
     private bankerCardRotation(): void {
@@ -1625,21 +1658,11 @@ class QZNNView extends eui.Component {
     }
 
     private blinkEffect(): void {
-        if (this.game_result == 1) {
-            this.addNNVictoryEffect();
-            this.game_result = 0;
-        } else if (this.game_result == 2) {
-            this.addTongsha();
-            this.game_result = 0;
-        }
-        this._jixu.visible = true;
 
         clearInterval(this.interval);
         var result = this.cardResult.result;
         for (var i = 0; i < 4; i++) {
             if (result[i] == 1) {
-                //this['effectSelect' + i].visible = true;
-                //EffectUtils.blinkEffect(this['effectSelect' + i], 200);
             }
         }
         this.interval = setInterval(this.cardEffectEnd.bind(this), 2000);
@@ -1720,6 +1743,8 @@ class QZNNView extends eui.Component {
                 EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
             }
         }
+
+        this.interval = setInterval(this.victoryEffect.bind(this), 2000);
     }
 
     /**更新玩家金币 */
@@ -1737,7 +1762,18 @@ class QZNNView extends eui.Component {
         } else {
             this['grpHead' + num].setGold(_gold);
         }
+    }
 
+    public victoryEffect(): void {
+        clearInterval(this.interval);
+        if (this.game_result == 1) {
+            this.addNNVictoryEffect();
+            this.game_result = 0;
+        } else if (this.game_result == 2) {
+            this.addTongsha();
+            this.game_result = 0;
+        }
+        this._jixu.visible = true;
     }
 
     //============================================  Game Result
@@ -1894,21 +1930,32 @@ class QZNNView extends eui.Component {
     }
 
     private resetGame(): void {
-        //for (var i = 0; i < 4; i++) {
-        //    this['labBetsPool' + i].text = '0';
-        //    this['labBetsSelf' + i].text = '0';
-        //    egret.Tween.removeTweens(this['effectSelect' + i]);
-        //}
+
+        this._xiabei.visible = true;
+        this._xiabei_0_0.visible = false;
+        this._xiabei_0.visible = false;
+        this._xiabei_0_1.visible = false;
+        this._xiabei_1.visible = false;
+        this._xiabei_0_2.visible = false;
+        this._xiabei_2.visible = false;
+        this._xiabei_0_3.visible = false;
+        this._xiabei_3.visible = false;
+        this._jixu.visible = false;
+
         for (var i = 0; i < 5; i++) {
             // this['bankerCard_' + i].source = '';
-            let card: eui.Image = this['bankerCard_' + i];
-            card.source = '';
-            egret.Tween.removeTweens(card);
+            let card_banker: eui.Image = this['bankerCard_' + i];
+            card_banker.source = '';
+            egret.Tween.removeTweens(card_banker);
+
+            let card_pin: eui.Image = this['_puke_' + i];
+            card_pin.source = '';
+            egret.Tween.removeTweens(card_pin);
         }
+        this.labCardTypeBanker.visible = false;
         for (var index = 0; index < this.cardResult.pokes.length - 1; index++) {
             //this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
-            this.labCardTypeBanker.visible = false;
             for (var j = 0; j < 5; j++) {
                 // this['grpCard_' + index + '_' + j].source = '';
                 let card: eui.Image = this['grpCard_' + index + '_' + j];

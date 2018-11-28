@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,nn_victoryEffect2_json,nn_victoryEffect2_png,tongsha2_json,tongsha2_png",
+			"keys": "loding_json,loding_bg_jpg,nn_victoryEffect2_json,nn_victoryEffect2_png,tongsha2_json,tongsha2_png,pinpaicuowu_json,pinpaicuowu_png",
 			"name": "preload"
 		},
 		{
@@ -3287,6 +3287,16 @@
 			"name": "tongsha2_png",
 			"type": "image",
 			"url": "assets/effects/tongsha/tongsha.png"
+		},
+		{
+			"name": "pinpaicuowu_json",
+			"type": "json",
+			"url": "assets/effects/pinpaicuowu/pinpaicuowu.json"
+		},
+		{
+			"name": "pinpaicuowu_png",
+			"type": "image",
+			"url": "assets/effects/pinpaicuowu/pinpaicuowu.png"
 		}
 	]
 }

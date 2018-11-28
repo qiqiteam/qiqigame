@@ -726,7 +726,7 @@
 		<e:Image x="648.86" touchEnabled="false" verticalCenter="-2" source="img_XB_5_png"/>
 		<e:Image source="img_XBei_png" x="669.62" y="18" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="_jixu" width="226" height="81" y="716.6" x="623" locked="true" visible="false">
+	<e:Group id="_jixu" width="226" height="81" y="716.6" x="623">
 		<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="0" y="0">
 			<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -738,11 +738,11 @@
 		<e:Image source="resumeGameFont_png" touchEnabled="false" scaleX="1" scaleY="1" x="43" y="23"/>
 	</e:Group>
 	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0">
-		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513"/>
-		<e:Label id="_zhi_0" text="10" x="544" y="546" textColor="0xe21b1b" bold="true"/>
-		<e:Label text="10" x="660" y="546" textColor="0xE21B1B" id="_zhi_1" bold="true"/>
-		<e:Label text="10" x="774" y="546" textColor="0xE21B1B" id="_zhi_2" bold="true"/>
-		<e:Label text="30" x="894" y="546" textColor="0xE21B1B" id="_zhi_3" bold="true"/>
+		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513" locked="true"/>
+		<e:Label id="_zhi_0" text="10" x="544" y="546" textColor="0xe21b1b" bold="true" locked="true"/>
+		<e:Label text="10" x="660" y="546" textColor="0xE21B1B" id="_zhi_1" bold="true" locked="true"/>
+		<e:Label text="10" x="774" y="546" textColor="0xE21B1B" id="_zhi_2" bold="true" locked="true"/>
+		<e:Label text="30" x="894" y="546" textColor="0xE21B1B" id="_zhi_3" bold="true" locked="true"/>
 		<e:Button id="_youniu" label="" x="1141" y="656">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -764,7 +764,7 @@
 		<e:Image id="_puke_2" x="687.41" y="646.63" source="nn.card_101" width="124" height="175"/>
 		<e:Image id="_puke_3" x="821.25" y="646.63" source="nn.card_101" width="124" height="175"/>
 		<e:Image id="_puke_4" x="954.91" y="646.63" source="nn.card_101" width="124" height="175"/>
-				<e:Image source="nn_tipBg_png" x="502.52" y="474.39"/>
+				<e:Image source="nn_tipBg_png" x="502.52" y="474.39" locked="true"/>
 	</e:Group>
 
 </e:Skin>
