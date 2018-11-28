@@ -423,9 +423,6 @@ class QZNNView extends eui.Component {
         this._zhi_3.text = "";
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
-
-
-
         //-----------------------------------------------
     }
 
@@ -519,8 +516,7 @@ class QZNNView extends eui.Component {
         }
         else if (e.target == this._youniu) {
             var intnum1 = this.arr_fen[0] + this.arr_fen[1] + this.arr_fen[2]
-            console.log(intnum1);
-            if (intnum1 != 0) {
+            if (this.arr_fen[0] != 0 && this.arr_fen[1] != 0 && this.arr_fen[2] != 0) {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
                     this._my_pai.visible = true;
@@ -543,7 +539,7 @@ class QZNNView extends eui.Component {
         if (!this.pinpaicuowu) {
             this.pinpaicuowu = xlLib.DisplayUtils.createMovieClicp('pinpaicuowu', 'pinpaicuowu');
             this.pinpaicuowu.x = 1150;
-            this.pinpaicuowu.y = 520;
+            this.pinpaicuowu.y = 550;
             this.pinpaicuowu.frameRate = 10;
             this.pinpaicuowu.touchEnabled = false;
         }

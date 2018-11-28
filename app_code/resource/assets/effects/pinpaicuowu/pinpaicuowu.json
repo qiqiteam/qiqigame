@@ -12,77 +12,77 @@
 			
 			{
 			"res":"pinpaicuowu_1",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_2",
-			"x":0,
-			"y":6
+			"x":-62,
+			"y":-65
 			},
 			{
 			"res":"pinpaicuowu_3",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_4",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_5",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_6",
-			"x":0,
-			"y":6
+			"x":-62,
+			"y":-65
 			},
 			{
 			"res":"pinpaicuowu_7",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_8",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_9",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_10",
-			"x":0,
-			"y":6
+			"x":-62,
+			"y":-65
 			},
 			{
 			"res":"pinpaicuowu_11",
-			"x":0,
-			"y":5
+			"x":-62,
+			"y":-66
 			},
 			{
 			"res":"pinpaicuowu_12",
-			"x":0,
-			"y":6
+			"x":-62,
+			"y":-65
 			}
 			]
 }},
 	"res":{
-		"pinpaicuowu_1":{"x":0,"y":0,"w":128,"h":116},
-		"pinpaicuowu_10":{"x":0,"y":351,"w":128,"h":114},
-		"pinpaicuowu_11":{"x":260,"y":0,"w":128,"h":115},
-		"pinpaicuowu_12":{"x":260,"y":351,"w":128,"h":114},
-		"pinpaicuowu_9":{"x":260,"y":117,"w":128,"h":115},
-		"pinpaicuowu_5":{"x":130,"y":0,"w":128,"h":115},
-		"pinpaicuowu_3":{"x":0,"y":118,"w":128,"h":115},
-		"pinpaicuowu_8":{"x":130,"y":234,"w":128,"h":115},
-		"pinpaicuowu_6":{"x":130,"y":351,"w":128,"h":114},
-		"pinpaicuowu_2":{"x":0,"y":235,"w":128,"h":114},
-		"pinpaicuowu_4":{"x":130,"y":117,"w":128,"h":115},
-		"pinpaicuowu_7":{"x":260,"y":234,"w":128,"h":115}
+		"pinpaicuowu_1":{"x":1,"y":1,"w":128,"h":116},
+		"pinpaicuowu_6":{"x":131,"y":352,"w":128,"h":114},
+		"pinpaicuowu_11":{"x":1,"y":119,"w":128,"h":115},
+		"pinpaicuowu_3":{"x":131,"y":118,"w":128,"h":115},
+		"pinpaicuowu_2":{"x":261,"y":352,"w":128,"h":114},
+		"pinpaicuowu_8":{"x":261,"y":118,"w":128,"h":115},
+		"pinpaicuowu_7":{"x":131,"y":1,"w":128,"h":115},
+		"pinpaicuowu_4":{"x":131,"y":235,"w":128,"h":115},
+		"pinpaicuowu_9":{"x":261,"y":1,"w":128,"h":115},
+		"pinpaicuowu_5":{"x":261,"y":235,"w":128,"h":115},
+		"pinpaicuowu_10":{"x":1,"y":352,"w":128,"h":114},
+		"pinpaicuowu_12":{"x":1,"y":236,"w":128,"h":114}
 	}}

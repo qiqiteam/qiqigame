@@ -61,6 +61,7 @@ class QZNNHead extends eui.Component {
             this.nnbankerEff.x = 90;
             this.nnbankerEff.y = 70;
             this.nnbankerEff.frameRate = 10;
+            this.nnbankerEff.touchEnabled = false;
         }
         this.addChild(this.nnbankerEff);
         this.nnbankerEff.play(1);
