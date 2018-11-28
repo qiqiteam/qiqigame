@@ -64,7 +64,7 @@ class QZNNHead extends eui.Component {
             this.nnbankerEff.touchEnabled = false;
         }
         this.addChild(this.nnbankerEff);
-        this.nnbankerEff.play(1);
+        this.nnbankerEff.gotoAndPlay(0,1);
     }
 
     public setGold(gold:number):void {
