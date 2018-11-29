@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="QZNNHeadSkin" width="180" height="180" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image width="126" height="126" y="9" source="nn_por_smallbg_png" x="27"/>
-	<e:Image id="imghead" width="126" height="126" y="9.48" source="women7_png" fillMode="scale" x="27"/>
+	<e:Image id="imghead" width="126" height="126" y="10" source="women7_png" fillMode="scale" x="28"/>
 
 	<e:Image width="110" height="60" y="102.78" source="img_big_png" x="35"/>
 

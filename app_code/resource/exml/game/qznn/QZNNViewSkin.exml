@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="QZNNViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Group width="1472" height="828" horizontalCenter="0" verticalCenter="0">
+	<e:Group width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" width="100%" height="100%" source="img_beijing_jpg" locked="true"/>
 		<e:Image source="qznn_game_desk_0_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
 	</e:Group>
@@ -561,13 +561,12 @@
 		<e:Rect height="30" width="330" y="-10" horizontalCenter="0" strokeWeight="1" />
 		<e:Label id="grpCaijinLabel" y="-8" horizontalCenter="0" bold="true" textColor="0xFFFF00" />
 	</e:Group>
-	<e:Group id="grpHead0" scaleX="1" scaleY="1" x="201.36" y="590.51" width="180" anchorOffsetY="0" height="209" locked="true">
-		<e:Image width="234" height="111" x="117" y="16" source="qznn_txkbg_png" visible="false"/>
-		<e:Image y="15.2" source="nn_por_smallbg_png" x="27"/>
-		<e:Image id="imghead0" width="126" height="126" y="15.2" x="23" source="women7_png"/>
+	<e:Group id="grpHead0" scaleX="1" scaleY="1" x="201.36" y="590.51" width="180" anchorOffsetY="0" height="180" locked="true">
+		<e:Image y="9" source="nn_por_smallbg_png" x="27" width="126" height="126"/>
+		<e:Image id="imghead0" width="126" height="126" y="9" x="26" source="women7_png"/>
 
-		<e:Label id="labelHead0" text="世界第一赌神" x="13.72" y="148.93" textColor="0xf2b354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
-		<e:Label id="labelGold0" text="1000000" x="37.54" y="177.06" size="30" fontFamily="SimHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1"/>
+		<e:Label id="labelHead0" text="世界第一赌神" x="13.72" y="139.81" textColor="0xf2b354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
+		<e:Label id="labelGold0" text="1000000" x="37.54" y="161.86" size="30" fontFamily="SimHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1"/>
 
 
 	</e:Group>
@@ -580,7 +579,8 @@
 
 
 
-	<e:Group id="_whether_" width="1472" height="828" y="0" x="0" locked="true" visible="false">
+
+	<e:Group id="_whether_" width="1472" height="828" y="0" x="0">
 		<e:Image id="_whether_0" x="386" y="601" source="img_BQ_0_png"/>
 		<e:Image id="_img_0" x="422" y="600" source="img_1_png"/>
 		<e:Image id="_whether_3" x="1096" y="324" source="img_BQ_0_png"/>
@@ -590,15 +590,19 @@
 		<e:Image id="_whether_1" x="232" y="318" source="img_BQ_0_png"/>
 		<e:Image id="_img_1" x="268" y="317" source="img_1_png"/>
 	</e:Group>
-	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" visible="false" locked="true">
 		<e:Image id="_xiabei_0_0" source="img_XB_png" x="351" y="585"/>
-		<e:Image id="_xiabei_0" x="412" y="600" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_0" x="437.68" y="602" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_0_0_0" x="414.88" y="602" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_1" source="img_XB_png" x="219" y="305"/>
-		<e:Image id="_xiabei_1" x="280" y="320" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_1" x="304.16" y="322" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_0_0_1" x="281.36" y="322" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_2" source="img_XB_png" x="640" y="256"/>
-		<e:Image id="_xiabei_2" x="701" y="271" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_2" x="725.16" y="273" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_0_0_2" x="705.4" y="273" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_3" source="img_XB_png" x="1046" y="301"/>
-		<e:Image id="_xiabei_3" x="1107" y="316" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_3" x="1128.12" y="318" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_0_0_3" x="1109.88" y="318" source="img_XB_1_png"/>
 	</e:Group>
 	<e:Group id="_group_qiang" width="800" height="80" y="542.1" anchorOffsetX="0" horizontalCenter="62" locked="true" visible="false">
 		<e:Button id="_btn_buqiang" label="" x="0" y="6">

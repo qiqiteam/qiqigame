@@ -11,6 +11,7 @@ class QZNNView extends eui.Component {
 
     public grpCoins: eui.Group;
     public grpCard: eui.Group;
+    public _my_pai: eui.Group;
     public bankerCard_0: eui.Image;
     public bankerCard_1: eui.Image;
     public bankerCard_2: eui.Image;
@@ -217,8 +218,6 @@ class QZNNView extends eui.Component {
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
-    public _btn_close: eui.Button;
-    public _btn_meun: eui.Button;
     public _whether_: eui.Group;
     public _whether_0: eui.Image;
     public _img_0: eui.Image;
@@ -231,12 +230,16 @@ class QZNNView extends eui.Component {
     public _xiabei: eui.Group;
     public _xiabei_0_0: eui.Image;
     public _xiabei_0: eui.Image;
+    public _xiabei_0_0_0: eui.Image;
     public _xiabei_0_1: eui.Image;
     public _xiabei_1: eui.Image;
+    public _xiabei_0_0_1: eui.Image;
     public _xiabei_0_2: eui.Image;
     public _xiabei_2: eui.Image;
+    public _xiabei_0_0_2: eui.Image;
     public _xiabei_0_3: eui.Image;
     public _xiabei_3: eui.Image;
+    public _xiabei_0_0_3: eui.Image;
     public _group_qiang: eui.Group;
     public _btn_buqiang: eui.Button;
     public _btn_qiang_1: eui.Button;
@@ -252,18 +255,20 @@ class QZNNView extends eui.Component {
     public _jixu: eui.Group;
     public _btn_begin: eui.Button;
     public _pingpai: eui.Group;
-    public _my_pai: eui.Group;
     public _zhi_0: eui.Label;
     public _zhi_1: eui.Label;
     public _zhi_2: eui.Label;
     public _zhi_3: eui.Label;
-    public _youniu: eui.Button;
-    public _meiniu: eui.Button;
     public _puke_0: eui.Image;
     public _puke_1: eui.Image;
     public _puke_2: eui.Image;
     public _puke_3: eui.Image;
     public _puke_4: eui.Image;
+    public _youniu: eui.Button;
+    public _meiniu: eui.Button;
+    public _btn_close: eui.Button;
+    public _btn_meun: eui.Button;
+
 
     public arr: eui.Image[] = [null, null, null];
 
@@ -274,6 +279,8 @@ class QZNNView extends eui.Component {
     public game_result: number = 0;
 
     public niu: number = 0;                    //有没有牛
+
+    public zijipokes: number[] = [0, 0, 0, 0, 0];    //自己的牌
     ///----------------------------------------------------------------
 
     public time: number;        //秒数
@@ -403,6 +410,10 @@ class QZNNView extends eui.Component {
         this._img_3.visible = false;
 
         this._xiabei.visible = true;
+        this._xiabei_0_0_0.visible = false;
+        this._xiabei_0_0_1.visible = false;
+        this._xiabei_0_0_2.visible = false;
+        this._xiabei_0_0_3.visible = false;
         this._xiabei_0_0.visible = false;
         this._xiabei_0.visible = false;
         this._xiabei_0_1.visible = false;
@@ -625,9 +636,9 @@ class QZNNView extends eui.Component {
             case 3: this.onHogBack(data); break;    //抢庄
             case 4: this.onbetBack(data); break;    //下注
             case 5: ; break;
-            case 6: this.over(data); break;    //发送牌型 结算
-            case 7: ; break;
-            case 8: ; break;
+            case 6: this.onThecardtype(data); break;    //自己的牌
+            case 7: this.oncloseanaccount(data); break;                //其他玩家的牌型  结算
+            case 8: ; break;        // 游戏结束
         }
     }
     /**监听抢庄 */
@@ -695,6 +706,8 @@ class QZNNView extends eui.Component {
     }
     /**监听下注 */
     private onbetBack(data: any): void {
+
+        this.time = 0;
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
@@ -703,12 +716,18 @@ class QZNNView extends eui.Component {
         }
 
     }
-    /**牌面信息+结算 */
-    private over(data: any): void {
-
-        this.niu = data._obj.players[0].pai.niu;
-        this.game_result = data._obj.result;
+    /**自己的牌 */
+    private onThecardtype(data: any): void {
+        this.zijipokes = data._obj.showList;
+        this.time = 0;
         this.startCountDown(data._obj.seconds);
+        this.cardEffect();
+
+
+    }
+    /**其他玩家的牌型   结算 */
+    private oncloseanaccount(data: any) {
+
         let result = {
             pokes: [],
             result: [1, 0, 0, 0],
@@ -727,8 +746,13 @@ class QZNNView extends eui.Component {
             result.pokes.push(err);
         }
         this.cardResult = result;
-        this.cardEffect();
+
+        this._pingpai.visible = false;
+        this._my_pai.visible = true;
+
+        this.interval = setInterval(this.playerCardRotation.bind(this), 800);
     }
+
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
         console.log(data._obj.index + "号下注");
@@ -752,56 +776,31 @@ class QZNNView extends eui.Component {
     }
     /**是否抢庄 */
     private qiangzhuang(data: number, num: number) {
-        switch (data) {
-            case 0: this['_whether_' + num].visible = true;
-                this['_whether_' + num].source = 'img_BQ_png';
-                this['_img_' + num].visible = false;
-                break;
-            case 1: this['_whether_' + num].visible = true;
-                this['_whether_' + num].source = 'img_BQ_0_png';
-                this['_img_' + num].visible = true;
-                this['_img_' + num].source = 'img_1_png';
-                break;
-            case 2: this['_whether_' + num].visible = true;
-                this['_whether_' + num].source = 'img_BQ_0_png';
-                this['_img_' + num].visible = true;
-                this['_img_' + num].source = 'img_2_png';
-                break;
-            case 3: this['_whether_' + num].visible = true;
-                this['_whether_' + num].source = 'img_BQ_0_png';
-                this['_img_' + num].visible = true;
-                this['_img_' + num].source = 'img_3_png';
-                break;
-            case 4: this['_whether_' + num].visible = true;
-                this['_whether_' + num].source = 'img_BQ_0_png';
-                this['_img_' + num].visible = true;
-                this['_img_' + num].source = 'img_4_png';
-                break;
+        if (data == 0) {
+            this['_whether_' + num].visible = true;
+            this['_whether_' + num].source = 'img_BQ_png';
+            this['_img_' + num].visible = false;
+        } else {
+            this['_whether_' + num].visible = true;
+            this['_whether_' + num].source = 'img_BQ_' + data + '_png';
+            this['_img_' + num].visible = true;
+            this['_img_' + num].source = 'img_' + data + '_png';
         }
+
     }
     /**是否下注 */
     private jiazhu(data: number, num: number) {
-        switch (data) {
-            case 1: this['_xiabei_0_' + num].visible = true;
-                this['_xiabei_' + num].visible = true;
-                this['_xiabei_' + num].source = 'img_XB_1_png';
-                break;
-            case 2: this['_xiabei_0_' + num].visible = true;
-                this['_xiabei_' + num].visible = true;
-                this['_xiabei_' + num].source = 'img_XB_2_png';
-                break;
-            case 3: this['_xiabei_0_' + num].visible = true;
-                this['_xiabei_' + num].visible = true;
-                this['_xiabei_' + num].source = 'img_XB_3_png';
-                break;
-            case 4: this['_xiabei_0_' + num].visible = true;
-                this['_xiabei_' + num].visible = true;
-                this['_xiabei_' + num].source = 'img_XB_4_png';
-                break;
-            case 5: this['_xiabei_0_' + num].visible = true;
-                this['_xiabei_' + num].visible = true;
-                this['_xiabei_' + num].source = 'img_XB_5_png';
-                break;
+        if (data >= 10) {
+            this['_xiabei_0_' + num].visible = true;
+            this['_xiabei_' + num].visible = true;
+            this['_xiabei_0_0_' + num].visible = true;
+            this['_xiabei_' + num].source = 'img_XB_' + data + '_png';
+            this['_xiabei_0_0_' + num].source = 'img_XB_0_0_' + data + '_png';
+        } else if (data < 10) {
+            this['_xiabei_0_' + num].visible = true;
+            this['_xiabei_' + num].visible = true;
+            this['_xiabei_0_0_' + num].visible = false;
+            this['_xiabei_' + num].source = 'img_XB_' + data + '_png';
         }
     }
     /**设置庄家 */
@@ -856,7 +855,7 @@ class QZNNView extends eui.Component {
         //设置自己信息
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
-        mask2.graphics.drawCircle(62, 62, 62);
+        mask2.graphics.drawRect(0, 0, 117, 115);
         mask2.graphics.endFill();
         mask2.x = this.imghead0.x + 6;
         mask2.y = this.imghead0.y + 5;
@@ -964,18 +963,15 @@ class QZNNView extends eui.Component {
     /**倒计时处理*/
     private timerFunc(evt: egret.TimerEvent): void {
         if (this.time >= 0) {
-            this.timeTxt.text = "0" + this.time;
+            if (this.time >= 10) {
+                this.timeTxt.text = "" + this.time;
+            }
+            else {
+                this.timeTxt.text = "0" + this.time;
+            }
             this.time--;
         }
         else {
-            if (this.startCardRotation == true) {
-                this._pingpai.visible = false;
-                this._my_pai.visible = true;
-                this.interval = setInterval(this.playerCardRotation.bind(this), 800);
-            }
-
-
-
             this.timeTxt.text = "00";
             this.clearTime();
         }
@@ -1174,7 +1170,7 @@ class QZNNView extends eui.Component {
         this.isCardEffectShow = true;
         this.flyIntval = setInterval(this.playCardFly.bind(this), 60);
     }
-
+    /**其他玩家发牌动作 */
     private playCardFly(): void {
         var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
         card.source = 'qznn_card_100';
@@ -1186,7 +1182,7 @@ class QZNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
         egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
         if (this.flyIndex1 == 4) {
-            if (this.flyIndex0 == this.cardResult.pokes.length - 2) {
+            if (this.flyIndex0 == 2) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
@@ -1202,14 +1198,15 @@ class QZNNView extends eui.Component {
             this.flyIndex1++;
         }
     }
-
+    /**自己发牌动作 */
     private bankerCardFly(): void {
         if (this.flyBankerIndex == 5) {
             this.flyBankerIndex = 0;
             clearInterval(this.flyIntval);
 
             this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
-            var poke = this.cardResult.pokes[0];
+            // var poke = this.cardResult.pokes[0];
+            var poke = this.zijipokes;
 
             for (var i = 0; i < 5; i++) {
                 var card_my = this['_puke_' + i];
@@ -1217,9 +1214,9 @@ class QZNNView extends eui.Component {
                 egret.Tween.get(card_my).to({ scaleX: 0 }, 300).call(function () {
                     this[0].source = 'qznn_card_' + this[1];
                     egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-                }, [card_my, poke.value[i]])
+                }, [card_my, poke[i]])
 
-                var str = poke.value[i].toString();
+                var str = poke[i].toString();
                 str = str.slice(1);
                 var intnum = parseInt(str);
                 if (intnum > 10) {
@@ -1250,6 +1247,7 @@ class QZNNView extends eui.Component {
     }
 
     private effectPlayerIndex = 0;
+    /**结算 */
     private playerCardRotation(): void {
         if (this.effectPlayerIndex == this.cardResult.pokes.length - 1) {
             clearInterval(this.interval)
@@ -1286,7 +1284,7 @@ class QZNNView extends eui.Component {
         }
         this.effectPlayerIndex++;
     }
-
+    /**发牌 */
     private bankerCardRotation(): void {
 
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
@@ -1521,6 +1519,7 @@ class QZNNView extends eui.Component {
         this._jixu.visible = false;
         this.startCardRotation = false;
         this.zhaungIndex = 0;    //庄的位置
+        this.zijipokes = [0, 0, 0, 0, 0];
     }
 
     private removeEff(eff: egret.MovieClip): void {
@@ -1573,8 +1572,8 @@ class QZNNView extends eui.Component {
         xlLib.SoundMgr.instance.stopBgMusic();
 
         let musicBg = ["bgMain_mp3"];
-		xlLib.SoundMgr.instance.playBgMusic(musicBg);
-        
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
+
         xlLib.SceneMgr.instance.changeScene(Lobby);
         // let senddata: any = {
         //     userid: UserInfo.getInstance().uid,
