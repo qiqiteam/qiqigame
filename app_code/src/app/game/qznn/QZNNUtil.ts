@@ -281,6 +281,8 @@ class QZNNUtil {
                 return 'nn.stake';   //筹码
             case 9:
                 return 'gold_diaoluo';   //金币飞起
+            case 10:
+                return 'Special_menu';   //按钮点击
         }
     }
 }

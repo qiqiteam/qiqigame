@@ -491,8 +491,11 @@ class QZNNView extends eui.Component {
 
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         if (e.target == this._btn_begin) {
             this.onRestartGame();
+        } else if (e.target == this._btn_meun) {
+
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -579,6 +582,7 @@ class QZNNView extends eui.Component {
     }
     /**注册事件 */
     private addEvent(): void {
+        this._btn_meun.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -754,18 +758,22 @@ class QZNNView extends eui.Component {
                 this['_img_' + num].visible = false;
                 break;
             case 1: this['_whether_' + num].visible = true;
+                this['_whether_' + num].source = 'img_BQ_0_png';
                 this['_img_' + num].visible = true;
                 this['_img_' + num].source = 'img_1_png';
                 break;
             case 2: this['_whether_' + num].visible = true;
+                this['_whether_' + num].source = 'img_BQ_0_png';
                 this['_img_' + num].visible = true;
                 this['_img_' + num].source = 'img_2_png';
                 break;
             case 3: this['_whether_' + num].visible = true;
+                this['_whether_' + num].source = 'img_BQ_0_png';
                 this['_img_' + num].visible = true;
                 this['_img_' + num].source = 'img_3_png';
                 break;
             case 4: this['_whether_' + num].visible = true;
+                this['_whether_' + num].source = 'img_BQ_0_png';
                 this['_img_' + num].visible = true;
                 this['_img_' + num].source = 'img_4_png';
                 break;
@@ -892,7 +900,7 @@ class QZNNView extends eui.Component {
     }
     /**算牌 */
     private Suapai(e: egret.TouchEvent) {
-
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         //如果有，就踢出去
         for (let i = 0; i < 3; i++) {
             if (this.arr[i] == e.target) {
@@ -928,7 +936,11 @@ class QZNNView extends eui.Component {
     private calculatescore() {
 
         var aaa = this.arr_fen[0] + this.arr_fen[1] + this.arr_fen[2];
-        this._zhi_3.text = aaa + '';
+        if (aaa == 0) {
+            this._zhi_3.text = '';
+        } else {
+            this._zhi_3.text = aaa + '';
+        }
     }
     /**开始倒计时*/
     private startCountDown(time: number): void {
@@ -2098,10 +2110,16 @@ class QZNNView extends eui.Component {
     }
     /**返回游戏大厅 */
     public Onquit(): void {
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         if (UserInfo.getInstance().isGameStart) {
             xlLib.TipsUtils.showFloatWordTips("游戏中！");
             return;
         }
+        xlLib.SoundMgr.instance.stopBgMusic();
+
+        let musicBg = ["bgMain_mp3"];
+		xlLib.SoundMgr.instance.playBgMusic(musicBg);
+        
         xlLib.SceneMgr.instance.changeScene(Lobby);
         // let senddata: any = {
         //     userid: UserInfo.getInstance().uid,

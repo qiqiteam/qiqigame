@@ -1,15 +1,17 @@
-class Inthematch extends eui.Component{
+class Inthematch extends eui.Component {
 	public constructor() {
 		super();
 		this.skinName = "InthematchSkin";
 	}
 
-	public _dian_0: eui.Image;
-	public _dian_1: eui.Image;
-	public _dian_2: eui.Image;
+	public _quxiao:eui.Button;
+	public _waitfor:eui.Label;
+
 
 	public time: number;        //秒数
 	public timer: egret.Timer;  //计时器
+
+	public str: string;
 
 	protected partAdded(partName: string, instance: any): void {
 		this.clearTime();
@@ -20,12 +22,26 @@ class Inthematch extends eui.Component{
 	protected childrenCreated(): void {
 		super.childrenCreated();
 		this.initData();
+		this._quxiao.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+	}
+	private onClick(e: egret.TouchEvent) {
+
+	}
+	/**取消匹配 */
+	private quxiaopipei() {
+		let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+		let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+		let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+		let senddata: any = {
+			userid: UserInfo.getInstance().uid,
+			token: UserInfo.getInstance().token, playway: playway.id
+		};
+		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, (data) => {
+		}, this);
 	}
 
 	private initData() {
-		this._dian_0.visible = false;
-		this._dian_1.visible = false;
-		this._dian_2.visible = false;
+		this.str = this._waitfor.text;
 		this.startCountDown(0);
 	}
 	/**开始倒计时*/
@@ -41,11 +57,13 @@ class Inthematch extends eui.Component{
 
 	/**倒计时处理*/
 	private timerFunc(evt: egret.TimerEvent): void {
-		this._dian_0.visible = false;
-		this._dian_1.visible = false;
-		this._dian_2.visible = false;
-		for(let i:number=0;i<=this.time%3;i++){
-            this['_dian_' + i].visible = true;
+		for (let i: number = 0; i <= this.time % 4; i++) {
+			switch (i) {
+				case 0: this._waitfor.text = this.str + ''; break;
+				case 1: this._waitfor.text = this.str + '.'; break;
+				case 2: this._waitfor.text = this.str + '..'; break;
+				case 3: this._waitfor.text = this.str + '...'; break;
+			}
 		}
 		this.time++;
 	}

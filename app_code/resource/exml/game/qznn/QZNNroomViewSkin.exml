@@ -57,7 +57,7 @@
 		</e:Button>
 		<e:Image width="154" height="76" touchEnabled="false" x="57" y="633" source="root_record_btn_0"/>
 	</e:Group>
-	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0">
+	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0" locked="true">
 		<e:Image y="73.26" scaleX="1" scaleY="1" horizontalCenter="0.36000000000001364" source="qznn_right_bg"/>
 				<e:Image source="qznn_btn" y="73.26" scaleX="1" scaleY="1" horizontalCenter="0.36000000000001364"/>
 
@@ -73,6 +73,21 @@
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 				</e:Skin>
 			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group width="1187.89" height="740.91" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0" locked="true" visible="false">
+		<e:Image source="qznn_pic2" x="566" y="150"/>
+		<e:Image source="qznn_pic4" x="254" y="435"/>
+		<e:Image source="qznn_pic6" x="877" y="435"/>
+		<e:Image source="qznn_pic3" x="877" y="150"/>
+		<e:Image source="qznn_pic5" x="566" y="435"/>
+		<e:Button id="_btn_cjc0" label="" x="254" y="151" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="qznn_pic1" source.down="qznn_pic1"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
 		</e:Button>
 	</e:Group>
 

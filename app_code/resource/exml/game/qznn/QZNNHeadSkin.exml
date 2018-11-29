@@ -4,8 +4,8 @@
 	<e:Image id="imghead" width="126" height="126" y="9.48" source="women7_png" fillMode="scale" x="27"/>
 
 	<e:Image width="110" height="60" y="102.78" source="img_big_png" x="35"/>
-	<e:Image id="img_gold" width="30" height="30" x="38" y="132" source="img_jinbi_png"/>
+
 	<e:Label id="labelName" text="名字名字" y="103.68" size="22" width="100" textColor="0xf2eeb3" fontFamily="Arial" textAlign="center" bold="true" x="38" wordWrap="false" height="22"/>
-	<e:Label id="labelGold" text="100000" x="69" y="135" size="22" bold="true" textAlign="left" width="81" textColor="0xefe888"/>
+	<e:Label id="labelGold" text="100000" x="55" y="135" size="22" bold="true" textAlign="left" width="81" textColor="0xefe888"/>
 
 </e:Skin>
