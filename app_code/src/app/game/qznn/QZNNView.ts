@@ -990,23 +990,7 @@ class QZNNView extends eui.Component {
         }
     }
 
-
-    //设置彩金
-    //private setHandsel(num): void {
-    //this.labHandsel.text = QuickManage.moneyStr(num);
-    //}
-    /**
-     * 定时器
-     */
-    private setCountdown(): void {
-        this.cdTimer = new egret.Timer(1000);
-        this.cdTimer.addEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
-    }
-
-    private clacTimer(): void {
-        //if (this.cdNum % 7 == 0) {
-        //    this.getBets();
-        //}
+    private clearTimer(): void {
         if (this.cdNum > 0) {
             this.cdNum--;
         }
@@ -1015,18 +999,6 @@ class QZNNView extends eui.Component {
             this.cdNum = 0;
 
             this.resetGame();
-
-
-            //this.cdNum = 5;
-            //this.cardEffect();
-        }
-        if (this.cdNum < 10) {
-            // this.labCountdown0.text = '0';
-            // this.labCountdown1.text = this.cdNum + '';
-        }
-        else {
-            // this.labCountdown0.text = (this.cdNum + '').split('')[0];
-            // this.labCountdown1.text = (this.cdNum + '').split('')[1];
         }
     }
 
@@ -1122,87 +1094,6 @@ class QZNNView extends eui.Component {
             this['labelHead' + data].text = '';
         }
     }
-
-    //同步彩金 （包含庄结算输赢）
-    /*
-    private updateHandsel(data): void {
-        if (this.cardResult == null)
-            return;
-        //this.resultCaijin = parseInt(data.data.gift);
-        //this.totalCaijin = parseInt(data.data.caijin);
-        // this.setHandsel(data.data.caijin);
-        this.maxUserData = data.data.max;
-        this.banker_total_gold = data.data.bankerTotalGold;
-        for (let i = 0; i < 4; i++) {
-            this['labTipsClick' + i].visible = false;
-        }
-        //this.cardEffect();
-    }*/
-
-    //同步庄的顺位
-    /*
-    private updateBankerRank(data): void {
-        if (!this.isApplyBanker)
-            return;
-        var id = GlobalData.openid + '@' + GlobalData.platform;
-        if (data.id == id) {
-            this.curBankerRanking = data.pos;
-        }
-        else if (data.pos < this.curBankerRanking || data.pos == this.curBankerRanking) {
-            this.curBankerRanking++;
-        }
-        this.labBankerRank.text = '排庄' + this.curBankerRanking;
-    }*/
-
-    //获取上庄列表
-    //private getBankerList(e): void {
-    //    if (e.target && (e.target.name == 'btnUpBanker' || e.target.name == 'btnDownBanker')) {
-    //        return;
-    //    }
-    //    Net.send(Protocol.NIUNIU_BANKER_LIST, {}, this.bankerListCallback.bind(this));
-    //}
-
-    //上庄列表
-    /*
-    private bankerListCallback(msg): void {
-        if (msg.code == 200) {
-            this.grpBankerList.visible = true;
-            for (var i = 0; i < 10; i++) {
-                if (i < msg.list.length) {
-                    this['bankerListItem' + i].visible = true;
-                    this['itemRank' + i].text = i + 1 + '';
-                    this['itemName' + i].text = msg.list[i].name;
-                    this['itemMoney' + i].text = QuickManage.moneyStr(msg.list[i].gold);
-                    this['itemVip' + i].text = 'v' + msg.list[i].vip;
-                }
-                else {
-                    if (i < 3) {
-                        this['bankerListItem' + i].visible = true;
-                        this['itemRank' + i].text = i + 1 + '';
-                        this['itemName' + i].text = '';
-                        this['itemMoney' + i].text = '';
-                        this['itemVip' + i].text = '';
-                    }
-                    else {
-                        this['bankerListItem' + i].visible = false;
-                    }
-                }
-            }
-        }
-        else {
-            TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-        }
-    }*/
-
-    //private onTouchCloseBankerList(): void {
-    //    this.grpBankerList.visible = false;
-    //}
-
-    //同步下注消息
-    //private getBets(): void {
-    //    Net.send(Protocol.NIUNIU_GET_BETS, {}, this.getBetsCallback.bind(this));
-    //}
-
     //定时同步下注筹码
     private getBetsCallback(msg): void {
         if (msg.code == 200) {
@@ -1228,240 +1119,6 @@ class QZNNView extends eui.Component {
             // console.log('------------------- end ----------------------');
         }
     }
-
-    //离开游戏判断
-    /*
-    private onTouchClose(): void {
-        if (this.isBanker) {
-            //TipsManage.showTips('您是庄家，下庄后方可离开！');
-            return;
-        }
-        if (this.isBets) {
-            //TipsManage.showTips('您已经下注，这局结束后方可离开！')
-            return;
-        }
-        Net.send(Protocol.NIUNIU_LEAVE_GAME, {}, (function (msg) {
-            if (msg.code == 200) {
-                this.dispose();
-            }
-            else {
-                //TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }).bind(this));
-    }*/
-
-    //充值
-    private onTouchCharge(): void {
-        //PanelManage.openShop(3);
-    }
-
-    //充值返回
-    /*
-    private updatePayData(data): void {
-        GlobalData.user.gold = data.param.msg.gold;
-        lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-        this.labTitleVip.text = 'v' + GlobalData.user.vip;
-    }
-
-    //上庄
-    private onTouchUpBank(): void {
-        if (parseInt(GlobalData.user.vip) < this.limitVip) {
-            TipsManage.showTips('您的VIP等级未满' + this.limitVip + '级,不能上庄！');
-            return;
-        }
-        if (parseInt(GlobalData.user.gold) < this.limitGold) {
-            TipsManage.showTips('您的金币未满' + QuickManage.moneyStr(this.limitGold) + ',不能上庄！');
-            return;
-        }
-        Net.send(Protocol.NIUNIU_UP_BANKER, {}, this.upBankerCallback.bind(this));
-    }
-
-    //上庄回调
-    private upBankerCallback(msg): void {
-        if (msg.code == 200) {
-            TipsManage.showTips('申请上庄成功！');
-            this.btnDownBanker.visible = true;
-            this.btnUpBanker.visible = false;
-            this.isApplyBanker = true;
-        }
-    }
-
-    //下庄
-    private onTouchDownBank(): void {
-        Net.send(Protocol.NIUNIU_DOWN_BANKER, {}, this.downBankerCallback.bind(this));
-    }
-
-    //下庄回调
-    private downBankerCallback(msg): void {
-        if (msg.code == 200) {
-            TipsManage.showTips('申请下庄成功！');
-            this.btnDownBanker.visible = false;
-            this.btnUpBanker.visible = true;
-            this.isApplyBanker = false;
-            this.curBankerRanking = -1;
-        }
-    }
-
-    //vip 座位
-    private onTouchSeat(index): void {
-        if (this.isBanker) {
-            TipsManage.showTips('当前您是庄，不能坐下！');
-            return;
-        }
-        Net.send(Protocol.NIUNIU_SEAT_DOWN, { seat: index }, (function (msg) {
-            if (msg.code != 200) {
-                TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }).bind(this));
-    }*/
-
-    //筹码选择
-    /*
-    private onTouchBet(index): void {
-        if (this.isBanker) {
-            TipsManage.showTips('您是庄家，不能下注！');
-            return;
-        }
-        if (!this.isCoinsReturn) {
-            console.log('touche  Bet++++++++++++++')
-            TipsManage.showTips('操作过于频繁，请稍等！');
-            return;
-        }
-        if (this.lastTouchBetIndex == index) {
-            return;
-        }
-        if (this.lastTouchBetIndex != -1) {
-            this['btnBet' + this.lastTouchBetIndex].scaleX = this['btnBet' + this.lastTouchBetIndex].scaleY = 1;
-        }
-        this.lastTouchBetIndex = index;
-        this['btnBet' + index].scaleX = this['btnBet' + index].scaleY = 1.2;
-        this.betsNum = QZNNUtil.getInstance().getBetNumber(index);
-        this.labCurChip.text = '注码：' + this['labBet' + index].text;
-    }*/
-    /*
-        private onTouchSelectIndex(index): void {
-            if (this.isCardEffectShow)
-                return;
-            let curTime: number = (new Date).getTime();
-            if ((curTime - this.lastTouchBetTime) < 400) {
-                return;
-            }
-            this.lastTouchBetTime = curTime;
-            if (this.isBanker) {
-                TipsManage.showTips('您是庄家，不能下注！');
-                return;
-            }
-            if (!this.isCoinsReturn) {
-                // console.log('touche  select ========================')
-                TipsManage.showTips('操作过于频繁，请稍等！');
-                return;
-            }
-            if (this.isCanBets) {
-                this.betsPostion = index + 1;
-                this.isCoinsReturn = false;
-                // console.log('下注位置：' + this.betsPostion + '  金额：' + this.betsNum);
-                Net.send(Protocol.NIUNIU_BET_GOLD, { betId: this.betsPostion, gold: this.betsNum }, this.betGlodCallback.bind(this), false);
-            }
-        }
-    
-        //下注
-        private betGlodCallback(msg): void {
-            this.isCoinsReturn = true;
-            if (msg.code == 200) {
-                this.isBets = true;
-                GlobalData.user.gold = (parseInt(GlobalData.user.gold) - this.betsNum) + '';
-                this.titleLabMoney.text = QuickManage.moneyStr(parseInt(GlobalData.user.gold));
-                // console.log('下注成功 index：' + this.betsPostion + '  金额：' + this.betsNum);
-                this.selfbetsNum[this.betsPostion] = parseInt(this.selfbetsNum[this.betsPostion]) + this.betsNum
-                this.poolBetArray[this.betsPostion] = parseInt(this.poolBetArray[this.betsPostion]) + this.betsNum;
-                this['labBetsPool' + (this.betsPostion - 1)].text = QuickManage.moneyStr(this.poolBetArray[this.betsPostion]);
-                this.showCoins(this.betsNum, this.betsPostion);
-                //同步自己的金币
-                for (var i = 0; i < 4; i++) {
-                    this['labBetsSelf' + i].text = QuickManage.moneyStr(this.selfbetsNum[i + 1]);
-                }
-            }
-            else {
-                TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }
-    
-        private isFirstSetBanker: boolean = true;
-        //设置庄家的消息
-        private setBankerInfo(banker): void {
-            if (banker.sys == 1) {
-                this.bankerHead.source = 'qznn_head';
-                this.bankerHead.width = this.bankerHead.height = 55;
-                this.bankerName.text = '萌萌哒';
-                this.labBankerMoney.text = QuickManage.moneyStr(88888880000);
-                this.isSysBanker = true;
-                this.labBankerLastNum.text = '剩余' + parseInt(banker.num) + '次';
-                this.lastGameBankerNum = banker.num;
-                this.isBanker = false;
-                this.labBankerVip.text = 'v10';
-            }
-            else {
-                if (banker.id == GlobalData.openid + '@' + GlobalData.platform) {
-                    this.isBanker = true;
-                    this.labBankerRank.text = '';
-                }
-                else {
-                    if (this.isApplyBanker) {
-                        if (banker.pos < this.curBankerRanking) {
-                            this.curBankerRanking--;
-                            this.labBankerRank.text = '排庄' + this.curBankerRanking;
-                        }
-                    }
-                    else {
-                        this.labBankerRank.text = '';
-                        this.btnDownBanker.visible = false;
-                        this.btnUpBanker.visible = true;
-                    }
-                    this.isBanker = false;
-                }
-                if (this.bankerName.text != '萌萌哒') {
-                    if (!this.isFirstSetBanker) {
-                        PanelManage.chat.sendGameChat(this.bankerName.text + '下庄了');
-                    }
-                }
-                this.bankerHead.source = banker.headurl//GlobalData.user.headurl;
-                this.bankerHead.width = this.bankerHead.height = 55;
-                this.bankerName.text = banker.nick;
-                this.labBankerMoney.text = QuickManage.moneyStr(banker.gold);
-                this.labBankerLastNum.text = '剩余' + parseInt(banker.num) + '次';
-                this.lastGameBankerNum = banker.num;
-                this.isSysBanker = false;
-                this.labBankerVip.text = 'v' + banker.vip;
-                if (!this.isFirstSetBanker) {
-                    PanelManage.chat.sendGameChat(this.bankerName.text + '上庄了');
-                }
-            }
-            this.isFirstSetBanker = false;
-        }
-    
-        //设置开奖记录
-        private setHistory(): void {
-            for (var i = 0; i < 10; i++) {
-                this['grpHistory' + i].visible = false;
-                for (var m = 0; m < 4; m++) {
-                    this['grpHistory' + m + '_' + i].source = '';
-                }
-            }
-        }
-    
-        private updateGold(): void {
-            Net.send(Protocol.NIUNIU_GET_GOLD, {}, this.getGoldCallback.bind(this));
-        }
-    
-        private getGoldCallback(data): void {
-            if (data.code == 200) {
-                GlobalData.user.gold = data.data.gold;
-                lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-            }
-        }
-    
-    */
-    //========================== Effect Show ===============================
 
     //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
     private showGameTips(type): void {
@@ -1610,14 +1267,12 @@ class QZNNView extends eui.Component {
                 this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke[index + 1].value[i]]);
-            // console.log('poke_' + this.effectPlayerIndex + ': ' + poke[this.effectPlayerIndex].value[i]);
         }
         this['labCardType' + index].source = QZNNUtil.getInstance().getCardType(poke[index + 1].type);
         this.playClickSound(QZNNUtil.getInstance().getCardMusicType(poke[index + 1].type));
         this['labCardType' + index].visible = true;;
         this['labCardType' + index].width = 98;
         this['labCardType' + index].height = 44;
-        //this['labCardResult' + index].text = '';//this.cardResult.result[index] == 1 ? '赢' : '输';
         if (poke[index + 1].type != 0) {
             for (var i = 0; i < 5; i++) {
                 var card = this['grpCard_' + index + '_' + i];
@@ -1630,7 +1285,6 @@ class QZNNView extends eui.Component {
             }
         }
         this.effectPlayerIndex++;
-
     }
 
     private bankerCardRotation(): void {
@@ -1640,13 +1294,10 @@ class QZNNView extends eui.Component {
         for (var i = 0; i < 5; i++) {
             var card = this['bankerCard_' + i];
             card.source = 'qznn_card_100';
-            //card.x = this.orginBankerCardPos[i].x;
-            //card.y = this.orginBankerCardPos[i].y;
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke.value[i]])
-            // console.log('poke_banker: ' + poke.value[i]);
         }
 
         this.labCardTypeBanker.source = QZNNUtil.getInstance().getCardType(poke.type);
@@ -1791,142 +1442,6 @@ class QZNNView extends eui.Component {
         UserInfo.getInstance().isGameStart = false;
     }
 
-    //============================================  Game Result
-    /*
-    private showGameResult(): void {
-        clearInterval(this.interval);
-        lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.CHAT_GAME_RESULT));
-        var data = this.cardResult;
-        this.grpResult.visible = true;
-        if (this.maxUserData != null) {
-            this.grpMax.visible = true;
-            this.grpMaxHead.source = this.maxUserData.headurl;
-            this.grpMaxHead.width = this.grpMaxHead.height = 70;
-            this.grpMaxGold.text = '赢 ' + QuickManage.moneyStr(this.maxUserData.gold);
-            this.grpMaxName.text = this.maxUserData.name;
-            if (this.maxUserData.name == GlobalData.user.nickname) {
-                this.playClickSound(QZNNUtil.getInstance().getSoundEffect(1));
-            }
-        }
-        else {
-            this.grpMax.visible = false;
-        }
-
-        this.grpBankerHead.source = this.bankerHead.source; //
-        this.grpBankerName.text = this.bankerName.text;
-
-        this.grpBankerBeishu.text = data.pokes[0].num + '倍';
-        this.grpBankerType.source = '';//this.getCardType(data.pokes[0].type);//;
-        this.labelBankerType.text = QZNNUtil.getInstance().getCardType2(data.pokes[0].type);
-        if (parseInt(data.bankerWin) < 0) {
-            this.grpBankerGold.text = '输 ' + QuickManage.moneyStr(Math.abs(data.bankerWin));
-            PanelManage.chat.sendGameChat('庄家输了 ' + QuickManage.moneyStr(Math.abs(data.bankerWin)));
-        }
-        else {
-            this.grpBankerGold.text = '赢 ' + QuickManage.moneyStr(data.bankerWin);
-            if (data.bankerWin != 0) {
-                PanelManage.chat.sendGameChat('庄家赢了 ' + QuickManage.moneyStr(Math.abs(data.bankerWin)));
-            }
-        }
-
-        var userGold: number = 0;
-        for (var i = 0; i < 4; i++) {
-            var betss = parseInt(data.pokes[i + 1].num)
-            this['resultType' + i].text = QZNNUtil.getInstance().getCardType2(data.pokes[i + 1].type);
-            this['labResult0_' + i].text = betss + '倍';//倍率
-            this['labResult1_' + i].text = QuickManage.moneyStr(this.selfbetsNum[i + 1]); //押注
-            var gold = this.selfbetsNum[i + 1];
-            if (gold != 0) {
-                this['labResult2_' + i].text = '';
-                if (data.result[i] == 1) {
-                    var bets0 = 0;
-                    if (this.isBanker) {
-                        bets0 = parseInt(data.pokes[0].num)
-                    }
-                    else {
-                        bets0 = parseInt(data.pokes[i + 1].num)
-                    }
-                    userGold += parseInt(gold) * (bets0 + 1);
-                }
-                else {
-                    var bets1 = 0;//1倍不再减少
-                    if (this.isBanker) {
-                        bets1 = parseInt(data.pokes[i + 1].num)
-                    }
-                    else {
-                        bets1 = parseInt(data.pokes[0].num)
-                    }
-                    if (bets1 == 1) {
-                        // userGold -= parseInt(gold);
-                    }
-                    else {
-                        userGold -= parseInt(gold) * (bets1 - 1);
-                    }
-                }
-            }
-            else {
-                this['labResult2_' + i].text = 0;
-            }
-        }
-
-        var betsGold = 0;
-        for (var i = 1; i < 5; i++) {
-            betsGold += this.selfbetsNum[i];
-        }
-        if (userGold > 0 || userGold == 0) {
-            // userGold *= (1 - data.rate);
-            userGold *= (1 - this.curRate);
-        }
-        userGold -= betsGold;
-        if (userGold > 0 || userGold == 0) {
-            this.labResultValue.text = '结算：' + QuickManage.moneyStr(userGold);
-        }
-        else {
-            this.labResultValue.text = '结算：-' + QuickManage.moneyStr(Math.abs(userGold));
-        }
-        if (userGold > 0) {
-            EffectUtils.coinsFly(this, 320, 500);
-        }
-        this.updateGold();
-        //更新来自更新彩金时所带的庄家金币
-        if (!this.isSysBanker) {
-            this.labBankerMoney.text = QuickManage.moneyStr(this.banker_total_gold);
-        }
-        this.setHandsel(this.totalCaijin);
-        if (userGold > 0 && this.resultCaijin > 0) {
-            this.interval = setInterval(this.caijinShow.bind(this), 3000);
-        }
-        else {
-            if (this.cardResult.bomb == 0) {
-                this.interval = setInterval(this.setStartBet.bind(this), 4000);
-            }
-            else {
-                this.interval = setInterval(this.boomShow.bind(this), 3000);
-            }
-        }
-    }
-
-    private boomShow(): void {
-        this.grpCaijin.visible = false;
-        this.imgBaoZhuang.visible = true;
-        clearInterval(this.interval);
-        this.interval = setInterval(this.setStartBet.bind(this), 4000);
-    }
-    */
-    /*
-    private caijinShow(msg): void {
-        PanelManage.chat.sendGameChat('恭喜你获得彩金 ' + this.resultCaijin);
-        this.grpCaijinLabel.text = '恭喜你获得' + this.resultCaijin + '彩金';
-        this.grpCaijin.visible = true;
-        clearInterval(this.interval);
-        if (this.cardResult.bomb == 0) {
-            this.interval = setInterval(this.setStartBet.bind(this), 4000);
-        }
-        else {
-            this.interval = setInterval(this.boomShow.bind(this), 3000);
-        }
-    }*/
-
     private setStartBet(): void {
         this.resetGame();
         this.grpResult.visible = false;
@@ -1988,12 +1503,6 @@ class QZNNView extends eui.Component {
         while (this.grpCoins.numChildren > 0) {
             this.grpCoins.removeChildAt(0);
         }
-        //for (var i = 0; i < 4; i++) {
-        //    this['effectSelect' + i].visible = false;
-        //}
-        //for (let i = 0; i < 4; i++) {
-        //this['labTipsClick' + i].visible = true;
-        //}
         this._btn_begin.visible = true;
         this.isCanBets = true;
         this.isBets = false;
@@ -2003,10 +1512,6 @@ class QZNNView extends eui.Component {
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
         this.removeEff(this.nnbankerEff);
-        // this.labCountdown0.text = '0';
-        // this.labCountdown1.text = '0';
-
-
         this.arr = [null, null, null];
         this.score = [0, 0, 0, 0, 0];
         this.arr_fen = [0, 0, 0];
@@ -2016,12 +1521,6 @@ class QZNNView extends eui.Component {
         this._jixu.visible = false;
         this.startCardRotation = false;
         this.zhaungIndex = 0;    //庄的位置
-
-        //this.gamestarEff=null;
-        //this.nnbankerEff=null;
-        //this.nnvictoryEffect=null;
-        //this.tongsha=null;
-        //this.pinpaicuowu=null;
     }
 
     private removeEff(eff: egret.MovieClip): void {
@@ -2041,20 +1540,6 @@ class QZNNView extends eui.Component {
             }
         }
     }
-
-    //========================== Second Panel ==============================
-    //牌型
-    //private onTouchCardType(): void {
-    //    this.grpSecondPanel.visible = true;
-    //    this.grpCardType.visible = true;
-    //    this.grpHistory.visible = false;
-    //}
-
-    //走势
-    //private onTouchCardHistory(): void {
-    //    Net.send(Protocol.NIUNIU_GAME_RECORD, {}, this.getHistoryCallback.bind(this));
-    //}
-
     private getHistoryCallback(msg): void {
         var list = msg.data;
         for (var i = 0; i < 10; i++) {
@@ -2074,36 +1559,6 @@ class QZNNView extends eui.Component {
         this.grpHistory.visible = true;
     }
 
-    //private onTouchCloseSecondPanel(): void {
-    //    this.grpSecondPanel.visible = false;
-    //}
-
-    //============================================红包
-    //private redPanel: RedBoxPanel = null;
-    //private onTouchRedBox(): void {
-    //    PanelManage.openRedBox(2, 1);
-    //}
-
-    //private operateBoxComplete(): void {
-    //    lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-    //}
-
-    private updateDataGold(): void {
-        //EffectUtils.numEffect(this.titleLabMoney, parseInt(GlobalData.user.gold));
-    }
-
-
-    //public dispose(): void {
-    //MusicManage.closeMuisc();
-    //    if (this.parent) {
-    //        this.parent.removeChild(this);
-    //    }
-    //EventManage.removeEvent(this);
-    //}
-
-    //public setTouchEnabled(): void {
-    //QuickManage.setTouchEnabled(this);
-    //}
 
     public playClickSound(res): void {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
@@ -2162,7 +1617,7 @@ class QZNNView extends eui.Component {
 
 
         if (this.cdTimer != null) {
-            this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
+            this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clearTimer, this);
         }
         this.removeEff(this.nnbankerEff);
         this.removeEff(this.nnvictoryEffect);
