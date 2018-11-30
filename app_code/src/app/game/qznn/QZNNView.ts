@@ -400,6 +400,17 @@ class QZNNView extends eui.Component {
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
     //-----------------------------------------------
+    private niuniuBet: NiuNBei;
+
+    private addNiuNBei(url: string = "qznntype1_tex1"): void {
+        this.niuniuBet = new NiuNBei();
+        this.niuniuBet.anchorOffsetX = this.niuniuBet.width / 2;
+        this.niuniuBet.anchorOffsetY = this.niuniuBet.height / 2;
+        this.niuniuBet.x = 400;
+        this.niuniuBet.y = 500;
+        this.addChild(this.niuniuBet);
+        this.niuniuBet.play(url);
+    }
 
     protected childrenCreated(): void {
 
@@ -413,7 +424,6 @@ class QZNNView extends eui.Component {
         xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
 
         UserInfo.getInstance().isGameStart = true;
-
     }
     /**
      * 数据初始化
@@ -588,6 +598,7 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
+            this.addNiuNBei();
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -851,6 +862,9 @@ class QZNNView extends eui.Component {
     /**其他玩家的牌型   结算 */
     private oncloseanaccount(data: any) {
         this.pinpaiType.visible = true;
+
+        this.time = 0;
+        this.grpCountdown.visible = false;
 
         let result = {
             pokes: [],
@@ -1690,6 +1704,7 @@ class QZNNView extends eui.Component {
         this.pinpaiType0.visible = false;
         this.pinpaiType1.visible = false;
         this.pinpaiType2.visible = false;
+        this.grpCountdown.visible = true;
 
     }
 
