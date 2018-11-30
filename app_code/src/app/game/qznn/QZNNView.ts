@@ -388,10 +388,11 @@ class QZNNView extends eui.Component {
 
     private zhaungIndex: number = 0;    //庄的位置
 
-    private gamestarEff: egret.MovieClip;
+    private gamestarEff: QZNNGameStart;
+    
     private nnbankerEff: egret.MovieClip;
-    private nnvictoryEffect: egret.MovieClip;
-    private tongsha: egret.MovieClip;
+    private nnvictoryEffect:QZNNVictory;
+    private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
     //-----------------------------------------------
 
@@ -577,7 +578,6 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
-
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -759,60 +759,39 @@ class QZNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = true;
 
-        if (!this.gamestarEff) {
-            this.gamestarEff = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
+        if(!this.gamestarEff){
+            this.gamestarEff = new QZNNGameStart();
+            this.gamestarEff.anchorOffsetX = this.gamestarEff.width/2;
+            this.gamestarEff.anchorOffsetY = this.gamestarEff.height/2;
             this.gamestarEff.x = xlLib.Global.screenWidth / 2;
             this.gamestarEff.y = xlLib.Global.screenHeight / 2;
-            this.gamestarEff.frameRate = 15;
-            this.gamestarEff.touchEnabled = false;
         }
-        this.gamestarEff.gotoAndPlay(0, 1);
+        this.gamestarEff.play();
         this.addChild(this.gamestarEff);
-        this.gamestarEff.addEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
-    }
-
-    public onGameStartEvent(e: egret.Event): void {
-        this.gamestarEff.stop();
-        if (this.gamestarEff.parent) {
-            this.gamestarEff.parent.removeChild(this.gamestarEff);
-        }
-        this.gamestarEff.removeEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
     }
 
     private addNNVictoryEffect(): void {
         if (!this.nnvictoryEffect) {
-            this.nnvictoryEffect = xlLib.DisplayUtils.createMovieClicp('nn_victoryEffect', 'nn_victoryEffect');
+            this.nnvictoryEffect = new QZNNVictory();
+            this.nnvictoryEffect.anchorOffsetX = this.nnvictoryEffect.width/2;
+            this.nnvictoryEffect.anchorOffsetY = this.nnvictoryEffect.height/2;
             this.nnvictoryEffect.x = xlLib.Global.screenWidth / 2;
             this.nnvictoryEffect.y = xlLib.Global.screenHeight / 2;
-            this.nnvictoryEffect.frameRate = 10;
-            this.nnvictoryEffect.touchEnabled = false;
         }
-        this.nnvictoryEffect.gotoAndPlay(0, 1);
+        this.nnvictoryEffect.play();
         this.addChild(this.nnvictoryEffect);
-        this.nnvictoryEffect.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
-            this.nnvictoryEffect.stop();
-            if (this.nnvictoryEffect.parent) {
-                this.nnvictoryEffect.parent.removeChild(this.nnvictoryEffect);
-            }
-        }, this);
     }
     /**通杀 */
     private addTongsha(): void {
         if (!this.tongsha) {
-            this.tongsha = xlLib.DisplayUtils.createMovieClicp('tongsha', 'tongsha');
+            this.tongsha = new QZNNTongsha();
+            this.tongsha.anchorOffsetX = this.tongsha.width/2;
+            this.tongsha.anchorOffsetY = this.tongsha.height/2;
             this.tongsha.x = xlLib.Global.screenWidth / 2;
             this.tongsha.y = xlLib.Global.screenHeight / 2;
-            this.tongsha.frameRate = 10;
-            this.tongsha.touchEnabled = false;
         }
-        this.tongsha.gotoAndPlay(0, 1);
+        this.tongsha.play();
         this.addChild(this.tongsha);
-        this.tongsha.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
-            this.tongsha.stop();
-            if (this.tongsha.parent) {
-                this.tongsha.parent.removeChild(this.tongsha);
-            }
-        }, this);
     }
     /**监听下注 */
     private onbetBack(data: any): void {
@@ -1323,26 +1302,26 @@ class QZNNView extends eui.Component {
         this._group_qiang.visible = false;
 
         this.isCardEffectShow = true;
-        this.flyIntval = setInterval(this.playCardFly.bind(this), 60);
+        this.flyIntval = setInterval(this.playCardFly.bind(this), 40);
     }
     /**其他玩家发牌动作 */
     private playCardFly(): void {
         var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
         card.source = 'qznn_card_100';
-        card.x = 713.5;
-        card.y = 300;
+        card.x = xlLib.Global.screenWidth / 2;
+        card.y = xlLib.Global.screenHeight / 2;
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
         var pos = this.orginPlayerCardPos[this.flyIndex0][this.flyIndex1];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400);
         if (this.flyIndex1 == 4) {
             if (this.flyIndex0 == 2) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
                 this.flyBankerIndex = 0;
-                this.flyIntval = setInterval(this.bankerCardFly.bind(this), 60);
+                this.flyIntval = setInterval(this.bankerCardFly.bind(this), 40);
             }
             else {
                 this.flyIndex1 = 0;
@@ -1358,19 +1337,15 @@ class QZNNView extends eui.Component {
         if (this.flyBankerIndex == 5) {
             this.flyBankerIndex = 0;
             clearInterval(this.flyIntval);
-
             this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
-            // var poke = this.cardResult.pokes[0];
             var poke = this.zijipokes;
-
             for (var i = 0; i < 5; i++) {
                 var card_my = this['_puke_' + i];
                 card_my.source = 'qznn_card_100';
-                egret.Tween.get(card_my).to({ scaleX: 0 }, 300).call(function () {
+                egret.Tween.get(card_my).to({ scaleX: 0 }, 400).call(function () {
                     this[0].source = 'qznn_card_' + this[1];
-                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
+                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 400);
                 }, [card_my, poke[i]])
-
                 var str = poke[i].toString();
                 str = str.slice(1);
                 var intnum = parseInt(str);
@@ -1380,16 +1355,14 @@ class QZNNView extends eui.Component {
                 this.score[i] = intnum;
                 var card_banker = this['bankerCard_' + i];
                 card_banker.source = 'qznn_card_100';
-                // console.log('poke_banker: ' + poke.value[i]);
             }
-
             this.startCardRotation = true;
             return;
         }
         this._pingpai.visible = true;
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
-        card.x = 713.5;
-        card.y = 300;
+        card.x = xlLib.Global.screenWidth / 2;
+        card.y = xlLib.Global.screenHeight / 2;
         card.source = 'qznn_card_100';
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
@@ -1804,9 +1777,6 @@ class QZNNView extends eui.Component {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clearTimer, this);
         }
         this.removeEff(this.nnbankerEff);
-        this.removeEff(this.nnvictoryEffect);
-        this.removeEff(this.tongsha);
-        this.removeEff(this.gamestarEff);
     }
 }
 
