@@ -349,7 +349,8 @@ class QZNNView extends eui.Component {
 
     private zhaungIndex: number = 0;    //庄的位置
 
-    private gamestarEff: egret.MovieClip;
+    private gamestarEff: QZNNGameStart;
+    
     private nnbankerEff: egret.MovieClip;
     private nnvictoryEffect: egret.MovieClip;
     private tongsha: egret.MovieClip;
@@ -649,24 +650,15 @@ class QZNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = true;
 
-        if (!this.gamestarEff) {
-            this.gamestarEff = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
+        if(!this.gamestarEff){
+            this.gamestarEff = new QZNNGameStart();
+            this.gamestarEff.anchorOffsetX = this.gamestarEff.width/2;
+            this.gamestarEff.anchorOffsetY = this.gamestarEff.height/2;
             this.gamestarEff.x = xlLib.Global.screenWidth / 2;
             this.gamestarEff.y = xlLib.Global.screenHeight / 2;
-            this.gamestarEff.frameRate = 15;
-            this.gamestarEff.touchEnabled = false;
         }
-        this.gamestarEff.gotoAndPlay(0, 1);
+        this.gamestarEff.play();
         this.addChild(this.gamestarEff);
-        this.gamestarEff.addEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
-    }
-
-    public onGameStartEvent(e: egret.Event): void {
-        this.gamestarEff.stop();
-        if (this.gamestarEff.parent) {
-            this.gamestarEff.parent.removeChild(this.gamestarEff);
-        }
-        this.gamestarEff.removeEventListener(egret.Event.COMPLETE, this.onGameStartEvent, this);
     }
 
     private addNNVictoryEffect(): void {
@@ -1621,7 +1613,6 @@ class QZNNView extends eui.Component {
         this.removeEff(this.nnbankerEff);
         this.removeEff(this.nnvictoryEffect);
         this.removeEff(this.tongsha);
-        this.removeEff(this.gamestarEff);
     }
 }
 

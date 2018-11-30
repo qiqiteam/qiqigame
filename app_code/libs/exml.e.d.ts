@@ -98,6 +98,8 @@ declare class PlayerInfoTypeItemSkin extends eui.Skin{
 }
 declare class PlayerInfoViewSkin extends eui.Skin{
 }
+declare class QZNNGameStartSkin extends eui.Skin{
+}
 declare class QZNNHeadSkin extends eui.Skin{
 }
 declare class QZNNViewSkin extends eui.Skin{
