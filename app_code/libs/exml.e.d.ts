@@ -102,6 +102,10 @@ declare class QZNNGameStartSkin extends eui.Skin{
 }
 declare class QZNNHeadSkin extends eui.Skin{
 }
+declare class QZNNTongshaSkin extends eui.Skin{
+}
+declare class QZNNVictorySkin extends eui.Skin{
+}
 declare class QZNNViewSkin extends eui.Skin{
 }
 declare class QZNNroomViewSkin extends eui.Skin{

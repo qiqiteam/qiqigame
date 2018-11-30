@@ -41,6 +41,8 @@
     "resource/exml/game/playerinfo/PlayerInfoTypeItemSkin.exml",
     "resource/exml/game/playerinfo/PlayerInfoViewSkin.exml",
     "resource/exml/game/qznn/QZNNGameStartSkin.exml",
+    "resource/exml/game/qznn/QZNNTongshaSkin.exml",
+    "resource/exml/game/qznn/QZNNVictorySkin.exml",
     "resource/exml/game/qznn/QZNNViewSkin.exml",
     "resource/exml/game/qznn/QZNNroomViewSkin.exml",
     "resource/exml/game/rbg/RBGHeadSkin.exml",
