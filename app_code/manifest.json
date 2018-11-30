@@ -52,6 +52,7 @@
 		"bin-debug/app/game/playerinfo/InfoBoxItem.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoTypeItem.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoView.js",
+		"bin-debug/app/game/qznn/NiuNBei.js",
 		"bin-debug/app/game/qznn/QZNNGameStart.js",
 		"bin-debug/app/game/qznn/QZNNHead.js",
 		"bin-debug/app/game/qznn/QZNNroomView.js",

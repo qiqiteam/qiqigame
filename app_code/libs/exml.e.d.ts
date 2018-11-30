@@ -98,7 +98,7 @@ declare class PlayerInfoTypeItemSkin extends eui.Skin{
 }
 declare class PlayerInfoViewSkin extends eui.Skin{
 }
-declare class NiuNFalsh extends eui.Skin{
+declare class NiuNBeiSkin extends eui.Skin{
 }
 declare class QZNNGameStartSkin extends eui.Skin{
 }
