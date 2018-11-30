@@ -20,9 +20,8 @@ class WuNiuNBei extends eui.Component {
         this.niuniuanmin.stop();
     }
 
-    public play(src:string):void
+    public play():void
     {
-        this.image0.source = src;
         this.niuniuanmin.play(0);   
     }
 
