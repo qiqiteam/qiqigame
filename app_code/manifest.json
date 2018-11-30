@@ -13,10 +13,10 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/views/GameDoc.js",
-		"bin-debug/views/GameScene.js",
 		"bin-debug/app/Const.js",
 		"bin-debug/app/ReceiveMessageMgr.js",
+		"bin-debug/views/GameDoc.js",
+		"bin-debug/views/GameScene.js",
 		"bin-debug/app/component/Inthematch.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",
@@ -84,7 +84,7 @@
 		"bin-debug/app/game/welfare/WelfareView.js",
 		"bin-debug/app/game/zjh/ZJHHead.js",
 		"bin-debug/app/game/zjh/ZJHroomView.js",
-		"bin-debug/app/game/zjh/ZJHScene.js",
+		"bin-debug/app/component/ComBox.js",
 		"bin-debug/app/game/zjh/ZJHUtil.js",
 		"bin-debug/app/game/zjh/ZJHView.js",
 		"bin-debug/app/HttpAddress.js",
@@ -156,6 +156,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/component/ComBox.js"
+		"bin-debug/app/game/zjh/ZJHScene.js"
 	]
 }
