@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,femalecow_0_mp3,femalecow_1_mp3,femalecow_10_mp3,femalecow_11_mp3,femalecow_12_mp3,femalecow_13_mp3,femalecow_14_mp3,femalecow_2_mp3,femalecow_3_mp3,femalecow_4_mp3,femalecow_5_mp3,femalecow_6_mp3,femalecow_7_mp3,femalecow_8_mp3,femalecow_9_mp3,malecow_0_mp3,malecow_1_mp3,malecow_10_mp3,malecow_11_mp3,malecow_12_mp3,malecow_13_mp3,malecow_14_mp3,malecow_2_mp3,malecow_3_mp3,malecow_4_mp3,malecow_5_mp3,malecow_6_mp3,malecow_7_mp3,malecow_8_mp3,malecow_9_mp3,nn_betAll_mp3,nn_betOne_mp3,nn_bg_mp3,nn_carddone_mp3,nn_carddone1_mp3,nn_collectgold_mp3,nn_Dcollectgold_mp3,nn_dealcard_mp3,nn_gamestart_mp3,nn_LampEnd_mp3,nn_LampRun_mp3,nn_montageerror_mp3,nn_pentakill_mp3,nn_scrollnumber_mp3,nn_sendcard_mp3,nn_wingold_mp3,window_open_mp3,qznn_btn_beishu1_1_png,qznn_btn_buqiang_1_png,qznn_btn_beishu2_1_png,resumeGameBg_1_png,nn_btn_meiniu1_1_png,nn_btn_youniu1_1_png,qznn_tips_tittle_png,nn_bg1_png,nn_close_png,hall_bg_mp3,qznn_bg_mp3,qznn_fapai_mp3,qznn_tongpei_mp3,qznn_win_all_mp3,qznn_txkbg_png,qznn_txkbg1_png,img_shufen_，_png,img_shufen_._png,img_shufen_-_png,progressTimerFontBg9_png,progressTimerFontBg0_png,progressTimerFontBg1_png,progressTimerFontBg2_png,progressTimerFontBg3_png,progressTimerFontBg4_png,progressTimerFontBg5_png,progressTimerFontBg6_png,progressTimerFontBg7_png,progressTimerFontBg8_png,qznn_tips_btn1_1_png,qznn_btn4_png,qznn_btn4_1_png,qznn_tips_btn1_png",
+			"keys": "loding_json,loding_bg_jpg,femalecow_0_mp3,femalecow_1_mp3,femalecow_10_mp3,femalecow_11_mp3,femalecow_12_mp3,femalecow_13_mp3,femalecow_14_mp3,femalecow_2_mp3,femalecow_3_mp3,femalecow_4_mp3,femalecow_5_mp3,femalecow_6_mp3,femalecow_7_mp3,femalecow_8_mp3,femalecow_9_mp3,malecow_0_mp3,malecow_1_mp3,malecow_10_mp3,malecow_11_mp3,malecow_12_mp3,malecow_13_mp3,malecow_14_mp3,malecow_2_mp3,malecow_3_mp3,malecow_4_mp3,malecow_5_mp3,malecow_6_mp3,malecow_7_mp3,malecow_8_mp3,malecow_9_mp3,nn_betAll_mp3,nn_betOne_mp3,nn_bg_mp3,nn_carddone_mp3,nn_carddone1_mp3,nn_collectgold_mp3,nn_Dcollectgold_mp3,nn_dealcard_mp3,nn_gamestart_mp3,nn_LampEnd_mp3,nn_LampRun_mp3,nn_montageerror_mp3,nn_pentakill_mp3,nn_scrollnumber_mp3,nn_sendcard_mp3,nn_wingold_mp3,window_open_mp3,qznn_btn_beishu1_1_png,qznn_btn_buqiang_1_png,qznn_btn_beishu2_1_png,resumeGameBg_1_png,nn_btn_meiniu1_1_png,nn_btn_youniu1_1_png,qznn_tips_tittle_png,nn_bg1_png,nn_close_png,hall_bg_mp3,qznn_bg_mp3,qznn_fapai_mp3,qznn_tongpei_mp3,qznn_win_all_mp3,qznn_txkbg_png,qznn_txkbg1_png,img_shufen_，_png,img_shufen_._png,img_shufen_-_png,progressTimerFontBg9_png,progressTimerFontBg0_png,progressTimerFontBg1_png,progressTimerFontBg2_png,progressTimerFontBg3_png,progressTimerFontBg4_png,progressTimerFontBg5_png,progressTimerFontBg6_png,progressTimerFontBg7_png,progressTimerFontBg8_png,qznn_tips_btn1_1_png,qznn_btn4_png,qznn_btn4_1_png,qznn_tips_btn1_png,nn_wancheng_png",
 			"name": "preload"
 		},
 		{
@@ -3677,6 +3677,11 @@
 			"name": "qznn_tips_btn1_png",
 			"type": "image",
 			"url": "assets/game/qznn/qznn_tips_btn1.png"
+		},
+		{
+			"name": "nn_wancheng_png",
+			"type": "image",
+			"url": "assets/game/qznn/nn_wancheng.png"
 		}
 	]
 }
