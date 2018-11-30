@@ -47,14 +47,17 @@ class QZNNView extends eui.Component {
     public imghead1: eui.Image;
     public labelHead1: eui.Label;
     public labelGold1: eui.Label;
+    public img_zhuang_0_1: eui.Image;
     public grpHead2: eui.Group;
     public imghead2: eui.Image;
     public labelHead2: eui.Label;
     public labelGold2: eui.Label;
+    public img_zhuang_0_2: eui.Image;
     public grpHead3: eui.Group;
     public imghead3: eui.Image;
     public labelHead3: eui.Label;
     public labelGold3: eui.Label;
+    public img_zhuang_0_3: eui.Image;
     public btnCharge: eui.Image;
     public titleName: eui.Label;
     public maskhead: eui.Group;
@@ -234,6 +237,7 @@ class QZNNView extends eui.Component {
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
+    public img_zhuang_0_0: eui.Image;
     public _whether_: eui.Group;
     public _whether_0: eui.Image;
     public _img_0: eui.Image;
@@ -299,6 +303,7 @@ class QZNNView extends eui.Component {
     public _meiniu: eui.Button;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
+
 
 
 
@@ -389,11 +394,10 @@ class QZNNView extends eui.Component {
     private zhaungIndex: number = 0;    //庄的位置
 
     private gamestarEff: QZNNGameStart;
-    
+
     private nnbankerEff: egret.MovieClip;
-    private nnvictoryEffect:QZNNVictory;
+    private nnvictoryEffect: QZNNVictory;
     private tongsha: QZNNTongsha;
-    private tongpei: QZNNTongpei;
     private pinpaicuowu: egret.MovieClip;
     //-----------------------------------------------
 
@@ -500,6 +504,11 @@ class QZNNView extends eui.Component {
         this.pinpaiType0.visible = false;
         this.pinpaiType1.visible = false;
         this.pinpaiType2.visible = false;
+
+        this.img_zhuang_0_0.visible = false;
+        this.img_zhuang_0_1.visible = false;
+        this.img_zhuang_0_2.visible = false;
+        this.img_zhuang_0_3.visible = false;
 
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
@@ -760,10 +769,10 @@ class QZNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = true;
 
-        if(!this.gamestarEff){
+        if (!this.gamestarEff) {
             this.gamestarEff = new QZNNGameStart();
-            this.gamestarEff.anchorOffsetX = this.gamestarEff.width/2;
-            this.gamestarEff.anchorOffsetY = this.gamestarEff.height/2;
+            this.gamestarEff.anchorOffsetX = this.gamestarEff.width / 2;
+            this.gamestarEff.anchorOffsetY = this.gamestarEff.height / 2;
             this.gamestarEff.x = xlLib.Global.screenWidth / 2;
             this.gamestarEff.y = xlLib.Global.screenHeight / 2;
         }
@@ -774,8 +783,8 @@ class QZNNView extends eui.Component {
     private addNNVictoryEffect(): void {
         if (!this.nnvictoryEffect) {
             this.nnvictoryEffect = new QZNNVictory();
-            this.nnvictoryEffect.anchorOffsetX = this.nnvictoryEffect.width/2;
-            this.nnvictoryEffect.anchorOffsetY = this.nnvictoryEffect.height/2;
+            this.nnvictoryEffect.anchorOffsetX = this.nnvictoryEffect.width / 2;
+            this.nnvictoryEffect.anchorOffsetY = this.nnvictoryEffect.height / 2;
             this.nnvictoryEffect.x = xlLib.Global.screenWidth / 2;
             this.nnvictoryEffect.y = xlLib.Global.screenHeight / 2;
         }
@@ -786,26 +795,13 @@ class QZNNView extends eui.Component {
     private addTongsha(): void {
         if (!this.tongsha) {
             this.tongsha = new QZNNTongsha();
-            this.tongsha.anchorOffsetX = this.tongsha.width/2;
-            this.tongsha.anchorOffsetY = this.tongsha.height/2;
+            this.tongsha.anchorOffsetX = this.tongsha.width / 2;
+            this.tongsha.anchorOffsetY = this.tongsha.height / 2;
             this.tongsha.x = xlLib.Global.screenWidth / 2;
             this.tongsha.y = xlLib.Global.screenHeight / 2;
         }
         this.tongsha.play();
         this.addChild(this.tongsha);
-    }
-
-     /**通赔 */
-    private addTongpei(): void {
-        if (!this.tongpei) {
-            this.tongpei = new QZNNTongpei();
-            this.tongpei.anchorOffsetX = this.tongpei.width/2;
-            this.tongpei.anchorOffsetY = this.tongpei.height/2;
-            this.tongpei.x = xlLib.Global.screenWidth / 2;
-            this.tongpei.y = xlLib.Global.screenHeight / 2;
-        }
-        this.tongpei.play();
-        this.addChild(this.tongpei);
     }
     /**监听下注 */
     private onbetBack(data: any): void {
@@ -816,7 +812,7 @@ class QZNNView extends eui.Component {
         this._btn_switch.visible = true;
 
         if (data._obj.roomStatus == 4) {
-            // this.acceptbanker(data);
+            this.acceptbanker(data);
         }
 
         for (let i = 0; i < data._obj.hogList.length; i++) {
@@ -939,6 +935,9 @@ class QZNNView extends eui.Component {
     /**设置庄家 */
     private acceptbanker(data: any): void {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
+        this['img_zhuang_0_' + num].visible = true;
+
+        /*
         this.zhaungIndex = num;
         let img: eui.Image = new eui.Image("selectedBankerIcon_png");
         img.x = 15;
@@ -957,7 +956,7 @@ class QZNNView extends eui.Component {
                     this['grpHead' + index].addChild(img);
                 }
             }, i * 100);
-        }
+        }*/
     }
 
     private randomZhuan(num): void {
@@ -1580,9 +1579,6 @@ class QZNNView extends eui.Component {
             this.game_result = 0;
         } else if (this.game_result == 2) {
             this.addTongsha();
-            this.game_result = 0;
-        }else if(this.game_result == 3){
-            this.addTongpei();
             this.game_result = 0;
         }
         this._jixu.visible = true;

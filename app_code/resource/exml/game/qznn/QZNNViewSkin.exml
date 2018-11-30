@@ -7,7 +7,7 @@
 	</e:Group>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true" visible="false"/>
 
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
 		<e:Group id="_my_pai" width="300" height="140" y="498" x="586">
 			<e:Image id="bankerCard_0" x="45.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
 			<e:Image id="bankerCard_1" x="78.25" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
@@ -82,30 +82,33 @@
 
 
 	</e:Group>
-	<e:Group x="0" y="0" width="1472" height="828">
+	<e:Group x="0" y="0" width="1472" height="828" locked="true">
 		<ns1:QZNNHead id="grpHead11" width="20" height="20" x="43.89" y="313" skinName="QZNNHeadSkin" visible="false"/>
 		<ns1:QZNNHead id="grpHead22" width="20" height="20" y="88.11" skinName="QZNNHeadSkin" x="663.68" visible="false"/>
 		<ns1:QZNNHead id="grpHead33" width="20" height="20" x="1270.15" y="313" skinName="QZNNHeadSkin" visible="false"/>
-		<e:Group id="grpHead1" scaleX="1" scaleY="1" width="169.67" anchorOffsetY="0" height="219.33" anchorOffsetX="0" x="40" y="304">
+		<e:Group id="grpHead1" scaleX="1" scaleY="1" width="169.67" anchorOffsetY="0" height="219.33" anchorOffsetX="0" x="40" y="304" locked="true">
 			<e:Image width="169.6" height="218.44" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png" y="0" x="0"/>
 			<e:Image y="46.36" source="nn_por_smallbg_png" x="23.62" width="126" height="126"/>
 			<e:Image id="imghead1" width="126" height="126" y="45.34" x="21.95" source="women7_png"/>
 			<e:Label id="labelHead1" text="世界第一赌神" textColor="0xF2B354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" y="12.06" horizontalCenter="0.16500000000000625"/>
 			<e:Label id="labelGold1" text="1000000" y="176.72" size="30" fontFamily="SimHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" horizontalCenter="-0.33499999999999375"/>
+			<e:Image id="img_zhuang_0_1" width="52" height="52" x="-26" y="-26" source="img_zhuang_1_png" visible="false"/>
 		</e:Group>
-		<e:Group id="grpHead2" scaleX="1" scaleY="1" width="315" anchorOffsetY="0" height="150" anchorOffsetX="0" y="11.82" x="579">
+		<e:Group id="grpHead2" scaleX="1" scaleY="1" width="315" anchorOffsetY="0" height="150" anchorOffsetX="0" y="60" x="579" locked="true">
 			<e:Image width="314.56" height="149.21" source="qznn_txkbg_png" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0"/>
 			<e:Image y="12.35" source="nn_por_smallbg_png" x="12.93" width="126" height="126"/>
 			<e:Image id="imghead2" width="126" height="126" y="11.33" x="11.26" source="women7_png"/>
 			<e:Label id="labelHead2" text="世界第一赌神" x="154.78" y="25.31" textColor="0xF2B354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
 			<e:Label id="labelGold2" text="1000000" x="168.6" y="95.36" size="30" fontFamily="SimHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1"/>
+			<e:Image id="img_zhuang_0_2" width="52" height="52" x="-26" y="-26" source="img_zhuang_1_png" visible="false"/>
 		</e:Group>
-		<e:Group id="grpHead3" scaleX="1" scaleY="1" width="169.67" anchorOffsetY="0" height="219.33" anchorOffsetX="0" x="1262.33" y="304">
+		<e:Group id="grpHead3" scaleX="1" scaleY="1" width="169.67" anchorOffsetY="0" height="219.33" anchorOffsetX="0" x="1262.33" y="304" locked="true">
 			<e:Image width="169.6" height="218.44" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png" y="0" x="0"/>
 			<e:Image y="46.36" source="nn_por_smallbg_png" x="23.62" width="126" height="126"/>
 			<e:Image id="imghead3" width="126" height="126" y="45.34" x="21.95" source="women7_png"/>
 			<e:Label id="labelHead3" text="世界第一赌神" textColor="0xF2B354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" y="12.06" horizontalCenter="0.16500000000000625"/>
 			<e:Label id="labelGold3" text="1000000" y="176.72" size="30" fontFamily="SimHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" horizontalCenter="-0.33499999999999375"/>
+			<e:Image id="img_zhuang_0_3" width="52" height="52" x="-26" y="-26" source="img_zhuang_1_png" visible="false"/>
 		</e:Group>
 
 
@@ -581,7 +584,7 @@
 		<e:Image id="grpTipsInfo" source="nn.d2" y="0" x="0" />
 	</e:Group>
 	<e:Image id="imgBaoZhuang" horizontalCenter="0" verticalCenter="0" source="nn.baozhuang"  locked="true" visible="false"/>
-	<e:Group id="grpCaijin" y="425" horizontalCenter="0" locked="true" visible="false">
+	<e:Group id="grpCaijin" y="425" horizontalCenter="0" visible="false" locked="true">
 		<e:Image source="nn.baocaijin" x="0" y="0" />
 		<e:Rect height="30" width="330" y="-10" horizontalCenter="0" strokeWeight="1" />
 		<e:Label id="grpCaijinLabel" y="-8" horizontalCenter="0" bold="true" textColor="0xFFFF00" />
@@ -593,6 +596,7 @@
 
 		<e:Label id="labelHead0" text="世界第一赌神" x="154.78" y="25.31" textColor="0xf2b354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
 		<e:Label id="labelGold0" text="1000000" x="168.6" y="95.36" size="30" fontFamily="SimHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1"/>
+		<e:Image width="52" height="52" x="-26" y="-26" source="img_zhuang_1_png" id="img_zhuang_0_0" visible="false"/>
 
 
 	</e:Group>
