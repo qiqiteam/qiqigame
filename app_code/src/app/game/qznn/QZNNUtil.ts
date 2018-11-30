@@ -106,6 +106,32 @@ class QZNNUtil {
                 return '五小牛';
         }
     }
+
+    public getCardBmpUrl(index): string {
+            switch (index) {
+                case 0:
+                    return 'qznntype0_tex1_png';
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    return 'qznntype1_tex'+index+"_png";
+                // case 10:
+                //     return 'nn.n11';
+                // case 11:
+                //     return 'nn.n13';
+                // case 12:
+                //     return 'nn.n14';
+                // case 13:
+                //     return 'nn.n12';
+            }
+        }
+
     public getCardType(index): string {
         switch (index) {
             case 0:

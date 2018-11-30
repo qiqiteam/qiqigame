@@ -18,28 +18,28 @@ class QZNNView extends eui.Component {
     public bankerCard_3: eui.Image;
     public bankerCard_4: eui.Image;
     public pinpaiType: eui.Image;
-    public labCardTypeBanker: eui.Image;
+    public labCardTypeBanker: eui.Group;
     public grpCard_0_0: eui.Image;
     public grpCard_0_1: eui.Image;
     public grpCard_0_2: eui.Image;
     public grpCard_0_3: eui.Image;
     public grpCard_0_4: eui.Image;
     public pinpaiType0: eui.Image;
-    public labCardType0: eui.Image;
+    public labCardType0: eui.Group;
     public grpCard_1_0: eui.Image;
     public grpCard_1_1: eui.Image;
     public grpCard_1_2: eui.Image;
     public grpCard_1_3: eui.Image;
     public grpCard_1_4: eui.Image;
     public pinpaiType1: eui.Image;
-    public labCardType1: eui.Image;
+    public labCardType1: eui.Group;
     public grpCard_2_0: eui.Image;
     public grpCard_2_1: eui.Image;
     public grpCard_2_2: eui.Image;
     public grpCard_2_3: eui.Image;
     public grpCard_2_4: eui.Image;
     public pinpaiType2: eui.Image;
-    public labCardType2: eui.Image;
+    public labCardType2: eui.Group;
     public grpHead11: QZNNHead;
     public grpHead22: QZNNHead;
     public grpHead33: QZNNHead;
@@ -399,18 +399,6 @@ class QZNNView extends eui.Component {
     private nnvictoryEffect: QZNNVictory;
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
-    //-----------------------------------------------
-    private niuniuBet: NiuNBei;
-
-    private addNiuNBei(url: string = "qznntype1_tex1"): void {
-        this.niuniuBet = new NiuNBei();
-        this.niuniuBet.anchorOffsetX = this.niuniuBet.width / 2;
-        this.niuniuBet.anchorOffsetY = this.niuniuBet.height / 2;
-        this.niuniuBet.x = 400;
-        this.niuniuBet.y = 500;
-        this.addChild(this.niuniuBet);
-        this.niuniuBet.play(url);
-    }
 
     protected childrenCreated(): void {
 
@@ -598,7 +586,7 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
-            this.addNiuNBei();
+            // this.addNiuNBei();
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -1421,7 +1409,7 @@ class QZNNView extends eui.Component {
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke[index + 1].value[i]]);
         }
-        this['labCardType' + index].source = QZNNUtil.getInstance().getCardType(poke[index + 1].type);
+        this.addNiuniuBei(this['labCardType' + index], poke[index + 1].type);
         this.playClickSound(QZNNUtil.getInstance().getCardMusicType(poke[index + 1].type));
         this['labCardType' + index].visible = true;;
         this['labCardType' + index].width = 98;
@@ -1439,6 +1427,26 @@ class QZNNView extends eui.Component {
         }
         this.effectPlayerIndex++;
     }
+
+    private addNiuniuBei(grp: eui.Group, index: number): void {
+        let bmpurl: string = QZNNUtil.getInstance().getCardBmpUrl(index);
+        let niuniuBet: any = grp.getChildByName("niuniubet") as any;
+        if (!niuniuBet) {
+            if (index == 0) {
+                niuniuBet = new WuNiuNBei();
+            } else {
+                niuniuBet = new NiuNBei();
+            }
+            niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
+            niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
+            niuniuBet.x = 100;
+            niuniuBet.y = -100;
+            grp.addChild(niuniuBet);
+        }
+        let url: string = bmpurl;
+        (niuniuBet as INiuNiuBetEffect).play(url);
+    }
+
     /**自己翻牌 */
     private bankerCardRotation(): void {
         this.pinpaiType.visible = false;
@@ -1453,7 +1461,8 @@ class QZNNView extends eui.Component {
             }, [card, poke.value[i]])
         }
 
-        this.labCardTypeBanker.source = QZNNUtil.getInstance().getCardType(poke.type);
+        this.addNiuniuBei(this.labCardTypeBanker, poke.type);
+
         this.playClickSound(QZNNUtil.getInstance().getCardMusicType(poke.type));
         this.labCardTypeBanker.visible = true;
         this.labCardTypeBanker.width = 98;

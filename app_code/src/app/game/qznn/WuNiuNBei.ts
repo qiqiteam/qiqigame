@@ -1,4 +1,4 @@
-class WuNiuNBei extends eui.Component {
+class WuNiuNBei extends eui.Component implements INiuNiuBetEffect{
     public image:eui.Image;
     public image0:eui.Image;
 
@@ -20,9 +20,8 @@ class WuNiuNBei extends eui.Component {
         this.niuniuanmin.stop();
     }
 
-    public play(src:string):void
+    public play(str:string =""):void
     {
-        this.image0.source = src;
         this.niuniuanmin.play(0);   
     }
 

@@ -7,15 +7,15 @@
 	</e:Group>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true" visible="false"/>
 
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
 		<e:Group id="_my_pai" width="300" height="140" y="604" x="586">
 			<e:Image id="bankerCard_0" x="45.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
 			<e:Image id="bankerCard_1" x="78.25" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
 			<e:Image id="bankerCard_2" x="110.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
 			<e:Image id="bankerCard_3" x="142.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
 			<e:Image id="bankerCard_4" x="174.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
-			<e:Image id="pinpaiType" x="100.5" width="98" height="44" scaleX="1" scaleY="1" y="89" source="nn_wancheng_png"/>
-			<e:Image id="labCardTypeBanker" source="nn.n1" x="100.5" width="98" height="44" scaleX="1" scaleY="1" y="89"/>
+			<e:Image id="pinpaiType" x="100.5" width="98" height="44" scaleX="1" scaleY="1" y="89" source="nn_wancheng_png" visible="false"/>
+			<e:Group id="labCardTypeBanker" x="100.5" width="98" height="44" scaleX="1" scaleY="1" y="89"/>
 		</e:Group>
 
 
@@ -29,22 +29,22 @@
 		<e:Image id="grpCard_0_2" x="292" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
 		<e:Image id="grpCard_0_3" x="324" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
 		<e:Image id="grpCard_0_4" x="356.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" verticalCenter="0"/>
-		<e:Image id="pinpaiType0" x="274" width="98" height="44" scaleX="1" scaleY="1" y="417" source="nn_wancheng_png"/>
-		<e:Image id="labCardType0" source="nn.n1" x="274.5" width="98" height="44" scaleX="1" scaleY="1" verticalCenter="25" visible="false"/>
+		<e:Image id="pinpaiType0" x="274" width="98" height="44" scaleX="1" scaleY="1" y="417" source="nn_wancheng_png" visible="false"/>
+		<e:Group id="labCardType0" x="274.5" width="98" height="44" scaleX="1" scaleY="1" y="417"/>
 		<e:Image id="grpCard_1_0" x="634.55" y="216.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_1_1" x="668" y="216.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_1_2" x="701" y="216.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_1_3" x="734" y="216.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_1_4" x="766.55" y="216.34" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="pinpaiType1" x="674" width="98" height="44" scaleX="1" scaleY="1" y="267" source="nn_wancheng_png" visible="false"/>
-		<e:Image id="labCardType1" source="nn.n1" x="674.55" y="267.34" width="98" height="44" scaleX="1" scaleY="1"/>
+		<e:Group id="labCardType1" x="674.55" y="267.34" width="98" height="44" scaleX="1" scaleY="1"/>
 		<e:Image id="grpCard_2_0" x="1034.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_2_1" x="1066" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_2_2" x="1099" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_2_3" x="1131" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_2_4" x="1163.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="pinpaiType2" x="1092" width="98" height="44" scaleX="1" scaleY="1" y="414" source="nn_wancheng_png" visible="false"/>
-		<e:Image id="labCardType2" source="nn.n1" x="1092.07" y="414.75" width="98" height="44" scaleX="1" scaleY="1"/>
+		<e:Group id="labCardType2"  x="1092.07" y="414.75" width="98" height="44" scaleX="1" scaleY="1"/>
 
 
 

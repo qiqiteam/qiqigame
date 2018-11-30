@@ -1,4 +1,4 @@
-class NiuJiao extends eui.Component {
+class NiuJiao extends eui.Component implements INiuNiuBetEffect{
     public image:eui.Image;
     public image0:eui.Image;
     public image1:eui.Image;
