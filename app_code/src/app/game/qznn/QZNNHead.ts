@@ -32,10 +32,11 @@ class QZNNHead extends eui.Component {
      * _gold 金币
      * _imghead 头像图片
      */
-    public setUserInfo(_name, _gold, _imghead): void {
-        this.imghead.source = _imghead;
-        this.labelName.text = _name;
-        this.labelGold.text = _gold;
+    public setUserInfo(num, _name, _gold, _imghead): void {
+        this['imghead' + num].source = _imghead;
+        this['imghead'+num].source = _imghead;
+        this['labelName'+num].text = _name;
+        this['labelGold'+num].text = _gold;
     }
 
     public setZhuang(value: boolean): void {

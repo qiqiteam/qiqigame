@@ -8,7 +8,8 @@ class EventConst {
 
     //------------------C to S---------------------请求发送服务器协议
 
-   
+    /**发送自己拼牌顺序 */
+    public static niuniu_manual: string = "niuniu_manual";
 
     /**加入房间 */
     public static joinroom: string = "joinroom";
