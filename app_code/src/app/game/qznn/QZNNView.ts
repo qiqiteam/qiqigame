@@ -393,6 +393,7 @@ class QZNNView extends eui.Component {
     private nnbankerEff: egret.MovieClip;
     private nnvictoryEffect:QZNNVictory;
     private tongsha: QZNNTongsha;
+    private tongpei: QZNNTongpei;
     private pinpaicuowu: egret.MovieClip;
     //-----------------------------------------------
 
@@ -792,6 +793,19 @@ class QZNNView extends eui.Component {
         }
         this.tongsha.play();
         this.addChild(this.tongsha);
+    }
+
+     /**通赔 */
+    private addTongpei(): void {
+        if (!this.tongpei) {
+            this.tongpei = new QZNNTongpei();
+            this.tongpei.anchorOffsetX = this.tongpei.width/2;
+            this.tongpei.anchorOffsetY = this.tongpei.height/2;
+            this.tongpei.x = xlLib.Global.screenWidth / 2;
+            this.tongpei.y = xlLib.Global.screenHeight / 2;
+        }
+        this.tongpei.play();
+        this.addChild(this.tongpei);
     }
     /**监听下注 */
     private onbetBack(data: any): void {
@@ -1566,6 +1580,9 @@ class QZNNView extends eui.Component {
             this.game_result = 0;
         } else if (this.game_result == 2) {
             this.addTongsha();
+            this.game_result = 0;
+        }else if(this.game_result == 3){
+            this.addTongpei();
             this.game_result = 0;
         }
         this._jixu.visible = true;

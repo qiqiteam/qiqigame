@@ -56,6 +56,7 @@
 		"bin-debug/app/game/qznn/QZNNHead.js",
 		"bin-debug/app/game/qznn/QZNNroomView.js",
 		"bin-debug/app/game/qznn/QZNNScene.js",
+		"bin-debug/app/game/qznn/QZNNTongpei.js",
 		"bin-debug/app/game/qznn/QZNNTongsha.js",
 		"bin-debug/app/game/qznn/QZNNUtil.js",
 		"bin-debug/app/game/qznn/QZNNVictory.js",
@@ -83,8 +84,8 @@
 		"bin-debug/app/game/welfare/WelfareView.js",
 		"bin-debug/app/game/zjh/ZJHHead.js",
 		"bin-debug/app/game/zjh/ZJHroomView.js",
-		"bin-debug/app/game/zjh/ZJHScene.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/game/zjh/ZJHUtil.js",
 		"bin-debug/app/game/zjh/ZJHView.js",
 		"bin-debug/app/HttpAddress.js",
 		"bin-debug/app/interface/IGameInformation.js",
@@ -155,6 +156,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/game/zjh/ZJHUtil.js"
+		"bin-debug/app/game/zjh/ZJHScene.js"
 	]
 }
