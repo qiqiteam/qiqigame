@@ -301,8 +301,10 @@ class QZNNView extends eui.Component {
     public _puke_4: eui.Image;
     public _youniu: eui.Button;
     public _meiniu: eui.Button;
+    public _niujia: eui.Group;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
+
 
 
 
@@ -507,6 +509,11 @@ class QZNNView extends eui.Component {
         this.img_zhuang_0_1.visible = false;
         this.img_zhuang_0_2.visible = false;
         this.img_zhuang_0_3.visible = false;
+
+        this._xiabei_0.x = 357.73;
+        this._xiabei_1.x = 368.16;
+        this._xiabei_2.x = 503.16;
+        this._xiabei_3.x = 1146.78;
 
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
@@ -923,13 +930,17 @@ class QZNNView extends eui.Component {
     private jiazhu(data: number, num: number) {
         if (data >= 10) {
             this['_xiabei_0_' + num].visible = true;
+            this['_xiabei_0_' + num].source = 'img_XB_png';
             this['_xiabei_' + num].visible = true;
             this['_xiabei_0_0_' + num].visible = true;
             this['_xiabei_' + num].source = 'img_XB_' + data % 10 + '_png';
             this['_xiabei_0_0_' + num].source = 'img_XB_0_0_' + 1 + '_png';
+
         } else if (data < 10) {
             this['_xiabei_0_' + num].visible = true;
+            this['_xiabei_0_' + num].source = 'img_XB1_png';
             this['_xiabei_' + num].visible = true;
+            this['_xiabei_' + num].x -= 20;
             this['_xiabei_0_0_' + num].visible = false;
             this['_xiabei_' + num].source = 'img_XB_' + data + '_png';
         }
@@ -1375,6 +1386,14 @@ class QZNNView extends eui.Component {
             return;
         }
         this._pingpai.visible = true;
+
+        var texiao = new NiuJiao();
+        texiao.play();
+        texiao.x -= 160;
+        texiao.y -= 130;
+        this._niujia.addChild(texiao);
+
+
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
         card.x = xlLib.Global.screenWidth / 2;
         card.y = xlLib.Global.screenHeight / 2;
@@ -1439,8 +1458,8 @@ class QZNNView extends eui.Component {
             }
             niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
             niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
-            niuniuBet.x = 100;
-            niuniuBet.y = -100;
+            niuniuBet.x = 80;
+            niuniuBet.y -= 80;
             grp.addChild(niuniuBet);
         }
         let url: string = bmpurl;
@@ -1714,6 +1733,11 @@ class QZNNView extends eui.Component {
         this.pinpaiType1.visible = false;
         this.pinpaiType2.visible = false;
         this.grpCountdown.visible = true;
+
+        this._xiabei_0.x = 357.73;
+        this._xiabei_1.x = 368.16;
+        this._xiabei_2.x = 503.16;
+        this._xiabei_3.x = 1146.78;
 
     }
 

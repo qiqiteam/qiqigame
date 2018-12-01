@@ -7,7 +7,7 @@
 	</e:Group>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true" visible="false"/>
 
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
 		<e:Group id="_my_pai" width="300" height="140" y="604" x="586">
 			<e:Image id="bankerCard_0" x="45.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
 			<e:Image id="bankerCard_1" x="78.25" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
@@ -621,10 +621,10 @@
 		<e:Image id="_whether_1" x="312" y="318" source="img_BQ_0_png"/>
 		<e:Image id="_img_1" x="348" y="317" source="img_1_png"/>
 	</e:Group>
-	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
-		<e:Image id="_xiabei_0_0" source="img_XB_png" x="271" y="573"/>
-		<e:Image id="_xiabei_0" x="357.68" y="590" source="img_XB_1_png"/>
-		<e:Image id="_xiabei_0_0_0" x="334.88" y="590" source="img_XB_1_png"/>
+	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true">
+		<e:Image id="_xiabei_0_0" x="271" y="573" source="img_XB_png"/>
+		<e:Image id="_xiabei_0" x="357.73" y="590" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_0_0_0" x="334.93" y="590" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_1" source="img_XB_png" x="283" y="307"/>
 		<e:Image id="_xiabei_1" x="368.16" y="324" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_0_1" x="345.36" y="324" source="img_XB_1_png"/>
@@ -632,7 +632,7 @@
 		<e:Image id="_xiabei_2" x="503.16" y="119" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_0_2" x="483.4" y="119" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_3" source="img_XB_png" x="1062" y="299"/>
-		<e:Image id="_xiabei_3" x="1144.12" y="316" source="img_XB_1_png"/>
+		<e:Image id="_xiabei_3" x="1146.78" y="316" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_0_3" x="1125.88" y="316" source="img_XB_1_png"/>
 	</e:Group>
 	<e:Group id="_group_qiang" width="800" height="80" y="542.1" anchorOffsetX="0" horizontalCenter="62" locked="true" visible="false">
@@ -767,12 +767,12 @@
 		</e:Button>
 
 	</e:Group>
-	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" locked="true" visible="false">
-		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513" locked="true"/>
-		<e:Label id="_zhi_0" text="10" x="544" y="546" bold="true" textColor="0xffffff"/>
-		<e:Label text="10" x="660" y="546" id="_zhi_1" bold="true" textColor="0xffffff"/>
-		<e:Label text="10" x="774" y="546" id="_zhi_2" bold="true" textColor="0xffffff"/>
-		<e:Label text="30" x="894" y="546" id="_zhi_3" bold="true" textColor="0xffffff"/>
+	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" visible="false">
+		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513"/>
+		<e:Label id="_zhi_0" text="10" x="551.6" y="546" bold="true" textColor="0xffffff"/>
+		<e:Label text="10" x="655.44" y="546" id="_zhi_1" bold="true" textColor="0xffffff"/>
+		<e:Label text="10" x="760.32" y="546" id="_zhi_2" bold="true" textColor="0xffffff"/>
+		<e:Label text="30" x="884.88" y="546" id="_zhi_3" bold="true" textColor="0xffffff"/>
 
 
 		<e:Image id="_puke_0" x="420" y="646.63" source="nn.card_101" anchorOffsetX="0" width="124" anchorOffsetY="0" height="175"/>
@@ -799,6 +799,7 @@
 			</e:skinName>
 
 		</e:Button>
+		<e:Group id="_niujia" width="128" height="128" x="389.03" y="508.84"/>
 
 	</e:Group>
 	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">

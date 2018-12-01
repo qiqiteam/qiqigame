@@ -18,12 +18,12 @@ class NiuJiao extends eui.Component implements INiuNiuBetEffect{
 
     private onTweenComplete(evt:egret.Event):void
     {
-        this.niujiao.stop();
+        this.niujiao.play(0);
     }
 
     public play():void
     {
-        this.niujiao.play(-1);   
+        this.niujiao.play(0);   
     }
 
 
