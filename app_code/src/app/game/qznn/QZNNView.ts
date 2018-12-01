@@ -402,7 +402,7 @@ class QZNNView extends eui.Component {
     private nnvictoryEffect: QZNNVictory;
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
-
+    private  texiao:NiuJiao;
     protected childrenCreated(): void {
 
         this.getOrginCardPos();
@@ -525,6 +525,11 @@ class QZNNView extends eui.Component {
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
+
+        this.texiao = new NiuJiao();
+        this.texiao.x -= 160;
+        this.texiao.y -= 130;
+        this._pingpai.addChild(this.texiao);
     }
 
     /**
@@ -627,6 +632,7 @@ class QZNNView extends eui.Component {
             if (this.arr_fen[0] != 0 && this.arr_fen[1] != 0 && this.arr_fen[2] != 0) {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
+                        this.texiao.stop();
                     this._my_pai.visible = true;
                     this.returnpinpai(1);
                 } else {
@@ -641,6 +647,7 @@ class QZNNView extends eui.Component {
                 this.ppcuowu();
             } else {
                 this._pingpai.visible = false;
+                this.texiao.stop();
                 this._my_pai.visible = true;
                 this.returnpinpai(0);
             }
@@ -915,6 +922,7 @@ class QZNNView extends eui.Component {
         this.cardResult = result;
 
         this._pingpai.visible = false;
+            this.texiao.stop();
         this._my_pai.visible = true;
 
         this.interval = setInterval(this.playerCardRotation.bind(this), 800);
@@ -1419,12 +1427,8 @@ class QZNNView extends eui.Component {
             return;
         }
         this._pingpai.visible = true;
+        this.texiao.play();
 
-        var texiao = new NiuJiao();
-        texiao.play();
-        texiao.x -= 160;
-        texiao.y -= 130;
-        this._niujia.addChild(texiao);
 
 
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
@@ -1701,6 +1705,7 @@ class QZNNView extends eui.Component {
 
         }
         this._pingpai.visible = false;
+        this.texiao.stop();
         this._my_pai.visible = false;
 
         this.labCardTypeBanker.visible = false;
