@@ -629,7 +629,7 @@ public _animation_start:uiCore.Animation;
         //let a = new eui.Image;
         //a.localToGlobal();
         //moveGoldTo
-
+/*
         var container = new egret.DisplayObjectContainer();
 
 
@@ -660,8 +660,8 @@ public _animation_start:uiCore.Animation;
         armature.animation.gotoAndPlay("newAnimation");
 
         egret.startTick(this.onTicker, this);
-
-        this.suiCoreGameEndScoreResultEffect(this, true);
+*/
+        //this.suiCoreGameEndScoreResultEffect(this, true);
     }
     private _time:number;
     private onTicker(timeStamp:number) {
@@ -1990,7 +1990,7 @@ public _animation_start:uiCore.Animation;
         
     }
 
-    public suiCoreGameEndScoreResultEffect(player, state) {
+    public suiCoreGameEndScoreResultEffect(player, state, score) {
         let label = new eui.BitmapLabel;
         if(state == true) {
             label.font = "qznn_win_fnt";
@@ -2004,23 +2004,10 @@ public _animation_start:uiCore.Animation;
         label.x = 500;
         label.y = 500;
         player.addChild(label);
-
-        var r = {
-            useEasing: false,
-            useGrouping: true,
-            separator: ",",
-            decimal: "."
-        }
-        var o = /^[+-]?[1-9]?[0-9]*\.[0-9]*$/;
-        var l = "2000"
-        var c = o.test(l.toString()) ? 2 : 0;
-        //let h = new CountUp(label , 0, 500 , c, 2.5, r);
-        //h.start();
-        //var tt =  new CountUp(label , 0, 500 , c, 2.5, r);
-        // var aa = new CountUp();
-        // aa.new(label , 0, 500 , c, 2.5, r);
-        
+        //uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 0, num: score, regulator: 50 });
     }
+
+
 /*
     public suiCoreGameEndScoreResultEffect1(e) {
         var t = e.isMyself() ? e.verticalCenter - .65 * e.head.height : e.verticalCenter - .75 * e.head.height
@@ -2255,6 +2242,7 @@ public _animation_start:uiCore.Animation;
         }
     }
 */
+
     private resetGame(): void {
         //for (var i = 0; i < 4; i++) {
         //    this['labBetsPool' + i].text = '0';
