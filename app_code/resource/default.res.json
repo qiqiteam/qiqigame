@@ -3972,6 +3972,11 @@
 			"url": "assets/game/qznn/qznn_tip_bg.png",
 			"type": "image",
 			"name": "qznn_tip_bg_png"
+		},
+		{
+			"url": "assets/game/qznn/img_XB1.png",
+			"type": "image",
+			"name": "img_XB1_png"
 		}
 	]
 }
