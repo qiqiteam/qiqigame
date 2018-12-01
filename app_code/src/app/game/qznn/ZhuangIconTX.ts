@@ -1,7 +1,4 @@
 class ZhuangIconTX extends eui.Component {
-    public image:eui.Image;
-    public image0:eui.Image;
-
 
     public niuniuanmin: egret.tween.TweenGroup;
     constructor() {
@@ -20,9 +17,8 @@ class ZhuangIconTX extends eui.Component {
         this.niuniuanmin.stop();
     }
 
-    public play(src:string):void
+    public play():void
     {
-        this.image0.source = src;
         this.niuniuanmin.play(0);   
     }
 

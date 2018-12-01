@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="QZNNHHeadEffSkin" width="300" height="160" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+<e:Skin class="QZNNHHeadEffSkin" width="400" height="260" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
 	<w:Declarations>
-		<tween:TweenGroup id="ami">
+		<tween:TweenGroup>
 			<tween:TweenItem target="{image}">
-				<tween:Set/>
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{50}" y="{50}"/>
+					</tween:props>
+				</tween:Set>
 				<tween:To duration="500">
 					<tween:props>
 						<e:Object alpha="{0.7}"/>

@@ -40,24 +40,18 @@ class QZNNView extends eui.Component {
     public grpCard_2_4: eui.Image;
     public pinpaiType2: eui.Image;
     public labCardType2: eui.Group;
-    public grpHead11: QZNNHead;
-    public grpHead22: QZNNHead;
-    public grpHead33: QZNNHead;
     public grpHead1: eui.Group;
     public imghead1: eui.Image;
     public labelHead1: eui.Label;
     public labelGold1: eui.Label;
-    public img_zhuang_0_1: eui.Image;
     public grpHead2: eui.Group;
     public imghead2: eui.Image;
     public labelHead2: eui.Label;
     public labelGold2: eui.Label;
-    public img_zhuang_0_2: eui.Image;
     public grpHead3: eui.Group;
     public imghead3: eui.Image;
     public labelHead3: eui.Label;
     public labelGold3: eui.Label;
-    public img_zhuang_0_3: eui.Image;
     public btnCharge: eui.Image;
     public titleName: eui.Label;
     public maskhead: eui.Group;
@@ -237,7 +231,6 @@ class QZNNView extends eui.Component {
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
-    public img_zhuang_0_0: eui.Image;
     public _whether_: eui.Group;
     public _whether_0: eui.Image;
     public _img_0: eui.Image;
@@ -306,7 +299,6 @@ class QZNNView extends eui.Component {
     public _btn_meun: eui.Button;
     public _tishi: eui.Group;
     public _tishi_text: eui.Label;
-
 
 
 
@@ -406,6 +398,8 @@ class QZNNView extends eui.Component {
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
     private texiao: NiuJiao;
+
+    private niuniuTX: ZhuangIconTX;
 
     private addNNEff(): void {
         if (!this.nnEff) {
@@ -548,11 +542,6 @@ class QZNNView extends eui.Component {
         this.pinpaiType0.visible = false;
         this.pinpaiType1.visible = false;
         this.pinpaiType2.visible = false;
-
-        this.img_zhuang_0_0.visible = false;
-        this.img_zhuang_0_1.visible = false;
-        this.img_zhuang_0_2.visible = false;
-        this.img_zhuang_0_3.visible = false;
 
         this._xiabei_0.x = 295.61;
         this._xiabei_1.x = 368.16;
@@ -1026,7 +1015,15 @@ class QZNNView extends eui.Component {
     /**设置庄家 */
     private acceptbanker(data: any): void {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
-        this['img_zhuang_0_' + num].visible = true;
+
+        // this.niuniuTX = new ZhuangIconTX();
+        // this.niuniuTX.x = 0;
+        // this.niuniuTX.y = 0;
+        // this.niuniuTX.play();
+        // this['grpHead' + num].addChild(this.niuniuTX);
+
+
+
 
         if (num == 0) {
             this._tishi.visible = true;
@@ -1537,20 +1534,28 @@ class QZNNView extends eui.Component {
         let niuniuBet: any = grp.getChildByName("niuniubet") as any;
         if (niuniuBet && niuniuBet.parent) {
             niuniuBet.parent.removeChild(niuniuBet);
-            niuniuBet = null;
+            niuniuBet = null
         }
         if (!niuniuBet) {
             if (index == 0) {
                 niuniuBet = new WuNiuNBei();
-            } else if (index < 10) {
+            }
+            else if (index < 10) {
                 niuniuBet = new NiuNBei();
-            } else {
+            }
+            else {
+                if (index == 10) {
+                    this.addNNEff();
+                } else if (index == 13) {
+                    this.addWhnEff();
+                }
                 niuniuBet = new TenshuNiuBei();
             }
             niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
             niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
             niuniuBet.x = 80;
             niuniuBet.y -= 80;
+            niuniuBet.name = "niuniubet";
             grp.addChild(niuniuBet);
         }
         let url: string = bmpurl;
