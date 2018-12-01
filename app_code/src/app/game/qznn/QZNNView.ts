@@ -1548,6 +1548,11 @@ class QZNNView extends eui.Component {
                 niuniuBet = new NiuNBei();
             }
             else{
+                if(index == 10){
+                   this.addNNEff();
+                }else if(index == 13){
+                    this.addWhnEff();
+                }
                 niuniuBet = new TenshuNiuBei();
             }
             niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
