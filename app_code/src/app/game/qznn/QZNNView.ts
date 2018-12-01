@@ -44,14 +44,17 @@ class QZNNView extends eui.Component {
     public imghead1: eui.Image;
     public labelHead1: eui.Label;
     public labelGold1: eui.Label;
+    public _zhuang_img1: eui.Image;
     public grpHead2: eui.Group;
     public imghead2: eui.Image;
     public labelHead2: eui.Label;
     public labelGold2: eui.Label;
+    public _zhuang_img2: eui.Image;
     public grpHead3: eui.Group;
     public imghead3: eui.Image;
     public labelHead3: eui.Label;
     public labelGold3: eui.Label;
+    public _zhuang_img3: eui.Image;
     public btnCharge: eui.Image;
     public titleName: eui.Label;
     public maskhead: eui.Group;
@@ -231,6 +234,7 @@ class QZNNView extends eui.Component {
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
+    public _zhuang_img0: eui.Image;
     public _whether_: eui.Group;
     public _whether_0: eui.Image;
     public _img_0: eui.Image;
@@ -398,8 +402,11 @@ class QZNNView extends eui.Component {
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
     private texiao: NiuJiao;
-
     private niuniuTX: ZhuangIconTX;
+    private niuniukuang: NiuZhang0;
+    private niuniukuang1: NiuZhang1;
+
+
 
     private addNNEff(): void {
         if (!this.nnEff) {
@@ -554,6 +561,12 @@ class QZNNView extends eui.Component {
         this.grpHead3.visible = false;
 
         this._tishi.visible = false;
+
+        this._zhuang_img0.visible = false;
+        this._zhuang_img1.visible = false;
+        this._zhuang_img2.visible = false;
+        this._zhuang_img3.visible = false;
+
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
@@ -1003,6 +1016,7 @@ class QZNNView extends eui.Component {
             this['_xiabei_' + num].source = 'img_XB_' + data % 10 + '_png';
             this['_xiabei_0_0_' + num].source = 'img_XB_0_0_' + 1 + '_png';
 
+
         } else if (data < 10) {
             this['_xiabei_0_' + num].visible = true;
             this['_xiabei_0_' + num].source = 'img_XB1_png';
@@ -1015,18 +1029,31 @@ class QZNNView extends eui.Component {
     /**设置庄家 */
     private acceptbanker(data: any): void {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
-
-        if(!this.niuniuTX){
+        this['_zhuang_img' + num].visible = true;
+        if (num % 2 == 0) {
+            if (!this.niuniukuang) {
+                this.niuniukuang = new NiuZhang0();
+                this.niuniukuang.x = -72;
+                this.niuniukuang.y = -88;
+                this.niuniukuang.play();
+            }
+            this['grpHead' + num].addChild(this.niuniukuang);
+        } else {
+            if (!this.niuniukuang1) {
+                this.niuniukuang1 = new NiuZhang1();
+                this.niuniukuang1.x = -125;
+                this.niuniukuang1.y = -42;
+                this.niuniukuang1.play();
+            }
+            this['grpHead' + num].addChild(this.niuniukuang1);
+        }
+        if (!this.niuniuTX) {
             this.niuniuTX = new ZhuangIconTX();
-            this.niuniuTX.x = 0;
-            this.niuniuTX.y = 0;
+            this.niuniuTX.x = -180;
+            this.niuniuTX.y = -140;
             this.niuniuTX.play();
         }
         this['grpHead' + num].addChild(this.niuniuTX);
-
-
-
-
         if (num == 0) {
             this._tishi.visible = true;
             this._tishi_text.text = "请等待闲家下注..."
@@ -1833,9 +1860,9 @@ class QZNNView extends eui.Component {
         this.pinpaiType2.visible = false;
         this.grpCountdown.visible = true;
 
-        this._xiabei_0.x = 357.73;
+        this._xiabei_0.x = 295.61;
         this._xiabei_1.x = 368.16;
-        this._xiabei_2.x = 503.16;
+        this._xiabei_2.x = 530.48;
         this._xiabei_3.x = 1146.78;
 
         this.grpHead0.visible = false;
