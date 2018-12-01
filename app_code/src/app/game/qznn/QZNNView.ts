@@ -40,9 +40,6 @@ class QZNNView extends eui.Component {
     public grpCard_2_4: eui.Image;
     public pinpaiType2: eui.Image;
     public labCardType2: eui.Group;
-    public grpHead11: QZNNHead;
-    public grpHead22: QZNNHead;
-    public grpHead33: QZNNHead;
     public grpHead1: eui.Group;
     public imghead1: eui.Image;
     public labelHead1: eui.Label;
@@ -310,7 +307,6 @@ class QZNNView extends eui.Component {
 
 
 
-
     public arr: eui.Image[] = [null, null, null];
 
     public score: number[] = [0, 0, 0, 0, 0];   //牌值 '12'
@@ -328,6 +324,7 @@ class QZNNView extends eui.Component {
     public niu: number = 0;                    //有没有牛
 
     public zijipokes: number[] = [0, 0, 0, 0, 0];    //自己的牌
+
     ///----------------------------------------------------------------
 
     public time: number;        //秒数
@@ -402,7 +399,8 @@ class QZNNView extends eui.Component {
     private nnvictoryEffect: QZNNVictory;
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
-    private  texiao:NiuJiao;
+    private texiao: NiuJiao;
+
     protected childrenCreated(): void {
 
         this.getOrginCardPos();
@@ -511,9 +509,9 @@ class QZNNView extends eui.Component {
         this.img_zhuang_0_2.visible = false;
         this.img_zhuang_0_3.visible = false;
 
-        this._xiabei_0.x = 357.73;
+        this._xiabei_0.x = 295.61;
         this._xiabei_1.x = 368.16;
-        this._xiabei_2.x = 503.16;
+        this._xiabei_2.x = 530.48;
         this._xiabei_3.x = 1146.78;
 
         this.grpHead0.visible = false;
@@ -632,7 +630,7 @@ class QZNNView extends eui.Component {
             if (this.arr_fen[0] != 0 && this.arr_fen[1] != 0 && this.arr_fen[2] != 0) {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
-                        this.texiao.stop();
+                    this.texiao.stop();
                     this._my_pai.visible = true;
                     this.returnpinpai(1);
                 } else {
@@ -920,7 +918,7 @@ class QZNNView extends eui.Component {
         this.cardResult = result;
 
         this._pingpai.visible = false;
-            this.texiao.stop();
+        this.texiao.stop();
         this._my_pai.visible = true;
 
         this.interval = setInterval(this.playerCardRotation.bind(this), 800);
@@ -932,6 +930,8 @@ class QZNNView extends eui.Component {
         this._whether_.visible = false;
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._btn_switch.visible = false;
+            this._tishi.visible = true;
+            this._tishi_text.text = "请等待其他闲家下注...";
         }
         if (data._obj.code == 200) {
             this.jiazhu(data._obj.hogOrBet, data._obj.index)
@@ -987,13 +987,12 @@ class QZNNView extends eui.Component {
     /**设置庄家 */
     private acceptbanker(data: any): void {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
+
         this['img_zhuang_0_' + num].visible = true;
 
         this._tishi.visible = true;
         if (num == 0) {
             this._tishi_text.text = "请等待闲家下注..."
-        } else {
-            this._tishi_text.text = "请等待其他闲家下注..."
         }
         /*
         this.zhaungIndex = num;
@@ -1090,6 +1089,9 @@ class QZNNView extends eui.Component {
 
     /** num 几号玩家  _name 名字    _gold 金币   _imghead 头像图片*/
     public setUserInfo(num, _name, _gold, _imghead): void {
+        // this.imghead1
+        // this.labelHead1
+        // this.labelGold1
         this['imghead' + num].source = _imghead;
         this['labelHead' + num].text = _name;
         this['labelGold' + num].text = _gold;

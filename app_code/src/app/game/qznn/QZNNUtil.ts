@@ -167,6 +167,7 @@ class QZNNUtil {
                 return 'nn.n12';
         }
     }
+    /**牛牛音乐 */
     public getCardMusicType(index): string {
         switch (index) {
             case 0:
