@@ -18,6 +18,7 @@
 		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/views/GameDoc.js",
 		"bin-debug/views/GameScene.js",
+		"bin-debug/app/component/Hint.js",
 		"bin-debug/app/component/Inthematch.js",
 		"bin-debug/app/component/TipsLoading.js",
 		"bin-debug/app/component/AlertDialog.js",

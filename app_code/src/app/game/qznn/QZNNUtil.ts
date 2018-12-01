@@ -294,7 +294,7 @@ class QZNNUtil {
     public getSoundEffect(type): string {
         switch (type) {
             case 0:
-                return 'hall_bg';    //背景音乐
+                return 'qznn_bg';    //背景音乐
             case 1:
                 return 'nn.jackpot'; //自己赢得最多
             case 2:
@@ -321,6 +321,15 @@ class QZNNUtil {
                 return 'nn_montageerror';    //拼牌失败
             case 13:
                 return 'nn_LampRun';         //倒计时
+            case 14:
+                return 'nn_gamestart';         //游戏开始
+            case 15:
+                return 'nn_wingold';         //胜利
+            case 16:
+                return 'qznn_win_all';         //通杀
+            case 17:
+                return 'qznn_tongpei';         //通赔
+
 
         }
     }

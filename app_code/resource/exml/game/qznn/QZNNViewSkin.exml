@@ -4,6 +4,8 @@
 	<e:Group width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" width="100%" height="100%" source="img_beijing_jpg" locked="true"/>
 		<e:Image source="qznn_game_desk_0_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
+		<e:Image source="gameID_png" x="125.1" y="17.99" locked="true"/>
+		<e:Label id="_paijubh" text="50-1543687800-31296807-1" x="245.48" y="24.99" textColor="0xe0a500" size="26" locked="true"/>
 	</e:Group>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true" visible="false"/>
 
@@ -82,7 +84,7 @@
 
 
 	</e:Group>
-	<e:Group x="0" y="0" width="1472" height="828">
+	<e:Group x="0" y="0" width="1472" height="828" locked="true">
 		<e:Group id="grpHead1" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" y="334" x="77.93" locked="true">
 			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
 			<e:Image id="imghead1" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>
@@ -686,18 +688,18 @@
 
 		</e:Button>
 		<e:Image source="btn_BQ_0_png" x="13.92" touchEnabled="false" y="8"/>
-		<e:Image x="237.76" touchEnabled="false" source="img_BQ_0_1_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="265.34" y="18" touchEnabled="false"/>
-		<e:Image x="406.83" touchEnabled="false" source="img_BQ_0_2_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="441.13" y="18" touchEnabled="false"/>
-		<e:Image x="589.97" touchEnabled="false" source="img_BQ_0_3_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="621.6" y="18" touchEnabled="false"/>
+		<e:Image x="240.42" touchEnabled="false" y="22.67" source="btn_Q1_0_png"/>
+		<e:Image x="265.34" y="25" touchEnabled="false" source="bar_bet_times_png"/>
+		<e:Image x="413.48" touchEnabled="false" y="24" source="btn_Q2_0_png"/>
+		<e:Image x="441.13" y="25" touchEnabled="false" source="bar_bet_times_png"/>
+		<e:Image x="596.62" touchEnabled="false" y="24" source="btn_Q3_0_png"/>
+		<e:Image x="621.6" y="25" touchEnabled="false" source="bar_bet_times_png"/>
 
 
-		<e:Image x="767.09" touchEnabled="false" source="img_BQ_0_4_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="798.72" y="18" touchEnabled="false"/>
+		<e:Image x="773.74" touchEnabled="false" y="24" source="btn_Q4_0_png"/>
+		<e:Image x="798.72" y="25" touchEnabled="false" source="bar_bet_times_png"/>
 	</e:Group>
-	<e:Group id="_btn_switch" width="941.34" height="80" y="542.1" anchorOffsetX="0" x="265" visible="false" locked="true">
+	<e:Group id="_btn_switch" width="941.34" height="80" y="542.1" anchorOffsetX="0" x="265" locked="true" visible="false">
 		<e:Button id="_btn_double_1" label="" x="0" y="2">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">

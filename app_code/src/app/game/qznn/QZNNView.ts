@@ -9,6 +9,7 @@ class QZNNView extends eui.Component {
     }
     private r: any = null;
 
+    public _paijubh: eui.Label;
     public grpCoins: eui.Group;
     public grpCard: eui.Group;
     public _my_pai: eui.Group;
@@ -409,6 +410,7 @@ class QZNNView extends eui.Component {
 
     private nnvictoryEffect: QZNNVictory;
     private tongsha: QZNNTongsha;
+    private tongpei: QZNNTongpei;
     private pinpaicuowu: egret.MovieClip;
     private texiao: NiuJiao;
     private niuniuTX: ZhuangIconTX;
@@ -658,6 +660,7 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
+
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -900,6 +903,18 @@ class QZNNView extends eui.Component {
         this.tongsha.play();
         this.addChild(this.tongsha);
     }
+    /**通杀 */
+    private addTongpei(): void {
+        if (!this.tongpei) {
+            this.tongpei = new QZNNTongpei();
+            this.tongpei.anchorOffsetX = this.tongsha.width / 2;
+            this.tongpei.anchorOffsetY = this.tongsha.height / 2;
+            this.tongpei.x = xlLib.Global.screenWidth / 2;
+            this.tongpei.y = xlLib.Global.screenHeight / 2;
+        }
+        this.tongsha.play();
+        this.addChild(this.tongpei);
+    }
     /**监听下注 */
     private onbetBack(data: any): void {
         this._tishi.visible = false;
@@ -950,6 +965,8 @@ class QZNNView extends eui.Component {
     /**其他玩家的牌型   结算 */
     private oncloseanaccount(data: any) {
         this.pinpaiType.visible = true;
+
+        this.game_result = data._obj.result;
 
         this.time = 0;
         this.grpCountdown.visible = false;
@@ -1047,17 +1064,17 @@ class QZNNView extends eui.Component {
         }
     }
 
-    private turn0:number = 0;
-    private timeNum:number = 0;
+    private turn0: number = 0;
+    private timeNum: number = 0;
     private betNum = [];
     private cur_Num = 0;
-    private turnBankerShow():void {
+    private turnBankerShow(): void {
 
-        for (let i=0; i<4; i++) {
+        for (let i = 0; i < 4; i++) {
             this["_zhuang_img" + i].visible = false;
         }
 
-        if(this.timeNum == 8) {
+        if (this.timeNum == 12) {
             //this.turn0 = 0;
             this.timeNum = 0;
             clearInterval(this.turn0);
@@ -1066,58 +1083,59 @@ class QZNNView extends eui.Component {
             //this.bet_data = [];
             return;
         }
-        if(this.cur_Num !=0 ) {
+        if (this.cur_Num != 0) {
             let sum = 0;
-            do{
+            do {
                 sum = parseInt((Math.random() * this.betNum.length) + "");
-                if(this.cur_Num!=sum) {
+                if (this.cur_Num != sum) {
                     break;
                 }
 
-            }while(0);
+            } while (0);
             this.cur_Num = parseInt((Math.random() * this.betNum.length) + "");
         } else {
             this.cur_Num = parseInt((Math.random() * this.betNum.length) + "");
         }
-        
+
 
         let value = this.betNum[this.cur_Num];
         this["_zhuang_img" + value].visible = true;
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(13));
         this.timeNum++;
     }
 
     /**设置庄家 */
-    private bet_data:any = [];
+    private bet_data: any = [];
     private acceptbanker(data: any): void {
         this.bet_data = [];
         this.bet_data = data;
 
         var max = -1;
         this.betNum = [];
-        for(let i=0;i<this.intnum.length;i++){
-            if(max < this.intnum[i]){
+        for (let i = 0; i < this.intnum.length; i++) {
+            if (max < this.intnum[i]) {
                 max = this.intnum[i];
                 this.betNum = [];
                 this.betNum.push(i);
-            }else if(max == this.intnum[i]){
+            } else if (max == this.intnum[i]) {
                 this.betNum.push(i);
             }
         }
 
-        if(this.betNum.length > 1) {
+        if (this.betNum.length > 1) {
             this.turn0 = 0;
             this.cur_Num = 0;
-            this.turn0 = setInterval(this.turnBankerShow.bind(this), 200);
+            this.turn0 = setInterval(this.turnBankerShow.bind(this), 100);
             return;
         } else {
             this.setbanker(data);
             this.bet_data = [];
         }
-       
+
     }
 
     private setbanker(data) {
-         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
+        let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
         this['_zhuang_img' + num].visible = true;
         if (num % 2 == 0) {
             if (!this.niuniukuang) {
@@ -1330,7 +1348,6 @@ class QZNNView extends eui.Component {
                 this.timeTxt.text = "0" + this.time;
             }
             this.time--;
-            this.playClickSound(QZNNUtil.getInstance().getSoundEffect(13));
         }
         else {
             this.timeTxt.text = "00";
@@ -2014,7 +2031,7 @@ class QZNNView extends eui.Component {
             str = "-";
         }
         if (index == 0) {
-            label.x = 20;
+            label.x = 0;
             label.y = -40;
             label.textAlign = egret.HorizontalAlign.RIGHT;
         } else if (index == 1) {
@@ -2042,6 +2059,9 @@ class QZNNView extends eui.Component {
             this.game_result = 0;
         } else if (this.game_result == 2) {
             this.addTongsha();
+            this.game_result = 0;
+        } else if (this.game_result == 3) {
+            this.addTongpei();
             this.game_result = 0;
         }
         this._jixu.visible = true;
@@ -2232,7 +2252,7 @@ class QZNNView extends eui.Component {
     public Onquit(): void {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         if (UserInfo.getInstance().isGameStart) {
-            xlLib.TipsUtils.showFloatWordTips("游戏中！");
+            xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
             return;
         }
         xlLib.SoundMgr.instance.stopBgMusic();
@@ -2241,16 +2261,7 @@ class QZNNView extends eui.Component {
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
 
         xlLib.SceneMgr.instance.changeScene(Lobby);
-        // let senddata: any = {
-        //     userid: UserInfo.getInstance().uid,
-        //     token: UserInfo.getInstance().token,
-        // };
-        // xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
-        //     //if (this.parent) {
-        //     //    this.parent.removeChild(this);
-        //     //}
-        //     xlLib.SceneMgr.instance.changeScene(Lobby);
-        // }, this);
+
     }
 
     public destroy(): void {

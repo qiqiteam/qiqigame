@@ -11,5 +11,10 @@
         "path": "..\\resource\\exml\\component\\Inthematch.ts",
         "class": "Inthematch",
         "parentPath": ""
+    },
+    "1676af932cd": {
+        "path": "..\\resource\\exml\\component\\Hint.ts",
+        "class": "Hint",
+        "parentPath": ""
     }
 }

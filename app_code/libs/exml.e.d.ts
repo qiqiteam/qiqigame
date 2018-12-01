@@ -62,6 +62,8 @@ declare class ComBoxItemSkin extends eui.Skin{
 }
 declare class ComBoxSkin extends eui.Skin{
 }
+declare class HintSkin extends eui.Skin{
+}
 declare class InthematchSkin extends eui.Skin{
 }
 declare class BJLHeadSkin extends eui.Skin{

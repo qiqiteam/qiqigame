@@ -39,9 +39,13 @@ class QZNNTongsha extends eui.Component {
 
     public play():void
     {
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(16));
         this.tongsha.play(0);   
     }
 
+    public playClickSound(res): void {
+        xlLib.SoundMgr.instance.playSound(res + "_mp3");
+    }
 
     public stop():void
     {
