@@ -315,6 +315,8 @@ class QZNNUtil {
                 return 'gold_diaoluo';   //金币飞起
             case 10:
                 return 'Special_menu';   //按钮点击
+            case 11:
+                return 'nn_LampEnd';    //设置庄
         }
     }
 }

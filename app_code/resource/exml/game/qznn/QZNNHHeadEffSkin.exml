@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="QZNNHHeadEffSkin" width="400" height="260" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
 	<w:Declarations>
-		<tween:TweenGroup>
+		<tween:TweenGroup id="qznnwin">
 			<tween:TweenItem target="{image}">
 				<tween:Set>
 					<tween:props>

@@ -1,4 +1,4 @@
-class QZNNHHeadEff extends eui.Component {
+class QZNNVHeadEff extends eui.Component {
 
 	public image: eui.Image;
 
@@ -7,7 +7,7 @@ class QZNNHHeadEff extends eui.Component {
 	public qznnwin: egret.tween.TweenGroup;
 	constructor() {
 		super();
-		this.skinName = "QZNNHHeadEffSkin";
+		this.skinName = "QZNNVHeadEffSkin";
 	}
 
 	protected childrenCreated() {

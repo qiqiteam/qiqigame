@@ -56,7 +56,7 @@ class Inthematch extends eui.Component {
 	private startCountDown(time: number): void {
 		this.time = time;
 		if (this.timer == null) {
-			this.timer = new egret.Timer(1000);
+			this.timer = new egret.Timer(300);
 			this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
 			this.timer.start();
 		}

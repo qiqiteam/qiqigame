@@ -1054,6 +1054,8 @@ class QZNNView extends eui.Component {
             this.niuniuTX.play();
         }
         this['grpHead' + num].addChild(this.niuniuTX);
+
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(11));
         if (num == 0) {
             this._tishi.visible = true;
             this._tishi_text.text = "请等待闲家下注..."
