@@ -63,7 +63,9 @@ class LoginView extends eui.Component
 
 	private _onVisitorLogin(e:egret.TouchEvent):void {
 		this._group_btn_0.visible = false;
-		this._group_btn_1.visible = true;
+		xlLib.UIMgr.instance.showLoading(TipsLoading);
+		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+		// this._group_btn_1.visible = true;
 	}
 
 	private _onAccountLogin(e:egret.TouchEvent):void {

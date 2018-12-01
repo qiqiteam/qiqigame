@@ -324,6 +324,8 @@ class QZNNView extends eui.Component {
     public niu: number = 0;                    //有没有牛
 
     public zijipokes: number[] = [0, 0, 0, 0, 0];    //自己的牌
+
+    public turn_score_arr: eui.BitmapLabel[] = [];
     ///----------------------------------------------------------------
 
     public time: number;        //秒数
@@ -517,6 +519,7 @@ class QZNNView extends eui.Component {
         this._pingpai.visible = false;
         this._my_pai.visible = false;
         this.arr = [];
+        this.turn_score_arr = [];
 
         this._zhi_0.text = "";
         this._zhi_1.text = "";
@@ -1791,10 +1794,11 @@ class QZNNView extends eui.Component {
             //this.showGameResult();
         }
         // this.cdTimer.start();
-        this.cdNum = 5;
+        //this.cdNum = 5;
 
-        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
+        //this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
 
+        /*
         let zhuangPos = {
             x: this['grpHead' + this.zhaungIndex].x,
             y: this['grpHead' + this.zhaungIndex].y
@@ -1845,6 +1849,10 @@ class QZNNView extends eui.Component {
             } else {
                 EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
             }
+        }*/
+
+        for(let i=0; i<this.cardResult.pokes.length; i++) {
+            this.suiCoreGameEndScoreResultEffect(i, this['grpHead' + i] ,this.cardResult.pokes[i].win, this.cardResult.pokes[i].score);
         }
 
         this.interval = setInterval(this.victoryEffect.bind(this), 2000);
@@ -1870,6 +1878,41 @@ class QZNNView extends eui.Component {
     /**更新玩家金币 */
     public setGold(num, gold: number): void {
         this['labelGold' + num].text = gold + "";
+    }
+
+    /**金币数字滚动效果 */
+    public suiCoreGameEndScoreResultEffect(index, player, state, score) {
+        let label = new eui.BitmapLabel;
+        label.textAlign = egret.HorizontalAlign.CENTER;
+        let str:string = "";
+        if(state == true) {
+            label.font = "qznn_win_fnt";
+            label.text = "0";
+            str = "+";
+        } else {
+            label.font = "qznn_lose_fnt";
+            label.text = "0";
+            str = "-";
+        }
+        if(index == 0) {
+            label.x = 30;
+            label.y = -40;
+            label.textAlign = egret.HorizontalAlign.RIGHT;
+        } else if(index == 1) {
+            label.x = 30;
+            label.y = -40;
+        } else if(index == 2) {
+            label.x = 90;
+            label.y = -40;
+        } else if(index == 3) {
+            label.x = 30;
+            label.y = -40;
+        }
+        label.scaleX = 1;
+        label.scaleY = 1;
+        player.addChild(label);
+        this.turn_score_arr.push(label);
+        uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score, regulator: 50 }, str);
     }
 
     public victoryEffect(): void {
@@ -2010,7 +2053,9 @@ class QZNNView extends eui.Component {
         this._zhuang_img3.visible = false;
         
         this._tishi.visible = false;
-
+        for (let i=0; i<this.turn_score_arr.length; i++) {
+            this.turn_score_arr[i].parent.removeChild(this.turn_score_arr[i]);
+        }
     }
 
     private removeEff(eff: egret.MovieClip): void {
