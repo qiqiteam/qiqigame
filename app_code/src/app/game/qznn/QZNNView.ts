@@ -327,7 +327,11 @@ class QZNNView extends eui.Component {
 
     public turn_score_arr: eui.BitmapLabel[] = [];
 
-    public win_eff_err:any[] = [];
+    public win_eff_err: any[] = [];
+
+    public intnum: number[] = [0, 0, 0, 0];
+
+    public num01: number = 0;
 
     ///----------------------------------------------------------------
 
@@ -827,7 +831,7 @@ class QZNNView extends eui.Component {
         this._puke_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
         this._puke_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
 
-        
+
     }
 
     /**抢庄牛牛拼牌通知 */
@@ -995,6 +999,8 @@ class QZNNView extends eui.Component {
     /**更新抢庄通知(所有人) */
     private OnHogUpdate(data: any): void {
         console.log(data._obj.index + "号抢庄");
+        this.intnum[data._obj.index] = data._obj.hogOrBet;
+
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._group_qiang.visible = false;
             this._tishi.visible = true;
@@ -1040,9 +1046,78 @@ class QZNNView extends eui.Component {
             this['_xiabei_' + num].source = 'img_XB_' + data + '_png';
         }
     }
+
+    private turn0:number = 0;
+    private timeNum:number = 0;
+    private betNum = [];
+    private cur_Num = 0;
+    private turnBankerShow():void {
+
+        for (let i=0; i<4; i++) {
+            this["_zhuang_img" + i].visible = false;
+        }
+
+        if(this.timeNum == 8) {
+            //this.turn0 = 0;
+            this.timeNum = 0;
+            clearInterval(this.turn0);
+
+            this.setbanker(this.bet_data);
+            //this.bet_data = [];
+            return;
+        }
+        if(this.cur_Num !=0 ) {
+            let sum = 0;
+            do{
+                sum = parseInt((Math.random() * this.betNum.length) + "");
+                if(this.cur_Num!=sum) {
+                    break;
+                }
+
+            }while(0);
+            this.cur_Num = parseInt((Math.random() * this.betNum.length) + "");
+        } else {
+            this.cur_Num = parseInt((Math.random() * this.betNum.length) + "");
+        }
+        
+
+        let value = this.betNum[this.cur_Num];
+        this["_zhuang_img" + value].visible = true;
+        this.timeNum++;
+    }
+
     /**设置庄家 */
+    private bet_data:any = [];
     private acceptbanker(data: any): void {
-        let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
+        this.bet_data = [];
+        this.bet_data = data;
+
+        var max = -1;
+        this.betNum = [];
+        for(let i=0;i<this.intnum.length;i++){
+            if(max < this.intnum[i]){
+                max = this.intnum[i];
+                this.betNum = [];
+                this.betNum.push(i);
+            }else if(max == this.intnum[i]){
+                this.betNum.push(i);
+            }
+        }
+
+        if(this.betNum.length > 1) {
+            this.turn0 = 0;
+            this.cur_Num = 0;
+            this.turn0 = setInterval(this.turnBankerShow.bind(this), 200);
+            return;
+        } else {
+            this.setbanker(data);
+            this.bet_data = [];
+        }
+       
+    }
+
+    private setbanker(data) {
+         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
         this['_zhuang_img' + num].visible = true;
         if (num % 2 == 0) {
             if (!this.niuniukuang) {
@@ -1806,7 +1881,7 @@ class QZNNView extends eui.Component {
 
         //this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
 
-        
+
         let zhuangPos = {
             x: this['grpHead' + this.zhaungIndex].x,
             y: this['grpHead' + this.zhaungIndex].y

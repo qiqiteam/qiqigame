@@ -294,7 +294,7 @@ class QZNNUtil {
     public getSoundEffect(type): string {
         switch (type) {
             case 0:
-                return 'bgm';    //背景音乐
+                return 'hall_bg';    //背景音乐
             case 1:
                 return 'nn.jackpot'; //自己赢得最多
             case 2:
