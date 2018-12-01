@@ -783,6 +783,7 @@ class QZNNView extends eui.Component {
             this['pinpaiType' + (data._obj.index - 1)].visible = true;
         } else {
             this.pinpaiType.visible = true;
+            this._tishi.visible = true;
             this._tishi_text.text = "请等待其他玩家拼牌..."
         }
     }
@@ -796,7 +797,7 @@ class QZNNView extends eui.Component {
             case 4: this.onbetBack(data); break;    //下注
             case 5: ; break;
             case 6: this.onThecardtype(data); break;    //自己的牌
-            case 7: this.oncloseanaccount(data); break;                //其他玩家的牌型  结算
+            case 7: this.oncloseanaccount(data); break; //其他玩家的牌型  结算
             case 8: ; break;        // 游戏结束
         }
     }
@@ -844,18 +845,13 @@ class QZNNView extends eui.Component {
     }
     /**监听下注 */
     private onbetBack(data: any): void {
-
+        this._tishi.visible = false;
         this.time = 0;
         this.startCountDown(data._obj.seconds);
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
 
         if (data._obj.roomStatus == 4) {
-            // if (data._obj.banker.index != 0) {
-            //     this._tishi_text.text = "请等待庄家下注..."
-            // } else {
-            //     this._tishi_text.text = "请等待闲家下注..."
-            // }
             this.acceptbanker(data);
         }
 
@@ -883,6 +879,8 @@ class QZNNView extends eui.Component {
     }
     /**自己的牌 */
     private onThecardtype(data: any): void {
+        this._tishi.visible = false;
+
         this.zijipokes = data._obj.showList;
         this.score1 = data._obj.showList;
         this.niu = data._obj.niu;
@@ -991,6 +989,12 @@ class QZNNView extends eui.Component {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
         this['img_zhuang_0_' + num].visible = true;
 
+        this._tishi.visible = true;
+        if (num == 0) {
+            this._tishi_text.text = "请等待闲家下注..."
+        } else {
+            this._tishi_text.text = "请等待其他闲家下注..."
+        }
         /*
         this.zhaungIndex = num;
         let img: eui.Image = new eui.Image("selectedBankerIcon_png");
