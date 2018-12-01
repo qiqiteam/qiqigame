@@ -1538,20 +1538,23 @@ class QZNNView extends eui.Component {
         let niuniuBet: any = grp.getChildByName("niuniubet") as any;
         if(niuniuBet&&niuniuBet.parent){
            niuniuBet.parent.removeChild(niuniuBet);
-           niuniuBet = null;
+           niuniuBet = null
         }
         if (!niuniuBet) {
             if (index == 0) {
                 niuniuBet = new WuNiuNBei();
-            } else if(index<10) {
+            }
+            else if(index<10) {
                 niuniuBet = new NiuNBei();
-            }else{
+            }
+            else{
                 niuniuBet = new TenshuNiuBei();
             }
             niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
             niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
             niuniuBet.x = 80;
             niuniuBet.y -= 80;
+            niuniuBet.name = "niuniubet";
             grp.addChild(niuniuBet);
         }
         let url: string = bmpurl;
