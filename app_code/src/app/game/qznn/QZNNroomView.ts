@@ -13,7 +13,7 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 	public constructor() {
 		super();
 		this.skinName = "QZNNroomViewSkin";
-		
+
 		xlLib.SoundMgr.instance.stopBgMusic();
 		let musicBg = ["hall_bg_mp3"];
 		xlLib.SoundMgr.instance.playBgMusic(musicBg);
@@ -33,13 +33,12 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 	/**游戏状态 */
 	private GameStatus(data: any): void {
 		if (data._obj.code == 200) {
-
 			xlLib.SceneMgr.instance.changeScene(QZNNScene);
-			xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 		}
 	}
 
 	private onEnterGame(): void {
+		this.playClickSound();
 		if (!this.gameIconData) {
 			return;
 		}
@@ -53,7 +52,7 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 		};
 		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, (data) => {
 		}, this);
-		
+
 	}
 
 	public setGameIconData(gameIconData: GameIconData): void {
@@ -62,13 +61,15 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 
 	public dispose(): void {
 		xlLib.SoundMgr.instance.stopBgMusic();
-        let musicBg = ["bgMain_mp3"];
+		let musicBg = ["bgMain_mp3"];
 		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 
 		xlLib.PopUpMgr.removePopUp(this, 1);
-		
-	}
 
+	}
+	public playClickSound() {
+		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
+	}
 	public destroy(): void {
 		this.gameIconData = null;
 		this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);

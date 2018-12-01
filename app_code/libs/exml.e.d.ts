@@ -98,7 +98,9 @@ declare class PlayerInfoTypeItemSkin extends eui.Skin{
 }
 declare class PlayerInfoViewSkin extends eui.Skin{
 }
-declare class qiangzhuang2 extends eui.Skin{
+declare class DZHEffSkin extends eui.Skin{
+}
+declare class DZVEffSkin extends eui.Skin{
 }
 declare class NiuJiaoSkin extends eui.Skin{
 }
@@ -122,7 +124,11 @@ declare class QZNNViewSkin extends eui.Skin{
 }
 declare class QZNNroomViewSkin extends eui.Skin{
 }
+declare class TenshuNiuBeiSkin extends eui.Skin{
+}
 declare class WuNiuNBeiSkin extends eui.Skin{
+}
+declare class ZhuangIconSkin extends eui.Skin{
 }
 declare class RBGHeadSkin extends eui.Skin{
 }

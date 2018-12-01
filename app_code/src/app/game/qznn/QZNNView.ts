@@ -301,8 +301,11 @@ class QZNNView extends eui.Component {
     public _puke_4: eui.Image;
     public _youniu: eui.Button;
     public _meiniu: eui.Button;
+    public _niujia: eui.Group;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
+    public _tishi: eui.Group;
+    public _tishi_text: eui.Label;
 
 
 
@@ -508,6 +511,17 @@ class QZNNView extends eui.Component {
         this.img_zhuang_0_2.visible = false;
         this.img_zhuang_0_3.visible = false;
 
+        this._xiabei_0.x = 357.73;
+        this._xiabei_1.x = 368.16;
+        this._xiabei_2.x = 503.16;
+        this._xiabei_3.x = 1146.78;
+
+        this.grpHead0.visible = false;
+        this.grpHead1.visible = false;
+        this.grpHead2.visible = false;
+        this.grpHead3.visible = false;
+
+        this._tishi.visible = false;
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
@@ -614,8 +628,7 @@ class QZNNView extends eui.Component {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
                     this._my_pai.visible = true;
-                    this.pinpaiType.visible = true;
-                    this.returnpinpai();
+                    this.returnpinpai(1);
                 } else {
                     this.ppcuowu();
                 }
@@ -629,45 +642,56 @@ class QZNNView extends eui.Component {
             } else {
                 this._pingpai.visible = false;
                 this._my_pai.visible = true;
-                this.pinpaiType.visible = true;
+                this.returnpinpai(0);
             }
         }
     }
 
     /**返回拼牌顺序 */
-    private returnpinpai() {
-        var aaaaa: number = 3;
-        for (let i = 0; i < this.arr_fen1.length; i++) {
+    private returnpinpai(data: number) {
+        if (data == 0) {
+            let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+            let senddata: any = {
+                userid: UserInfo.getInstance().uid,
+                token: UserInfo.getInstance().token, playway: playway.id,
+                centerCard: [this.score1[0], this.score1[1], this.score1[2], this.score1[3], this.score1[4]]
+            };
+            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
+            }, this);
+        } else if (data == 1) {
+            var aaaaa: number = 3;
+            for (let i = 0; i < this.arr_fen1.length; i++) {
 
-            for (let j = 0; j < this.score1.length; j++) {
+                for (let j = 0; j < this.score1.length; j++) {
 
-                if (this.arr_fen1[i] == this.score1[j]) {
-                    this.score1[j] = null;
-                    continue;
+                    if (this.arr_fen1[i] == this.score1[j]) {
+                        this.score1[j] = null;
+                        continue;
+                    }
                 }
             }
-        }
-        for (let k = 0; k < this.score1.length; k++) {
+            for (let k = 0; k < this.score1.length; k++) {
 
-            if (this.score1[k] !== null) {
-                this.arr_fen1[aaaaa] = this.score1[k];
-                aaaaa++;
+                if (this.score1[k] !== null) {
+                    this.arr_fen1[aaaaa] = this.score1[k];
+                    aaaaa++;
+                }
             }
+
+            let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+            let senddata: any = {
+                userid: UserInfo.getInstance().uid,
+                token: UserInfo.getInstance().token, playway: playway.id,
+                centerCard: [this.arr_fen1[0], this.arr_fen1[1], this.arr_fen1[2], this.arr_fen1[3], this.arr_fen1[4]]
+            };
+            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
+            }, this);
         }
 
-
-        let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
-        let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
-        let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-        let senddata: any = {
-            userid: UserInfo.getInstance().uid,
-            token: UserInfo.getInstance().token, playway: playway.id,
-            centerCard: [this.arr_fen1[0], this.arr_fen1[1], this.arr_fen1[2], this.arr_fen1[3], this.arr_fen1[4]]
-        };
-        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
-        }, this);
-
-        // this.arr_fen1;
     }
     /**拼牌错误 */
     private ppcuowu() {
@@ -731,13 +755,13 @@ class QZNNView extends eui.Component {
 
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
-
+        EventUtil.addEventListener(EventConst.onUserShowOrderUpdate, this.onShowOrder, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
+        // EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
 
         this._puke_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
         this._puke_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
@@ -746,6 +770,15 @@ class QZNNView extends eui.Component {
         this._puke_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
     }
 
+    /**抢庄牛牛拼牌通知 */
+    private onShowOrder(data: any): void {
+        if (data._obj.index > 0) {
+            this['pinpaiType' + (data._obj.index - 1)].visible = true;
+        } else {
+            this.pinpaiType.visible = true;
+            this._tishi_text.text = "请等待其他玩家拼牌..."
+        }
+    }
     /**游戏状态 */
     private GameStatus(data: any): void {
         switch (data._obj.roomStatus) {
@@ -778,7 +811,7 @@ class QZNNView extends eui.Component {
         this.gamestarEff.play();
         this.addChild(this.gamestarEff);
     }
-
+    /**胜利 */
     private addNNVictoryEffect(): void {
         if (!this.nnvictoryEffect) {
             this.nnvictoryEffect = new QZNNVictory();
@@ -811,6 +844,11 @@ class QZNNView extends eui.Component {
         this._btn_switch.visible = true;
 
         if (data._obj.roomStatus == 4) {
+            // if (data._obj.banker.index != 0) {
+            //     this._tishi_text.text = "请等待庄家下注..."
+            // } else {
+            //     this._tishi_text.text = "请等待闲家下注..."
+            // }
             this.acceptbanker(data);
         }
 
@@ -898,6 +936,8 @@ class QZNNView extends eui.Component {
         console.log(data._obj.index + "号抢庄");
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._group_qiang.visible = false;
+            this._tishi.visible = true;
+            this._tishi_text.text = "请等待其他玩家抢庄...";
         }
         if (data._obj.code == 200) {
             this.qiangzhuang(data._obj.hogOrBet, data._obj.index)
@@ -923,13 +963,17 @@ class QZNNView extends eui.Component {
     private jiazhu(data: number, num: number) {
         if (data >= 10) {
             this['_xiabei_0_' + num].visible = true;
+            this['_xiabei_0_' + num].source = 'img_XB_png';
             this['_xiabei_' + num].visible = true;
             this['_xiabei_0_0_' + num].visible = true;
             this['_xiabei_' + num].source = 'img_XB_' + data % 10 + '_png';
             this['_xiabei_0_0_' + num].source = 'img_XB_0_0_' + 1 + '_png';
+
         } else if (data < 10) {
             this['_xiabei_0_' + num].visible = true;
+            this['_xiabei_0_' + num].source = 'img_XB1_png';
             this['_xiabei_' + num].visible = true;
+            this['_xiabei_' + num].x -= 20;
             this['_xiabei_0_0_' + num].visible = false;
             this['_xiabei_' + num].source = 'img_XB_' + data + '_png';
         }
@@ -986,6 +1030,8 @@ class QZNNView extends eui.Component {
      */
     private addPlayers(data): void {
 
+        this.grpHead0.visible = true;
+
         //设置自己信息
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
@@ -1024,6 +1070,7 @@ class QZNNView extends eui.Component {
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
 
         } else {
+            this['grpHead' + data._obj.player.index].visible = true;
             this['grpHead' + data._obj.player.index];
             this.setUserInfo(data._obj.player.index, data._obj.player.username, data._obj.player.goldcoins, "women7_png");
         }
@@ -1031,9 +1078,6 @@ class QZNNView extends eui.Component {
 
     /** num 几号玩家  _name 名字    _gold 金币   _imghead 头像图片*/
     public setUserInfo(num, _name, _gold, _imghead): void {
-        // imghead1
-        // labelHead1
-        // labelGold1
         this['imghead' + num].source = _imghead;
         this['labelHead' + num].text = _name;
         this['labelGold' + num].text = _gold;
@@ -1375,6 +1419,14 @@ class QZNNView extends eui.Component {
             return;
         }
         this._pingpai.visible = true;
+
+        var texiao = new NiuJiao();
+        texiao.play();
+        texiao.x -= 160;
+        texiao.y -= 130;
+        this._niujia.addChild(texiao);
+
+
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
         card.x = xlLib.Global.screenWidth / 2;
         card.y = xlLib.Global.screenHeight / 2;
@@ -1390,8 +1442,14 @@ class QZNNView extends eui.Component {
     }
 
     private effectPlayerIndex = 0;
-    /**结算 */
+    /**结算 其他玩家翻牌*/
     private playerCardRotation(): void {
+        this._tishi.visible = false;
+        this.pinpaiType.visible = false;
+        for (let i = 0; i > 3; i++) {
+            this['pinpaiType' + i].visible = false;
+        }
+
         if (this.effectPlayerIndex == this.cardResult.pokes.length - 1) {
             clearInterval(this.interval)
             this.effectPlayerIndex = 0;
@@ -1439,8 +1497,8 @@ class QZNNView extends eui.Component {
             }
             niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
             niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
-            niuniuBet.x = 100;
-            niuniuBet.y = -100;
+            niuniuBet.x = 80;
+            niuniuBet.y -= 80;
             grp.addChild(niuniuBet);
         }
         let url: string = bmpurl;
@@ -1715,6 +1773,18 @@ class QZNNView extends eui.Component {
         this.pinpaiType2.visible = false;
         this.grpCountdown.visible = true;
 
+        this._xiabei_0.x = 357.73;
+        this._xiabei_1.x = 368.16;
+        this._xiabei_2.x = 503.16;
+        this._xiabei_3.x = 1146.78;
+
+        this.grpHead0.visible = false;
+        this.grpHead1.visible = false;
+        this.grpHead2.visible = false;
+        this.grpHead3.visible = false;
+
+        this._tishi.visible = false;
+
     }
 
     private removeEff(eff: egret.MovieClip): void {
@@ -1807,7 +1877,7 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
+        // EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
 
 
         if (this.cdTimer != null) {

@@ -4,8 +4,8 @@ class Inthematch extends eui.Component {
 		this.skinName = "InthematchSkin";
 	}
 
-	public _quxiao:eui.Button;
-	public _waitfor:eui.Label;
+	public _quxiao: eui.Button;
+	public _waitfor: eui.Label;
 
 
 	public time: number;        //秒数
@@ -23,9 +23,17 @@ class Inthematch extends eui.Component {
 		super.childrenCreated();
 		this.initData();
 		this._quxiao.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-	}
-	private onClick(e: egret.TouchEvent) {
 
+		EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
+	}
+	private onleave(data: any) {
+		if(data._obj.code == 200){
+			xlLib.PopUpMgr.removePopUp(Inthematch, 1);
+		}
+	}
+
+	private onClick(e: egret.TouchEvent) {
+		this.quxiaopipei();
 	}
 	/**取消匹配 */
 	private quxiaopipei() {
@@ -36,7 +44,7 @@ class Inthematch extends eui.Component {
 			userid: UserInfo.getInstance().uid,
 			token: UserInfo.getInstance().token, playway: playway.id
 		};
-		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, (data) => {
+		xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
 		}, this);
 	}
 

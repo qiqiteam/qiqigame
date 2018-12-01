@@ -149,25 +149,13 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="100"/>
-				<tween:Set>
-					<tween:props>
-						<e:Object alpha="{1}"/>
-					</tween:props>
-				</tween:Set>
-				<tween:Wait duration="100"/>
-				<tween:Set>
-					<tween:props>
-						<e:Object alpha="{1}"/>
-					</tween:props>
-				</tween:Set>
-				<tween:Wait duration="150"/>
+				<tween:Wait duration="50"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="400"/>
+				<tween:Wait duration="100"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{1}"/>
@@ -189,7 +177,7 @@
 				<tween:Wait duration="50"/>
 				<tween:Set>
 					<tween:props>
-						<e:Object alpha="{1}"/>
+						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
 				<tween:Wait duration="50"/>
@@ -198,13 +186,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="300"/>
-				<tween:Set>
-					<tween:props>
-						<e:Object alpha="{1}"/>
-					</tween:props>
-				</tween:Set>
-				<tween:Wait duration="200"/>
+				<tween:Wait duration="100"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -217,11 +199,24 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="850">
+				<tween:Set>
 					<tween:props>
-						<e:Object/>
+						<e:Object alpha="{0}"/>
 					</tween:props>
-				</tween:Wait>
+				</tween:Set>
+				<tween:Wait duration="50"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="50"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="700"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -236,22 +231,10 @@
 				<tween:Wait duration="50"/>
 				<tween:Set>
 					<tween:props>
-						<e:Object alpha="{0}"/>
-					</tween:props>
-				</tween:Set>
-				<tween:Wait duration="250"/>
-				<tween:Set>
-					<tween:props>
-						<e:Object alpha="{0}"/>
-					</tween:props>
-				</tween:Set>
-				<tween:Wait duration="200"/>
-				<tween:Set>
-					<tween:props>
 						<e:Object alpha="{1}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="200"/>
+				<tween:Wait duration="100"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -263,7 +246,7 @@
 	<e:Image id="image" source="qznn_effect_robot_tex1_png" x="241.5" y="179" anchorOffsetX="63.5" anchorOffsetY="72.5"/>
 	<e:Image id="image0" source="qznn_effect_robot_tex2_png" x="179" y="105"/>
 	<e:Image id="image1" source="qznn_effect_robot_tex3_png" x="179.5" y="105.5"/>
-	<e:Image id="image4" source="qznn_effect_robot_tex7_png" x="178.2" y="107.8"/>
+	<e:Image id="image4" source="qznn_effect_robot_tex7_png" x="178.2" y="107.8" alpha="0"/>
 	<e:Image id="image2" source="qznn_effect_robot_tex5_png" x="178.2" y="107.8"/>
-	<e:Image id="image3" source="qznn_effect_robot_tex6_png" x="178.2" y="107.8"/>
+	<e:Image id="image3" source="qznn_effect_robot_tex6_png" x="178.2" y="107.8" alpha="0"/>
 </e:Skin>
