@@ -27,8 +27,12 @@ class Inthematch extends eui.Component {
 		EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
 	}
 	private onleave(data: any) {
-		if(data._obj.code == 200){
+		if (data._obj.code == 200) {
 			xlLib.PopUpMgr.removePopUp(Inthematch, 1);
+
+			let musicBg = ["bgMain_mp3"];
+			xlLib.SoundMgr.instance.playBgMusic(musicBg);
+			xlLib.SceneMgr.instance.changeScene(Lobby);
 		}
 	}
 
