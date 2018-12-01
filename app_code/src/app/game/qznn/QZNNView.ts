@@ -908,12 +908,12 @@ class QZNNView extends eui.Component {
     private addTongpei(): void {
         if (!this.tongpei) {
             this.tongpei = new QZNNTongpei();
-            this.tongpei.anchorOffsetX = this.tongsha.width / 2;
-            this.tongpei.anchorOffsetY = this.tongsha.height / 2;
+            this.tongpei.anchorOffsetX = this.tongpei.width / 2;
+            this.tongpei.anchorOffsetY = this.tongpei.height / 2;
             this.tongpei.x = xlLib.Global.screenWidth / 2;
             this.tongpei.y = xlLib.Global.screenHeight / 2;
         }
-        this.tongsha.play();
+        this.tongpei.play();
         this.addChild(this.tongpei);
     }
     /**监听下注 */
@@ -2226,6 +2226,11 @@ class QZNNView extends eui.Component {
 
         if(this.niuniuTX) {
             this.niuniuTX.stop();
+            this.niuniuTX.parent.removeChild(this.niuniuTX);
+        }
+
+        if(this.tongpei) {
+            this.tongpei.stop();
             //this.niuniuTX.parent.removeChild(this.niuniuTX);
         }
         

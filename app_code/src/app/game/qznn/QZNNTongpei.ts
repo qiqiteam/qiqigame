@@ -28,6 +28,7 @@ class QZNNTongpei extends eui.Component {
     }
 
     public play(): void {
+        this.visible = true;
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(17));
         this.shibai.play(0);
     }
@@ -38,11 +39,12 @@ class QZNNTongpei extends eui.Component {
 
 
     public stop(): void {
+        this.visible = false;
         this.shibai.stop();
     }
 
 
     public destroy(): void {
-
+        this.shibai.removeEventListener(egret.Event.COMPLETE, this.onTweenComplete, this);
     }
 }

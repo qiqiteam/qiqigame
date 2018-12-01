@@ -39,6 +39,7 @@ class QZNNTongsha extends eui.Component {
 
     public play():void
     {
+        this.visible = true;
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(16));
         this.tongsha.play(0);   
     }
@@ -49,11 +50,12 @@ class QZNNTongsha extends eui.Component {
 
     public stop():void
     {
+        this.visible = false;
         this.tongsha.stop();   
     }
 
 
     public destroy(): void {
-  
+        this.tongsha.removeEventListener(egret.Event.COMPLETE, this.onTweenComplete, this);
     }
 }

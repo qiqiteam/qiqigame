@@ -46,6 +46,6 @@ class QZNNVictory extends eui.Component {
 
 
     public destroy(): void {
-
+        this.youxishengli.removeEventListener(egret.Event.COMPLETE, this.onTweenComplete, this);
     }
 }
