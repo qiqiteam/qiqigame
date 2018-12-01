@@ -662,6 +662,11 @@ public _animation_start:uiCore.Animation;
         egret.startTick(this.onTicker, this);
 */
         //this.suiCoreGameEndScoreResultEffect(this, true);
+
+
+        //var goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_jinbi_1_0_{0}_png", 20);
+        //this.addChild(goldFlyAnimator);
+        //goldFlyAnimator.play();
     }
     private _time:number;
     private onTicker(timeStamp:number) {

@@ -46,6 +46,7 @@
     "resource/exml/game/qznn/NiuJiaoSkin.exml",
     "resource/exml/game/qznn/NiuNBeiSkin.exml",
     "resource/exml/game/qznn/QZNNGameStartSkin.exml",
+    "resource/exml/game/qznn/QZNNGoldFlySkin.exml",
     "resource/exml/game/qznn/QZNNHEffSkin.exml",
     "resource/exml/game/qznn/QZNNHHeadEffSkin.exml",
     "resource/exml/game/qznn/QZNNTongpeiSkin.exml",
@@ -103,7 +104,6 @@
     "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
     "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
     "QZNNROOMSkin": "resource/eui_skins/QZNNROOMSkin.exml",
-    "Inthematch": "resource/eui_skins/Inthematch.exml",
-    "Hint": "resource/eui_skins/Hint.exml"
+    "Inthematch": "resource/eui_skins/Inthematch.exml"
   }
 }

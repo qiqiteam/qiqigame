@@ -226,5 +226,69 @@ module AnimationUtils {
 		t.verticalCenter = 0;
 		return t;
 	};
+
+	export function goldFlyAnimation(text, str) {
+		var t = new uiCore.Animation();
+		this.gameStartAnimator = t;
+		t.animationSource = str;
+		t.autoPlay = false;
+		t.frameNum = 20;
+		t.frameRate = 70;
+		t.horizontalCenter = 0;
+		t.loop = false;
+		t.source = text;
+		t.stopAndVisible = true;
+		t.verticalCenter = -20;
+		t.visible = false;
+		return t;
+	};
+
+	export function gameStartAnimator_1() {
+		var t = new uiCore.Animation();
+		this.gameStartAnimator = t;
+		t.animationSource = "qznn_showScore0-1_tex_{0}_png";
+		t.autoPlay = false;
+		t.frameNum = 20;
+		t.frameRate = 70;
+		t.horizontalCenter = 0;
+		t.loop = false;
+		t.source = "qznn_showScore0-1_tex_0_png";
+		t.stopAndVisible = true;
+		t.verticalCenter = -20;
+		t.visible = false;
+		return t;
+	};
+
+	export function gameStartAnimator_2() {
+		var t = new uiCore.Animation();
+		this.gameStartAnimator = t;
+		t.animationSource = "qznn_showScore0-2_tex_{0}_png";
+		t.autoPlay = false;
+		t.frameNum = 20;
+		t.frameRate = 70;
+		t.horizontalCenter = 0;
+		t.loop = false;
+		t.source = "qznn_showScore0-2_tex_0_png";
+		t.stopAndVisible = true;
+		t.verticalCenter = -20;
+		t.visible = false;
+		return t;
+	};
+
+	export function gameStartAnimator_3() {
+		var t = new uiCore.Animation();
+		this.gameStartAnimator = t;
+		t.animationSource = "qznn_showScore0-3_tex_{0}_png";
+		t.autoPlay = false;
+		t.frameNum = 20;
+		t.frameRate = 70;
+		t.horizontalCenter = 0;
+		t.loop = false;
+		t.source = "qznn_showScore0-3_tex_0_png";
+		t.stopAndVisible = true;
+		t.verticalCenter = -20;
+		t.visible = false;
+		return t;
+	};
 }
 

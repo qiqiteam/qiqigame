@@ -58,10 +58,10 @@ module uiCore {
         public play() {
             this.visible = true;
             //this._isPlaying && this.stop();
-            this.timerID;
+            //this.timerID;
             //clearInterval(this.timerID);
             //this.timerID = setInterval(this.onInterval.bind(this), this.frameRate);
-            this.timerID = setInterval(this.onInterval.bind(this), 70);
+            this.timerID = setInterval(this.onInterval.bind(this), this.frameRate);
             this._isPlaying = true;
         }
 

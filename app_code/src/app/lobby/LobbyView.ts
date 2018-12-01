@@ -60,15 +60,15 @@ class LobbyView extends eui.Component {
 		]
 		this.gameIconDataList = allgameList;
 		this.gamelistView = new GameIconListView();
-		this.gamelistView.x = 345;
-		this.gamelistView.y = 152;
+		this.gamelistView.x = 322;
+		this.gamelistView.y = 153;
 		this.gamelistView.setData(this.gameIconDataList);
 		this.addChild(this.gamelistView);
 
 		this.qznnGameIconData =  new GameIconData().initData({ name: "抢庄牛牛", url: "qznn_game_830_bg",ishot:true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QZNN});
         this.qznnGameIcon = new QznnIconItem();
 		this.qznnGameIcon.x = 42;
-		this.qznnGameIcon.y = 152;
+		this.qznnGameIcon.y = 158;
 		this.qznnGameIcon.setGameIconData(this.qznnGameIconData);
 		this.addChild(this.qznnGameIcon);	
 	}

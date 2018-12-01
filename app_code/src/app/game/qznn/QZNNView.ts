@@ -330,6 +330,7 @@ class QZNNView extends eui.Component {
 
     public win_eff_err: any[] = [];
 
+    public goldFlyAnimatorarr:uiCore.Animation[] = [];
     public intnum: number[] = [0, 0, 0, 0];
 
     public num01: number = 0;
@@ -1168,6 +1169,7 @@ class QZNNView extends eui.Component {
             this._tishi_text.text = "请等待闲家下注..."
         }
 
+        this.zhaungIndex = num;
         /*
         this.zhaungIndex = num;
         let img: eui.Image = new eui.Image("selectedBankerIcon_png");
@@ -1896,9 +1898,9 @@ class QZNNView extends eui.Component {
         // this.cdTimer.start();
         //this.cdNum = 5;
 
-        //this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
 
-
+        
         let zhuangPos = {
             x: this['grpHead' + this.zhaungIndex].x,
             y: this['grpHead' + this.zhaungIndex].y
@@ -1921,8 +1923,8 @@ class QZNNView extends eui.Component {
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
             if (i == 0) {
-                //pos.x = this._group_di.x + 15 + 145;
-                //pos.y = this._group_di.y - 35 + 103;
+                // pos.x = this._group_di.x + 15 + 145;
+                // pos.y = this._group_di.y - 35 + 103;
                 numPos.x = pos.x + 42;
                 numPos.y = pos.y + 2;
             } else {
@@ -1940,15 +1942,22 @@ class QZNNView extends eui.Component {
                 this.updatePlayerGold(i, this.cardResult.pokes[i].score, false);
             }
 
-            //if (this.zhaungIndex == i) {
-            //    continue;
-            //}
+            if (this.zhaungIndex == i) {
+                continue;
+            }
 
-            //if (this.cardResult.pokes[i].win == true) {
+            var goldFlyAnimator:uiCore.Animation;
+
+            if (this.cardResult.pokes[i].win == true) {
+                goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png" ,"qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
             //    EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
-            //} else {
+            } else {
+                goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
             //    EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
-            //}
+            }
+            this.addChild(goldFlyAnimator);
+            this.goldFlyAnimatorarr.push(goldFlyAnimator);
+            goldFlyAnimator.play();
         }
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
@@ -2192,6 +2201,7 @@ class QZNNView extends eui.Component {
         this._zhuang_img3.visible = false;
 
         this._tishi.visible = false;
+
         for (let i = 0; i < this.turn_score_arr.length; i++) {
             this.turn_score_arr[i].parent.removeChild(this.turn_score_arr[i]);
         }
@@ -2201,11 +2211,24 @@ class QZNNView extends eui.Component {
             this.win_eff_err[i].stop();
             this.win_eff_err[i].parent.removeChild(this.win_eff_err[i]);
         }
-
         this.win_eff_err = [];
 
-        this.niuniuTX.stop();
-        this.niuniuTX.parent.removeChild(this.niuniuTX);
+        for(let i=0; i<this.goldFlyAnimatorarr.length; i++) {
+            this.goldFlyAnimatorarr[i].stop();
+            this.goldFlyAnimatorarr[i].parent.removeChild(this.goldFlyAnimatorarr[i]);
+        }
+        this.goldFlyAnimatorarr = [];
+
+        if(this.tongsha) {
+            this.tongsha.stop();
+            //this.tongsha.parent.removeChild(this.tongsha);
+        }
+
+        if(this.niuniuTX) {
+            this.niuniuTX.stop();
+            //this.niuniuTX.parent.removeChild(this.niuniuTX);
+        }
+        
     }
 
     private removeEff(eff: egret.MovieClip): void {
