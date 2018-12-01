@@ -117,21 +117,20 @@ class QZNNUtil {
             case 4:
             case 5:
             case 6:
-                return 'qznntype1_tex' + index + "_png";
             case 7:
-                return "qznntype2_tex1_png";
             case 8:
-                return "qznntype2_tex2_png";
             case 9:
-                return "qznntype2_tex3_png";
-            // case 10:
-            //     return 'nn.n11';
-            // case 11:
-            //     return 'nn.n13';
-            // case 12:
-            //     return 'nn.n14';
-            // case 13:
-            //     return 'nn.n12';
+                return 'qznntype1_tex' + index + "_png";
+            case 10:
+                return 'qznntype3_tex1_png';
+            case 11:
+                return 'qznntype6_tex1_png';
+            case 12:
+                return 'qznntype4_tex1_png';
+            case 13:
+                return 'qznntype5_tex1_png';
+            case 14:
+                return 'qznntype7_tex1_png';
         }
     }
 

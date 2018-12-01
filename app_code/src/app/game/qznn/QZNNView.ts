@@ -399,10 +399,50 @@ class QZNNView extends eui.Component {
     private gamestarEff: QZNNGameStart;
 
     private nnbankerEff: egret.MovieClip;
+    private whnEff:egret.MovieClip;
+    private nnEff:egret.MovieClip;
+
     private nnvictoryEffect: QZNNVictory;
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
     private  texiao:NiuJiao;
+
+    private addNNEff():void
+    {
+         if (!this.nnEff) {
+            this.nnEff = xlLib.DisplayUtils.createMovieClicp('nn_myCardType10', 'nn_myCardType10');
+            this.nnEff.x = xlLib.Global.screenWidth / 2;
+            this.nnEff.y = xlLib.Global.screenHeight / 2;
+            this.nnEff.frameRate = 10;
+            this.nnEff.touchEnabled = false;
+        }
+        this.nnEff.gotoAndPlay(0, 1);
+        this.addChild(this.nnEff);
+        this.nnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
+            if (this.nnEff.parent) {
+                this.nnEff.parent.removeChild(this.nnEff);
+            }
+        }, this);
+    }
+
+    private addWhnEff():void
+    {
+         if (!this.whnEff) {
+            this.whnEff = xlLib.DisplayUtils.createMovieClicp('nn_myCardType14', 'nn_myCardType14');
+            this.whnEff.x = xlLib.Global.screenWidth / 2;
+            this.whnEff.y = xlLib.Global.screenHeight / 2;
+            this.whnEff.frameRate = 10;
+            this.whnEff.touchEnabled = false;
+        }
+        this.whnEff.gotoAndPlay(0, 1);
+        this.addChild(this.whnEff);
+        this.whnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
+            if (this.whnEff.parent) {
+                this.whnEff.parent.removeChild(this.whnEff);
+            }
+        }, this);
+    }
+
     protected childrenCreated(): void {
 
         this.getOrginCardPos();
@@ -605,7 +645,6 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
-            // this.addNiuNBei();
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -698,8 +737,8 @@ class QZNNView extends eui.Component {
             xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
             }, this);
         }
-
     }
+
     /**拼牌错误 */
     private ppcuowu() {
         if (!this.pinpaicuowu) {
@@ -1497,11 +1536,17 @@ class QZNNView extends eui.Component {
     private addNiuniuBei(grp: eui.Group, index: number): void {
         let bmpurl: string = QZNNUtil.getInstance().getCardBmpUrl(index);
         let niuniuBet: any = grp.getChildByName("niuniubet") as any;
+        if(niuniuBet&&niuniuBet.parent){
+           niuniuBet.parent.removeChild(niuniuBet);
+           niuniuBet = null;
+        }
         if (!niuniuBet) {
             if (index == 0) {
                 niuniuBet = new WuNiuNBei();
-            } else {
+            } else if(index<10) {
                 niuniuBet = new NiuNBei();
+            }else{
+                niuniuBet = new TenshuNiuBei();
             }
             niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
             niuniuBet.anchorOffsetY = (niuniuBet.height / 2);

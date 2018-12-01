@@ -64,6 +64,7 @@
 		"bin-debug/app/game/qznn/QZNNUtil.js",
 		"bin-debug/app/game/qznn/QZNNVictory.js",
 		"bin-debug/app/game/qznn/QZNNView.js",
+		"bin-debug/app/game/qznn/TenshuNiuBeiSkin.js",
 		"bin-debug/app/game/qznn/WuNiuNBei.js",
 		"bin-debug/app/game/rbg/RBGHead.js",
 		"bin-debug/app/game/rbg/RBGMahjong.js",
