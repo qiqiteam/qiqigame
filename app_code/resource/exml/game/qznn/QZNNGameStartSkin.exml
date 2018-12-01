@@ -13,7 +13,7 @@
 						<e:Object scaleX="{1}" scaleY="{1}"/>
 					</tween:props>
 				</tween:To>
-				<tween:Wait duration="1550"/>
+				<tween:Wait duration="900"/>
 				<tween:Set/>
 			</tween:TweenItem>
 			<tween:TweenItem target="{image}">
@@ -22,7 +22,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="900"/>
+				<tween:Wait duration="800"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object y="{-1}" alpha="{0}"/>
@@ -40,7 +40,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="950"/>
+				<tween:Wait duration="450"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}" y="{-1}"/>
@@ -155,7 +155,7 @@
 						<e:Object y="{-1}" alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="750">
+				<tween:To duration="600">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -177,7 +177,7 @@
 						<e:Object y="{-1}" alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="900">
+				<tween:To duration="650">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -199,7 +199,7 @@
 						<e:Object y="{-1}" alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="1000">
+				<tween:To duration="700">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -221,7 +221,7 @@
 						<e:Object y="{-1}" alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="1100">
+				<tween:To duration="750">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -243,7 +243,7 @@
 						<e:Object y="{-1}" alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="1200">
+				<tween:To duration="800">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -265,7 +265,7 @@
 						<e:Object y="{-1}" alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="1300"/>
+				<tween:Wait duration="850"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -311,7 +311,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="1400"/>
+				<tween:Wait duration="800"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -334,7 +334,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="1100"/>
+				<tween:Wait duration="850"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -357,7 +357,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="900">
+				<tween:To duration="800">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -390,7 +390,7 @@
 						<e:Object scaleX="{1}" scaleY="{1}" alpha="{1}" x="{636}" rotation="{60}" y="{153.5}"/>
 					</tween:props>
 				</tween:To>
-				<tween:To duration="650">
+				<tween:To duration="550">
 					<tween:props>
 						<e:Object rotation="{90}" alpha="{0}"/>
 					</tween:props>
@@ -402,7 +402,7 @@
 						<e:Object alpha="{0}" x="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="350"/>
+				<tween:Wait duration="250"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object scaleX="{0.2}" scaleY="{0.2}" alpha="{0}" x="{505.5}" y="{126.4}"/>
@@ -413,7 +413,7 @@
 						<e:Object scaleX="{1}" scaleY="{1}" x="{-5}" y="{8}" alpha="{1}"/>
 					</tween:props>
 				</tween:To>
-				<tween:Wait duration="750"/>
+				<tween:Wait duration="200"/>
 				<tween:Set/>
 			</tween:TweenItem>
 			<tween:TweenItem target="{image19}">
@@ -422,7 +422,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="700"/>
+				<tween:Wait duration="500"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0.2}" x="{773.5}" y="{119.6}"/>
@@ -445,7 +445,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="850"/>
+				<tween:Wait duration="550"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0.2}"/>
@@ -468,7 +468,7 @@
 					<e:Object alpha="{0}"/>
 				</tween:props>
 				</tween:Set>
-				<tween:Wait duration="950"/>
+				<tween:Wait duration="600"/>
 				<tween:Set>
 				<tween:props>
 					<e:Object alpha="{0.2}" x="{514}" y="{184.2}"/>
@@ -491,7 +491,7 @@
 					<e:Object alpha="{0}"/>
 				</tween:props>
 				</tween:Set>
-				<tween:Wait duration="1150"/>
+				<tween:Wait duration="650"/>
 				<tween:Set>
 				<tween:props>
 					<e:Object alpha="{0.2}" x="{597.5}" y="{207.9}"/>
@@ -514,7 +514,7 @@
 					<e:Object alpha="{0}"/>
 				</tween:props>
 				</tween:Set>
-				<tween:Wait duration="1350"/>
+				<tween:Wait duration="700"/>
 				<tween:Set>
 				<tween:props>
 					<e:Object alpha="{0.2}" x="{668.55}" y="{91.45}"/>
@@ -552,9 +552,9 @@
 	<e:Image id="image15" source="qznn_effect_1_11_png" x="0" locked="true"/>
 	<e:Image id="image16" source="qznn_effect_2_1_png" x="640" y="153" anchorOffsetX="129" anchorOffsetY="131.5" locked="true"/>
 	<e:Image id="image17" source="qznn_effect_2_png" x="-6" y="4" locked="true"/>
-	<e:Image id="image21" source="qznn_effect_2_2_png" x="742" y="246.5" anchorOffsetX="45" anchorOffsetY="45"/>
+	<e:Image id="image21" source="qznn_effect_2_2_png" x="742" y="246.5" anchorOffsetX="45" anchorOffsetY="45" locked="true"/>
 	<e:Image id="image18" source="qznn_effect_2_3_png" x="285" y="61" locked="true"/>
-	<e:Image id="image19" source="qznn_effect_2_2_png" x="640" y="83" anchorOffsetX="45" anchorOffsetY="45"/>
-	<e:Image id="image22" source="qznn_effect_2_2_png" x="650" y="93" anchorOffsetX="45" anchorOffsetY="45"/>
-	<e:Image id="image20" source="qznn_effect_2_2_png" x="526" y="207" anchorOffsetX="45" anchorOffsetY="45"/>
+	<e:Image id="image19" source="qznn_effect_2_2_png" x="640" y="83" anchorOffsetX="45" anchorOffsetY="45" locked="true"/>
+	<e:Image id="image22" source="qznn_effect_2_2_png" x="650" y="93" anchorOffsetX="45" anchorOffsetY="45" locked="true"/>
+	<e:Image id="image20" source="qznn_effect_2_2_png" x="526" y="207" anchorOffsetX="45" anchorOffsetY="45" locked="true"/>
 </e:Skin>

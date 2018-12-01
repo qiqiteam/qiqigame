@@ -415,6 +415,11 @@ class QZNNView extends eui.Component {
         xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
 
         UserInfo.getInstance().isGameStart = true;
+        
+        this.texiao = new NiuJiao();
+        this.texiao.x = -180;
+        this.texiao.y = -150;
+        this._niujia.addChild(this.texiao);
     }
     /**
      * 数据初始化
@@ -525,11 +530,6 @@ class QZNNView extends eui.Component {
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
-
-        this.texiao = new NiuJiao();
-        this.texiao.x -= 160;
-        this.texiao.y -= 130;
-        this._pingpai.addChild(this.texiao);
     }
 
     /**
