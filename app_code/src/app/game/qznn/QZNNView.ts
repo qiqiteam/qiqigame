@@ -40,6 +40,9 @@ class QZNNView extends eui.Component {
     public grpCard_2_4: eui.Image;
     public pinpaiType2: eui.Image;
     public labCardType2: eui.Group;
+    public grpHead11: QZNNHead;
+    public grpHead22: QZNNHead;
+    public grpHead33: QZNNHead;
     public grpHead1: eui.Group;
     public imghead1: eui.Image;
     public labelHead1: eui.Label;
@@ -307,6 +310,7 @@ class QZNNView extends eui.Component {
 
 
 
+
     public arr: eui.Image[] = [null, null, null];
 
     public score: number[] = [0, 0, 0, 0, 0];   //牌值 '12'
@@ -324,7 +328,6 @@ class QZNNView extends eui.Component {
     public niu: number = 0;                    //有没有牛
 
     public zijipokes: number[] = [0, 0, 0, 0, 0];    //自己的牌
-
     ///----------------------------------------------------------------
 
     public time: number;        //秒数
@@ -396,10 +399,47 @@ class QZNNView extends eui.Component {
     private gamestarEff: QZNNGameStart;
 
     private nnbankerEff: egret.MovieClip;
+    private whnEff: egret.MovieClip;
+    private nnEff: egret.MovieClip;
+
     private nnvictoryEffect: QZNNVictory;
     private tongsha: QZNNTongsha;
     private pinpaicuowu: egret.MovieClip;
     private texiao: NiuJiao;
+
+    private addNNEff(): void {
+        if (!this.nnEff) {
+            this.nnEff = xlLib.DisplayUtils.createMovieClicp('nn_myCardType10', 'nn_myCardType10');
+            this.nnEff.x = xlLib.Global.screenWidth / 2;
+            this.nnEff.y = xlLib.Global.screenHeight / 2;
+            this.nnEff.frameRate = 10;
+            this.nnEff.touchEnabled = false;
+        }
+        this.nnEff.gotoAndPlay(0, 1);
+        this.addChild(this.nnEff);
+        this.nnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
+            if (this.nnEff.parent) {
+                this.nnEff.parent.removeChild(this.nnEff);
+            }
+        }, this);
+    }
+
+    private addWhnEff(): void {
+        if (!this.whnEff) {
+            this.whnEff = xlLib.DisplayUtils.createMovieClicp('nn_myCardType14', 'nn_myCardType14');
+            this.whnEff.x = xlLib.Global.screenWidth / 2;
+            this.whnEff.y = xlLib.Global.screenHeight / 2;
+            this.whnEff.frameRate = 10;
+            this.whnEff.touchEnabled = false;
+        }
+        this.whnEff.gotoAndPlay(0, 1);
+        this.addChild(this.whnEff);
+        this.whnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
+            if (this.whnEff.parent) {
+                this.whnEff.parent.removeChild(this.whnEff);
+            }
+        }, this);
+    }
 
     protected childrenCreated(): void {
 
@@ -413,6 +453,11 @@ class QZNNView extends eui.Component {
         xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
 
         UserInfo.getInstance().isGameStart = true;
+
+        this.texiao = new NiuJiao();
+        this.texiao.x = -180;
+        this.texiao.y = -150;
+        this._niujia.addChild(this.texiao);
     }
     /**
      * 数据初始化
@@ -523,11 +568,6 @@ class QZNNView extends eui.Component {
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
-
-        this.texiao = new NiuJiao();
-        this.texiao.x -= 160;
-        this.texiao.y -= 130;
-        this._pingpai.addChild(this.texiao);
     }
 
     /**
@@ -603,7 +643,6 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
-            // this.addNiuNBei();
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -696,8 +735,8 @@ class QZNNView extends eui.Component {
             xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
             }, this);
         }
-
     }
+
     /**拼牌错误 */
     private ppcuowu() {
         if (!this.pinpaicuowu) {
@@ -987,13 +1026,13 @@ class QZNNView extends eui.Component {
     /**设置庄家 */
     private acceptbanker(data: any): void {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
-
         this['img_zhuang_0_' + num].visible = true;
 
-        this._tishi.visible = true;
         if (num == 0) {
+            this._tishi.visible = true;
             this._tishi_text.text = "请等待闲家下注..."
         }
+
         /*
         this.zhaungIndex = num;
         let img: eui.Image = new eui.Image("selectedBankerIcon_png");
@@ -1089,9 +1128,6 @@ class QZNNView extends eui.Component {
 
     /** num 几号玩家  _name 名字    _gold 金币   _imghead 头像图片*/
     public setUserInfo(num, _name, _gold, _imghead): void {
-        // this.imghead1
-        // this.labelHead1
-        // this.labelGold1
         this['imghead' + num].source = _imghead;
         this['labelHead' + num].text = _name;
         this['labelGold' + num].text = _gold;
@@ -1499,11 +1535,17 @@ class QZNNView extends eui.Component {
     private addNiuniuBei(grp: eui.Group, index: number): void {
         let bmpurl: string = QZNNUtil.getInstance().getCardBmpUrl(index);
         let niuniuBet: any = grp.getChildByName("niuniubet") as any;
+        if (niuniuBet && niuniuBet.parent) {
+            niuniuBet.parent.removeChild(niuniuBet);
+            niuniuBet = null;
+        }
         if (!niuniuBet) {
             if (index == 0) {
                 niuniuBet = new WuNiuNBei();
-            } else {
+            } else if (index < 10) {
                 niuniuBet = new NiuNBei();
+            } else {
+                niuniuBet = new TenshuNiuBei();
             }
             niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
             niuniuBet.anchorOffsetY = (niuniuBet.height / 2);

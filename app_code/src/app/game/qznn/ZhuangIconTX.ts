@@ -1,9 +1,12 @@
-class NiuZhang0 extends eui.Component {
+class ZhuangIconTX extends eui.Component {
+    public image:eui.Image;
+    public image0:eui.Image;
+
 
     public niuniuanmin: egret.tween.TweenGroup;
     constructor() {
         super();
-        this.skinName = "qiangzhuang2";
+        this.skinName = "zhuangjia";
     }
 
     protected childrenCreated() {
@@ -17,8 +20,9 @@ class NiuZhang0 extends eui.Component {
         this.niuniuanmin.stop();
     }
 
-    public play():void
+    public play(src:string):void
     {
+        this.image0.source = src;
         this.niuniuanmin.play(0);   
     }
 
