@@ -8,12 +8,12 @@
 						<e:Object scaleX="{1.2}" scaleY="{1.2}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="150">
+				<tween:To duration="100">
 					<tween:props>
 						<e:Object scaleX="{1}" scaleY="{1}"/>
 					</tween:props>
 				</tween:To>
-				<tween:Wait duration="900"/>
+				<tween:Wait duration="300"/>
 				<tween:Set/>
 			</tween:TweenItem>
 			<tween:TweenItem target="{image}">
@@ -22,7 +22,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="800"/>
+				<tween:Wait duration="100"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object y="{-1}" alpha="{0}"/>
@@ -40,7 +40,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="450"/>
+				<tween:Wait duration="200"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}" y="{-1}"/>
@@ -109,7 +109,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="450"/>
+				<tween:Wait duration="300"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -132,7 +132,7 @@
 						<e:Object alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="550"/>
+				<tween:Wait duration="350"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object alpha="{0}"/>
@@ -155,7 +155,7 @@
 						<e:Object y="{-1}" alpha="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="600">
+				<tween:To duration="450">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -345,7 +345,7 @@
 						<e:Object alpha="{1}"/>
 					</tween:props>
 				</tween:To>
-				<tween:To duration="100">
+				<tween:To duration="50">
 					<tween:props>
 						<e:Object alpha="{0}"/>
 					</tween:props>
@@ -390,7 +390,7 @@
 						<e:Object scaleX="{1}" scaleY="{1}" alpha="{1}" x="{636}" rotation="{60}" y="{153.5}"/>
 					</tween:props>
 				</tween:To>
-				<tween:To duration="550">
+				<tween:To duration="500">
 					<tween:props>
 						<e:Object rotation="{90}" alpha="{0}"/>
 					</tween:props>
@@ -402,18 +402,18 @@
 						<e:Object alpha="{0}" x="{0}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:Wait duration="250"/>
+				<tween:Wait duration="150"/>
 				<tween:Set>
 					<tween:props>
 						<e:Object scaleX="{0.2}" scaleY="{0.2}" alpha="{0}" x="{505.5}" y="{126.4}"/>
 					</tween:props>
 				</tween:Set>
-				<tween:To duration="600">
+				<tween:To duration="350">
 					<tween:props>
 						<e:Object scaleX="{1}" scaleY="{1}" x="{-5}" y="{8}" alpha="{1}"/>
 					</tween:props>
 				</tween:To>
-				<tween:Wait duration="200"/>
+				<tween:Wait duration="250"/>
 				<tween:Set/>
 			</tween:TweenItem>
 			<tween:TweenItem target="{image19}">

@@ -16,7 +16,7 @@ class QZNNHead extends eui.Component {
     protected childrenCreated() {
         super.childrenCreated();
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-
+/*
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
         mask2.graphics.drawRect(0, 0, 117, 115);
@@ -25,6 +25,32 @@ class QZNNHead extends eui.Component {
         mask2.y = this.imghead.y + 3;
         this.addChild(mask2);
         this.imghead.mask = mask2;
+*/
+
+        var shp:egret.Shape = new egret.Shape();
+        var colors:number[] = [0xCFF10A,0xffffff,0x68FFC8,0x7D68FF];    
+        var i:number = 0;
+        var t:number = 0;
+        var currentColorIndex:number = 0;
+        currentColorIndex = i%4;    
+        shp.graphics.beginFill(colors[currentColorIndex]);
+        shp.graphics.drawRect(0,(i*30+15),500,20);   
+        //指定一种简单的单一颜色填充（0xCFF10A）。
+        shp.graphics.beginFill(colors[currentColorIndex]);
+        //循环绘制圆角矩形
+        shp.graphics.drawRoundRect((t*100+i%2*50),
+        (i%2==0?(i/2*60):((i-1)/2*60+30)),50,50,13,13);
+        shp.graphics.endFill();
+        shp.graphics.beginFill(colors[currentColorIndex!=3?currentColorIndex+1:0]);
+        shp.graphics.drawRoundRect((t*100+i%2*50+10),
+        (i%2==0?(i/2*60+10):((i-1)/2*60+30+10)),30,30,10,10);
+        shp.graphics.endFill();
+        shp.graphics.lineStyle(4,0xcc3333,1);
+        shp.graphics.drawRoundRect(50,30,200,300,20,20);
+        shp.graphics.endFill();
+        this.addChild(shp);
+
+
     }
 
     /**

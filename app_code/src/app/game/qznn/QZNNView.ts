@@ -326,6 +326,9 @@ class QZNNView extends eui.Component {
     public zijipokes: number[] = [0, 0, 0, 0, 0];    //自己的牌
 
     public turn_score_arr: eui.BitmapLabel[] = [];
+
+    public win_eff_err:any[] = [];
+
     ///----------------------------------------------------------------
 
     public time: number;        //秒数
@@ -412,7 +415,7 @@ class QZNNView extends eui.Component {
     private niuniuhen1: QZNNHHeadEff;
     private niuniushu0: QZNNVEff;
     private niuniushu1: QZNNVHeadEff;
-    
+
 
     private addNNEff(): void {
         if (!this.nnEff) {
@@ -523,7 +526,6 @@ class QZNNView extends eui.Component {
         this._pingpai.visible = false;
         this._my_pai.visible = false;
         this.arr = [];
-        this.turn_score_arr = [];
 
         this._zhi_0.text = "";
         this._zhi_1.text = "";
@@ -684,7 +686,7 @@ class QZNNView extends eui.Component {
                 } else {
                     this.playClickSound(QZNNUtil.getInstance().getSoundEffect(12));
                     this.ppcuowu();
-                    
+
                 }
             } else {
                 this.ppcuowu();
@@ -698,7 +700,7 @@ class QZNNView extends eui.Component {
                 this._pingpai.visible = false;
                 this.texiao.stop();
                 this._my_pai.visible = true;
-                this.returnpinpai(0); 
+                this.returnpinpai(0);
             }
         }
     }
@@ -824,6 +826,8 @@ class QZNNView extends eui.Component {
         this._puke_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
         this._puke_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
         this._puke_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
+
+        
     }
 
     /**抢庄牛牛拼牌通知 */
@@ -1802,7 +1806,7 @@ class QZNNView extends eui.Component {
 
         //this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
 
-        /*
+        
         let zhuangPos = {
             x: this['grpHead' + this.zhaungIndex].x,
             y: this['grpHead' + this.zhaungIndex].y
@@ -1825,8 +1829,8 @@ class QZNNView extends eui.Component {
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
             if (i == 0) {
-                // pos.x = this._group_di.x + 15 + 145;
-                // pos.y = this._group_di.y - 35 + 103;
+                //pos.x = this._group_di.x + 15 + 145;
+                //pos.y = this._group_di.y - 35 + 103;
                 numPos.x = pos.x + 42;
                 numPos.y = pos.y + 2;
             } else {
@@ -1837,26 +1841,26 @@ class QZNNView extends eui.Component {
             }
 
             if (this.cardResult.pokes[i].win == true) {
-                xlLib.TipsUtils.showTipsDownToUp("+" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
+                //xlLib.TipsUtils.showTipsDownToUp("+" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
                 this.updatePlayerGold(i, this.cardResult.pokes[i].score, true);
             } else {
-                xlLib.TipsUtils.showTipsDownToUp("-" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
+                //xlLib.TipsUtils.showTipsDownToUp("-" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
                 this.updatePlayerGold(i, this.cardResult.pokes[i].score, false);
             }
 
-            if (this.zhaungIndex == i) {
-                continue;
-            }
+            //if (this.zhaungIndex == i) {
+            //    continue;
+            //}
 
-            if (this.cardResult.pokes[i].win == true) {
-                EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
-            } else {
-                EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
-            }
-        }*/
+            //if (this.cardResult.pokes[i].win == true) {
+            //    EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+            //} else {
+            //    EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+            //}
+        }
 
-        for(let i=0; i<this.cardResult.pokes.length; i++) {
-            this.suiCoreGameEndScoreResultEffect(i, this['grpHead' + i] ,this.cardResult.pokes[i].win, this.cardResult.pokes[i].score);
+        for (let i = 0; i < this.cardResult.pokes.length; i++) {
+            this.suiCoreGameEndScoreResultEffect(i, this['grpHead' + i], this.cardResult.pokes[i].win, this.cardResult.pokes[i].score);
         }
 
         this.interval = setInterval(this.victoryEffect.bind(this), 2000);
@@ -1886,10 +1890,46 @@ class QZNNView extends eui.Component {
 
     /**金币数字滚动效果 */
     public suiCoreGameEndScoreResultEffect(index, player, state, score) {
+
+        if (state) {
+
+            if (index % 2 == 0) {
+                var num0 = new QZNNHEff();
+                num0.x = -84;
+                num0.y = -72;
+                num0.play();
+
+                var num1 = new QZNNHHeadEff();
+                num1.x = -84;
+                num1.y = -72;
+                num1.play();
+                player.addChild(num0);
+                player.addChild(num1);
+                this.win_eff_err.push(num0);
+                this.win_eff_err.push(num1);
+            } else {
+                var num2 = new QZNNVEff();
+                num2.x = -70;
+                num2.y = -70;
+                num2.play();
+
+                var num3 = new QZNNVHeadEff();
+                num3.x = -70;
+                num3.y = -70;
+                num3.play();
+                player.addChild(num2);
+                player.addChild(num3);
+                this.win_eff_err.push(num2);
+                this.win_eff_err.push(num3);
+            }
+        }
+
+        // this['grpHead' + num].addChild(this.niuniukuang1);
+
         let label = new eui.BitmapLabel;
         label.textAlign = egret.HorizontalAlign.CENTER;
-        let str:string = "";
-        if(state == true) {
+        let str: string = "";
+        if (state == true) {
             label.font = "qznn_win_fnt";
             label.text = "0";
             str = "+";
@@ -1898,17 +1938,17 @@ class QZNNView extends eui.Component {
             label.text = "0";
             str = "-";
         }
-        if(index == 0) {
-            label.x = 30;
+        if (index == 0) {
+            label.x = 20;
             label.y = -40;
             label.textAlign = egret.HorizontalAlign.RIGHT;
-        } else if(index == 1) {
+        } else if (index == 1) {
             label.x = 30;
             label.y = -40;
-        } else if(index == 2) {
+        } else if (index == 2) {
             label.x = 90;
             label.y = -40;
-        } else if(index == 3) {
+        } else if (index == 3) {
             label.x = 30;
             label.y = -40;
         }
@@ -2055,11 +2095,22 @@ class QZNNView extends eui.Component {
         this._zhuang_img1.visible = false;
         this._zhuang_img2.visible = false;
         this._zhuang_img3.visible = false;
-        
+
         this._tishi.visible = false;
-        for (let i=0; i<this.turn_score_arr.length; i++) {
+        for (let i = 0; i < this.turn_score_arr.length; i++) {
             this.turn_score_arr[i].parent.removeChild(this.turn_score_arr[i]);
         }
+        this.turn_score_arr = [];
+
+        for (let i = 0; i < this.win_eff_err.length; i++) {
+            this.win_eff_err[i].stop();
+            this.win_eff_err[i].parent.removeChild(this.win_eff_err[i]);
+        }
+
+        this.win_eff_err = [];
+
+        this.niuniuTX.stop();
+        this.niuniuTX.parent.removeChild(this.niuniuTX);
     }
 
     private removeEff(eff: egret.MovieClip): void {
