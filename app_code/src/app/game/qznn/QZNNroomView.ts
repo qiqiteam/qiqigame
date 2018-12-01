@@ -35,7 +35,7 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 		if (data._obj.code == 200) {
 
 			xlLib.SceneMgr.instance.changeScene(QZNNScene);
-			xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
+			// xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 		}
 	}
 

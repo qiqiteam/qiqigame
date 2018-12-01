@@ -621,8 +621,7 @@ class QZNNView extends eui.Component {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
                     this._my_pai.visible = true;
-                    this.pinpaiType.visible = true;
-                    this.returnpinpai();
+                    this.returnpinpai(1);
                 } else {
                     this.ppcuowu();
                 }
@@ -636,45 +635,56 @@ class QZNNView extends eui.Component {
             } else {
                 this._pingpai.visible = false;
                 this._my_pai.visible = true;
-                this.pinpaiType.visible = true;
+                this.returnpinpai(0);
             }
         }
     }
 
     /**返回拼牌顺序 */
-    private returnpinpai() {
-        var aaaaa: number = 3;
-        for (let i = 0; i < this.arr_fen1.length; i++) {
+    private returnpinpai(data: number) {
+        if (data == 0) {
+            let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+            let senddata: any = {
+                userid: UserInfo.getInstance().uid,
+                token: UserInfo.getInstance().token, playway: playway.id,
+                centerCard: [this.score1[0], this.score1[1], this.score1[2], this.score1[3], this.score1[4]]
+            };
+            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
+            }, this);
+        } else if (data == 1) {
+            var aaaaa: number = 3;
+            for (let i = 0; i < this.arr_fen1.length; i++) {
 
-            for (let j = 0; j < this.score1.length; j++) {
+                for (let j = 0; j < this.score1.length; j++) {
 
-                if (this.arr_fen1[i] == this.score1[j]) {
-                    this.score1[j] = null;
-                    continue;
+                    if (this.arr_fen1[i] == this.score1[j]) {
+                        this.score1[j] = null;
+                        continue;
+                    }
                 }
             }
-        }
-        for (let k = 0; k < this.score1.length; k++) {
+            for (let k = 0; k < this.score1.length; k++) {
 
-            if (this.score1[k] !== null) {
-                this.arr_fen1[aaaaa] = this.score1[k];
-                aaaaa++;
+                if (this.score1[k] !== null) {
+                    this.arr_fen1[aaaaa] = this.score1[k];
+                    aaaaa++;
+                }
             }
+
+            let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+            let senddata: any = {
+                userid: UserInfo.getInstance().uid,
+                token: UserInfo.getInstance().token, playway: playway.id,
+                centerCard: [this.arr_fen1[0], this.arr_fen1[1], this.arr_fen1[2], this.arr_fen1[3], this.arr_fen1[4]]
+            };
+            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
+            }, this);
         }
 
-
-        let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
-        let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
-        let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-        let senddata: any = {
-            userid: UserInfo.getInstance().uid,
-            token: UserInfo.getInstance().token, playway: playway.id,
-            centerCard: [this.arr_fen1[0], this.arr_fen1[1], this.arr_fen1[2], this.arr_fen1[3], this.arr_fen1[4]]
-        };
-        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
-        }, this);
-
-        // this.arr_fen1;
     }
     /**拼牌错误 */
     private ppcuowu() {
@@ -738,7 +748,7 @@ class QZNNView extends eui.Component {
 
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
-
+        EventUtil.addEventListener(EventConst.onUserShowOrderUpdate, this.onShowOrder, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
@@ -753,6 +763,16 @@ class QZNNView extends eui.Component {
         this._puke_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
     }
 
+    /**抢庄牛牛拼牌通知 */
+    private onShowOrder(data: any): void {
+
+        console.log(data._obj.index + "号玩家准备");
+
+        if (data._obj.index = 0) {
+            this.pinpaiType.visible = true;
+        }
+        this['pinpaiType' + (data._obj.index - 1)].visible = true;
+    }
     /**游戏状态 */
     private GameStatus(data: any): void {
         switch (data._obj.roomStatus) {
@@ -1409,8 +1429,13 @@ class QZNNView extends eui.Component {
     }
 
     private effectPlayerIndex = 0;
-    /**结算 */
+    /**结算 其他玩家翻牌*/
     private playerCardRotation(): void {
+        this.pinpaiType.visible = false;
+        for (let i = 0; i > 3; i++) {
+            this['pinpaiType' + i].visible = false;
+        }
+
         if (this.effectPlayerIndex == this.cardResult.pokes.length - 1) {
             clearInterval(this.interval)
             this.effectPlayerIndex = 0;

@@ -33,7 +33,7 @@ class EventConst {
     /**百家乐离开房间 */
     public static BaccaratOnleave: string = "BaccaratOnleave";
 
-     /**准备 */
+    /**准备 */
     public static prepare: string = "prepare";
     /**发牌 */
     public static play: string = "play";
@@ -58,8 +58,9 @@ class EventConst {
     //public static dice: string = "dice";
 
     //------------------S to C---------------------服务端回包监听数据
-
-     /**游戏状态 */
+    /**抢庄牛牛拼牌通知(所有人) */
+    public static onUserShowOrderUpdate: string = "onUserShowOrderUpdate";
+    /**游戏状态 */
     public static onGameStatusChange: string = "onGameStatusChange";
     /**所有玩家列表*/
     public static players: string = "players";
@@ -70,7 +71,7 @@ class EventConst {
     /**下注通知(所有人)*/
     public static onUserHogOrderUpdate: string = "onUserHogOrderUpdate";
 
-    
+
     /**监听抢庄按钮*/
     public static hog: string = "hog";
     /**用户抢庄数*/
@@ -113,12 +114,12 @@ class EventConst {
     public static isStartBeton: string = "isStartBeton";
     /**( 你被请出房间**)*/
     public static isStartBetonST: string = "isStartBetonST";
-     /**(百家乐退出房间)*/
+    /**(百家乐退出房间)*/
     public static gameOverSucces: string = "gameOverSucces";
 
 
 
-    
+
 
 
 
@@ -131,7 +132,7 @@ class EventConst {
     /**(玩家下注)*/
     //public static botpour:string ="botpour";
     /**(结算)*/
-    public static settlement:string ="settlement";
+    public static settlement: string = "settlement";
     /**(退出房间)*/
     public static leave: string = "leave";
 
@@ -143,6 +144,6 @@ class EventConst {
     public static otherAbandon: string = "otherAbandon";
     /**(游戏结束)*/
     public static gameOver: string = "gameOver";
-    
+
 
 }
