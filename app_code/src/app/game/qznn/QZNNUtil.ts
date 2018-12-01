@@ -110,7 +110,7 @@ class QZNNUtil {
     public getCardBmpUrl(index): string {
         switch (index) {
             case 0:
-                return 'qznntype0_tex1_png';
+                // return 'qznntype0_tex1_png';
             case 1:
             case 2:
             case 3:

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="TenshuNiuBeiSkin" width="400" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+<e:Skin class="TenshuNiuBeiSkin" width="325" height="75" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
 	<w:Declarations>
 		<tween:TweenGroup id="teshuniu">
 			<tween:TweenItem target="{image}">
@@ -95,8 +95,8 @@
 			</tween:TweenItem>
 		</tween:TweenGroup>
 	</w:Declarations>
-	<e:Image id="image" source="qznntype3_tex2_png" x="35" y="99" anchorOffsetX="0" width="302.91" scaleX="1.05" locked="true"/>
-	<e:Image id="image0" source="qznntype3_tex12_png" x="73" y="99"/>
-	<e:Image id="image1" source="qznntype4_4tex3_png" x="305" y="94" rotation="89.73"/>
-	<e:Image id="image2" source="qznntype4_4tex3_png" x="179" y="140.7" rotation="89.73"/>
+	<e:Image id="image" source="qznntype3_tex2_png" x="1" y="5" anchorOffsetX="0" width="302.91" scaleX="1.05"/>
+	<e:Image id="image0" source="qznntype3_tex12_png" x="39" y="5"/>
+	<e:Image id="image1" source="qznntype4_4tex3_png" x="271" y="0" rotation="89.73"/>
+	<e:Image id="image2" source="qznntype4_4tex3_png" x="145" y="46.7" rotation="89.73"/>
 </e:Skin>
