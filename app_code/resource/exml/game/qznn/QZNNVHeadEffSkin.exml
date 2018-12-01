@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="QZNNVHeadEffSkin" width="160" height="200" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="ami">
+			<tween:TweenItem target="{image}">
+				<tween:Set/>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object x="{0}" y="{0}" scaleX="{1}" scaleY="{1}" alpha="{0.7}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}" scaleX="{1}" scaleY="{1}" x="{0}" y="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image id="image" source="qznn_win_tex1_png" x="0" y="0"/>
+</e:Skin>
