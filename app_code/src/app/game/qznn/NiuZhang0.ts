@@ -18,12 +18,12 @@ class NiuZhang0 extends eui.Component {
 
     private onTweenComplete(evt: egret.Event): void {
         this.qiangzhuang1.stop();
-        // this.visible = false;
+        this.visible = false;
     }
 
     public play(): void {
         this.qiangzhuang1.play(0);
-        // this.visible = true;
+        this.visible = true;
     }
 
 

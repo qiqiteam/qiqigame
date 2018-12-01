@@ -1,0 +1,15 @@
+{
+	"name": "egret",
+	"version": "5.0.1",
+	"module": [
+		{
+			"name": "countUp",
+			"description": "countUp",
+			"files": [
+				"countUp.min.js",
+				"countUp.js",
+				"countUp.d.ts"
+			]
+		}
+	]
+}

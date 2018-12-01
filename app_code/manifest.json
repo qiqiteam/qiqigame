@@ -9,7 +9,8 @@
 		"libs/modules/socket/socket.js",
 		"libs/modules/dragonBones/dragonBones.js",
 		"promise/bin/promise.js",
-		"pomelo/pomelo.js"
+		"pomelo/pomelo.js",
+		"countUp/bin/countUp.js"
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
@@ -43,7 +44,6 @@
 		"bin-debug/app/game/brnn/BRNNScene.js",
 		"bin-debug/app/game/brnn/BRNNUtil.js",
 		"bin-debug/app/game/brnn/BRNNView.js",
-		"bin-debug/app/game/erbagang/ErBaGangroomView.js",
 		"bin-debug/app/game/erbagang/ErBaGangView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
@@ -72,6 +72,7 @@
 		"bin-debug/app/game/qznn/TenshuNiuBeiSkin.js",
 		"bin-debug/app/game/qznn/WuNiuNBei.js",
 		"bin-debug/app/game/qznn/ZhuangIconTX.js",
+		"bin-debug/app/game/rbg/ErBaGangroomView.js",
 		"bin-debug/app/game/rbg/RBGHead.js",
 		"bin-debug/app/game/rbg/RBGMahjong.js",
 		"bin-debug/app/game/rbg/RBGScene.js",
@@ -90,8 +91,8 @@
 		"bin-debug/app/game/tbnn/TBNNUtil.js",
 		"bin-debug/app/game/tbnn/TBNNView.js",
 		"bin-debug/app/game/welfare/AwardItem.js",
+		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/component/ComBox.js",
-		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
 		"bin-debug/app/game/zjh/ZJHHead.js",
 		"bin-debug/app/game/zjh/ZJHroomView.js",
@@ -113,8 +114,10 @@
 		"bin-debug/app/LodingView.js",
 		"bin-debug/app/login/LoginView.js",
 		"bin-debug/app/component/ComBoxItem.js",
+		"bin-debug/app/util/AnimationUtil.js",
 		"bin-debug/app/util/EventUtil.js",
 		"bin-debug/app/util/GlobalFunction.js",
+		"bin-debug/app/util/uiCore.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/consts/CommonConsts.js",
 		"bin-debug/event/Dispatcher.js",
@@ -167,6 +170,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/game/welfare/LotteryPanel.js"
+		"bin-debug/app/game/welfare/WelfareTypeItem.js"
 	]
 }

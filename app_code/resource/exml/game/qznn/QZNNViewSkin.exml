@@ -83,7 +83,7 @@
 
 	</e:Group>
 	<e:Group x="0" y="0" width="1472" height="828" locked="true">
-		<e:Group id="grpHead1" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" y="334" x="77.93">
+		<e:Group id="grpHead1" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" y="334" x="77.93" locked="true">
 			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
 			<e:Image id="imghead1" width="90" height="90" y="35.65" x="17.53" source="women7_png"/>
 			<e:Label id="labelHead1" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25"/>
@@ -625,7 +625,7 @@
 		<e:Image id="_whether_1" x="307.44" y="316.48" source="img_BQ_0_png"/>
 		<e:Image id="_img_1" x="343.44" y="315.48" source="img_1_png"/>
 	</e:Group>
-	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true" visible="false">
+	<e:Group id="_xiabei" width="1472" height="828" horizontalCenter="0" verticalCenter="0" visible="false" locked="true">
 		<e:Image id="_xiabei_0_0" x="208.88" y="569.97" source="img_XB_png"/>
 		<e:Image id="_xiabei_0" x="295.61" y="586.97" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_0_0" x="272.81" y="586.97" source="img_XB_1_png"/>
@@ -639,7 +639,7 @@
 		<e:Image id="_xiabei_3" x="1146.78" y="316" source="img_XB_1_png"/>
 		<e:Image id="_xiabei_0_0_3" x="1125.88" y="316" source="img_XB_1_png"/>
 	</e:Group>
-	<e:Group id="_group_qiang" width="800" height="80" y="542.1" anchorOffsetX="0" horizontalCenter="62" locked="true" visible="false">
+	<e:Group id="_group_qiang" width="1001.34" height="80" y="532.79" anchorOffsetX="0" x="295.33" locked="true" visible="false">
 		<e:Button id="_btn_buqiang" label="" x="0" y="6">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -649,7 +649,7 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Button id="_btn_qiang_1" label="" x="158.5" y="6">
+		<e:Button id="_btn_qiang_1" label="" x="179.81" y="6">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu1_png" source.down="qznn_btn_beishu1_1_png"/>
@@ -658,7 +658,7 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Button id="_btn_qiang_2" label="" x="317" y="6">
+		<e:Button id="_btn_qiang_2" label="" x="358.29" y="6">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu1_png" source.down="qznn_btn_beishu1_1_png"/>
@@ -667,7 +667,7 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Button id="_btn_qiang_3" label="" x="475.5" y="6">
+		<e:Button id="_btn_qiang_3" label="" x="540.81" y="6">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu1_png" source.down="qznn_btn_beishu1_1_png"/>
@@ -676,7 +676,7 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Button id="_btn_qiang_4" label="" x="634" y="6">
+		<e:Button id="_btn_qiang_4" label="" x="720.63" y="6">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu1_png" source.down="qznn_btn_beishu1_1_png"/>
@@ -686,18 +686,18 @@
 
 		</e:Button>
 		<e:Image source="btn_BQ_0_png" x="13.92" touchEnabled="false" y="8"/>
-		<e:Image x="216.45" touchEnabled="false" source="img_BQ_0_1_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="244.03" y="18" touchEnabled="false"/>
-		<e:Image x="365.54" touchEnabled="false" source="img_BQ_0_2_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="399.84" y="18" touchEnabled="false"/>
-		<e:Image x="524.66" touchEnabled="false" source="img_BQ_0_3_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="556.29" y="18" touchEnabled="false"/>
+		<e:Image x="237.76" touchEnabled="false" source="img_BQ_0_1_png" y="24"/>
+		<e:Image source="img_BQ_bei_png" x="265.34" y="18" touchEnabled="false"/>
+		<e:Image x="406.83" touchEnabled="false" source="img_BQ_0_2_png" y="24"/>
+		<e:Image source="img_BQ_bei_png" x="441.13" y="18" touchEnabled="false"/>
+		<e:Image x="589.97" touchEnabled="false" source="img_BQ_0_3_png" y="24"/>
+		<e:Image source="img_BQ_bei_png" x="621.6" y="18" touchEnabled="false"/>
 
 
-		<e:Image x="680.46" touchEnabled="false" source="img_BQ_0_4_png" y="24"/>
-		<e:Image source="img_BQ_bei_png" x="712.09" y="18" touchEnabled="false"/>
+		<e:Image x="767.09" touchEnabled="false" source="img_BQ_0_4_png" y="24"/>
+		<e:Image source="img_BQ_bei_png" x="798.72" y="18" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="_btn_switch" width="800" height="80" y="542.1" anchorOffsetX="0" horizontalCenter="130" locked="true" visible="false">
+	<e:Group id="_btn_switch" width="941.34" height="80" y="542.1" anchorOffsetX="0" x="265" locked="true" visible="false">
 		<e:Button id="_btn_double_1" label="" x="0" y="2">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -710,7 +710,7 @@
 		<e:Image id="beishu_0" x="33.88" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
 		<e:Image id="beishu_0_0" x="60.49" touchEnabled="false" verticalCenter="-2" source="img_XB_1_png"/>
 		<e:Image id="bs_img_0" source="img_XBei_png" x="80.33" y="18" touchEnabled="false"/>
-		<e:Button id="_btn_double_2" label="" x="158" y="2">
+		<e:Button id="_btn_double_2" label="" x="196.67" y="2">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu2_png" source.down="qznn_btn_beishu2_1_png"/>
@@ -719,10 +719,10 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Image id="beishu_1" x="197.41" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
-		<e:Image id="beishu_0_1" x="221.35" touchEnabled="false" verticalCenter="-2" source="img_XB_2_png"/>
-		<e:Image id="bs_img_1" source="img_XBei_png" x="243.33" y="18" touchEnabled="false"/>
-		<e:Button id="_btn_double_3" label="" x="316" y="2">
+		<e:Image id="beishu_1" x="236.08" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
+		<e:Image id="beishu_0_1" x="260.02" touchEnabled="false" verticalCenter="-2" source="img_XB_2_png"/>
+		<e:Image id="bs_img_1" source="img_XBei_png" x="282" y="18" touchEnabled="false"/>
+		<e:Button id="_btn_double_3" label="" x="391.96" y="2">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu2_png" source.down="qznn_btn_beishu2_1_png"/>
@@ -731,10 +731,10 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Image id="beishu_2" x="353.84" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
-		<e:Image id="beishu_0_2" x="379.11" touchEnabled="false" verticalCenter="-2" source="img_XB_3_png"/>
-		<e:Image id="bs_img_2" source="img_XBei_png" x="400.66" y="18" touchEnabled="false"/>
-		<e:Button id="_btn_double_4" label="" x="474" y="2">
+		<e:Image id="beishu_2" x="429.8" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
+		<e:Image id="beishu_0_2" x="455.07" touchEnabled="false" verticalCenter="-2" source="img_XB_3_png"/>
+		<e:Image id="bs_img_2" source="img_XBei_png" x="476.62" y="18" touchEnabled="false"/>
+		<e:Button id="_btn_double_4" label="" x="581.96" y="2">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu2_png" source.down="qznn_btn_beishu2_1_png"/>
@@ -743,10 +743,10 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Image id="beishu_3" x="510.5" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
-		<e:Image id="beishu_0_3" x="535.77" touchEnabled="false" verticalCenter="-2" source="img_XB_4_png"/>
-		<e:Image id="bs_img_3" source="img_XBei_png" x="555.64" y="18" touchEnabled="false"/>
-		<e:Button id="_btn_double_5" label="" x="632" y="2">
+		<e:Image id="beishu_3" x="618.46" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
+		<e:Image id="beishu_0_3" x="643.73" touchEnabled="false" verticalCenter="-2" source="img_XB_4_png"/>
+		<e:Image id="bs_img_3" source="img_XBei_png" x="663.6" y="18" touchEnabled="false"/>
+		<e:Button id="_btn_double_5" label="" x="771.99" y="2">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu2_png" source.down="qznn_btn_beishu2_1_png"/>
@@ -755,9 +755,9 @@
 			</e:skinName>
 
 		</e:Button>
-		<e:Image id="beishu_4" x="671.59" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
-		<e:Image id="beishu_0_4" x="696.86" touchEnabled="false" verticalCenter="-2" source="img_XB_5_png"/>
-		<e:Image id="bs_img_4" source="img_XBei_png" x="717.62" y="18" touchEnabled="false"/>
+		<e:Image id="beishu_4" x="811.58" touchEnabled="false" verticalCenter="-2" source="img_XB_0_png"/>
+		<e:Image id="beishu_0_4" x="836.85" touchEnabled="false" verticalCenter="-2" source="img_XB_5_png"/>
+		<e:Image id="bs_img_4" source="img_XBei_png" x="857.61" y="18" touchEnabled="false"/>
 	</e:Group>
 	<e:Group id="_jixu" width="180.55" height="70.39" y="530.35" anchorOffsetX="0" x="646" anchorOffsetY="0" locked="true" visible="false">
 		<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="0" y="0">
