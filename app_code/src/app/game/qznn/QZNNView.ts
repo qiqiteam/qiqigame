@@ -1016,11 +1016,13 @@ class QZNNView extends eui.Component {
     private acceptbanker(data: any): void {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
 
-        // this.niuniuTX = new ZhuangIconTX();
-        // this.niuniuTX.x = 0;
-        // this.niuniuTX.y = 0;
-        // this.niuniuTX.play();
-        // this['grpHead' + num].addChild(this.niuniuTX);
+        if(!this.niuniuTX){
+            this.niuniuTX = new ZhuangIconTX();
+            this.niuniuTX.x = 0;
+            this.niuniuTX.y = 0;
+            this.niuniuTX.play();
+        }
+        this['grpHead' + num].addChild(this.niuniuTX);
 
 
 
