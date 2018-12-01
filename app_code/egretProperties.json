@@ -38,6 +38,10 @@
 		{
 			"name": "pomelo",
 			"path": "./pomelo"
+		},
+		{
+			"name": "countUp",
+			"path": "./countUp"
 		}
 	]
 }

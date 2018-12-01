@@ -9,6 +9,12 @@ class RBGView extends eui.Component {
     }
     private r: any = null;
 
+
+
+
+
+
+
     public grpCoins:eui.Group;
 public grpCard:eui.Group;
 public grpCard_0_0:RBGMahjong;
@@ -244,6 +250,7 @@ public _btn_voice:eui.Button;
 public _btn_begin:eui.Button;
 
 
+public _animation_start:uiCore.Animation;
 
     //public labHandsel: eui.BitmapLabel;
     //private grpSelectBet: eui.Group;    //筹码底背景
@@ -300,9 +307,64 @@ public _btn_begin:eui.Button;
 
     private zhaungIndex: number = 0;    //庄的位置
 
+    private diceGroup:eui.Group;
+    private dice0:eui.Image;
+    private dice1:eui.Image;
+    private diceBg:eui.Image;
+    private diceBottom:eui.Image;
+    private diceTop:eui.Image;
 
+    //private timeList = [];
+    //private effectList = [];
+    //private intervalList = [];
+    //private animationList = [];
+    //private firstPlayerNo = -1;
 
-
+    private table_0 = "bar_btn_table_bg_0_png";
+    private roomSize = 4;
+    private mySeatNo = 0;
+    private blink = 0;
+    private theFirstGame = false;
+    private gameStartTimeout = -1;
+    private gameIndex = 0;
+    private round = 0;
+    private roundId = "";
+    private myBetNumber = 0;
+    private totalBetNumber = 0;
+    private chipPool = [];
+    private chipList = [];
+    private chipTotal = 0;
+    private chipEffectTimeout = -1;
+    private removeChipTimeout = -1;
+    private chipPosList = [40, 40, 40, -130];
+    private grabInterval = -1;
+    private grabTime = 6;
+    private totalTime = 0;
+    private bankerInterval = -1;
+    private runningTime = 0;
+    private bankerList = [];
+    private bankerChair = 0;
+    private betInterval = -1;
+    private betTime = 6;
+    private diceInterval = -1;
+    private startDiceTimeout = -1;
+    private diceResultTimeout = -1;
+    private firstPlayer = -1;
+    private sendingInterval = -1;
+    private sendCount = 0;
+    private killTimeout = -1;
+    private gameType = 1;
+    private bankerFlag = false;
+    private resultList = [];
+    private resultDone = false;
+    private continueInterval = -1;
+    private continueTime = 5;
+    private roomType = 0;
+    private effectList = [];
+    private timeList = [];
+    private intervalList = [];
+    private animationList = [];
+    private isReconnect = false;
 
     //-----------------------------------------------
 
@@ -318,16 +380,16 @@ public _btn_begin:eui.Button;
         // //this.joinCallback(this.r);
         // this.resize();
 
-        this.labelHead0.text = UserInfo.getInstance().username;
-        this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
+        //this.labelHead0.text = UserInfo.getInstance().username;
+        //this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
 
     }
     /**
      * 数据初始化
      */
     private initData(): void {
-        this.labBankerRank.text = '';
-        this.labBankerLastNum.text = '';
+        //this.labBankerRank.text = '';
+        //this.labBankerLastNum.text = '';
         //this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
@@ -335,18 +397,18 @@ public _btn_begin:eui.Button;
         this.grpCoins.touchEnabled = false;
         this.grpTips.touchEnabled = false;
         this.grpTips.touchChildren = false;
-        this.grpSecondPanel.visible = false;
-        this.btnUpBanker.visible = true;
-        this.btnDownBanker.visible = false;
+        //this.grpSecondPanel.visible = false;
+        //this.btnUpBanker.visible = true;
+        //this.btnDownBanker.visible = false;
         this.grpTips.visible = false;
         this.grpResult.visible = false;
         this.imgBaoZhuang.visible = false;
-        this.grpCardType.touchChildren = false;
-        this.grpCardType.touchEnabled = false;
-        this.grpCaijin.visible = false;
+        //this.grpCardType.touchChildren = false;
+        //this.grpCardType.touchEnabled = false;
+        //this.grpCaijin.visible = false;
         this.grpCard.visible = true;
 
-        this._btn_begin.visible = true;
+        //this._btn_begin.visible = true;
         this._btn_switch.visible = false;
         this._group_qiang.visible = false;
 
@@ -524,8 +586,501 @@ public _btn_begin:eui.Button;
         //this.setCountdown();
         //this.cardEffect();
 
+        //var gameStartAnimator =  AnimationUtils.gameStartAnimator();
+        //this.addChild(gameStartAnimator);
+        //gameStartAnimator.play();
+        //console.log(uiCore.StringUtils.format("bar_effect_start_{0}_png", 6));
+        //this._btn_begin.visible = false;
+
+        //var gameStartAnimator =  AnimationUtils.ItemAnimator_i();
+        //this.addChild(gameStartAnimator);
+        //gameStartAnimator.play("smail", 1);
+
+        /*
+        var a = new uiCore.Animator;
+        a.source = "qznn_hall_effect_girl";
+        a.defentAnimationName = "qznn_hall_effect_girl";
+        a.autoPlay = true;
+        a.playOnce = true;
+        a.x = 700;
+        a.y = 500;
+        this.addChild(a);
+        a.play("newAnimation", 1);*/
+
+        //var e = new uiCore.Animator;
+        //e.source = "qznn_hall_effect_girl",
+        //e.defentAnimationName = "newAnimation",
+        //e.horizontalCenter = -420.5,
+        //e.bottom = 360,
+        //e.autoPlay = true,
+        //this.addChild(e);
+
+
+        //this._animation_start.play();
+
+
+        //this.diceGroup = AnimationUtils.diceGroup_i();
+        //this.dice0 = AnimationUtils.dice0_i();
+        //this.dice1 = AnimationUtils.dice1_i();
+        //this.diceBg = AnimationUtils.diceBg_i();
+        //this.diceBottom = AnimationUtils.diceBottom_i();
+        //this.diceTop = AnimationUtils.diceTop_i();
+
+        //let a = new eui.Image;
+        //a.localToGlobal();
+        //moveGoldTo
+
+        var container = new egret.DisplayObjectContainer();
+
+
+
+        this.addChild(container);
+        container.x = 700;
+        container.y = 0;
+
+        //读取一个骨骼数据,并创建实例显示到舞台
+        var skeletonData = RES.getRes("qznn_hall_effect_girl_ske_json");
+        var textureData = RES.getRes("qznn_hall_effect_girl_tex_json");
+        var texture = RES.getRes("qznn_hall_effect_girl_tex_png");
+
+        var factory = new dragonBones.EgretFactory();
+        factory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(skeletonData));
+        factory.addTextureAtlas(new dragonBones.EgretTextureAtlas(texture, textureData));
+
+        var armature = factory.buildArmature("qznn_hall_effect_girl");
+        var armatureDisplay = armature.getDisplay();
+        dragonBones.WorldClock.clock.add(armature);
+        container.addChild(armatureDisplay);
+        armatureDisplay.x = 100;
+        armatureDisplay.y = 500;
+        armatureDisplay.scaleX = 0.5;
+        armatureDisplay.scaleY = 0.5;
+        //actionFlag = 0;
+        //启动骨骼动画播放
+        armature.animation.gotoAndPlay("newAnimation");
+
+        egret.startTick(this.onTicker, this);
+
+        this.suiCoreGameEndScoreResultEffect(this, true);
+    }
+    private _time:number;
+    private onTicker(timeStamp:number) {
+
+        if(!this._time) {
+            this._time = timeStamp;
+        }
+
+        var now = timeStamp;
+        var pass = now - this._time;
+        this._time = now;
+
+        dragonBones.WorldClock.clock.advanceTime(pass / 1000);
+
+        return false;
     }
 
+
+/*
+
+     t.prototype.suiCoreGameEndScoreResultEffect = function(e) {
+        var t = e.isMyself() ? e.verticalCenter - .65 * e.head.height : e.verticalCenter - .75 * e.head.height
+          , i = new eui.BitmapLabel;
+        if (i.font = e.playerWinScore >= 0 ? "nn_gameOver0_fnt" : "nn_gameOver1_fnt",
+        i.font = e.playerWinScore >= 0 ? "qznn_win_fnt" : "qznn_lose_fnt",
+        i.text = e.playerWinScore >= 0 ? "+0" : "0",
+        "QZNNPlayer0Skin" == e.skinName ? (i.verticalCenter = t - 22,
+        i.horizontalCenter = e.horizontalCenter - 90,
+        e.playerWinScore.toString().length > 6 && (i.horizontalCenter = e.horizontalCenter - 90 - 10 * (e.playerWinScore.toString().length - 6))) : (i.verticalCenter = t - 20,
+        i.horizontalCenter = e.horizontalCenter,
+        i.horizontalCenter = e.horizontalCenter),
+        "QZNNPlayer2Skin" == e.skinName && (i.verticalCenter = t - 15,
+        i.horizontalCenter = e.horizontalCenter - 10),
+        i.scaleX = 1,
+        i.scaleY = 1,
+        this.addChild(i),
+        this.gameOverEffects.push(i),
+        e.playerWinScore) {
+            if (e.isMyself()) {
+                e.playerWinScore > 0 && (this.gameView.effectPlayers.tongsha || 3 == this.gameView.effectPlayers.bankerToPlayer.length || egret.Tween.get(this).wait(1e3).call(this.playGameAnimator, this, ["qznn_effect_win"]),
+                uiCore.SoundManager.playEffect("nn_wingold_mp3"));
+                var a = e.playerWinScore
+                  , n = !1;
+                if (a)
+                    for (var s = 0; a > s; s++)
+                        if (0 != a[s]) {
+                            n = !0;
+                            break
+                        }
+                n && uiCore.SoundManager.playEffect("nn_scrollnumber_mp3")
+            }
+            if (0 != e.playerWinScore) {
+                var r = {
+                    useEasing: !1,
+                    useGrouping: !0,
+                    separator: ",",
+                    decimal: "."
+                }
+                  , o = /^[+-]?[1-9]?[0-9]*\.[0-9]*$/
+                  , l = e.playerWinScore
+                  , c = o.test(l.toString()) ? 2 : 0
+                  , h = new CountUp(i,0,l,c,2.5,r);
+                h.error || h.start(),
+                egret.Tween.get(this).wait(2600).call(function(e, t) {
+                    e.showPlayerMoney(e.chip);
+                    var a = uiCore.Utils.formatCurrency(100 * t);
+                    i.text = t >= 0 ? "+" + a : a
+                }, this, [e, e.playerWinScore])
+            }
+        }
+    }
+    ,
+    t.prototype.moveGoldToBanker = function(e) {
+        var t = this;
+        this.cleanAnimator(),
+        egret.Tween.get(this).wait(300).call(function() {
+            uiCore.SoundManager.playEffect("nn_Dcollectgold_mp3"),
+            e.tongsha ? (uiCore.SoundManager.playEffect("qznn_win_all_mp3"),
+            t.playGameOverAnimator("qznn_effect_tongsha")) : 3 == e.bankerToPlayer.length ? (uiCore.SoundManager.playEffect("qznn_tongpei_mp3"),
+            t.playGameOverAnimator("qznn_effect_tongpei")) : t.moveGold()
+        }, this)
+    }
+    ,
+    t.prototype.moveGold = function() {
+        var e = this;
+        if (uiCore.Application.currentScene instanceof QZNNGameSceneView) {
+            var t = uiCore.Application.currentScene
+              , i = t.effectPlayers
+              , a = t.bankerIndex - 1
+              , n = i.playerToBanker.length
+              , s = i.bankerToPlayer;
+            switch (n) {
+            case 0:
+                for (var r = 0; r < s.length; r++)
+                    this.moveAnimation(a, s[r]);
+                uiCore.SoundManager.playEffect("nn_Dcollectgold_mp3");
+                break;
+            case 1:
+                this.moveAnimation(i.playerToBanker[0], a),
+                egret.Tween.get(this).wait(1100).call(function() {
+                    for (var t = 0; t < s.length; t++)
+                        e.moveAnimation(a, s[t])
+                }),
+                uiCore.SoundManager.playEffect("nn_collectgold_mp3");
+                break;
+            case 2:
+                for (var r = 0; 2 > r; r++)
+                    this.moveAnimation(i.playerToBanker[r], a);
+                egret.Tween.get(this).wait(1100).call(function() {
+                    e.moveAnimation(a, s[0])
+                }),
+                uiCore.SoundManager.playEffect("nn_collectgold_mp3");
+                break;
+            case 3:
+                for (var r = 0; 3 > r; r++)
+                    this.moveAnimation(i.playerToBanker[r], a);
+                uiCore.SoundManager.playEffect("nn_Dcollectgold_mp3")
+            }
+        }
+    }
+    ,
+    t.prototype.moveAnimation = function(e, t) {
+        var i = this
+          , a = new uiCore.Animator;
+        switch (a.source = "qznn_showScore" + e + "-" + t,
+        a.defentAnimationName = "qznn_showScore" + e + "-" + t,
+        a.playOnce = !0,
+        this.addChild(a),
+        this.animatorList.push(a),
+        a.verticalCenter = 0,
+        a.horizontalCenter = 0,
+        e) {
+        case 0:
+            1 == t ? (a.horizontalCenter = "-480",
+            a.verticalCenter = "135") : 2 == t ? (a.horizontalCenter = "-215",
+            a.verticalCenter = "20") : (a.horizontalCenter = "20",
+            a.verticalCenter = "110");
+            break;
+        case 1:
+            0 == t ? (a.horizontalCenter = "-480",
+            a.verticalCenter = "135") : 2 == t ? (a.horizontalCenter = "-280",
+            a.verticalCenter = "-120") : (a.horizontalCenter = "-20",
+            a.verticalCenter = "-40");
+            break;
+        case 2:
+            0 == t ? (a.horizontalCenter = "-270",
+            a.verticalCenter = "30") : 1 == t ? (a.horizontalCenter = "-300",
+            a.verticalCenter = "-110") : (a.horizontalCenter = "240",
+            a.verticalCenter = "-90");
+            break;
+        case 3:
+            0 == t ? (a.horizontalCenter = "0",
+            a.verticalCenter = "160") : 1 == t ? (a.horizontalCenter = "0",
+            a.verticalCenter = "0") : (a.horizontalCenter = "230",
+            a.verticalCenter = "-130")
+        }
+        a.addHander(function(e) {
+            i.removeChild(e);
+            var t = i.animatorList.indexOf(e);
+            -1 != t && i.animatorList.splice(t, 1)
+        }, this, [a])
+    }
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    public moveGoldTo(e) {
+        var t = this,
+        i = this.JackpotGroup,
+        a = this["player" + e].playerGold;
+        if (!uiCore.Application.isGameHide) for (var n = 0; 15 > n; n++) {
+            var s = new eui.Image,
+            r = i.parent.localToGlobal(i.x, i.y),
+            o = a.parent.localToGlobal(a.x, a.y);
+            s.source = "nn_cion_png",
+            this.addChild(s),
+            s.scaleX = .8,
+            s.scaleY = .8,
+            this.goldList.push(s),
+            r = this.globalToLocal(r.x, r.y),
+            o = this.globalToLocal(o.x, o.y),
+            s.x = r.x + 0.5 * i.width,
+            s.y = r.y + 0.3 * i.height,
+            egret.Tween.get(s).wait(40 * n).to({
+                x: o.x + 0.5 * a.width,
+                y: o.y + 0.3 * a.height
+            },
+            300).call(function(e) {
+                var i = t.goldList.indexOf(e); - 1 != i && (t.goldList.splice(i, 1), t.removeChild(e))
+            },
+            this, [s])
+        }
+    }*/
+
+    //20338
+
+    public getPlayerViewBySeatID = function(e) {
+        //var t = this.getSeatID(e);
+        //return this["player" + t]
+    }
+
+    public setFirstAnimation() {
+        /*
+        this.winNumberGroup.visible = !1,
+        this.loseNumberGroup.visible = !1,
+        this.firstFloat.visible = !0,
+        this.deleteEffectList("firstFloat"),
+        this.firstFloat.y = -70;
+        var e = -70,
+        t = e + 10;
+        egret.Tween.get(this.firstFloat).to({
+            y: t
+        },
+        300).to({
+            y: e
+        },
+        300).to({
+            y: t
+        },
+        300).to({
+            y: e
+        },
+        300).to({
+            y: t
+        },
+        300).to({
+            y: e
+        },
+        300).to({
+            y: t
+        },
+        300),
+        this.pushEffectList("firstFloat")
+        */
+    }
+
+    public setSice(e, t, i, a) {
+        void 0 === a && (a = 4e3),
+        this.dice0.source = "bar_sicbo_" + e + "_png",
+        this.dice1.source = "bar_sicbo_" + t + "_png",
+        this.firstPlayer = i,
+        this.diceBottom.visible = false,
+        this.dice0.visible = false,
+        this.dice1.visible = false,
+        this.diceTop.visible = false,
+        a >= 4e3 ? (this.deleteIntervalList("diceInterval"), this.diceInterval = egret.setInterval(this.setDiceAnimation, this, 200), this.pushIntervalList("diceInterval"), this.deleteTimeList("startDiceTimeout"), this.startDiceTimeout = egret.setTimeout(function() {
+            //uiCore.SoundManager.playEffect("bar_throw_dice_mp3")
+        },
+        this, 300), this.pushTimeList("startDiceTimeout"), this.deleteTimeList("diceResultTimeout"), this.diceResultTimeout = egret.setTimeout(this.playDiceResult, this, 2800), this.pushTimeList("diceResultTimeout")) : (this.diceBg.visible = false, this.diceBottom.visible = true, this.dice0.visible = true, this.dice1.visible = true, this.diceTop.visible = true, this.diceTop.horizontalCenter = 16, this.diceTop.verticalCenter = -102, this.diceTop.alpha = 1, this.getPlayerViewBySeatID(this.firstPlayer)/*.setFirstAnimation()*/)
+    }
+
+    public setDiceAnimation() {
+        this.diceGroup.visible = true,
+        this.deleteEffectList("diceBg"),
+        this.diceBg.visible = true,
+        this.diceBg.rotation = 0,
+        this.pushEffectList("diceBg"),
+        egret.Tween.get(this.diceBg).to({
+            rotation: 20
+        },
+        50).to({
+            rotation: 0
+        },
+        50).to({
+            rotation: -20
+        },
+        50).to({
+            rotation: 0
+        },
+        50)
+    }
+
+    public stopDiceAnimation() {
+        this.deleteEffectList("diceBg"),
+        this.deleteEffectList("diceTop"),
+        this.diceBg.visible = false,
+        this.diceTop.visible = false,
+        this.dice0.visible = false,
+        this.dice1.visible = false,
+        this.diceBottom.visible = false,
+        this.diceGroup.visible = false
+    }
+
+    public playDiceResult() {
+        this.deleteIntervalList("diceInterval"),
+        this.deleteEffectList("diceBg");
+        var e = this.diceBg.verticalCenter;
+        this.pushEffectList("diceBg"),
+        egret.Tween.get(this.diceBg).to({
+            verticalCenter: e - 10
+        },
+        150).to({
+            verticalCenter: e
+        },
+        150).wait(100).call(function() {
+            this.deleteEffectList("diceBg"),
+            this.diceBg.visible = false,
+            this.diceBottom.visible = true,
+            this.dice0.visible = true,
+            this.dice1.visible = true,
+            this.diceTop.visible = true,
+            this.diceTop.horizontalCenter = 16,
+            this.diceTop.verticalCenter = -102,
+            this.diceTop.alpha = 1,
+            this.pushEffectList("diceTop"),
+            egret.Tween.get(this.diceTop).to({
+                rotation: 75,
+                horizontalCenter: 500,
+                verticalCenter: -400
+            },
+            400).to({
+                alpha: 0
+            },
+            50),
+            this.getPlayerViewBySeatID(this.firstPlayer).setFirstAnimation()
+        },
+        this)
+    }
+
+    public pushAnimation(e) {
+        this.animationList.indexOf(e) < 0 && this.animationList.push(e)
+    }
+
+    public deleteAnimation(e) {
+        var t = this.animationList.indexOf(e);
+        t > -1 && (this[e].stop(), this[e].visible = false, this.animationList.splice(t, 1))
+    }
+
+    public removeAllAnimation() {
+        for (var e = 0,
+        t = this.animationList,
+        i = t.length; i > e; e++) this[t[e]].stop(),
+        this[t[e]].visible = !1;
+        this.animationList = []
+    }
+
+    public pushEffectList(e) {
+        this.effectList.indexOf(e) < 0 && this.effectList.push(e)
+    }
+
+    public deleteEffectList(e) {
+        var t = this.effectList.indexOf(e);
+        t > -1 && ( - 1 != this[e] && egret.Tween.removeTweens(this[e]), this.effectList.splice(t, 1))
+    }
+
+    public removeAllEffectList() {
+        for (var e = 0,
+        t = this.effectList,
+        i = t.length; i > e; e++) - 1 != this[t[e]] && egret.Tween.removeTweens(this[t[e]]);
+        this.effectList = []
+    }
+
+    public pushTimeList(e) {
+        this.timeList.indexOf(e) < 0 && this.timeList.push(e)
+    }
+
+    public deleteTimeList(e) {
+        var t = this.timeList.indexOf(e);
+        t > -1 && ( - 1 != this[e] && (egret.clearTimeout(this[e]), this[e] = -1), this.timeList.splice(t, 1))
+    }
+
+    public removeAllTimeList() {
+        for (var e = 0,
+        t = this.timeList,
+        i = t.length; i > e; e++) - 1 != this[t[e]] && (egret.clearTimeout(this[t[e]]), this[t[e]] = -1);
+        this.timeList = []
+    }
+
+    public pushIntervalList(e) {
+        this.intervalList.indexOf(e) < 0 && this.intervalList.push(e)
+    }
+
+    public deleteIntervalList(e) {
+        var t = this.intervalList.indexOf(e);
+        t > -1 && ( - 1 != this[e] && (egret.clearInterval(this[e]), this[e] = -1), this.intervalList.splice(t, 1))
+    }
+
+    public removeAllIntervalList() {
+        for (var e = 0,
+        t = this.intervalList,
+        i = t.length; i > e; e++) - 1 != this[t[e]] && (egret.clearInterval(this[t[e]]), this[t[e]] = -1);
+        this.intervalList = []
+    }
 
     //-------------------------------服务器回调------------------------------
 
@@ -535,6 +1090,7 @@ public _btn_begin:eui.Button;
     private addPlayers(data): void {
 
         //设置自己信息
+        /*
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
         mask2.graphics.drawCircle(62, 62, 62);
@@ -550,11 +1106,11 @@ public _btn_begin:eui.Button;
             this.imghead0.source = "F1_03_png";
         }
 
-        let dd = UserInfo.getInstance().playes;
+        let dd = UserInfo.getInstance().playes;*/
         //设置其他玩家信息
-        for (let i = 1; i < UserInfo.getInstance().playes.length; i++) {
+        for (let i = 0; i < UserInfo.getInstance().playes.length; i++) {
             if (data._obj.player[i] != null) {
-                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
+                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "women6_png");//data._obj.player[i].headimg
             } else {
                 //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
                 this['grpHead' + i].setUserInfo("", "", "");
@@ -571,7 +1127,7 @@ public _btn_begin:eui.Button;
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
 
         } else {
-            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "F4_03_png");
+            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "women6_png");
         }
     }
 
@@ -1429,8 +1985,122 @@ public _btn_begin:eui.Button;
         } else {
             this['grpHead' + num].setGold(_gold);
         }
+
+
         
     }
+
+    public suiCoreGameEndScoreResultEffect(player, state) {
+        let label = new eui.BitmapLabel;
+        if(state == true) {
+            label.font = "qznn_win_fnt";
+            label.text = "+0";
+        } else {
+            label.font = "qznn_lose_fnt";
+            label.text = "0";
+        }
+        label.scaleX = 1;
+        label.scaleY = 1;
+        label.x = 500;
+        label.y = 500;
+        player.addChild(label);
+
+        var r = {
+            useEasing: false,
+            useGrouping: true,
+            separator: ",",
+            decimal: "."
+        }
+        var o = /^[+-]?[1-9]?[0-9]*\.[0-9]*$/;
+        var l = "2000"
+        var c = o.test(l.toString()) ? 2 : 0;
+        //let h = new CountUp(label , 0, 500 , c, 2.5, r);
+        //h.start();
+        //var tt =  new CountUp(label , 0, 500 , c, 2.5, r);
+        // var aa = new CountUp();
+        // aa.new(label , 0, 500 , c, 2.5, r);
+        
+    }
+/*
+    public suiCoreGameEndScoreResultEffect1(e) {
+        var t = e.isMyself() ? e.verticalCenter - .65 * e.head.height : e.verticalCenter - .75 * e.head.height
+          , i = new eui.BitmapLabel;
+        if (i.font = e.playerWinScore >= 0 ? "nn_gameOver0_fnt" : "nn_gameOver1_fnt",
+        i.font = e.playerWinScore >= 0 ? "qznn_win_fnt" : "qznn_lose_fnt",
+        i.text = e.playerWinScore >= 0 ? "+0" : "0",
+        "QZNNPlayer0Skin" == e.skinName ? (i.verticalCenter = t - 22,
+        i.horizontalCenter = e.horizontalCenter - 90,
+        e.playerWinScore.toString().length > 6 && (i.horizontalCenter = e.horizontalCenter - 90 - 10 * (e.playerWinScore.toString().length - 6))) : (i.verticalCenter = t - 20,
+        i.horizontalCenter = e.horizontalCenter,
+        i.horizontalCenter = e.horizontalCenter),
+        "QZNNPlayer2Skin" == e.skinName && (i.verticalCenter = t - 15,
+        i.horizontalCenter = e.horizontalCenter - 10),
+        i.scaleX = 1,
+        i.scaleY = 1,
+        this.addChild(i),
+        this.gameOverEffects.push(i),
+        e.playerWinScore) {
+            if (e.isMyself()) {
+                e.playerWinScore > 0 && (this.gameView.effectPlayers.tongsha || 3 == this.gameView.effectPlayers.bankerToPlayer.length || egret.Tween.get(this).wait(1e3).call(this.playGameAnimator, this, ["qznn_effect_win"]),
+                uiCore.SoundManager.playEffect("nn_wingold_mp3"));
+                var a = e.playerWinScore
+                  , n = !1;
+                if (a)
+                    for (var s = 0; a > s; s++)
+                        if (0 != a[s]) {
+                            n = !0;
+                            break
+                        }
+                n && uiCore.SoundManager.playEffect("nn_scrollnumber_mp3")
+            }
+            if (0 != e.playerWinScore) {
+                var r = {
+                    useEasing: !1,
+                    useGrouping: !0,
+                    separator: ",",
+                    decimal: "."
+                }
+                  , o = /^[+-]?[1-9]?[0-9]*\.[0-9]*$/
+                  , l = e.playerWinScore
+                  , c = o.test(l.toString()) ? 2 : 0
+                  , h = new CountUp(i,0,l,c,2.5,r);
+                h.error || h.start(),
+                egret.Tween.get(this).wait(2600).call(function(e, t) {
+                    e.showPlayerMoney(e.chip);
+                    var a = uiCore.Utils.formatCurrency(100 * t);
+                    i.text = t >= 0 ? "+" + a : a
+                }, this, [e, e.playerWinScore])
+            }
+        }
+    }
+*/
+    //============================================  Game 新特效=====================
+    /*
+    private setSice(e, t, i, a) {
+        void 0 === a && (a = 4),
+        this.dice0.source = "bar_sicbo_" + e + "_png",
+        this.dice1.source = "bar_sicbo_" + t + "_png",
+        this.firstPlayerNo = i,
+        this.diceBottom.visible = !1,
+        this.dice0.visible = !1,
+        this.dice1.visible = !1,
+        this.diceTop.visible = !1,
+        a >= 4 && !uiCore.Application.isGameHide ? (this.deleteIntervalList("diceInterval"), this.diceInterval = egret.setInterval(this.setDiceAnimation, this, 200), this.pushIntervalList("diceInterval"), this.deleteTimeList("startDiceTimeout"), this.startDiceTimeout = egret.setTimeout(function() {
+            uiCore.SoundManager.playEffect("bar_throw_dice_mp3")
+        },
+        this, 300), this.pushTimeList("startDiceTimeout"), this.deleteTimeList("diceResultTimeout"), this.diceResultTimeout = egret.setTimeout(this.playDiceResult, this, 2800), this.pushTimeList("diceResultTimeout")) : (this.diceBg.visible = !1, this.diceBottom.visible = !0, this.dice0.visible = !0, this.dice1.visible = !0, this.diceTop.visible = !0, this.diceTop.horizontalCenter = 16, this.diceTop.verticalCenter = -102, this.diceTop.alpha = 1, this.getPlayerViewBySeatID(this.firstPlayerNo).setFirstAnimation())
+    }
+
+    private pushTimeList(e) {
+        this.timeList.indexOf(e) < 0 && this.timeList.push(e)
+    }*/
+
+    //=============================================================================
+
+
+
+
+
 
     //============================================  Game Result
     /*

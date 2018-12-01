@@ -4,10 +4,10 @@
 class RBGHead extends eui.Component {
 
     public imghead:eui.Image;
-    public img_gold:eui.Image;
     public labelName:eui.Label;
     public labelGold:eui.Label;
     public img_zhuang:eui.Image;
+
 
     constructor() {
         super();
@@ -17,7 +17,7 @@ class RBGHead extends eui.Component {
     protected childrenCreated() {
 		super.childrenCreated();
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-
+/*
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
         mask2.graphics.drawCircle(46, 46, 46);
@@ -26,6 +26,7 @@ class RBGHead extends eui.Component {
         mask2.y = this.imghead.y+3;
         this.addChild(mask2);
         this.imghead.mask = mask2;
+        */
     }
 
     /**
