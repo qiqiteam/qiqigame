@@ -317,6 +317,11 @@ class QZNNUtil {
                 return 'Special_menu';   //按钮点击
             case 11:
                 return 'nn_LampEnd';    //设置庄
+            case 12:
+                return 'nn_montageerror';    //拼牌失败
+            case 13:
+                return 'nn_LampRun';         //倒计时
+
         }
     }
 }

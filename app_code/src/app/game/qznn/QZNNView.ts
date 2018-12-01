@@ -406,7 +406,7 @@ class QZNNView extends eui.Component {
     private niuniukuang: NiuZhang0;
     private niuniukuang1: NiuZhang1;
 
-
+    
 
     private addNNEff(): void {
         if (!this.nnEff) {
@@ -675,7 +675,9 @@ class QZNNView extends eui.Component {
                     this._my_pai.visible = true;
                     this.returnpinpai(1);
                 } else {
+                    this.playClickSound(QZNNUtil.getInstance().getSoundEffect(12));
                     this.ppcuowu();
+                    
                 }
             } else {
                 this.ppcuowu();
@@ -683,12 +685,13 @@ class QZNNView extends eui.Component {
         }
         else if (e.target == this._meiniu) {
             if (this.niu != 0) {
+                this.playClickSound(QZNNUtil.getInstance().getSoundEffect(12));
                 this.ppcuowu();
             } else {
                 this._pingpai.visible = false;
                 this.texiao.stop();
                 this._my_pai.visible = true;
-                this.returnpinpai(0);
+                this.returnpinpai(0); 
             }
         }
     }
@@ -1241,6 +1244,7 @@ class QZNNView extends eui.Component {
                 this.timeTxt.text = "0" + this.time;
             }
             this.time--;
+            this.playClickSound(QZNNUtil.getInstance().getSoundEffect(13));
         }
         else {
             this.timeTxt.text = "00";
