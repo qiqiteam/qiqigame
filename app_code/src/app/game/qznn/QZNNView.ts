@@ -406,6 +406,10 @@ class QZNNView extends eui.Component {
     private niuniukuang: NiuZhang0;
     private niuniukuang1: NiuZhang1;
 
+    private niuniuhen0: QZNNHEff;
+    private niuniuhen1: QZNNHHeadEff;
+    private niuniushu0: QZNNVEff;
+    private niuniushu1: QZNNVHeadEff;
     
 
     private addNNEff(): void {

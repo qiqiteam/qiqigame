@@ -697,7 +697,7 @@
 		<e:Image x="767.09" touchEnabled="false" source="img_BQ_0_4_png" y="24"/>
 		<e:Image source="img_BQ_bei_png" x="798.72" y="18" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="_btn_switch" width="941.34" height="80" y="542.1" anchorOffsetX="0" x="265" locked="true" visible="false">
+	<e:Group id="_btn_switch" width="941.34" height="80" y="542.1" anchorOffsetX="0" x="265" visible="false" locked="true">
 		<e:Button id="_btn_double_1" label="" x="0" y="2">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
