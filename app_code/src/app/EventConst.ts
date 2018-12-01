@@ -19,7 +19,7 @@ class EventConst {
     public static niuniu_dohog: string = "niuniu_dohog";
     /**投注倍数*/
     public static niuniu_dobet: string = "niuniu_dobet";
-    /**牛牛离开房间 */
+    /**取消匹配 */
     public static niuniu_leave: string = "niuniu_leave";
 
     /**百家乐房间列表 */
@@ -70,6 +70,8 @@ class EventConst {
     public static onUserBetOrderUpdate: string = "onUserBetOrderUpdate";
     /**下注通知(所有人)*/
     public static onUserHogOrderUpdate: string = "onUserHogOrderUpdate";
+    /**牛牛匹配中退出游戏、游戏结束退出*/
+    public static onUserLeave: string = "onUserLeave";
 
 
     /**监听抢庄按钮*/

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,qznntype4_tex2_png,qznntype4_tex12_png,qznntype5_tex12_png,qznntype6_tex12_png,qznntype7_tex12_png,img_XB1_png",
+			"keys": "loding_json,loding_bg_jpg,qznntype4_tex2_png,qznntype4_tex12_png,qznntype5_tex12_png,qznntype6_tex12_png,qznntype7_tex12_png,img_XB1_png,qznn_tip_bg_png",
 			"name": "preload"
 		},
 		{
@@ -3857,6 +3857,11 @@
 			"url": "assets/game/qznn/img_XB1.png",
 			"type": "image",
 			"name": "img_XB1_png"
+		},
+		{
+			"name": "qznn_tip_bg_png",
+			"type": "image",
+			"url": "assets/game/qznn/qznn_tip_bg.png"
 		}
 	]
 }

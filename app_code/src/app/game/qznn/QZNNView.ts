@@ -304,7 +304,8 @@ class QZNNView extends eui.Component {
     public _niujia: eui.Group;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
-
+    public _tishi: eui.Group;
+    public _tishi_text: eui.Label;
 
 
 
@@ -515,6 +516,12 @@ class QZNNView extends eui.Component {
         this._xiabei_2.x = 503.16;
         this._xiabei_3.x = 1146.78;
 
+        this.grpHead0.visible = false;
+        this.grpHead1.visible = false;
+        this.grpHead2.visible = false;
+        this.grpHead3.visible = false;
+
+        this._tishi.visible = false;
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
@@ -754,7 +761,7 @@ class QZNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
+        // EventUtil.addEventListener(EventConst.banker, this.acceptbanker, this);
 
         this._puke_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
         this._puke_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Suapai, this);
@@ -765,13 +772,12 @@ class QZNNView extends eui.Component {
 
     /**抢庄牛牛拼牌通知 */
     private onShowOrder(data: any): void {
-
-        console.log(data._obj.index + "号玩家准备");
-
-        if (data._obj.index = 0) {
+        if (data._obj.index > 0) {
+            this['pinpaiType' + (data._obj.index - 1)].visible = true;
+        } else {
             this.pinpaiType.visible = true;
+            this._tishi_text.text = "请等待其他玩家拼牌..."
         }
-        this['pinpaiType' + (data._obj.index - 1)].visible = true;
     }
     /**游戏状态 */
     private GameStatus(data: any): void {
@@ -805,7 +811,7 @@ class QZNNView extends eui.Component {
         this.gamestarEff.play();
         this.addChild(this.gamestarEff);
     }
-
+    /**胜利 */
     private addNNVictoryEffect(): void {
         if (!this.nnvictoryEffect) {
             this.nnvictoryEffect = new QZNNVictory();
@@ -838,6 +844,11 @@ class QZNNView extends eui.Component {
         this._btn_switch.visible = true;
 
         if (data._obj.roomStatus == 4) {
+            // if (data._obj.banker.index != 0) {
+            //     this._tishi_text.text = "请等待庄家下注..."
+            // } else {
+            //     this._tishi_text.text = "请等待闲家下注..."
+            // }
             this.acceptbanker(data);
         }
 
@@ -925,6 +936,8 @@ class QZNNView extends eui.Component {
         console.log(data._obj.index + "号抢庄");
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._group_qiang.visible = false;
+            this._tishi.visible = true;
+            this._tishi_text.text = "请等待其他玩家抢庄...";
         }
         if (data._obj.code == 200) {
             this.qiangzhuang(data._obj.hogOrBet, data._obj.index)
@@ -1017,6 +1030,8 @@ class QZNNView extends eui.Component {
      */
     private addPlayers(data): void {
 
+        this.grpHead0.visible = true;
+
         //设置自己信息
         var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
@@ -1055,6 +1070,7 @@ class QZNNView extends eui.Component {
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
 
         } else {
+            this['grpHead' + data._obj.player.index].visible = true;
             this['grpHead' + data._obj.player.index];
             this.setUserInfo(data._obj.player.index, data._obj.player.username, data._obj.player.goldcoins, "women7_png");
         }
@@ -1062,9 +1078,6 @@ class QZNNView extends eui.Component {
 
     /** num 几号玩家  _name 名字    _gold 金币   _imghead 头像图片*/
     public setUserInfo(num, _name, _gold, _imghead): void {
-        // imghead1
-        // labelHead1
-        // labelGold1
         this['imghead' + num].source = _imghead;
         this['labelHead' + num].text = _name;
         this['labelGold' + num].text = _gold;
@@ -1431,6 +1444,7 @@ class QZNNView extends eui.Component {
     private effectPlayerIndex = 0;
     /**结算 其他玩家翻牌*/
     private playerCardRotation(): void {
+        this._tishi.visible = false;
         this.pinpaiType.visible = false;
         for (let i = 0; i > 3; i++) {
             this['pinpaiType' + i].visible = false;
@@ -1764,6 +1778,13 @@ class QZNNView extends eui.Component {
         this._xiabei_2.x = 503.16;
         this._xiabei_3.x = 1146.78;
 
+        this.grpHead0.visible = false;
+        this.grpHead1.visible = false;
+        this.grpHead2.visible = false;
+        this.grpHead3.visible = false;
+
+        this._tishi.visible = false;
+
     }
 
     private removeEff(eff: egret.MovieClip): void {
@@ -1856,7 +1877,7 @@ class QZNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
-        EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
+        // EventUtil.removeEventListener(EventConst.banker, this.acceptbanker, this);
 
 
         if (this.cdTimer != null) {
