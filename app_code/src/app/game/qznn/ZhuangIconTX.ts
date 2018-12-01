@@ -1,31 +1,34 @@
 class ZhuangIconTX extends eui.Component {
+    public image1:eui.Image;
+    public image0:eui.Image;
+    public image:eui.Image;
 
-    public niuniuanmin: egret.tween.TweenGroup;
+    public zhuangjia: egret.tween.TweenGroup;
     constructor() {
         super();
-        this.skinName = "zhuangjia";
+        this.skinName = "ZhuangIconSkin";
     }
 
     protected childrenCreated() {
         super.childrenCreated();
-        this.niuniuanmin.addEventListener(egret.Event.COMPLETE, this.onTweenComplete, this);
+        this.zhuangjia.addEventListener(egret.Event.COMPLETE, this.onTweenComplete, this);
         
     }
 
     private onTweenComplete(evt:egret.Event):void
     {
-        this.niuniuanmin.stop();
+        this.zhuangjia.stop();
     }
 
     public play():void
     {
-        this.niuniuanmin.play(0);   
+        this.zhuangjia.play(0);   
     }
 
 
     public stop():void
     {
-        this.niuniuanmin.stop();   
+        this.zhuangjia.stop();   
     }
 
 
