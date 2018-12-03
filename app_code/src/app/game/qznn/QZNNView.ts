@@ -1040,7 +1040,7 @@ class QZNNView extends eui.Component {
             this['_whether_' + num].source = 'img_BQ_0_png';
             console.log(data);
             this['_img_' + num].visible = true;
-            this['_img_' + num].source = 'img_' + data + '_png';
+            this['_img_' + num].source = 'img_BQ_0_' + data + '_png';
         }
 
     }
@@ -2285,7 +2285,7 @@ class QZNNView extends eui.Component {
         }
         xlLib.SoundMgr.instance.stopBgMusic();
 
-        let musicBg = ["bgMain_mp3"];
+        let musicBg = ["hall_bg_mp3"];
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
 
         xlLib.SceneMgr.instance.changeScene(Lobby);

@@ -15,7 +15,8 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 		this.skinName = "QZNNroomViewSkin";
 
 		xlLib.SoundMgr.instance.stopBgMusic();
-		let musicBg = ["hall_bg_mp3"];
+
+		let musicBg = ["qznn_bg_mp3"];
 		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 	}
 
@@ -61,7 +62,7 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 
 	public dispose(): void {
 		xlLib.SoundMgr.instance.stopBgMusic();
-		let musicBg = ["bgMain_mp3"];
+		let musicBg = ["hall_bg_mp3"];
 		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 
 		xlLib.PopUpMgr.removePopUp(this, 1);

@@ -30,7 +30,7 @@ class Inthematch extends eui.Component {
 		if (data._obj.code == 200) {
 			xlLib.PopUpMgr.removePopUp(Inthematch, 1);
 
-			let musicBg = ["bgMain_mp3"];
+			let musicBg = ["hall_bg_mp3"];
 			xlLib.SoundMgr.instance.playBgMusic(musicBg);
 			xlLib.SceneMgr.instance.changeScene(Lobby);
 		}

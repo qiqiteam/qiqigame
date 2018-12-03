@@ -62,7 +62,7 @@ class LoginView extends eui.Component
 	}
 
 	private _onVisitorLogin(e:egret.TouchEvent):void {
-		this._group_btn_0.visible = false;
+		// this._group_btn_0.visible = false;
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
 		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
 		// this._group_btn_1.visible = true;
@@ -130,7 +130,7 @@ class LoginView extends eui.Component
 
 	private onSocketSuc(data:any):void
 	{
-		let musicBg = ["bgMain_mp3"];
+		let musicBg = ["hall_bg_mp3"];
 		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 		xlLib.UIMgr.instance.hideLoading(TipsLoading);
 		xlLib.SceneMgr.instance.changeScene(Lobby);

@@ -1,11 +1,11 @@
 class Const {
     //正式版本----------------------------------------
-    public static GAME_HOST:string = "192.168.1.26";
+    public static GAME_HOST:string = "192.168.1.47";
     // public static GAME_HOST:string = "47.52.138.199";
     // public static GAME_HOST:string = "192.168.1.49";
     public static GAME_PORT:string = "9081";
     // public static httpUrl:string = "http://192.168.1.49:80";
-    public static httpUrl:string = "http://192.168.1.26:80";
+    public static httpUrl:string = "http://192.168.1.47:80";
     // public static httpUrl:string = "http://47.52.138.199:80";
     // //测试服----------------------------------------
     // public static GAME_HOST:string = "192.168.1.36";
