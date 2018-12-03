@@ -291,7 +291,7 @@ class QZNNView extends eui.Component {
         this.initData();
 
         this.labelHead0.text = UserInfo.getInstance().username;
-        this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
+        this.labelGold0.text = "" + this.Formatconversion(UserInfo.getInstance().goldcoins);
 
         xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
 
@@ -301,6 +301,13 @@ class QZNNView extends eui.Component {
         this.texiao.x = -180;
         this.texiao.y = -150;
         this._niujia.addChild(this.texiao);
+    }
+
+    /**数字转字符 */
+    private Formatconversion(data: number): string {
+        var str = data + '';
+        str = str.slice(0, str.length - 3) + ',' + str.slice(str.length - 3);
+        return str;
     }
     /**
      * 数据初始化
@@ -651,7 +658,7 @@ class QZNNView extends eui.Component {
 
     /**抢庄牛牛拼牌通知 */
     private onShowOrder(data: any): void {
-        console.log(data._obj.index + "号准备");
+        // console.log(data._obj.index + "号准备");
         if (data._obj.index > 0) {
             this['pinpaiType' + (data._obj.index - 1)].visible = true;
         } else {
@@ -754,7 +761,7 @@ class QZNNView extends eui.Component {
                 this['beishu_' + i].source = '';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet + '_png';
-                console.log(data._obj.hogList[i].hogOrBet);
+                // console.log(data._obj.hogList[i].hogOrBet);
                 this['bs_img_' + i].visible = true;
             }
             this.multipleList[i] = data._obj.hogList[i].hogOrBet;
@@ -818,7 +825,7 @@ class QZNNView extends eui.Component {
 
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
-        console.log(data._obj.index + "号下注");
+        // console.log(data._obj.index + "号下注");
         this._whether_.visible = false;
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._btn_switch.visible = false;
@@ -831,7 +838,7 @@ class QZNNView extends eui.Component {
     }
     /**更新抢庄通知(所有人) */
     private OnHogUpdate(data: any): void {
-        console.log(data._obj.index + "号抢庄");
+        // console.log(data._obj.index + "号抢庄");
         this.intnum[data._obj.index] = data._obj.hogOrBet;
 
         if (UserInfo.getInstance().uid == data._obj.userid) {
@@ -853,7 +860,7 @@ class QZNNView extends eui.Component {
         } else {
             this['_whether_' + num].visible = true;
             this['_whether_' + num].source = 'img_BQ_0_png';
-            console.log(data);
+            // console.log(data);
             this['_img_' + num].visible = true;
             this['_img_' + num].source = 'img_BQ_0_' + data + '_png';
         }
@@ -1045,7 +1052,7 @@ class QZNNView extends eui.Component {
 
         if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
             this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
-            this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
+            this.labelGold0.text = this.Formatconversion(UserInfo.getInstance().myPlayer.goldcoins);
             this.imghead0.source = "women7_png";
         }
 
@@ -1064,9 +1071,8 @@ class QZNNView extends eui.Component {
 
     /**新玩家加入 */
     public playerJoinRoom(data): void {
-        console.log(data._obj.player.id);
-        console.log(UserInfo.getInstance().myPlayer.id);
-
+        // console.log(data._obj.player.id);
+        // console.log(UserInfo.getInstance().myPlayer.id);
 
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
 
@@ -1081,7 +1087,7 @@ class QZNNView extends eui.Component {
     public setUserInfo(num, _name, _gold, _imghead): void {
         this['imghead' + num].source = _imghead;
         this['labelHead' + num].text = _name;
-        this['labelGold' + num].text = _gold;
+        this['labelGold' + num].text = this.Formatconversion(_gold);
     }
 
     /**游戏开始 */
@@ -1220,7 +1226,7 @@ class QZNNView extends eui.Component {
             else if (msg.state == 3) {
                 this.isCanBets = false;
             }
-            console.log('join_game: ' + data.state);
+            // console.log('join_game: ' + data.state);
         }
         else {
             //TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
@@ -1229,7 +1235,7 @@ class QZNNView extends eui.Component {
 
     public onMsgListen(data): void {
         var msg = data.msg
-        console.log('onMsgListen: ' + msg.type, '_niuniuMsgListen_');
+        // console.log('onMsgListen: ' + msg.type, '_niuniuMsgListen_');
         switch (msg.type) {
             case 0: //开始下注
                 this.cdNum = parseInt(msg.time) + 3;
@@ -1792,7 +1798,7 @@ class QZNNView extends eui.Component {
         }
         UserInfo.getInstance().playes[num].goldcoins = _gold;
         if (num == 0) {
-            this.labelGold0.text = _gold + "";
+            this.labelGold0.text = this.Formatconversion(_gold);
         } else {
             this['grpHead' + num];
             this.setGold(num, _gold);
@@ -1800,7 +1806,7 @@ class QZNNView extends eui.Component {
     }
     /**更新玩家金币 */
     public setGold(num, gold: number): void {
-        this['labelGold' + num].text = gold + "";
+        this['labelGold' + num].text = this.Formatconversion(gold);
     }
 
     /**金币数字滚动效果 */

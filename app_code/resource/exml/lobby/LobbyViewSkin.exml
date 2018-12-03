@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LobbyViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
-	<w:Config id="166bf8530b5" ></w:Config>
 	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg"/>
 	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" top="0" source="lobby_json.ding"/>
@@ -20,9 +19,6 @@
 			</e:Skin>
 			</e:skinName>
 		</e:Button>
-
-
-
 		<e:Image scaleX="1" scaleY="1" source="coin_bg" horizontalCenter="0" y="17"/>
 		<e:Button id="_playerinfo" label="" x="42.76" y="2" scaleX="0.8" scaleY="0.8">
 			<e:skinName>
@@ -77,16 +73,6 @@
 			</e:Skin>
 			</e:skinName>
 		</e:Button>
-
-		<e:Button id="_challenge" label="" x="536.34" y="54.9" visible="false">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_challenge_0" source.down="btn_challenge_1"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
-		</e:Button>
-
 		<e:Button id="_shoppingmall" label="" x="932.32" y="34">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
