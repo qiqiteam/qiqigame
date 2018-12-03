@@ -6203,6 +6203,11 @@
 			"url": "assets/sound/qznn/nn_wingold.mp3",
 			"type": "sound",
 			"name": "nn_wingold_mp3"
+		},
+		{
+			"url": "assets/sound/qznn/qznn_tongpei.mp3",
+			"type": "sound",
+			"name": "qznn_tongpei_mp3"
 		}
 	]
 }
