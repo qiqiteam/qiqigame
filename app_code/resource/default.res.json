@@ -4309,16 +4309,6 @@
 			"name": "img_di_png"
 		},
 		{
-			"url": "assets/game/qznn/img_fangA.png",
-			"type": "image",
-			"name": "img_fangA_png"
-		},
-		{
-			"url": "assets/game/qznn/Img_pipeizhong_1.png",
-			"type": "image",
-			"name": "Img_pipeizhong_1_png"
-		},
-		{
 			"url": "assets/game/qznn/img_XB.png",
 			"type": "image",
 			"name": "img_XB_png"
@@ -4382,11 +4372,6 @@
 			"url": "assets/game/qznn/img_XB_9.png",
 			"type": "image",
 			"name": "img_XB_9_png"
-		},
-		{
-			"url": "assets/game/qznn/img_zhuang_1.png",
-			"type": "image",
-			"name": "img_zhuang_1_png"
 		},
 		{
 			"url": "assets/game/qznn/nn_btn_meiniu1.png",
