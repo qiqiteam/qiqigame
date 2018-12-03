@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,hall_bg2_mp3,Special_menu2_mp3,gold_diaoluo2_mp3,nn.dealCard2_mp3,nn.end2_mp3,nn.jackpot2_mp3,nn.niu02_mp3,nn.niu15_mp3,nn.niu102_mp3,nn.niu112_mp3,nn.niu122_mp3,nn.niu132_mp3,nn.niu142_mp3,nn.niu22_mp3,nn.niu32_mp3,nn.niu42_mp3,nn.niu52_mp3,nn.niu62_mp3,nn.niu72_mp3,nn.niu82_mp3,nn.niu92_mp3,nn.niuniu2_mp3,nn.openCard2_mp3,nn.playNiu5hua2_mp3,nn.playNiuXiao52_mp3,nn.playNiuZhadan2_mp3,nn.stake2_mp3,nn.start2_mp3,nn.tp2_mp3,nn.ts2_mp3",
+			"keys": "loding_json,loding_bg_jpg,hall_bg2_mp3,Special_menu2_mp3,gold_diaoluo2_mp3,nn.dealCard2_mp3,nn.end2_mp3,nn.jackpot2_mp3,nn.niu02_mp3,nn.niu15_mp3,nn.niu102_mp3,nn.niu112_mp3,nn.niu122_mp3,nn.niu132_mp3,nn.niu142_mp3,nn.niu22_mp3,nn.niu32_mp3,nn.niu42_mp3,nn.niu52_mp3,nn.niu62_mp3,nn.niu72_mp3,nn.niu82_mp3,nn.niu92_mp3,nn.niuniu2_mp3,nn.openCard2_mp3,nn.playNiu5hua2_mp3,nn.playNiuXiao52_mp3,nn.playNiuZhadan2_mp3,nn.stake2_mp3,nn.start2_mp3,nn.tp2_mp3,nn.ts2_mp3,qznn_win_all_mp3,nn_wingold_mp3",
 			"name": "preload"
 		},
 		{
@@ -6208,6 +6208,16 @@
 			"name": "nn.ts2_mp3",
 			"type": "sound",
 			"url": "assets/sound/qznn/nn.ts.mp3"
+		},
+		{
+			"name": "qznn_win_all_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/qznn_win_all.mp3"
+		},
+		{
+			"name": "nn_wingold_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn_wingold.mp3"
 		}
 	]
 }
