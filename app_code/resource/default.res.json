@@ -6193,6 +6193,16 @@
 			"url": "assets/sound/qznn/nn.ts.mp3",
 			"type": "sound",
 			"name": "nn.ts2_mp3"
+		},
+		{
+			"url": "assets/sound/qznn/qznn_win_all.mp3",
+			"type": "sound",
+			"name": "qznn_win_all_mp3"
+		},
+		{
+			"url": "assets/sound/qznn/nn_wingold.mp3",
+			"type": "sound",
+			"name": "nn_wingold_mp3"
 		}
 	]
 }
