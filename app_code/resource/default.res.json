@@ -3006,221 +3006,6 @@
 			"name": "title_zhajinhua_png"
 		},
 		{
-			"url": "assets/sound/betSuccess.mp3",
-			"type": "sound",
-			"name": "betSuccess_mp3"
-		},
-		{
-			"url": "assets/sound/bgMain.mp3",
-			"type": "sound",
-			"name": "bgMain_mp3"
-		},
-		{
-			"url": "assets/sound/gold_diaoluo.mp3",
-			"type": "sound",
-			"name": "gold_diaoluo_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_0.mp3",
-			"type": "sound",
-			"name": "femalecow_0_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_1.mp3",
-			"type": "sound",
-			"name": "femalecow_1_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_10.mp3",
-			"type": "sound",
-			"name": "femalecow_10_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_11.mp3",
-			"type": "sound",
-			"name": "femalecow_11_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_12.mp3",
-			"type": "sound",
-			"name": "femalecow_12_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_13.mp3",
-			"type": "sound",
-			"name": "femalecow_13_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_14.mp3",
-			"type": "sound",
-			"name": "femalecow_14_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_2.mp3",
-			"type": "sound",
-			"name": "femalecow_2_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_3.mp3",
-			"type": "sound",
-			"name": "femalecow_3_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_4.mp3",
-			"type": "sound",
-			"name": "femalecow_4_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_5.mp3",
-			"type": "sound",
-			"name": "femalecow_5_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_6.mp3",
-			"type": "sound",
-			"name": "femalecow_6_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_7.mp3",
-			"type": "sound",
-			"name": "femalecow_7_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_8.mp3",
-			"type": "sound",
-			"name": "femalecow_8_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/femalecow_9.mp3",
-			"type": "sound",
-			"name": "femalecow_9_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/hall_bg.mp3",
-			"type": "sound",
-			"name": "hall_bg_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_0.mp3",
-			"type": "sound",
-			"name": "malecow_0_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_1.mp3",
-			"type": "sound",
-			"name": "malecow_1_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_10.mp3",
-			"type": "sound",
-			"name": "malecow_10_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_11.mp3",
-			"type": "sound",
-			"name": "malecow_11_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_12.mp3",
-			"type": "sound",
-			"name": "malecow_12_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_13.mp3",
-			"type": "sound",
-			"name": "malecow_13_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_14.mp3",
-			"type": "sound",
-			"name": "malecow_14_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_2.mp3",
-			"type": "sound",
-			"name": "malecow_2_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_3.mp3",
-			"type": "sound",
-			"name": "malecow_3_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_4.mp3",
-			"type": "sound",
-			"name": "malecow_4_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_5.mp3",
-			"type": "sound",
-			"name": "malecow_5_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_6.mp3",
-			"type": "sound",
-			"name": "malecow_6_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_7.mp3",
-			"type": "sound",
-			"name": "malecow_7_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_8.mp3",
-			"type": "sound",
-			"name": "malecow_8_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/malecow_9.mp3",
-			"type": "sound",
-			"name": "malecow_9_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_betAll.mp3",
-			"type": "sound",
-			"name": "nn_betAll_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_betOne.mp3",
-			"type": "sound",
-			"name": "nn_betOne_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_bg.mp3",
-			"type": "sound",
-			"name": "nn_bg_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_carddone.mp3",
-			"type": "sound",
-			"name": "nn_carddone_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_carddone1.mp3",
-			"type": "sound",
-			"name": "nn_carddone1_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_collectgold.mp3",
-			"type": "sound",
-			"name": "nn_collectgold_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_Dcollectgold.mp3",
-			"type": "sound",
-			"name": "nn_Dcollectgold_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_dealcard.mp3",
-			"type": "sound",
-			"name": "nn_dealcard_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_gamestart.mp3",
-			"type": "sound",
-			"name": "nn_gamestart_mp3"
-		},
-		{
 			"url": "assets/sound/qznn/nn_LampEnd.mp3",
 			"type": "sound",
 			"name": "nn_LampEnd_mp3"
@@ -3234,56 +3019,6 @@
 			"url": "assets/sound/qznn/nn_montageerror.mp3",
 			"type": "sound",
 			"name": "nn_montageerror_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_pentakill.mp3",
-			"type": "sound",
-			"name": "nn_pentakill_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_scrollnumber.mp3",
-			"type": "sound",
-			"name": "nn_scrollnumber_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_sendcard.mp3",
-			"type": "sound",
-			"name": "nn_sendcard_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/nn_wingold.mp3",
-			"type": "sound",
-			"name": "nn_wingold_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/qznn_bg.mp3",
-			"type": "sound",
-			"name": "qznn_bg_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/qznn_fapai.mp3",
-			"type": "sound",
-			"name": "qznn_fapai_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/qznn_tongpei.mp3",
-			"type": "sound",
-			"name": "qznn_tongpei_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/qznn_win_all.mp3",
-			"type": "sound",
-			"name": "qznn_win_all_mp3"
-		},
-		{
-			"url": "assets/sound/qznn/window_open.mp3",
-			"type": "sound",
-			"name": "window_open_mp3"
-		},
-		{
-			"url": "assets/sound/Special_menu.mp3",
-			"type": "sound",
-			"name": "Special_menu_mp3"
 		},
 		{
 			"url": "assets/tbnnroon/room_tbnn.json",
@@ -6165,154 +5900,164 @@
 			"name": "qznn_showScore3-2_tex_9_png"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.dealCard.mp3",
+			"url": "assets/sound/qznn/nn.dealCard.mp3",
 			"type": "sound",
 			"name": "nn.dealCard_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.end.mp3",
+			"url": "assets/sound/qznn/nn.end.mp3",
 			"type": "sound",
 			"name": "nn.end_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.jackpot.mp3",
+			"url": "assets/sound/qznn/nn.jackpot.mp3",
 			"type": "sound",
 			"name": "nn.jackpot_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu0.mp3",
+			"url": "assets/sound/qznn/nn.niu0.mp3",
 			"type": "sound",
 			"name": "nn.niu0_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu1.mp3",
+			"url": "assets/sound/qznn/nn.niu1.mp3",
 			"type": "sound",
 			"name": "nn.niu1_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu10.mp3",
+			"url": "assets/sound/qznn/nn.niu10.mp3",
 			"type": "sound",
 			"name": "nn.niu10_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu11.mp3",
+			"url": "assets/sound/qznn/nn.niu11.mp3",
 			"type": "sound",
 			"name": "nn.niu11_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu12.mp3",
+			"url": "assets/sound/qznn/nn.niu12.mp3",
 			"type": "sound",
 			"name": "nn.niu12_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu13.mp3",
+			"url": "assets/sound/qznn/nn.niu13.mp3",
 			"type": "sound",
 			"name": "nn.niu13_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu14.mp3",
+			"url": "assets/sound/qznn/nn.niu14.mp3",
 			"type": "sound",
 			"name": "nn.niu14_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu2.mp3",
+			"url": "assets/sound/qznn/nn.niu2.mp3",
 			"type": "sound",
 			"name": "nn.niu2_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu3.mp3",
+			"url": "assets/sound/qznn/nn.niu3.mp3",
 			"type": "sound",
 			"name": "nn.niu3_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu4.mp3",
+			"url": "assets/sound/qznn/nn.niu4.mp3",
 			"type": "sound",
 			"name": "nn.niu4_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu5.mp3",
+			"url": "assets/sound/qznn/nn.niu5.mp3",
 			"type": "sound",
 			"name": "nn.niu5_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu6.mp3",
+			"url": "assets/sound/qznn/nn.niu6.mp3",
 			"type": "sound",
 			"name": "nn.niu6_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu7.mp3",
+			"url": "assets/sound/qznn/nn.niu7.mp3",
 			"type": "sound",
 			"name": "nn.niu7_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu8.mp3",
+			"url": "assets/sound/qznn/nn.niu8.mp3",
 			"type": "sound",
 			"name": "nn.niu8_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niu9.mp3",
+			"url": "assets/sound/qznn/nn.niu9.mp3",
 			"type": "sound",
 			"name": "nn.niu9_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.niuniu.mp3",
+			"url": "assets/sound/qznn/nn.niuniu.mp3",
 			"type": "sound",
 			"name": "nn.niuniu_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.openCard.mp3",
+			"url": "assets/sound/qznn/nn.openCard.mp3",
 			"type": "sound",
 			"name": "nn.openCard_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.playNiu5hua.mp3",
+			"url": "assets/sound/qznn/nn.playNiu5hua.mp3",
 			"type": "sound",
 			"name": "nn.playNiu5hua_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.playNiuXiao5.mp3",
+			"url": "assets/sound/qznn/nn.playNiuXiao5.mp3",
 			"type": "sound",
 			"name": "nn.playNiuXiao5_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.playNiuZhadan.mp3",
+			"url": "assets/sound/qznn/nn.playNiuZhadan.mp3",
 			"type": "sound",
 			"name": "nn.playNiuZhadan_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.stake.mp3",
+			"url": "assets/sound/qznn/nn.stake.mp3",
 			"type": "sound",
 			"name": "nn.stake_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.start.mp3",
+			"url": "assets/sound/qznn/nn.start.mp3",
 			"type": "sound",
 			"name": "nn.start_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.tp.mp3",
+			"url": "assets/sound/qznn/nn.tp.mp3",
 			"type": "sound",
 			"name": "nn.tp_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn.ts.mp3",
+			"url": "assets/sound/qznn/nn.ts.mp3",
 			"type": "sound",
 			"name": "nn.ts_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn_LampEnd.mp3",
+			"url": "assets/sound/qznn/gold_diaoluo.mp3",
 			"type": "sound",
-			"name": "nn_LampEnd2_mp3"
+			"name": "gold_diaoluo_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn_LampRun.mp3",
+			"url": "assets/sound/hall/hall_bg.mp3",
 			"type": "sound",
-			"name": "nn_LampRun2_mp3"
+			"name": "hall_bg_mp3"
 		},
 		{
-			"url": "assets/game/qznn/music/nn_montageerror.mp3",
+			"url": "assets/sound/qznn/nn_gamestart.mp3",
 			"type": "sound",
-			"name": "nn_montageerror2_mp3"
+			"name": "nn_gamestart_mp3"
+		},
+		{
+			"url": "assets/sound/qznn/qznn_bg.mp3",
+			"type": "sound",
+			"name": "qznn_bg_mp3"
+		},
+		{
+			"url": "assets/sound/hall/Special_menu.mp3",
+			"type": "sound",
+			"name": "Special_menu_mp3"
 		}
 	]
 }
