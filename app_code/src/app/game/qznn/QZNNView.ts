@@ -130,6 +130,10 @@ class QZNNView extends eui.Component {
     public _btn_meun: eui.Button;
     public _tishi: eui.Group;
     public _tishi_text: eui.Label;
+    public grpCard_z_0:eui.Image;
+    public grpCard_z_1:eui.Image;
+    public grpCard_z_2:eui.Image;
+    public grpCard_z_3:eui.Image;
 
 
 
@@ -202,6 +206,7 @@ class QZNNView extends eui.Component {
     private orginBankerCardPos = [];    // 存储庄家扑克位置
     private orginPinCardPos = [];       // 拼牌扑克位置
     private orginPlayerCardPos = [];    // 存储玩家扑克位置
+    private orginZhanCardPos = [];      // 扑克中点停止位置
 
     private isBanker: boolean = false; 	// 是否当庄 (判断是否可以退出)
     private isBets: boolean = false;	// 是否下注 (判断是否可以退出)
@@ -398,6 +403,11 @@ class QZNNView extends eui.Component {
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
+
+        for(let i=0; i<5; i++) {
+            var card: eui.Image = this['grpCard_' + 0 + '_' + i];
+            this.grpCard.setChildIndex(card, 5-i);
+        }
     }
 
     /**
@@ -440,9 +450,19 @@ class QZNNView extends eui.Component {
             }
             this.orginPlayerCardPos[index] = cardPos;
         }
-        for (let i = 1; i < 4; i++) {
+        for (let i = 0; i < 4; i++) {
             // this['grpHead' + i];
-            this.setUserInfo(i, "", "", "");
+            if(i!=0) {
+                this.setUserInfo(i, "", "", "");
+            }
+            var card: eui.Image = this['grpCard_z_' + i];
+            card.source = '';
+            card.anchorOffsetX = card.width / 2;
+            card.x += card.width / 2;
+            var pos: egret.Point = new egret.Point;
+            pos.x = card.x;
+            pos.y = card.y;
+            this.orginZhanCardPos[i] = pos;
         }
     }
 
@@ -1364,6 +1384,8 @@ class QZNNView extends eui.Component {
     private flyIndex_2: number = 4;
     private flyIndex_3: number = 4;
     private flyIndex_4: number = 0;
+    private flyPaiTime = 500;
+    private faPaiTime = 200;
     /**
      * 显示发牌
      */
@@ -1374,11 +1396,11 @@ class QZNNView extends eui.Component {
         this.isCardEffectShow = true;
         //this.flyIntval = setInterval(this.playCardFly.bind(this), 40);
 
-        this.flyIntval_1 = setInterval(this.playCardFly_1.bind(this), 150);
-        this.flyIntval_2 = setInterval(this.playCardFly_2.bind(this), 150);
-        this.flyIntval_3 = setInterval(this.playCardFly_3.bind(this), 150);
+        this.flyIntval_1 = setInterval(this.playCardFly_1.bind(this), this.faPaiTime);
+        this.flyIntval_2 = setInterval(this.playCardFly_2.bind(this), this.faPaiTime);
+        this.flyIntval_3 = setInterval(this.playCardFly_3.bind(this), this.faPaiTime);
         this.flyBankerIndex = 0;
-        this.flyIntval_4 = setInterval(this.playCardFly_4.bind(this), 150);
+        this.flyIntval_4 = setInterval(this.playCardFly_4.bind(this), this.faPaiTime);
     }
 
     /**其他玩家发牌动作 */
@@ -1422,8 +1444,11 @@ class QZNNView extends eui.Component {
         card.scaleX = 0.2;
         card.scaleY = 0.2;
         var pos = this.orginPlayerCardPos[0][this.flyIndex_1];
+        var z_pos = this.orginZhanCardPos[1];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, 800, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, 800, egret.Ease.sineInOut);
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
+
         if (this.flyIndex_1 == 4) {
             this.flyIndex_1 = 0;
             clearInterval(this.flyIntval_1);
@@ -1444,7 +1469,8 @@ class QZNNView extends eui.Component {
         card.scaleY = 0.2;
         var pos = this.orginPlayerCardPos[1][this.flyIndex_2];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, 800, egret.Ease.sineInOut);
+        var z_pos = this.orginZhanCardPos[2];
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
         if (this.flyIndex_2 == 0) {
             this.flyIndex_2 = 4;
             clearInterval(this.flyIntval_2);
@@ -1465,7 +1491,8 @@ class QZNNView extends eui.Component {
         card.scaleY = 0.2;
         var pos = this.orginPlayerCardPos[2][this.flyIndex_3];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, 800, egret.Ease.sineInOut);
+        var z_pos = this.orginZhanCardPos[3];
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
         if (this.flyIndex_3 == 0) {
             this.flyIndex_3 = 4;
             clearInterval(this.flyIntval_3);
@@ -1515,7 +1542,8 @@ class QZNNView extends eui.Component {
         card.scaleY = 0.2;
         var pos = this.orginPinCardPos[this.flyBankerIndex];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, 800, egret.Ease.sineInOut);
+        var z_pos = this.orginZhanCardPos[0];
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
         this.flyBankerIndex++;
     }
 
@@ -1586,12 +1614,16 @@ class QZNNView extends eui.Component {
         var index = this.effectPlayerIndex;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
+            if(index == 0) {
+                this.grpCard.setChildIndex(card, i);
+            }
             card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke[index + 1].value[i]]);
         }
+        
         this.addNiuniuBei(this['labCardType' + index], poke[index + 1].type);
         this.playClickSound(QZNNUtil.getInstance().getCardMusicType(poke[index + 1].type));
         this['labCardType' + index].visible = true;;
