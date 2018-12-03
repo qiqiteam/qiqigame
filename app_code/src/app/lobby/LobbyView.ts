@@ -2,23 +2,23 @@
  * 大厅界面
  * */
 class LobbyView extends eui.Component {
-	public bgImg:eui.Image;
-	public _set:eui.Button;
-	public _service:eui.Button;
-	public _playerinfo:eui.Button;
-	public _head_label:eui.Label;
-	public _coin_label:eui.Label;
-	public _generalize:eui.Button;
-	public _safebox:eui.Button;
-	public _information:eui.Button;
-	public _welfare:eui.Button;
-	public _shoppingmall:eui.Button;
-	public _topup:eui.Button;
+	public bgImg: eui.Image;
+	public _set: eui.Button;
+	public _service: eui.Button;
+	public _playerinfo: eui.Button;
+	public _head_label: eui.Label;
+	public _coin_label: eui.Label;
+	public _generalize: eui.Button;
+	public _safebox: eui.Button;
+	public _information: eui.Button;
+	public _welfare: eui.Button;
+	public _shoppingmall: eui.Button;
+	public _topup: eui.Button;
 
 	private gamelistView: GameIconListView;
 	private gameIconDataList: GameIconData[];
-	private qznnGameIconData:GameIconData;
-	private qznnGameIcon:QznnIconItem;
+	private qznnGameIconData: GameIconData;
+	private qznnGameIcon: QznnIconItem;
 
 	constructor() {
 		super();
@@ -40,17 +40,22 @@ class LobbyView extends eui.Component {
 		super.childrenCreated();
 
 		this._head_label.text = UserInfo.getInstance().username;
-		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
+		this._coin_label.text = this.Formatconversion(UserInfo.getInstance().goldcoins);
 		this.initGameIconList();
 	}
-
+	/**数字转字符 */
+	private Formatconversion(data: number): string {
+		var str = data + '';
+		str = str.slice(0, str.length - 3) + ',' + str.slice(str.length - 3);
+		return str;
+	}
 	private initGameIconList(): void {
 		let allgameList: GameIconData[] = [
-			new GameIconData().initData({ name: "通比牛牛", url: "tbnn_game_870_bg",ishot:true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_TBNN }),
-			new GameIconData().initData({ name: "炸金花", url: "zjh_game_230_bg",ishot:true, isOpen: true, game: Const.GAME_ZHAJINHUA, type: Const.TYPE_JINGDIANJINHUA }),
-			new GameIconData().initData({ name: "百家乐", url: "bjl_game_18_bg",ishot:true, isOpen: true, game: Const.GAME_BAIJIALE, type: Const.TYPE_JINGDIANBAIJIALE }),
-			new GameIconData().initData({ name: "二八杠", url: "ebg_game_720_bg",ishot:true, isOpen: true, game: Const.GAME_ERBAGANG, type: Const.TYPE_ERBAGANGJINDIAN }),
-			new GameIconData().initData({ name: "百人牛牛", url: "brnn_game_930_bg",ishot:true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QRNIUNIU})
+			new GameIconData().initData({ name: "通比牛牛", url: "tbnn_game_870_bg", ishot: true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_TBNN }),
+			new GameIconData().initData({ name: "炸金花", url: "zjh_game_230_bg", ishot: true, isOpen: true, game: Const.GAME_ZHAJINHUA, type: Const.TYPE_JINGDIANJINHUA }),
+			new GameIconData().initData({ name: "百家乐", url: "bjl_game_18_bg", ishot: true, isOpen: true, game: Const.GAME_BAIJIALE, type: Const.TYPE_JINGDIANBAIJIALE }),
+			new GameIconData().initData({ name: "二八杠", url: "ebg_game_720_bg", ishot: true, isOpen: true, game: Const.GAME_ERBAGANG, type: Const.TYPE_ERBAGANGJINDIAN }),
+			new GameIconData().initData({ name: "百人牛牛", url: "brnn_game_930_bg", ishot: true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QRNIUNIU })
 		]
 		this.gameIconDataList = allgameList;
 		this.gamelistView = new GameIconListView();
@@ -59,12 +64,12 @@ class LobbyView extends eui.Component {
 		this.gamelistView.setData(this.gameIconDataList);
 		this.addChild(this.gamelistView);
 
-		this.qznnGameIconData =  new GameIconData().initData({ name: "抢庄牛牛", url: "qznn_game_830_bg",ishot:true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QZNN});
-        this.qznnGameIcon = new QznnIconItem();
+		this.qznnGameIconData = new GameIconData().initData({ name: "抢庄牛牛", url: "qznn_game_830_bg", ishot: true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QZNN });
+		this.qznnGameIcon = new QznnIconItem();
 		this.qznnGameIcon.x = 42;
 		this.qznnGameIcon.y = 158;
 		this.qznnGameIcon.setGameIconData(this.qznnGameIconData);
-		this.addChild(this.qznnGameIcon);	
+		this.addChild(this.qznnGameIcon);
 	}
 
 	private onClick2(e: egret.TouchEvent): void {
