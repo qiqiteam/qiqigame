@@ -250,6 +250,7 @@ public _btn_voice:eui.Button;
 public _btn_begin:eui.Button;
 
 
+
 public _animation_start:uiCore.Animation;
 
     //public labHandsel: eui.BitmapLabel;
@@ -667,6 +668,27 @@ public _animation_start:uiCore.Animation;
         //var goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_jinbi_1_0_{0}_png", 20);
         //this.addChild(goldFlyAnimator);
         //goldFlyAnimator.play();
+
+/*
+        var system = new particle.GravityParticleSystem(this._texture, this._config);
+            this.addChild(system);
+            system.start();
+            system.y = 400;
+            system.x = 300;
+            
+            var angle:number = 0;
+            egret.startTick(function (timeStamp:number):boolean {
+                angle += -2;
+                
+                system.emitterX = Math.sin(angle * Math.PI / 180) * 200;
+                system.emitterY = Math.cos(angle * Math.PI / 180) * 200 / 2;
+                
+                return false;
+            }, this);
+
+*/
+
+
     }
     private _time:number;
     private onTicker(timeStamp:number) {
