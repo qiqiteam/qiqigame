@@ -291,7 +291,7 @@ class QZNNView extends eui.Component {
         this.initData();
 
         this.labelHead0.text = UserInfo.getInstance().username;
-        this.labelGold0.text = "" + this.Formatconversion(UserInfo.getInstance().goldcoins);
+        this.labelGold0.text = "" + GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
 
         xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
 
@@ -303,12 +303,6 @@ class QZNNView extends eui.Component {
         this._niujia.addChild(this.texiao);
     }
 
-    /**数字转字符 */
-    private Formatconversion(data: number): string {
-        var str = data + '';
-        str = str.slice(0, str.length - 3) + ',' + str.slice(str.length - 3);
-        return str;
-    }
     /**
      * 数据初始化
      */
@@ -1052,7 +1046,7 @@ class QZNNView extends eui.Component {
 
         if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
             this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
-            this.labelGold0.text = this.Formatconversion(UserInfo.getInstance().myPlayer.goldcoins);
+            this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().myPlayer.goldcoins);
             this.imghead0.source = "women7_png";
         }
 
@@ -1087,7 +1081,7 @@ class QZNNView extends eui.Component {
     public setUserInfo(num, _name, _gold, _imghead): void {
         this['imghead' + num].source = _imghead;
         this['labelHead' + num].text = _name;
-        this['labelGold' + num].text = this.Formatconversion(_gold);
+        this['labelGold' + num].text = GlobalFunction.Formatconversion(_gold);
     }
 
     /**游戏开始 */
@@ -1798,7 +1792,7 @@ class QZNNView extends eui.Component {
         }
         UserInfo.getInstance().playes[num].goldcoins = _gold;
         if (num == 0) {
-            this.labelGold0.text = this.Formatconversion(_gold);
+            this.labelGold0.text = GlobalFunction.Formatconversion(_gold);
         } else {
             this['grpHead' + num];
             this.setGold(num, _gold);
@@ -1806,7 +1800,7 @@ class QZNNView extends eui.Component {
     }
     /**更新玩家金币 */
     public setGold(num, gold: number): void {
-        this['labelGold' + num].text = this.Formatconversion(gold);
+        this['labelGold' + num].text = GlobalFunction.Formatconversion(gold);
     }
 
     /**金币数字滚动效果 */

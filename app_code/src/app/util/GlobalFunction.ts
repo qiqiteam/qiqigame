@@ -35,4 +35,11 @@ class GlobalFunction {
         let dateString = currdate.getFullYear() + '/' + (currdate.getMonth() + 1) + '/' + currdate.getDate();
         return dateString;
     }
+
+    /**金币数字转字符加逗号 */
+    public static Formatconversion(data: number): string {
+        var str = data + '';
+        str = str.slice(0, str.length - 3) + ',' + str.slice(str.length - 3);
+        return str;
+    }
 }
