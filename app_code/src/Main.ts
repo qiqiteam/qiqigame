@@ -196,7 +196,10 @@ class Main extends xlLib.GameDoc {
             xlLib.IosSDK.init();
         }
         this.removeLodingIcon();
-        xlLib.ResLoadMgr.instance.load("game", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
+        xlLib.ResLoadMgr.instance.load("common", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
+        // 
+
+        
         // xlLib.WebSocketMgr.getInstance().connect("47.91.221.49", ":3010");
 
         // var params:any = new Object;
@@ -212,7 +215,12 @@ class Main extends xlLib.GameDoc {
         // xlLib.Js2Native.init();
     }
 
-    private onLoadComplete(evt: RES.ResourceEvent){
+    private onLoadComplete(event: RES.ResourceEvent){
+        if (event.groupName == "common")
+        {
+            xlLib.ResLoadMgr.instance.load("hall", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
+            return;
+        }
         this.isResLoadEnd = true;
         this.isSocketSuc = true;
         this.startEnterGame();
