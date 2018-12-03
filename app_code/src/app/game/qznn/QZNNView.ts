@@ -863,7 +863,7 @@ class QZNNView extends eui.Component {
             this['_xiabei_' + num].visible = true;
             this['_xiabei_0_0_' + num].visible = true;
             this['_xiabei_' + num].source = 'img_XB_' + data % 10 + '_png';
-            this['_xiabei_0_0_' + num].source = 'img_XB_0_0_' + 1 + '_png';
+            this['_xiabei_0_0_' + num].source = 'img_XB_' + 1 + '_png';
 
 
         } else if (data < 10) {

@@ -12,10 +12,8 @@ class LobbyView extends eui.Component {
 	public _safebox:eui.Button;
 	public _information:eui.Button;
 	public _welfare:eui.Button;
-	public _challenge:eui.Button;
 	public _shoppingmall:eui.Button;
 	public _topup:eui.Button;
-
 
 	private gamelistView: GameIconListView;
 	private gameIconDataList: GameIconData[];
@@ -31,10 +29,8 @@ class LobbyView extends eui.Component {
 		this._service.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._information.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._playerinfo.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
-
 		this._generalize.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._safebox.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
-		this._challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
@@ -92,9 +88,6 @@ class LobbyView extends eui.Component {
 		} else if (e.target == this._safebox) {
 			console.log("_safebox");
 			xlLib.PopUpMgr.addPopUp(SafeBoxView, null, true, true, null, 1);
-		} else if (e.target == this._challenge) {
-			console.log("_challenge");
-			xlLib.TipsUtils.showFloatWordTips("敬请期待！");
 		} else if (e.target == this._welfare) {
 			console.log("_welfare");
 			xlLib.PopUpMgr.addPopUp(WelfareView, null, true, true, null, 1);
