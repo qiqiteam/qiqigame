@@ -1843,8 +1843,6 @@ class QZNNView extends eui.Component {
             }
         }
 
-        // this['grpHead' + num].addChild(this.niuniukuang1);
-
         let label = new eui.BitmapLabel;
         label.textAlign = egret.HorizontalAlign.CENTER;
         let str: string = "";
@@ -1877,7 +1875,7 @@ class QZNNView extends eui.Component {
         this.turn_score_arr.push(label);
         uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score, regulator: 50 }, str);
     }
-
+    /**播放 胜利 通杀 通赔 动画 */
     public victoryEffect(): void {
         clearInterval(this.interval);
         this.interval = 0;
@@ -2051,6 +2049,16 @@ class QZNNView extends eui.Component {
         if (this.tongpei) {
             this.tongpei.stop();
             //this.niuniuTX.parent.removeChild(this.niuniuTX);
+        }
+        if (this.niuniukuang) {
+            this.niuniukuang.stop();
+            this.niuniukuang.parent.removeChild(this.niuniukuang);
+            this.niuniukuang = null;
+        }
+        if (this.niuniukuang1) {
+            this.niuniukuang1.stop();
+            this.niuniukuang1.parent.removeChild(this.niuniukuang1);
+            this.niuniukuang1 = null;
         }
 
     }

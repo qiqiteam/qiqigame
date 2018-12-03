@@ -18,6 +18,7 @@ class ZhuangIconTX extends eui.Component {
     private onTweenComplete(evt:egret.Event):void
     {
         this.zhuangjia.stop();
+        
     }
 
     public play():void
