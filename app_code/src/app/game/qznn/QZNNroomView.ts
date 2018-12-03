@@ -24,13 +24,18 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 		super.childrenCreated();
 		this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
 		this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
-		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
+		this._coin_label.text = this.Formatconversion(UserInfo.getInstance().goldcoins);
 		this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
 
 		EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
 
 	}
-
+	/**数字转字符 */
+	private Formatconversion(data: number): string {
+		var str = data + '';
+		str = str.slice(0, str.length - 3) + ',' + str.slice(str.length - 3);
+		return str;
+	}
 	/**游戏状态 */
 	private GameStatus(data: any): void {
 		if (data._obj.code == 200) {

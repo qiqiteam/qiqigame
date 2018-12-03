@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg",
+			"keys": "loding_json,loding_bg_jpg,hall_bg2_mp3,Special_menu2_mp3,gold_diaoluo2_mp3,nn.dealCard2_mp3,nn.end2_mp3,nn.jackpot2_mp3,nn.niu02_mp3,nn.niu15_mp3,nn.niu102_mp3,nn.niu112_mp3,nn.niu122_mp3,nn.niu132_mp3,nn.niu142_mp3,nn.niu22_mp3,nn.niu32_mp3,nn.niu42_mp3,nn.niu52_mp3,nn.niu62_mp3,nn.niu72_mp3,nn.niu82_mp3,nn.niu92_mp3,nn.niuniu2_mp3,nn.openCard2_mp3,nn.playNiu5hua2_mp3,nn.playNiuXiao52_mp3,nn.playNiuZhadan2_mp3,nn.stake2_mp3,nn.start2_mp3,nn.tp2_mp3,nn.ts2_mp3",
 			"name": "preload"
 		},
 		{
@@ -6058,6 +6058,156 @@
 			"url": "assets/sound/hall/Special_menu.mp3",
 			"type": "sound",
 			"name": "Special_menu_mp3"
+		},
+		{
+			"name": "hall_bg2_mp3",
+			"type": "sound",
+			"url": "assets/sound/hall/hall_bg.mp3"
+		},
+		{
+			"name": "Special_menu2_mp3",
+			"type": "sound",
+			"url": "assets/sound/hall/Special_menu.mp3"
+		},
+		{
+			"name": "gold_diaoluo2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/gold_diaoluo.mp3"
+		},
+		{
+			"name": "nn.dealCard2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.dealCard.mp3"
+		},
+		{
+			"name": "nn.end2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.end.mp3"
+		},
+		{
+			"name": "nn.jackpot2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.jackpot.mp3"
+		},
+		{
+			"name": "nn.niu02_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu0.mp3"
+		},
+		{
+			"name": "nn.niu15_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu1.mp3"
+		},
+		{
+			"name": "nn.niu102_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu10.mp3"
+		},
+		{
+			"name": "nn.niu112_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu11.mp3"
+		},
+		{
+			"name": "nn.niu122_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu12.mp3"
+		},
+		{
+			"name": "nn.niu132_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu13.mp3"
+		},
+		{
+			"name": "nn.niu142_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu14.mp3"
+		},
+		{
+			"name": "nn.niu22_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu2.mp3"
+		},
+		{
+			"name": "nn.niu32_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu3.mp3"
+		},
+		{
+			"name": "nn.niu42_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu4.mp3"
+		},
+		{
+			"name": "nn.niu52_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu5.mp3"
+		},
+		{
+			"name": "nn.niu62_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu6.mp3"
+		},
+		{
+			"name": "nn.niu72_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu7.mp3"
+		},
+		{
+			"name": "nn.niu82_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu8.mp3"
+		},
+		{
+			"name": "nn.niu92_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niu9.mp3"
+		},
+		{
+			"name": "nn.niuniu2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.niuniu.mp3"
+		},
+		{
+			"name": "nn.openCard2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.openCard.mp3"
+		},
+		{
+			"name": "nn.playNiu5hua2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.playNiu5hua.mp3"
+		},
+		{
+			"name": "nn.playNiuXiao52_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.playNiuXiao5.mp3"
+		},
+		{
+			"name": "nn.playNiuZhadan2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.playNiuZhadan.mp3"
+		},
+		{
+			"name": "nn.stake2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.stake.mp3"
+		},
+		{
+			"name": "nn.start2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.start.mp3"
+		},
+		{
+			"name": "nn.tp2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.tp.mp3"
+		},
+		{
+			"name": "nn.ts2_mp3",
+			"type": "sound",
+			"url": "assets/sound/qznn/nn.ts.mp3"
 		}
 	]
 }
