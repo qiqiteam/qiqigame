@@ -10,7 +10,6 @@ class QZNNView extends eui.Component {
     private r: any = null;
 
     public _paijubh: eui.Label;
-    public grpCoins: eui.Group;
     public grpCard: eui.Group;
     public _my_pai: eui.Group;
     public bankerCard_0: eui.Image;
@@ -56,181 +55,8 @@ class QZNNView extends eui.Component {
     public labelHead3: eui.Label;
     public labelGold3: eui.Label;
     public _zhuang_img3: eui.Image;
-    public btnCharge: eui.Image;
-    public titleName: eui.Label;
-    public maskhead: eui.Group;
-    public titleHead: eui.Image;
-    public btnVip: eui.Image;
-    public labTitleVip: eui.Label;
-    public titleLabMoney: eui.BitmapLabel;
-    public btnClose: eui.Image;
-    public btnCardHistroy: eui.Image;
-    public btnCardType: eui.Image;
-    public btnRedBox: eui.Image;
-    public grpBankerInfo: eui.Group;
-    public btnDownBanker: eui.Image;
-    public btnBankerDown: eui.Image;
-    public btnUpBanker: eui.Image;
-    public bankerHead: eui.Image;
-    public labBankerMoney: eui.BitmapLabel;
-    public bankerName: eui.Label;
-    public labBankerLastNum: eui.Label;
-    public labBankerRank: eui.Label;
-    public btnVip0: eui.Image;
-    public labBankerVip: eui.Label;
     public grpCountdown: eui.Group;
     public timeTxt: eui.Label;
-    public btnBet0: eui.Image;
-    public btnBet1: eui.Image;
-    public btnBet2: eui.Image;
-    public btnBet3: eui.Image;
-    public btnBet4: eui.Image;
-    public btnBet5: eui.Image;
-    public labBet0: eui.Label;
-    public labBet1: eui.Label;
-    public labBet2: eui.Label;
-    public labBet3: eui.Label;
-    public labBet4: eui.Label;
-    public labBet5: eui.Label;
-    public grpBankerList: eui.Group;
-    public bankerListItem0: eui.Group;
-    public itemRank0: eui.Label;
-    public itemName0: eui.Label;
-    public itemMoney0: eui.Label;
-    public itemVip0: eui.BitmapLabel;
-    public bankerListItem1: eui.Group;
-    public itemRank1: eui.Label;
-    public itemName1: eui.Label;
-    public itemMoney1: eui.Label;
-    public itemVip1: eui.BitmapLabel;
-    public bankerListItem2: eui.Group;
-    public itemRank2: eui.Label;
-    public itemName2: eui.Label;
-    public itemMoney2: eui.Label;
-    public itemVip2: eui.BitmapLabel;
-    public bankerListItem3: eui.Group;
-    public itemRank3: eui.Label;
-    public itemName3: eui.Label;
-    public itemMoney3: eui.Label;
-    public itemVip3: eui.BitmapLabel;
-    public bankerListItem4: eui.Group;
-    public itemRank4: eui.Label;
-    public itemName4: eui.Label;
-    public itemMoney4: eui.Label;
-    public itemVip4: eui.BitmapLabel;
-    public bankerListItem5: eui.Group;
-    public itemRank5: eui.Label;
-    public itemName5: eui.Label;
-    public itemMoney5: eui.Label;
-    public itemVip5: eui.BitmapLabel;
-    public bankerListItem6: eui.Group;
-    public itemRank6: eui.Label;
-    public itemName6: eui.Label;
-    public itemMoney6: eui.Label;
-    public itemVip6: eui.BitmapLabel;
-    public bankerListItem7: eui.Group;
-    public itemRank7: eui.Label;
-    public itemName7: eui.Label;
-    public itemMoney7: eui.Label;
-    public itemVip7: eui.BitmapLabel;
-    public bankerListItem8: eui.Group;
-    public itemRank8: eui.Label;
-    public itemName8: eui.Label;
-    public itemMoney8: eui.Label;
-    public itemVip8: eui.BitmapLabel;
-    public bankerListItem9: eui.Group;
-    public itemRank9: eui.Label;
-    public itemName9: eui.Label;
-    public itemMoney9: eui.Label;
-    public itemVip9: eui.BitmapLabel;
-    public grpSecondPanel: eui.Group;
-    public grpHistory: eui.Group;
-    public grpHistroy0: eui.Group;
-    public grpHistroy0_0: eui.Image;
-    public grpHistroy1_0: eui.Image;
-    public grpHistroy2_0: eui.Image;
-    public grpHistroy3_0: eui.Image;
-    public grpHistroy1: eui.Group;
-    public grpHistroy0_1: eui.Image;
-    public grpHistroy1_1: eui.Image;
-    public grpHistroy2_1: eui.Image;
-    public grpHistroy3_1: eui.Image;
-    public grpHistroy2: eui.Group;
-    public grpHistroy0_2: eui.Image;
-    public grpHistroy1_2: eui.Image;
-    public grpHistroy2_2: eui.Image;
-    public grpHistroy3_2: eui.Image;
-    public grpHistroy3: eui.Group;
-    public grpHistroy0_3: eui.Image;
-    public grpHistroy1_3: eui.Image;
-    public grpHistroy2_3: eui.Image;
-    public grpHistroy3_3: eui.Image;
-    public grpHistroy4: eui.Group;
-    public grpHistroy0_4: eui.Image;
-    public grpHistroy1_4: eui.Image;
-    public grpHistroy2_4: eui.Image;
-    public grpHistroy3_4: eui.Image;
-    public grpHistroy5: eui.Group;
-    public grpHistroy0_5: eui.Image;
-    public grpHistroy1_5: eui.Image;
-    public grpHistroy2_5: eui.Image;
-    public grpHistroy3_5: eui.Image;
-    public grpHistroy6: eui.Group;
-    public grpHistroy0_6: eui.Image;
-    public grpHistroy1_6: eui.Image;
-    public grpHistroy2_6: eui.Image;
-    public grpHistroy3_6: eui.Image;
-    public grpHistroy7: eui.Group;
-    public grpHistroy0_7: eui.Image;
-    public grpHistroy1_7: eui.Image;
-    public grpHistroy2_7: eui.Image;
-    public grpHistroy3_7: eui.Image;
-    public grpHistroy8: eui.Group;
-    public grpHistroy0_8: eui.Image;
-    public grpHistroy1_8: eui.Image;
-    public grpHistroy2_8: eui.Image;
-    public grpHistroy3_8: eui.Image;
-    public grpHistroy9: eui.Group;
-    public grpHistroy0_9: eui.Image;
-    public grpHistroy1_9: eui.Image;
-    public grpHistroy2_9: eui.Image;
-    public grpHistroy3_9: eui.Image;
-    public grpCardType: eui.Group;
-    public secondClose: eui.Image;
-    public grpResult: eui.Group;
-    public grpMax: eui.Group;
-    public grpMaxHead: eui.Image;
-    public grpMaxGold: eui.Label;
-    public grpMaxName: eui.Label;
-    public grpBankerHead: eui.Image;
-    public grpBankerType: eui.Image;
-    public labelBankerType: eui.Label;
-    public grpBankerBeishu: eui.Label;
-    public grpBankerGold: eui.Label;
-    public grpBankerName: eui.Label;
-    public labResult0_0: eui.Label;
-    public labResult1_0: eui.Label;
-    public labResult2_0: eui.Label;
-    public labResult0_1: eui.Label;
-    public labResult1_1: eui.Label;
-    public labResult2_1: eui.Label;
-    public labResult0_2: eui.Label;
-    public labResult1_2: eui.Label;
-    public labResult2_2: eui.Label;
-    public labResult0_3: eui.Label;
-    public labResult1_3: eui.Label;
-    public labResult2_3: eui.Label;
-    public labResultValue: eui.Label;
-    public resultType0: eui.Label;
-    public resultType1: eui.Label;
-    public resultType2: eui.Label;
-    public resultType3: eui.Label;
-    public grpTips: eui.Group;
-    public grpTipsbg: eui.Image;
-    public grpTipsInfo: eui.Image;
-    public imgBaoZhuang: eui.Image;
-    public grpCaijin: eui.Group;
-    public grpCaijinLabel: eui.Label;
     public grpHead0: eui.Group;
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
@@ -330,7 +156,7 @@ class QZNNView extends eui.Component {
 
     public win_eff_err: any[] = [];
 
-    public goldFlyAnimatorarr:uiCore.Animation[] = [];
+    public goldFlyAnimatorarr: uiCore.Animation[] = [];
     public intnum: number[] = [0, 0, 0, 0];
 
     public num01: number = 0;
@@ -480,26 +306,11 @@ class QZNNView extends eui.Component {
      * 数据初始化
      */
     private initData(): void {
-        this.labBankerRank.text = '';
-        this.labBankerLastNum.text = '';
+
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.grpBankerList.visible = false;
-        this.grpCoins.touchEnabled = false;
-        this.grpTips.touchEnabled = false;
-        this.grpTips.touchChildren = false;
-        this.grpSecondPanel.visible = false;
-        this.btnUpBanker.visible = true;
-        this.btnDownBanker.visible = false;
-        this.grpTips.visible = false;
-        this.grpResult.visible = false;
-        this.imgBaoZhuang.visible = false;
-        this.grpCardType.touchChildren = false;
-        this.grpCardType.touchEnabled = false;
-        this.grpCaijin.visible = false;
         this.grpCard.visible = true;
-
         // this._btn_begin.visible = true;
         this._btn_switch.visible = false;
         this._group_qiang.visible = false;
@@ -1423,7 +1234,7 @@ class QZNNView extends eui.Component {
                 break;
             case 1: //封盘
                 this.isCanBets = false;
-                this.showGameTips(3);
+                // this.showGameTips(3);
                 break;
             case 2: //结算
                 this.setGameResult(msg.data);
@@ -1496,20 +1307,20 @@ class QZNNView extends eui.Component {
         }
     }
 
-    //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
-    private showGameTips(type): void {
-        this.grpTipsInfo.source = QZNNUtil.getInstance().getMsgSource(type);
-        this.grpTips.visible = true;
-        this.grpTipsbg.alpha = 0;
-        this.grpTipsInfo.x = 640;
-        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(type));
-        egret.Tween.get(this.grpTipsbg).to({ alpha: 1 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ alpha: 0 }, 400);
-        }, this.grpTipsbg);
-        egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ x: -640 }, 400);
-        }, this.grpTipsInfo);
-    }
+    // //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
+    // private showGameTips(type): void {
+    //     this.grpTipsInfo.source = QZNNUtil.getInstance().getMsgSource(type);
+    //     this.grpTips.visible = true;
+    //     this.grpTipsbg.alpha = 0;
+    //     this.grpTipsInfo.x = 640;
+    //     this.playClickSound(QZNNUtil.getInstance().getSoundEffect(type));
+    //     egret.Tween.get(this.grpTipsbg).to({ alpha: 1 }, 400).wait(400).call(function () {
+    //         egret.Tween.get(this).to({ alpha: 0 }, 400);
+    //     }, this.grpTipsbg);
+    //     egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
+    //         egret.Tween.get(this).to({ x: -640 }, 400);
+    //     }, this.grpTipsInfo);
+    // }
 
     //显示筹码
     private showCoins(num, index): void {
@@ -1527,7 +1338,7 @@ class QZNNView extends eui.Component {
         for (var i = 0; i < arr.length; i++) {
             var tx = point.x + Math.random() * 50;
             var ty = point.y + Math.random() * 50;
-            this.grpCoins.addChild(arr[i]);
+            // this.grpCoins.addChild(arr[i]);
             egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call(function () {
                 if (this[0]) {
                     this[1].parent.removeChild(this[1]);
@@ -1882,11 +1693,11 @@ class QZNNView extends eui.Component {
         var isShow: boolean = false;
         //显示比牌结果，显示是否通赔或者通杀
         if (data.result[0] == 1 && data.result[1] == 1 && data.result[2] == 1 && data.result[3] == 1) {
-            this.showGameTips(5);
+            // this.showGameTips(5);
             isShow = true;
         }
         if (data.result[0] == 0 && data.result[1] == 0 && data.result[2] == 0 && data.result[3] == 0) {
-            this.showGameTips(4);
+            // this.showGameTips(4);
             isShow = true;
         }
         if (isShow) {
@@ -1900,7 +1711,7 @@ class QZNNView extends eui.Component {
 
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
 
-        
+
         let zhuangPos = {
             x: this['grpHead' + this.zhaungIndex].x,
             y: this['grpHead' + this.zhaungIndex].y
@@ -1946,14 +1757,14 @@ class QZNNView extends eui.Component {
                 continue;
             }
 
-            var goldFlyAnimator:uiCore.Animation;
+            var goldFlyAnimator: uiCore.Animation;
 
             if (this.cardResult.pokes[i].win == true) {
-                goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png" ,"qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
-            //    EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+                goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png", "qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
+                //    EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
                 goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
-            //    EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+                //    EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
             }
             this.addChild(goldFlyAnimator);
             this.goldFlyAnimatorarr.push(goldFlyAnimator);
@@ -1991,7 +1802,11 @@ class QZNNView extends eui.Component {
 
     /**金币数字滚动效果 */
     public suiCoreGameEndScoreResultEffect(index, player, state, score) {
-
+        this._zhuang_img0.visible = false;
+        this._zhuang_img1.visible = false;
+        this._zhuang_img2.visible = false;
+        this._zhuang_img3.visible = false;
+       
         if (state) {
 
             if (index % 2 == 0) {
@@ -2078,22 +1893,23 @@ class QZNNView extends eui.Component {
         UserInfo.getInstance().isGameStart = false;
     }
 
-    private setStartBet(): void {
-        this.resetGame();
-        this.grpResult.visible = false;
-        clearInterval(this.interval);
-        this.showGameTips(2);
-        this.grpCountdown.visible = true;
-        if (!this.isSysBanker && !this.isChangeBanker) {
-            this.lastGameBankerNum--;
-            this.labBankerLastNum.text = '剩余' + Math.round(this.lastGameBankerNum) + '次';
-        }
-        if (this.isChangeBanker) {
-            this.isChangeBanker = false;
-            //this.setBankerInfo(this.changeBankerObj);
-            this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
-        }
-    }
+    // private setStartBet(): void {
+    //     this.resetGame();
+    //     this.grpResult.visible = false;
+    //     clearInterval(this.interval);
+    //     this.showGameTips(2);
+    //     this.grpCountdown.visible = true;
+    //     if (!this.isSysBanker && !this.isChangeBanker) {
+    //         this.lastGameBankerNum--;
+    //         this.labBankerLastNum.text = '剩余' + Math.round(this.lastGameBankerNum) + '次';
+    //     }
+    //     if (this.isChangeBanker) {
+    //         this.isChangeBanker = false;
+    //         //this.setBankerInfo(this.changeBankerObj);
+    //         this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
+    //     }
+    // }
+
     /**场景重置 */
     private resetGame(): void {
 
@@ -2137,15 +1953,15 @@ class QZNNView extends eui.Component {
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
 
-        while (this.grpCoins.numChildren > 0) {
-            this.grpCoins.removeChildAt(0);
-        }
+        // while (this.grpCoins.numChildren > 0) {
+        //     this.grpCoins.removeChildAt(0);
+        // }
         this._btn_begin.visible = true;
         this.isCanBets = true;
         this.isBets = false;
-        this.imgBaoZhuang.visible = false;
+
         this.resultCaijin = 0;
-        this.grpCaijin.visible = false;
+
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
         this.removeEff(this.nnbankerEff);
@@ -2213,27 +2029,27 @@ class QZNNView extends eui.Component {
         }
         this.win_eff_err = [];
 
-        for(let i=0; i<this.goldFlyAnimatorarr.length; i++) {
+        for (let i = 0; i < this.goldFlyAnimatorarr.length; i++) {
             this.goldFlyAnimatorarr[i].stop();
             this.goldFlyAnimatorarr[i].parent.removeChild(this.goldFlyAnimatorarr[i]);
         }
         this.goldFlyAnimatorarr = [];
 
-        if(this.tongsha) {
+        if (this.tongsha) {
             this.tongsha.stop();
             //this.tongsha.parent.removeChild(this.tongsha);
         }
 
-        if(this.niuniuTX) {
+        if (this.niuniuTX) {
             this.niuniuTX.stop();
             this.niuniuTX.parent.removeChild(this.niuniuTX);
         }
 
-        if(this.tongpei) {
+        if (this.tongpei) {
             this.tongpei.stop();
             //this.niuniuTX.parent.removeChild(this.niuniuTX);
         }
-        
+
     }
 
     private removeEff(eff: egret.MovieClip): void {
@@ -2267,9 +2083,7 @@ class QZNNView extends eui.Component {
                 this['grpHistroy' + i].visible = false;
             }
         }
-        this.grpSecondPanel.visible = true;
-        this.grpCardType.visible = false;
-        this.grpHistory.visible = true;
+
     }
 
 
