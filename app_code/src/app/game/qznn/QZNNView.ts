@@ -651,6 +651,7 @@ class QZNNView extends eui.Component {
 
     /**抢庄牛牛拼牌通知 */
     private onShowOrder(data: any): void {
+        console.log(data._obj.index + "号准备");
         if (data._obj.index > 0) {
             this['pinpaiType' + (data._obj.index - 1)].visible = true;
         } else {
@@ -777,6 +778,9 @@ class QZNNView extends eui.Component {
     /**其他玩家的牌型   结算 */
     private oncloseanaccount(data: any) {
         this.pinpaiType.visible = true;
+        this.pinpaiType0.visible = true;
+        this.pinpaiType1.visible = true;
+        this.pinpaiType2.visible = true;
 
         this.game_result = data._obj.result;
 
@@ -863,8 +867,7 @@ class QZNNView extends eui.Component {
             this['_xiabei_' + num].visible = true;
             this['_xiabei_0_0_' + num].visible = true;
             this['_xiabei_' + num].source = 'img_XB_' + data % 10 + '_png';
-            this['_xiabei_0_0_' + num].source = 'img_XB_0_0_' + 1 + '_png';
-
+            this['_xiabei_0_0_' + num].source = 'img_XB_' + 1 + '_png';
 
         } else if (data < 10) {
             this['_xiabei_0_' + num].visible = true;
@@ -916,7 +919,7 @@ class QZNNView extends eui.Component {
         this.timeNum++;
     }
 
-    /**设置庄家 */
+    /**随机庄家动画 */
     private bet_data: any = [];
     private acceptbanker(data: any): void {
         this.bet_data = [];
@@ -945,7 +948,7 @@ class QZNNView extends eui.Component {
         }
 
     }
-
+    /**设置庄家 */
     private setbanker(data) {
         let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
         this['_zhuang_img' + num].visible = true;
@@ -1806,7 +1809,7 @@ class QZNNView extends eui.Component {
         this._zhuang_img1.visible = false;
         this._zhuang_img2.visible = false;
         this._zhuang_img3.visible = false;
-       
+
         if (state) {
 
             if (index % 2 == 0) {

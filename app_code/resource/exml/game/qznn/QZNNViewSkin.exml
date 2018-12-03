@@ -31,7 +31,7 @@
 		<e:Image id="grpCard_0_2" x="292" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
 		<e:Image id="grpCard_0_3" x="324" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
 		<e:Image id="grpCard_0_4" x="356.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" verticalCenter="0"/>
-		<e:Image id="pinpaiType0" x="274" width="98" height="38" scaleX="1" scaleY="1" y="423.65" source="nn_wancheng_png" visible="false"/>
+		<e:Image id="pinpaiType0" x="274" width="98" height="38" scaleX="1" scaleY="1" y="423.65" source="nn_wancheng_png" locked="true" visible="false"/>
 		<e:Group id="labCardType0" x="274.5" width="98" height="44" scaleX="1" scaleY="1" y="417"/>
 		<e:Image id="grpCard_1_0" x="634.55" y="162.95" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
 		<e:Image id="grpCard_1_1" x="668" y="162.95" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
