@@ -40,15 +40,10 @@ class LobbyView extends eui.Component {
 		super.childrenCreated();
 
 		this._head_label.text = UserInfo.getInstance().username;
-		this._coin_label.text = this.Formatconversion(UserInfo.getInstance().goldcoins);
+		this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
 		this.initGameIconList();
 	}
-	/**数字转字符 */
-	private Formatconversion(data: number): string {
-		var str = data + '';
-		str = str.slice(0, str.length - 3) + ',' + str.slice(str.length - 3);
-		return str;
-	}
+
 	private initGameIconList(): void {
 		let allgameList: GameIconData[] = [
 			new GameIconData().initData({ name: "通比牛牛", url: "tbnn_game_870_bg", ishot: true, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_TBNN }),
