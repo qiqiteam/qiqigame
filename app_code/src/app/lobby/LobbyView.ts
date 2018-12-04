@@ -38,7 +38,6 @@ class LobbyView extends eui.Component {
 
 	protected childrenCreated() {
 		super.childrenCreated();
-
 		this._head_label.text = UserInfo.getInstance().username;
 		this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
 		this.initGameIconList();

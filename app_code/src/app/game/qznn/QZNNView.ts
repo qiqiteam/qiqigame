@@ -492,7 +492,7 @@ class QZNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         if (e.target == this._btn_begin) {
             this.onRestartGame();
-        } else if (e.target == this._btn_meun) {
+        } else if (e.target == this._btn_meun) { 
 
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
