@@ -491,7 +491,6 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
-            this.ppcuowu();
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
