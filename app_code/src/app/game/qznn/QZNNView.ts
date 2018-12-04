@@ -257,13 +257,12 @@ class QZNNView extends eui.Component {
 
     private addNNEff(): void {
         if (!this.nnEff) {
-            this.nnEff = xlLib.DisplayUtils.createMovieClicp('nn_myCardType10', 'nn_myCardType10');
+            this.nnEff = xlLib.DisplayUtils.createAsyncMovieClicp('nn_myCardType10', 'nn_myCardType10', false);
             this.nnEff.x = xlLib.Global.screenWidth / 2;
             this.nnEff.y = xlLib.Global.screenHeight / 2;
             this.nnEff.frameRate = 10;
             this.nnEff.touchEnabled = false;
         }
-        this.nnEff.gotoAndPlay(0, 1);
         this.addChild(this.nnEff);
         this.nnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.nnEff.parent) {
@@ -274,13 +273,12 @@ class QZNNView extends eui.Component {
 
     private addWhnEff(): void {
         if (!this.whnEff) {
-            this.whnEff = xlLib.DisplayUtils.createMovieClicp('nn_myCardType14', 'nn_myCardType14');
+            this.whnEff = xlLib.DisplayUtils.createAsyncMovieClicp('nn_myCardType14', 'nn_myCardType14', false);
             this.whnEff.x = xlLib.Global.screenWidth / 2;
             this.whnEff.y = xlLib.Global.screenHeight / 2;
             this.whnEff.frameRate = 10;
             this.whnEff.touchEnabled = false;
         }
-        this.whnEff.gotoAndPlay(0, 1);
         this.addChild(this.whnEff);
         this.whnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.whnEff.parent) {
@@ -493,7 +491,6 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
-
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -780,6 +777,8 @@ class QZNNView extends eui.Component {
             }
             this.multipleList[i] = data._obj.hogList[i].hogOrBet;
         }
+
+
     }
     /**自己的牌 */
     private onThecardtype(data: any): void {
@@ -1102,11 +1101,6 @@ class QZNNView extends eui.Component {
         this['labelGold' + num].text = GlobalFunction.Formatconversion(_gold);
     }
 
-    /**游戏开始 */
-    private Gamestart() {
-        var niuniu: egret.MovieClip = xlLib.DisplayUtils.createMovieClicp('eff_youxikaishi', 'eff_youxikaishi');
-        this.addChild(niuniu);
-    }
     /**算牌 */
     private Suapai(e: egret.TouchEvent) {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
@@ -1643,33 +1637,32 @@ class QZNNView extends eui.Component {
 
     private addNiuniuBei(grp: eui.Group, index: number): void {
         let bmpurl: string = QZNNUtil.getInstance().getCardBmpUrl(index);
-        let niuniuBet: any = grp.getChildByName("niuniubet") as any;
-        if (niuniuBet && niuniuBet.parent) {
-            niuniuBet.parent.removeChild(niuniuBet);
-            niuniuBet = null
-        }
-        if (!niuniuBet) {
-            if (index == 0) {
-                niuniuBet = new WuNiuNBei();
-            }
-            else if (index < 10) {
-                niuniuBet = new NiuNBei();
-            }
-            else {
-                if (index == 10) {
-                    this.addNNEff();
-                } else if (index == 13) {
-                    this.addWhnEff();
-                }
-                niuniuBet = new TenshuNiuBei();
-            }
-            niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
-            niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
+        grp.removeChildren();
+        let niuniuBet: any;
+        if (index == 0) {
+            niuniuBet = new WuNiuNBei();
             niuniuBet.x = 80;
             niuniuBet.y -= 80;
-            niuniuBet.name = "niuniubet";
-            grp.addChild(niuniuBet);
         }
+        else if (index < 10) {
+            niuniuBet = new NiuNBei();
+            niuniuBet.x = 80;
+            niuniuBet.y -= 80;
+        }
+        else {
+            if (index == 10) {
+                this.addNNEff();
+            } else if (index == 13) {
+                this.addWhnEff();
+            }
+            niuniuBet = new TenshuNiuBei();
+            niuniuBet.x = 80;
+            niuniuBet.y = 30;
+        }
+        niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
+        niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
+
+        grp.addChild(niuniuBet);
         let url: string = bmpurl;
         (niuniuBet as INiuNiuBetEffect).play(url);
     }

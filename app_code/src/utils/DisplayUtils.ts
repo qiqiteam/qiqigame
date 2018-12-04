@@ -11,16 +11,48 @@ module xlLib {
             return result;
         }
 
+        public static createAsyncMovieClicp(groupName: string, keyName?: string,isloop:boolean=true, playTimes?:number): egret.MovieClip 
+        {
+            var mdf:egret.MovieClipDataFactory;
+            var mc:egret.MovieClip;
+            mdf = new egret.MovieClipDataFactory();
+            mc = new egret.MovieClip();//创建MovieClip
+            xlLib.ResUtils.getRes(groupName + "_png",(textureobj:any,url:string)=>{
+                mdf.texture = textureobj;
+                mc.movieClipData = mdf.generateMovieClipData(keyName);
+                if(isloop)
+                {
+                    mc.play(-1);
+                }else{
+                    mc.gotoAndPlay(0,playTimes);
+                }
+            });
+            xlLib.ResUtils.getRes(groupName + "_json",(jsonobj:any,url:string)=>{
+                mdf.mcDataSet = jsonobj;
+                mc.movieClipData = mdf.generateMovieClipData(keyName);
+                if(isloop)
+                {
+                    mc.play(-1);
+                }else{
+                    mc.gotoAndPlay(0,playTimes);
+                }
+            });
+            return mc;
+        }
+
         /**
          * 创建动画
          * @param groupName
          * @param keyName
          */
-        public static createMovieClicp(groupName: string, keyName?: string): egret.MovieClip {
+        public static createMovieClicp(groupName: string, keyName?: string): egret.MovieClip 
+        {
             var data = RES.getRes(groupName + "_json");//获取动画文件的信息配置文件
             var texture = RES.getRes(groupName + "_png");//获取动画文件的图片
-            var mdf = new egret.MovieClipDataFactory(data, texture);
-            var mc = new egret.MovieClip(mdf.generateMovieClipData(keyName));//创建MovieClip
+            var mdf:egret.MovieClipDataFactory;
+            var mc:egret.MovieClip;
+            mdf = new egret.MovieClipDataFactory(data, texture);
+            mc = new egret.MovieClip(mdf.generateMovieClipData(keyName));//创建MovieClip
             return mc;
         }
 

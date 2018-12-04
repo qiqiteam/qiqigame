@@ -49,21 +49,18 @@ class QznnIconItem extends eui.Component {
         this.bg_img.source = icondata.url;
         if(icondata.ishot)
 		{
-			this.effecthot = xlLib.DisplayUtils.createMovieClicp("effcet_hot", "effcet_hot");
-			this.effecthot.play(-1);
+			this.effecthot = xlLib.DisplayUtils.createAsyncMovieClicp("effcet_hot", "effcet_hot");
 			this.effecthot.x = 25;
 			this.effecthot.y = 0;
 			this.addChild(this.effecthot);
 		}
         if(icondata.game==Const.GAME_NIUNIU){
-			this.effectIcon = xlLib.DisplayUtils.createMovieClicp("game_830_effect_logo", "game_830_effect_logo");
-			this.effectIcon.play(-1);
+			this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("game_830_effect_logo", "game_830_effect_logo");
 			this.effectIcon.x = 130; 
            	this.addChild(this.effectIcon);
 		}
-		this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_830_effect", "game_830_effect");
+		this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_830_effect", "game_830_effect");
 		this.effectmask.touchEnabled = false;
-		this.effectmask.play(-1);
 		this.effectmask.x = 20;
 		this.effectmask.y = -9;
   		this.addChild(this.effectmask);
