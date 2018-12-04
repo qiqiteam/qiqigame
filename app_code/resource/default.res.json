@@ -5,11 +5,7 @@
 			"name": "preload"
 		},
 		{
-			"keys": "gold_png,gameID_png,checkbox_unselect_png,checkbox_select_up_png,checkbox_select_down_png,checkbox_select_disabled_png,btn_yuyin_0_png,btn_liaotian_0_png,btn_fanhui_0_png,btn_common_1_png,btn_common_0_png,btn_close_1_png,btn_close_0_png,btn_caidan_0_png,btn_btn_0_png,btn_bg_png,btn_-cancel_1_png,btn_-cancel_0_png,btn_ cancel_1_png,btn_ cancel_0_png,_btn_start_png",
-			"name": "common"
-		},
-		{
-			"keys": "Bg_img_jpg,lobby_json",
+			"keys": "Bg_img_jpg,lobby_json,gold_png,gameID_png,checkbox_unselect_png,checkbox_select_up_png,checkbox_select_down_png,checkbox_select_disabled_png,btn_yuyin_0_png,btn_liaotian_0_png,btn_fanhui_0_png,btn_common_1_png,btn_common_0_png,btn_close_1_png,btn_close_0_png,btn_caidan_0_png,btn_btn_0_png,btn_bg_png,btn_-cancel_1_png,btn_-cancel_0_png,btn_ cancel_1_png,btn_ cancel_0_png,_btn_start_png",
 			"name": "hall"
 		},
 		{

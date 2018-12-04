@@ -42,10 +42,14 @@ class Main extends xlLib.GameDoc {
 
         egret.lifecycle.onPause = () => {
             egret.ticker.pause();
+            xlLib.SoundMgr.instance.musicOpen = false;
+            xlLib.SoundMgr.instance.soundOpen = false;
         }
 
         egret.lifecycle.onResume = () => {
             egret.ticker.resume();
+           xlLib.SoundMgr.instance.musicOpen = true;
+            xlLib.SoundMgr.instance.soundOpen = true;
         }
         
         //inject the custom material parser
@@ -196,9 +200,7 @@ class Main extends xlLib.GameDoc {
             xlLib.IosSDK.init();
         }
         this.removeLodingIcon();
-        xlLib.ResLoadMgr.instance.load("common", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
-        // 
-
+        xlLib.ResLoadMgr.instance.load("hall", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
         
         // xlLib.WebSocketMgr.getInstance().connect("47.91.221.49", ":3010");
 
@@ -216,11 +218,6 @@ class Main extends xlLib.GameDoc {
     }
 
     private onLoadComplete(event: RES.ResourceEvent){
-        if (event.groupName == "common")
-        {
-            xlLib.ResLoadMgr.instance.load("hall", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
-            return;
-        }
         this.isResLoadEnd = true;
         this.isSocketSuc = true;
         this.startEnterGame();
