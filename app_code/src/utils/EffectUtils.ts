@@ -470,6 +470,7 @@ module EffectUtils {
     /**
      * 金币飞行的效
      */
+    /*
     export function coinsFly(obj: egret.DisplayObjectContainer, startX, startY, endX = 140, endY = 64): void {
         var interval: number = 0;
         var coinsNum: number = 0;
@@ -493,6 +494,64 @@ module EffectUtils {
                 }, [obj, coin])
         }
         interval = setInterval(flyEffect.bind(this), 100);
+    }*/
+
+    /**
+     * 金币飞行的效
+     */
+    export function coinsFly(obj: egret.DisplayObjectContainer, startX, startY, endX, endY, ): void {
+        var interval: number = 0;
+        var coinsNum: number = 0;
+        var _interval: number = 0;
+        let coin_arr = [];
+
+        var _flyEffect: Function = function () {
+            clearInterval(_interval);
+            _interval = 0;
+            for(let i=0; i<coin_arr.length; i++) {
+                egret.Tween.removeTweens(coin_arr[i]);
+                coin_arr[i].parent.removeChild(coin_arr[i]);
+            }
+            return;
+        }
+
+        var flyEffect: Function = function () {
+            if (coinsNum > 8) {
+                clearInterval(interval);
+                interval = 0;
+                coinsNum = 0;
+                _interval = setInterval(_flyEffect.bind(this), 1400);
+                return;
+            }
+            coinsNum++;
+            let randomNum = Math.round(Math.random() * 10 + 5);
+            console.log(randomNum);
+            
+            for(let i=0; i<randomNum; i++) {
+                console.log("222");
+                var coin: eui.Image = new eui.Image('gold');
+                coin.x = startX + Math.round(Math.random() * 150 + 10);
+                coin.y = startY + Math.round(Math.random() * 150 + 10);
+                coin.scaleX = 0.8;
+                coin.scaleY = 0.8;
+                obj.addChild(coin);
+                coin_arr.push(coin);
+                let z_x = endX + Math.round(Math.random() * 60 + 1);
+                let z_y = endY + Math.round(Math.random() * 60 + 1);
+                egret.Tween.get(coin).to({ x: z_x, y: z_y }, 1000)
+                    .wait(100)
+                    .call(function () {
+                        //if(coin){
+                        //    egret.Tween.removeTweens(coin);
+                        //    obj.removeChild(coin);
+                        //    coin = null;
+                        //    console.log("111");
+                        //    
+                        //}
+                }, [obj, coin])
+            }
+        }
+        interval = setInterval(flyEffect.bind(this), 50);
     }
 
 }

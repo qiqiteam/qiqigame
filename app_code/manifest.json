@@ -10,7 +10,8 @@
 		"libs/modules/dragonBones/dragonBones.js",
 		"promise/bin/promise.js",
 		"pomelo/pomelo.js",
-		"countUp/bin/countUp.js"
+		"countUp/bin/countUp.js",
+		"particle/particle.js"
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",

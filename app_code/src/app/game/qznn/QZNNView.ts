@@ -207,6 +207,7 @@ class QZNNView extends eui.Component {
     private orginPinCardPos = [];       // 拼牌扑克位置
     private orginPlayerCardPos = [];    // 存储玩家扑克位置
     private orginZhanCardPos = [];      // 扑克中点停止位置
+    private orginPlayerHeadPos = [];    // 玩家头像中心点
 
     private isBanker: boolean = false; 	// 是否当庄 (判断是否可以退出)
     private isBets: boolean = false;	// 是否下注 (判断是否可以退出)
@@ -464,6 +465,17 @@ class QZNNView extends eui.Component {
             pos.y = card.y;
             this.orginZhanCardPos[i] = pos;
         }
+        for (let i = 0; i < 4; i++) {
+            var pos: egret.Point = new egret.Point;
+            if(i==0 || i==2) {
+                pos.x = this['grpHead' + i].x+15;
+                pos.y = this['grpHead' + i].y+15;
+            } else {
+                pos.x = this['grpHead' + i].x+25;
+                pos.y = this['grpHead' + i].y+40;
+            }
+            this.orginPlayerHeadPos[i] = pos;
+        }
     }
 
     public resize(): void {
@@ -493,7 +505,7 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
-            this.addNNEff();
+            //this.addNNEff();
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {
@@ -1742,37 +1754,18 @@ class QZNNView extends eui.Component {
 
 
         let zhuangPos = {
-            x: this['grpHead' + this.zhaungIndex].x,
-            y: this['grpHead' + this.zhaungIndex].y
+            x: this.orginPlayerHeadPos[this.zhaungIndex].x,
+            y: this.orginPlayerHeadPos[this.zhaungIndex].y
         }
-        if (this.zhaungIndex == 0) {
-            // zhuangPos.x = this._group_di.x + 15 + 145;
-            // zhuangPos.y = this._group_di.y - 35 + 103;
-        } else {
-            zhuangPos.x = zhuangPos.x + 21;
-            zhuangPos.y = zhuangPos.y + 110;
-        }
+
         let pos = {
-            x: 0,
-            y: 0
-        }
-        let numPos = {
             x: 0,
             y: 0
         }
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
-            if (i == 0) {
-                // pos.x = this._group_di.x + 15 + 145;
-                // pos.y = this._group_di.y - 35 + 103;
-                numPos.x = pos.x + 42;
-                numPos.y = pos.y + 2;
-            } else {
-                pos.x = this['grpHead' + i].x + 21;
-                pos.y = this['grpHead' + i].y + 110;
-                numPos.x = pos.x + 30;
-                numPos.y = pos.y + 5;
-            }
+            pos.x = this.orginPlayerHeadPos[i].x;
+            pos.y = this.orginPlayerHeadPos[i].y;
 
             if (this.cardResult.pokes[i].win == true) {
                 //xlLib.TipsUtils.showTipsDownToUp("+" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
@@ -1786,18 +1779,18 @@ class QZNNView extends eui.Component {
                 continue;
             }
 
-            var goldFlyAnimator: uiCore.Animation;
+            //var goldFlyAnimator: uiCore.Animation;
 
             if (this.cardResult.pokes[i].win == true) {
-                goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png", "qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
-                //    EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+                //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png", "qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
+                EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
-                goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
-                //    EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+                //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
+                EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
             }
-            this.addChild(goldFlyAnimator);
-            this.goldFlyAnimatorarr.push(goldFlyAnimator);
-            goldFlyAnimator.play();
+            //this.addChild(goldFlyAnimator);
+            //this.goldFlyAnimatorarr.push(goldFlyAnimator);
+            //goldFlyAnimator.play();
         }
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
