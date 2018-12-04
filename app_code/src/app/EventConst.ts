@@ -66,9 +66,9 @@ class EventConst {
     public static players: string = "players";
     /**新玩家加入*/
     public static onNewUserEnterGame: string = "onNewUserEnterGame";
-    /**抢庄通知(所有人)*/
-    public static onUserBetOrderUpdate: string = "onUserBetOrderUpdate";
     /**下注通知(所有人)*/
+    public static onUserBetOrderUpdate: string = "onUserBetOrderUpdate";
+    /**抢庄通知(所有人)*/
     public static onUserHogOrderUpdate: string = "onUserHogOrderUpdate";
     /**牛牛匹配中退出游戏、游戏结束退出*/
     public static onUserLeave: string = "onUserLeave";

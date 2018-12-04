@@ -71,196 +71,25 @@ class TBNNView extends eui.Component {
     public grpCard_8_3: eui.Image;
     public grpCard_8_4: eui.Image;
     public labCardType8: eui.Image;
-    public grpHead1: QZNNHead;
-    public grpHead2: QZNNHead;
-    public grpHead3: QZNNHead;
-    public grpHead4: QZNNHead;
-    public grpHead5: QZNNHead;
-    public grpHead6: QZNNHead;
-    public grpHead7: QZNNHead;
-    public grpHead8: QZNNHead;
-    public grpHead9: QZNNHead;
-    public btnCharge: eui.Image;
-    public titleName: eui.Label;
-    public maskhead: eui.Group;
-    public titleHead: eui.Image;
-    public btnVip: eui.Image;
-    public labTitleVip: eui.Label;
-    public titleLabMoney: eui.BitmapLabel;
-    public btnClose: eui.Image;
-    public btnCardHistroy: eui.Image;
-    public btnCardType: eui.Image;
-    public btnRedBox: eui.Image;
-    public grpBankerInfo: eui.Group;
-    public btnDownBanker: eui.Image;
-    public btnBankerDown: eui.Image;
-    public btnUpBanker: eui.Image;
-    public bankerHead: eui.Image;
-    public labBankerMoney: eui.BitmapLabel;
-    public bankerName: eui.Label;
-    public labBankerLastNum: eui.Label;
-    public labBankerRank: eui.Label;
-    public btnVip0: eui.Image;
-    public labBankerVip: eui.Label;
+    public grpHead1: TBNNHead;
+    public grpHead2: TBNNHead;
+    public grpHead3: TBNNHead;
+    public grpHead4: TBNNHead;
+    public grpHead5: TBNNHead;
+    public grpHead6: TBNNHead;
+    public grpHead7: TBNNHead;
+    public grpHead8: TBNNHead;
+    public grpHead9: TBNNHead;
     public grpCountdown: eui.Group;
     public labCountdown0: eui.BitmapLabel;
     public labCountdown1: eui.BitmapLabel;
-    public btnBet0: eui.Image;
-    public btnBet1: eui.Image;
-    public btnBet2: eui.Image;
-    public btnBet3: eui.Image;
-    public btnBet4: eui.Image;
-    public btnBet5: eui.Image;
-    public labBet0: eui.Label;
-    public labBet1: eui.Label;
-    public labBet2: eui.Label;
-    public labBet3: eui.Label;
-    public labBet4: eui.Label;
-    public labBet5: eui.Label;
-    public grpBankerList: eui.Group;
-    public bankerListItem0: eui.Group;
-    public itemRank0: eui.Label;
-    public itemName0: eui.Label;
-    public itemMoney0: eui.Label;
-    public itemVip0: eui.BitmapLabel;
-    public bankerListItem1: eui.Group;
-    public itemRank1: eui.Label;
-    public itemName1: eui.Label;
-    public itemMoney1: eui.Label;
-    public itemVip1: eui.BitmapLabel;
-    public bankerListItem2: eui.Group;
-    public itemRank2: eui.Label;
-    public itemName2: eui.Label;
-    public itemMoney2: eui.Label;
-    public itemVip2: eui.BitmapLabel;
-    public bankerListItem3: eui.Group;
-    public itemRank3: eui.Label;
-    public itemName3: eui.Label;
-    public itemMoney3: eui.Label;
-    public itemVip3: eui.BitmapLabel;
-    public bankerListItem4: eui.Group;
-    public itemRank4: eui.Label;
-    public itemName4: eui.Label;
-    public itemMoney4: eui.Label;
-    public itemVip4: eui.BitmapLabel;
-    public bankerListItem5: eui.Group;
-    public itemRank5: eui.Label;
-    public itemName5: eui.Label;
-    public itemMoney5: eui.Label;
-    public itemVip5: eui.BitmapLabel;
-    public bankerListItem6: eui.Group;
-    public itemRank6: eui.Label;
-    public itemName6: eui.Label;
-    public itemMoney6: eui.Label;
-    public itemVip6: eui.BitmapLabel;
-    public bankerListItem7: eui.Group;
-    public itemRank7: eui.Label;
-    public itemName7: eui.Label;
-    public itemMoney7: eui.Label;
-    public itemVip7: eui.BitmapLabel;
-    public bankerListItem8: eui.Group;
-    public itemRank8: eui.Label;
-    public itemName8: eui.Label;
-    public itemMoney8: eui.Label;
-    public itemVip8: eui.BitmapLabel;
-    public bankerListItem9: eui.Group;
-    public itemRank9: eui.Label;
-    public itemName9: eui.Label;
-    public itemMoney9: eui.Label;
-    public itemVip9: eui.BitmapLabel;
-    public grpSecondPanel: eui.Group;
-    public grpHistory: eui.Group;
-    public grpHistroy0: eui.Group;
-    public grpHistroy0_0: eui.Image;
-    public grpHistroy1_0: eui.Image;
-    public grpHistroy2_0: eui.Image;
-    public grpHistroy3_0: eui.Image;
-    public grpHistroy1: eui.Group;
-    public grpHistroy0_1: eui.Image;
-    public grpHistroy1_1: eui.Image;
-    public grpHistroy2_1: eui.Image;
-    public grpHistroy3_1: eui.Image;
-    public grpHistroy2: eui.Group;
-    public grpHistroy0_2: eui.Image;
-    public grpHistroy1_2: eui.Image;
-    public grpHistroy2_2: eui.Image;
-    public grpHistroy3_2: eui.Image;
-    public grpHistroy3: eui.Group;
-    public grpHistroy0_3: eui.Image;
-    public grpHistroy1_3: eui.Image;
-    public grpHistroy2_3: eui.Image;
-    public grpHistroy3_3: eui.Image;
-    public grpHistroy4: eui.Group;
-    public grpHistroy0_4: eui.Image;
-    public grpHistroy1_4: eui.Image;
-    public grpHistroy2_4: eui.Image;
-    public grpHistroy3_4: eui.Image;
-    public grpHistroy5: eui.Group;
-    public grpHistroy0_5: eui.Image;
-    public grpHistroy1_5: eui.Image;
-    public grpHistroy2_5: eui.Image;
-    public grpHistroy3_5: eui.Image;
-    public grpHistroy6: eui.Group;
-    public grpHistroy0_6: eui.Image;
-    public grpHistroy1_6: eui.Image;
-    public grpHistroy2_6: eui.Image;
-    public grpHistroy3_6: eui.Image;
-    public grpHistroy7: eui.Group;
-    public grpHistroy0_7: eui.Image;
-    public grpHistroy1_7: eui.Image;
-    public grpHistroy2_7: eui.Image;
-    public grpHistroy3_7: eui.Image;
-    public grpHistroy8: eui.Group;
-    public grpHistroy0_8: eui.Image;
-    public grpHistroy1_8: eui.Image;
-    public grpHistroy2_8: eui.Image;
-    public grpHistroy3_8: eui.Image;
-    public grpHistroy9: eui.Group;
-    public grpHistroy0_9: eui.Image;
-    public grpHistroy1_9: eui.Image;
-    public grpHistroy2_9: eui.Image;
-    public grpHistroy3_9: eui.Image;
-    public grpCardType: eui.Group;
-    public secondClose: eui.Image;
-    public grpResult: eui.Group;
-    public grpMax: eui.Group;
-    public grpMaxHead: eui.Image;
-    public grpMaxGold: eui.Label;
-    public grpMaxName: eui.Label;
-    public grpBankerHead: eui.Image;
-    public grpBankerType: eui.Image;
-    public labelBankerType: eui.Label;
-    public grpBankerBeishu: eui.Label;
-    public grpBankerGold: eui.Label;
-    public grpBankerName: eui.Label;
-    public labResult0_0: eui.Label;
-    public labResult1_0: eui.Label;
-    public labResult2_0: eui.Label;
-    public labResult0_1: eui.Label;
-    public labResult1_1: eui.Label;
-    public labResult2_1: eui.Label;
-    public labResult0_2: eui.Label;
-    public labResult1_2: eui.Label;
-    public labResult2_2: eui.Label;
-    public labResult0_3: eui.Label;
-    public labResult1_3: eui.Label;
-    public labResult2_3: eui.Label;
-    public labResultValue: eui.Label;
-    public resultType0: eui.Label;
-    public resultType1: eui.Label;
-    public resultType2: eui.Label;
-    public resultType3: eui.Label;
-    public grpTips: eui.Group;
-    public grpTipsbg: eui.Image;
-    public grpTipsInfo: eui.Image;
-    public imgBaoZhuang: eui.Image;
-    public grpCaijin: eui.Group;
-    public grpCaijinLabel: eui.Label;
+    public _group_di: eui.Group;
     public grpHead0: eui.Group;
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
-    public _btn_record: eui.Button;
+    public _my_img_zhuang: eui.Image;
+    public _btn_switch: eui.Group;
     public _btn_double_1: eui.Button;
     public _image_double_1: eui.Image;
     public _btn_double_2: eui.Button;
@@ -271,6 +100,7 @@ class TBNNView extends eui.Component {
     public _image_double_4: eui.Image;
     public _btn_double_5: eui.Button;
     public _image_double_5: eui.Image;
+    public _btn_record: eui.Button;
     public _group_qiang: eui.Group;
     public _btn_buqiang: eui.Button;
     public _btn_qiang_1: eui.Button;
@@ -281,11 +111,7 @@ class TBNNView extends eui.Component {
     public _btn_meun: eui.Button;
     public _btn_chat: eui.Button;
     public _btn_voice: eui.Button;
-
-    public _btn_switch: eui.Button;
     public _btn_begin: eui.Button;
-    public _my_img_zhuang: eui.Image;
-    public _group_di: eui.Group;
 
     //public labHandsel: eui.BitmapLabel;
     //private grpSelectBet: eui.Group;    //筹码底背景
@@ -338,46 +164,29 @@ class TBNNView extends eui.Component {
 
     private isCardEffectShow: boolean = false; //是否正在显示扑克动画
     protected childrenCreated(): void {
-        //this.setTouchEnabled();
+
         this.getOrginCardPos();
         this.addEvent();
         this.initData();
 
         this.setCountdown();
-        // //this.onTouchBet(0);
-        // //PanelManage.openChat(this, 112, 300, "10003");
-        // //this.joinCallback(this.r);
-
-        // this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
 
+        xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        UserInfo.getInstance().isGameStart = true;
     }
     /**
      * 数据初始化
      */
     private initData(): void {
-        this.labBankerRank.text = '';
-        this.labBankerLastNum.text = '';
+
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.grpBankerList.visible = false;
         this.grpCoins.touchEnabled = false;
-        this.grpTips.touchEnabled = false;
-        this.grpTips.touchChildren = false;
-        this.grpSecondPanel.visible = false;
-        this.btnUpBanker.visible = true;
-        this.btnDownBanker.visible = false;
-        this.grpTips.visible = false;
-        this.grpResult.visible = false;
-        this.imgBaoZhuang.visible = false;
-        this.grpCardType.touchChildren = false;
-        this.grpCardType.touchEnabled = false;
-        this.grpCaijin.visible = false;
         this.grpCard.visible = true;
-
         this._btn_begin.visible = true;
         this._btn_switch.visible = false;
         this._group_qiang.visible = false;
@@ -387,7 +196,7 @@ class TBNNView extends eui.Component {
         this._image_double_3.touchEnabled = false;
         this._image_double_4.touchEnabled = false;
         this._image_double_5.touchEnabled = false;
-        
+
     }
 
     /**
@@ -495,28 +304,95 @@ class TBNNView extends eui.Component {
     /**注册事件 */
     private addEvent(): void {
 
-	this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        // this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        // this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        // this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        // this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        // this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        // this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
-        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+        // // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        // this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+
+        // EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
+        // EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
+        // EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
+        // EventUtil.addEventListener(EventConst.summary, this.over, this);
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
-        EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
-        EventUtil.addEventListener(EventConst.summary, this.over, this);
+        EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
     }
+    /**游戏状态 */
+    private GameStatus(data: any): void {
+        console.log(data._obj.roomStatus);
 
+        switch (data._obj.roomStatus) {
+            case 0: ; break;
+            case 1: ; break;
+            case 2: ; break;
+            case 3: ; break; //抢庄
+            case 4: this.onbetBack(data); break; //下注
+            case 5: ; break;
+            case 6: ; break; //自己的牌
+            case 7: ; break; //其他玩家的牌型  结算
+            case 8: ; break; // 游戏结束
+        }
+    }
+    /**监听下注 */
+    private onbetBack(data: any): void {
+        xlLib.PopUpMgr.removePopUp(Inthematch, 1);
+        // this._tishi.visible = false;
+        // this.time = 0;
+        // this.startCountDown(data._obj.seconds);
+        // this._group_qiang.visible = false;
+        // this._btn_switch.visible = true;
+
+        // if (data._obj.roomStatus == 4) {
+        //     this.acceptbanker(data);
+        // }
+
+        // for (let i = 0; i < data._obj.hogList.length; i++) {
+        //     this['_btn_double_' + (i + 1)].visible = true;
+
+        //     if (data._obj.hogList[i].hogOrBet >= 10) {
+        //         this['beishu_' + i].visible = true;
+        //         this['beishu_' + i].source = 'img_XB_1_png';
+        //         this['beishu_0_' + i].visible = true;
+        //         this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet % 10 + '_png';
+        //         this['bs_img_' + i].visible = true;
+        //     } else if (data._obj.hogList[i].hogOrBet < 10) {
+        //         this['beishu_' + i].visible = false;
+        //         this['beishu_' + i].source = '';
+        //         this['beishu_0_' + i].visible = true;
+        //         this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet + '_png';
+        //         // console.log(data._obj.hogList[i].hogOrBet);
+        //         this['bs_img_' + i].visible = true;
+        //     }
+        //     this.multipleList[i] = data._obj.hogList[i].hogOrBet;
+        // }
+    }
+    /**更新抢庄通知(所有人) */
+    private OnHogUpdate(data: any): void {
+        // // console.log(data._obj.index + "号抢庄");
+        // this.intnum[data._obj.index] = data._obj.hogOrBet;
+
+        // if (UserInfo.getInstance().uid == data._obj.userid) {
+        //     this._group_qiang.visible = false;
+        //     this._tishi.visible = true;
+        //     this._tishi_text.text = "请等待其他玩家抢庄...";
+        // }
+        // if (data._obj.code == 200) {
+        //     this.qiangzhuang(data._obj.hogOrBet, data._obj.index)
+        // }
+    }
     // private onHogBack(data: any): void {
     //     this._group_qiang.visible = true;
     // }
     private onHogBack1(data: any): void {
         // this._group_qiang.visible = false;
-        this.showGameTips(2);
+        // this.showGameTips(2);
         this._btn_switch.visible = true;
     }
     private over(data: any): void {
@@ -688,7 +564,7 @@ class TBNNView extends eui.Component {
                 break;
             case 1: //封盘
                 this.isCanBets = false;
-                this.showGameTips(3);
+                // this.showGameTips(3);
                 break;
             case 2: //结算
                 this.setGameResult(msg.data);
@@ -1075,20 +951,20 @@ class TBNNView extends eui.Component {
     */
     //========================== Effect Show ===============================
 
-    //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
-    private showGameTips(type): void {
-        this.grpTipsInfo.source = TBNNUtil.getInstance().getMsgSource(type);
-        this.grpTips.visible = true;
-        this.grpTipsbg.alpha = 0;
-        this.grpTipsInfo.x = 640;
-        this.playClickSound(TBNNUtil.getInstance().getSoundEffect(type));
-        egret.Tween.get(this.grpTipsbg).to({ alpha: 1 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ alpha: 0 }, 400);
-        }, this.grpTipsbg);
-        egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ x: -640 }, 400);
-        }, this.grpTipsInfo);
-    }
+    // //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
+    // private showGameTips(type): void {
+    //     this.grpTipsInfo.source = TBNNUtil.getInstance().getMsgSource(type);
+    //     this.grpTips.visible = true;
+    //     this.grpTipsbg.alpha = 0;
+    //     this.grpTipsInfo.x = 640;
+    //     this.playClickSound(TBNNUtil.getInstance().getSoundEffect(type));
+    //     egret.Tween.get(this.grpTipsbg).to({ alpha: 1 }, 400).wait(400).call(function () {
+    //         egret.Tween.get(this).to({ alpha: 0 }, 400);
+    //     }, this.grpTipsbg);
+    //     egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
+    //         egret.Tween.get(this).to({ x: -640 }, 400);
+    //     }, this.grpTipsInfo);
+    // }
 
     //显示筹码
     private showCoins(num, index): void {
@@ -1141,7 +1017,7 @@ class TBNNView extends eui.Component {
         this.playClickSound(TBNNUtil.getInstance().getSoundEffect(6));
         egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
         if (this.flyIndex1 == 4) {
-            if (this.flyIndex0 == this.cardResult.pokes.length-2) {
+            if (this.flyIndex0 == this.cardResult.pokes.length - 2) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
@@ -1180,7 +1056,7 @@ class TBNNView extends eui.Component {
 
     private effectPlayerIndex = 0;
     private playerCardRotation(): void {
-        if (this.effectPlayerIndex == this.cardResult.pokes.length-1) {
+        if (this.effectPlayerIndex == this.cardResult.pokes.length - 1) {
             clearInterval(this.interval)
             this.effectPlayerIndex = 0;
             this.bankerCardRotation();
@@ -1267,11 +1143,11 @@ class TBNNView extends eui.Component {
         var isShow: boolean = false;
         //显示比牌结果，显示是否通赔或者通杀
         if (data.result[0] == 1 && data.result[1] == 1 && data.result[2] == 1 && data.result[3] == 1) {
-            this.showGameTips(5);
+            // this.showGameTips(5);
             isShow = true;
         }
         if (data.result[0] == 0 && data.result[1] == 0 && data.result[2] == 0 && data.result[3] == 0) {
-            this.showGameTips(4);
+            // this.showGameTips(4);
             isShow = true;
         }
         if (isShow) {
@@ -1298,21 +1174,21 @@ class TBNNView extends eui.Component {
         }*/
 
         let winPos = {
-            x:0,
-            y:0
+            x: 0,
+            y: 0
         }
         let pos = {
-            x:0,
-            y:0
+            x: 0,
+            y: 0
         }
         let numPos = {
-            x:0,
-            y:0
+            x: 0,
+            y: 0
         }
 
-        for(let j=0; j<this.cardResult.pokes.length; j++) {
-            if(this.cardResult.pokes[j].win == true) {
-                if(j==0) {
+        for (let j = 0; j < this.cardResult.pokes.length; j++) {
+            if (this.cardResult.pokes[j].win == true) {
+                if (j == 0) {
                     winPos.x = this._group_di.x + 15 + 145;
                     winPos.y = this._group_di.y - 35 + 103;
                 } else {
@@ -1323,12 +1199,12 @@ class TBNNView extends eui.Component {
             }
         }
 
-        for(let i=0; i<this.cardResult.pokes.length; i++) {
-            if(i==0) {
+        for (let i = 0; i < this.cardResult.pokes.length; i++) {
+            if (i == 0) {
                 pos.x = this._group_di.x + 15 + 145;
                 pos.y = this._group_di.y - 35 + 103;
-                numPos.x = pos.x+42;
-                numPos.y = pos.y+2;
+                numPos.x = pos.x + 42;
+                numPos.y = pos.y + 2;
             } else {
                 pos.x = this['grpHead' + i].x + 21;
                 pos.y = this['grpHead' + i].y + 110;
@@ -1336,7 +1212,7 @@ class TBNNView extends eui.Component {
                 numPos.y = pos.y + 5;
             }
 
-            if(this.cardResult.pokes[i].win == true) {
+            if (this.cardResult.pokes[i].win == true) {
                 xlLib.TipsUtils.showTipsDownToUp("+" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
                 this.updatePlayerGold(i, this.cardResult.pokes[i].score, true);
             } else {
@@ -1344,28 +1220,28 @@ class TBNNView extends eui.Component {
                 this.updatePlayerGold(i, this.cardResult.pokes[i].score, false);
             }
 
-            if(this.cardResult.pokes[i].win == false) {
+            if (this.cardResult.pokes[i].win == false) {
                 EffectUtils.coinsFly(this, pos.x, pos.y, winPos.x, winPos.y);
             }
         }
     }
 
     /**更新玩家金币 */
-    public updatePlayerGold(num:number, gold:number, result:boolean):void {
+    public updatePlayerGold(num: number, gold: number, result: boolean): void {
 
         let _gold = UserInfo.getInstance().playes[num].goldcoins;
-        if(result == true) {
-            _gold = _gold+gold;
+        if (result == true) {
+            _gold = _gold + gold;
         } else {
-            _gold = _gold-gold;
+            _gold = _gold - gold;
         }
         UserInfo.getInstance().playes[num].goldcoins = _gold;
-        if(num==0) {
+        if (num == 0) {
             this.labelGold0.text = _gold + "";
         } else {
             this['grpHead' + num].setGold(_gold);
         }
-        
+
     }
 
     //============================================  Game Result
@@ -1504,22 +1380,22 @@ class TBNNView extends eui.Component {
         }
     }*/
 
-    private setStartBet(): void {
-        this.resetGame();
-        this.grpResult.visible = false;
-        clearInterval(this.interval);
-        this.showGameTips(2);
-        this.grpCountdown.visible = true;
-        if (!this.isSysBanker && !this.isChangeBanker) {
-            this.lastGameBankerNum--;
-            this.labBankerLastNum.text = '剩余' + Math.round(this.lastGameBankerNum) + '次';
-        }
-        if (this.isChangeBanker) {
-            this.isChangeBanker = false;
-            //this.setBankerInfo(this.changeBankerObj);
-            this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
-        }
-    }
+    // private setStartBet(): void {
+    //     this.resetGame();
+    //     // this.grpResult.visible = false;
+    //     clearInterval(this.interval);
+    //     // this.showGameTips(2);
+    //     this.grpCountdown.visible = true;
+    //     if (!this.isSysBanker && !this.isChangeBanker) {
+    //         this.lastGameBankerNum--;
+    //         // this.labBankerLastNum.text = '剩余' + Math.round(this.lastGameBankerNum) + '次';
+    //     }
+    //     if (this.isChangeBanker) {
+    //         this.isChangeBanker = false;
+    //         //this.setBankerInfo(this.changeBankerObj);
+    //         this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
+    //     }
+    // }
 
     private resetGame(): void {
         //for (var i = 0; i < 4; i++) {
@@ -1534,7 +1410,7 @@ class TBNNView extends eui.Component {
             egret.Tween.removeTweens(card);
 
         }
-        for (var index = 0; index < this.cardResult.pokes.length-1; index++) {
+        for (var index = 0; index < this.cardResult.pokes.length - 1; index++) {
             //this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
             this.labCardTypeBanker.visible = false;
@@ -1561,9 +1437,7 @@ class TBNNView extends eui.Component {
         this._btn_begin.visible = true;
         this.isCanBets = true;
         this.isBets = false;
-        this.imgBaoZhuang.visible = false;
         this.resultCaijin = 0;
-        this.grpCaijin.visible = false;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
         this.labCountdown0.text = '0';
@@ -1597,9 +1471,6 @@ class TBNNView extends eui.Component {
                 this['grpHistroy' + i].visible = false;
             }
         }
-        this.grpSecondPanel.visible = true;
-        this.grpCardType.visible = false;
-        this.grpHistory.visible = true;
     }
 
     //private onTouchCloseSecondPanel(): void {
@@ -1667,7 +1538,7 @@ class TBNNView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
         EventUtil.removeEventListener(EventConst.summary, this.over, this);
-        if(this.cdTimer != null) {
+        if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }
     }
