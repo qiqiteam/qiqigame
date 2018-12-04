@@ -130,10 +130,10 @@ class QZNNView extends eui.Component {
     public _btn_meun: eui.Button;
     public _tishi: eui.Group;
     public _tishi_text: eui.Label;
-    public grpCard_z_0:eui.Image;
-    public grpCard_z_1:eui.Image;
-    public grpCard_z_2:eui.Image;
-    public grpCard_z_3:eui.Image;
+    public grpCard_z_0: eui.Image;
+    public grpCard_z_1: eui.Image;
+    public grpCard_z_2: eui.Image;
+    public grpCard_z_3: eui.Image;
 
 
 
@@ -257,7 +257,7 @@ class QZNNView extends eui.Component {
 
     private addNNEff(): void {
         if (!this.nnEff) {
-            this.nnEff = xlLib.DisplayUtils.createAsyncMovieClicp('nn_myCardType10', 'nn_myCardType10',false);
+            this.nnEff = xlLib.DisplayUtils.createAsyncMovieClicp('nn_myCardType10', 'nn_myCardType10', false);
             this.nnEff.x = xlLib.Global.screenWidth / 2;
             this.nnEff.y = xlLib.Global.screenHeight / 2;
             this.nnEff.frameRate = 10;
@@ -274,7 +274,7 @@ class QZNNView extends eui.Component {
 
     private addWhnEff(): void {
         if (!this.whnEff) {
-            this.whnEff = xlLib.DisplayUtils.createAsyncMovieClicp('nn_myCardType14', 'nn_myCardType14',false);
+            this.whnEff = xlLib.DisplayUtils.createAsyncMovieClicp('nn_myCardType14', 'nn_myCardType14', false);
             this.whnEff.x = xlLib.Global.screenWidth / 2;
             this.whnEff.y = xlLib.Global.screenHeight / 2;
             this.whnEff.frameRate = 10;
@@ -404,9 +404,9 @@ class QZNNView extends eui.Component {
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
 
-        for(let i=0; i<5; i++) {
+        for (let i = 0; i < 5; i++) {
             var card: eui.Image = this['grpCard_' + 0 + '_' + i];
-            this.grpCard.setChildIndex(card, 5-i);
+            this.grpCard.setChildIndex(card, 5 - i);
         }
     }
 
@@ -452,7 +452,7 @@ class QZNNView extends eui.Component {
         }
         for (let i = 0; i < 4; i++) {
             // this['grpHead' + i];
-            if(i!=0) {
+            if (i != 0) {
                 this.setUserInfo(i, "", "", "");
             }
             var card: eui.Image = this['grpCard_z_' + i];
@@ -1442,7 +1442,7 @@ class QZNNView extends eui.Component {
         var z_pos = this.orginZhanCardPos[1];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
         //egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, 800, egret.Ease.sineInOut);
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
 
         if (this.flyIndex_1 == 4) {
             this.flyIndex_1 = 0;
@@ -1465,7 +1465,7 @@ class QZNNView extends eui.Component {
         var pos = this.orginPlayerCardPos[1][this.flyIndex_2];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
         var z_pos = this.orginZhanCardPos[2];
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
         if (this.flyIndex_2 == 0) {
             this.flyIndex_2 = 4;
             clearInterval(this.flyIntval_2);
@@ -1487,7 +1487,7 @@ class QZNNView extends eui.Component {
         var pos = this.orginPlayerCardPos[2][this.flyIndex_3];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
         var z_pos = this.orginZhanCardPos[3];
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
         if (this.flyIndex_3 == 0) {
             this.flyIndex_3 = 4;
             clearInterval(this.flyIntval_3);
@@ -1538,7 +1538,7 @@ class QZNNView extends eui.Component {
         var pos = this.orginPinCardPos[this.flyBankerIndex];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
         var z_pos = this.orginZhanCardPos[0];
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1}, this.flyPaiTime, egret.Ease.sineOut);
+        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
         this.flyBankerIndex++;
     }
 
@@ -1609,7 +1609,7 @@ class QZNNView extends eui.Component {
         var index = this.effectPlayerIndex;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
-            if(index == 0) {
+            if (index == 0) {
                 this.grpCard.setChildIndex(card, i);
             }
             card.source = 'qznn_card_100';
@@ -1618,7 +1618,7 @@ class QZNNView extends eui.Component {
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke[index + 1].value[i]]);
         }
-        
+
         this.addNiuniuBei(this['labCardType' + index], poke[index + 1].type);
         this.playClickSound(QZNNUtil.getInstance().getCardMusicType(poke[index + 1].type));
         this['labCardType' + index].visible = true;;
@@ -1641,7 +1641,7 @@ class QZNNView extends eui.Component {
     private addNiuniuBei(grp: eui.Group, index: number): void {
         let bmpurl: string = QZNNUtil.getInstance().getCardBmpUrl(index);
         grp.removeChildren();
-        let niuniuBet:any;
+        let niuniuBet: any;
         if (index == 0) {
             niuniuBet = new WuNiuNBei();
             niuniuBet.x = 80;
@@ -1899,7 +1899,7 @@ class QZNNView extends eui.Component {
         label.scaleY = 1;
         player.addChild(label);
         this.turn_score_arr.push(label);
-        uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score, regulator: 50 }, str);
+        uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score / 100, regulator: 50 }, str);
     }
     /**播放 胜利 通杀 通赔 动画 */
     public victoryEffect(): void {
