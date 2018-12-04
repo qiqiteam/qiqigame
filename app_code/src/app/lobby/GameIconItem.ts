@@ -73,7 +73,7 @@ class GameIconItem extends eui.Component {
 			this.effecthot = xlLib.DisplayUtils.createAsyncMovieClicp("effcet_hot", "effcet_hot");
 			this.effecthot.x = 25;
 			this.effecthot.y = 0;
-			this.effectIcon.play(-1);
+			this.effecthot.play(-1);
 			this.addChild(this.effecthot);
 		}
         if(icondata.game==Const.GAME_ERBAGANG){

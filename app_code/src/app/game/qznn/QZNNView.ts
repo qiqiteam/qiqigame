@@ -263,7 +263,7 @@ class QZNNView extends eui.Component {
             this.nnEff.frameRate = 10;
             this.nnEff.touchEnabled = false;
         }
-        this.nnEff.play(-1);
+        this.nnEff.gotoAndPlay(0,1);
         this.addChild(this.nnEff);
         this.nnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.nnEff.parent) {
@@ -280,7 +280,7 @@ class QZNNView extends eui.Component {
             this.whnEff.frameRate = 10;
             this.whnEff.touchEnabled = false;
         }
-        this.whnEff.play(-1);
+        this.whnEff.gotoAndPlay(0,1);
         this.addChild(this.whnEff);
         this.whnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.whnEff.parent) {
