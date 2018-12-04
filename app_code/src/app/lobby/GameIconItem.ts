@@ -73,11 +73,13 @@ class GameIconItem extends eui.Component {
 			this.effecthot = xlLib.DisplayUtils.createAsyncMovieClicp("effcet_hot", "effcet_hot");
 			this.effecthot.x = 25;
 			this.effecthot.y = 0;
+			this.effectIcon.play(-1);
 			this.addChild(this.effecthot);
 		}
         if(icondata.game==Const.GAME_ERBAGANG){
 			this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("game_720_effect_logo", "game_720_effect_logo");
 			this.effectIcon.x = 130; 
+			this.effectIcon.play(-1);
            	this.addChild(this.effectIcon);
 		    this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_720_effect", "game_720_effect");
 		}else if(icondata.game==Const.GAME_ZHAJINHUA){
@@ -85,6 +87,7 @@ class GameIconItem extends eui.Component {
 		}else{
  			this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_230_effect", "game_230_effect");
 		}
+				this.effectmask.play(-1);
 		this.effectmask.touchEnabled = false;
 		this.effectmask.x = -12;
 		this.effectmask.y = -11;

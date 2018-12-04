@@ -263,6 +263,7 @@ class QZNNView extends eui.Component {
             this.nnEff.frameRate = 10;
             this.nnEff.touchEnabled = false;
         }
+        this.nnEff.play(-1);
         this.addChild(this.nnEff);
         this.nnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.nnEff.parent) {
@@ -279,6 +280,7 @@ class QZNNView extends eui.Component {
             this.whnEff.frameRate = 10;
             this.whnEff.touchEnabled = false;
         }
+        this.whnEff.play(-1);
         this.addChild(this.whnEff);
         this.whnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.whnEff.parent) {
@@ -491,6 +493,7 @@ class QZNNView extends eui.Component {
         if (e.target == this._btn_begin) {
             this.onRestartGame();
         } else if (e.target == this._btn_meun) {
+            this.addNNEff();
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
         } else if (e.target == this._btn_qiang_1) {

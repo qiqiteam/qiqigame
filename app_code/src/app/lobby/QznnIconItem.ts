@@ -54,11 +54,13 @@ class QznnIconItem extends eui.Component {
 			this.effecthot.y = 0;
 			this.addChild(this.effecthot);
 		}
+		this.effecthot.play(-1);
         if(icondata.game==Const.GAME_NIUNIU){
 			this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("game_830_effect_logo", "game_830_effect_logo");
 			this.effectIcon.x = 130; 
            	this.addChild(this.effectIcon);
 		}
+		this.effectIcon.play(-1);
 		this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_830_effect", "game_830_effect");
 		this.effectmask.touchEnabled = false;
 		this.effectmask.x = 20;

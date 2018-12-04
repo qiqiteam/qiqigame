@@ -13,7 +13,6 @@ class NiuJiao extends eui.Component implements INiuNiuBetEffect {
     protected childrenCreated() {
         super.childrenCreated();
         this.niujiao.addEventListener(egret.Event.COMPLETE, this.onTweenComplete, this);
-
     }
 
     private onTweenComplete(evt: egret.Event): void {
