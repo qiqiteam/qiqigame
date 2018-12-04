@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="TenshuNiuBeiSkin" width="325" height="75" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+<e:Skin class="TenshuNiuBeiSkin" width="600" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
 	<w:Declarations>
 		<tween:TweenGroup id="teshuniu">
 			<tween:TweenItem target="{image}">
 				<tween:Set>
 					<tween:props>
-						<e:Object alpha="{0}"/>
+						<e:Object alpha="{0}" x="{133}"/>
 					</tween:props>
 				</tween:Set>
 				<tween:To duration="200">
@@ -25,27 +25,32 @@
 				<tween:Wait duration="200"/>
 				<tween:Set>
 					<tween:props>
-						<e:Object scaleX="{3}" scaleY="{3}" x="{-181}" y="{31}" alpha="{0.2}"/>
+						<e:Object scaleX="{3}" scaleY="{3}" alpha="{0.2}" x="{-98}" y="{33}"/>
 					</tween:props>
 				</tween:Set>
 				<tween:To duration="350">
 					<tween:props>
-						<e:Object scaleX="{1}" scaleY="{1}" x="{71.91}" y="{95.23}" alpha="{1}"/>
+						<e:Object scaleX="{1}" scaleY="{1}" alpha="{1}" y="{105.23}" x="{159.91}"/>
 					</tween:props>
 				</tween:To>
 				<tween:Wait duration="50"/>
 				<tween:Set>
 					<tween:props>
-						<e:Object scaleX="{1.2}" scaleY="{1.2}" y="{89.23}" x="{43.91}"/>
+						<e:Object scaleX="{1.2}" scaleY="{1.2}" y="{97.23}" x="{131.91}"/>
 					</tween:props>
 				</tween:Set>
 				<tween:To duration="100">
 					<tween:props>
-						<e:Object scaleX="{1}" scaleY="{1}" y="{97.23}" x="{69.91}"/>
+						<e:Object scaleX="{1}" scaleY="{1}" x="{161.91}" y="{106.23}"/>
 					</tween:props>
 				</tween:To>
-				<tween:Wait duration="350"/>
-				<tween:Set/>
+				<tween:To duration="350">
+					<tween:props>
+						<e:Object y="{107}" x="{162}"/>
+					</tween:props>
+				</tween:To>
+
+
 			</tween:TweenItem>
 			<tween:TweenItem target="{image1}">
 				<tween:Set>
@@ -61,12 +66,12 @@
 				</tween:Set>
 				<tween:To duration="300">
 					<tween:props>
-						<e:Object alpha="{1}" x="{239}"/>
+						<e:Object alpha="{1}" x="{269}"/>
 					</tween:props>
 				</tween:To>
 				<tween:To duration="150">
 					<tween:props>
-						<e:Object x="{182}" alpha="{0.1}"/>
+						<e:Object alpha="{0.1}" x="{238}"/>
 					</tween:props>
 				</tween:To>
 			</tween:TweenItem>
@@ -95,8 +100,8 @@
 			</tween:TweenItem>
 		</tween:TweenGroup>
 	</w:Declarations>
-	<e:Image id="image" source="qznntype3_tex2_png" x="1" y="5" anchorOffsetX="0" width="302.91" scaleX="1.05"/>
-	<e:Image id="image0" source="qznntype3_tex12_png" x="39" y="5"/>
-	<e:Image id="image1" source="qznntype4_4tex3_png" x="271" y="0" rotation="89.73"/>
-	<e:Image id="image2" source="qznntype4_4tex3_png" x="145" y="46.7" rotation="89.73"/>
+	<e:Image id="image" source="qznntype3_tex2_png" x="131" y="109" anchorOffsetX="0" width="302.91" scaleX="1.05"/>
+	<e:Image id="image0" source="qznntype3_tex12_png" x="169" y="109"/>
+	<e:Image id="image1" source="qznntype4_4tex3_png" x="401" y="104" rotation="89.73"/>
+	<e:Image id="image2" source="qznntype4_4tex3_png" x="275" y="150.7" rotation="89.73"/>
 </e:Skin>

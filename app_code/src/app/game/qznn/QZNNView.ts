@@ -1645,33 +1645,32 @@ class QZNNView extends eui.Component {
 
     private addNiuniuBei(grp: eui.Group, index: number): void {
         let bmpurl: string = QZNNUtil.getInstance().getCardBmpUrl(index);
-        let niuniuBet: any = grp.getChildByName("niuniubet") as any;
-        if (niuniuBet && niuniuBet.parent) {
-            niuniuBet.parent.removeChild(niuniuBet);
-            niuniuBet = null
-        }
-        if (!niuniuBet) {
-            if (index == 0) {
-                niuniuBet = new WuNiuNBei();
-            }
-            else if (index < 10) {
-                niuniuBet = new NiuNBei();
-            }
-            else {
-                if (index == 10) {
-                    this.addNNEff();
-                } else if (index == 13) {
-                    this.addWhnEff();
-                }
-                niuniuBet = new TenshuNiuBei();
-            }
-            niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
-            niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
+        grp.removeChildren();
+        let niuniuBet:any;
+        if (index == 0) {
+            niuniuBet = new WuNiuNBei();
             niuniuBet.x = 80;
             niuniuBet.y -= 80;
-            niuniuBet.name = "niuniubet";
-            grp.addChild(niuniuBet);
         }
+        else if (index < 10) {
+            niuniuBet = new NiuNBei();
+            niuniuBet.x = 80;
+            niuniuBet.y -= 80;
+        }
+        else {
+            if (index == 10) {
+                this.addNNEff();
+            } else if (index == 13) {
+                this.addWhnEff();
+            }
+            niuniuBet = new TenshuNiuBei();
+            niuniuBet.x = 80;
+            niuniuBet.y = 30;
+        }
+        niuniuBet.anchorOffsetX = (niuniuBet.width / 2);
+        niuniuBet.anchorOffsetY = (niuniuBet.height / 2);
+
+        grp.addChild(niuniuBet);
         let url: string = bmpurl;
         (niuniuBet as INiuNiuBetEffect).play(url);
     }
