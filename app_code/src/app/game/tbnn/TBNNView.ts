@@ -9,7 +9,6 @@ class TBNNView extends eui.Component {
     }
     private r: any = null;
 
-    public grpCoins: eui.Group;
     public grpCard: eui.Group;
     public bankerCard_0: eui.Image;
     public bankerCard_1: eui.Image;
@@ -47,48 +46,17 @@ class TBNNView extends eui.Component {
     public grpCard_4_3: eui.Image;
     public grpCard_4_4: eui.Image;
     public labCardType4: eui.Image;
-    public grpCard_5_0: eui.Image;
-    public grpCard_5_1: eui.Image;
-    public grpCard_5_2: eui.Image;
-    public grpCard_5_3: eui.Image;
-    public grpCard_5_4: eui.Image;
-    public labCardType5: eui.Image;
-    public grpCard_6_0: eui.Image;
-    public grpCard_6_1: eui.Image;
-    public grpCard_6_2: eui.Image;
-    public grpCard_6_3: eui.Image;
-    public grpCard_6_4: eui.Image;
-    public labCardType6: eui.Image;
-    public grpCard_7_0: eui.Image;
-    public grpCard_7_1: eui.Image;
-    public grpCard_7_2: eui.Image;
-    public grpCard_7_3: eui.Image;
-    public grpCard_7_4: eui.Image;
-    public labCardType7: eui.Image;
-    public grpCard_8_0: eui.Image;
-    public grpCard_8_1: eui.Image;
-    public grpCard_8_2: eui.Image;
-    public grpCard_8_3: eui.Image;
-    public grpCard_8_4: eui.Image;
-    public labCardType8: eui.Image;
     public grpHead1: TBNNHead;
     public grpHead2: TBNNHead;
     public grpHead3: TBNNHead;
     public grpHead4: TBNNHead;
     public grpHead5: TBNNHead;
-    public grpHead6: TBNNHead;
-    public grpHead7: TBNNHead;
-    public grpHead8: TBNNHead;
-    public grpHead9: TBNNHead;
     public grpCountdown: eui.Group;
-    public labCountdown0: eui.BitmapLabel;
-    public labCountdown1: eui.BitmapLabel;
-    public _group_di: eui.Group;
+    public timeTxt: eui.Label;
     public grpHead0: eui.Group;
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
-    public _my_img_zhuang: eui.Image;
     public _btn_switch: eui.Group;
     public _btn_double_1: eui.Button;
     public _image_double_1: eui.Image;
@@ -100,18 +68,28 @@ class TBNNView extends eui.Component {
     public _image_double_4: eui.Image;
     public _btn_double_5: eui.Button;
     public _image_double_5: eui.Image;
-    public _btn_record: eui.Button;
-    public _group_qiang: eui.Group;
-    public _btn_buqiang: eui.Button;
-    public _btn_qiang_1: eui.Button;
-    public _btn_qiang_2: eui.Button;
-    public _btn_qiang_3: eui.Button;
-    public _btn_qiang_4: eui.Button;
+    public _xiabei: eui.Group;
+    public _xia_0: eui.Image;
+    public _bei_0: eui.Image;
+    public _xia_1: eui.Image;
+    public _bei_1: eui.Image;
+    public _xia_2: eui.Image;
+    public _bei_2: eui.Image;
+    public _xia_3: eui.Image;
+    public _bei_3: eui.Image;
+    public _xia_4: eui.Image;
+    public _bei_4: eui.Image;
+    public _xia_5: eui.Image;
+    public _bei_5: eui.Image;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
     public _btn_chat: eui.Button;
     public _btn_voice: eui.Button;
     public _btn_begin: eui.Button;
+
+    public time: number;        //秒数
+    public timer: egret.Timer;  //游戏计时器间隔
+
 
     //public labHandsel: eui.BitmapLabel;
     //private grpSelectBet: eui.Group;    //筹码底背景
@@ -169,39 +147,31 @@ class TBNNView extends eui.Component {
         this.addEvent();
         this.initData();
 
-        this.setCountdown();
-
         this.labelHead0.text = UserInfo.getInstance().username;
-        this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
+        this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
 
-        xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        // xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+
         UserInfo.getInstance().isGameStart = true;
     }
-    /**
-     * 数据初始化
-     */
+    /**数据初始化 */
     private initData(): void {
 
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.grpCoins.touchEnabled = false;
-        this.grpCard.visible = true;
-        this._btn_begin.visible = true;
         this._btn_switch.visible = false;
-        this._group_qiang.visible = false;
+        this._xiabei.visible = true;
+        this.grpCountdown.visible = true;
+        for (let i = 0; i < 6; i++) {
+            this['_xia_' + i].visible = false;
+            this['_bei_' + i].visible = false;
+        }
 
-        this._image_double_1.touchEnabled = false;
-        this._image_double_2.touchEnabled = false;
-        this._image_double_3.touchEnabled = false;
-        this._image_double_4.touchEnabled = false;
-        this._image_double_5.touchEnabled = false;
 
     }
 
-    /**
-     * 获取原始扑克的位置
-     */
+    /**获取原始扑克的位置 */
     private getOrginCardPos(): void {
         for (var i = 0; i < 5; i++) {
             var card: eui.Image = this['bankerCard_' + i];
@@ -214,7 +184,7 @@ class TBNNView extends eui.Component {
             this.orginBankerCardPos[i] = pos;
         }
         this.labCardTypeBanker.visible = false;
-        for (var index = 0; index < 9; index++) {
+        for (var index = 0; index < 5; index++) {
             //this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
             var cardPos = [];
@@ -235,94 +205,41 @@ class TBNNView extends eui.Component {
     public resize(): void {
 
     }
-    /**准备 开始回调 */
+    /**鼠标点击事件 */
     public onClick(e: egret.TouchEvent): void {
 
         if (e.target == this._btn_begin) {
             console.log("_btn_begin");
-            let senddata: any = {
-                userid: UserInfo.getInstance().uid,
-                token: UserInfo.getInstance().token,
-            };
-            xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_start, senddata, (data) => {
-                this._btn_begin.visible = false;
-                // this._group_qiang.visible = true;
-                UserInfo.getInstance().isGameStart = true;
-            }, this);
         } else if (e.target == this._btn_double_1) {
-            console.log("_btn_double_1");
-            this.sendamessage1(EventConst.niuniu_dobet, 1);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.niuniu_dobet, 1);
         } else if (e.target == this._btn_double_2) {
-            console.log("_btn_double_2");
-            this.sendamessage1(EventConst.niuniu_dobet, 2);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.niuniu_dobet, 2);
         } else if (e.target == this._btn_double_3) {
-            console.log("_btn_double_3");
-            this.sendamessage1(EventConst.niuniu_dobet, 3);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.niuniu_dobet, 3);
         } else if (e.target == this._btn_double_4) {
-            console.log("_btn_double_4");
-            this.sendamessage1(EventConst.niuniu_dobet, 4);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.niuniu_dobet, 4);
         } else if (e.target == this._btn_double_5) {
-            console.log("_btn_double_5");
-            this.sendamessage1(EventConst.niuniu_dobet, 5);
-            this._btn_switch.visible = false;
+            this.sendamessage(EventConst.niuniu_dobet, 5);
         }
     }
 
     private sendamessage(sendstr: string, bet: number): void {
-
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token,
             data: bet,
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
-
         }, this);
-        this._group_qiang.visible = false;
     }
 
-    private sendamessage1(sendstr: string, bet: number): void {
-        let senddata: any = {
-            userid: UserInfo.getInstance().uid,
-            token: UserInfo.getInstance().token,
-            data: bet,
-        };
-        xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
-
-        }, this);
-
-        this._btn_double_1.touchEnabled = false;
-        this._btn_double_2.touchEnabled = false;
-        this._btn_double_3.touchEnabled = false;
-        this._btn_double_4.touchEnabled = false;
-        this._btn_double_5.touchEnabled = false;
-    }
     /**注册事件 */
     private addEvent(): void {
-
-        // this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        // this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        // this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        // this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        // this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        // this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-
-        // // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        // this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
-
-        // EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        // EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
-        // EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
-        // EventUtil.addEventListener(EventConst.summary, this.over, this);
 
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
-        EventUtil.addEventListener(EventConst.onUserHogOrderUpdate, this.OnHogUpdate, this);
+        EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
     }
     /**游戏状态 */
     private GameStatus(data: any): void {
@@ -342,59 +259,31 @@ class TBNNView extends eui.Component {
     }
     /**监听下注 */
     private onbetBack(data: any): void {
-        xlLib.PopUpMgr.removePopUp(Inthematch, 1);
-        // this._tishi.visible = false;
-        // this.time = 0;
-        // this.startCountDown(data._obj.seconds);
-        // this._group_qiang.visible = false;
-        // this._btn_switch.visible = true;
-
-        // if (data._obj.roomStatus == 4) {
-        //     this.acceptbanker(data);
-        // }
-
-        // for (let i = 0; i < data._obj.hogList.length; i++) {
-        //     this['_btn_double_' + (i + 1)].visible = true;
-
-        //     if (data._obj.hogList[i].hogOrBet >= 10) {
-        //         this['beishu_' + i].visible = true;
-        //         this['beishu_' + i].source = 'img_XB_1_png';
-        //         this['beishu_0_' + i].visible = true;
-        //         this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet % 10 + '_png';
-        //         this['bs_img_' + i].visible = true;
-        //     } else if (data._obj.hogList[i].hogOrBet < 10) {
-        //         this['beishu_' + i].visible = false;
-        //         this['beishu_' + i].source = '';
-        //         this['beishu_0_' + i].visible = true;
-        //         this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet + '_png';
-        //         // console.log(data._obj.hogList[i].hogOrBet);
-        //         this['bs_img_' + i].visible = true;
-        //     }
-        //     this.multipleList[i] = data._obj.hogList[i].hogOrBet;
-        // }
-    }
-    /**更新抢庄通知(所有人) */
-    private OnHogUpdate(data: any): void {
-        // // console.log(data._obj.index + "号抢庄");
-        // this.intnum[data._obj.index] = data._obj.hogOrBet;
-
-        // if (UserInfo.getInstance().uid == data._obj.userid) {
-        //     this._group_qiang.visible = false;
-        //     this._tishi.visible = true;
-        //     this._tishi_text.text = "请等待其他玩家抢庄...";
-        // }
-        // if (data._obj.code == 200) {
-        //     this.qiangzhuang(data._obj.hogOrBet, data._obj.index)
-        // }
-    }
-    // private onHogBack(data: any): void {
-    //     this._group_qiang.visible = true;
-    // }
-    private onHogBack1(data: any): void {
-        // this._group_qiang.visible = false;
-        // this.showGameTips(2);
+        // xlLib.PopUpMgr.removePopUp(Inthematch, 1);
+        this.startCountDown(data._obj.seconds);
         this._btn_switch.visible = true;
     }
+    /**更新下注通知(所有人) */
+    private OnBetUpdate(data: any): void {
+
+        if (UserInfo.getInstance().uid == data._obj.userid) {
+            this._btn_switch.visible = false;
+        }
+        if (data._obj.code == 200) {
+            this.xiazhu(data._obj.hogOrBet, data._obj.index)
+        }
+    }
+    /**是否下注 */
+    private xiazhu(data: number, num: number) {
+        console.log(num + "号玩家下注");
+        this['_xia_' + num].visible = true;
+        this['_bei_' + num].visible = true;
+        this['_bei_' + num].source = 'img_XB_' + data + '_png';
+    }
+    private onHogBack1(data: any): void {
+
+    }
+
     private over(data: any): void {
 
         // console.log(data);
@@ -456,11 +345,10 @@ class TBNNView extends eui.Component {
         }
 
         //设置其他玩家信息
-        for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < 6; i++) {
             if (data._obj.player[i] != null) {
                 this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
             } else {
-                //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
                 this['grpHead' + i].setUserInfo("", "", "");
             }
         }
@@ -468,14 +356,53 @@ class TBNNView extends eui.Component {
 
     //加入房间新玩家
     public playerJoinRoom(data): void {
-        console.log(data._obj.player.id);
-        console.log(UserInfo.getInstance().myPlayer.id);
-
+        // console.log(data._obj.player.id);
+        // console.log(UserInfo.getInstance().myPlayer.id);
 
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
-
         } else {
             this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "F4_03_png");
+        }
+    }
+
+    /**开始倒计时*/
+    private startCountDown(time: number): void {
+        if (time < 10) {
+            this.timeTxt.text = "0" + time;
+        } else {
+            this.timeTxt.text = "" + time;
+        }
+        this.timeTxt.visible = true;
+        this.time = time;
+        if (this.timer == null) {
+            this.timer = new egret.Timer(1000);
+            this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+            this.timer.start();
+        }
+    }
+    /**倒计时处理*/
+    private timerFunc(evt: egret.TimerEvent): void {
+        if (this.time >= 0) {
+            if (this.time >= 10) {
+                this.timeTxt.text = "" + this.time;
+            }
+            else {
+                this.timeTxt.text = "0" + this.time;
+            }
+            this.time--;
+        }
+        else {
+            this.timeTxt.text = "00";
+            this.clearTime();
+        }
+    }
+    /**清除倒计时*/
+    private clearTime(): void {
+        if (this.timer) {
+            this.timer.stop();
+            // this.timeTxt.visible = false;
+            this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+            this.timer = null;
         }
     }
 
@@ -503,19 +430,19 @@ class TBNNView extends eui.Component {
             this.cdTimer.stop();
             this.cdNum = 0;
 
-            this.resetGame();
+            // this.resetGame();
 
 
             //this.cdNum = 5;
             //this.cardEffect();
         }
         if (this.cdNum < 10) {
-            this.labCountdown0.text = '0';
-            this.labCountdown1.text = this.cdNum + '';
+            // this.labCountdown0.text = '0';
+            // this.labCountdown1.text = this.cdNum + '';
         }
         else {
-            this.labCountdown0.text = (this.cdNum + '').split('')[0];
-            this.labCountdown1.text = (this.cdNum + '').split('')[1];
+            // this.labCountdown0.text = (this.cdNum + '').split('')[0];
+            // this.labCountdown1.text = (this.cdNum + '').split('')[1];
         }
     }
 
@@ -982,7 +909,7 @@ class TBNNView extends eui.Component {
         for (var i = 0; i < arr.length; i++) {
             var tx = point.x + Math.random() * 50;
             var ty = point.y + Math.random() * 50;
-            this.grpCoins.addChild(arr[i]);
+            // this.grpCoins.addChild(arr[i]);
             egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call(function () {
                 if (this[0]) {
                     this[1].parent.removeChild(this[1]);
@@ -1000,7 +927,6 @@ class TBNNView extends eui.Component {
      */
     private cardEffect(): void {
         this._btn_switch.visible = false;
-        this._group_qiang.visible = false;
 
         this.isCardEffectShow = true;
         this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
@@ -1189,8 +1115,8 @@ class TBNNView extends eui.Component {
         for (let j = 0; j < this.cardResult.pokes.length; j++) {
             if (this.cardResult.pokes[j].win == true) {
                 if (j == 0) {
-                    winPos.x = this._group_di.x + 15 + 145;
-                    winPos.y = this._group_di.y - 35 + 103;
+                    // winPos.x = this._group_di.x + 15 + 145;
+                    // winPos.y = this._group_di.y - 35 + 103;
                 } else {
                     winPos.x = this['grpHead' + j].x + 21;
                     winPos.y = this['grpHead' + j].y + 110;
@@ -1201,8 +1127,8 @@ class TBNNView extends eui.Component {
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
             if (i == 0) {
-                pos.x = this._group_di.x + 15 + 145;
-                pos.y = this._group_di.y - 35 + 103;
+                // pos.x = this._group_di.x + 15 + 145;
+                // pos.y = this._group_di.y - 35 + 103;
                 numPos.x = pos.x + 42;
                 numPos.y = pos.y + 2;
             } else {
@@ -1425,9 +1351,9 @@ class TBNNView extends eui.Component {
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
 
-        while (this.grpCoins.numChildren > 0) {
-            this.grpCoins.removeChildAt(0);
-        }
+        // while (this.grpCoins.numChildren > 0) {
+        //     this.grpCoins.removeChildAt(0);
+        // }
         //for (var i = 0; i < 4; i++) {
         //    this['effectSelect' + i].visible = false;
         //}
@@ -1440,8 +1366,8 @@ class TBNNView extends eui.Component {
         this.resultCaijin = 0;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
-        this.labCountdown0.text = '0';
-        this.labCountdown1.text = '0';
+        // this.labCountdown0.text = '0';
+        // this.labCountdown1.text = '0';
     }
 
     //========================== Second Panel ==============================
@@ -1526,18 +1452,10 @@ class TBNNView extends eui.Component {
     }
 
     public destroy(): void {
-        this._btn_begin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
-
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
-        EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
-        EventUtil.removeEventListener(EventConst.summary, this.over, this);
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }

@@ -42,8 +42,6 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 			token: UserInfo.getInstance().token, playway: playway.id
 		};
 		xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, (data) => {
-			// xlLib.SceneMgr.instance.changeScene(TBNNScene);
-			// xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 		}, this);
 	}
 
