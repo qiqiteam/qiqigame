@@ -70,25 +70,22 @@ class GameIconItem extends eui.Component {
         this.bg_img.source = icondata.url;
         if(icondata.ishot)
 		{
-			this.effecthot = xlLib.DisplayUtils.createMovieClicp("effcet_hot", "effcet_hot");
-			this.effecthot.play(-1);
+			this.effecthot = xlLib.DisplayUtils.createAsyncMovieClicp("effcet_hot", "effcet_hot");
 			this.effecthot.x = 25;
 			this.effecthot.y = 0;
 			this.addChild(this.effecthot);
 		}
         if(icondata.game==Const.GAME_ERBAGANG){
-			this.effectIcon = xlLib.DisplayUtils.createMovieClicp("game_720_effect_logo", "game_720_effect_logo");
-			this.effectIcon.play(-1);
+			this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("game_720_effect_logo", "game_720_effect_logo");
 			this.effectIcon.x = 130; 
            	this.addChild(this.effectIcon);
-		    this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_720_effect", "game_720_effect");
+		    this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_720_effect", "game_720_effect");
 		}else if(icondata.game==Const.GAME_ZHAJINHUA){
-			 this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_610_effect", "game_610_effect");
+			 this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_610_effect", "game_610_effect");
 		}else{
- 			this.effectmask = xlLib.DisplayUtils.createMovieClicp("game_230_effect", "game_230_effect");
+ 			this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_230_effect", "game_230_effect");
 		}
 		this.effectmask.touchEnabled = false;
-		this.effectmask.play(-1);
 		this.effectmask.x = -12;
 		this.effectmask.y = -11;
   		this.addChild(this.effectmask);
