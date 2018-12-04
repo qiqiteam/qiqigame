@@ -492,7 +492,7 @@ class QZNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         if (e.target == this._btn_begin) {
             this.onRestartGame();
-        } else if (e.target == this._btn_meun) { 
+        } else if (e.target == this._btn_meun) {
 
         } else if (e.target == this._btn_buqiang) {
             this.sendamessage(EventConst.niuniu_dohog, 0);
@@ -1903,7 +1903,7 @@ class QZNNView extends eui.Component {
         label.scaleY = 1;
         player.addChild(label);
         this.turn_score_arr.push(label);
-        uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score, regulator: 50 }, str);
+        uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score / 100, regulator: 50 }, str);
     }
     /**播放 胜利 通杀 通赔 动画 */
     public victoryEffect(): void {

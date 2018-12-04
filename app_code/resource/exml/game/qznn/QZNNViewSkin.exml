@@ -9,7 +9,7 @@
 	</e:Group>
 
 
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
 		<e:Group id="_my_pai" width="300" height="140" y="585.38" x="586" locked="true">
 			<e:Image id="bankerCard_0" x="45.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
 			<e:Image id="bankerCard_1" x="78.25" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
@@ -90,7 +90,7 @@
 			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
 			<e:Image id="imghead1" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>
 			<e:Label id="labelHead1" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25"/>
-			<e:Label id="labelGold1" text="1000000" size="26" fontFamily="SimHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="17" y="131.37"/>
+			<e:Label id="labelGold1" text="1000000" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="17" y="131.37"/>
 			<e:Image id="_zhuang_img1" source="qznn_win_tex_1_png" x="-17" y="-19" locked="true" visible="false"/>
 
 		</e:Group>
@@ -98,7 +98,7 @@
 			<e:Image width="234" height="111" source="qznn_txkbg_png" anchorOffsetX="0" anchorOffsetY="0"/>
 			<e:Image id="imghead2" width="88" height="88" y="11.85" x="12.78" source="women7_png"/>
 			<e:Label id="labelHead2" text="世界第一赌神" x="106.78" y="30.45" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF"/>
-			<e:Label id="labelGold2" text="1000000" y="64.73" size="26" fontFamily="SimHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="120.66"/>
+			<e:Label id="labelGold2" text="1000000" y="64.73" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="120.66"/>
 			<e:Image id="_zhuang_img2" source="qznn_win_tex_2_png" x="-33" y="-24" locked="true" visible="false"/>
 
 		</e:Group>
@@ -106,7 +106,7 @@
 			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
 			<e:Image id="imghead3" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>
 			<e:Label id="labelHead3" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25"/>
-			<e:Label id="labelGold3" text="1000000" size="26" fontFamily="SimHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="17" y="131.37"/>
+			<e:Label id="labelGold3" text="1000000" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="17" y="131.37"/>
 			<e:Image id="_zhuang_img3" source="qznn_win_tex_1_png" x="-17" y="-19" locked="true" visible="false"/>
 
 		</e:Group>
@@ -157,7 +157,7 @@
 		<e:Image id="imghead0" width="90" height="90" y="8.81" x="8.22" source="women7_png"/>
 
 		<e:Label id="labelHead0" text="世界第一赌神" x="106.78" y="30.45" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xffffff"/>
-		<e:Label id="labelGold0" text="1000000" y="64.73" size="26" fontFamily="SimHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1" x="120.66"/>
+		<e:Label id="labelGold0" text="1000000" y="64.73" size="26" fontFamily="Microsoft YaHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1" x="120.66"/>
 		<e:Image id="_zhuang_img0" source="qznn_win_tex_2_png" x="-33" y="-24" visible="false"/>
 
 
