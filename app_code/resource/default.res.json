@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg",
+			"keys": "loding_json,loding_bg_jpg,bg_tbnn_jpg,nn_btn_tanpai_png,tb_bg_table_png",
 			"name": "preload"
 		},
 		{
@@ -6204,6 +6204,21 @@
 			"url": "assets/sound/qznn/qznn_tongpei.mp3",
 			"type": "sound",
 			"name": "qznn_tongpei_mp3"
+		},
+		{
+			"name": "bg_tbnn_jpg",
+			"type": "image",
+			"url": "assets/game/tbnn/bg_tbnn.jpg"
+		},
+		{
+			"name": "nn_btn_tanpai_png",
+			"type": "image",
+			"url": "assets/game/tbnn/nn_btn_tanpai.png"
+		},
+		{
+			"name": "tb_bg_table_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tb_bg_table.png"
 		}
 	]
 }
