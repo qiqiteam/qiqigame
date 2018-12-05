@@ -19,6 +19,10 @@
 		{
 			"keys": "",
 			"name": "zhajinhua"
+		},
+		{
+			"keys": "tb_bg_table_png,bg_tbnn_jpg,nn_btn_tanpai_png",
+			"name": "tbnn"
 		}
 	],
 	"resources": [
@@ -6206,19 +6210,19 @@
 			"name": "qznn_tongpei_mp3"
 		},
 		{
-			"name": "bg_tbnn_jpg",
+			"url": "assets/game/tbnn/bg_tbnn.jpg",
 			"type": "image",
-			"url": "assets/game/tbnn/bg_tbnn.jpg"
+			"name": "bg_tbnn_jpg"
 		},
 		{
-			"name": "nn_btn_tanpai_png",
+			"url": "assets/game/tbnn/nn_btn_tanpai.png",
 			"type": "image",
-			"url": "assets/game/tbnn/nn_btn_tanpai.png"
+			"name": "nn_btn_tanpai_png"
 		},
 		{
-			"name": "tb_bg_table_png",
+			"url": "assets/game/tbnn/tb_bg_table.png",
 			"type": "image",
-			"url": "assets/game/tbnn/tb_bg_table.png"
+			"name": "tb_bg_table_png"
 		}
 	]
 }
