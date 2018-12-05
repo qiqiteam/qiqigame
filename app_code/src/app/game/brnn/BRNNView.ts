@@ -1392,9 +1392,9 @@ public _btn_voice:eui.Button;
         else {
             //this.labResultValue.text = '结算：-' + QuickManage.moneyStr(Math.abs(userGold));
         }
-        if (userGold > 0) {
-            EffectUtils.coinsFly(this, 320, 500);
-        }
+        // if (userGold > 0) {
+        //     EffectUtils.coinsFly(this, 320, 500);
+        // }
         //this.updateGold();
         //更新来自更新彩金时所带的庄家金币
         if (!this.isSysBanker) {

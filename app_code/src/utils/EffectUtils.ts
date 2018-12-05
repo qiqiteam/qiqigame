@@ -520,15 +520,12 @@ module EffectUtils {
                 clearInterval(interval);
                 interval = 0;
                 coinsNum = 0;
-                _interval = setInterval(_flyEffect.bind(this), 1400);
+                _interval = setInterval(_flyEffect.bind(this), 1200);
                 return;
             }
             coinsNum++;
             let randomNum = Math.round(Math.random() * 10 + 5);
-            console.log(randomNum);
-            
             for(let i=0; i<randomNum; i++) {
-                console.log("222");
                 var coin: eui.Image = new eui.Image('gold');
                 coin.x = startX + Math.round(Math.random() * 150 + 10);
                 coin.y = startY + Math.round(Math.random() * 150 + 10);
