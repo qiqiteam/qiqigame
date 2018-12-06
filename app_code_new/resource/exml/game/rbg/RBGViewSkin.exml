@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RBGViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:uiCore="uiCore.*">
+	<e:Image x="0" bottom="0"  source="Img_bg_png"/>
+	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true"/>
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<ns1:RBGMahjong id="grpCard_0_0" width="20" height="20" x="499" y="620" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
+		<ns1:RBGMahjong width="20" height="20" x="580" y="620" skinName="RBGMahjongSkin" scaleX="1" scaleY="1" id="grpCard_0_1"/>
+		<e:Image id="labCardType0" source="nn.n1" x="530.9" y="735.61" width="98" height="44" scaleX="1" scaleY="1"/>
+		<ns1:RBGMahjong id="grpCard_1_0" width="20" height="20" x="175" y="310" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
+		<ns1:RBGMahjong id="grpCard_1_1" width="20" height="20" x="256" y="310" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
+		<e:Image id="labCardType1" source="nn.n1" x="199.09" y="419.56" width="98" height="44" scaleX="1" scaleY="1"/>
+		<ns1:RBGMahjong id="grpCard_2_0" width="20" height="20" x="499" y="75" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
+		<ns1:RBGMahjong id="grpCard_2_1" width="20" height="20" x="580" y="75" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
+		<e:Image id="labCardType2" source="nn.n1" x="532.41" y="195.3" width="98" height="44" scaleX="1" scaleY="1"/>
+		<ns1:RBGMahjong id="grpCard_3_0" width="20" height="20" x="1124" y="310" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
+		<ns1:RBGMahjong id="grpCard_3_1" width="20" height="20" x="1205" y="310" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
+		<e:Image id="labCardType3" source="nn.n1" x="1155.78" y="419.56" width="98" height="44" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group x="0" y="0" width="1472" height="828">
+		<ns1:RBGHead id="grpHead0" width="20" height="20" skinName="RBGHeadSkin" horizontalCenter="0" y="674"/>
+
+		<ns1:RBGHead id="grpHead1" width="20" height="20" x="90" y="365" skinName="RBGHeadSkin"/>
+
+
+		<ns1:RBGHead id="grpHead2" width="20" height="20" y="130" skinName="RBGHeadSkin" x="726"/>
+
+
+		<ns1:RBGHead id="grpHead3" width="20" height="20" x="1351" y="365" skinName="RBGHeadSkin"/>
+		<e:Group id="_group_qiang_point_0" width="200" height="50" y="592.02" horizontalCenter="0" scaleX="1.5" scaleY="1.5" visible="false">
+			<e:BitmapLabel id="_label_qiang_0" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="200" height="50" y="330" scaleX="1.5" scaleY="1.5" id="_group_qiang_point_1" x="150" visible="false">
+			<e:BitmapLabel id="_label_qiang_1" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="200" height="50" y="180" horizontalCenter="0" scaleX="1.5" scaleY="1.5" id="_group_qiang_point_2" visible="false">
+			<e:BitmapLabel id="_label_qiang_2" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="200" height="50" y="330" scaleX="1.5" scaleY="1.5" id="_group_qiang_point_3" x="1020" visible="false">
+			<e:BitmapLabel id="_label_qiang_3" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="_group_bet_point_0" width="200" height="50" y="592.02" horizontalCenter="0" scaleX="1.5" scaleY="1.5" visible="false">
+			<e:BitmapLabel id="_label_bet_0" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="_group_bet_point_1" width="200" height="50" y="330" scaleX="1.5" scaleY="1.5" x="150" visible="false">
+			<e:BitmapLabel id="_label_bet_1" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="_group_bet_point_2" width="200" height="50" y="180" horizontalCenter="0" scaleX="1.5" scaleY="1.5" visible="false">
+			<e:BitmapLabel id="_label_bet_2" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="_group_bet_point_3" width="200" height="50" y="330" scaleX="1.5" scaleY="1.5" x="1020" visible="false">
+			<e:BitmapLabel id="_label_bet_3" width="64.42" height="32.58" y="15" text="888" font="bar_bet_time_fnt" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textAlign="right" x="29.15"/>
+			<e:Image x="97.61" y="15" source="bar_grab_time_txt_png" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Image id="_buqiang_point_0" y="605" source="bar_statu_no_grab_png" scaleX="1.5" scaleY="1.5" horizontalCenter="0.5" visible="false"/>
+		<e:Image id="_buqiang_point_1" y="350" source="bar_statu_no_grab_png" scaleX="1.5" scaleY="1.5" x="248" visible="false"/>
+		<e:Image id="_buqiang_point_2" y="200" source="bar_statu_no_grab_png" scaleX="1.5" scaleY="1.5" horizontalCenter="0.5" visible="false"/>
+		<e:Image id="_buqiang_point_3" y="350" source="bar_statu_no_grab_png" scaleX="1.5" scaleY="1.5" x="1126" visible="false"/>
+
+
+
+
+
+
+
+
+
+
+
+
+	</e:Group>
+
+	<e:Image id="btnCardHistroy" x="1370" y="25"  source="bar_btn_game_record_png" locked="true"/>
+
+
+
+	<e:Group id="grpCountdown" horizontalCenter="0.5" verticalCenter="-107" visible="false">
+
+		<e:BitmapLabel id="labCountdown0" x="14.97" y="16.15" text="0" width="14.3" font="nnBitmapCountdown_fnt"
+		               anchorOffsetX="0" />
+		<e:BitmapLabel id="labCountdown1" x="29.77" y="16.15" text="0" width="14.3" font="nnBitmapCountdown_fnt"
+		               anchorOffsetX="0" />
+	</e:Group>
+
+	<e:Group id="grpBankerList" x="10" y="10" locked="true" visible="false">
+		<e:Rect width="640" height="1008" x="0" y="0" fillAlpha="0" />
+		<e:Group x="90" y="192.05" id="bankerListItem0">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank0" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName0"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney0" />
+			<e:BitmapLabel id="itemVip0" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="227.04" id="bankerListItem1">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank1" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName1"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney1" />
+			<e:BitmapLabel id="itemVip1" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="261.03" id="bankerListItem2">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank2" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName2"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney2" />
+			<e:BitmapLabel id="itemVip2" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="296.03" id="bankerListItem3">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank3" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName3"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney3" />
+			<e:BitmapLabel id="itemVip3" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="330.03" id="bankerListItem4">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank4" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName4"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney4" />
+			<e:BitmapLabel id="itemVip4" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="365.03" id="bankerListItem5">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank5" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName5"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney5" />
+			<e:BitmapLabel id="itemVip5" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="399.03" id="bankerListItem6">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank6" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName6"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney6" />
+			<e:BitmapLabel id="itemVip6" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="434.03" id="bankerListItem7">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank7" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName7"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney7" />
+			<e:BitmapLabel id="itemVip7" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group x="90" y="468.03" id="bankerListItem8">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label text="99" x="9" y="7" size="26" textAlign="center" width="52" id="itemRank8" />
+			<e:Label text="名字六个字儿" x="55" y="7" size="20" anchorOffsetX="0" width="140" textAlign="center" id="itemName8"
+			         bold="true" />
+			<e:Label text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right" textColor="0xFFED00"
+			         id="itemMoney8" />
+			<e:BitmapLabel id="itemVip8" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+		<e:Group id="bankerListItem9" x="90" y="503.33">
+			<e:Image source="nn.z6" x="0" y="0" />
+			<e:Label id="itemRank9" text="99" x="9" y="7" size="26" textAlign="center" width="52" />
+			<e:Label id="itemName9" text="名字六个字儿" x="55" y="10" size="20" anchorOffsetX="0" width="140" textAlign="center"
+			         bold="true" />
+			<e:Label id="itemMoney9" text="99999999" x="266" y="7" size="26" anchorOffsetX="0" width="160" textAlign="right"
+			         textColor="0xFFED00" />
+			<e:BitmapLabel id="itemVip9" x="197" y="9" font="goldtext_fnt" text="v10" />
+		</e:Group>
+	</e:Group>
+
+	<e:Group id="grpResult" x="543" y="241" visible="false" locked="true">
+		<e:Image source="nn.a11" x="0" y="0" />
+		<e:Group id="grpMax" x="0" y="3">
+			<e:Image source="nn.a14" y="0" x="0" locked="true" />
+			<e:Image id="grpMaxHead" source="nn.head" x="33" y="39" width="70" height="70" />
+			<e:Label id="grpMaxGold" text="123456789万" x="116.67" y="76" size="30" anchorOffsetX="0" width="249.67"
+			         textColor="0xFAEE0A" bold="true" italic="true" />
+			<e:Label id="grpMaxName" text="名字名字" x="117.67" y="42.67" textColor="0xFAEE0A" size="24" anchorOffsetX="0"
+			         width="261.67" bold="true" italic="true" />
+		</e:Group>
+		<e:Group x="2" y="118">
+			<e:Image source="nn.a13" y="0" x="0" locked="true" />
+			<e:Image id="grpBankerHead" source="nn.head" x="30" y="5" width="80" height="80" />
+			<e:Image id="grpBankerType" source="nn.n1" x="279.35" y="0" scaleX="1" scaleY="1" width="73" height="33" />
+			<e:Label id="labelBankerType" text="顺子" x="265" y="12" size="20" width="71" textAlign="center" textColor="0xFA0A1F"
+			         bold="true" />
+			<e:Label id="grpBankerBeishu" text="11倍" x="336" y="12" textColor="0xFAEE0A" size="20" bold="true" />
+			<e:Label id="grpBankerGold" text="123456789万" x="124.67" y="48" size="30" anchorOffsetX="0" width="238.67"
+			         textColor="0xCF3536" bold="true" italic="true" />
+			<e:Label id="grpBankerName" text="名字名字名字" x="120.34" y="12" textColor="0x49CF35" size="20" anchorOffsetX="0"
+			         width="147.67" />
+		</e:Group>
+		<e:Group x="2" y="210">
+			<e:Image source="nn.a12" x="0" y="0" locked="true" />
+			<e:Label text="倍率" x="38" y="49" size="16" locked="true" />
+			<e:Label text="押注" x="38" y="69" size="16" locked="true" />
+			<e:Label text="输赢" x="38" y="88" size="16" locked="true" visible="false" />
+			<e:Group x="80" y="49.7">
+				<e:Label id="labResult0_0" text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" />
+				<e:Label id="labResult1_0" text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" />
+				<e:Label id="labResult2_0" text="0" x="0" y="39" size="16" width="70" textAlign="center" visible="false" />
+			</e:Group>
+			<e:Group x="157" y="49.7">
+				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_1" />
+				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_1" />
+				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_1" visible="false" />
+			</e:Group>
+			<e:Group x="232" y="49.7">
+				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_2" />
+				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_2" />
+				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_2" visible="false" />
+			</e:Group>
+			<e:Group x="308" y="49.7">
+				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_3" />
+				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_3" />
+				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_3" visible="false" />
+			</e:Group>
+			<e:Image source="nn.n1" x="79.33" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
+			<e:Image source="nn.n1" x="155.99" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
+			<e:Image source="nn.n1" x="232.66" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
+			<e:Image source="nn.n1" x="307.33" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
+			<e:Label id="labResultValue" text="结算：9999999" x="10" y="108" size="24" bold="true" width="364" textAlign="center"
+			         italic="true" />
+			<e:Label id="resultType0" text="标签" x="78" y="23" size="24" width="76" bold="true" textAlign="center" />
+			<e:Label id="resultType1" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="155" />
+			<e:Label id="resultType2" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="231" />
+			<e:Label id="resultType3" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="307" />
+		</e:Group>
+	</e:Group>
+	<e:Group id="grpTips" y="406.39" horizontalCenter="0" locked="true" visible="false">
+		<e:Image id="grpTipsbg" source="nn.d1" y="0" x="0" />
+		<e:Image id="grpTipsInfo" source="nn.d2" y="0" x="0" />
+	</e:Group>
+	<e:Image id="imgBaoZhuang" horizontalCenter="0" verticalCenter="0" source="nn.baozhuang"  locked="true" visible="false"/>
+	<e:Group id="grpCaijin" y="425" horizontalCenter="0" locked="true" visible="false">
+		<e:Image source="nn.baocaijin" x="0" y="0" />
+		<e:Rect height="30" width="330" y="-10" horizontalCenter="0" strokeWeight="1" />
+		<e:Label id="grpCaijinLabel" y="-8" horizontalCenter="0" bold="true" textColor="0xFFFF00" />
+	</e:Group>
+	<e:Group id="_group_qiang" width="800" height="100%" x="338" scaleX="1" scaleY="1" bottom="0" visible="false">
+		<e:Button id="_btn_buqiang" label="" x="28" y="18">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_btn_0_png" source.down="btn_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_qiang_1" label="" x="178" y="18">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_btn_0_png" source.down="btn_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_qiang_2" label="" x="328" y="18">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_btn_0_png" source.down="btn_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_qiang_3" label="" x="478" y="18">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_btn_0_png" source.down="btn_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_qiang_4" label="" x="628" y="18">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_btn_0_png" source.down="btn_btn_0_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Image x="62" y="36" source="lab_buqiang_png"/>
+		<e:Image x="215" y="37" source="Img_qiang_1_png"/>
+		<e:Image x="361" y="37" source="Img_qiang_2_png"/>
+		<e:Image x="512" y="37" source="Img_qiang_3_png"/>
+		<e:Image x="660" y="37" source="Img_qiang_4_png"/>
+	</e:Group>
+	<e:Group id="_btn_switch" width="800" height="100%" anchorOffsetX="0" x="338" bottom="0" visible="false">
+		<e:Image x="17.78" y="10" scaleX="1" scaleY="1" source="Img_chouma_bg_png"/>
+		<e:Image x="177" y="10" scaleX="1" scaleY="1" source="Img_chouma_bg_png"/>
+		<e:Image x="335" y="10" scaleX="1" scaleY="1" source="Img_chouma_bg_png"/>
+		<e:Image x="493" y="10" scaleX="1" scaleY="1" source="Img_chouma_bg_png"/>
+		<e:Image x="650.78" y="10" scaleX="1" scaleY="1" source="Img_chouma_bg_png"/>
+		<e:Button id="_btn_double_1" label="" x="20" y="-34" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="Img_chouma_1_png" source.down="Img_chouma_1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_double_2" label="" x="180.65" y="-34" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="Img_chouma_2_png" source.down="Img_chouma_2_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_double_3" label="" x="337.14" y="-34" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="Img_chouma_5_png" source.down="Img_chouma_5_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_double_4" label="" x="495.13" y="-34" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="Img_chouma_10_png" source.down="Img_chouma_10_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="_btn_double_5" label="" x="653.6" y="-34" scaleX="1" scaleY="1">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="Img_chouma_50_png" source.down="Img_chouma_50_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+	</e:Group>
+	<uiCore:Animation id="_animation_start" animationSource="bar_effect_start_{0}_png" y="214" x="273" autoPlay="false" frameNum="17" frameRate="70" loop="false" stopAndVisible="true" horizontalCenter="0" verticalCenter="-20" width="458" height="364" source="bar_effect_start_4_png" visible="false"/>
+
+
+	<e:Button id="_btn_close" label="" x="15" y="20">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+
+
+	</e:Button>
+	<e:Button id="_btn_meun" label="" x="15" y="145">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+
+	</e:Button>
+
+
+	<e:Button id="_btn_begin" label="" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="_btn_start_png" source.down="_btn_start_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+
+	</e:Button>
+
+</e:Skin>

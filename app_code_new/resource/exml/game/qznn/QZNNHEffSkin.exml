@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="QZNNHEffSkin" width="400" height="260" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="win">
+			<tween:TweenItem target="{image}">
+				<tween:Set/>
+				<tween:Wait duration="1250"/>
+				<tween:Set/>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image0}">
+				<tween:Set/>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object height="{189}" y="{35}" width="{389}" x="{7}" alpha="{0.5}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image1}">
+				<tween:Wait duration="250"/>
+				<tween:Set/>
+				<tween:To duration="500">
+				<tween:props>
+					<e:Object height="{189}" y="{35}" width="{389}" x="{7}" alpha="{0.5}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="500">
+				<tween:props>
+					<e:Object alpha="{0}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="350">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image id="image" source="qznn_win_tex_2_png" x="50" y="50"/>
+	<e:Image id="image0" source="qznn_win_tex2_png" x="50" y="50"/>
+	<e:Image id="image1" source="qznn_win_tex2_png" x="50" y="50"/>
+	<e:Image id="image2" source="xingxing1_png" x="110" y="74" anchorOffsetY="0" height="118" anchorOffsetX="0" width="202"/>
+</e:Skin>

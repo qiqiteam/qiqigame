@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="QZNNHeadSkin" width="180" height="180" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="126" height="126" y="9" source="nn_por_smallbg_png" x="27"/>
+	<e:Image id="imghead" width="126" height="126" y="10" source="women7_png" fillMode="scale" x="28"/>
+
+	<e:Image width="110" height="60" y="102.78" source="img_big_png" x="35"/>
+
+	<e:Label id="labelName" text="名字名字" y="103.68" size="22" width="100" textColor="0xf2eeb3" fontFamily="Arial" textAlign="center" bold="true" x="38" wordWrap="false" height="22"/>
+	<e:Label id="labelGold" text="100000" x="55" y="135" size="22" bold="true" textAlign="left" width="81" textColor="0xefe888"/>
+
+</e:Skin>

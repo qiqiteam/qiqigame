@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LodingViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="1472" height="828">
+	<e:Image id="bg_img" x="0" y="0" width="100%" height="100%" source="loding_bg_jpg"/>
+	<e:Group verticalCenter="327" horizontalCenter="0">
+		<e:Image y="11" scale9Grid="5,5,2,2" anchorOffsetX="0" width="605" anchorOffsetY="0" height="37" x="0" source="bar_0"/>
+		<e:Rect id="load_rec" width="596" height="30" y="13" x="5"/>
+		<e:Image id="load_img" y="13" anchorOffsetX="0" width="598" anchorOffsetY="0" height="30" rotation="0.09" scale9Grid="0,0,0,0" x="4" source="bar_1"/>
+	</e:Group>
+
+</e:Skin>

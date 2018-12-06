@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="orderinquirySkin" width="1340" height="696" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="166d776dec5" ></w:Config>
+	<e:Image source="img_bg_png" horizontalCenter="0" verticalCenter="0"/>
+	<e:Group width="100%" height="95" horizontalCenter="0" top="0">
+		<e:Image source="img_bottom_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Label text="订单查询" verticalCenter="0" horizontalCenter="0"/>
+		<e:Button id="btn_return" label="" top="0" right="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_ cancel_0_png" source.down="btn_ cancel_1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group width="100%" height="601" anchorOffsetY="0" bottom="0" horizontalCenter="0">
+		<e:Group width="100%" height="520" anchorOffsetY="0" horizontalCenter="0" verticalCenter="-40.5">
+			<e:Scroller width="100%" height="100%" verticalCenter="0" horizontalCenter="0">
+				<e:Group width="100%" anchorOffsetY="0" height="438.18" x="0" y="81.82"/>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="100%" height="80.3" anchorOffsetY="0" horizontalCenter="0" bottom="0">
+			<e:Label text="显示最近7天的30条订单数据" width="400" textAlign="center" left="29" verticalCenter="-0.14999999999999858"/>
+			<e:Label text="查询订单请复制订单信息" width="400" right="0" verticalCenter="0" textAlign="center"/>
+			<e:Button label="点击订单列表进入聊天对话" width="400" horizontalCenter="0" verticalCenter="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LobbyViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg"/>
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" top="0" source="lobby_json.ding"/>
+		<e:Button id="_set" label="" x="1278.58" y="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_service" label="" x="1094" y="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image scaleX="1" scaleY="1" source="coin_bg" horizontalCenter="0" y="17"/>
+		<e:Button id="_playerinfo" label="" x="42.76" y="2" scaleX="0.8" scaleY="0.8">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="head_icon" source.down="head_icon"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+
+		</e:Button>
+		<e:Image x="383.37" y="4" source="v"/>
+		<e:Label id="_head_label" text="中国第一赌神" x="151.26" y="29" scaleX="1" scaleY="1" size="35" fontFamily="KaiTi"/>
+		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
+		<e:Image width="154" height="76" y="1" touchEnabled="false" x="1278.58" source="btn_set_0"/>
+		<e:Image width="154" height="76" y="1" touchEnabled="false" x="1096.18" source="btn_kefu_0"/>
+	</e:Group>
+	<e:Group x="151.67" y="100">
+		<e:Image x="0" y="0" scaleX="1" scaleY="1" source="title_bg"/>
+		<e:Image x="211.33" y="7" scaleX="1" scaleY="1" source="trumpet"/>
+	</e:Group>
+	<e:Group width="100%" height="150" x="0" bottom="0">
+		<e:Image scaleX="1" scaleY="1" bottom="0" horizontalCenter="0" source="di_bg"/>
+		<e:Button id="_generalize" label="" x="16" y="34">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="generalize_0" source.down="generalize_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_safebox" label="" x="359.29" y="56">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_information" label="" x="722.88" y="56">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_welfare" label="" x="540.88" y="56">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_shoppingmall" label="" x="932.32" y="34">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="shoppingmall_0" source.down="shoppingmall_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_topup" label="" x="1200.92" y="34">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="topup_0" source.down="topup_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image width="154" height="76" x="357.44" y="57.52" source="btn_safebox_0" touchEnabled="false"/>
+		<e:Image width="154" height="76" x="540.24" y="57.52" touchEnabled="false" source="btn_welfare_0"/>
+		<e:Image width="154" height="76" x="724.44" y="57.52" touchEnabled="false" source="btn_info_0"/>
+	</e:Group>
+</e:Skin>

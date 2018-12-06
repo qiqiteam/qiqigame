@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RechargeViewSkin" width="1340" height="696" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="166d37a4974"></w:Config>
+	<e:Image source="img_bg_png" width="1340" height="696" horizontalCenter="0" verticalCenter="0" />
+	<e:Group width="100%" height="95" horizontalCenter="0" top="0" anchorOffsetY="0">
+		<e:Image source="img_bottom_png" horizontalCenter="0" verticalCenter="0" x="307" y="301" scaleX="1" scaleY="1" />
+		<e:Image horizontalCenter="0" verticalCenter="0" x="317" y="311" scaleX="1" scaleY="1" source="img_recharge_png" />
+		<e:Button id="btn_return" label="" right="0" top="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_ cancel_0_png" source.down="btn_ cancel_1_png" />
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group width="100%" height="601" horizontalCenter="0" bottom="0">
+		<e:Group width="310" height="100%" anchorOffsetX="0" left="0" verticalCenter="0">
+			<e:Image width="100%" height="100%" source="group_bg_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image width="100%" source="team_bg_png" y="0" height="120" x="0"/>
+			<e:Image width="100%" source="team_bg_png" y="120" height="120" x="0"/>
+			<e:Image width="100%" source="team_bg_png" y="240" height="120" x="0"/>
+			<e:Image width="100%" source="team_bg_png" y="360" height="120" x="0"/>
+			<e:TabBar id="_recharge_meun" width="100%" height="100%" scaleX="1" scaleY="1" itemRenderer="RechargeTypeItem" selectedIndex="0" scrollRect="(x=0,y=0,width=299,height=109)" horizontalCenter="0" verticalCenter="0">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:TabBar>
+
+
+
+
+
+
+
+
+		</e:Group>
+
+
+
+		<e:ViewStack id="_viewlist" width="1030" height="100%" scaleX="1" scaleY="1" right="0" verticalCenter="0" selectedIndex="0">
+
+		
+			<e:Group id="fixationAlipay_1" width="100%" height="100%" anchorOffsetX="0" verticalCenter="0" x="0" y="95" scaleX="1" scaleY="1">
+			<e:Group width="100%" height="150" x="0" y="0" anchorOffsetY="0">
+				<e:Image source="img_bg2_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image source="img_Alipay_png" scaleX="1" scaleY="1" verticalCenter="0" left="53"/>
+				<e:Label text="用户 I D ：1802588862" x="218.0000000000001" y="26.37" scaleX="1" scaleY="1"/>
+				<e:Label text="温馨提示 ：需要安装支付宝客户端" x="218.0000000000001" scaleX="1" scaleY="1" verticalCenter="4"/>
+				<e:Label text="(官方充值会打开外部浏览器，请放心支付)" x="243.2700000000001" y="106.73" size="20" scaleX="1" scaleY="1" textColor="0x848484"/>
+			</e:Group>
+			<e:Group width="100%" anchorOffsetY="0" height="448.42" bottom="0" horizontalCenter="0">
+				<e:Image source="img_bg1_png" x="203.26999999999998" y="32.53000000000006" scaleX="1" scaleY="1"/>
+				<e:Image source="img_topupMoney_png" x="32.09000000000003" y="46.03000000000006" scaleX="1" scaleY="1"/>
+				<e:Label x="228.14999999999998" y="50.03000000000006" scaleX="1" scaleY="1" text="请选择下方充值额度" textColor="0x8e8b8b"/>
+				<e:Button label="" x="691" y="43.03000000000006" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_clear _0_png" source.down="btn_clear _0_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="53" y="112.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_10money_0_png" source.down="btn_10money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="292" y="112.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_50money_0_png" source.down="btn_50money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="530" y="112.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_100money_0_png" source.down="btn_100money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="757" y="112.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_200money_0_png" source.down="btn_200money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="53" y="222.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_500money_0_png" source.down="btn_500money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="292" y="222.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_1000money_0_png" source.down="btn_1000money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="530" y="222.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_2000money_0_png" source.down="btn_2000money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" x="757" y="222.03" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_5000money_0_png" source.down="btn_5000money_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" horizontalCenter="0" bottom="22" x="357.0000000000001" y="331" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_affirmMoney_0_png" source.down="btn_affirmMoney_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+			</e:Group>
+			</e:Group>
+			<e:Group id="Alipay_1" width="100%" height="100%" anchorOffsetX="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" visible="false">
+				<e:Group width="100%" height="150" x="0" y="0" anchorOffsetY="0">
+				<e:Image source="img_bg2_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image scaleX="1" scaleY="1" verticalCenter="0" left="53" source="img_Alipay1_png"/>
+				<e:Label text="用户 I D ：1802588862" x="218.0000000000001" y="26.37" scaleX="1" scaleY="1"/>
+				<e:Label text="温馨提示 ：需要安装支付宝客户端" x="218.0000000000001" scaleX="1" scaleY="1" verticalCenter="4"/>
+				<e:Label text="(官方充值会打开外部浏览器，请放心支付)" x="243.2700000000001" y="106.73" size="20" scaleX="1" scaleY="1" textColor="0x848484"/>
+				</e:Group>
+				<e:Group width="100%" anchorOffsetY="0" height="448.42" bottom="0" horizontalCenter="0">
+				<e:Image source="img_bg1_png" x="203.26999999999998" y="32.53000000000006" scaleX="1" scaleY="1"/>
+				<e:Image source="img_topupMoney_png" x="32.09000000000003" y="46.03000000000006" scaleX="1" scaleY="1"/>
+				<e:Label x="228.14999999999998" y="50.03000000000006" scaleX="1" scaleY="1" text="充值金额不低于10元" textColor="0x8E8B8B"/>
+				<e:Button label="" x="691" y="43.03000000000006" scaleX="1" scaleY="1">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_clear _0_png" source.down="btn_clear _0_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="10" x="53" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="198" x="292" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="598" x="530" y="112.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="988" x="757" y="112.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="1498" x="53" y="222.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="1998" x="292" y="222.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="2998" x="530" y="222.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="4998" x="757" y="222.03" scaleX="1" scaleY="1" alpha="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="" horizontalCenter="0" bottom="22" x="357.0000000000001" y="331" scaleX="1" scaleY="1">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_affirmMoney_0_png" source.down="btn_affirmMoney_1_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Label text="注：银行快捷支付，暂不支持信用卡充值，请使用储蓄卡进行充值！" x="115" y="304" size="24" textColor="0xe21616"/>
+				</e:Group>
+			</e:Group>
+			<e:Group id="Unionpay_1" width="100%" height="100%" anchorOffsetX="0" verticalCenter="0" x="0" y="95" scaleX="1" scaleY="1" visible="false">
+			<e:Group width="100%" height="150" x="0" y="0" anchorOffsetY="0">
+				<e:Image source="img_bg2_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image scaleX="1" scaleY="1" verticalCenter="0" left="53" source="img_yinlian_png"/>
+				<e:Label text="用户 I D ：1802588862" x="218.0000000000001" y="26.37" scaleX="1" scaleY="1"/>
+				<e:Label text="温馨提示 ：需要安装支付宝客户端" x="218.0000000000001" scaleX="1" scaleY="1" verticalCenter="4"/>
+				<e:Label text="(官方充值会打开外部浏览器，请放心支付)" x="243.2700000000001" y="106.73" size="20" scaleX="1" scaleY="1" textColor="0x848484"/>
+			</e:Group>
+			<e:Group width="100%" anchorOffsetY="0" height="448.42" bottom="0" horizontalCenter="0">
+				<e:Image source="img_bg1_png" x="203.26999999999998" y="32.53000000000006" scaleX="1" scaleY="1"/>
+				<e:Image source="img_topupMoney_png" x="32.09000000000003" y="46.03000000000006" scaleX="1" scaleY="1"/>
+				<e:Label x="228.14999999999998" y="50.03000000000006" scaleX="1" scaleY="1" text="充值金额不低于10元" textColor="0x8E8B8B"/>
+				<e:Button label="" x="691" y="43.03000000000006" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_clear _0_png" source.down="btn_clear _0_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="10" x="53" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198" height="57">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="198" x="292" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198" height="57">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="598" x="530" y="112.03" scaleX="1" scaleY="1" width="198" height="57">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="988" x="757" y="112.03" scaleX="1" scaleY="1" width="198">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="1498" x="53" y="222.03" scaleX="1" scaleY="1" width="198">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="1998" x="292" y="222.03" scaleX="1" scaleY="1" width="198">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="2998" x="530" y="222.03" scaleX="1" scaleY="1" width="198">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="4998" x="757" y="222.03" scaleX="1" scaleY="1" alpha="1" width="198">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+				<e:Button label="" horizontalCenter="0" bottom="22" x="357.0000000000001" y="331" scaleX="1" scaleY="1">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_affirmMoney_0_png" source.down="btn_affirmMoney_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+			</e:Group>
+			</e:Group>
+
+			<e:Group id="Theofficialagent_1" width="100%" height="100%" anchorOffsetX="0" verticalCenter="0" x="0" y="0" scaleX="1" scaleY="1" visible="false">
+				<e:Group width="100%" height="150" x="0" y="0" anchorOffsetY="0">
+				<e:Image source="img_bg2_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image source="img_Alipay_png" scaleX="1" scaleY="1" verticalCenter="0" left="53"/>
+				<e:Label text="用户 I D ：1802588862" x="218.0000000000001" y="26.37" scaleX="1" scaleY="1"/>
+				<e:Label text="温馨提示 ：需要安装支付宝客户端" x="218.0000000000001" scaleX="1" scaleY="1" verticalCenter="4"/>
+				<e:Label text="(官方充值会打开外部浏览器，请放心支付)" x="243.2700000000001" y="106.73" size="20" scaleX="1" scaleY="1" textColor="0x848484"/>
+				</e:Group>
+				<e:Group width="100%" anchorOffsetY="0" height="448.42" bottom="0" horizontalCenter="0">
+				<e:Image source="img_bg1_png" x="203.26999999999998" y="32.53000000000006" scaleX="1" scaleY="1"/>
+				<e:Image source="img_topupMoney_png" x="32.09000000000003" y="46.03000000000006" scaleX="1" scaleY="1"/>
+				<e:Label x="228.14999999999998" y="50.03000000000006" scaleX="1" scaleY="1" text="充值金额不低于10元" textColor="0x8E8B8B"/>
+				<e:Label text="注：银行快捷支付，暂不支持信用卡充值，请使用储蓄卡进行充值！" x="115" y="304" size="24" textColor="0xE21616"/>
+				<e:Button label="" x="691" y="43.03000000000006" scaleX="1" scaleY="1">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_clear _0_png" source.down="btn_clear _0_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="10" x="53" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="198" x="292" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="598" x="530" y="112.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="988" x="757" y="112.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="1498" x="53" y="222.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="1998" x="292" y="222.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="2998" x="530" y="222.03" scaleX="1" scaleY="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="4998" x="757" y="222.03" scaleX="1" scaleY="1" alpha="1" width="198">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button label="" horizontalCenter="0" bottom="22" x="357.0000000000001" y="331" scaleX="1" scaleY="1">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_affirmMoney_0_png" source.down="btn_affirmMoney_1_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="btn_ddcx" label="订单查询" horizontalCenter="375" bottom="46.420000000000016" x="367.0000000000001" y="341" scaleX="1" scaleY="1" width="200" height="50">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				</e:Group>
+			</e:Group>
+			
+		</e:ViewStack>
+	</e:Group>
+</e:Skin>

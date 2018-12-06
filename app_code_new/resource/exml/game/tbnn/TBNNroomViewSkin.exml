@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TBNNroomViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="room_tbnn_bg_jpg"/>
+	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+		<e:Image scaleX="1" scaleY="1" y="162" x="435.23" source="tbnn_effcet_pic_person"/>
+	</e:Group>
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
+		<e:Image scaleX="1" scaleY="1" source="ding" horizontalCenter="0" top="0" locked="true"/>
+		<e:Button id="_menu" label="" x="1278.58" y="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_rule" label="" x="1094" y="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+
+
+
+		<e:Image scaleX="1" scaleY="1" source="coin_bg" horizontalCenter="0" y="17"/>
+
+
+
+		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
+		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1278.58" source="room_meun_btn_0"/>
+		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1096.45" source="room_rule_btn_0"/>
+
+				<e:Button id="_btn_close" label="" x="42" y="9" scaleX="1" scaleY="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="room_close" source.down="room_close"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image width="186" height="62" touchEnabled="false" x="267.71" y="9" source="title_tongbiniuniu"/>
+
+	</e:Group>
+	<e:Group width="294" height="742" anchorOffsetY="0" left="0" anchorOffsetX="0" bottom="0">
+		<e:Image source="room_menu_bg" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		<e:Button id="_record" label="" x="57" y="633">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image width="154" height="76" touchEnabled="false" x="57" y="633" source="root_record_btn_0"/>
+	</e:Group>
+	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0">
+		<e:Image source="qznn_right_bg" y="64.84999999999995" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Image source="qznn_btn" y="73.26" scaleX="1" scaleY="1" horizontalCenter="0.36000000000001364"/>
+
+		<e:Image source="qznn_pic2" x="312" y="143.84"/>
+		<e:Image source="qznn_pic4" x="312" y="324.04"/>
+
+		<e:Image source="qznn_pic3" x="29" y="324.04"/>
+		<e:Image x="28" y="505.6" anchorOffsetX="0" source="tbnn_pic5"/>
+		<e:Button id="_btn_cjc" label="" x="29" y="147.91" scaleX="1" scaleY="1">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="qznn_pic1" source.down="qznn_pic1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+
+
+
+
+
+
+
+</e:Skin>
