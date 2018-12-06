@@ -335,10 +335,10 @@ class TBNNView extends eui.Component {
 
         UserInfo.getInstance().isGameStart = true;
 
-        this.texiao = new NiuJiao();
-        this.texiao.x = -180;
-        this.texiao.y = -150;
-        this._niujia.addChild(this.texiao);
+        // this.texiao = new NiuJiao();
+        // this.texiao.x = -180;
+        // this.texiao.y = -150;
+        // this._niujia.addChild(this.texiao);
     }
 
     /**
@@ -576,7 +576,7 @@ class TBNNView extends eui.Component {
             if (this.arr_fen[0] != 0 && this.arr_fen[1] != 0 && this.arr_fen[2] != 0) {
                 if (intnum1 % 10 == 0) {
                     this._pingpai.visible = false;
-                    this.texiao.stop();
+                    // this.texiao.stop();
                     this._my_pai.visible = true;
                     this.returnpinpai(1);
                 } else {
@@ -594,7 +594,7 @@ class TBNNView extends eui.Component {
                 this.ppcuowu();
             } else {
                 this._pingpai.visible = false;
-                this.texiao.stop();
+                // this.texiao.stop();
                 this._my_pai.visible = true;
                 this.returnpinpai(0);
             }
@@ -709,7 +709,7 @@ class TBNNView extends eui.Component {
 
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
-        // EventUtil.addEventListener(EventConst.onUserShowOrderUpdate, this.onShowOrder, this);
+        EventUtil.addEventListener(EventConst.onUserShowOrderUpdate, this.onShowOrder, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
@@ -726,17 +726,17 @@ class TBNNView extends eui.Component {
 
     }
 
-    // /**抢庄牛牛拼牌通知 */
-    // private onShowOrder(data: any): void {
-    //     // console.log(data._obj.index + "号准备");
-    //     if (data._obj.index > 0) {
-    //         this['pinpaiType' + (data._obj.index - 1)].visible = true;
-    //     } else {
-    //         this.pinpaiType.visible = true;
-    //         this._tishi.visible = true;
-    //         this._tishi_text.text = "请等待其他玩家拼牌..."
-    //     }
-    // }
+    /**抢庄牛牛摊牌通知 */
+    private onShowOrder(data: any): void {
+        // console.log(data._obj.index + "号准备");
+        if (data._obj.index > 0) {
+            this['pinpaiType' + (data._obj.index - 1)].visible = true;
+        } else {
+            this.pinpaiType.visible = true;
+            this._tishi.visible = true;
+            this._tishi_text.text = "请等待其他玩家拼牌..."
+        }
+    }
 
     /**游戏状态 */
     private GameStatus(data: any): void {
@@ -895,7 +895,7 @@ class TBNNView extends eui.Component {
         this.cardResult = result;
 
         this._pingpai.visible = false;
-        this.texiao.stop();
+        // this.texiao.stop();
         this._my_pai.visible = true;
 
         this.interval = setInterval(this.playerCardRotation.bind(this), 800);
@@ -908,7 +908,7 @@ class TBNNView extends eui.Component {
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._btn_switch.visible = false;
             this._tishi.visible = true;
-            this._tishi_text.text = "请等待其他玩家家下注...";
+            this._tishi_text.text = "请等待其他玩家下注...";
         }
         if (data._obj.code == 200) {
             this.jiazhu(data._obj.hogOrBet, data._obj.index)
@@ -1553,7 +1553,7 @@ class TBNNView extends eui.Component {
         }
         this._pingpai.visible = true;
         // this.texiao.play();
-        
+
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
         card.x = xlLib.Global.screenWidth / 2;
         card.y = xlLib.Global.screenHeight / 2;
@@ -1965,7 +1965,7 @@ class TBNNView extends eui.Component {
 
         }
         this._pingpai.visible = false;
-        this.texiao.stop();
+        // this.texiao.stop();
         this._my_pai.visible = false;
 
         this.labCardTypeBanker.visible = false;
