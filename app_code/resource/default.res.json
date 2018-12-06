@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg",
+			"keys": "loding_json,loding_bg_jpg,bg_tbnn_jpg,nn_btn_tanpai_png,tb_bg_table_png",
 			"name": "preload"
 		},
 		{
@@ -19,6 +19,10 @@
 		{
 			"keys": "",
 			"name": "zhajinhua"
+		},
+		{
+			"keys": "tb_bg_table_png,bg_tbnn_jpg,nn_btn_tanpai_png",
+			"name": "tbnn"
 		}
 	],
 	"resources": [
@@ -6204,6 +6208,21 @@
 			"url": "assets/sound/qznn/qznn_tongpei.mp3",
 			"type": "sound",
 			"name": "qznn_tongpei_mp3"
+		},
+		{
+			"url": "assets/game/tbnn/bg_tbnn.jpg",
+			"type": "image",
+			"name": "bg_tbnn_jpg"
+		},
+		{
+			"url": "assets/game/tbnn/nn_btn_tanpai.png",
+			"type": "image",
+			"name": "nn_btn_tanpai_png"
+		},
+		{
+			"url": "assets/game/tbnn/tb_bg_table.png",
+			"type": "image",
+			"name": "tb_bg_table_png"
 		}
 	]
 }

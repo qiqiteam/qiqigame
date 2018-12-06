@@ -18,7 +18,7 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 		super.childrenCreated();
 		this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
 		this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
-		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
+		this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
 		this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
 		EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
 
@@ -56,6 +56,8 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 	public destroy(): void {
 		this.gameIconData = null;
 		this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+		this._btn_cjc.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
+		EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
 	}
 
 }

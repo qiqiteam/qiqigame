@@ -264,7 +264,7 @@ class QZNNView extends eui.Component {
             this.nnEff.frameRate = 10;
             this.nnEff.touchEnabled = false;
         }
-        this.nnEff.gotoAndPlay(0,1);
+        this.nnEff.gotoAndPlay(0, 1);
         this.addChild(this.nnEff);
         this.nnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.nnEff.parent) {
@@ -281,7 +281,7 @@ class QZNNView extends eui.Component {
             this.whnEff.frameRate = 10;
             this.whnEff.touchEnabled = false;
         }
-        this.whnEff.gotoAndPlay(0,1);
+        this.whnEff.gotoAndPlay(0, 1);
         this.addChild(this.whnEff);
         this.whnEff.addEventListener(egret.Event.COMPLETE, (e: egret.Event) => {
             if (this.whnEff.parent) {
@@ -299,7 +299,8 @@ class QZNNView extends eui.Component {
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = "" + GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
 
-        xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        let inthematch: Inthematch = xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        inthematch.TYPE_TAP = Const.TYPE_TBNN;
 
         UserInfo.getInstance().isGameStart = true;
 
@@ -467,12 +468,12 @@ class QZNNView extends eui.Component {
         }
         for (let i = 0; i < 4; i++) {
             var pos: egret.Point = new egret.Point;
-            if(i==0 || i==2) {
-                pos.x = this['grpHead' + i].x+15;
-                pos.y = this['grpHead' + i].y+15;
+            if (i == 0 || i == 2) {
+                pos.x = this['grpHead' + i].x + 15;
+                pos.y = this['grpHead' + i].y + 15;
             } else {
-                pos.x = this['grpHead' + i].x+25;
-                pos.y = this['grpHead' + i].y+40;
+                pos.x = this['grpHead' + i].x + 25;
+                pos.y = this['grpHead' + i].y + 40;
             }
             this.orginPlayerHeadPos[i] = pos;
         }

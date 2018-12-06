@@ -29,7 +29,7 @@
 
 
 
-		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
+		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
 		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1278.58" source="room_meun_btn_0"/>
 		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1096.45" source="room_rule_btn_0"/>
 
