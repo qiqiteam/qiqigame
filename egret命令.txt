@@ -1,0 +1,3 @@
+egret b -e --runtime native
+
+egret publish --runtime native -compile
