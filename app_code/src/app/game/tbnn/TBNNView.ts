@@ -332,7 +332,7 @@ class TBNNView extends eui.Component {
 
         let inthematch: Inthematch = xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
         inthematch.TYPE_TAP = Const.TYPE_TBNN;
-        
+
         UserInfo.getInstance().isGameStart = true;
 
         this.texiao = new NiuJiao();
@@ -424,10 +424,10 @@ class TBNNView extends eui.Component {
         this.pinpaiType1.visible = false;
         this.pinpaiType2.visible = false;
 
-        this._xiabei_0.x = 295.61;
+        this._xiabei_0.x = 751.67;
         this._xiabei_1.x = 342.4;
         this._xiabei_2.x = 338.05;
-        this._xiabei_3.x = 542.21;
+        this._xiabei_3.x = 730.09;
         this._xiabei_4.x = 1141.63;
         this._xiabei_5.x = 1151.63;
 
@@ -908,7 +908,7 @@ class TBNNView extends eui.Component {
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._btn_switch.visible = false;
             this._tishi.visible = true;
-            this._tishi_text.text = "请等待其他闲家下注...";
+            this._tishi_text.text = "请等待其他玩家家下注...";
         }
         if (data._obj.code == 200) {
             this.jiazhu(data._obj.hogOrBet, data._obj.index)
@@ -1552,7 +1552,8 @@ class TBNNView extends eui.Component {
             return;
         }
         this._pingpai.visible = true;
-        this.texiao.play();
+        // this.texiao.play();
+        
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
         card.x = xlLib.Global.screenWidth / 2;
         card.y = xlLib.Global.screenHeight / 2;
@@ -2037,10 +2038,12 @@ class TBNNView extends eui.Component {
         this.pinpaiType2.visible = false;
         this.grpCountdown.visible = true;
 
-        this._xiabei_0.x = 295.61;
-        this._xiabei_1.x = 368.16;
-        this._xiabei_2.x = 530.48;
-        this._xiabei_3.x = 1146.78;
+        this._xiabei_0.x = 751.67;
+        this._xiabei_1.x = 342.4;
+        this._xiabei_2.x = 338.05;
+        this._xiabei_3.x = 730.09;
+        this._xiabei_4.x = 1141.63;
+        this._xiabei_5.x = 1151.63;
 
         this.grpHead0.visible = false;
         this.grpHead1.visible = false;
