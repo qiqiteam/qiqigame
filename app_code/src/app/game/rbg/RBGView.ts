@@ -687,9 +687,52 @@ public _animation_start:uiCore.Animation;
             }, this);
 
 */
-
+/*
+        RES.getResByUrl("resource/assets/common/newParticle.png", function(texture:egret.Texture):void {
+            this._texture = texture;
+            
+            this.create();
+        }, this, RES.ResourceItem.TYPE_IMAGE);
+        RES.getResByUrl("resource/assets/common/newParticle.json", function(data:any):void {
+            this._config = data;
+            
+            this.create();
+        }, this, RES.ResourceItem.TYPE_JSON);
+        */
 
     }
+
+    /*
+    private _texture:egret.Texture;
+    private _rock:egret.Texture;
+    private _config:any;
+
+    private create():void {
+        if (this._texture && this._config ) {
+            var system = new particle.GravityParticleSystem(this._texture, this._config);
+            this.addChild(system);
+            system.start();
+            system.y = 400;
+            system.x = 300;
+            
+            var angle:number = 0;
+            egret.startTick(function (timeStamp:number):boolean {
+                angle += -5;
+                console.log(timeStamp);
+                
+                system.emitterX = Math.sin(angle) * 200;
+                system.emitterY = Math.cos(angle) * 200 / 2;
+                
+                return false;
+            }, this);
+        }
+    }*/
+
+
+
+
+
+
     private _time:number;
     private onTicker(timeStamp:number) {
 

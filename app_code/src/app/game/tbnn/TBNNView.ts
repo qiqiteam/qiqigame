@@ -448,11 +448,6 @@ class TBNNView extends eui.Component {
         //-----------------------------------------------
         this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
         //-----------------------------------------------
-
-        for (let i = 0; i < 5; i++) {
-            var card: eui.Image = this['grpCard_' + 0 + '_' + i];
-            this.grpCard.setChildIndex(card, 5 - i);
-        }
     }
 
     /**
@@ -509,9 +504,9 @@ class TBNNView extends eui.Component {
             pos.y = card.y;
             this.orginZhanCardPos[i] = pos;
         }
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 6; i++) {
             var pos: egret.Point = new egret.Point;
-            if (i == 0 || i == 2) {
+            if (i == 0 || i == 3) {
                 pos.x = this['grpHead' + i].x + 15;
                 pos.y = this['grpHead' + i].y + 15;
             } else {
@@ -908,7 +903,7 @@ class TBNNView extends eui.Component {
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._btn_switch.visible = false;
             this._tishi.visible = true;
-            this._tishi_text.text = "请等待其他玩家家下注...";
+            this._tishi_text.text = "请等待其他玩家下注...";
         }
         if (data._obj.code == 200) {
             this.jiazhu(data._obj.hogOrBet, data._obj.index)
@@ -1403,12 +1398,24 @@ class TBNNView extends eui.Component {
     private flyIntval_2: number = 0;  //
     private flyIntval_3: number = 0;  //
     private flyIntval_4: number = 0;  //
+    private flyIntval_5: number = 0;  //
+    private flyIntval_6: number = 0;  //
+    private expandIntval_1: number = 0;
+    private expandIntval_2: number = 0;
+    private expandIntval_3: number = 0;
+    private expandIntval_4: number = 0;
+    private expandIntval_5: number = 0;
+    private expandIntval_6: number = 0;
     private flyIndex_1: number = 0;
-    private flyIndex_2: number = 4;
-    private flyIndex_3: number = 4;
+    private flyIndex_2: number = 0;
+    private flyIndex_3: number = 0;
     private flyIndex_4: number = 0;
-    private flyPaiTime = 500;
-    private faPaiTime = 200;
+    private flyIndex_5: number = 0;
+    private flyIndex_6: number = 0;
+    private faPaiTime = 100;
+    private flyPaiTime = 1000;
+    private pauseTime = 950;
+    private expandPaiTime = 400;
     /**
      * 显示发牌
      */
@@ -1422,8 +1429,10 @@ class TBNNView extends eui.Component {
         this.flyIntval_1 = setInterval(this.playCardFly_1.bind(this), this.faPaiTime);
         this.flyIntval_2 = setInterval(this.playCardFly_2.bind(this), this.faPaiTime);
         this.flyIntval_3 = setInterval(this.playCardFly_3.bind(this), this.faPaiTime);
-        this.flyBankerIndex = 0;
         this.flyIntval_4 = setInterval(this.playCardFly_4.bind(this), this.faPaiTime);
+        this.flyIntval_5 = setInterval(this.playCardFly_5.bind(this), this.faPaiTime);
+        this.flyBankerIndex = 0;
+        this.flyIntval_6 = setInterval(this.playCardFly_6.bind(this), this.faPaiTime);
     }
 
     /**其他玩家发牌动作 */
@@ -1466,15 +1475,16 @@ class TBNNView extends eui.Component {
         card.alpha = 0;
         card.scaleX = 0.2;
         card.scaleY = 0.2;
-        var pos = this.orginPlayerCardPos[0][this.flyIndex_1];
-        var z_pos = this.orginZhanCardPos[1];
+        var pos = this.orginPlayerCardPos[0][4];
+        //var z_pos = this.orginZhanCardPos[1];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        //egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, 800, egret.Ease.sineInOut);
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
 
         if (this.flyIndex_1 == 4) {
             this.flyIndex_1 = 0;
             clearInterval(this.flyIntval_1);
+            this.expandIntval_1 = setInterval(this.expandPai_1.bind(this), this.pauseTime);
         } else {
             this.flyIndex_1++;
         }
@@ -1490,15 +1500,17 @@ class TBNNView extends eui.Component {
         card.alpha = 0;
         card.scaleX = 0.2;
         card.scaleY = 0.2;
-        var pos = this.orginPlayerCardPos[1][this.flyIndex_2];
+        var pos = this.orginPlayerCardPos[1][4];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        var z_pos = this.orginZhanCardPos[2];
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
-        if (this.flyIndex_2 == 0) {
-            this.flyIndex_2 = 4;
+        //var z_pos = this.orginZhanCardPos[2];
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_2 == 4) {
+            this.flyIndex_2 = 0;
             clearInterval(this.flyIntval_2);
+            this.expandIntval_2 = setInterval(this.expandPai_2.bind(this), this.pauseTime);
         } else {
-            this.flyIndex_2--;
+            this.flyIndex_2++;
         }
     }
 
@@ -1512,23 +1524,72 @@ class TBNNView extends eui.Component {
         card.alpha = 0;
         card.scaleX = 0.2;
         card.scaleY = 0.2;
-        var pos = this.orginPlayerCardPos[2][this.flyIndex_3];
+        var pos = this.orginPlayerCardPos[2][4];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        var z_pos = this.orginZhanCardPos[3];
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
-        if (this.flyIndex_3 == 0) {
-            this.flyIndex_3 = 4;
+        //var z_pos = this.orginZhanCardPos[3];
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_3 == 4) {
+            this.flyIndex_3 = 0;
             clearInterval(this.flyIntval_3);
+            this.expandIntval_3 = setInterval(this.expandPai_3.bind(this), this.pauseTime);
         } else {
-            this.flyIndex_3--;
+            this.flyIndex_3++;
         }
     }
 
-    /**发牌动作4 */
     private playCardFly_4(): void {
-        if (this.flyBankerIndex == 5) {
-            this.flyBankerIndex = 0;
+        var card: eui.Image = this['grpCard_' + 3 + '_' + this.flyIndex_4];
+        card.source = 'qznn_card_100';
+        card.x = xlLib.Global.screenWidth / 2;
+        card.y = xlLib.Global.screenHeight / 2;
+        card.anchorOffsetX = card.width / 2;
+        card.x += card.width / 2;
+        card.alpha = 0;
+        card.scaleX = 0.2;
+        card.scaleY = 0.2;
+        var pos = this.orginPlayerCardPos[3][4];
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
+        //var z_pos = this.orginZhanCardPos[4];
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_4 == 4) {
+            this.flyIndex_4 = 0;
             clearInterval(this.flyIntval_4);
+            this.expandIntval_4 = setInterval(this.expandPai_4.bind(this), this.pauseTime);
+        } else {
+            this.flyIndex_4++;
+        }
+    }
+
+    private playCardFly_5(): void {
+        var card: eui.Image = this['grpCard_' + 4 + '_' + this.flyIndex_5];
+        card.source = 'qznn_card_100';
+        card.x = xlLib.Global.screenWidth / 2;
+        card.y = xlLib.Global.screenHeight / 2;
+        card.anchorOffsetX = card.width / 2;
+        card.x += card.width / 2;
+        card.alpha = 0;
+        card.scaleX = 0.2;
+        card.scaleY = 0.2;
+        var pos = this.orginPlayerCardPos[4][4];
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
+        //var z_pos = this.orginZhanCardPos[5];
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_5 == 4) {
+            this.flyIndex_5 = 0;
+            clearInterval(this.flyIntval_5);
+            this.expandIntval_5 = setInterval(this.expandPai_5.bind(this), this.pauseTime);
+        } else {
+            this.flyIndex_5++;
+        }
+    }
+
+    /**发牌动作6 */
+    private playCardFly_6(): void {
+        /*
+        if (this.flyBankerIndex == 5) {
             this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
             var poke = this.zijipokes;
             for (var i = 0; i < 5; i++) {
@@ -1547,28 +1608,118 @@ class TBNNView extends eui.Component {
                 this.score[i] = intnum;
                 var card_banker = this['bankerCard_' + i];
                 card_banker.source = 'qznn_card_100';
+                
             }
-            this.startCardRotation = true;
             return;
-        }
+        }*/
+
         this._pingpai.visible = true;
-        // this.texiao.play();
-        
+        this.texiao.play();
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
         card.x = xlLib.Global.screenWidth / 2;
         card.y = xlLib.Global.screenHeight / 2;
         card.source = 'qznn_card_100';
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
-        this.orginPinCardPos;
+        //this.orginPinCardPos;
         card.alpha = 0;
         card.scaleX = 0.2;
         card.scaleY = 0.2;
-        var pos = this.orginPinCardPos[this.flyBankerIndex];
+        var pos = this.orginPinCardPos[0];
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        var z_pos = this.orginZhanCardPos[0];
-        egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
-        this.flyBankerIndex++;
+        //var z_pos = this.orginZhanCardPos[0];
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 1, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if(this.flyBankerIndex == 4) {
+            this.flyBankerIndex = 0;
+            clearInterval(this.flyIntval_6);
+            this.expandIntval_6 = setInterval(this.expandPai_6.bind(this), this.pauseTime);
+            this.startCardRotation = true;
+        } else {
+            this.flyBankerIndex++;
+        }
+    }
+
+    private expandPai_1():void {
+        clearInterval(this.expandIntval_1);
+        for(let i=0; i<5; i++) {
+            var card: eui.Image = this['grpCard_' + 0 + '_' + i];
+            var pos = this.orginPlayerCardPos[0][i];
+            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, this.expandPaiTime, egret.Ease.sineOut);
+        }
+    }
+
+    private expandPai_2():void {
+        clearInterval(this.expandIntval_2);
+        for(let i=0; i<5; i++) {
+            var card: eui.Image = this['grpCard_' + 1 + '_' + i];
+            var pos = this.orginPlayerCardPos[1][i];
+            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, this.expandPaiTime, egret.Ease.sineOut);
+        }
+    }
+
+    private expandPai_3():void {
+        clearInterval(this.expandIntval_3);
+        for(let i=0; i<5; i++) {
+            var card: eui.Image = this['grpCard_' + 2 + '_' + i];
+            var pos = this.orginPlayerCardPos[2][i];
+            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, this.expandPaiTime, egret.Ease.sineOut);
+        }
+    }
+
+    private expandPai_4():void {
+        clearInterval(this.expandIntval_4);
+        for(let i=0; i<5; i++) {
+            var card: eui.Image = this['grpCard_' + 3 + '_' + i];
+            var pos = this.orginPlayerCardPos[3][i];
+            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, this.expandPaiTime, egret.Ease.sineOut);
+        }
+    }
+
+    private expandPai_5():void {
+        clearInterval(this.expandIntval_5);
+        for(let i=0; i<5; i++) {
+            var card: eui.Image = this['grpCard_' + 4 + '_' + i];
+            var pos = this.orginPlayerCardPos[4][i];
+            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, this.expandPaiTime, egret.Ease.sineOut);
+        }
+    }
+
+    private expandPai_6():void {
+        clearInterval(this.expandIntval_6);
+        for(let i=0; i<5; i++) {
+            var card: eui.Image = this['_puke_' + i];
+            var pos = this.orginPinCardPos[i];
+            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, this.expandPaiTime, egret.Ease.sineOut);
+        }
+        this.myCardRotationIntval = setInterval(this.myCardRotation.bind(this), this.myCardRotationTime);
+    }
+
+    private myCardRotationIntval:number = 0;
+    private myCardRotationTime:number = 400;
+
+    private myCardRotation():void {
+        clearInterval(this.myCardRotationIntval);
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
+        var poke = this.zijipokes;
+            for (var i = 0; i < 5; i++) {
+                var card_my = this['_puke_' + i];
+                card_my.source = 'qznn_card_100';
+                egret.Tween.get(card_my).to({ scaleX: 0 }, 400).call(function () {
+                    this[0].source = 'qznn_card_' + this[1];
+                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 400);
+                }, [card_my, poke[i]])
+                //var str = poke[i].toString();
+                //str = str.slice(1);
+                //var intnum = parseInt(str);
+                //if (intnum > 10) {
+                //    intnum = 10;
+                //}
+                //this.score[i] = intnum;
+                //var card_banker = this['bankerCard_' + i];
+                //card_banker.source = 'qznn_card_100';
+                
+            }
     }
 
     /**自己发牌动作 */
@@ -1638,9 +1789,9 @@ class TBNNView extends eui.Component {
         var index = this.effectPlayerIndex;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
-            if (index == 0) {
-                this.grpCard.setChildIndex(card, i);
-            }
+            //if (index == 0) {
+            //    this.grpCard.setChildIndex(card, i);
+            //}
             card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'qznn_card_' + this[1];
@@ -2189,6 +2340,66 @@ class TBNNView extends eui.Component {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clearTimer, this);
         }
         this.removeEff(this.nnbankerEff);
+        
+        if(this.interval != 0) {
+            clearInterval(this.interval);
+        }
+        if(this.myCardRotationIntval != 0) {
+            clearInterval(this.myCardRotationIntval);
+        }
+
+        if(this.flyIntval_1 != 0) {
+            clearInterval(this.flyIntval_1);
+        }
+        if(this.flyIntval_2 != 0) {
+            clearInterval(this.flyIntval_2);
+        }
+        if(this.flyIntval_3 != 0) {
+            clearInterval(this.flyIntval_3);
+        }
+        if(this.flyIntval_4 != 0) {
+            clearInterval(this.flyIntval_4);
+        }
+        if(this.flyIntval_5 != 0) {
+            clearInterval(this.flyIntval_5);
+        }
+        if(this.flyIntval_6 != 0) {
+            clearInterval(this.flyIntval_6);
+        }
+
+        if(this.expandIntval_1 != 0) {
+            clearInterval(this.expandIntval_1);
+        }
+        if(this.expandIntval_2 != 0) {
+            clearInterval(this.expandIntval_2);
+        }
+        if(this.expandIntval_3 != 0) {
+            clearInterval(this.expandIntval_3);
+        }
+        if(this.expandIntval_4 != 0) {
+            clearInterval(this.expandIntval_4);
+        }
+        if(this.expandIntval_5 != 0) {
+            clearInterval(this.expandIntval_5);
+        }
+        if(this.expandIntval_6 != 0) {
+            clearInterval(this.expandIntval_6);
+        }
+
+        for (var index = 0; index < 5; index++) {
+            for (var j = 0; j < 5; j++) {
+                let card: eui.Image = this['grpCard_' + index + '_' + j];
+                //card.source = '';
+                egret.Tween.removeTweens(card);
+            }
+
+            let card_banker: eui.Image = this['bankerCard_' + index];
+            //card_banker.source = '';
+            egret.Tween.removeTweens(card_banker);
+            let card_pin: eui.Image = this['_puke_' + index];
+            //card_pin.source = '';
+            egret.Tween.removeTweens(card_pin);
+        }
     }
 }
 

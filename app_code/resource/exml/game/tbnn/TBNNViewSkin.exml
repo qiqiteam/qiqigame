@@ -368,18 +368,22 @@
 		</e:Button>
 
 	</e:Group>
-	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" locked="true" visible="false">
+	<e:Group id="_pingpai" width="1472" height="828" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" visible="false">
 		<e:Image source="qznn_num_frame_png" y="529.49" scaleX="1" scaleY="1" x="513" visible="false"/>
 		<e:Label id="_zhi_0" text="10" x="551.6" y="546" bold="true" textColor="0xffffff" visible="false"/>
 		<e:Label text="10" x="655.44" y="546" id="_zhi_1" bold="true" textColor="0xffffff" visible="false"/>
 		<e:Label text="10" x="760.32" y="546" id="_zhi_2" bold="true" textColor="0xffffff" visible="false"/>
 		<e:Label text="30" x="884.88" y="546" id="_zhi_3" bold="true" textColor="0xffffff" visible="false"/>
+		<e:Image id="_puke_0" x="420" y="646.63" source="nn.card_101" anchorOffsetX="0" width="124" anchorOffsetY="0" height="175"/>
+		<e:Image id="_puke_1" x="553.75" y="646.63" source="nn.card_101" width="124" height="175"/>
+		<e:Image id="_puke_2" x="687.41" y="646.63" source="nn.card_101" width="124" height="175"/>
+		<e:Image id="_puke_3" x="821.25" y="646.63" source="nn.card_101" width="124" height="175"/>
 
 		<e:Image id="_puke_4" x="954.91" y="646.63" source="nn.card_101" width="124" height="175"/>
-		<e:Image id="_puke_3" x="821.25" y="646.63" source="nn.card_101" width="124" height="175"/>
-		<e:Image id="_puke_2" x="687.41" y="646.63" source="nn.card_101" width="124" height="175"/>
-		<e:Image id="_puke_1" x="553.75" y="646.63" source="nn.card_101" width="124" height="175"/>
-		<e:Image id="_puke_0" x="420" y="646.63" source="nn.card_101" anchorOffsetX="0" width="124" anchorOffsetY="0" height="175"/>
+
+
+
+
 		<e:Image source="nn_tipBg_png" x="502.52" y="474.39" visible="false"/>
 		<e:Button id="_youniu" label="" x="1141" y="656" visible="false">
 			<e:skinName>

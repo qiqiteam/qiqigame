@@ -468,12 +468,12 @@ class QZNNView extends eui.Component {
         }
         for (let i = 0; i < 4; i++) {
             var pos: egret.Point = new egret.Point;
-            if (i == 0 || i == 2) {
-                pos.x = this['grpHead' + i].x + 15;
-                pos.y = this['grpHead' + i].y + 15;
+            if(i==0 || i==2) {
+                pos.x = this['grpHead' + i].x+45;
+                pos.y = this['grpHead' + i].y+45;
             } else {
-                pos.x = this['grpHead' + i].x + 25;
-                pos.y = this['grpHead' + i].y + 40;
+                pos.x = this['grpHead' + i].x+55;
+                pos.y = this['grpHead' + i].y+70;
             }
             this.orginPlayerHeadPos[i] = pos;
         }
