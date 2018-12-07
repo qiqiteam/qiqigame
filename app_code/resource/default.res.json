@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,bg_tbnn_jpg,nn_btn_tanpai_png,tb_bg_table_png,tongbi_bei_png,tongbi_bei1_png,tongbi_bei2_png,tbnn_gamebgMusic_mp3",
+			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json",
 			"name": "preload"
 		},
 		{
@@ -2731,7 +2731,7 @@
 			"url": "assets/loding/loding.json",
 			"type": "sheet",
 			"name": "loding_json",
-			"subkeys": "bar_0,bar_1,spinner,tipsBg"
+			"subkeys": "bar_0,bar_1,gamehall_logo_tex1,gamehall_logo_tex10,gamehall_logo_tex11,gamehall_logo_tex12,gamehall_logo_tex13,gamehall_logo_tex14,gamehall_logo_tex15,gamehall_logo_tex16,gamehall_logo_tex17,gamehall_logo_tex18,gamehall_logo_tex19,gamehall_logo_tex2,gamehall_logo_tex20,gamehall_logo_tex21,gamehall_logo_tex3,gamehall_logo_tex4,gamehall_logo_tex5,gamehall_logo_tex6,gamehall_logo_tex7,gamehall_logo_tex8,gamehall_logo_tex9,gamehall_slogan,spinner,tipsBg,wgwz"
 		},
 		{
 			"url": "assets/loding/loding_bg.jpg",
@@ -4983,6 +4983,21 @@
 			"url": "assets/sound/tbnn/tbnn_gamebgMusic.mp3",
 			"type": "sound",
 			"name": "tbnn_gamebgMusic_mp3"
+		},
+		{
+			"url": "assets/dragonbones/wzqp/wzqp_tex.png",
+			"type": "image",
+			"name": "wzqp_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/wzqp/wzqp_tex.json",
+			"type": "json",
+			"name": "wzqp_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/wzqp/wzqp_ske.json",
+			"type": "json",
+			"name": "wzqp_ske_json"
 		}
 	]
 }
