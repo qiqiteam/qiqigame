@@ -102,24 +102,22 @@ module xlLib {
         /**
          * 创建DragonBones显示对象
          */
-        public static createDragonBonesDisplay(dragonJson: string, json: string, png?: string, bones?: string, cache?: number): any {
+        public static createDragonBonesDisplay(dragonJson: string, json: string, png: string, bones?: string, cache?: number): dragonBones.Armature {
             var dragonbonesData = RES.getRes(dragonJson);
             if (png && png != null) {
-                var textureData = RES.getRes(json);
-                var texture = RES.getRes(png);
+            var textureData = RES.getRes(json);
+            var texture = RES.getRes(png);
             } else {
                 var textureData = RES.getRes(json + "_json");
                 var texture = RES.getRes(json + "_png");
             }
-
             if (StringUtils.stringIsNullOrEmpty(bones))
                 bones = "armature";
-
-            var armature: any;
-            if (dragonBones) {
-                var dragonbonesFactory: any = new dragonBones["EgretFactory"]();
-                dragonbonesFactory.addDragonBonesData(dragonBones["DataParser"].parseDragonBonesData(dragonbonesData));
-                dragonbonesFactory.addTextureAtlas(new dragonBones["EgretTextureAtlas"](texture, textureData));
+            var armature: dragonBones.Armature;
+            if (dragonbonesData) {
+                var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
+                dragonbonesFactory.addDragonBonesData(dragonBones.DataParser.parseDragonBonesData(dragonbonesData));
+                dragonbonesFactory.addTextureAtlasData(new dragonBones.EgretTextureAtlas(texture, textureData));
                 if (cache) {
                     armature = dragonbonesFactory.buildFastArmature(bones);
                     armature.enableAnimationCache(cache);
@@ -130,6 +128,17 @@ module xlLib {
         }
 
         private static ticketStarted: boolean=false;
+
+
+        public static stopDragonBonesArmature(armature:dragonBones.Armature):void
+        {
+            var _time:number;
+            egret.stopTick((timeStamp)=>{
+                return true;
+            }, armature);
+            armature.animation.stop();
+            dragonBones.WorldClock.clock.remove(armature);
+        }
         /**
          * 运行龙骨动画
          * @param animationName {string} 指定播放的动画名称.
@@ -137,18 +146,29 @@ module xlLib {
          * @returns {AnimationState} 动画播放状态实例
          * 
          */ 
-        public static runDragonBonesArmature(armature: any,animationName: string,playTimes?: number,isPlay:boolean = true) {
+        public static runDragonBonesArmature(armature:dragonBones.Armature,animationName: string,playTimes?: number,isPlay:boolean = true) {
             if(armature == null) {
                 xlLib.Console.error("armature不能为空");
                 return;
-            }
-            dragonBones["WorldClock"].clock.add(armature);
-            if(isPlay){
-               armature.animation.gotoAndPlay(animationName, 0, -1, playTimes, 0);
-            }
-            else{
-                armature.animation.gotoAndStop(animationName,0);
-            }
+                }
+                dragonBones.WorldClock.clock.add(armature);
+                if(isPlay){
+                    armature.animation.gotoAndPlay(animationName, 0, -1, playTimes, 0);
+                }
+                else{
+                    armature.animation.gotoAndStop(animationName,0);
+                }
+                var _time:number;
+                egret.startTick((timeStamp)=>{
+                        if(!_time) {
+                        _time = timeStamp;
+                        }
+                        var now = timeStamp;
+                        var pass = now - _time;
+                        _time = now;
+                        dragonBones.WorldClock.clock.advanceTime(pass / 1000);
+                        return false;
+                }, armature);
         }
 
         /**
@@ -182,9 +202,11 @@ module xlLib {
                 xlLib.Console.error("armature不能为空");
                 return;
             }
-            dragonBones["WorldClock"].clock.remove(armature);
+            dragonBones.WorldClock.clock.remove(armature);
             armature.animation.stop();
-            //egret.stopTick(this.onTicker,this);
+            egret.stopTick((timeStamp)=>{
+                return true;
+            }, armature);
             armature.dispose();
         }
         /**

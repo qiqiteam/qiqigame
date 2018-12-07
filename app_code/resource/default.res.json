@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,bg_tbnn_jpg,nn_btn_tanpai_png,tb_bg_table_png",
+			"keys": "loding_bg_jpg,loding_json,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json",
 			"name": "preload"
 		},
 		{
@@ -2728,12 +2728,6 @@
 			"subkeys": "Bg_dating_qiehuanzhuangshi,Font_dating_majianglei,Font_dating_majianglei1,Font_dating_pukelei,Font_dating_pukelei1,Font_dating_remenwanfa,Font_dating_remenwanfa1,Font_dating_youxilei,Font_dating_youxilei1,bjl_game_18_bg,brnn_game_930_bg,btn_challenge_0,btn_challenge_1,btn_game_bg,btn_info_0,btn_info_1,btn_kefu_0,btn_kefu_1,btn_safebox_0,btn_safebox_1,btn_set_0,btn_set_1,btn_welfare_0,btn_welfare_1,btn_xuanzhe_0,btn_xuanzhe_1,coin_bg,di_bg,ding,ebg_game_720_bg,game_class_bg,game_class_bg1,generalize,generalize_0,generalize_1,head_icon,qznn_game_830_bg,shoppingmall,shoppingmall_0,shoppingmall_1,tbnn_game_870_bg,title_bg,topup,topup_0,topup_1,trumpet,v,zjh_game_230_bg"
 		},
 		{
-			"url": "assets/loding/loding.json",
-			"type": "sheet",
-			"name": "loding_json",
-			"subkeys": "bar_0,bar_1,spinner,tipsBg"
-		},
-		{
 			"url": "assets/loding/loding_bg.jpg",
 			"type": "image",
 			"name": "loding_bg_jpg"
@@ -4963,6 +4957,27 @@
 			"url": "assets/game/tbnn/tb_bg_table.png",
 			"type": "image",
 			"name": "tb_bg_table_png"
+		},
+		{
+			"url": "assets/loding/loding.json",
+			"type": "sheet",
+			"name": "loding_json",
+			"subkeys": "bar_0,bar_1,gamehall_logo_tex1,gamehall_logo_tex10,gamehall_logo_tex11,gamehall_logo_tex12,gamehall_logo_tex13,gamehall_logo_tex14,gamehall_logo_tex15,gamehall_logo_tex16,gamehall_logo_tex17,gamehall_logo_tex18,gamehall_logo_tex19,gamehall_logo_tex2,gamehall_logo_tex20,gamehall_logo_tex21,gamehall_logo_tex3,gamehall_logo_tex4,gamehall_logo_tex5,gamehall_logo_tex6,gamehall_logo_tex7,gamehall_logo_tex8,gamehall_logo_tex9,gamehall_slogan,spinner,tipsBg,wgwz"
+		},
+		{
+			"url": "assets/dragonbones/wzqp/wzqp_tex.png",
+			"type": "image",
+			"name": "wzqp_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/wzqp/wzqp_ske.json",
+			"type": "json",
+			"name": "wzqp_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/wzqp/wzqp_tex.json",
+			"type": "json",
+			"name": "wzqp_tex_json"
 		}
 	]
 }

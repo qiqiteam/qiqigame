@@ -200,6 +200,9 @@ class Main extends xlLib.GameDoc {
             xlLib.IosSDK.init();
         }
         this.removeLodingIcon();
+        // let loding:LodingView = new LodingView();
+        // loding.setProgress(50,100)
+        // this.addChild(loding);
         xlLib.ResLoadMgr.instance.load("hall", this.onLoadComplete, this.onResourceLoadError, this, LodingView, true);
         
         // xlLib.WebSocketMgr.getInstance().connect("47.91.221.49", ":3010");
