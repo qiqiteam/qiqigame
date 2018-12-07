@@ -630,38 +630,7 @@ public _animation_start:uiCore.Animation;
         //let a = new eui.Image;
         //a.localToGlobal();
         //moveGoldTo
-/*
-        var container = new egret.DisplayObjectContainer();
 
-
-
-        this.addChild(container);
-        container.x = 700;
-        container.y = 0;
-
-        //读取一个骨骼数据,并创建实例显示到舞台
-        var skeletonData = RES.getRes("qznn_hall_effect_girl_ske_json");
-        var textureData = RES.getRes("qznn_hall_effect_girl_tex_json");
-        var texture = RES.getRes("qznn_hall_effect_girl_tex_png");
-
-        var factory = new dragonBones.EgretFactory();
-        factory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(skeletonData));
-        factory.addTextureAtlas(new dragonBones.EgretTextureAtlas(texture, textureData));
-
-        var armature = factory.buildArmature("qznn_hall_effect_girl");
-        var armatureDisplay = armature.getDisplay();
-        dragonBones.WorldClock.clock.add(armature);
-        container.addChild(armatureDisplay);
-        armatureDisplay.x = 100;
-        armatureDisplay.y = 500;
-        armatureDisplay.scaleX = 0.5;
-        armatureDisplay.scaleY = 0.5;
-        //actionFlag = 0;
-        //启动骨骼动画播放
-        armature.animation.gotoAndPlay("newAnimation");
-
-        egret.startTick(this.onTicker, this);
-*/
         //this.suiCoreGameEndScoreResultEffect(this, true);
 
 
@@ -699,6 +668,39 @@ public _animation_start:uiCore.Animation;
             this.create();
         }, this, RES.ResourceItem.TYPE_JSON);
         */
+
+        var container = new egret.DisplayObjectContainer();
+        this.addChild(container);
+        container.x = 300;
+        container.y = 0;
+
+        //读取一个骨骼数据,并创建实例显示到舞台
+        //var skeletonData = RES.getRes("qznn_hall_effect_girl_ske_json");
+        //var textureData = RES.getRes("qznn_hall_effect_girl_tex_json");
+        //var texture = RES.getRes("qznn_hall_effect_girl_tex_png");
+
+        var skeletonData = RES.getRes("wzqp_ske_json");
+        var textureData = RES.getRes("wzqp_tex_json");
+        var texture = RES.getRes("wzqp_tex_png");
+
+        var factory = new dragonBones.EgretFactory();
+        factory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(skeletonData));
+        factory.addTextureAtlas(new dragonBones.EgretTextureAtlas(texture, textureData));
+
+        //var armature = factory.buildArmature("qznn_hall_effect_girl");
+        var armature = factory.buildArmature("wzqp");
+        var armatureDisplay = armature.getDisplay();
+        dragonBones.WorldClock.clock.add(armature);
+        container.addChild(armatureDisplay);
+        armatureDisplay.x = 100;
+        armatureDisplay.y = 500;
+        //armatureDisplay.scaleX = 0.5;
+        //armatureDisplay.scaleY = 0.5;
+        //actionFlag = 0;
+        //启动骨骼动画播放
+        //armature.animation.gotoAndPlay("newAnimation");
+        armature.animation.gotoAndPlay("wzqp");
+        egret.startTick(this.onTicker, this);
 
     }
 
@@ -2033,9 +2035,9 @@ public _animation_start:uiCore.Animation;
             }
             
             if(this.cardResult.pokes[i].win == true) {
-                EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+                EffectUtils.coinsFly_2(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
-                EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+                EffectUtils.coinsFly_2(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
             }
         }
     }

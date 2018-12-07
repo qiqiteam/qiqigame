@@ -296,6 +296,10 @@ module xlLib {
                 let isonce:boolean;
                 for(let i=0;i<len;i++){
                     let msg = arr[i];
+                    if(!msg)
+                    {
+                       continue;
+                    }
                     listen = msg[0];
                     if(!listen)
                     {

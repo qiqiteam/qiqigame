@@ -470,22 +470,21 @@ module EffectUtils {
     /**
      * 金币飞行的效
      */
-    /*
-    export function coinsFly(obj: egret.DisplayObjectContainer, startX, startY, endX = 140, endY = 64): void {
+    export function coinsFly_1(obj: egret.DisplayObjectContainer, startX, startY, endX = 140, endY = 64): void {
         var interval: number = 0;
         var coinsNum: number = 0;
         var flyEffect: Function = function () {
-            if (coinsNum > 8) {
+            if (coinsNum > 10) {
                 clearInterval(interval);
                 coinsNum = 0;
                 return;
             }
             coinsNum++;
-            var coin: eui.Image = new eui.Image('gold');
+            let coin:eui.Image = new eui.Image('nn_cion_png');
             coin.x = startX;
             coin.y = startY;
-            coin.scaleX = 0.6;
-            coin.scaleY = 0.6;
+            coin.scaleX = 1;
+            coin.scaleY = 1;
             obj.addChild(coin);
             egret.Tween.get(coin).to({ x: endX, y: endY, scaleX: 1.1, scaleY: 1.1 }, 600)
                 .wait(100)
@@ -494,12 +493,12 @@ module EffectUtils {
                 }, [obj, coin])
         }
         interval = setInterval(flyEffect.bind(this), 100);
-    }*/
+    }
 
     /**
      * 金币飞行的效
      */
-    export function coinsFly(obj, startX, startY, endX, endY, ): void {
+    export function coinsFly_2(obj, startX, startY, endX, endY, ): void {
         var interval: number = 0;
         var coinsNum: number = 0;
 
