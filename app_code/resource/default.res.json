@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,bg_tbnn_jpg,nn_btn_tanpai_png,tb_bg_table_png",
+			"keys": "loding_json,loding_bg_jpg,bg_tbnn_jpg,nn_btn_tanpai_png,tb_bg_table_png,tongbi_bei_png,tongbi_bei1_png,tongbi_bei2_png,tbnn_gamebgMusic_mp3",
 			"name": "preload"
 		},
 		{
@@ -21,7 +21,7 @@
 			"name": "zhajinhua"
 		},
 		{
-			"keys": "tb_bg_table_png,bg_tbnn_jpg,nn_btn_tanpai_png",
+			"keys": "tb_bg_table_png,bg_tbnn_jpg,nn_btn_tanpai_png,tongbi_bei2_png,tongbi_bei1_png,tongbi_bei_png",
 			"name": "tbnn"
 		}
 	],
@@ -4963,6 +4963,26 @@
 			"url": "assets/game/tbnn/tb_bg_table.png",
 			"type": "image",
 			"name": "tb_bg_table_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei.png",
+			"type": "image",
+			"name": "tongbi_bei_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei1.png",
+			"type": "image",
+			"name": "tongbi_bei1_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei2.png",
+			"type": "image",
+			"name": "tongbi_bei2_png"
+		},
+		{
+			"url": "assets/sound/tbnn/tbnn_gamebgMusic.mp3",
+			"type": "sound",
+			"name": "tbnn_gamebgMusic_mp3"
 		}
 	]
 }
