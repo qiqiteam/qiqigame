@@ -12,6 +12,9 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 	public constructor() {
 		super();
 		this.skinName = "TBNNroomViewSkin";
+
+		let musicBg = ["tbnn_gamebgMusic_mp3"];
+		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 	}
 
 	protected childrenCreated(): void {
@@ -50,6 +53,8 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 	}
 
 	public dispose(): void {
+		let musicBg = ["hall_bg_mp3"];
+		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 		xlLib.PopUpMgr.removePopUp(this, 1);
 	}
 

@@ -376,7 +376,7 @@ class TBNNView extends eui.Component {
         this.bs_img_4.visible = false;
 
 
-        this._xiabei_0.x = 751.67;
+        this._xiabei_0.x = 734.35
         this._xiabei_1.x = 342.4;
         this._xiabei_2.x = 338.05;
         this._xiabei_3.x = 730.09;
@@ -1697,7 +1697,7 @@ class TBNNView extends eui.Component {
 
         this.grpCountdown.visible = true;
 
-        this._xiabei_0.x = 751.67;
+        this._xiabei_0.x = 734.35
         this._xiabei_1.x = 342.4;
         this._xiabei_2.x = 338.05;
         this._xiabei_3.x = 730.09;
