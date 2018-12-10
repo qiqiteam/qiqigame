@@ -192,5 +192,7 @@ declare class RoomTypeItemSkin extends eui.Skin{
 }
 declare class RoomViewSkin extends eui.Skin{
 }
+declare class jhgkjhljkjkj extends eui.Skin{
+}
 declare class LoginViewSkin extends eui.Skin{
 }

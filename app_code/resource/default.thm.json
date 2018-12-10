@@ -87,6 +87,7 @@
     "resource/exml/lobby/QznnIconItemSkin.exml",
     "resource/exml/lobby/RoomTypeItemSkin.exml",
     "resource/exml/lobby/RoomViewSkin.exml",
+    "resource/exml/login/LoginEffectViewSkin.exml",
     "resource/exml/login/LoginViewSkin.exml"
   ],
   "skins": {

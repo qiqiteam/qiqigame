@@ -4998,6 +4998,26 @@
 			"url": "assets/dragonbones/wzqp/wzqp_ske.json",
 			"type": "json",
 			"name": "wzqp_ske_json"
+		},
+		{
+			"url": "assets/login/character1.png",
+			"type": "image",
+			"name": "character1_png"
+		},
+		{
+			"url": "assets/login/p_piaodai_1.png",
+			"type": "image",
+			"name": "p_piaodai_1_png"
+		},
+		{
+			"url": "assets/login/p_piaodai_2.png",
+			"type": "image",
+			"name": "p_piaodai_2_png"
+		},
+		{
+			"url": "assets/login/p_piaodai_3.png",
+			"type": "image",
+			"name": "p_piaodai_3_png"
 		}
 	]
 }
