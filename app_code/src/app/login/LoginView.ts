@@ -18,6 +18,7 @@ class LoginView extends eui.Component {
 	private lfSubscription: boolean = false;
 	private xjSubscription: boolean = false;
 	private nnSubscription: boolean = true;
+	private logineffectView:LoginEffectView;
 	constructor() {
 		super();
 		this.skinName = "LoginViewSkin";
@@ -44,6 +45,10 @@ class LoginView extends eui.Component {
 
 		EventUtil.addEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);
 		EventUtil.addEventListener(EventConst.ON_SOCKET_FAIL, this.onSocketFail, this);
+
+		this.logineffectView = new LoginEffectView();
+        this.addChildAt(this.logineffectView,1);
+		this.logineffectView.play();
 	}
 
 	private onBlack(e: egret.TouchEvent): void {

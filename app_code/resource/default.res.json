@@ -5,7 +5,7 @@
 			"name": "preload"
 		},
 		{
-			"keys": "Bg_img_jpg,lobby_json,gold_png,gameID_png,checkbox_unselect_png,checkbox_select_up_png,checkbox_select_down_png,checkbox_select_disabled_png,btn_yuyin_0_png,btn_liaotian_0_png,btn_fanhui_0_png,btn_common_1_png,btn_common_0_png,btn_close_1_png,btn_close_0_png,btn_caidan_0_png,btn_btn_0_png,btn_bg_png,btn_-cancel_1_png,btn_-cancel_0_png,btn_ cancel_1_png,btn_ cancel_0_png,_btn_start_png,pinpaicuowu_json,pinpaicuowu_png",
+			"keys": "Bg_img_jpg,lobby_json,gold_png,gameID_png,checkbox_unselect_png,checkbox_select_up_png,checkbox_select_down_png,checkbox_select_disabled_png,btn_yuyin_0_png,btn_liaotian_0_png,btn_fanhui_0_png,btn_common_1_png,btn_common_0_png,btn_close_1_png,btn_close_0_png,btn_caidan_0_png,btn_btn_0_png,btn_bg_png,btn_-cancel_1_png,btn_-cancel_0_png,btn_ cancel_1_png,btn_ cancel_0_png,_btn_start_png,pinpaicuowu_json,pinpaicuowu_png,login_json,login_bg_jpg",
 			"name": "hall"
 		},
 		{
@@ -2739,125 +2739,15 @@
 			"name": "loding_bg_jpg"
 		},
 		{
-			"url": "assets/login/account_btn.png",
-			"type": "image",
-			"name": "account_btn_png"
-		},
-		{
-			"url": "assets/login/account_btn_0.png",
-			"type": "image",
-			"name": "account_btn_0_png"
-		},
-		{
-			"url": "assets/login/account_btn_1.png",
-			"type": "image",
-			"name": "account_btn_1_png"
-		},
-		{
-			"url": "assets/login/continue_btn.png",
-			"type": "image",
-			"name": "continue_btn_png"
-		},
-		{
-			"url": "assets/login/continue_btn_0.png",
-			"type": "image",
-			"name": "continue_btn_0_png"
-		},
-		{
-			"url": "assets/login/continue_btn_1.png",
-			"type": "image",
-			"name": "continue_btn_1_png"
-		},
-		{
-			"url": "assets/login/Input_bg.png",
-			"type": "image",
-			"name": "Input_bg_png"
-		},
-		{
 			"url": "assets/login/login.json",
 			"type": "sheet",
 			"name": "login_json",
-			"subkeys": "ChooseExt,ChooseInt"
+			"subkeys": "ChooseExt,ChooseInt,Input_bg,account_btn,account_btn_0,account_btn_1,character1,continue_btn,continue_btn_0,continue_btn_1,login_btn,login_btn_0,login_btn_1,p_piaodai_1,p_piaodai_2,p_piaodai_3,pop_ups,register_btn,register_btn_0,register_btn_1,title_login,verify_btn,verify_btn_0,verify_btn_1,visitor_btn,visitor_btn_0,visitor_btn_1"
 		},
 		{
 			"url": "assets/login/login_bg.jpg",
 			"type": "image",
 			"name": "login_bg_jpg"
-		},
-		{
-			"url": "assets/login/login_btn.png",
-			"type": "image",
-			"name": "login_btn_png"
-		},
-		{
-			"url": "assets/login/login_btn_0.png",
-			"type": "image",
-			"name": "login_btn_0_png"
-		},
-		{
-			"url": "assets/login/login_btn_1.png",
-			"type": "image",
-			"name": "login_btn_1_png"
-		},
-		{
-			"url": "assets/login/pop_ups.png",
-			"type": "image",
-			"name": "pop_ups_png"
-		},
-		{
-			"url": "assets/login/register_btn.png",
-			"type": "image",
-			"name": "register_btn_png"
-		},
-		{
-			"url": "assets/login/register_btn_0.png",
-			"type": "image",
-			"name": "register_btn_0_png"
-		},
-		{
-			"url": "assets/login/register_btn_1.png",
-			"type": "image",
-			"name": "register_btn_1_png"
-		},
-		{
-			"url": "assets/login/title_login.png",
-			"type": "image",
-			"name": "title_login_png"
-		},
-		{
-			"url": "assets/login/title_prompt.png",
-			"type": "image",
-			"name": "title_prompt_png"
-		},
-		{
-			"url": "assets/login/verify_btn.png",
-			"type": "image",
-			"name": "verify_btn_png"
-		},
-		{
-			"url": "assets/login/verify_btn_0.png",
-			"type": "image",
-			"name": "verify_btn_0_png"
-		},
-		{
-			"url": "assets/login/verify_btn_1.png",
-			"type": "image",
-			"name": "verify_btn_1_png"
-		},
-		{
-			"url": "assets/login/visitor_btn.png",
-			"type": "image",
-			"name": "visitor_btn_png"
-		},
-		{
-			"url": "assets/login/visitor_btn_0.png",
-			"type": "image",
-			"name": "visitor_btn_0_png"
-		},
-		{
-			"url": "assets/login/visitor_btn_1.png",
-			"type": "image",
-			"name": "visitor_btn_1_png"
 		},
 		{
 			"url": "assets/qznnRoom/qznnroom.json",
@@ -4998,26 +4888,6 @@
 			"url": "assets/dragonbones/wzqp/wzqp_ske.json",
 			"type": "json",
 			"name": "wzqp_ske_json"
-		},
-		{
-			"url": "assets/login/character1.png",
-			"type": "image",
-			"name": "character1_png"
-		},
-		{
-			"url": "assets/login/p_piaodai_1.png",
-			"type": "image",
-			"name": "p_piaodai_1_png"
-		},
-		{
-			"url": "assets/login/p_piaodai_2.png",
-			"type": "image",
-			"name": "p_piaodai_2_png"
-		},
-		{
-			"url": "assets/login/p_piaodai_3.png",
-			"type": "image",
-			"name": "p_piaodai_3_png"
 		}
 	]
 }
