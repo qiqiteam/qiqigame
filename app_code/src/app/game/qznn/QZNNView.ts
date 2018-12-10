@@ -485,7 +485,8 @@ class QZNNView extends eui.Component {
     /**继续游戏 */
     private onRestartGame(): void {
 
-        xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        let inthematch: Inthematch = xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        inthematch.TYPE_TAP = Const.TYPE_TBNN;
 
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
         let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
@@ -1784,10 +1785,10 @@ class QZNNView extends eui.Component {
 
             if (this.cardResult.pokes[i].win == true) {
                 //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png", "qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
-                EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+                EffectUtils.coinsFly_2(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
                 //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
-                EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+                EffectUtils.coinsFly_2(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
             }
             //this.addChild(goldFlyAnimator);
             //this.goldFlyAnimatorarr.push(goldFlyAnimator);
@@ -2156,7 +2157,7 @@ class QZNNView extends eui.Component {
         this._meiniu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this)
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
-
+        EventUtil.removeEventListener(EventConst.onUserShowOrderUpdate, this.onShowOrder, this);
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);

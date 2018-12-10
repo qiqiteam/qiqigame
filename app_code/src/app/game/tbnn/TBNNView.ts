@@ -376,12 +376,12 @@ class TBNNView extends eui.Component {
         this.bs_img_4.visible = false;
 
 
-        this._xiabei_0.x = 734.35
-        this._xiabei_1.x = 342.4;
+        this._xiabei_0.x = 751.67;
+        this._xiabei_1.x = 337.84;
         this._xiabei_2.x = 338.05;
         this._xiabei_3.x = 730.09;
-        this._xiabei_4.x = 1141.63;
-        this._xiabei_5.x = 1151.63;
+        this._xiabei_4.x = 1138.59;
+        this._xiabei_5.x = 1140.99;
 
         this.grpHead0.visible = false;
         this.grpHead1.visible = false;
@@ -448,11 +448,11 @@ class TBNNView extends eui.Component {
         for (let i = 0; i < 6; i++) {
             var pos: egret.Point = new egret.Point;
             if (i == 0 || i == 3) {
-                pos.x = this['grpHead' + i].x + 15;
-                pos.y = this['grpHead' + i].y + 15;
+                pos.x = this['grpHead' + i].x + 35;
+                pos.y = this['grpHead' + i].y + 35;
             } else {
-                pos.x = this['grpHead' + i].x + 25;
-                pos.y = this['grpHead' + i].y + 40;
+                pos.x = this['grpHead' + i].x + 45;
+                pos.y = this['grpHead' + i].y + 60;
             }
             this.orginPlayerHeadPos[i] = pos;
         }
@@ -464,7 +464,8 @@ class TBNNView extends eui.Component {
     /**继续游戏 */
     private onRestartGame(): void {
 
-        xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        let inthematch: Inthematch = xlLib.PopUpMgr.addPopUp(Inthematch, this, true, true, null, 1);
+        inthematch.TYPE_TAP = Const.TYPE_TBNN;
 
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
         let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_TBNN);
@@ -510,6 +511,8 @@ class TBNNView extends eui.Component {
             token: UserInfo.getInstance().token, playway: playway.id,
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_manual, senddata, (data) => {
+            //console.log(data);
+
         }, this);
     }
 
@@ -649,6 +652,7 @@ class TBNNView extends eui.Component {
     }
     /*所有玩家 牌面信息 结算 */
     private onThecardtype(data: any): void {
+        this.game_result = data._obj.result;
         this._tishi.visible = false;
         let result = {
             pokes: [],
@@ -816,8 +820,8 @@ class TBNNView extends eui.Component {
         }
         else {
             if (this.jiesuanbol) {
-                this._pingpai.visible = false;
-                this._my_pai.visible = true;
+                //this._pingpai.visible = false;
+                //this._my_pai.visible = true;
                 this.oneFanPai();
             }
             this.timeTxt.text = "00";
@@ -870,7 +874,7 @@ class TBNNView extends eui.Component {
     private flyIndex_4: number = 0;
     private flyIndex_5: number = 0;
     private flyIndex_6: number = 0;
-    private faPaiTime = 100;
+    private faPaiTime = 50;
     private flyPaiTime = 1000;
     private pauseTime = 950;
     private expandPaiTime = 400;
@@ -1145,38 +1149,12 @@ class TBNNView extends eui.Component {
 
     private expandPai_6(): void {
         clearInterval(this.expandIntval_6);
+        var poke = this.zijipokes;
         for (let i = 0; i < 5; i++) {
             var card: eui.Image = this['_puke_' + i];
+            card.source = 'qznn_card_' + poke[i];
             var pos = this.orginPinCardPos[i];
             egret.Tween.get(card).to({ x: pos.x, y: pos.y }, this.expandPaiTime, egret.Ease.sineOut);
-        }
-        this.myCardRotationIntval = setInterval(this.myCardRotation.bind(this), this.myCardRotationTime);
-    }
-
-    private myCardRotationIntval: number = 0;
-    private myCardRotationTime: number = 400;
-    /**自己的翻牌 */
-    private myCardRotation(): void {
-        clearInterval(this.myCardRotationIntval);
-        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
-        var poke = this.zijipokes;
-        for (var i = 0; i < 5; i++) {
-            var card_my = this['_puke_' + i];
-            card_my.source = 'qznn_card_100';
-            egret.Tween.get(card_my).to({ scaleX: 0 }, 400).call(function () {
-                this[0].source = 'qznn_card_' + this[1];
-                egret.Tween.get(this[0]).to({ scaleX: 1 }, 400);
-            }, [card_my, poke[i]])
-            //var str = poke[i].toString();
-            //str = str.slice(1);
-            //var intnum = parseInt(str);
-            //if (intnum > 10) {
-            //    intnum = 10;
-            //}
-            //this.score[i] = intnum;
-            //var card_banker = this['bankerCard_' + i];
-            //card_banker.source = 'qznn_card_100';
-
         }
     }
 
@@ -1232,6 +1210,7 @@ class TBNNView extends eui.Component {
         this.isTanPai[index] = true;
 
         if (index == 0) {
+            this._my_pai.visible = true;
             this._pingpai.visible = false;
             for (var i = 0; i < 5; i++) {
                 var card_my = this['bankerCard_' + i];
@@ -1259,13 +1238,13 @@ class TBNNView extends eui.Component {
 
     /**所有翻牌 */
     private oneFanPai(): void {
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 6; i++) {
             if (this.isTanPai[i] == false) {
                 this.onePlayerFanPai(i);
             }
         }
 
-
+        this.interval = setInterval(this.cardEffectEnd.bind(this), 2000);
     }
 
 
@@ -1426,31 +1405,10 @@ class TBNNView extends eui.Component {
         this.interval = setInterval(this.cardEffectEnd.bind(this), 2000);
     }
 
+    /**结算 */
     private cardEffectEnd(): void {
         clearInterval(this.interval);
-        var data = this.cardResult;
-        var isShow: boolean = false;
-        //显示比牌结果，显示是否通赔或者通杀
-        if (data.result[0] == 1 && data.result[1] == 1 && data.result[2] == 1 && data.result[3] == 1) {
-            // this.showGameTips(5);
-            isShow = true;
-        }
-        if (data.result[0] == 0 && data.result[1] == 0 && data.result[2] == 0 && data.result[3] == 0) {
-            // this.showGameTips(4);
-            isShow = true;
-        }
-        if (isShow) {
-            //this.interval = setInterval(this.showGameResult.bind(this), 1000);
-        }
-        else {
-            //this.showGameResult();
-        }
-        // this.cdTimer.start();
-        //this.cdNum = 5;
-
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
-
-
         let zhuangPos = {
             x: this.orginPlayerHeadPos[this.zhaungIndex].x,
             y: this.orginPlayerHeadPos[this.zhaungIndex].y
@@ -1481,10 +1439,10 @@ class TBNNView extends eui.Component {
 
             if (this.cardResult.pokes[i].win == true) {
                 //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png", "qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
-                EffectUtils.coinsFly(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+                EffectUtils.coinsFly_1(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
                 //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
-                EffectUtils.coinsFly(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+                EffectUtils.coinsFly_1(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
             }
             //this.addChild(goldFlyAnimator);
             //this.goldFlyAnimatorarr.push(goldFlyAnimator);
@@ -1529,7 +1487,7 @@ class TBNNView extends eui.Component {
 
         if (state) {
 
-            if (index % 2 == 0) {
+            if (index == 3 || index == 0) {
                 var num0 = new QZNNHEff();
                 num0.x = -84;
                 num0.y = -72;
@@ -1573,16 +1531,21 @@ class TBNNView extends eui.Component {
             str = "-";
         }
         if (index == 0) {
-            label.x = 0;
+            label.x = 90;
             label.y = -40;
-            label.textAlign = egret.HorizontalAlign.RIGHT;
         } else if (index == 1) {
             label.x = 30;
             label.y = -40;
         } else if (index == 2) {
-            label.x = 90;
+            label.x = 30;
             label.y = -40;
         } else if (index == 3) {
+            label.x = 90;
+            label.y = -40;
+        } else if (index == 4) {
+            label.x = 30;
+            label.y = -40;
+        } else if (index == 5) {
             label.x = 30;
             label.y = -40;
         }
@@ -1599,13 +1562,13 @@ class TBNNView extends eui.Component {
         if (this.game_result == 1) {
             this.addNNVictoryEffect();
             this.game_result = 0;
-        } else if (this.game_result == 2) {
+        } /*else if (this.game_result == 2) {
             this.addTongsha();
             this.game_result = 0;
         } else if (this.game_result == 3) {
             this.addTongpei();
             this.game_result = 0;
-        }
+        }*/
         this._jixu.visible = true;
 
         UserInfo.getInstance().isGameStart = false;
@@ -1647,8 +1610,8 @@ class TBNNView extends eui.Component {
             this["_xiabei_" + index].visible = false;
             this["_xiabei_0_" + index].visible = false;
 
-            this["_whether_" + index].visible = false;
-            this["_img_" + index].visible = false;
+            //this["_whether_" + index].visible = false;
+            //this["_img_" + index].visible = false;
         }
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
@@ -1697,12 +1660,12 @@ class TBNNView extends eui.Component {
 
         this.grpCountdown.visible = true;
 
-        this._xiabei_0.x = 734.35
-        this._xiabei_1.x = 342.4;
+        this._xiabei_0.x = 751.67;
+        this._xiabei_1.x = 337.84;
         this._xiabei_2.x = 338.05;
         this._xiabei_3.x = 730.09;
-        this._xiabei_4.x = 1141.63;
-        this._xiabei_5.x = 1151.63;
+        this._xiabei_4.x = 1138.59;
+        this._xiabei_5.x = 1140.99;
 
         this.grpHead0.visible = false;
         this.grpHead1.visible = false;
@@ -1846,9 +1809,6 @@ class TBNNView extends eui.Component {
 
         if (this.interval != 0) {
             clearInterval(this.interval);
-        }
-        if (this.myCardRotationIntval != 0) {
-            clearInterval(this.myCardRotationIntval);
         }
 
         if (this.flyIntval_1 != 0) {
