@@ -2,14 +2,14 @@
 <e:Skin class="RechargeViewSkin" width="1340" height="696" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing">
 	<w:Config id="166d37a4974"></w:Config>
-	<e:Image source="img_bg_png" width="1340" height="696" horizontalCenter="0" verticalCenter="0" />
+	<e:Image width="1340" height="696" horizontalCenter="0" verticalCenter="0"  source="img_bg"/>
 	<e:Group width="100%" height="95" horizontalCenter="0" top="0" anchorOffsetY="0">
-		<e:Image source="img_bottom_png" horizontalCenter="0" verticalCenter="0" x="307" y="301" scaleX="1" scaleY="1" />
+		<e:Image source="img_bottom" horizontalCenter="0" verticalCenter="0" x="307" y="301" scaleX="1" scaleY="1" />
 		<e:Image horizontalCenter="0" verticalCenter="0" x="317" y="311" scaleX="1" scaleY="1" source="img_recharge_png" />
 		<e:Button id="btn_return" label="" right="0" top="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_ cancel_0_png" source.down="btn_ cancel_1_png" />
+					<e:Image width="100%" height="100%" source="btn_cancel_0" source.down="btn_cancel_1" />
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
 				</e:Skin>
 			</e:skinName>
@@ -159,7 +159,7 @@
 				<e:Button label="10" x="53" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -167,7 +167,7 @@
 				<e:Button label="198" x="292" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -175,7 +175,7 @@
 				<e:Button label="598" x="530" y="112.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -183,7 +183,7 @@
 				<e:Button label="988" x="757" y="112.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -191,7 +191,7 @@
 				<e:Button label="1498" x="53" y="222.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -199,7 +199,7 @@
 				<e:Button label="1998" x="292" y="222.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -207,7 +207,7 @@
 				<e:Button label="2998" x="530" y="222.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -215,7 +215,7 @@
 				<e:Button label="4998" x="757" y="222.03" scaleX="1" scaleY="1" alpha="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -254,7 +254,7 @@
 				<e:Button label="10" x="53" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198" height="57">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -262,7 +262,7 @@
 				<e:Button label="198" x="292" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198" height="57">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -270,7 +270,7 @@
 				<e:Button label="598" x="530" y="112.03" scaleX="1" scaleY="1" width="198" height="57">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -278,7 +278,7 @@
 				<e:Button label="988" x="757" y="112.03" scaleX="1" scaleY="1" width="198">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -286,7 +286,7 @@
 				<e:Button label="1498" x="53" y="222.03" scaleX="1" scaleY="1" width="198">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -294,7 +294,7 @@
 				<e:Button label="1998" x="292" y="222.03" scaleX="1" scaleY="1" width="198">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -302,7 +302,7 @@
 				<e:Button label="2998" x="530" y="222.03" scaleX="1" scaleY="1" width="198">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -310,7 +310,7 @@
 				<e:Button label="4998" x="757" y="222.03" scaleX="1" scaleY="1" alpha="1" width="198">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+					<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 				</e:skinName>
@@ -350,7 +350,7 @@
 				<e:Button label="10" x="53" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -358,7 +358,7 @@
 				<e:Button label="198" x="292" y="112.03" scaleX="1" scaleY="1" alpha="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -366,7 +366,7 @@
 				<e:Button label="598" x="530" y="112.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -374,7 +374,7 @@
 				<e:Button label="988" x="757" y="112.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -382,7 +382,7 @@
 				<e:Button label="1498" x="53" y="222.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -390,7 +390,7 @@
 				<e:Button label="1998" x="292" y="222.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -398,7 +398,7 @@
 				<e:Button label="2998" x="530" y="222.03" scaleX="1" scaleY="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -406,7 +406,7 @@
 				<e:Button label="4998" x="757" y="222.03" scaleX="1" scaleY="1" alpha="1" width="198">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
@@ -422,7 +422,7 @@
 				<e:Button id="btn_ddcx" label="订单查询" horizontalCenter="375" bottom="46.420000000000016" x="367.0000000000001" y="341" scaleX="1" scaleY="1" width="200" height="50">
 					<e:skinName>
 					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="Img_confirm_up_png" source.down="Img_confirm_down_png"/>
+						<e:Image width="100%" height="100%" source="Img_confirm_up" source.down="Img_confirm_down_png"/>
 						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 					</e:Skin>
 					</e:skinName>
