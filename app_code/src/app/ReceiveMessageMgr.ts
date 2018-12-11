@@ -15,6 +15,7 @@ module xlLib {
 		}
 
 		public initPushMessage() {
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserList, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserLeave, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.niuniu_leave, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserShowOrderUpdate, this.onMessage);

@@ -31,6 +31,7 @@
     "resource/exml/game/bjl/BJLroomViewSkin.exml",
     "resource/exml/game/brnn/BRNNHeadSkin.exml",
     "resource/exml/game/brnn/BRNNViewSkin.exml",
+    "resource/exml/game/brnn/BRNNframeSkin.exml",
     "resource/exml/game/brnn/BRNNroomViewSkin.exml",
     "resource/exml/game/erbagang/ErBaGangViewSkin.exml",
     "resource/exml/game/erbagang/ErBaGangroomViewSkin.exml",

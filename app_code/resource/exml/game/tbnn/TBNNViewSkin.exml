@@ -104,7 +104,7 @@
 
 
 	</e:Group>
-	<e:Group x="0" y="0" width="1472" height="828" locked="true">
+	<e:Group x="0" y="0" width="1472" height="828">
 		<e:Group id="grpHead1" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" y="430" x="53">
 			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
 			<e:Image id="imghead1" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>

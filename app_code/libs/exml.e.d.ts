@@ -80,6 +80,8 @@ declare class BRNNHeadSkin extends eui.Skin{
 }
 declare class BRNNViewSkin extends eui.Skin{
 }
+declare class BRNNframeSkin extends eui.Skin{
+}
 declare class BRNNroomViewSkin extends eui.Skin{
 }
 declare class ErBaGangViewSkin extends eui.Skin{

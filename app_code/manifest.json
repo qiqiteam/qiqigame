@@ -15,9 +15,9 @@
 	],
 	"game": [
 		"bin-debug/views/LobbyScene.js",
-		"bin-debug/app/Const.js",
 		"bin-debug/views/GameDoc.js",
 		"bin-debug/views/GameScene.js",
+		"bin-debug/app/Const.js",
 		"bin-debug/app/ReceiveMessageMgr.js",
 		"bin-debug/app/component/Hint.js",
 		"bin-debug/app/component/Inthematch.js",
@@ -40,6 +40,7 @@
 		"bin-debug/app/game/bjl/BJLTypeItem.js",
 		"bin-debug/app/game/bjl/BJLUtil.js",
 		"bin-debug/app/game/bjl/BJLView.js",
+		"bin-debug/app/game/brnn/BRNNframe.js",
 		"bin-debug/app/game/brnn/BRNNHead.js",
 		"bin-debug/app/game/brnn/BrnnMainView.js",
 		"bin-debug/app/game/brnn/BRNNroomView.js",
@@ -94,7 +95,7 @@
 		"bin-debug/app/game/tbnn/TBNNScene.js",
 		"bin-debug/app/game/tbnn/TBNNUtil.js",
 		"bin-debug/app/game/tbnn/TBNNView.js",
-		"bin-debug/app/game/welfare/AwardItem.js",
+		"bin-debug/app/component/ComBox.js",
 		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
@@ -174,6 +175,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/component/ComBox.js"
+		"bin-debug/app/game/welfare/AwardItem.js"
 	]
 }

@@ -10,7 +10,8 @@ class EventConst {
 
     /**发送自己拼牌顺序 */
     public static niuniu_manual: string = "niuniu_manual";
-
+    /**请求玩家列表 */
+    public static niuniu_player: string = "niuniu_player";
     /**加入房间 */
     public static joinroom: string = "joinroom";
     /**开始牛牛游戏*/
@@ -64,6 +65,8 @@ class EventConst {
     public static onGameStatusChange: string = "onGameStatusChange";
     /**所有玩家列表*/
     public static players: string = "players";
+    /**前20名玩家列表*/
+    public static onUserList: string = "onUserList";
     /**新玩家加入*/
     public static onNewUserEnterGame: string = "onNewUserEnterGame";
     /**下注通知(所有人)*/
