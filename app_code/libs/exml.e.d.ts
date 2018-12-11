@@ -174,7 +174,13 @@ declare class WelfareViewSkin extends eui.Skin{
 }
 declare class ZJHHeadSkin extends eui.Skin{
 }
+declare class ZJHHelpPanlSkin extends eui.Skin{
+}
+declare class ZJHRecordPanlSkin extends eui.Skin{
+}
 declare class ZJHViewSkin extends eui.Skin{
+}
+declare class ZhajhhelpTypeSkin extends eui.Skin{
 }
 declare class ZhajhroomViewSkin extends eui.Skin{
 }

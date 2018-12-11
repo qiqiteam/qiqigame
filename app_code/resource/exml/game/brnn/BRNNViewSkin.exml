@@ -578,7 +578,7 @@
 			<e:Image id="imghead0" width="88" height="88" x="25.83" y="27.28" source="women7_png"/>
 			<e:Label id="labelHead0" text="世界第一赌神" x="136.36" y="38.2" textColor="0xf2b354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
 			<e:Label id="labelGold0" text="1000000" x="171.53" y="80.2" size="30" fontFamily="Microsoft YaHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1"/>
-			<e:Image width="36" height="36" x="131.34" source="img_jinbi_png" y="80.2" scaleX="1" scaleY="1"/>
+			<e:Image width="36" height="36" x="131.34" source="img_jinbi" y="80.2" scaleX="1" scaleY="1"/>
 
 		</e:Group>
 		<e:Group id="_btn_switch" width="809.79" height="100%" anchorOffsetX="0" y="0" x="331">

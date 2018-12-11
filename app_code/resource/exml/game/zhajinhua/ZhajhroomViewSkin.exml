@@ -1,85 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="ZhajhroomViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
-	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="room_zjh_bg_jpg"/>
-	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
-		<e:Image scaleX="1" scaleY="1" x="360.71" source="zjh_effcet_pic_person" bottom="0"/>
-	</e:Group>
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
-		<e:Image scaleX="1" scaleY="1" source="ding" horizontalCenter="0" top="0" locked="true"/>
-		<e:Button id="_menu" label="" x="1278.58" y="1">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="_rule" label="" x="1094" y="1">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-
-
-
-		<e:Image scaleX="1" scaleY="1" source="coin_bg" horizontalCenter="0" y="17"/>
-
-
-
-		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
-		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1278.58" source="room_meun_btn_0"/>
-		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1096.45" source="room_rule_btn_0"/>
-
-				<e:Button id="_btn_close" label="" x="42" y="9" scaleX="1" scaleY="1">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="room_close" source.down="room_close"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Image width="186" height="62" touchEnabled="false" x="267.71" y="9" source="title_zhajinhuua"/>
-
-	</e:Group>
-	<e:Group width="294" height="742" anchorOffsetY="0" left="0" anchorOffsetX="0" bottom="0">
-		<e:Image source="room_menu_bg" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
-		<e:Button id="_record" label="" x="57" y="633">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Image width="154" height="76" touchEnabled="false" x="57" y="633" source="root_record_btn_0"/>
-	</e:Group>
-	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0">
-
-		<e:Button id="_btn_cjc" label="" x="82.14" y="57.91" scaleX="1" scaleY="1">
+	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="gf_room_bg_png"/>
+	<e:Image scaleX="1" scaleY="1" x="49.94" bottom="0" source="gf_effcet_pic_person_png"/>
+	<e:Image width="853" height="674" x="566.24" source="gf_room_pic_bg_png" anchorOffsetX="0" bottom="0"/>
+	<e:Group width="100%" height="117.21" top="0" horizontalCenter="0" anchorOffsetY="0">
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" top="0" source="gf_room_user_bg_png" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="116.16"/>
+		<e:Button id="_return" label="" y="0" x="1298">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="zjh_pic1" source.down="zjh_pic1"/>
+				<e:Image width="100%" height="100%" source="gf_room_return_png" source.down="gf_room_return_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Image source="zjh_pic4" y="557" x="81"/>
-		<e:Image source="zjh_pic2" y="223.57666666666663" scaleX="1" scaleY="1" x="81"/>
-		<e:Image source="zjh_pic3" y="390.2433333333333" scaleX="1" scaleY="1" x="81"/>
-
-
-
-
-
+		<e:Button id="_record" label="" x="1172.85" y="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="gf_room_icon_record_png" source.down="gf_room_icon_record_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="_help" label="" x="1045.5" y="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="gf_room_icon_help_png" source.down="gf_room_icon_help_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image width="186" height="62" touchEnabled="false" y="12.54" source="gf_logo_png" x="643"/>
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="-665" y="9.08" source="gf_effect_kiss_0_png" anchorOffsetX="0" width="88.09" anchorOffsetY="0" height="93.45"/>
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="-589" y="59.07" anchorOffsetX="0" width="24" anchorOffsetY="0" height="24" source="gf_room_gold_png"/>
+		<e:Label id="_coin_label" text="733737337" y="53.36" scaleX="1" scaleY="1" size="25" fontFamily="Arial" verticalAlign="middle" textAlign="left" width="180" height="34" horizontalCenter="-479" bold="true"/>
+		<e:Label id="_id_tittle" text="ID:" y="16.98" scaleX="1" scaleY="1" size="25" fontFamily="Arial" verticalAlign="middle" textAlign="left" width="180" height="34" horizontalCenter="-504" bold="true"/>
+		<e:Label id="_id_lable" text="_test337" y="16.98" scaleX="1" scaleY="1" size="25" fontFamily="Arial" verticalAlign="middle" textAlign="left" width="180" height="34" horizontalCenter="-468" bold="true"/>
 	</e:Group>
-
-
-
-
-
-
-
+	<e:Group width="662.13" height="448.49" anchorOffsetX="0" anchorOffsetY="0" x="693.43" y="248.43">
+		<e:Button id="_btn_cjc" label="" x="82.14" y="57.91" scaleX="1" scaleY="1" width="154" height="447">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="gf_game_room_bg_1_png" source.down="gf_game_room_bg_1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image y="557" x="81" source="gf_game_room_bg_2_png"/>
+		<e:Image y="223.57666666666663" scaleX="1" scaleY="1" x="81" source="gf_game_room_bg_3_png"/>
+		<e:Image y="390.2433333333333" scaleX="1" scaleY="1" x="81" source="gf_game_room_bg_4_png"/>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
 </e:Skin>

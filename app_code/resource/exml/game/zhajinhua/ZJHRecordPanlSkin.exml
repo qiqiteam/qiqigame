@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ZJHRecordPanlSkin" width="983" height="462" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="983" height="462" source="gf_bg_l_png" top="0" left="0"/>
+	<e:Button id="_btn_record_close" label="" x="901" y="37" width="65">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="gf_bg_close_png" source.down="gf_bg_close_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image width="69" height="35" y="13.5" source="gf_tip_ts_png" x="416"/>
+	<e:Image width="624" height="323" x="36" y="107" anchorOffsetX="0" anchorOffsetY="0" source="gf_paixing_png"/>
+</e:Skin>

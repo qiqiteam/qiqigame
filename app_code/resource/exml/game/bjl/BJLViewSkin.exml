@@ -73,7 +73,7 @@
 			<e:Image id="imghead0" width="135" height="135" x="0" source="F1_03_png" y="0"/>
 			<e:Label id="labelHead0" text="世界第一赌神" x="150.01999999999998" y="61" textColor="0xf2b354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
 			<e:Label id="labelGold0" text="1000000" x="191.84000000000003" y="104.33000000000004" size="30" fontFamily="SimHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1"/>
-			<e:Image width="36" height="36" x="145" source="img_jinbi_png" y="103" scaleX="1" scaleY="1"/>
+			<e:Image width="36" height="36" x="145" source="img_jinbi" y="103" scaleX="1" scaleY="1"/>
 			<e:Image id="_my_img_zhuang" x="101.32" y="-7.34" source="img_zhuang_png" scaleX="0.6" scaleY="0.6" visible="false"/>
 		</e:Group>
 

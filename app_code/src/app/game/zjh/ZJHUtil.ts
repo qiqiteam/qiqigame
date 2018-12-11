@@ -104,17 +104,17 @@ class ZJHUtil {
     public getCardType(index): string {
         switch (index) {
             case 1:
-                return '豹子';
+                return 'gf_px6_png';
             case 2:
-                return '同花顺';
+                return 'gf_px5_png';
             case 3:
-                return '金花';
+                return 'gf_px4_png';
             case 4:
-                return '顺子';
+                return 'gf_px3_png';
             case 5:
-                return '对子';
+                return 'gf_px2_png';
             case 6:
-                return '单张';
+                return 'gf_px1_png';
         }
     }
     /**显示玩家加注类型 */

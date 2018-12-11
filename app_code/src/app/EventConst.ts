@@ -55,8 +55,10 @@ class EventConst {
     public static erbagang_hog: string = "erbagang_hog";
     /**投注倍数*/
     public static erbagang_bet: string = "erbagang_bet";
-    /**返回骰子*/
-    //public static dice: string = "dice";
+     /**关闭自动跟注 */
+    public static closeAutoFollow: string = "closeAutoFollow";
+     /**自动跟注 */
+    public static onAutoFollow: string = "onAutoFollow";
 
     //------------------S to C---------------------服务端回包监听数据
     /**抢庄牛牛拼牌通知(所有人) */
@@ -122,23 +124,33 @@ class EventConst {
     /**(百家乐退出房间)*/
     public static gameOverSucces: string = "gameOverSucces";
 
-
-
-
-
-
-
-
-    /**(检查玩家是否中途退出房间)*/
+    /**推送*玩家全压 */
+    public static onUserAllPress: string = "onUserAllPress";
+    /**推送*玩家看牌 */
+    public static onUserSeeCard: string = "onUserSeeCard";
+    /**推送*玩家比牌结果 */
+    public static onUserToCard: string = "onUserToCard";
+    /**推送*玩家弃牌 */
+    public static onUserWaiveCard: string = "onUserWaiveCard";
+    /**(推送*异常及时通知)*/
+    public static onTimelyNotify: string = "onTimelyNotify";
+     /**(推送*ai比牌)*/
+    public static singonAiReadyTocard: string = "singonAiReadyTocard";
+    /**(推送*检查玩家是否中途退出房间)*/
     public static gamestatus: string = "gamestatus";
-
-    /**(游戏类型)*/
-    public static gambleType: string = "gambleType";
-    /**(玩家下注)*/
-    //public static botpour:string ="botpour";
-    /**(结算)*/
-    public static settlement: string = "settlement";
-    /**(退出房间)*/
+    /**(推送*玩家下注类型)*/
+    public static onUserBetSelect: string = "onUserBetSelect";
+    /**(推送*金花其他玩家下注)*/
+    public static onAiBetOrderUpdate: string = "onAiBetOrderUpdate";
+    /**(推送*金花其他看牌)*/
+    public static onAiSeeCard: string = "onAiSeeCard";
+    /**(推送*金花其他弃牌)*/
+    public static onAiWaiveCard: string = "onAiWaiveCard";
+    /**(推送*玩家超时弃牌)*/
+    public static onUserExceWaiveCard: string = "onUserExceWaiveCard";
+    /**(推送*结算，游戏结束)*/
+    public static onCheckout: string = "onCheckout";
+    /**(推送*退出房间)*/
     public static leave: string = "leave";
 
     /**(金花其他下注)*/
@@ -149,6 +161,12 @@ class EventConst {
     public static otherAbandon: string = "otherAbandon";
     /**(游戏结束)*/
     public static gameOver: string = "gameOver";
-
+    /**(游戏类型)*/
+    public static gambleType: string = "gambleType";
+    /**(玩家下注)*/
+    //public static botpour:string ="botpour";
+    /**(结算)*/
+    public static settlement: string = "settlement";
+    /**(退出房间)*/
 
 }
