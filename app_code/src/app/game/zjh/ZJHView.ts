@@ -393,7 +393,7 @@ class ZJHView extends eui.Component {
         } else if (e.target == this._btn_quanxia) {
             xlLib.TipsUtils.showFloatWordTips("全压");
             this.sendamessage(EventConst.pressure, null);
-            this.onGenZhuClick();
+            this.onGenZhuClick(0,this.shortGold);
         } else if (e.target == this._btn_qipai) {
             this.sendamessage(EventConst.abandon, null);
             xlLib.TipsUtils.showFloatWordTips("弃牌");
@@ -412,14 +412,12 @@ class ZJHView extends eui.Component {
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[1]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            this.onGenZhuClick();
             console.log(this.byOpenId);
         } else if (e.target == this.grpHead2) {
             xlLib.TipsUtils.showFloatWordTips("点击玩家2");
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[2]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            //this.onGenZhuClick();
             console.log("可以与2号玩家比牌");
             console.log(this.byOpenId);
         } else if (e.target == this.grpHead3) {
@@ -427,7 +425,6 @@ class ZJHView extends eui.Component {
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[3]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            //this.onGenZhuClick();
             console.log("可以与3号玩家比牌");
             console.log(this.byOpenId);
         } else if (e.target == this.grpHead4) {
@@ -435,7 +432,6 @@ class ZJHView extends eui.Component {
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[4]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            //this.onGenZhuClick();
             console.log("可以与4号玩家比牌");
             console.log(this.byOpenId);
         } else if (e.target == this._btn_menu) {
@@ -666,6 +662,9 @@ class ZJHView extends eui.Component {
     private gamestatue(data: any): void {
         /**0.准备中  1.开始游戏 2.游戏结束*/
         if (data.param.command == "onGameStatusChange") {
+            if (data.param.roomStatus == 0) {
+                this.grpprepare.visible = true;//准备提示弹框
+            }
             if (data.param.roomStatus == 1) {
                 console.log("游戏开始，发牌");
                 this.zhangIndex = UserInfo.getInstance().findSeatNumber(data.param.index);
@@ -724,6 +723,7 @@ class ZJHView extends eui.Component {
     private callnum: number;//存放每次能加注的倍数
     private UsId: string;//存储我的id
     public nowUserGolds: number;//当前玩家剩余金币
+    public shortGold:number;//当前玩家剩余金币不足，
     /**判断进行操作 接收下注类型*/
     private gametype(data: any): void {
         if (data.param.code == 200) {
@@ -791,6 +791,7 @@ class ZJHView extends eui.Component {
                 this.img_quanya.visible = true;
                 this.lab_quanyaNumber.visible = true;
                 this.lab_quanyaNumber.text = (this.nowUserGolds).toString();
+                this.shortGold=this.nowUserGolds;
             }
         }
     }
@@ -798,7 +799,7 @@ class ZJHView extends eui.Component {
 
     private Bet(data: any): void {
         if (data.param.command == "onUserBetOrderUpdate" && UserInfo.getInstance().uid == data.param.userId) {
-            this.onGenZhuClick();
+            this.onGenZhuClick(data.param.index, data.param.data);
             this._btn_genzhu.visible = false;
             this.img_genzhu.visible = false;
             this.lab_callNumber.visible = false;
@@ -822,7 +823,7 @@ class ZJHView extends eui.Component {
     private otherplayerBet(data: any): void {
         //this.notAbandbotp=[];//清空
         if (data.param.command == "onAiBetOrderUpdate" && UserInfo.getInstance().uid != data.param.userId) {
-            this.onPlayerGenZhu(data.param.index, 10000);
+            this.onPlayerGenZhu(data.param.index, data.param.data);
             this.lab_deskGolds.text = (data.param.golds / 100).toString();//玩家下注更新牌桌金币数
             let otherId: string;
             let therGolds: number;
@@ -844,7 +845,8 @@ class ZJHView extends eui.Component {
             console.log(this.notAbandbotp);
 
         }
-    }
+    } 
+   
     /**全压*/
     private ALLIN(data: any): void {
         if (data.param.command == "onUserAllPress" && data.param.code == 200) {
@@ -859,7 +861,7 @@ class ZJHView extends eui.Component {
     }
     /***(推送*异常及时通知 比牌结果推送)*/
     private timeInfo(data: any): void {
-        if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 3) {
+        if (data.param.command == "onTimelyNotify" && data.param.autoButState == 300) {
             console.log("玩家全压和其他玩家比牌", data);
             console.log(data.param.json);
             /**AI玩家胜利 */
@@ -890,16 +892,17 @@ class ZJHView extends eui.Component {
                 console.log("玩家全压获胜");
                 this.anotherDontCard(data.param.index);
             }
-        } else if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 0) {
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoButState == 100) {
             //开启自动跟注
-            console.log("++++++++++++++++++++++++++data.param.state == 0",data);
+            console.log("++++++++++++++++++++++++++data.param.state == 100", data);
+            this.img_autogenzhu.visible = false;
             this.img_autogenzhu.visible = false;
             this._btn_cancelautogenzhu.visible = true;
             this.img_cancelautogenzhu0.visible = true;
             this.img_cancelautogenzhu1.visible = true;
-        } else if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 1) {
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoButState != 100&&data.param.autoButState != 300) {
             //关闭自动跟注
-            console.log("++++++++++++++++++++++++++data.param.state == 1",data);
+            console.log("++++++++++++++++++++++++++data.param.state == 200", data);
             this.img_autogenzhu.visible = true;
             this._btn_autogenzhu.visible = true;
             this._btn_cancelautogenzhu.visible = false;
@@ -1109,11 +1112,11 @@ class ZJHView extends eui.Component {
         var poke = data.pokes;
     }
     /**玩家跟注 */
-    private onGenZhuClick() {
+    private onGenZhuClick(index,gold) {
         var p: egret.Point = new egret.Point();
         p.x = 580;
         p.y = 620;
-        this.showCoins(p, 10000);
+        this.showCoins(p, gold);
     }
     /**其他玩家跟注 */
     private onPlayerGenZhu(index, gold) {

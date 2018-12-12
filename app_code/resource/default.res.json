@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json",
+			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,gf_icon_chip_sm3_png",
 			"name": "preload"
 		},
 		{
@@ -4668,11 +4668,6 @@
 			"name": "gf_icon_chip_sm2_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_icon_chip_sm3.PNG",
-			"type": "bin",
-			"name": "gf_icon_chip_sm3_PNG"
-		},
-		{
 			"url": "assets/game/zhajh/gf_icon_chip_sm4.png",
 			"type": "image",
 			"name": "gf_icon_chip_sm4_png"
@@ -5128,11 +5123,6 @@
 			"name": "gf_table_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_table_0.png",
-			"type": "image",
-			"name": "gf_table_0_png"
-		},
-		{
 			"url": "assets/game/zhajh/gf_tip_anniu.png",
 			"type": "image",
 			"name": "gf_tip_anniu_png"
@@ -5188,21 +5178,6 @@
 			"name": "Img_zjh_headbg_png"
 		},
 		{
-			"url": "assets/game/zhajh/lab_calldown.png",
-			"type": "image",
-			"name": "lab_calldown_png"
-		},
-		{
-			"url": "assets/game/zhajh/lab_genzhu.png",
-			"type": "image",
-			"name": "lab_genzhu_png"
-		},
-		{
-			"url": "assets/game/zhajh/lab_jiazhu.png",
-			"type": "image",
-			"name": "lab_jiazhu_png"
-		},
-		{
 			"url": "assets/game/zhajh/lab_num_0.png",
 			"type": "image",
 			"name": "lab_num_0_png"
@@ -5248,26 +5223,6 @@
 			"name": "lab_num_9_png"
 		},
 		{
-			"url": "assets/game/zhajh/lab_zjh_up_discard.png",
-			"type": "image",
-			"name": "lab_zjh_up_discard_png"
-		},
-		{
-			"url": "assets/game/zhajh/lab_zjh_up_prepare.png",
-			"type": "image",
-			"name": "lab_zjh_up_prepare_png"
-		},
-		{
-			"url": "assets/game/zhajh/lab_zjh_up_seecard.png",
-			"type": "image",
-			"name": "lab_zjh_up_seecard_png"
-		},
-		{
-			"url": "assets/game/zhajh/lab_zjh_up_startgame.png",
-			"type": "image",
-			"name": "lab_zjh_up_startgame_png"
-		},
-		{
 			"url": "assets/game/zhajh/zjh_btn_fankui.png",
 			"type": "image",
 			"name": "zjh_btn_fankui_png"
@@ -5293,44 +5248,9 @@
 			"name": "bg_jianbian_2_png"
 		},
 		{
-			"url": "assets/game/zhajh/bg_zjh.jpg",
-			"type": "image",
-			"name": "bg_zjh_jpg"
-		},
-		{
 			"url": "assets/game/zhajh/bg_zjh_buttom.png",
 			"type": "image",
 			"name": "bg_zjh_buttom_png"
-		},
-		{
-			"url": "assets/game/zhajh/btn_bipai.png",
-			"type": "image",
-			"name": "btn_bipai_png"
-		},
-		{
-			"url": "assets/game/zhajh/btn_quanxia.png",
-			"type": "image",
-			"name": "btn_quanxia_png"
-		},
-		{
-			"url": "assets/game/zhajh/btn_zjh_up_preparebg.png",
-			"type": "image",
-			"name": "btn_zjh_up_preparebg_png"
-		},
-		{
-			"url": "assets/game/zhajh/btn_zjh_up_record.png",
-			"type": "image",
-			"name": "btn_zjh_up_record_png"
-		},
-		{
-			"url": "assets/game/zhajh/btn_zjh_up01_bg.png",
-			"type": "image",
-			"name": "btn_zjh_up01_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/btn_zjh_up02_bg.png",
-			"type": "image",
-			"name": "btn_zjh_up02_bg_png"
 		},
 		{
 			"url": "assets/game/zhajh/checkbox_down.png",
@@ -5418,19 +5338,9 @@
 			"name": "gf_bipaiguang_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_btn_ban.png",
-			"type": "image",
-			"name": "gf_btn_ban_png"
-		},
-		{
 			"url": "assets/game/zhajh/gf_btn_chat.png",
 			"type": "image",
 			"name": "gf_btn_chat_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_btn_follow.png",
-			"type": "image",
-			"name": "gf_btn_follow_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_btn_game_begin_normal.png",
@@ -5441,21 +5351,6 @@
 			"url": "assets/game/zhajh/gf_btn_menu.png",
 			"type": "image",
 			"name": "gf_btn_menu_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_btn_pk.png",
-			"type": "image",
-			"name": "gf_btn_pk_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_btn_txt_qxgz.png",
-			"type": "image",
-			"name": "gf_btn_txt_qxgz_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_btn_txt_zdgz.png",
-			"type": "image",
-			"name": "gf_btn_txt_zdgz_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_chip_bg.png",
@@ -5551,11 +5446,6 @@
 			"url": "assets/game/zhajh/gf_guzhuyizhi0.png",
 			"type": "image",
 			"name": "gf_guzhuyizhi0_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_heguan.png",
-			"type": "image",
-			"name": "gf_heguan_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_huoping_0.png",
@@ -6712,6 +6602,11 @@
 			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_..png",
 			"type": "image",
 			"name": "gf_txt_btn.png_._png"
+		},
+		{
+			"name": "gf_icon_chip_sm3_png",
+			"type": "image",
+			"url": "assets/game/zhajh/gf_icon_chip_sm3.png"
 		}
 	]
 }

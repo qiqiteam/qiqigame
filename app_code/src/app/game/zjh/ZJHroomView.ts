@@ -25,8 +25,7 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
 		this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
 		EventUtil.addEventListener(EventConst.onGameStatusChange, this.JoinRoomPrepare, this);
-		this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnclickStage, this);
-		this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnclickStage, this);
+		
 		
 
 
@@ -56,14 +55,6 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 		this.gameIconData = gameIconData;
 	}
 /***------------------------------------------------------------------------------------------------------------ */
-	private OnclickStage(e: egret.TouchEvent): void {
-		if (e.target != this._return&&e.target != this._record&&e.target != this._help&&e.target !=ZJHhelpType&&e.target !=ZJHRecordPanl&&e.target !=ZJHHelpPanl) {
-			
-				xlLib.PopUpMgr.removePopUp(ZJHRecordPanl, 1);
-				xlLib.PopUpMgr.removePopUp(ZJHHelpPanl, 1);
-		}
-	}
-
 	public Onclickpanl(e: egret.TouchEvent): void {
 		if (e.target == this._return) {
 			xlLib.PopUpMgr.removePopUp(this, 1);
@@ -72,8 +63,6 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 		} else if (e.target == this._help) {
 			this.addhelpPanl();
 		} 
-
-
 	}
 	//记录面板
 	public addrecordPanl(): void {

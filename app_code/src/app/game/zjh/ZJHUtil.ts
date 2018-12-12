@@ -135,7 +135,7 @@ class ZJHUtil {
         }
     }
     /**显示玩家操作状态*/
-     public getplayerstatue(index): string {
+    public getplayerstatue(index): string {
         switch (index) {
             case 1:
                 return '豹子';
@@ -152,7 +152,7 @@ class ZJHUtil {
         }
     }
     //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(pos:egret.Point, num): Array<eui.Image> {
+    /*public coinsType(pos:egret.Point, num): Array<eui.Image> {
         var coinArr = [];
         var coinNum: number = 0;
         var src: string = '';
@@ -181,6 +181,41 @@ class ZJHUtil {
             coinNum = num / 50000;
             src = 'b6a';
         }
+        for (var i = 0; i < Math.round(coinNum); i++) {
+            var coin: eui.Image = new eui.Image(src);
+            //var p: egret.Point = this.coinPos();
+            coin.x = pos.x;
+            coin.y = pos.y;
+            coinArr.push(coin);
+        }
+        return coinArr;
+    }*/
+    //筹码类型        1000w   5000w   1y  3y  5y
+    public coinsType(pos: egret.Point, num): Array<eui.Image> {
+        var coinArr = [];
+        var coinNum: number = 0;
+        var src: string = '';
+        num = Math.round(num / 100);
+        if (num == 1 || num == 2) {  //（初级场：1，2）
+            coinNum = num;
+            src = 'gf_icon_chip_sm1_png';
+        } else if (num == 3 || num == 6) {  //（初级场：3，6）
+            coinNum = num;
+            src = 'gf_icon_chip_sm5_png';
+        } else if (num == 4 || num == 8) {  //（初级场：4，8）
+            coinNum = num;
+            src = 'gf_icon_chip_sm3_png';
+        } else if (num == 5 || num == 10) {  //（初级场：5，10）
+            coinNum = num;
+            src = 'gf_icon_chip_sm6_png';
+        } else if (num == 6 || num == 12) {  //（初级场：6，12）
+            coinNum = num;
+            src = 'gf_icon_chip_sm4_png';
+        } else if (num == 7 || num == 14) {  //（初级场：7，14）
+            coinNum = num;
+            src = 'gf_icon_chip_sm2_png';
+        }
+
         for (var i = 0; i < Math.round(coinNum); i++) {
             var coin: eui.Image = new eui.Image(src);
             //var p: egret.Point = this.coinPos();
