@@ -1,11 +1,7 @@
 {
 	"groups": [
 		{
-<<<<<<< HEAD
-			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,gf_icon_chip_sm3_png",
-=======
-			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,gf_btn_game_begin_normal.2_png,gf_txt_btn.png_)2_png,gf_txt_btn.png_+2_png,gf_txt_btn.png_,2_png,gf_txt_btn.png_-2_png,gf_txt_btn.png_.2_png,gf_txt_btn.png_02_png,gf_txt_btn.png_12_png,gf_txt_btn.png_22_png,gf_txt_btn.png_32_png,gf_txt_btn.png_42_png,gf_txt_btn.png_52_png,gf_txt_btn.png_62_png,gf_txt_btn.png_72_png,gf_txt_btn.png_82_png,gf_txt_btn.png_92_png,lab_bipai2_png,lab_genzhu2_png,lab_jiazhu2_png,lab_zjh_up_discard2_png,queding2_png,quxiao2_png,qznn_btn42_png,qznn_btn4_12_png,qznn_btn_beishu12_png,qznn_btn_beishu1_12_png,qznn_btn_beishu22_png,qznn_btn_beishu2_12_png,qznn_btn_qipai2_png,qznn_btn_qipai12_png,qznn_btn_zidonggenzhu2_png,qznn_btn_zidonggenzhu12_png,tijiao2_png,zidonggenzhu2_png,bar_plus_bg2_png,bar_reduce_bg2_png,bg_12_jpg,bg_jianbian_22_png,di2_png,fanpai0_tex2_png,fanpai1_tex2_png,gf_genzhu_02_png,gf_genzhu_110_png,gf_genzhu_102_png,gf_genzhu_112_png,gf_genzhu_122_png,gf_genzhu_132_png,gf_genzhu_142_png,gf_genzhu_152_png,gf_genzhu_162_png,gf_genzhu_172_png,gf_genzhu_182_png,gf_genzhu_192_png,gf_genzhu_210_png,gf_genzhu_202_png,gf_genzhu_212_png,gf_genzhu_222_png,gf_genzhu_232_png,gf_genzhu_242_png,gf_genzhu_252_png,gf_genzhu_262_png,gf_genzhu_272_png,gf_genzhu_282_png,gf_genzhu_292_png,gf_genzhu_32_png,gf_genzhu_302_png,gf_genzhu_312_png,gf_genzhu_42_png,gf_genzhu_52_png,gf_genzhu_62_png,gf_genzhu_72_png,gf_genzhu_82_png,gf_genzhu_92_png,gf_guzhuyizhi02_png,gf_guzhuyizhi12_png,gf_guzhuyizhi22_png,gf_guzhuyizhi32_png,gf_guzhuyizhi42_png,gf_guzhuyizhi52_png,gf_guzhuyizhi62_png,gf_guzhuyizhi72_png,gf_guzhuyizhi82_png,gf_guzhuyizhi92_png,goldflower_effect_daoguang_02_png,goldflower_effect_daoguang_12_png,goldflower_effect_daoguang_22_png,goldflower_effect_daoguang_32_png,goldflower_effect_daoguang_42_png,goldflower_effect_daoguang_52_png,goldflower_effect_daoguang_62_png,goldflower_effect_daoguang_72_png,goldflower_effect_daoguang_82_png,goldflower_effect_daoguang_92_png,zjh_effect_win_0_tex2_png,zjh_effect_win_1_tex2_png,zjh_effect_youwin_tex_12_png,zjh_effect_youwin_tex_22_png,zjh_effect_youwin_tex_32_png,zjh_effect_youwin_tex_42_png,zjh_effect_youwin_tex_52_png,zjh_effect_youwin_tex_62_png,zjh_effect_youwin_tex_72_png,zjh_effect_youwin_tex_82_png,zjh_vs_tex12_png,zjh_vs_tex22_png,zjh_vs_tex32_png,zjh_vs_tex42_png,zjh_vs_tex52_png,zjh_vs_tex62_png,zjh_vs_tex72_png,zjh_vs_tex82_png,gf_Avatar_box2_png,gf_Avatar_zz2_png,gf_bg2_png,gf_bg_close2_png,gf_bg_close022_png,gf_bg_jiazhu2_png,gf_bg_l2_png,gf_bg_leaf2_png,gf_bg_match2_png,gf_bg_match_close2_png,gf_bg_match_word2_png,gf_bg_menu2_png,gf_bg_pk12_png,gf_bipaiguang2_png,gf_btn_ban2_png,gf_btn_chat2_png,gf_btn_follow2_png,gf_btn_game_begin_normal2_png,gf_btn_menu2_png,gf_btn_pk2_png,gf_btn_txt_qxgz2_png,gf_btn_txt_zdgz2_png,gf_chip_bg2_png,gf_dialogue2_png,gf_dialogue12_png,gf_dialogue_bipai2_png,gf_dialogue_genzhu2_png,gf_dialogue_jiazhu2_png,gf_dialogue_kanpai2_png,gf_dialogue_qipai2_png,gf_effect_kiss_02_png,gf_emoji292_png,gf_flag_bpsb2_png,gf_flag_qp2_png,gf_flag_ykp2_png,gf_game_bet_bg2_png,gf_game_continiu_title2_png,gf_game_light2_png,gf_game_room_bg_1_22_png,gf_game_tips2_png,gf_guzhuyizhi03_png,gf_heguan2_png,gf_huoping_02_png,gf_icon_bullion2_PNG,gf_icon_chip_sm12_png,gf_icon_chip_sm22_png,gf_icon_chip_sm32_PNG,gf_icon_chip_sm42_png,gf_icon_chip_sm52_png,gf_icon_chip_sm62_png,gf_icon_chip_sm72_png,gf_icon_chip_yellow2_png,gf_icon_leave2_png,gf_icon_record2_png,gf_icon_shezhi2_png,gf_icon_wanfa2_png,gf_icon_xiqian_close2_png,gf_match_bg2_png,gf_mengban12_png,gf_mengban22_png,gf_mengban32_png,gf_paixing2_png,gf_peilv2_png,gf_poker02_png,gf_poker0_12_png,gf_poker0_22_png,gf_poker110_png,gf_poker102_png,gf_poker112_png,gf_poker122_png,gf_poker132_png,gf_poker142_png,gf_poker152_png,gf_poker162_png,gf_poker172_png,gf_poker182_png,gf_poker192_png,gf_poker210_png,gf_poker202_png,gf_poker212_png,gf_poker222_png,gf_poker232_png,gf_poker242_png,gf_poker252_png,gf_poker262_png,gf_poker272_png,gf_poker282_png,gf_poker292_png,gf_poker310_png,gf_poker302_png,gf_poker312_png,gf_poker322_png,gf_poker332_png,gf_poker342_png,gf_poker352_png,gf_poker362_png,gf_poker372_png,gf_poker382_png,gf_poker392_png,gf_poker410_png,gf_poker402_png,gf_poker412_png,gf_poker422_png,gf_poker432_png,gf_poker442_png,gf_poker452_png,gf_poker462_png,gf_poker472_png,gf_poker482_png,gf_poker492_png,gf_poker510_png,gf_poker502_png,gf_poker512_png,gf_poker522_png,gf_poker532_png,gf_poker542_png,gf_poker552_png,gf_poker562_png,gf_poker572_png,gf_poker582_png,gf_poker592_png,gf_poker62_png,gf_poker602_png,gf_poker612_png,gf_poker72_png,gf_poker82_png,gf_poker92_png,gf_px12_png,gf_px22_png,gf_px32_png,gf_px42_png,gf_px52_png,gf_px62_png,gf_pxzs2_png,gf_queding2_png,gf_room_dizhu2_png,gf_rule2_png,gf_table2_png,gf_table_02_png,gf_tip_anniu2_png,gf_tip_ts2_png,gf_tips22_png,gf_tips_click_card2_png,gf_tips_leave2_png,gf_typebg_black2_png,gf_wait3_png,gf_wait22_png,gf_wanfa2_png,gf_xiqian2_png,brnn_imformation2_png,gamehall_BtnClose2_png,gamehall_BtnTxtSave2_png,gamehall_comfirm_btn2_png,gamehall_headBg2_png,gamehall_headbg12_png,gamehall_headBgL2_png,gamehall_headBigbg2_png,gamehall_headSelected2_png,gamehall_headSelected_txt2_png,gamehall_sexSelectBtn2_png,gamehall_sexSelectBtn_light2_png,gamehall_title_headSelected2_png,gf_effcet_pic_person2_png,gf_effect_kiss_03_png,gf_game_room_bg_12_png,gf_game_room_bg_22_png,gf_game_room_bg_32_png,gf_game_room_bg_42_png,gf_logo2_png,gf_lowBetNumber_+2_png,gf_lowBetNumber_-2_png,gf_lowBetNumber_.2_png,gf_lowBetNumber_02_png,gf_lowBetNumber_12_png,gf_lowBetNumber_22_png,gf_lowBetNumber_32_png,gf_lowBetNumber_42_png,gf_lowBetNumber_52_png,gf_lowBetNumber_62_png,gf_lowBetNumber_72_png,gf_lowBetNumber_82_png,gf_lowBetNumber_92_png,gf_lowBetNumber_）2_png,gf_room_bg2_png,gf_room_gold2_png,gf_room_icon_help2_png,gf_room_icon_record2_png,gf_room_pic_bg2_png,gf_room_return2_png,gf_room_user_bg2_png,lv22_png,lv32_png,lv42_png,lv52_png,zajinhua2_png,bar_reduce_font_,2_png,bar_reduce_font_-2_png,bar_reduce_font_.2_png,bar_reduce_font_02_png,bar_reduce_font_12_png,bar_reduce_font_22_png,bar_reduce_font_32_png,bar_reduce_font_42_png,bar_reduce_font_52_png,bar_reduce_font_62_png,bar_reduce_font_72_png,bar_reduce_font_82_png,bar_reduce_font_92_png,gf_betChip_number_.2_png,gf_betChip_number_02_png,gf_betChip_number_12_png,gf_betChip_number_22_png,gf_betChip_number_32_png,gf_betChip_number_42_png,gf_betChip_number_52_png,gf_betChip_number_62_png,gf_betChip_number_72_png,gf_betChip_number_82_png,gf_betChip_number_92_png,gf_bet_number_.2_png,gf_bet_number_02_png,gf_bet_number_12_png,gf_bet_number_22_png,gf_bet_number_32_png,gf_bet_number_42_png,gf_bet_number_52_png,gf_bet_number_62_png,gf_bet_number_72_png,gf_bet_number_82_png,gf_bet_number_92_png,gf_cutmoneyNum_export_+2_png,gf_cutmoneyNum_export_-2_png,gf_cutmoneyNum_export_12_png,gf_cutmoneyNum_export_22_png,gf_cutmoneyNum_export_32_png,gf_cutmoneyNum_export_42_png,gf_cutmoneyNum_export_52_png,gf_cutmoneyNum_export_62_png,gf_cutmoneyNum_export_72_png,gf_cutmoneyNum_export_82_png,gf_cutmoneyNum_export_92_png,gf_moneyNumber_)2_png,gf_moneyNumber_+2_png,gf_moneyNumber_-2_png,gf_moneyNumber_.2_png,gf_moneyNumber_02_png,gf_moneyNumber_12_png,gf_moneyNumber_22_png,gf_moneyNumber_32_png,gf_moneyNumber_42_png,gf_moneyNumber_52_png,gf_moneyNumber_62_png,gf_moneyNumber_72_png,gf_moneyNumber_82_png,gf_moneyNumber_92_png,gf_moneyNumber_，2_png,gf_txt_btn.png_(2_png,zjh_btn_fankui2_png",
->>>>>>> 098eb203695971100e25d07778f5879125b4c9a0
+			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json",
 			"name": "preload"
 		},
 		{
@@ -4652,6 +4648,266 @@
 			"subkeys": "Img_Inpt_bg,Img_confirm_down,Img_confirm_up,_btn_start,btn_-cancel_0,btn_-cancel_1,btn_bg,btn_btn_0,btn_caidan_0,btn_cancel_0,btn_cancel_1,btn_close_0,btn_close_1,btn_common_0,btn_common_1,btn_fanhui_0,btn_liaotian_0,btn_yuyin_0,checkbox_select_disabled,checkbox_select_down,checkbox_select_up,checkbox_unselect,gameID,gold,img_bg,img_bottom,img_jinbi,img_tx,nn_bg1,nn_close,qznn_tips_btn2,qznn_tips_tittle,xiang"
 		},
 		{
+			"url": "assets/game/zhajh/Img_zjh_headbg.png",
+			"type": "image",
+			"name": "Img_zjh_headbg_png"
+		},
+		{
+			"url": "assets/game/zhajh/bar_plus_bg.png",
+			"type": "image",
+			"name": "bar_plus_bg_png"
+		},
+		{
+			"url": "assets/game/zhajh/bar_reduce_bg.png",
+			"type": "image",
+			"name": "bar_reduce_bg_png"
+		},
+		{
+			"url": "assets/game/zhajh/bg_1.jpg",
+			"type": "image",
+			"name": "bg_1_jpg"
+		},
+		{
+			"url": "assets/game/zhajh/bg_jianbian_2.png",
+			"type": "image",
+			"name": "bg_jianbian_2_png"
+		},
+		{
+			"url": "assets/game/zhajh/bg_zjh_buttom.png",
+			"type": "image",
+			"name": "bg_zjh_buttom_png"
+		},
+		{
+			"url": "assets/game/zhajh/checkbox_down.png",
+			"type": "image",
+			"name": "checkbox_down_png"
+		},
+		{
+			"url": "assets/game/zhajh/checkbox_zjh.png",
+			"type": "image",
+			"name": "checkbox_zjh_png"
+		},
+		{
+			"url": "assets/game/zhajh/di.png",
+			"type": "image",
+			"name": "di_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_Avatar_box.png",
+			"type": "image",
+			"name": "gf_Avatar_box_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_Avatar_zz.png",
+			"type": "image",
+			"name": "gf_Avatar_zz_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg.png",
+			"type": "image",
+			"name": "gf_bg_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_close.png",
+			"type": "image",
+			"name": "gf_bg_close_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_close02.png",
+			"type": "image",
+			"name": "gf_bg_close02_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_jiazhu.png",
+			"type": "image",
+			"name": "gf_bg_jiazhu_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_l.png",
+			"type": "image",
+			"name": "gf_bg_l_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_leaf.png",
+			"type": "image",
+			"name": "gf_bg_leaf_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_match.png",
+			"type": "image",
+			"name": "gf_bg_match_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_match_close.png",
+			"type": "image",
+			"name": "gf_bg_match_close_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_match_word.png",
+			"type": "image",
+			"name": "gf_bg_match_word_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_menu.png",
+			"type": "image",
+			"name": "gf_bg_menu_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bg_pk1.png",
+			"type": "image",
+			"name": "gf_bg_pk1_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_bipaiguang.png",
+			"type": "image",
+			"name": "gf_bipaiguang_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_btn_chat.png",
+			"type": "image",
+			"name": "gf_btn_chat_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_btn_game_begin_normal.png",
+			"type": "image",
+			"name": "gf_btn_game_begin_normal_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_btn_menu.png",
+			"type": "image",
+			"name": "gf_btn_menu_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_chip_bg.png",
+			"type": "image",
+			"name": "gf_chip_bg_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_dialogue.png",
+			"type": "image",
+			"name": "gf_dialogue_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_dialogue1.png",
+			"type": "image",
+			"name": "gf_dialogue1_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_dialogue_bipai.png",
+			"type": "image",
+			"name": "gf_dialogue_bipai_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_dialogue_genzhu.png",
+			"type": "image",
+			"name": "gf_dialogue_genzhu_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_dialogue_jiazhu.png",
+			"type": "image",
+			"name": "gf_dialogue_jiazhu_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_dialogue_kanpai.png",
+			"type": "image",
+			"name": "gf_dialogue_kanpai_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_dialogue_qipai.png",
+			"type": "image",
+			"name": "gf_dialogue_qipai_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_effect_kiss_0.png",
+			"type": "image",
+			"name": "gf_effect_kiss_0_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_emoji29.png",
+			"type": "image",
+			"name": "gf_emoji29_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_flag_bpsb.png",
+			"type": "image",
+			"name": "gf_flag_bpsb_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_flag_qp.png",
+			"type": "image",
+			"name": "gf_flag_qp_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_flag_ykp.png",
+			"type": "image",
+			"name": "gf_flag_ykp_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_game_bet_bg.png",
+			"type": "image",
+			"name": "gf_game_bet_bg_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_game_continiu_title.png",
+			"type": "image",
+			"name": "gf_game_continiu_title_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_game_light.png",
+			"type": "image",
+			"name": "gf_game_light_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_game_room_bg_1_2.png",
+			"type": "image",
+			"name": "gf_game_room_bg_1_2_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_game_tips.png",
+			"type": "image",
+			"name": "gf_game_tips_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_guzhuyizhi0.png",
+			"type": "image",
+			"name": "gf_guzhuyizhi0_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_huoping_0.png",
+			"type": "image",
+			"name": "gf_huoping_0_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_bullion.PNG",
+			"type": "bin",
+			"name": "gf_icon_bullion_PNG"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_chip_blue.png",
+			"type": "image",
+			"name": "gf_icon_chip_blue_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_chip_cyan.png",
+			"type": "image",
+			"name": "gf_icon_chip_cyan_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_chip_green.png",
+			"type": "image",
+			"name": "gf_icon_chip_green_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_chip_grey.png",
+			"type": "image",
+			"name": "gf_icon_chip_grey_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_chip_pink.png",
+			"type": "image",
+			"name": "gf_icon_chip_pink_png"
+		},
+		{
 			"url": "assets/game/zhajh/gf_icon_chip_purple.png",
 			"type": "image",
 			"name": "gf_icon_chip_purple_png"
@@ -4662,14 +4918,14 @@
 			"name": "gf_icon_chip_sm1_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_icon_chip_pink.png",
-			"type": "image",
-			"name": "gf_icon_chip_pink_png"
-		},
-		{
 			"url": "assets/game/zhajh/gf_icon_chip_sm2.png",
 			"type": "image",
 			"name": "gf_icon_chip_sm2_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_chip_sm3.png",
+			"type": "image",
+			"name": "gf_icon_chip_sm3_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_icon_chip_sm4.png",
@@ -4772,46 +5028,6 @@
 			"name": "gf_poker1_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_poker2.png",
-			"type": "image",
-			"name": "gf_poker2_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_poker3.png",
-			"type": "image",
-			"name": "gf_poker3_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_poker4.png",
-			"type": "image",
-			"name": "gf_poker4_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_poker5.png",
-			"type": "image",
-			"name": "gf_poker5_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_poker6.png",
-			"type": "image",
-			"name": "gf_poker6_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_poker7.png",
-			"type": "image",
-			"name": "gf_poker7_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_poker8.png",
-			"type": "image",
-			"name": "gf_poker8_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_poker9.png",
-			"type": "image",
-			"name": "gf_poker9_png"
-		},
-		{
 			"url": "assets/game/zhajh/gf_poker10.png",
 			"type": "image",
 			"name": "gf_poker10_png"
@@ -4860,6 +5076,11 @@
 			"url": "assets/game/zhajh/gf_poker19.png",
 			"type": "image",
 			"name": "gf_poker19_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_poker2.png",
+			"type": "image",
+			"name": "gf_poker2_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_poker20.png",
@@ -4912,6 +5133,11 @@
 			"name": "gf_poker29_png"
 		},
 		{
+			"url": "assets/game/zhajh/gf_poker3.png",
+			"type": "image",
+			"name": "gf_poker3_png"
+		},
+		{
 			"url": "assets/game/zhajh/gf_poker30.png",
 			"type": "image",
 			"name": "gf_poker30_png"
@@ -4960,6 +5186,11 @@
 			"url": "assets/game/zhajh/gf_poker39.png",
 			"type": "image",
 			"name": "gf_poker39_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_poker4.png",
+			"type": "image",
+			"name": "gf_poker4_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_poker40.png",
@@ -5012,6 +5243,11 @@
 			"name": "gf_poker49_png"
 		},
 		{
+			"url": "assets/game/zhajh/gf_poker5.png",
+			"type": "image",
+			"name": "gf_poker5_png"
+		},
+		{
 			"url": "assets/game/zhajh/gf_poker50.png",
 			"type": "image",
 			"name": "gf_poker50_png"
@@ -5062,6 +5298,11 @@
 			"name": "gf_poker59_png"
 		},
 		{
+			"url": "assets/game/zhajh/gf_poker6.png",
+			"type": "image",
+			"name": "gf_poker6_png"
+		},
+		{
 			"url": "assets/game/zhajh/gf_poker60.png",
 			"type": "image",
 			"name": "gf_poker60_png"
@@ -5070,6 +5311,21 @@
 			"url": "assets/game/zhajh/gf_poker61.png",
 			"type": "image",
 			"name": "gf_poker61_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_poker7.png",
+			"type": "image",
+			"name": "gf_poker7_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_poker8.png",
+			"type": "image",
+			"name": "gf_poker8_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_poker9.png",
+			"type": "image",
+			"name": "gf_poker9_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_px1.png",
@@ -5137,6 +5393,11 @@
 			"name": "gf_tip_ts_png"
 		},
 		{
+			"url": "assets/game/zhajh/gf_tips2.png",
+			"type": "image",
+			"name": "gf_tips2_png"
+		},
+		{
 			"url": "assets/game/zhajh/gf_tips_click_card.png",
 			"type": "image",
 			"name": "gf_tips_click_card_png"
@@ -5145,11 +5406,6 @@
 			"url": "assets/game/zhajh/gf_tips_leave.png",
 			"type": "image",
 			"name": "gf_tips_leave_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_tips2.png",
-			"type": "image",
-			"name": "gf_tips2_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_typebg_black.png",
@@ -5175,11 +5431,6 @@
 			"url": "assets/game/zhajh/gf_xiqian.png",
 			"type": "image",
 			"name": "gf_xiqian_png"
-		},
-		{
-			"url": "assets/game/zhajh/Img_zjh_headbg.png",
-			"type": "image",
-			"name": "Img_zjh_headbg_png"
 		},
 		{
 			"url": "assets/game/zhajh/lab_num_0.png",
@@ -5232,812 +5483,6 @@
 			"name": "zjh_btn_fankui_png"
 		},
 		{
-			"url": "assets/game/zhajh/bar_plus_bg.png",
-			"type": "image",
-			"name": "bar_plus_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/bar_reduce_bg.png",
-			"type": "image",
-			"name": "bar_reduce_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/bg_1.jpg",
-			"type": "image",
-			"name": "bg_1_jpg"
-		},
-		{
-			"url": "assets/game/zhajh/bg_jianbian_2.png",
-			"type": "image",
-			"name": "bg_jianbian_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/bg_zjh_buttom.png",
-			"type": "image",
-			"name": "bg_zjh_buttom_png"
-		},
-		{
-			"url": "assets/game/zhajh/checkbox_down.png",
-			"type": "image",
-			"name": "checkbox_down_png"
-		},
-		{
-			"url": "assets/game/zhajh/checkbox_zjh.png",
-			"type": "image",
-			"name": "checkbox_zjh_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_Avatar_box.png",
-			"type": "image",
-			"name": "gf_Avatar_box_png"
-		},
-		{
-			"url": "assets/game/zhajh/di.png",
-			"type": "image",
-			"name": "di_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_Avatar_zz.png",
-			"type": "image",
-			"name": "gf_Avatar_zz_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg.png",
-			"type": "image",
-			"name": "gf_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_close.png",
-			"type": "image",
-			"name": "gf_bg_close_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_close02.png",
-			"type": "image",
-			"name": "gf_bg_close02_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_jiazhu.png",
-			"type": "image",
-			"name": "gf_bg_jiazhu_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_l.png",
-			"type": "image",
-			"name": "gf_bg_l_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_leaf.png",
-			"type": "image",
-			"name": "gf_bg_leaf_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_match.png",
-			"type": "image",
-			"name": "gf_bg_match_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_match_close.png",
-			"type": "image",
-			"name": "gf_bg_match_close_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_match_word.png",
-			"type": "image",
-			"name": "gf_bg_match_word_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_menu.png",
-			"type": "image",
-			"name": "gf_bg_menu_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bg_pk1.png",
-			"type": "image",
-			"name": "gf_bg_pk1_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_bipaiguang.png",
-			"type": "image",
-			"name": "gf_bipaiguang_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_btn_chat.png",
-			"type": "image",
-			"name": "gf_btn_chat_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_btn_game_begin_normal.png",
-			"type": "image",
-			"name": "gf_btn_game_begin_normal_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_btn_menu.png",
-			"type": "image",
-			"name": "gf_btn_menu_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_chip_bg.png",
-			"type": "image",
-			"name": "gf_chip_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_dialogue_bipai.png",
-			"type": "image",
-			"name": "gf_dialogue_bipai_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_dialogue.png",
-			"type": "image",
-			"name": "gf_dialogue_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_dialogue_genzhu.png",
-			"type": "image",
-			"name": "gf_dialogue_genzhu_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_dialogue_jiazhu.png",
-			"type": "image",
-			"name": "gf_dialogue_jiazhu_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_dialogue_kanpai.png",
-			"type": "image",
-			"name": "gf_dialogue_kanpai_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_dialogue_qipai.png",
-			"type": "image",
-			"name": "gf_dialogue_qipai_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_dialogue1.png",
-			"type": "image",
-			"name": "gf_dialogue1_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_effect_kiss_0.png",
-			"type": "image",
-			"name": "gf_effect_kiss_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_emoji29.png",
-			"type": "image",
-			"name": "gf_emoji29_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_flag_bpsb.png",
-			"type": "image",
-			"name": "gf_flag_bpsb_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_flag_qp.png",
-			"type": "image",
-			"name": "gf_flag_qp_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_flag_ykp.png",
-			"type": "image",
-			"name": "gf_flag_ykp_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_game_bet_bg.png",
-			"type": "image",
-			"name": "gf_game_bet_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_game_continiu_title.png",
-			"type": "image",
-			"name": "gf_game_continiu_title_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_game_light.png",
-			"type": "image",
-			"name": "gf_game_light_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_game_room_bg_1_2.png",
-			"type": "image",
-			"name": "gf_game_room_bg_1_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_game_tips.png",
-			"type": "image",
-			"name": "gf_game_tips_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_guzhuyizhi0.png",
-			"type": "image",
-			"name": "gf_guzhuyizhi0_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_huoping_0.png",
-			"type": "image",
-			"name": "gf_huoping_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_icon_bullion.PNG",
-			"type": "bin",
-			"name": "gf_icon_bullion_PNG"
-		},
-		{
-			"url": "assets/game/zhajh/gf_icon_chip_blue.png",
-			"type": "image",
-			"name": "gf_icon_chip_blue_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_icon_chip_cyan.png",
-			"type": "image",
-			"name": "gf_icon_chip_cyan_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_icon_chip_green.png",
-			"type": "image",
-			"name": "gf_icon_chip_green_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_icon_chip_grey.png",
-			"type": "image",
-			"name": "gf_icon_chip_grey_png"
-		},
-		{
-			"url": "assets/game/zhajh/jinhua.json",
-			"type": "sheet",
-			"name": "jinhua_json",
-			"subkeys": "a1,a10,a11,a12,a13,a14,a15,a2,a20,a3,a4,a5,a6,a7,a8,a9,b1,b1a,b2,b2a,b3,b3a,b4,b4a,b5,b5a,b6,b6a,c1,c2,card_100,card_101,card_102,card_103,card_104,card_105,card_106,card_107,card_108,card_109,card_110,card_111,card_112,card_113,card_201,card_202,card_203,card_204,card_205,card_206,card_207,card_208,card_209,card_210,card_211,card_212,card_213,card_301,card_302,card_303,card_304,card_305,card_306,card_307,card_308,card_309,card_310,card_311,card_312,card_313,card_401,card_402,card_403,card_404,card_405,card_406,card_407,card_408,card_409,card_410,card_411,card_412,card_413,d1,d2,d3,d4,d5,head,jh.baocaijin,jh.baozhuang,jh.btnred,jh.titlebg,t1,t2,t3222,talk,u1,u2,u3,u4,u5,u6,z2,z3,z4,z5,z6,z7"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_..png",
-			"type": "image",
-			"name": "bar_reduce_font_._png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_0.png",
-			"type": "image",
-			"name": "bar_reduce_font_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_,.png",
-			"type": "image",
-			"name": "bar_reduce_font_,_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_2.png",
-			"type": "image",
-			"name": "bar_reduce_font_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_1.png",
-			"type": "image",
-			"name": "bar_reduce_font_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_3.png",
-			"type": "image",
-			"name": "bar_reduce_font_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_4.png",
-			"type": "image",
-			"name": "bar_reduce_font_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_5.png",
-			"type": "image",
-			"name": "bar_reduce_font_5_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_6.png",
-			"type": "image",
-			"name": "bar_reduce_font_6_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_7.png",
-			"type": "image",
-			"name": "bar_reduce_font_7_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_8.png",
-			"type": "image",
-			"name": "bar_reduce_font_8_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_-.png",
-			"type": "image",
-			"name": "bar_reduce_font_-_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/bar_reduce_font_9.png",
-			"type": "image",
-			"name": "bar_reduce_font_9_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_..png",
-			"type": "image",
-			"name": "gf_bet_number_._png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_0.png",
-			"type": "image",
-			"name": "gf_bet_number_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_1.png",
-			"type": "image",
-			"name": "gf_bet_number_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_2.png",
-			"type": "image",
-			"name": "gf_bet_number_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_3.png",
-			"type": "image",
-			"name": "gf_bet_number_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_4.png",
-			"type": "image",
-			"name": "gf_bet_number_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_5.png",
-			"type": "image",
-			"name": "gf_bet_number_5_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_6.png",
-			"type": "image",
-			"name": "gf_bet_number_6_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_7.png",
-			"type": "image",
-			"name": "gf_bet_number_7_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_8.png",
-			"type": "image",
-			"name": "gf_bet_number_8_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_bet_number_9.png",
-			"type": "image",
-			"name": "gf_bet_number_9_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_..png",
-			"type": "image",
-			"name": "gf_betChip_number_._png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_0.png",
-			"type": "image",
-			"name": "gf_betChip_number_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_1.png",
-			"type": "image",
-			"name": "gf_betChip_number_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_2.png",
-			"type": "image",
-			"name": "gf_betChip_number_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_3.png",
-			"type": "image",
-			"name": "gf_betChip_number_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_4.png",
-			"type": "image",
-			"name": "gf_betChip_number_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_5.png",
-			"type": "image",
-			"name": "gf_betChip_number_5_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_6.png",
-			"type": "image",
-			"name": "gf_betChip_number_6_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_7.png",
-			"type": "image",
-			"name": "gf_betChip_number_7_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_9.png",
-			"type": "image",
-			"name": "gf_betChip_number_9_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_betChip_number_8.png",
-			"type": "image",
-			"name": "gf_betChip_number_8_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_-.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_-_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_+.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_+_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_1.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_2.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_3.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_4.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_5.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_5_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_6.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_6_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_7.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_7_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_8.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_8_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_9.png",
-			"type": "image",
-			"name": "gf_cutmoneyNum_export_9_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_).png",
-			"type": "image",
-			"name": "gf_moneyNumber_)_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_，.png",
-			"type": "image",
-			"name": "gf_moneyNumber_，_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_..png",
-			"type": "image",
-			"name": "gf_moneyNumber_._png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_-.png",
-			"type": "image",
-			"name": "gf_moneyNumber_-_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_+.png",
-			"type": "image",
-			"name": "gf_moneyNumber_+_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_0.png",
-			"type": "image",
-			"name": "gf_moneyNumber_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_1.png",
-			"type": "image",
-			"name": "gf_moneyNumber_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_2.png",
-			"type": "image",
-			"name": "gf_moneyNumber_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_3.png",
-			"type": "image",
-			"name": "gf_moneyNumber_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_4.png",
-			"type": "image",
-			"name": "gf_moneyNumber_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_5.png",
-			"type": "image",
-			"name": "gf_moneyNumber_5_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_6.png",
-			"type": "image",
-			"name": "gf_moneyNumber_6_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_7.png",
-			"type": "image",
-			"name": "gf_moneyNumber_7_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_8.png",
-			"type": "image",
-			"name": "gf_moneyNumber_8_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_9.png",
-			"type": "image",
-			"name": "gf_moneyNumber_9_png"
-		},
-		{
-			"url": "assets/game/zhajh/num2/gf_txt_btn.png_(.png",
-			"type": "image",
-			"name": "gf_txt_btn.png_(_png"
-		},
-		{
-			"url": "assets/game/zhajh/num/bitmapnum0.fnt",
-			"type": "font",
-			"name": "bitmapnum0_fnt"
-		},
-		{
-			"url": "assets/game/zhajh/num/bitmapnum0.png",
-			"type": "image",
-			"name": "bitmapnum0_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_BtnTxtSave.png",
-			"type": "image",
-			"name": "gamehall_BtnTxtSave_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_comfirm_btn.png",
-			"type": "image",
-			"name": "gamehall_comfirm_btn_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_BtnClose.png",
-			"type": "image",
-			"name": "gamehall_BtnClose_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_headbg1.png",
-			"type": "image",
-			"name": "gamehall_headbg1_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_headBg.png",
-			"type": "image",
-			"name": "gamehall_headBg_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_headBgL.png",
-			"type": "image",
-			"name": "gamehall_headBgL_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_headBigbg.png",
-			"type": "image",
-			"name": "gamehall_headBigbg_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_headSelected.png",
-			"type": "image",
-			"name": "gamehall_headSelected_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_headSelected_txt.png",
-			"type": "image",
-			"name": "gamehall_headSelected_txt_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_sexSelectBtn.png",
-			"type": "image",
-			"name": "gamehall_sexSelectBtn_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_sexSelectBtn_light.png",
-			"type": "image",
-			"name": "gamehall_sexSelectBtn_light_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gamehall_title_headSelected.png",
-			"type": "image",
-			"name": "gamehall_title_headSelected_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_effect_kiss_0.png",
-			"type": "image",
-			"name": "gf_effect_kiss_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_effcet_pic_person.png",
-			"type": "image",
-			"name": "gf_effcet_pic_person_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_1.png",
-			"type": "image",
-			"name": "gf_game_room_bg_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_2.png",
-			"type": "image",
-			"name": "gf_game_room_bg_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_3.png",
-			"type": "image",
-			"name": "gf_game_room_bg_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_4.png",
-			"type": "image",
-			"name": "gf_game_room_bg_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_logo.png",
-			"type": "image",
-			"name": "gf_logo_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_）.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_）_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_..png",
-			"type": "image",
-			"name": "gf_lowBetNumber_._png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_-.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_-_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_+.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_+_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_0.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_0_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_1.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_2.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_3.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_4.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_5.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_5_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_6.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_6_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_8.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_8_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_7.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_7_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_9.png",
-			"type": "image",
-			"name": "gf_lowBetNumber_9_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_room_bg.png",
-			"type": "image",
-			"name": "gf_room_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_room_gold.png",
-			"type": "image",
-			"name": "gf_room_gold_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_room_icon_help.png",
-			"type": "image",
-			"name": "gf_room_icon_help_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_room_icon_record.png",
-			"type": "image",
-			"name": "gf_room_icon_record_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_room_pic_bg.png",
-			"type": "image",
-			"name": "gf_room_pic_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_room_return.png",
-			"type": "image",
-			"name": "gf_room_return_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/gf_room_user_bg.png",
-			"type": "image",
-			"name": "gf_room_user_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/lv2.png",
-			"type": "image",
-			"name": "lv2_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/lv3.png",
-			"type": "image",
-			"name": "lv3_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/lv4.png",
-			"type": "image",
-			"name": "lv4_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/lv5.png",
-			"type": "image",
-			"name": "lv5_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/zajinhua.png",
-			"type": "image",
-			"name": "zajinhua_png"
-		},
-		{
-			"url": "assets/game/zhajh/navigation/brnn_imformation.png",
-			"type": "image",
-			"name": "brnn_imformation_png"
-		},
-		{
 			"url": "assets/game/zhajh/music/jh.dealCard.mp3",
 			"type": "sound",
 			"name": "jh.dealCard_mp3"
@@ -6083,6 +5528,11 @@
 			"name": "fanpai0_tex_png"
 		},
 		{
+			"url": "assets/game/zhajh/effects/fanpai1_tex.png",
+			"type": "image",
+			"name": "fanpai1_tex_png"
+		},
+		{
 			"url": "assets/game/zhajh/effects/gf_genzhu_0.png",
 			"type": "image",
 			"name": "gf_genzhu_0_png"
@@ -6091,46 +5541,6 @@
 			"url": "assets/game/zhajh/effects/gf_genzhu_1.png",
 			"type": "image",
 			"name": "gf_genzhu_1_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_2.png",
-			"type": "image",
-			"name": "gf_genzhu_2_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_3.png",
-			"type": "image",
-			"name": "gf_genzhu_3_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_4.png",
-			"type": "image",
-			"name": "gf_genzhu_4_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_5.png",
-			"type": "image",
-			"name": "gf_genzhu_5_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_6.png",
-			"type": "image",
-			"name": "gf_genzhu_6_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_7.png",
-			"type": "image",
-			"name": "gf_genzhu_7_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_8.png",
-			"type": "image",
-			"name": "gf_genzhu_8_png"
-		},
-		{
-			"url": "assets/game/zhajh/effects/gf_genzhu_9.png",
-			"type": "image",
-			"name": "gf_genzhu_9_png"
 		},
 		{
 			"url": "assets/game/zhajh/effects/gf_genzhu_10.png",
@@ -6183,6 +5593,11 @@
 			"name": "gf_genzhu_19_png"
 		},
 		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_2.png",
+			"type": "image",
+			"name": "gf_genzhu_2_png"
+		},
+		{
 			"url": "assets/game/zhajh/effects/gf_genzhu_20.png",
 			"type": "image",
 			"name": "gf_genzhu_20_png"
@@ -6233,6 +5648,11 @@
 			"name": "gf_genzhu_29_png"
 		},
 		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_3.png",
+			"type": "image",
+			"name": "gf_genzhu_3_png"
+		},
+		{
 			"url": "assets/game/zhajh/effects/gf_genzhu_30.png",
 			"type": "image",
 			"name": "gf_genzhu_30_png"
@@ -6241,6 +5661,36 @@
 			"url": "assets/game/zhajh/effects/gf_genzhu_31.png",
 			"type": "image",
 			"name": "gf_genzhu_31_png"
+		},
+		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_4.png",
+			"type": "image",
+			"name": "gf_genzhu_4_png"
+		},
+		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_5.png",
+			"type": "image",
+			"name": "gf_genzhu_5_png"
+		},
+		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_6.png",
+			"type": "image",
+			"name": "gf_genzhu_6_png"
+		},
+		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_7.png",
+			"type": "image",
+			"name": "gf_genzhu_7_png"
+		},
+		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_8.png",
+			"type": "image",
+			"name": "gf_genzhu_8_png"
+		},
+		{
+			"url": "assets/game/zhajh/effects/gf_genzhu_9.png",
+			"type": "image",
+			"name": "gf_genzhu_9_png"
 		},
 		{
 			"url": "assets/game/zhajh/effects/gf_guzhuyizhi0.png",
@@ -6433,9 +5883,9 @@
 			"name": "zjh_vs_tex8_png"
 		},
 		{
-			"url": "assets/game/zhajh/effects/fanpai1_tex.png",
+			"url": "assets/game/zhajh/Btn/gf_btn_game_begin_normal..png",
 			"type": "image",
-			"name": "fanpai1_tex_png"
+			"name": "gf_btn_game_begin_normal._png"
 		},
 		{
 			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_).png",
@@ -6443,14 +5893,14 @@
 			"name": "gf_txt_btn.png_)_png"
 		},
 		{
+			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_+.png",
+			"type": "image",
+			"name": "gf_txt_btn.png_+_png"
+		},
+		{
 			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_,.png",
 			"type": "image",
 			"name": "gf_txt_btn.png_,_png"
-		},
-		{
-			"url": "assets/game/zhajh/Btn/gf_btn_game_begin_normal..png",
-			"type": "image",
-			"name": "gf_btn_game_begin_normal._png"
 		},
 		{
 			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_-.png",
@@ -6458,9 +5908,9 @@
 			"name": "gf_txt_btn.png_-_png"
 		},
 		{
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_+.png",
+			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_..png",
 			"type": "image",
-			"name": "gf_txt_btn.png_+_png"
+			"name": "gf_txt_btn.png_._png"
 		},
 		{
 			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_0.png",
@@ -6543,6 +5993,16 @@
 			"name": "quxiao_png"
 		},
 		{
+			"url": "assets/game/zhajh/Btn/qznn_btn4.png",
+			"type": "image",
+			"name": "qznn_btn4_png"
+		},
+		{
+			"url": "assets/game/zhajh/Btn/qznn_btn4_1.png",
+			"type": "image",
+			"name": "qznn_btn4_1_png"
+		},
+		{
 			"url": "assets/game/zhajh/Btn/qznn_btn_beishu1.png",
 			"type": "image",
 			"name": "qznn_btn_beishu1_png"
@@ -6583,16 +6043,6 @@
 			"name": "qznn_btn_zidonggenzhu1_png"
 		},
 		{
-			"url": "assets/game/zhajh/Btn/qznn_btn4.png",
-			"type": "image",
-			"name": "qznn_btn4_png"
-		},
-		{
-			"url": "assets/game/zhajh/Btn/qznn_btn4_1.png",
-			"type": "image",
-			"name": "qznn_btn4_1_png"
-		},
-		{
 			"url": "assets/game/zhajh/Btn/tijiao.png",
 			"type": "image",
 			"name": "tijiao_png"
@@ -6603,1860 +6053,560 @@
 			"name": "zidonggenzhu_png"
 		},
 		{
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_..png",
-			"type": "image",
-			"name": "gf_txt_btn.png_._png"
-		},
-		{
-<<<<<<< HEAD
-			"name": "gf_icon_chip_sm3_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_sm3.png"
-=======
-			"name": "gf_btn_game_begin_normal.2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_btn_game_begin_normal..png"
-		},
-		{
-			"name": "gf_txt_btn.png_)2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_).png"
-		},
-		{
-			"name": "gf_txt_btn.png_+2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_+.png"
-		},
-		{
-			"name": "gf_txt_btn.png_,2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_,.png"
-		},
-		{
-			"name": "gf_txt_btn.png_-2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_-.png"
-		},
-		{
-			"name": "gf_txt_btn.png_.2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_..png"
-		},
-		{
-			"name": "gf_txt_btn.png_02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_0.png"
-		},
-		{
-			"name": "gf_txt_btn.png_12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_1.png"
-		},
-		{
-			"name": "gf_txt_btn.png_22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_2.png"
-		},
-		{
-			"name": "gf_txt_btn.png_32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_3.png"
-		},
-		{
-			"name": "gf_txt_btn.png_42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_4.png"
-		},
-		{
-			"name": "gf_txt_btn.png_52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_5.png"
-		},
-		{
-			"name": "gf_txt_btn.png_62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_6.png"
-		},
-		{
-			"name": "gf_txt_btn.png_72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_7.png"
-		},
-		{
-			"name": "gf_txt_btn.png_82_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_8.png"
-		},
-		{
-			"name": "gf_txt_btn.png_92_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/gf_txt_btn.png_9.png"
-		},
-		{
-			"name": "lab_bipai2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/lab_bipai.png"
-		},
-		{
-			"name": "lab_genzhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/lab_genzhu.png"
-		},
-		{
-			"name": "lab_jiazhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/lab_jiazhu.png"
-		},
-		{
-			"name": "lab_zjh_up_discard2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/lab_zjh_up_discard.png"
-		},
-		{
-			"name": "queding2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/queding.png"
-		},
-		{
-			"name": "quxiao2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/quxiao.png"
-		},
-		{
-			"name": "qznn_btn42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn4.png"
-		},
-		{
-			"name": "qznn_btn4_12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn4_1.png"
-		},
-		{
-			"name": "qznn_btn_beishu12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_beishu1.png"
-		},
-		{
-			"name": "qznn_btn_beishu1_12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_beishu1_1.png"
-		},
-		{
-			"name": "qznn_btn_beishu22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_beishu2.png"
-		},
-		{
-			"name": "qznn_btn_beishu2_12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_beishu2_1.png"
-		},
-		{
-			"name": "qznn_btn_qipai2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_qipai.png"
-		},
-		{
-			"name": "qznn_btn_qipai12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_qipai1.png"
-		},
-		{
-			"name": "qznn_btn_zidonggenzhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_zidonggenzhu.png"
-		},
-		{
-			"name": "qznn_btn_zidonggenzhu12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/qznn_btn_zidonggenzhu1.png"
-		},
-		{
-			"name": "tijiao2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/tijiao.png"
-		},
-		{
-			"name": "zidonggenzhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/Btn/zidonggenzhu.png"
-		},
-		{
-			"name": "bar_plus_bg2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/bar_plus_bg.png"
-		},
-		{
-			"name": "bar_reduce_bg2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/bar_reduce_bg.png"
-		},
-		{
-			"name": "bg_12_jpg",
-			"type": "image",
-			"url": "assets/game/zhajh/bg_1.jpg"
-		},
-		{
-			"name": "bg_jianbian_22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/bg_jianbian_2.png"
-		},
-		{
-			"name": "di2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/di.png"
-		},
-		{
-			"name": "fanpai0_tex2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/fanpai0_tex.png"
-		},
-		{
-			"name": "fanpai1_tex2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/fanpai1_tex.png"
-		},
-		{
-			"name": "gf_genzhu_02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_0.png"
-		},
-		{
-			"name": "gf_genzhu_110_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_1.png"
-		},
-		{
-			"name": "gf_genzhu_102_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_10.png"
-		},
-		{
-			"name": "gf_genzhu_112_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_11.png"
-		},
-		{
-			"name": "gf_genzhu_122_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_12.png"
-		},
-		{
-			"name": "gf_genzhu_132_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_13.png"
-		},
-		{
-			"name": "gf_genzhu_142_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_14.png"
-		},
-		{
-			"name": "gf_genzhu_152_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_15.png"
-		},
-		{
-			"name": "gf_genzhu_162_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_16.png"
-		},
-		{
-			"name": "gf_genzhu_172_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_17.png"
-		},
-		{
-			"name": "gf_genzhu_182_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_18.png"
-		},
-		{
-			"name": "gf_genzhu_192_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_19.png"
-		},
-		{
-			"name": "gf_genzhu_210_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_2.png"
-		},
-		{
-			"name": "gf_genzhu_202_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_20.png"
-		},
-		{
-			"name": "gf_genzhu_212_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_21.png"
-		},
-		{
-			"name": "gf_genzhu_222_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_22.png"
-		},
-		{
-			"name": "gf_genzhu_232_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_23.png"
-		},
-		{
-			"name": "gf_genzhu_242_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_24.png"
-		},
-		{
-			"name": "gf_genzhu_252_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_25.png"
-		},
-		{
-			"name": "gf_genzhu_262_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_26.png"
-		},
-		{
-			"name": "gf_genzhu_272_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_27.png"
-		},
-		{
-			"name": "gf_genzhu_282_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_28.png"
-		},
-		{
-			"name": "gf_genzhu_292_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_29.png"
-		},
-		{
-			"name": "gf_genzhu_32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_3.png"
-		},
-		{
-			"name": "gf_genzhu_302_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_30.png"
-		},
-		{
-			"name": "gf_genzhu_312_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_31.png"
-		},
-		{
-			"name": "gf_genzhu_42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_4.png"
-		},
-		{
-			"name": "gf_genzhu_52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_5.png"
-		},
-		{
-			"name": "gf_genzhu_62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_6.png"
-		},
-		{
-			"name": "gf_genzhu_72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_7.png"
-		},
-		{
-			"name": "gf_genzhu_82_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_8.png"
-		},
-		{
-			"name": "gf_genzhu_92_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_genzhu_9.png"
-		},
-		{
-			"name": "gf_guzhuyizhi02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi0.png"
-		},
-		{
-			"name": "gf_guzhuyizhi12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi1.png"
-		},
-		{
-			"name": "gf_guzhuyizhi22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi2.png"
-		},
-		{
-			"name": "gf_guzhuyizhi32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi3.png"
-		},
-		{
-			"name": "gf_guzhuyizhi42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi4.png"
-		},
-		{
-			"name": "gf_guzhuyizhi52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi5.png"
-		},
-		{
-			"name": "gf_guzhuyizhi62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi6.png"
-		},
-		{
-			"name": "gf_guzhuyizhi72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi7.png"
-		},
-		{
-			"name": "gf_guzhuyizhi82_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi8.png"
-		},
-		{
-			"name": "gf_guzhuyizhi92_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/gf_guzhuyizhi9.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_0.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_1.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_2.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_3.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_4.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_5.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_6.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_7.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_82_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_8.png"
-		},
-		{
-			"name": "goldflower_effect_daoguang_92_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/goldflower_effect_daoguang_9.png"
-		},
-		{
-			"name": "zjh_effect_win_0_tex2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_win_0_tex.png"
-		},
-		{
-			"name": "zjh_effect_win_1_tex2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_win_1_tex.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_1.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_2.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_3.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_4.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_5.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_6.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_7.png"
-		},
-		{
-			"name": "zjh_effect_youwin_tex_82_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_effect_youwin_tex_8.png"
-		},
-		{
-			"name": "zjh_vs_tex12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex1.png"
-		},
-		{
-			"name": "zjh_vs_tex22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex2.png"
-		},
-		{
-			"name": "zjh_vs_tex32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex3.png"
-		},
-		{
-			"name": "zjh_vs_tex42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex4.png"
-		},
-		{
-			"name": "zjh_vs_tex52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex5.png"
-		},
-		{
-			"name": "zjh_vs_tex62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex6.png"
-		},
-		{
-			"name": "zjh_vs_tex72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex7.png"
-		},
-		{
-			"name": "zjh_vs_tex82_png",
-			"type": "image",
-			"url": "assets/game/zhajh/effects/zjh_vs_tex8.png"
-		},
-		{
-			"name": "gf_Avatar_box2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_Avatar_box.png"
-		},
-		{
-			"name": "gf_Avatar_zz2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_Avatar_zz.png"
-		},
-		{
-			"name": "gf_bg2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg.png"
-		},
-		{
-			"name": "gf_bg_close2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_close.png"
-		},
-		{
-			"name": "gf_bg_close022_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_close02.png"
-		},
-		{
-			"name": "gf_bg_jiazhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_jiazhu.png"
-		},
-		{
-			"name": "gf_bg_l2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_l.png"
-		},
-		{
-			"name": "gf_bg_leaf2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_leaf.png"
-		},
-		{
-			"name": "gf_bg_match2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_match.png"
-		},
-		{
-			"name": "gf_bg_match_close2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_match_close.png"
-		},
-		{
-			"name": "gf_bg_match_word2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_match_word.png"
-		},
-		{
-			"name": "gf_bg_menu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_menu.png"
-		},
-		{
-			"name": "gf_bg_pk12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bg_pk1.png"
-		},
-		{
-			"name": "gf_bipaiguang2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_bipaiguang.png"
-		},
-		{
-			"name": "gf_btn_ban2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_ban.png"
-		},
-		{
-			"name": "gf_btn_chat2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_chat.png"
-		},
-		{
-			"name": "gf_btn_follow2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_follow.png"
-		},
-		{
-			"name": "gf_btn_game_begin_normal2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_game_begin_normal.png"
-		},
-		{
-			"name": "gf_btn_menu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_menu.png"
-		},
-		{
-			"name": "gf_btn_pk2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_pk.png"
-		},
-		{
-			"name": "gf_btn_txt_qxgz2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_txt_qxgz.png"
-		},
-		{
-			"name": "gf_btn_txt_zdgz2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_btn_txt_zdgz.png"
-		},
-		{
-			"name": "gf_chip_bg2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_chip_bg.png"
-		},
-		{
-			"name": "gf_dialogue2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_dialogue.png"
-		},
-		{
-			"name": "gf_dialogue12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_dialogue1.png"
-		},
-		{
-			"name": "gf_dialogue_bipai2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_dialogue_bipai.png"
-		},
-		{
-			"name": "gf_dialogue_genzhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_dialogue_genzhu.png"
-		},
-		{
-			"name": "gf_dialogue_jiazhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_dialogue_jiazhu.png"
-		},
-		{
-			"name": "gf_dialogue_kanpai2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_dialogue_kanpai.png"
-		},
-		{
-			"name": "gf_dialogue_qipai2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_dialogue_qipai.png"
-		},
-		{
-			"name": "gf_effect_kiss_02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_effect_kiss_0.png"
-		},
-		{
-			"name": "gf_emoji292_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_emoji29.png"
-		},
-		{
-			"name": "gf_flag_bpsb2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_flag_bpsb.png"
-		},
-		{
-			"name": "gf_flag_qp2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_flag_qp.png"
-		},
-		{
-			"name": "gf_flag_ykp2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_flag_ykp.png"
-		},
-		{
-			"name": "gf_game_bet_bg2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_game_bet_bg.png"
-		},
-		{
-			"name": "gf_game_continiu_title2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_game_continiu_title.png"
-		},
-		{
-			"name": "gf_game_light2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_game_light.png"
-		},
-		{
-			"name": "gf_game_room_bg_1_22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_game_room_bg_1_2.png"
-		},
-		{
-			"name": "gf_game_tips2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_game_tips.png"
-		},
-		{
-			"name": "gf_guzhuyizhi03_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_guzhuyizhi0.png"
-		},
-		{
-			"name": "gf_heguan2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_heguan.png"
-		},
-		{
-			"name": "gf_huoping_02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_huoping_0.png"
-		},
-		{
-			"name": "gf_icon_bullion2_PNG",
-			"type": "bin",
-			"url": "assets/game/zhajh/gf_icon_bullion.PNG"
-		},
-		{
-			"name": "gf_icon_chip_sm12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_sm1.png"
-		},
-		{
-			"name": "gf_icon_chip_sm22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_sm2.png"
-		},
-		{
-			"name": "gf_icon_chip_sm32_PNG",
-			"type": "bin",
-			"url": "assets/game/zhajh/gf_icon_chip_sm3.PNG"
-		},
-		{
-			"name": "gf_icon_chip_sm42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_sm4.png"
-		},
-		{
-			"name": "gf_icon_chip_sm52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_sm5.png"
-		},
-		{
-			"name": "gf_icon_chip_sm62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_sm6.png"
-		},
-		{
-			"name": "gf_icon_chip_sm72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_sm7.png"
-		},
-		{
-			"name": "gf_icon_chip_yellow2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_chip_yellow.png"
-		},
-		{
-			"name": "gf_icon_leave2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_leave.png"
-		},
-		{
-			"name": "gf_icon_record2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_record.png"
-		},
-		{
-			"name": "gf_icon_shezhi2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_shezhi.png"
-		},
-		{
-			"name": "gf_icon_wanfa2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_wanfa.png"
-		},
-		{
-			"name": "gf_icon_xiqian_close2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_icon_xiqian_close.png"
-		},
-		{
-			"name": "gf_match_bg2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_match_bg.png"
-		},
-		{
-			"name": "gf_mengban12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_mengban1.png"
-		},
-		{
-			"name": "gf_mengban22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_mengban2.png"
-		},
-		{
-			"name": "gf_mengban32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_mengban3.png"
-		},
-		{
-			"name": "gf_paixing2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_paixing.png"
-		},
-		{
-			"name": "gf_peilv2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_peilv.png"
-		},
-		{
-			"name": "gf_poker02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker0.png"
-		},
-		{
-			"name": "gf_poker0_12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker0_1.png"
-		},
-		{
-			"name": "gf_poker0_22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker0_2.png"
-		},
-		{
-			"name": "gf_poker110_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker1.png"
-		},
-		{
-			"name": "gf_poker102_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker10.png"
-		},
-		{
-			"name": "gf_poker112_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker11.png"
-		},
-		{
-			"name": "gf_poker122_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker12.png"
-		},
-		{
-			"name": "gf_poker132_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker13.png"
-		},
-		{
-			"name": "gf_poker142_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker14.png"
-		},
-		{
-			"name": "gf_poker152_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker15.png"
-		},
-		{
-			"name": "gf_poker162_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker16.png"
-		},
-		{
-			"name": "gf_poker172_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker17.png"
-		},
-		{
-			"name": "gf_poker182_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker18.png"
-		},
-		{
-			"name": "gf_poker192_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker19.png"
-		},
-		{
-			"name": "gf_poker210_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker2.png"
-		},
-		{
-			"name": "gf_poker202_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker20.png"
-		},
-		{
-			"name": "gf_poker212_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker21.png"
-		},
-		{
-			"name": "gf_poker222_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker22.png"
-		},
-		{
-			"name": "gf_poker232_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker23.png"
-		},
-		{
-			"name": "gf_poker242_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker24.png"
-		},
-		{
-			"name": "gf_poker252_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker25.png"
-		},
-		{
-			"name": "gf_poker262_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker26.png"
-		},
-		{
-			"name": "gf_poker272_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker27.png"
-		},
-		{
-			"name": "gf_poker282_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker28.png"
-		},
-		{
-			"name": "gf_poker292_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker29.png"
-		},
-		{
-			"name": "gf_poker310_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker3.png"
-		},
-		{
-			"name": "gf_poker302_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker30.png"
-		},
-		{
-			"name": "gf_poker312_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker31.png"
-		},
-		{
-			"name": "gf_poker322_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker32.png"
-		},
-		{
-			"name": "gf_poker332_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker33.png"
-		},
-		{
-			"name": "gf_poker342_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker34.png"
-		},
-		{
-			"name": "gf_poker352_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker35.png"
-		},
-		{
-			"name": "gf_poker362_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker36.png"
-		},
-		{
-			"name": "gf_poker372_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker37.png"
-		},
-		{
-			"name": "gf_poker382_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker38.png"
-		},
-		{
-			"name": "gf_poker392_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker39.png"
-		},
-		{
-			"name": "gf_poker410_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker4.png"
-		},
-		{
-			"name": "gf_poker402_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker40.png"
-		},
-		{
-			"name": "gf_poker412_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker41.png"
-		},
-		{
-			"name": "gf_poker422_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker42.png"
-		},
-		{
-			"name": "gf_poker432_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker43.png"
-		},
-		{
-			"name": "gf_poker442_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker44.png"
-		},
-		{
-			"name": "gf_poker452_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker45.png"
-		},
-		{
-			"name": "gf_poker462_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker46.png"
-		},
-		{
-			"name": "gf_poker472_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker47.png"
-		},
-		{
-			"name": "gf_poker482_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker48.png"
-		},
-		{
-			"name": "gf_poker492_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker49.png"
-		},
-		{
-			"name": "gf_poker510_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker5.png"
-		},
-		{
-			"name": "gf_poker502_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker50.png"
-		},
-		{
-			"name": "gf_poker512_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker51.png"
-		},
-		{
-			"name": "gf_poker522_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker52.png"
-		},
-		{
-			"name": "gf_poker532_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker53.png"
-		},
-		{
-			"name": "gf_poker542_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker54.png"
-		},
-		{
-			"name": "gf_poker552_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker55.png"
-		},
-		{
-			"name": "gf_poker562_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker56.png"
-		},
-		{
-			"name": "gf_poker572_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker57.png"
-		},
-		{
-			"name": "gf_poker582_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker58.png"
-		},
-		{
-			"name": "gf_poker592_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker59.png"
-		},
-		{
-			"name": "gf_poker62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker6.png"
-		},
-		{
-			"name": "gf_poker602_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker60.png"
-		},
-		{
-			"name": "gf_poker612_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker61.png"
-		},
-		{
-			"name": "gf_poker72_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker7.png"
-		},
-		{
-			"name": "gf_poker82_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker8.png"
-		},
-		{
-			"name": "gf_poker92_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_poker9.png"
-		},
-		{
-			"name": "gf_px12_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_px1.png"
-		},
-		{
-			"name": "gf_px22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_px2.png"
-		},
-		{
-			"name": "gf_px32_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_px3.png"
-		},
-		{
-			"name": "gf_px42_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_px4.png"
-		},
-		{
-			"name": "gf_px52_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_px5.png"
-		},
-		{
-			"name": "gf_px62_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_px6.png"
-		},
-		{
-			"name": "gf_pxzs2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_pxzs.png"
-		},
-		{
-			"name": "gf_queding2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_queding.png"
-		},
-		{
-			"name": "gf_room_dizhu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_room_dizhu.png"
-		},
-		{
-			"name": "gf_rule2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_rule.png"
-		},
-		{
-			"name": "gf_table2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_table.png"
-		},
-		{
-			"name": "gf_table_02_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_table_0.png"
-		},
-		{
-			"name": "gf_tip_anniu2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_tip_anniu.png"
-		},
-		{
-			"name": "gf_tip_ts2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_tip_ts.png"
-		},
-		{
-			"name": "gf_tips22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_tips2.png"
-		},
-		{
-			"name": "gf_tips_click_card2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_tips_click_card.png"
-		},
-		{
-			"name": "gf_tips_leave2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_tips_leave.png"
-		},
-		{
-			"name": "gf_typebg_black2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_typebg_black.png"
-		},
-		{
-			"name": "gf_wait3_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_wait.png"
-		},
-		{
-			"name": "gf_wait22_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_wait2.png"
-		},
-		{
-			"name": "gf_wanfa2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/gf_wanfa.png"
+			"url": "assets/game/zhajh/num/bitmapnum0.fnt",
+			"type": "font",
+			"name": "bitmapnum0_fnt"
 		},
 		{
-			"name": "gf_xiqian2_png",
+			"url": "assets/game/zhajh/num/bitmapnum0.png",
 			"type": "image",
-			"url": "assets/game/zhajh/gf_xiqian.png"
+			"name": "bitmapnum0_png"
 		},
 		{
-			"name": "brnn_imformation2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_,.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/brnn_imformation.png"
+			"name": "bar_reduce_font_,_png"
 		},
 		{
-			"name": "gamehall_BtnClose2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_-.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_BtnClose.png"
+			"name": "bar_reduce_font_-_png"
 		},
 		{
-			"name": "gamehall_BtnTxtSave2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_..png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_BtnTxtSave.png"
+			"name": "bar_reduce_font_._png"
 		},
 		{
-			"name": "gamehall_comfirm_btn2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_0.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_comfirm_btn.png"
+			"name": "bar_reduce_font_0_png"
 		},
 		{
-			"name": "gamehall_headBg2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_headBg.png"
+			"name": "bar_reduce_font_1_png"
 		},
 		{
-			"name": "gamehall_headbg12_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_headbg1.png"
+			"name": "bar_reduce_font_2_png"
 		},
 		{
-			"name": "gamehall_headBgL2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_headBgL.png"
+			"name": "bar_reduce_font_3_png"
 		},
 		{
-			"name": "gamehall_headBigbg2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_headBigbg.png"
+			"name": "bar_reduce_font_4_png"
 		},
 		{
-			"name": "gamehall_headSelected2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_5.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_headSelected.png"
+			"name": "bar_reduce_font_5_png"
 		},
 		{
-			"name": "gamehall_headSelected_txt2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_6.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_headSelected_txt.png"
+			"name": "bar_reduce_font_6_png"
 		},
 		{
-			"name": "gamehall_sexSelectBtn2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_7.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_sexSelectBtn.png"
+			"name": "bar_reduce_font_7_png"
 		},
 		{
-			"name": "gamehall_sexSelectBtn_light2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_8.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_sexSelectBtn_light.png"
+			"name": "bar_reduce_font_8_png"
 		},
 		{
-			"name": "gamehall_title_headSelected2_png",
+			"url": "assets/game/zhajh/num2/bar_reduce_font_9.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gamehall_title_headSelected.png"
+			"name": "bar_reduce_font_9_png"
 		},
 		{
-			"name": "gf_effcet_pic_person2_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_..png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_effcet_pic_person.png"
+			"name": "gf_betChip_number_._png"
 		},
 		{
-			"name": "gf_effect_kiss_03_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_0.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_effect_kiss_0.png"
+			"name": "gf_betChip_number_0_png"
 		},
 		{
-			"name": "gf_game_room_bg_12_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_1.png"
+			"name": "gf_betChip_number_1_png"
 		},
 		{
-			"name": "gf_game_room_bg_22_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_2.png"
+			"name": "gf_betChip_number_2_png"
 		},
 		{
-			"name": "gf_game_room_bg_32_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_3.png"
+			"name": "gf_betChip_number_3_png"
 		},
 		{
-			"name": "gf_game_room_bg_42_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_game_room_bg_4.png"
+			"name": "gf_betChip_number_4_png"
 		},
 		{
-			"name": "gf_logo2_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_5.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_logo.png"
+			"name": "gf_betChip_number_5_png"
 		},
 		{
-			"name": "gf_lowBetNumber_+2_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_6.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_+.png"
+			"name": "gf_betChip_number_6_png"
 		},
 		{
-			"name": "gf_lowBetNumber_-2_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_7.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_-.png"
+			"name": "gf_betChip_number_7_png"
 		},
 		{
-			"name": "gf_lowBetNumber_.2_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_8.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_..png"
+			"name": "gf_betChip_number_8_png"
 		},
 		{
-			"name": "gf_lowBetNumber_02_png",
+			"url": "assets/game/zhajh/num2/gf_betChip_number_9.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_0.png"
+			"name": "gf_betChip_number_9_png"
 		},
 		{
-			"name": "gf_lowBetNumber_12_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_..png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_1.png"
+			"name": "gf_bet_number_._png"
 		},
 		{
-			"name": "gf_lowBetNumber_22_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_0.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_2.png"
+			"name": "gf_bet_number_0_png"
 		},
 		{
-			"name": "gf_lowBetNumber_32_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_3.png"
+			"name": "gf_bet_number_1_png"
 		},
 		{
-			"name": "gf_lowBetNumber_42_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_4.png"
+			"name": "gf_bet_number_2_png"
 		},
 		{
-			"name": "gf_lowBetNumber_52_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_5.png"
+			"name": "gf_bet_number_3_png"
 		},
 		{
-			"name": "gf_lowBetNumber_62_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_6.png"
+			"name": "gf_bet_number_4_png"
 		},
 		{
-			"name": "gf_lowBetNumber_72_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_5.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_7.png"
+			"name": "gf_bet_number_5_png"
 		},
 		{
-			"name": "gf_lowBetNumber_82_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_6.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_8.png"
+			"name": "gf_bet_number_6_png"
 		},
 		{
-			"name": "gf_lowBetNumber_92_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_7.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_9.png"
+			"name": "gf_bet_number_7_png"
 		},
 		{
-			"name": "gf_lowBetNumber_）2_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_8.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_）.png"
+			"name": "gf_bet_number_8_png"
 		},
 		{
-			"name": "gf_room_bg2_png",
+			"url": "assets/game/zhajh/num2/gf_bet_number_9.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_room_bg.png"
+			"name": "gf_bet_number_9_png"
 		},
 		{
-			"name": "gf_room_gold2_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_+.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_room_gold.png"
+			"name": "gf_cutmoneyNum_export_+_png"
 		},
 		{
-			"name": "gf_room_icon_help2_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_-.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_room_icon_help.png"
+			"name": "gf_cutmoneyNum_export_-_png"
 		},
 		{
-			"name": "gf_room_icon_record2_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_room_icon_record.png"
+			"name": "gf_cutmoneyNum_export_1_png"
 		},
 		{
-			"name": "gf_room_pic_bg2_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_room_pic_bg.png"
+			"name": "gf_cutmoneyNum_export_2_png"
 		},
 		{
-			"name": "gf_room_return2_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_room_return.png"
+			"name": "gf_cutmoneyNum_export_3_png"
 		},
 		{
-			"name": "gf_room_user_bg2_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/gf_room_user_bg.png"
+			"name": "gf_cutmoneyNum_export_4_png"
 		},
 		{
-			"name": "lv22_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_5.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/lv2.png"
+			"name": "gf_cutmoneyNum_export_5_png"
 		},
 		{
-			"name": "lv32_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_6.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/lv3.png"
+			"name": "gf_cutmoneyNum_export_6_png"
 		},
 		{
-			"name": "lv42_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_7.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/lv4.png"
+			"name": "gf_cutmoneyNum_export_7_png"
 		},
 		{
-			"name": "lv52_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_8.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/lv5.png"
+			"name": "gf_cutmoneyNum_export_8_png"
 		},
 		{
-			"name": "zajinhua2_png",
+			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_9.png",
 			"type": "image",
-			"url": "assets/game/zhajh/navigation/zajinhua.png"
+			"name": "gf_cutmoneyNum_export_9_png"
 		},
 		{
-			"name": "bar_reduce_font_,2_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_).png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_,.png"
+			"name": "gf_moneyNumber_)_png"
 		},
 		{
-			"name": "bar_reduce_font_-2_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_+.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_-.png"
+			"name": "gf_moneyNumber_+_png"
 		},
 		{
-			"name": "bar_reduce_font_.2_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_-.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_..png"
+			"name": "gf_moneyNumber_-_png"
 		},
 		{
-			"name": "bar_reduce_font_02_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_..png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_0.png"
+			"name": "gf_moneyNumber_._png"
 		},
 		{
-			"name": "bar_reduce_font_12_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_0.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_1.png"
+			"name": "gf_moneyNumber_0_png"
 		},
 		{
-			"name": "bar_reduce_font_22_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_2.png"
+			"name": "gf_moneyNumber_1_png"
 		},
 		{
-			"name": "bar_reduce_font_32_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_3.png"
+			"name": "gf_moneyNumber_2_png"
 		},
 		{
-			"name": "bar_reduce_font_42_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_4.png"
+			"name": "gf_moneyNumber_3_png"
 		},
 		{
-			"name": "bar_reduce_font_52_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_5.png"
+			"name": "gf_moneyNumber_4_png"
 		},
 		{
-			"name": "bar_reduce_font_62_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_5.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_6.png"
+			"name": "gf_moneyNumber_5_png"
 		},
 		{
-			"name": "bar_reduce_font_72_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_6.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_7.png"
+			"name": "gf_moneyNumber_6_png"
 		},
 		{
-			"name": "bar_reduce_font_82_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_7.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_8.png"
+			"name": "gf_moneyNumber_7_png"
 		},
 		{
-			"name": "bar_reduce_font_92_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_8.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/bar_reduce_font_9.png"
+			"name": "gf_moneyNumber_8_png"
 		},
 		{
-			"name": "gf_betChip_number_.2_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_9.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_..png"
+			"name": "gf_moneyNumber_9_png"
 		},
 		{
-			"name": "gf_betChip_number_02_png",
+			"url": "assets/game/zhajh/num2/gf_moneyNumber_，.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_0.png"
+			"name": "gf_moneyNumber_，_png"
 		},
 		{
-			"name": "gf_betChip_number_12_png",
+			"url": "assets/game/zhajh/num2/gf_txt_btn.png_(.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_1.png"
+			"name": "gf_txt_btn.png_(_png"
 		},
 		{
-			"name": "gf_betChip_number_22_png",
+			"url": "assets/game/zhajh/navigation/brnn_imformation.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_2.png"
+			"name": "brnn_imformation_png"
 		},
 		{
-			"name": "gf_betChip_number_32_png",
+			"url": "assets/game/zhajh/navigation/gamehall_BtnClose.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_3.png"
+			"name": "gamehall_BtnClose_png"
 		},
 		{
-			"name": "gf_betChip_number_42_png",
+			"url": "assets/game/zhajh/navigation/gamehall_BtnTxtSave.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_4.png"
+			"name": "gamehall_BtnTxtSave_png"
 		},
 		{
-			"name": "gf_betChip_number_52_png",
+			"url": "assets/game/zhajh/navigation/gamehall_comfirm_btn.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_5.png"
+			"name": "gamehall_comfirm_btn_png"
 		},
 		{
-			"name": "gf_betChip_number_62_png",
+			"url": "assets/game/zhajh/navigation/gamehall_headBg.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_6.png"
+			"name": "gamehall_headBg_png"
 		},
 		{
-			"name": "gf_betChip_number_72_png",
+			"url": "assets/game/zhajh/navigation/gamehall_headBgL.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_7.png"
+			"name": "gamehall_headBgL_png"
 		},
 		{
-			"name": "gf_betChip_number_82_png",
+			"url": "assets/game/zhajh/navigation/gamehall_headBigbg.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_8.png"
+			"name": "gamehall_headBigbg_png"
 		},
 		{
-			"name": "gf_betChip_number_92_png",
+			"url": "assets/game/zhajh/navigation/gamehall_headSelected.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_betChip_number_9.png"
+			"name": "gamehall_headSelected_png"
 		},
 		{
-			"name": "gf_bet_number_.2_png",
+			"url": "assets/game/zhajh/navigation/gamehall_headSelected_txt.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_..png"
+			"name": "gamehall_headSelected_txt_png"
 		},
 		{
-			"name": "gf_bet_number_02_png",
+			"url": "assets/game/zhajh/navigation/gamehall_headbg1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_0.png"
+			"name": "gamehall_headbg1_png"
 		},
 		{
-			"name": "gf_bet_number_12_png",
+			"url": "assets/game/zhajh/navigation/gamehall_sexSelectBtn.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_1.png"
+			"name": "gamehall_sexSelectBtn_png"
 		},
 		{
-			"name": "gf_bet_number_22_png",
+			"url": "assets/game/zhajh/navigation/gamehall_sexSelectBtn_light.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_2.png"
+			"name": "gamehall_sexSelectBtn_light_png"
 		},
 		{
-			"name": "gf_bet_number_32_png",
+			"url": "assets/game/zhajh/navigation/gamehall_title_headSelected.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_3.png"
+			"name": "gamehall_title_headSelected_png"
 		},
 		{
-			"name": "gf_bet_number_42_png",
+			"url": "assets/game/zhajh/navigation/gf_effcet_pic_person.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_4.png"
+			"name": "gf_effcet_pic_person_png"
 		},
 		{
-			"name": "gf_bet_number_52_png",
+			"url": "assets/game/zhajh/navigation/gf_effect_kiss_0.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_5.png"
+			"name": "gf_effect_kiss_0_png"
 		},
 		{
-			"name": "gf_bet_number_62_png",
+			"url": "assets/game/zhajh/navigation/gf_game_room_bg_1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_6.png"
+			"name": "gf_game_room_bg_1_png"
 		},
 		{
-			"name": "gf_bet_number_72_png",
+			"url": "assets/game/zhajh/navigation/gf_game_room_bg_2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_7.png"
+			"name": "gf_game_room_bg_2_png"
 		},
 		{
-			"name": "gf_bet_number_82_png",
+			"url": "assets/game/zhajh/navigation/gf_game_room_bg_3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_8.png"
+			"name": "gf_game_room_bg_3_png"
 		},
 		{
-			"name": "gf_bet_number_92_png",
+			"url": "assets/game/zhajh/navigation/gf_game_room_bg_4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_bet_number_9.png"
+			"name": "gf_game_room_bg_4_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_+2_png",
+			"url": "assets/game/zhajh/navigation/gf_logo.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_+.png"
+			"name": "gf_logo_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_-2_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_+.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_-.png"
+			"name": "gf_lowBetNumber_+_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_12_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_-.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_1.png"
+			"name": "gf_lowBetNumber_-_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_22_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_..png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_2.png"
+			"name": "gf_lowBetNumber_._png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_32_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_0.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_3.png"
+			"name": "gf_lowBetNumber_0_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_42_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_4.png"
+			"name": "gf_lowBetNumber_1_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_52_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_5.png"
+			"name": "gf_lowBetNumber_2_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_62_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_6.png"
+			"name": "gf_lowBetNumber_3_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_72_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_7.png"
+			"name": "gf_lowBetNumber_4_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_82_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_5.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_8.png"
+			"name": "gf_lowBetNumber_5_png"
 		},
 		{
-			"name": "gf_cutmoneyNum_export_92_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_6.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_cutmoneyNum_export_9.png"
+			"name": "gf_lowBetNumber_6_png"
 		},
 		{
-			"name": "gf_moneyNumber_)2_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_7.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_).png"
+			"name": "gf_lowBetNumber_7_png"
 		},
 		{
-			"name": "gf_moneyNumber_+2_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_8.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_+.png"
+			"name": "gf_lowBetNumber_8_png"
 		},
 		{
-			"name": "gf_moneyNumber_-2_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_9.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_-.png"
+			"name": "gf_lowBetNumber_9_png"
 		},
 		{
-			"name": "gf_moneyNumber_.2_png",
+			"url": "assets/game/zhajh/navigation/gf_lowBetNumber_）.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_..png"
+			"name": "gf_lowBetNumber_）_png"
 		},
 		{
-			"name": "gf_moneyNumber_02_png",
+			"url": "assets/game/zhajh/navigation/gf_room_bg.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_0.png"
+			"name": "gf_room_bg_png"
 		},
 		{
-			"name": "gf_moneyNumber_12_png",
+			"url": "assets/game/zhajh/navigation/gf_room_gold.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_1.png"
+			"name": "gf_room_gold_png"
 		},
 		{
-			"name": "gf_moneyNumber_22_png",
+			"url": "assets/game/zhajh/navigation/gf_room_icon_help.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_2.png"
+			"name": "gf_room_icon_help_png"
 		},
 		{
-			"name": "gf_moneyNumber_32_png",
+			"url": "assets/game/zhajh/navigation/gf_room_icon_record.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_3.png"
+			"name": "gf_room_icon_record_png"
 		},
 		{
-			"name": "gf_moneyNumber_42_png",
+			"url": "assets/game/zhajh/navigation/gf_room_pic_bg.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_4.png"
+			"name": "gf_room_pic_bg_png"
 		},
 		{
-			"name": "gf_moneyNumber_52_png",
+			"url": "assets/game/zhajh/navigation/gf_room_return.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_5.png"
+			"name": "gf_room_return_png"
 		},
 		{
-			"name": "gf_moneyNumber_62_png",
+			"url": "assets/game/zhajh/navigation/gf_room_user_bg.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_6.png"
+			"name": "gf_room_user_bg_png"
 		},
 		{
-			"name": "gf_moneyNumber_72_png",
+			"url": "assets/game/zhajh/navigation/lv2.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_7.png"
+			"name": "lv2_png"
 		},
 		{
-			"name": "gf_moneyNumber_82_png",
+			"url": "assets/game/zhajh/navigation/lv3.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_8.png"
+			"name": "lv3_png"
 		},
 		{
-			"name": "gf_moneyNumber_92_png",
+			"url": "assets/game/zhajh/navigation/lv4.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_9.png"
+			"name": "lv4_png"
 		},
 		{
-			"name": "gf_moneyNumber_，2_png",
+			"url": "assets/game/zhajh/navigation/lv5.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_moneyNumber_，.png"
+			"name": "lv5_png"
 		},
 		{
-			"name": "gf_txt_btn.png_(2_png",
+			"url": "assets/game/zhajh/navigation/zajinhua.png",
 			"type": "image",
-			"url": "assets/game/zhajh/num2/gf_txt_btn.png_(.png"
+			"name": "zajinhua_png"
 		},
 		{
-			"name": "zjh_btn_fankui2_png",
-			"type": "image",
-			"url": "assets/game/zhajh/zjh_btn_fankui.png"
->>>>>>> 098eb203695971100e25d07778f5879125b4c9a0
+			"url": "assets/game/zhajh/jinhua.json",
+			"type": "sheet",
+			"name": "jinhua_json",
+			"subkeys": "a1,a10,a11,a12,a13,a14,a15,a2,a20,a3,a4,a5,a6,a7,a8,a9,b1,b1a,b2,b2a,b3,b3a,b4,b4a,b5,b5a,b6,b6a,c1,c2,card_100,card_101,card_102,card_103,card_104,card_105,card_106,card_107,card_108,card_109,card_110,card_111,card_112,card_113,card_201,card_202,card_203,card_204,card_205,card_206,card_207,card_208,card_209,card_210,card_211,card_212,card_213,card_301,card_302,card_303,card_304,card_305,card_306,card_307,card_308,card_309,card_310,card_311,card_312,card_313,card_401,card_402,card_403,card_404,card_405,card_406,card_407,card_408,card_409,card_410,card_411,card_412,card_413,d1,d2,d3,d4,d5,head,jh.baocaijin,jh.baozhuang,jh.btnred,jh.titlebg,t1,t2,t3222,talk,u1,u2,u3,u4,u5,u6,z2,z3,z4,z5,z6,z7"
 		}
 	]
 }
