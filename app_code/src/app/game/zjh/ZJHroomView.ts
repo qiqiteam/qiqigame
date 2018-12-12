@@ -26,6 +26,8 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 		this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
 		EventUtil.addEventListener(EventConst.onGameStatusChange, this.JoinRoomPrepare, this);
 		this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnclickStage, this);
+		this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnclickStage, this);
+		
 
 
 	}
@@ -55,7 +57,8 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 	}
 /***------------------------------------------------------------------------------------------------------------ */
 	private OnclickStage(e: egret.TouchEvent): void {
-		if (e.target != this._return||e.target != this._record||e.target != this._help) {
+		if (e.target != this._return&&e.target != this._record&&e.target != this._help&&e.target !=ZJHhelpType&&e.target !=ZJHRecordPanl&&e.target !=ZJHHelpPanl) {
+			
 				xlLib.PopUpMgr.removePopUp(ZJHRecordPanl, 1);
 				xlLib.PopUpMgr.removePopUp(ZJHHelpPanl, 1);
 		}
@@ -74,13 +77,13 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 	}
 	//记录面板
 	public addrecordPanl(): void {
-		xlLib.PopUpMgr.addPopUp(ZJHRecordPanl, null, true);
-
+		xlLib.PopUpMgr.addPopUp(ZJHRecordPanl, null, true, true, null, 1);
 	}
 	//帮助面板
 	public addhelpPanl(): void {
-		xlLib.PopUpMgr.addPopUp(ZJHHelpPanl, null, true);
+		// xlLib.PopUpMgr.addPopUp(ZJHHelpPanl, null, true,false);
 
+		xlLib.PopUpMgr.addPopUp(ZJHHelpPanl, null, true, true, null, 1);
 	}
 	public destroy(): void {
 		this.gameIconData = null;

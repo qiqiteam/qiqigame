@@ -859,7 +859,7 @@ class ZJHView extends eui.Component {
     }
     /***(推送*异常及时通知 比牌结果推送)*/
     private timeInfo(data: any): void {
-        if (data.param.command == "onTimelyNotify" && data.param.state == 3) {
+        if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 3) {
             console.log("玩家全压和其他玩家比牌", data);
             console.log(data.param.json);
             /**AI玩家胜利 */
@@ -890,14 +890,16 @@ class ZJHView extends eui.Component {
                 console.log("玩家全压获胜");
                 this.anotherDontCard(data.param.index);
             }
-        } else if (data.param.command == "onTimelyNotify" && data.param.state == 0) {
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 0) {
             //开启自动跟注
+            console.log("++++++++++++++++++++++++++data.param.state == 0",data);
             this.img_autogenzhu.visible = false;
             this._btn_cancelautogenzhu.visible = true;
             this.img_cancelautogenzhu0.visible = true;
             this.img_cancelautogenzhu1.visible = true;
-        } else if (data.param.command == "onTimelyNotify" && data.param.state == 1) {
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 1) {
             //关闭自动跟注
+            console.log("++++++++++++++++++++++++++data.param.state == 1",data);
             this.img_autogenzhu.visible = true;
             this._btn_autogenzhu.visible = true;
             this._btn_cancelautogenzhu.visible = false;
