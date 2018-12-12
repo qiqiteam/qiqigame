@@ -39,14 +39,14 @@ class LodingView extends  eui.Component
 
     private playLiuguang():void
     {
-        // this.liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp_ske_json', 'wzqp_tex_json','wzqp_tex_png',"wzqp");
-        // dragonBones.WorldClock.clock.add(this.liuguang);
-        // let armatureDisplay = this.liuguang.getDisplay();
-        // armatureDisplay.x = 1230;
-        // armatureDisplay.y = 400;
-        // this.addChild(armatureDisplay);
+        this.liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp',"wzqp");
+        dragonBones.WorldClock.clock.add(this.liuguang);
+        let armatureDisplay = this.liuguang.getDisplay();
+        armatureDisplay.x = 1230;
+        armatureDisplay.y = 400;
+        this.addChild(armatureDisplay);
 
-        // xlLib.DisplayUtils.runDragonBonesArmature(this.liuguang,"wzqp");
+        xlLib.DisplayUtils.runDragonBonesArmature(this.liuguang,"wzqp");
     }
 
 
