@@ -1,0 +1,4 @@
+class IAnimationSprite {
+	public constructor() {
+	}
+}
