@@ -11,130 +11,127 @@ class ZJHView extends eui.Component {
 
     public pailist: any[] = [];//临时存储牌的信息
 
-    public img_deskgoldbg: eui.Image;
-    public img_deskgoldIcon: eui.Image;
-    public lab_deskGolds: eui.Label;
-    public grpCoins: eui.Group;
-    public grpCard: eui.Group;
-    public grpCard4_0: eui.Image;
-    public grpCard4_1: eui.Image;
-    public grpCard4_2: eui.Image;
-    public grpCard3_0: eui.Image;
-    public grpCard3_1: eui.Image;
-    public grpCard3_2: eui.Image;
-    public grpCard2_0: eui.Image;
-    public grpCard2_1: eui.Image;
-    public grpCard2_2: eui.Image;
-    public grpCard1_0: eui.Image;
-    public grpCard1_1: eui.Image;
-    public grpCard1_2: eui.Image;
-    public grpCard0_0: eui.Image;
-    public grpCard0_1: eui.Image;
-    public grpCard0_2: eui.Image;
-    public imgCardbg0: eui.Image;
-    public imgCardbg1: eui.Image;
-    public imgCardbg2: eui.Image;
-    public imgCardbg3: eui.Image;
-    public imgCardbg4: eui.Image;
-    public imgCardType0: eui.Image;
-    public imgCardType1: eui.Image;
-    public imgCardType2: eui.Image;
-    public imgCardType3: eui.Image;
-    public imgCardType4: eui.Image;
-    public labstatus0: eui.Label;
-    public labstatus1: eui.Label;
-    public labstatus2: eui.Label;
-    public labstatus3: eui.Label;
-    public labstatus4: eui.Label;
-    public img_xzgold0: eui.Image;
-    public img_xzgold1: eui.Image;
-    public img_xzgold2: eui.Image;
-    public img_xzgold3: eui.Image;
-    public img_xzgold4: eui.Image;
-    public lab_xzgold0: eui.Label;
-    public lab_xzgold1: eui.Label;
-    public lab_xzgold2: eui.Label;
-    public lab_xzgold3: eui.Label;
-    public lab_xzgold4: eui.Label;
-    public img_abandon1: eui.Image;
-    public img_abandon2: eui.Image;
-    public img_abandon3: eui.Image;
-    public img_abandon4: eui.Image;
-    public grpHead1: ZJHHead;
-    public grpHead2: ZJHHead;
-    public grpHead3: ZJHHead;
-    public grpHead4: ZJHHead;
-    public grpHead5: ZJHHead;
-    public grpHead6: ZJHHead;
-    public grpHead7: ZJHHead;
-    public grpHead8: ZJHHead;
-    public grpHead9: ZJHHead;
-    public grpCountdown: eui.Group;
-    public labCountdown0: eui.BitmapLabel;
-    public labCountdown1: eui.BitmapLabel;
-    public timeTxt: eui.Label;
-    public _btn_kanpai: eui.Button;
-    public grpHead0: eui.Group;
-    public imghead0: eui.Image;
-    public labelHead0: eui.Label;
-    public labelGold0: eui.Label;
-    public grp_operatbtn: eui.Group;
-    public _btn_qipai: eui.Button;
-    public _btn_jiazhu: eui.Button;
-    public _btn_bipai: eui.Button;
-    public _btn_quanxia: eui.Button;
-    public _btn_genzhu: eui.Button;
-    public _btn_autogenzhu: eui.Button;
-    public _btn_cancelautogenzhu: eui.Button;
-    public img_qipai: eui.Image;
-    public img_jiazhu: eui.Image;
-    public img_bipai: eui.Image;
-    public img_quanya: eui.Image;
-    public img_genzhu: eui.Image;
-    public img_autogenzhu: eui.Image;
-    public img_cancelautogenzhu0: eui.Image;
-    public img_cancelautogenzhu1: eui.Image;
-    public lab_tankNumber: eui.Label;
-    public lab_quanyaNumber: eui.Label;
-    public lab_callNumber: eui.Label;
-    public grp_btncm0: eui.Group;
-    public _btn_jiacm_0: eui.Button;
-    public _btn_jiacm_1: eui.Button;
-    public _btn_jiacm_2: eui.Button;
-    public _btn_jiacm_3: eui.Button;
-    public _btn_jiacm_4: eui.Button;
-    public _btn_jiacm_5: eui.Button;
-    public labchip0: eui.Label;
-    public labchip1: eui.Label;
-    public labchip2: eui.Label;
-    public labchip3: eui.Label;
-    public labchip4: eui.Label;
-    public labchip5: eui.Label;
-    public grpprepare: eui.Group;
-    public _btn_hintclose: eui.Button;
-    public _btn_menu: eui.Button;
-    public grp_menu: eui.Group;
-    public _btn_out: eui.Button;
-    public _btn_setting: eui.Button;
-    public _btn_record: eui.Button;
-    public _btn_playmethod: eui.Button;
-    public _btn_feedback: eui.Button;
-    public grp_out_hint: eui.Group;
-    public _btn_cancel: eui.Button;
-    public _btn_quite: eui.Button;
-    public grp_setting_hint: eui.Group;
-    public _btn_set_close: eui.Button;
-    public tab_selestwanfa: eui.TabBar;
-    public Vk_wanfa: eui.ViewStack;
-    public grp_paixing: eui.Group;
-    public grp_wanfa: eui.Group;
-    public grp_odds: eui.Group;
-    public grp_aboutus: eui.Group;
-    public grp_feedback_panel: eui.Group;
-    public _btn_feedback_close: eui.Button;
-    public _btn_submit_close: eui.Button;
-    public _btn_luckmoney: eui.Button;
-    public _btn_continuegame: eui.Button;
+public img_deskgoldbg:eui.Image;
+public img_deskgoldIcon:eui.Image;
+public lab_deskGolds:eui.Label;
+public grpCoins:eui.Group;
+public grpCard:eui.Group;
+public grpCard4_0:eui.Image;
+public grpCard4_1:eui.Image;
+public grpCard4_2:eui.Image;
+public grpCard3_0:eui.Image;
+public grpCard3_1:eui.Image;
+public grpCard3_2:eui.Image;
+public grpCard2_0:eui.Image;
+public grpCard2_1:eui.Image;
+public grpCard2_2:eui.Image;
+public grpCard1_0:eui.Image;
+public grpCard1_1:eui.Image;
+public grpCard1_2:eui.Image;
+public grpCard0_0:eui.Image;
+public grpCard0_1:eui.Image;
+public grpCard0_2:eui.Image;
+public imgCardbg0:eui.Image;
+public imgCardbg1:eui.Image;
+public imgCardbg2:eui.Image;
+public imgCardbg3:eui.Image;
+public imgCardbg4:eui.Image;
+public imgCardType0:eui.Image;
+public imgCardType1:eui.Image;
+public imgCardType2:eui.Image;
+public imgCardType3:eui.Image;
+public imgCardType4:eui.Image;
+public labstatus0:eui.Label;
+public labstatus1:eui.Label;
+public labstatus2:eui.Label;
+public labstatus3:eui.Label;
+public labstatus4:eui.Label;
+public img_xzgold0:eui.Image;
+public img_xzgold1:eui.Image;
+public img_xzgold2:eui.Image;
+public img_xzgold3:eui.Image;
+public img_xzgold4:eui.Image;
+public lab_xzgold0:eui.Label;
+public lab_xzgold1:eui.Label;
+public lab_xzgold2:eui.Label;
+public lab_xzgold3:eui.Label;
+public lab_xzgold4:eui.Label;
+public img_abandon1:eui.Image;
+public img_abandon2:eui.Image;
+public img_abandon3:eui.Image;
+public img_abandon4:eui.Image;
+public grpHead1:ZJHHead;
+public grpHead2:ZJHHead;
+public grpHead3:ZJHHead;
+public grpHead4:ZJHHead;
+public grpHead5:ZJHHead;
+public grpHead6:ZJHHead;
+public grpHead7:ZJHHead;
+public grpHead8:ZJHHead;
+public grpHead9:ZJHHead;
+public grpCountdown:eui.Group;
+public labCountdown0:eui.BitmapLabel;
+public labCountdown1:eui.BitmapLabel;
+public timeTxt:eui.Label;
+public _btn_kanpai:eui.Button;
+public grpHead0:eui.Group;
+public imghead0:eui.Image;
+public labelHead0:eui.Label;
+public labelGold0:eui.Label;
+public grp_operatbtn:eui.Group;
+public _btn_qipai:eui.Button;
+public _btn_jiazhu:eui.Button;
+public _btn_bipai:eui.Button;
+public _btn_quanxia:eui.Button;
+public _btn_genzhu:eui.Button;
+public _btn_autogenzhu:eui.Button;
+public _btn_cancelautogenzhu:eui.Button;
+public img_qipai:eui.Image;
+public img_jiazhu:eui.Image;
+public img_bipai:eui.Image;
+public img_quanya:eui.Image;
+public img_genzhu:eui.Image;
+public img_autogenzhu:eui.Image;
+public img_cancelautogenzhu0:eui.Image;
+public img_cancelautogenzhu1:eui.Image;
+public lab_tankNumber:eui.Label;
+public lab_quanyaNumber:eui.Label;
+public lab_callNumber:eui.Label;
+public grp_btncm0:eui.Group;
+public _btn_jiacm_0:eui.Button;
+public _btn_jiacm_1:eui.Button;
+public _btn_jiacm_2:eui.Button;
+public _btn_jiacm_3:eui.Button;
+public _btn_jiacm_4:eui.Button;
+public _btn_jiacm_5:eui.Button;
+public labchip0:eui.Label;
+public labchip1:eui.Label;
+public labchip2:eui.Label;
+public labchip3:eui.Label;
+public labchip4:eui.Label;
+public labchip5:eui.Label;
+public grpprepare:eui.Group;
+public _btn_hintclose:eui.Button;
+public _btn_menu:eui.Button;
+public grp_menu:eui.Group;
+public menu_bg:eui.Image;
+public _btn_out:eui.Button;
+public _btn_setting:eui.Button;
+public _btn_record:eui.Button;
+public _btn_playmethod:eui.Button;
+public _btn_feedback:eui.Button;
+public grp_out_hint:eui.Group;
+public _btn_cancel:eui.Button;
+public _btn_quite:eui.Button;
+public grp_setting_hint:eui.Group;
+public _btn_set_close:eui.Button;
+public grp_feedback_panel:eui.Group;
+public _btn_feedback_close:eui.Button;
+public _btn_submit_close:eui.Button;
+public _btn_luckmoney:eui.Button;
+public _btn_continuegame:eui.Button;
+
+
 
 
 
@@ -620,7 +617,27 @@ class ZJHView extends eui.Component {
         this._btn_set_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_feedback_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_feedback.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        egret.MainContext.instance.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
     }
+
+	private onTouchStageHandler(evt:egret.Event):void
+	{
+		if(
+			!(evt.target ==  this.grp_menu
+            ||evt.target ==  this._btn_menu
+            ||evt.target ==  this.menu_bg
+            ||evt.target ==  this._btn_out
+            ||evt.target ==  this._btn_setting
+            ||evt.target ==  this._btn_record
+            ||evt.target ==  this._btn_playmethod
+            ||evt.target ==  this._btn_feedback
+            )
+		)
+		{
+			this.grp_menu.visible = false;
+		}
+	}
+
     private addtime: number;//计时器从0+到10
     /**开始倒计时*/
     private startCountDown(time: number): void {

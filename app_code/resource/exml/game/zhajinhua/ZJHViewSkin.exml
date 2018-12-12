@@ -237,7 +237,7 @@
 		</e:Button>
 	</e:Group>
 	<e:Group id="grp_menu" width="203" height="355" y="104.08" x="21.28" visible="false">
-		<e:Image width="203" height="355" source="gf_bg_menu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="menu_bg" width="203" height="355" source="gf_bg_menu_png" horizontalCenter="0" verticalCenter="0"/>
 		<e:Button id="_btn_out" label="" y="30" x="23">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
