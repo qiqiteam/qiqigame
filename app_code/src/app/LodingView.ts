@@ -39,14 +39,13 @@ class LodingView extends  eui.Component
 
     private playLiuguang():void
     {
-        // this.liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp',"wzqp");
-        // dragonBones.WorldClock.clock.add(this.liuguang);
-        // let armatureDisplay = this.liuguang.getDisplay();
-        // armatureDisplay.x = 1230;
-        // armatureDisplay.y = 400;
-        // this.addChild(armatureDisplay);
-
-        // xlLib.DisplayUtils.runDragonBonesArmature(this.liuguang,"wzqp");
+        this.liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp',"wzqp");
+        dragonBones.WorldClock.clock.add(this.liuguang);
+        let armatureDisplay = this.liuguang.getDisplay();
+        armatureDisplay.x = 1230;
+        armatureDisplay.y = 400;
+        this.addChild(armatureDisplay);
+        xlLib.DisplayUtils.runDragonBonesArmature(this.liuguang,"wzqp");
     }
 
 
@@ -62,7 +61,7 @@ class LodingView extends  eui.Component
     protected partRemoved(partName: string, instance: any): void
     {
         this.stop();
-        //  xlLib.DisplayUtils.destoryDragonBonesArmature(this.liuguang,"wzqp");
+         xlLib.DisplayUtils.destoryDragonBonesArmature(this.liuguang,"wzqp");
         super.partRemoved(partName,instance);
     }
 

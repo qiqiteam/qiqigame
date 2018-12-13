@@ -164,6 +164,8 @@ declare class TBNNHeadSkin extends eui.Skin{
 }
 declare class TBNNViewSkin extends eui.Skin{
 }
+declare class TBNNroomEffSkin extends eui.Skin{
+}
 declare class TBNNroomViewSkin extends eui.Skin{
 }
 declare class AwardItemSkin extends eui.Skin{

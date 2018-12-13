@@ -72,6 +72,7 @@
     "resource/exml/game/set/SetViewSkin.exml",
     "resource/exml/game/tbnn/TBNNHeadSkin.exml",
     "resource/exml/game/tbnn/TBNNViewSkin.exml",
+    "resource/exml/game/tbnn/TBNNroomEffSkin.exml",
     "resource/exml/game/tbnn/TBNNroomViewSkin.exml",
     "resource/exml/game/welfare/AwardItemSkin.exml",
     "resource/exml/game/welfare/LotterySkin.exml",

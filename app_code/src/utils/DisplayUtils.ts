@@ -160,18 +160,8 @@ module xlLib {
                 else{
                     armature.animation.gotoAndStop(animationName,0);
                 }
-                var _time:number;
-                egret.startTick((timeStamp)=>{
-                        if(!_time) {
-                        _time = timeStamp;
-                        }
-                        var now = timeStamp;
-                        var pass = now - _time;
-                        _time = now;
-                        dragonBones.WorldClock.clock.advanceTime(pass / 1000);
-                        return false;
-                }, armature);
         }
+
 
         /**
          * 设置按钮变灰
@@ -206,9 +196,6 @@ module xlLib {
             }
             dragonBones.WorldClock.clock.remove(armature);
             armature.animation.stop();
-            egret.stopTick((timeStamp)=>{
-                return true;
-            }, armature);
             armature.dispose();
         }
         /**

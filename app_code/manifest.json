@@ -91,14 +91,15 @@
 		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/tbnn/TBNNHead.js",
+		"bin-debug/app/game/tbnn/TBNNroomEff.js",
 		"bin-debug/app/game/tbnn/TBNNroomView.js",
 		"bin-debug/app/game/tbnn/TBNNScene.js",
 		"bin-debug/app/game/tbnn/TBNNUtil.js",
 		"bin-debug/app/game/tbnn/TBNNView.js",
 		"bin-debug/app/game/welfare/AwardItem.js",
 		"bin-debug/app/game/welfare/LotteryPanel.js",
-		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/game/welfare/WelfareView.js",
 		"bin-debug/app/game/zjh/Annular.js",
 		"bin-debug/app/game/zjh/Opeprogress.js",
 		"bin-debug/app/game/zjh/ZJHHead.js",
@@ -181,6 +182,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/game/welfare/WelfareView.js"
+		"bin-debug/app/game/welfare/WelfareTypeItem.js"
 	]
 }

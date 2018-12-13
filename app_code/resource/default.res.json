@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json",
+			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,tongbiniuniu_tex_png,tongbiniuniu_tex_json,tongbiniuniu_ske_json,qznn_nvrenwu_tex_json,qznn_nvrenwu_tex_png,qznn_nvrenwu_ske_json,bg_remen_tex_png,bg_remen_tex_json,bg_remen_ske_json,bg_zhajinhua_tex_png,bg_zhajinhua_tex_json,bg_zhajinhua_ske_json,bg_xin_ske_json,bg_xin_tex_json,bg_xin_tex_png,bg_xiaoliuguang_tex_png,bg_xiaoliuguang_tex_json,bg_xiaoliuguang_ske_json,bg_tongbiniuniu_tex_png,bg_tongbiniuniu_tex_json,bg_tongbiniuniu_ske_json,bg_qiangzhuangniuniu_tex_png,bg_qiangzhuangniuniu_tex_json,bg_qiangzhuangniuniu_ske_json,bg_ewrbagang_tex_png,bg_ewrbagang_tex_json,bg_ewrbagang_ske_json,bg_daliuguang_tex_png,bg_daliuguang_tex_json,bg_daliuguang_ske_json,bg_bairenniuniu_tex_png,bg_bairenniuniu_tex_json,bg_bairenniuniu_ske_json,bg_baijiale_tex_png,bg_baijiale_tex_json,bg_baijiale_ske_json",
 			"name": "preload"
 		},
 		{
@@ -1969,16 +1969,6 @@
 			"name": "room_ebg_bg_jpg"
 		},
 		{
-			"url": "assets/effects/effcet_hot/effcet_hot.json",
-			"type": "json",
-			"name": "effcet_hot_json"
-		},
-		{
-			"url": "assets/effects/effcet_hot/effcet_hot.png",
-			"type": "image",
-			"name": "effcet_hot_png"
-		},
-		{
 			"url": "assets/effects/game/img_zhuang3.png",
 			"type": "image",
 			"name": "img_zhuang3_png"
@@ -2279,106 +2269,6 @@
 			"name": "xingxing2_png"
 		},
 		{
-			"url": "assets/effects/game_230_effect/game_230_effect.json",
-			"type": "json",
-			"name": "game_230_effect_json"
-		},
-		{
-			"url": "assets/effects/game_230_effect/game_230_effect.png",
-			"type": "image",
-			"name": "game_230_effect_png"
-		},
-		{
-			"url": "assets/effects/game_610_effect/game_610_effect.json",
-			"type": "json",
-			"name": "game_610_effect_json"
-		},
-		{
-			"url": "assets/effects/game_610_effect/game_610_effect.png",
-			"type": "image",
-			"name": "game_610_effect_png"
-		},
-		{
-			"url": "assets/effects/game_630_effect/game_630_effect.json",
-			"type": "json",
-			"name": "game_630_effect_json"
-		},
-		{
-			"url": "assets/effects/game_630_effect/game_630_effect.png",
-			"type": "image",
-			"name": "game_630_effect_png"
-		},
-		{
-			"url": "assets/effects/game_720_effect/game_720_effect.json",
-			"type": "json",
-			"name": "game_720_effect_json"
-		},
-		{
-			"url": "assets/effects/game_720_effect/game_720_effect.png",
-			"type": "image",
-			"name": "game_720_effect_png"
-		},
-		{
-			"url": "assets/effects/game_720_effect_logo/game_720_effect_logo.json",
-			"type": "json",
-			"name": "game_720_effect_logo_json"
-		},
-		{
-			"url": "assets/effects/game_720_effect_logo/game_720_effect_logo.png",
-			"type": "image",
-			"name": "game_720_effect_logo_png"
-		},
-		{
-			"url": "assets/effects/game_730_effect/game_730_effect.json",
-			"type": "json",
-			"name": "game_730_effect_json"
-		},
-		{
-			"url": "assets/effects/game_730_effect/game_730_effect.png",
-			"type": "image",
-			"name": "game_730_effect_png"
-		},
-		{
-			"url": "assets/effects/game_830_effect/game_830_effect.json",
-			"type": "json",
-			"name": "game_830_effect_json"
-		},
-		{
-			"url": "assets/effects/game_830_effect/game_830_effect.png",
-			"type": "image",
-			"name": "game_830_effect_png"
-		},
-		{
-			"url": "assets/effects/game_830_effect_logo/game_830_effect_logo.json",
-			"type": "json",
-			"name": "game_830_effect_logo_json"
-		},
-		{
-			"url": "assets/effects/game_830_effect_logo/game_830_effect_logo.png",
-			"type": "image",
-			"name": "game_830_effect_logo_png"
-		},
-		{
-			"url": "assets/effects/game_910_effect/game_910_effect.json",
-			"type": "json",
-			"name": "game_910_effect_json"
-		},
-		{
-			"url": "assets/effects/game_910_effect/game_910_effect.png",
-			"type": "image",
-			"name": "game_910_effect_png"
-		},
-		{
-			"url": "assets/effects/game_920_effect/game_920_effect.json",
-			"type": "json",
-			"name": "game_920_effect_json"
-		},
-		{
-			"url": "assets/effects/game_920_effect/game_920_effect.png",
-			"type": "image",
-			"name": "game_920_effect_png"
-		},
-		{
 			"url": "assets/effects/nn_banker/nn_banker.json",
 			"type": "json",
 			"name": "nn_banker_json"
@@ -2615,8 +2505,7 @@
 		{
 			"url": "assets/tbnnroon/room_tbnn.json",
 			"type": "sheet",
-			"name": "room_tbnn_json",
-			"subkeys": "tbnn_effcet_pic_person,tbnn_pic5"
+			"name": "room_tbnn_json"
 		},
 		{
 			"url": "assets/tbnnroon/room_tbnn_bg.jpg",
@@ -6567,6 +6456,186 @@
 			"type": "sheet",
 			"name": "jinhua_json",
 			"subkeys": "a1,a10,a11,a12,a13,a14,a15,a2,a20,a3,a4,a5,a6,a7,a8,a9,b1,b1a,b2,b2a,b3,b3a,b4,b4a,b5,b5a,b6,b6a,c1,c2,card_100,card_101,card_102,card_103,card_104,card_105,card_106,card_107,card_108,card_109,card_110,card_111,card_112,card_113,card_201,card_202,card_203,card_204,card_205,card_206,card_207,card_208,card_209,card_210,card_211,card_212,card_213,card_301,card_302,card_303,card_304,card_305,card_306,card_307,card_308,card_309,card_310,card_311,card_312,card_313,card_401,card_402,card_403,card_404,card_405,card_406,card_407,card_408,card_409,card_410,card_411,card_412,card_413,d1,d2,d3,d4,d5,head,jh.baocaijin,jh.baozhuang,jh.btnred,jh.titlebg,t1,t2,t3222,talk,u1,u2,u3,u4,u5,u6,z2,z3,z4,z5,z6,z7"
+		},
+		{
+			"url": "assets/dragonbones/tongbiniuniu/tongbiniuniu_tex.png",
+			"type": "image",
+			"name": "tongbiniuniu_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/tongbiniuniu/tongbiniuniu_ske.json",
+			"type": "json",
+			"name": "tongbiniuniu_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/tongbiniuniu/tongbiniuniu_tex.json",
+			"type": "json",
+			"name": "tongbiniuniu_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_baijiale/bg_baijiale_tex.png",
+			"type": "image",
+			"name": "bg_baijiale_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_bairenniuniu/bg_bairenniuniu_tex.png",
+			"type": "image",
+			"name": "bg_bairenniuniu_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_daliuguang/bg_daliuguang_tex.png",
+			"type": "image",
+			"name": "bg_daliuguang_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qiangzhuangniuniu/bg_qiangzhuangniuniu_tex.png",
+			"type": "image",
+			"name": "bg_qiangzhuangniuniu_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_ewrbagang/bg_ewrbagang_tex.png",
+			"type": "image",
+			"name": "bg_ewrbagang_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_remen/bg_remen_tex.png",
+			"type": "image",
+			"name": "bg_remen_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_tongbiniuniu/bg_tongbiniuniu_tex.png",
+			"type": "image",
+			"name": "bg_tongbiniuniu_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_xiaoliuguang/bg_xiaoliuguang_tex.png",
+			"type": "image",
+			"name": "bg_xiaoliuguang_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_zhajinhua/bg_zhajinhua_tex.png",
+			"type": "image",
+			"name": "bg_zhajinhua_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_xin/bg_xin_tex.png",
+			"type": "image",
+			"name": "bg_xin_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_daliuguang/bg_daliuguang_ske.json",
+			"type": "json",
+			"name": "bg_daliuguang_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_baijiale/bg_baijiale_tex.json",
+			"type": "json",
+			"name": "bg_baijiale_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_bairenniuniu/bg_bairenniuniu_tex.json",
+			"type": "json",
+			"name": "bg_bairenniuniu_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_daliuguang/bg_daliuguang_tex.json",
+			"type": "json",
+			"name": "bg_daliuguang_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_qiangzhuangniuniu/bg_qiangzhuangniuniu_tex.json",
+			"type": "json",
+			"name": "bg_qiangzhuangniuniu_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_qiangzhuangniuniu/bg_qiangzhuangniuniu_ske.json",
+			"type": "json",
+			"name": "bg_qiangzhuangniuniu_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_ewrbagang/bg_ewrbagang_ske.json",
+			"type": "json",
+			"name": "bg_ewrbagang_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_ewrbagang/bg_ewrbagang_tex.json",
+			"type": "json",
+			"name": "bg_ewrbagang_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_remen/bg_remen_ske.json",
+			"type": "json",
+			"name": "bg_remen_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_remen/bg_remen_tex.json",
+			"type": "json",
+			"name": "bg_remen_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_tongbiniuniu/bg_tongbiniuniu_ske.json",
+			"type": "json",
+			"name": "bg_tongbiniuniu_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_tongbiniuniu/bg_tongbiniuniu_tex.json",
+			"type": "json",
+			"name": "bg_tongbiniuniu_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_xiaoliuguang/bg_xiaoliuguang_ske.json",
+			"type": "json",
+			"name": "bg_xiaoliuguang_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_bairenniuniu/bg_bairenniuniu_ske.json",
+			"type": "json",
+			"name": "bg_bairenniuniu_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_xiaoliuguang/bg_xiaoliuguang_tex.json",
+			"type": "json",
+			"name": "bg_xiaoliuguang_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_zhajinhua/bg_zhajinhua_tex.json",
+			"type": "json",
+			"name": "bg_zhajinhua_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_xin/bg_xin_tex.json",
+			"type": "json",
+			"name": "bg_xin_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_xin/bg_xin_ske.json",
+			"type": "json",
+			"name": "bg_xin_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_zhajinhua/bg_zhajinhua_ske.json",
+			"type": "json",
+			"name": "bg_zhajinhua_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_baijiale/bg_baijiale_ske.json",
+			"type": "json",
+			"name": "bg_baijiale_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/qznn_nvrenwu/qznn_nvrenwu_tex.json",
+			"type": "json",
+			"name": "qznn_nvrenwu_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/qznn_nvrenwu/qznn_nvrenwu_tex.png",
+			"type": "image",
+			"name": "qznn_nvrenwu_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/qznn_nvrenwu/qznn_nvrenwu_ske.json",
+			"type": "json",
+			"name": "qznn_nvrenwu_ske_json"
 		}
 	]
 }
