@@ -5,7 +5,7 @@
 			"name": "preload"
 		},
 		{
-			"keys": "Bg_img_jpg,lobby_json,pinpaicuowu_json,pinpaicuowu_png,common_json",
+			"keys": "Bg_img_jpg,lobby_json,common_json,pinpaicuowu_png,pinpaicuowu_json,qznnroom_json,room_bg_jpg",
 			"name": "hall"
 		},
 		{
@@ -2455,7 +2455,7 @@
 			"url": "assets/qznnRoom/qznnroom.json",
 			"type": "sheet",
 			"name": "qznnroom_json",
-			"subkeys": "left_list_1,nn_left_bg,qznn__base_score,qznn__base_score1,qznn__base_score_0,qznn__base_score_1,qznn__base_score_2,qznn__base_score_3,qznn__base_score_4,qznn__base_score_5,qznn__base_score_6,qznn__base_score_7,qznn__base_score_8,qznn__base_score_9,qznn_btn,qznn_effcet_pic_person,qznn_pic1,qznn_pic2,qznn_pic3,qznn_pic4,qznn_pic5,qznn_pic6,qznn_right_bg,room_close,room_menu_bg,room_meun_btn_0,room_rule_btn_0,room_shang_di,root_record_btn_0,system_flag,title_baijiale,title_bairenniuniu,title_erbagang,title_qiangzhuangniuniu,title_tongbiniuniu,title_zhajinhuua"
+			"subkeys": "qznn__base_score,qznn__base_score1,qznn__base_score_0,qznn__base_score_1,qznn__base_score_2,qznn__base_score_3,qznn__base_score_4,qznn__base_score_5,qznn__base_score_6,qznn__base_score_7,qznn__base_score_8,qznn__base_score_9,qznn_hall_effect_1_tex001,qznn_hall_effect_1_tex002,qznn_hall_effect_1_tex003,qznn_hall_effect_2_tex001,qznn_hall_effect_2_tex002,qznn_hall_effect_2_tex003,qznn_hall_effect_2_tex004,qznn_hall_effect_3_tex001,qznn_hall_effect_3_tex002,qznn_hall_effect_3_tex003,qznn_hall_effect_3_tex007,qznn_hall_effect_3_tex008,qznn_hall_effect_3_tex009,qznn_hall_effect_3_tex010,qznn_hall_effect_4_tex1,qznn_hall_effect_4_tex2,qznn_hall_effect_6_tex1,qznn_hall_effect_6_tex10,qznn_hall_effect_6_tex2,qznn_hall_effect_6_tex3,qznn_hall_effect_6_tex4,qznn_hall_effect_6_tex5,qznn_hall_effect_6_tex6,qznn_hall_effect_6_tex7,qznn_hall_effect_6_tex8,qznn_hall_effect_light_tex002,qznn_hall_effect_light_tex003,qznn_pic1,qznn_pic2,qznn_pic3,qznn_pic4,qznn_pic5,qznn_pic6,room_close,room_meun_btn_0,room_rule_btn_0,room_shang_di,root_record_btn_0,system_flag,title_baijiale,title_bairenniuniu,title_erbagang,title_qiangzhuangniuniu,title_tongbiniuniu,title_zhajinhuua"
 		},
 		{
 			"url": "assets/qznnRoom/room_bg.jpg",
@@ -3952,36 +3952,6 @@
 			"name": "qznntype7_tex1_png"
 		},
 		{
-			"url": "assets/game/qznn/qznn_btn4.png",
-			"type": "image",
-			"name": "qznn_btn4_png"
-		},
-		{
-			"url": "assets/game/qznn/qznn_btn4_1.png",
-			"type": "image",
-			"name": "qznn_btn4_1_png"
-		},
-		{
-			"url": "assets/game/qznn/qznn_btn_beishu1.png",
-			"type": "image",
-			"name": "qznn_btn_beishu1_png"
-		},
-		{
-			"url": "assets/game/qznn/qznn_btn_beishu1_1.png",
-			"type": "image",
-			"name": "qznn_btn_beishu1_1_png"
-		},
-		{
-			"url": "assets/game/qznn/qznn_btn_beishu2.png",
-			"type": "image",
-			"name": "qznn_btn_beishu2_png"
-		},
-		{
-			"url": "assets/game/qznn/qznn_btn_beishu2_1.png",
-			"type": "image",
-			"name": "qznn_btn_beishu2_1_png"
-		},
-		{
 			"url": "assets/game/qznn/qznn_btn_buqiang.png",
 			"type": "image",
 			"name": "qznn_btn_buqiang_png"
@@ -4818,11 +4788,6 @@
 			"name": "gf_dialogue_qipai_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_effect_kiss_0.png",
-			"type": "image",
-			"name": "gf_effect_kiss_0_png"
-		},
-		{
 			"url": "assets/game/zhajh/gf_emoji29.png",
 			"type": "image",
 			"name": "gf_emoji29_png"
@@ -4866,11 +4831,6 @@
 			"url": "assets/game/zhajh/gf_game_tips.png",
 			"type": "image",
 			"name": "gf_game_tips_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_guzhuyizhi0.png",
-			"type": "image",
-			"name": "gf_guzhuyizhi0_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_huoping_0.png",

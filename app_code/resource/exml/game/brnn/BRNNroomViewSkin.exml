@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BRNNroomViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="room_tbnn_bg_jpg"/>
-	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+	<e:Image id="bgImg" width="100%" height="100%" source="room_tbnn_bg_jpg" x="0" y="0"/>
+	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" y="0">
 	</e:Group>
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
+	<e:Group width="100%" height="96" x="0" y="0">
 		<e:Image scaleX="1" scaleY="1" source="ding" horizontalCenter="0" top="0" locked="true"/>
 		<e:Button id="_menu" label="" x="1278.58" y="1">
 			<e:skinName>
@@ -43,7 +43,7 @@
 		<e:Image width="186" height="62" touchEnabled="false" x="267.71" y="9" source="title_brniuniu_png"/>
 
 	</e:Group>
-	<e:Group width="294" height="742" anchorOffsetY="0" left="0" anchorOffsetX="0" bottom="0">
+	<e:Group width="294" height="742" anchorOffsetY="0" anchorOffsetX="0" x="0" y="86">
 		<e:Image source="room_menu_bg" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
 		<e:Button id="_record" label="" x="57" y="633">
 			<e:skinName>
@@ -55,7 +55,7 @@
 		</e:Button>
 		<e:Image width="154" height="76" touchEnabled="false" x="57" y="633" source="root_record_btn_0"/>
 	</e:Group>
-	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0">
+	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" x="844.72" y="87.09000000000003">
 		<e:Image source="qznn_right_bg" y="64.84999999999995" scaleX="1" scaleY="1" horizontalCenter="0"/>
 		<e:Image source="qznn_btn" y="73.26" scaleX="1" scaleY="1" horizontalCenter="0.36000000000001364"/>
 		<e:Image source="qznn_pic2" x="312" y="143.84"/>
