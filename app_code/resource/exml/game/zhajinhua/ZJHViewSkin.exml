@@ -1,64 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="ZJHViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Image x="0" bottom="2" width="1472" height="828" source="gf_bg_png"/>
-	<e:Image  horizontalCenter="2" verticalCenter="1" source="gf_table_png" locked="true"/>
+	<e:Image x="0" width="1472" height="828" source="gf_bg_png" alpha="1" y="-5"/>
+	<e:Image  source="gf_table_png" anchorOffsetX="0" width="1891" x="-209" y="0" locked="true"/>
 	<e:Image source="gf_bg_leaf_png" width="180" x="1292" y="0" locked="true"/>
-	<e:Image id="img_deskgoldbg" width="153" height="25" y="117.67" source="gf_chip_bg_png" horizontalCenter="0.5" locked="true"/>
-	<e:Image id="img_deskgoldIcon" width="20" height="20" y="120.77" source="gf_icon_chip_sm7_png" horizontalCenter="-64" locked="true"/>
-	<e:Label id="lab_deskGolds" text="0" x="692" y="118.3" size="25" anchorOffsetX="0" width="113" textAlign="center"/>
-	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0" />
+
+
+	<e:Group id="grp_roungNum" width="378" height="104" y="4" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Label text="牌局编号：" x="-436.98" y="13.64" size="25" anchorOffsetX="0" width="128" textAlign="left" textColor="0x827f77" bold="true" fontFamily="SimHei" scaleX="1" scaleY="1"/>
+		<e:Label id="lab_paijuNum" text="50-154492645-358995561" x="-316.31" y="13.64" size="25" anchorOffsetX="0" width="300" textAlign="left" textColor="0x827F77" fontFamily="SimHei" height="25" scaleX="1" scaleY="1"/>
+		<e:Image id="img_dizhu_dinhzhu_bg" width="320" height="32" y="11.01" horizontalCenter="0" source="gf_game_bet_bg_png" x="29" scaleX="1" scaleY="1"/>
+		<e:Label text="底注：" x="83" y="15.3" size="23" anchorOffsetX="0" textAlign="center" fontFamily="SimHei" textColor="0xb2aeae" width="77" scaleX="1" scaleY="1"/>
+		<e:Label text="顶注：" x="196" y="15.3" size="23" anchorOffsetX="0" width="77" textAlign="center" fontFamily="SimHei" textColor="0xb5b1b1" scaleX="1" scaleY="1"/>
+		<e:Label id="lab_dizhu_num" text="2" x="145" y="16.3" size="23" anchorOffsetX="0" width="53" textAlign="left" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
+		<e:Label id="lab_dingzhu_num" text="30" x="258" y="16.3" size="23" anchorOffsetX="0" width="53" textAlign="left" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
+		<e:Label text="第" x="135" y="66" size="23" anchorOffsetX="0" width="25" textAlign="center" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
+		<e:Label id="lab_now_roundNum" text="2" x="157" y="66" size="23" anchorOffsetX="0" width="25" textAlign="center" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
+		<e:Label text="/" y="66" size="23" anchorOffsetX="0" width="14" textAlign="center" fontFamily="SimHei" textColor="0xB5B1B1" height="25" bold="true" horizontalCenter="0" x="182" scaleX="1" scaleY="1"/>
+		<e:Label id="lab_end_roundNum" text="20" x="195" y="66" size="23" anchorOffsetX="0" width="25" textAlign="center" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
+		<e:Label text="轮" x="223" y="66" size="23" anchorOffsetX="0" width="25" textAlign="center" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Image id="img_deskgoldbg" width="153" height="25" y="117.67" source="gf_chip_bg_png" horizontalCenter="0"/>
+	<e:Image id="img_deskgoldIcon" width="30" height="35" y="113.77" source="gf_icon_chip_sm7_png" x="659"/>
+	<e:Label id="lab_deskGolds" text="0" x="692" y="118.3" size="25" anchorOffsetX="0" width="113" textAlign="center" bold="true" textColor="0xf2c826"/>
+	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true"/>
 	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
-		<e:Image id="grpCard4_0" x="266.29" y="465.76" scaleX="1" scaleY="1"  width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard4_1" x="295.41" y="465.76" scaleX="1" scaleY="1"  width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard4_2" x="324.56" y="465.76" scaleX="1" scaleY="1"  width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard3_0" x="204" y="195.49" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard3_1" x="234.29" y="195.49" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard3_2" x="263.09" y="195.49" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard2_0" x="1118.26" y="195.49" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard2_1" x="1148.9" y="195.49" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard2_2" x="1179.54" y="195.49" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard1_0" x="1055.34" y="465.76" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard1_1" x="1085.98" y="465.76" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard1_2" x="1116.62" y="465.76" scaleX="1" scaleY="1" width="93" height="134" source="gf_poker13_png"/>
-		<e:Image id="grpCard0_0" x="654.11" y="511.39" scaleX="1" scaleY="1" width="106" height="153" source="gf_poker13_png"/>
-		<e:Image id="grpCard0_1" y="511.39" scaleX="1" scaleY="1" width="106" height="153" x="765.05" source="gf_poker13_png"/>
-		<e:Image id="grpCard0_2" x="876.01" y="511.39" scaleX="1" scaleY="1" width="106" height="153" source="gf_poker13_png"/>
-		<e:Image id="imgCardbg0" x="680.67" y="613.37" scaleX="1" scaleY="1" width="274" height="44" source="gf_pxzs_png"/>
-		<e:Image id="imgCardbg1" x="1046.69" y="551.36" scaleX="1" scaleY="1" width="171.33" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
-		<e:Image id="imgCardbg2" x="1108.65" y="282.69" scaleX="1" scaleY="1" width="171.33" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
-		<e:Image id="imgCardbg3" x="193.33" y="281.98" scaleX="1" scaleY="1" width="171.33" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
-		<e:Image id="imgCardbg4" x="256.69" y="552.05" scaleX="1" scaleY="1" width="171.33" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
-		<e:Image id="imgCardType0" x="764.63" y="608.01" scaleX="1" scaleY="1" width="107" height="61" source="gf_px2_png"/>
-		<e:Image id="imgCardType1" x="1086.63" y="547" scaleX="1" scaleY="1" width="107" height="61" source="gf_px2_png"/>
-		<e:Image id="imgCardType2" x="1143.3" y="277" scaleX="1" scaleY="1" width="107" height="61" source="gf_px2_png"/>
-		<e:Image id="imgCardType3" x="223.96" y="277" scaleX="1" scaleY="1" width="107" height="61" source="gf_px2_png"/>
-		<e:Image id="imgCardType4" x="281.96" y="547" scaleX="1" scaleY="1" width="107" height="61" source="gf_px2_png"/>
-		<e:Label id="labstatus0" x="748.7" y="485.56" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xd00ddb" verticalAlign="middle"/>
-		<e:Label id="labstatus1" x="1092.32" y="436.34" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
-		<e:Label id="labstatus2" x="1149.96" y="163" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
-		<e:Label id="labstatus3" x="236.4" y="164.52" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
-		<e:Label id="labstatus4" x="301.62" y="437.88" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
-		<e:Image id="img_xzgold0" width="20" height="20" x="747.79" y="675.24" source="gf_icon_chip_sm7_png"/>
-		<e:Image width="20" height="20" x="1073.68" y="605" source="gf_icon_chip_sm7_png" id="img_xzgold1"/>
-		<e:Image width="20" height="20" x="1132.77" y="332.67" source="gf_icon_chip_sm7_png" id="img_xzgold2"/>
-		<e:Image width="20" height="20" x="219.41" y="332.69" source="gf_icon_chip_sm7_png" id="img_xzgold3"/>
-		<e:Image width="20" height="20" x="273.92" y="605" source="gf_icon_chip_sm7_png" id="img_xzgold4"/>
-		<e:Label id="lab_xzgold0" text="10" x="772.09" y="675.25" size="20"/>
-		<e:Label text="10" x="1099.68" y="605" size="20" id="lab_xzgold1"/>
-		<e:Label text="10" x="1158.77" y="332.67" size="20" id="lab_xzgold2"/>
-		<e:Label text="10" x="244.41" y="332.69" size="20" id="lab_xzgold3"/>
-		<e:Label text="10" x="300.46" y="605" size="20" id="lab_xzgold4"/>
-		<e:Image id="img_abandon1" width="90" height="89" x="1082.58" y="485.68" source="gf_flag_qp_png"/>
-		<e:Image width="90" height="89" x="1147.89" y="213.01" source="gf_flag_qp_png" id="img_abandon2"/>
-		<e:Image width="90" height="89" x="228.56" y="213.01" source="gf_flag_qp_png" id="img_abandon3"/>
-		<e:Image width="90" height="89" x="293.23" y="485.68" source="gf_flag_qp_png" id="img_abandon4"/>
+		<e:Image id="grpCard4_0" x="331.58" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard4_1" x="360.7" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard4_2" x="389.85" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard3_0" x="282.61" y="217.61" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard3_1" x="312.9" y="217.61" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard3_2" x="341.7" y="217.61" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard2_0" x="1051.6" y="217.61" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard2_1" x="1082.24" y="217.61" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard2_2" x="1112.88" y="217.61" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard1_0" x="1011.41" y="449" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard1_1" x="1042.05" y="449" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard1_2" x="1072.69" y="449" scaleX="1" scaleY="1" width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard0_0" x="687.49" y="511.39" scaleX="1" scaleY="1" width="83.7" height="120.6" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard0_1" y="511.39" scaleX="1" scaleY="1" width="83.7" height="120.6" x="773.16" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="grpCard0_2" x="858.85" y="511.39" scaleX="1" scaleY="1" width="83.7" height="120.6" source="qzcard_json.qznn_card_101"/>
+		<e:Image id="imgCardbg0" x="684.66" y="584.08" scaleX="1" scaleY="1" width="258" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
+		<e:Image id="imgCardbg1" x="1002.76" y="504.71" scaleX="1" scaleY="1" width="140" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
+		<e:Image id="imgCardbg2" x="1043.32" y="282.69" scaleX="1" scaleY="1" width="140" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
+		<e:Image id="imgCardbg3" x="273.27" y="273.66" scaleX="1" scaleY="1" width="140" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
+		<e:Image id="imgCardbg4" x="323.32" y="505.44" scaleX="1" scaleY="1" width="140" height="44" source="gf_pxzs_png" anchorOffsetX="0"/>
+		<e:Image id="imgCardType0" x="768.67" y="580.08" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
+		<e:Image id="imgCardType1" x="1026.69" y="504.36" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
+		<e:Image id="imgCardType2" x="1076.64" y="271.68" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
+		<e:Image id="imgCardType3" x="302.57" y="270.99" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
+		<e:Image id="imgCardType4" x="345.92" y="503.05" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
+		<e:Label id="labstatus0" x="772.77" y="485.56" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xd00ddb" verticalAlign="middle"/>
+		<e:Label id="labstatus1" x="1033.76" y="424.37" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
+		<e:Label id="labstatus2" x="1069.97" y="192.26" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
+		<e:Label id="labstatus3" x="301.71" y="189.68" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
+		<e:Label id="labstatus4" x="350.92" y="411.22" text="已看牌" bold="true" width="82" size="24" stroke="1" scaleX="1" scaleY="1" anchorOffsetY="0" height="24" anchorOffsetX="0" textColor="0xD00DDB" verticalAlign="middle"/>
+		<e:Image id="img_xzgold_bg0" width="145" height="30" x="745.86" y="647.9" source="gf_chip_bg1_png"/>
+		<e:Image id="img_xzgold_bg1" width="145" height="25" x="1007.21" y="566.56" source="gf_chip_bg1_png"/>
+		<e:Image id="img_xzgold_bg2" width="145" height="25" x="1047.85" y="337.9" source="gf_chip_bg1_png"/>
+		<e:Image id="img_xzgold_bg3" width="145" height="25" x="278.52" y="337.91" source="gf_chip_bg1_png"/>
+		<e:Image id="img_xzgold_bg4" width="145" height="25" x="329.87" y="566.57" source="gf_chip_bg1_png"/>
+		<e:Image id="img_xzgold0" width="30" height="30" x="745.18" y="648.58" source="gf_icon_chip_sm1_png"/>
+		<e:Image width="25" height="25" x="1005.81" y="567.48" id="img_xzgold1" source="gf_icon_chip_sm1_png"/>
+		<e:Image width="25" height="25" x="1047.47" y="339" id="img_xzgold2" source="gf_icon_chip_sm1_png"/>
+		<e:Image width="25" height="25" x="278.03" y="339" id="img_xzgold3" source="gf_icon_chip_sm1_png"/>
+		<e:Image width="25" height="25" x="327.43" y="567.48" id="img_xzgold4" source="gf_icon_chip_sm1_png"/>
+		<e:Label id="lab_xzgold0" text="10" x="776.17" y="652.59" size="20" textColor="0xf7ba42" width="100" textAlign="center"/>
+		<e:Label text="10" x="1034.43" y="569.01" size="20" id="lab_xzgold1" textColor="0xed972a" width="100" textAlign="center"/>
+		<e:Label text="10" x="1077.43" y="340.65" size="20" id="lab_xzgold2" textColor="0xf4991d" width="100" textAlign="center"/>
+		<e:Label text="10" x="305.7" y="340.32" size="20" id="lab_xzgold3" textColor="0xe08023" width="100" textAlign="center"/>
+		<e:Label text="10" x="352.45" y="570.36" size="20" id="lab_xzgold4" textColor="0xed771e" width="100" textAlign="center"/>
+		<e:Image id="img_abandon1" width="90" height="89" x="1027.97" y="452.35" source="gf_flag_qp_png"/>
+		<e:Image width="90" height="89" x="1067.89" y="219.66" source="gf_flag_qp_png" id="img_abandon2"/>
+		<e:Image width="90" height="89" x="296.5" y="220.33" source="gf_flag_qp_png" id="img_abandon3"/>
+		<e:Image width="90" height="89" x="341.2" y="451" source="gf_flag_qp_png" id="img_abandon4"/>
 	</e:Group>
 	<e:Group x="0" y="0" width="1472" height="828">
-		<ns1:ZJHHead id="grpHead1" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" verticalCenter="33" x="1240.44"/>
-		<ns1:ZJHHead id="grpHead2" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" y="175" x="1307.46"/>
-		<ns1:ZJHHead id="grpHead3" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="37.83" y="175"/>
-		<ns1:ZJHHead id="grpHead4" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="99.95" y="437"/>
+		<ns1:ZJHHead id="grpHead1" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="1171.19" y="410"/>
+		<ns1:ZJHHead id="grpHead2" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" y="175" x="1211.63"/>
+		<ns1:ZJHHead id="grpHead3" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="121.77" y="175"/>
+		<ns1:ZJHHead id="grpHead4" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="170" y="410"/>
 		<ns1:ZJHHead id="grpHead5" width="20" height="20" x="659.87" y="35" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" visible="false"/>
 		<ns1:ZJHHead id="grpHead6" width="20" height="20" x="956.37" y="35" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" visible="false"/>
 		<ns1:ZJHHead id="grpHead7" width="20" height="20" x="1200" y="150" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" visible="false"/>
@@ -71,7 +92,7 @@
 		<e:BitmapLabel id="labCountdown1" x="32" y="11" font="bitmapnum0_fnt" text="0" width="20" anchorOffsetX="0" />
 		<e:Label id="timeTxt" text="10" x="-126" y="-48" scaleX="1" scaleY="1" textColor="0xfc1c07" bold="true" anchorOffsetX="0" width="53.7" anchorOffsetY="0" height="42.12" size="40" visible="false"/>
 	</e:Group>
-	<e:Button id="_btn_kanpai" label="" scaleX="1" scaleY="1" x="734.77" y="560.6">
+	<e:Button id="_btn_kanpai" label="" scaleX="1" scaleY="1" x="734.77" y="549.96">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="gf_tips_click_card_png" source.down="gf_tips_click_card_png"/>
@@ -79,14 +100,14 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Group id="grpHead0" width="130" height="173" anchorOffsetY="0" anchorOffsetX="0" x="490.66" y="494.65">
-		<e:Image anchorOffsetY="0" height="180" anchorOffsetX="0" width="136" source="gf_wait_png" x="-3" y="-3"/>
-		<e:Image anchorOffsetY="0" height="173" anchorOffsetX="0" width="130" x="0" y="0" source="gf_Avatar_box_png"/>
-		<e:Image y="30.02" width="110" height="110" horizontalCenter="0" source="gf_Avatar_zz_png"/>
-		<e:Image id="imghead0" y="31.54" source="F1_03_png" width="110" height="110" x="10"/>
-		<e:Label id="labelHead0" text="第一赌神" y="6.47" size="25" fontFamily="SimHei" textAlign="center" wordWrap="true" horizontalCenter="0" textColor="0xf4f1ed"/>
-		<e:Label id="labelGold0" text="1000000" y="144.72" textColor="0xf4d727" textAlign="center" size="22" bold="true" x="22"/>
-		<e:Image x="1.05" y="164.65" source="img_jinbi" visible="false"/>
+	<e:Group id="grpHead0" width="130" height="173" anchorOffsetY="0" anchorOffsetX="0" x="516.43" y="486">
+		<e:Image anchorOffsetY="0" height="180" anchorOffsetX="0" width="136" source="gf_wait_png" x="-3" y="-3" visible="false"/>
+		<e:Image anchorOffsetY="0" height="161" anchorOffsetX="0" width="125" source="gf_Avatar_box_png" x="3" y="6"/>
+
+		<e:Image id="imghead0" width="100" height="100" source="women7_png" x="15" y="35.67"/>
+		<e:Label id="labelHead0" text="第一赌神" size="23" fontFamily="SimHei" textAlign="center" wordWrap="true" textColor="0xf4f1ed" anchorOffsetX="0" width="109.09" anchorOffsetY="0" height="26.52" y="8.67" x="10"/>
+		<e:Label id="labelGold0" text="1000000" y="136.93" textColor="0xf4d727" textAlign="center" size="22" bold="true" x="22"/>
+
 	</e:Group>
 	<e:Group id="grp_operatbtn" width="1470.67" height="104" y="724" x="1.33" touchEnabled="false" anchorOffsetX="0">
 		<e:Button id="_btn_qipai" label="" x="156.76" scaleX="1" scaleY="1" y="28">
@@ -113,7 +134,7 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="_btn_quanxia" label="" x="1054.9" y="-54.66">
+		<e:Button id="_btn_quanxia" label="" x="1054.9" y="28" visible="false">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="qznn_btn_beishu2_png" source.down="qznn_btn_beishu2_png"/>
@@ -145,16 +166,16 @@
 			</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Image id="img_qipai" x="200.65" y="43" source="lab_zjh_up_discard_png" touchEnabled="false"/>
+		<e:Image id="img_qipai" x="200.65" y="43" touchEnabled="false" width="70" height="37" source="lab_zjh_up_discard_png"/>
 		<e:Image id="img_jiazhu" x="936.39" y="43" source="lab_jiazhu_png" touchEnabled="false"/>
 		<e:Image id="img_bipai" x="1079.21" y="43" touchEnabled="false" source="lab_bipai_png"/>
-		<e:Image id="img_quanya" x="1079.21" y="-38.04" touchEnabled="false" source="lab_bipai_png"/>
+		<e:Image id="img_quanya" x="1079.21" y="43" touchEnabled="false" source="lab_bipai_png" visible="false"/>
 		<e:Image id="img_genzhu" y="43" touchEnabled="false" x="1239.99" source="lab_genzhu_png" visible="false"/>
 		<e:Image id="img_autogenzhu" y="43" touchEnabled="false" x="1235.36" source="zidonggenzhu_png"/>
 		<e:Image id="img_cancelautogenzhu0" y="43" touchEnabled="false" x="1233.84" source="quxiao_png" visible="false"/>
 		<e:Image id="img_cancelautogenzhu1" y="43" touchEnabled="false" x="1300.5" source="lab_genzhu_png" visible="false"/>
-		<e:Label id="lab_tankNumber" text="12" x="1150.98" y="47" width="60" height="30" touchEnabled="false"/>
-		<e:Label id="lab_quanyaNumber" text="12" x="1150.98" y="-34.59" width="60" height="30" touchEnabled="false"/>
+		<e:Label id="lab_tankNumber" text="12" x="1150.98" y="47" width="60" height="30" touchEnabled="false" visible="false"/>
+		<e:Label id="lab_quanyaNumber" text="12" x="1150.98" y="45.66" width="60" height="30" touchEnabled="false"/>
 		<e:Label id="lab_callNumber" text="12" x="1311.18" y="47" width="60" height="30" touchEnabled="false" visible="false"/>
 	</e:Group>
 	<e:Group id="grp_btncm0" width="724.72" height="110.67" anchorOffsetX="0" anchorOffsetY="0" x="336.62" y="717.33" visible="false">
@@ -215,7 +236,7 @@
 		<e:Label id="labchip5" text="7" x="609.81" y="34" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" touchEnabled="false"/>
 	</e:Group>
 
-	<e:Button id="_btn_menu" label="" y="18.44" x="17">
+	<e:Button id="_btn_menu" label="" y="18.44" x="17" locked="true">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="gf_btn_menu_png" source.down="gf_btn_menu_png"/>
@@ -223,20 +244,8 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Group id="grpprepare" y="225.99" horizontalCenter="0" width="700" locked="true" visible="false">
-		<e:Image width="666" height="262" y="0" source="gf_bg_match_png" x="17"/>
-		<e:Image width="69" height="35" y="10.24" source="gf_tip_ts_png" x="316"/>
-		<e:Label text="游戏即将开始，请您耐心等待..." y="116" x="142" textColor="0x89511a"/>
-		<e:Button id="_btn_hintclose" label="" x="613.33" y="16.77">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="gf_bg_close02_png" source.down="gf_bg_close02_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
-		</e:Button>
-	</e:Group>
-	<e:Group id="grp_menu" width="203" height="355" y="104.08" x="21.28" visible="false">
+
+	<e:Group id="grp_menu" width="203" height="355" y="104.08" x="21.28" visible="false" locked="true">
 		<e:Image id="menu_bg" width="203" height="355" source="gf_bg_menu_png" horizontalCenter="0" verticalCenter="0"/>
 		<e:Button id="_btn_out" label="" y="30" x="23">
 			<e:skinName>

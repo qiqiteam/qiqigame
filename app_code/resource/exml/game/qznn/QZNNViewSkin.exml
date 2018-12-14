@@ -318,7 +318,7 @@
 		<e:Image id="beishu_0_4" x="836.85" touchEnabled="false" verticalCenter="-2" source="img_XB_5_png"/>
 		<e:Image id="bs_img_4" source="img_XBei_png" x="857.61" y="18" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="_jixu" width="180.55" height="70.39" y="530.35" anchorOffsetX="0" x="646" anchorOffsetY="0" locked="true" visible="false">
+	<e:Group id="_jixu" width="180.55" height="70.39" y="530.35" anchorOffsetX="0" x="646" anchorOffsetY="0">
 		<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="0" y="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">

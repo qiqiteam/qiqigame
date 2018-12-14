@@ -152,47 +152,8 @@ class ZJHUtil {
         }
     }
     //筹码类型        1000w   5000w   1y  3y  5y
-    /*public coinsType(pos:egret.Point, num): Array<eui.Image> {
-        var coinArr = [];
-        var coinNum: number = 0;
-        var src: string = '';
-        num = Math.round(num / 10000);
-        if (num > 0 && num < 10) {  //1w
-            coinNum = num;
-            src = 'b1a';
-        }
-        else if (num > 9 && num < 100) {   //1000w---10w
-            coinNum = num / 10;
-            src = 'b2a';
-        }
-        else if (num > 99 && num < 1000) {   //5000w---100w
-            coinNum = num / 100;
-            src = 'b3a';
-        }
-        else if (num > 999 && num < 10000) { //1y----1000w
-            coinNum = num / 1000;
-            src = 'b4a';
-        }
-        else if (num > 9999 && num < 100000) { //3y---1y
-            coinNum = num / 10000;
-            src = 'b5a';
-        }
-        else {  //5y
-            coinNum = num / 50000;
-            src = 'b6a';
-        }
-        for (var i = 0; i < Math.round(coinNum); i++) {
-            var coin: eui.Image = new eui.Image(src);
-            //var p: egret.Point = this.coinPos();
-            coin.x = pos.x;
-            coin.y = pos.y;
-            coinArr.push(coin);
-        }
-        return coinArr;
-    }*/
-    //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(pos: egret.Point, num): Array<eui.Image> {
-        var coinArr = [];
+    public coinsType(pos: egret.Point, num): Array<egret.Sprite> {
+        var splist: Array<egret.Sprite>=[];
         var coinNum: number = 0;
         var src: string = '';
         num = Math.round(num / 100);
@@ -215,15 +176,66 @@ class ZJHUtil {
             coinNum = num;
             src = 'gf_icon_chip_sm2_png';
         }
-
-        for (var i = 0; i < Math.round(coinNum); i++) {
+        /*for (var i = 0; i < Math.round(coinNum); i++) {
             var coin: eui.Image = new eui.Image(src);
-            //var p: egret.Point = this.coinPos();
             coin.x = pos.x;
             coin.y = pos.y;
             coinArr.push(coin);
+        }*/
+        /*if (Math.round(coinNum) <= 7) {
+            var coin: eui.Image = new eui.Image(src);
+            coin.x = pos.x;
+            coin.y = pos.y;
+            coinArr.push(coin);
+        } else if (Math.round(coinNum) > 7 && Math.round(coinNum) <= 14) {
+            for (let i = 0; i < 2; i++) {
+                var coin: eui.Image = new eui.Image(src);
+                coin.x = pos.x;
+                coin.y = pos.y;
+                coinArr.push(coin);
+            }
+        }*/
+
+        if (Math.round(coinNum) <= 7) {
+            var sp: egret.Sprite = new egret.Sprite();
+            var coin: eui.Image = new eui.Image(src);
+            var cmnum: eui.Label = new eui.Label(Math.round(coinNum).toString());
+            coin.name = "img";
+            coin.x = 0;
+            coin.y = 0;
+            cmnum.name = "txt";
+            cmnum.x = 0;
+            cmnum.y = 10;
+            cmnum.width = 62;
+            cmnum.height = 20;
+            cmnum.textAlign = egret.HorizontalAlign.CENTER;
+            sp.addChild(coin);
+            sp.addChild(cmnum);
+            sp.x = pos.x;
+            sp.y = pos.y;
+            splist.push(sp);
+        } else if (Math.round(coinNum) > 7 && Math.round(coinNum) <= 14) {
+            for (let i = 0; i < 2; i++) {
+                var sp: egret.Sprite = new egret.Sprite();
+                var coin: eui.Image = new eui.Image(src);
+                var cmnum: eui.Label = new eui.Label(Math.round(coinNum/2).toString());
+                coin.name = "img";
+                coin.x = 0;
+                coin.y = 0;
+                cmnum.name = "txt";
+                cmnum.x = 0;
+                cmnum.y = 10;
+                cmnum.width = 62;
+                cmnum.height = 20;
+                cmnum.textAlign = egret.HorizontalAlign.CENTER;
+                sp.addChild(coin);
+                sp.addChild(cmnum);
+                sp.x = pos.x;
+                sp.y = pos.y;
+                splist.push(sp);
+            }
         }
-        return coinArr;
+        return splist;
     }
 
     private coinPos(): egret.Point {
