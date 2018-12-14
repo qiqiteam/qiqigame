@@ -129,8 +129,8 @@ class EventConst {
     // public static isStartBeton: string = "isStartBeton";
     // /**( 你被请出房间**)*/
     // public static isStartBetonST: string = "isStartBetonST";
-    // /**(百家乐退出房间)*/
-    // public static gameOverSucces: string = "gameOverSucces";
+    /**(退出游戏成功)*/
+    public static onUserLeaveGame: string = "onUserLeaveGame";
 
     /**推送*玩家全压 */
     public static onUserAllPress: string = "onUserAllPress";

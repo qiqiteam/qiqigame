@@ -38,7 +38,7 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUpdateUserBalance, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onSendJetton, this.onMessage);		
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.userwin, this.onMessage);
-			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.theNumberOfTooMuch, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserLeaveGame, this.onMessage);
 			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.acquisitionGolb, this.onMessage);
 			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.startBeton, this.onMessage, this);
 			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.baccaratOnJoinRoom, this.onMessage, this);

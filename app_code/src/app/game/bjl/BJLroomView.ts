@@ -43,7 +43,9 @@ class BJLroomView extends eui.Component implements eui.UIComponent {
 	}
 	/**进入百家乐房间失败 */
 	public OnbaccaratOnJoinRoom(data: any): void {
-		xlLib.TipsUtils.showFloatWordTips(data._obj.reminder);
+		if (data._obj.change == 6) {
+			xlLib.TipsUtils.showFloatWordTips(data._obj.reminder);
+		}
 	}
 
 	/**进入百家乐房间列表成功of失败 */

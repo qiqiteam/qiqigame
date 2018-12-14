@@ -191,7 +191,7 @@ class BJLView extends eui.Component {
         this.grpCard.visible = true;
 
         // this.lastTouchBetIndex = 1;
-
+        UserInfo.getInstance().isGameStart = false;
         this.istzxzDh = false;
 
         this.isAction = true;
@@ -306,6 +306,8 @@ class BJLView extends eui.Component {
             // this.onPlayerGenZhu(200, 3);
         } else if (e.target == this.packup) {
             this.wjlistkuang.visible = false;
+        } else if (e.target == this._btn_close) {
+            this.Onquit();
         }
     }
     /**发送请求 sendstr：命令 extparams：{ "moneys": 金额, "types": 押注类型 }*/
@@ -337,6 +339,7 @@ class BJLView extends eui.Component {
         this.effectTouch3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_meun.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.wanjialist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -348,8 +351,9 @@ class BJLView extends eui.Component {
         EventUtil.addEventListener(EventConst.onSendJetton, this.SendJetton, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.addEventListener(EventConst.userwin, this.initGameIconList, this);
-        EventUtil.addEventListener(EventConst.onTimelyNotify, this.initGameIconList, this);
+        EventUtil.addEventListener(EventConst.onUserLeaveGame, this.ongameOverSuccesBack, this);
 
+        EventUtil.addEventListener(EventConst.onTimelyNotify, this.TimelyNotify, this);
     }
     /**个人限红通知 */
     private UpdateLimitItem(data: any) {
@@ -400,12 +404,11 @@ class BJLView extends eui.Component {
     }
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
-        // console.log(data._obj.index + "号下注");
         console.log(UserInfo.getInstance().uid);
         console.log(data._obj.userid);
         if (data._obj.code == 200) {
             if (UserInfo.getInstance().uid == data._obj.userid) {
-                UserInfo.getInstance().isGameStart = false;  //游戏状态
+                UserInfo.getInstance().isGameStart = true;  //游戏状态
                 this.onGenZhuClick(data._obj.money, data._obj.base);
                 this.onJettongrade(data._obj.zongsocre, data._obj.base)
                 this.onplaygrade(data._obj.playsocre, data._obj.base)
@@ -507,6 +510,7 @@ class BJLView extends eui.Component {
     }
     /**结算（派奖） */
     private onBeginBteonBack(data: any): void {
+        UserInfo.getInstance().isGameStart = false;
         this.dianshu_0.visible = false;
         this.dianshu_1.visible = false;
 
@@ -525,14 +529,7 @@ class BJLView extends eui.Component {
             this.addjiesuan_3Effect();
         }
     }
-    /**5局不下注踢出房间，3局不下注提示 */
-    private tishi(data: any) {
-        if (data._obj.jushu == 3) {
 
-        } else if (data._obj.jushu == 5) {
-            xlLib.SceneMgr.instance.changeScene(Lobby);
-        }
-    }
     /**请求玩家列表*/
     private wanjialiebiao(sendstr: string): void {
         let senddata: any = {
@@ -546,8 +543,10 @@ class BJLView extends eui.Component {
     /**退出房间 */
     private ongameOverSuccesBack(data: any): void {
         if (data._obj.code == 200) {
+            xlLib.SoundMgr.instance.stopBgMusic();
+            let musicBg = ["hall_bg_mp3"];
+            xlLib.SoundMgr.instance.playBgMusic(musicBg);
             xlLib.SceneMgr.instance.changeScene(Lobby);
-            xlLib.TipsUtils.showFloatWordTips(data._obj.reminder + "!");
         } else {
             xlLib.TipsUtils.showFloatWordTips(data._obj.reminder + "!");
         }
@@ -578,10 +577,10 @@ class BJLView extends eui.Component {
         let otherplayer: any;
         for (let i = 0; i < data._obj.subList.length; i++) {
             otherplayer = new Object()
-            otherplayer.index = data._obj.subList[i].index;
+            otherplayer.index = data._obj.subList[i].index + 1;
             otherplayer.name = data._obj.subList[i].username;
             otherplayer.gold = data._obj.subList[i].goldcoins;
-            otherplayer.gold1 = data._obj.subList[i].goldcoins;
+            otherplayer.gold1 = data._obj.subList[i].xss;
             otherplayer.img = "women7_png";
             dataArr.push(otherplayer);
         }
@@ -589,6 +588,26 @@ class BJLView extends eui.Component {
         this.userlist.dataProvider = new eui.ArrayCollection(dataArr);
         this.scroller.viewport = this.userlist;
     }
+    /**通知类型 状态 */
+    private TimelyNotify(data) {
+        switch (data._obj.change) {
+            case 1: ; break;    //当前房间状态不能下注
+            case 2: ; break;    //余额不足
+            case 3: ; break;
+            case 4: this.tichufj(); break;    //5局不下注踢出房间
+            case 5: ; break;    //3局不下注提示
+            case 6: ; break;    //
+            case 7: ; break;    //金币不足
+        }
+    }
+    /**踢出房间 */
+    private tichufj(): void {
+        xlLib.SoundMgr.instance.stopBgMusic();
+        let musicBg = ["hall_bg_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
+        xlLib.SceneMgr.instance.changeScene(Lobby);
+    }
+
     /**胜利 */
     private addjiesuan_1Effect(): void {
         if (!this.jiesuan_1) {
@@ -1730,13 +1749,16 @@ class BJLView extends eui.Component {
     public playClickSound(res): void {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     }
-
+    /**退出游戏 */
     public Onquit(): void {
+        if (UserInfo.getInstance().isGameStart) {
+            xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
+            return;
+        }
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token,
         };
-        // xlLib.SceneMgr.instance.changeScene(Lobby);
         xlLib.WebSocketMgr.getInstance().send(EventConst.BaccaratOnleave, senddata, (data) => {
 
         }, this);
@@ -1766,6 +1788,10 @@ class BJLView extends eui.Component {
         EventUtil.removeEventListener(EventConst.OnUpdateLimitItem, this.UpdateLimitItem, this);
         EventUtil.removeEventListener(EventConst.onSendJetton, this.SendJetton, this);
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        EventUtil.removeEventListener(EventConst.userwin, this.initGameIconList, this);
+        EventUtil.removeEventListener(EventConst.onUserLeaveGame, this.ongameOverSuccesBack, this);
+
+        EventUtil.removeEventListener(EventConst.onTimelyNotify, this.TimelyNotify, this);
 
     }
 }
