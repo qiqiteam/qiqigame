@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png",
+			"keys": "loading_png,wzqp_tex_png,wzqp_ske_json,wzqp_tex_json",
 			"name": "preload"
 		},
 		{
@@ -6063,6 +6063,21 @@
 			"url": "assets/sound/qznn/nn.dealCard.mp3",
 			"type": "sound",
 			"name": "nn.dealCard_mp3"
+		},
+		{
+			"name": "wzqp_tex_png",
+			"type": "image",
+			"url": "assets/wzqp_tex.png"
+		},
+		{
+			"name": "wzqp_ske_json",
+			"type": "json",
+			"url": "assets/wzqp_ske.json"
+		},
+		{
+			"name": "wzqp_tex_json",
+			"type": "json",
+			"url": "assets/wzqp_tex.json"
 		}
 	]
 }

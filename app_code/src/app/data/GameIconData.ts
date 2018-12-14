@@ -5,6 +5,7 @@ class GameIconData {
 	public type:string;
 	public name:string;
 	public ishot:boolean;
+	public isNew:boolean;
 	public initData(data:any):GameIconData
 	{
        this.url = data.url;
@@ -12,6 +13,7 @@ class GameIconData {
 	   this.game = data.game;
 	   this.type = data.type;
 	   this.ishot = data.ishot;
+	   this.isNew = data.isNew;
 	   return this;
 	}
 	public constructor() {}

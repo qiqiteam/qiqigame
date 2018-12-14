@@ -102,28 +102,30 @@ module xlLib {
         /**
          * 创建DragonBones显示对象
          */
-        public static createDragonBonesDisplay(dragonJson: string, json: string, png: string, bones?: string, cache?: number): dragonBones.Armature {
-            var dragonbonesData = RES.getRes(dragonJson);
-            if (png && png != null) {
-            var textureData = RES.getRes(json);
-            var texture = RES.getRes(png);
-            } else {
-                var textureData = RES.getRes(json + "_json");
-                var texture = RES.getRes(json + "_png");
+        public static createDragonBonesDisplay(source: string,bones?: string, cache?: number): dragonBones.Armature {
+            let dragonbonesData = RES.getRes(source + "_ske_json");
+            let textureData = RES.getRes(source + "_tex_json");
+            let texture = RES.getRes(source + "_tex_png");
+            if (!dragonbonesData || !textureData || !texture)
+            {
+               console.log("资源" +source + "不存在");
+               return;
             }
             if (StringUtils.stringIsNullOrEmpty(bones))
+            {
                 bones = "armature";
-            var armature: dragonBones.Armature;
-            if (dragonbonesData) {
-                var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
-                dragonbonesFactory.addDragonBonesData(dragonBones.DataParser.parseDragonBonesData(dragonbonesData));
-                dragonbonesFactory.addTextureAtlasData(new dragonBones.EgretTextureAtlas(texture, textureData));
-                if (cache) {
-                    armature = dragonbonesFactory.buildFastArmature(bones);
-                    armature.enableAnimationCache(cache);
-                } else
-                    armature = dragonbonesFactory.buildArmature(bones);
             }
+            var armature: dragonBones.Armature;
+            var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
+            var db:dragonBones.DragonBonesData = dragonBones.DataParser.parseDragonBonesData(dragonbonesData);
+            dragonbonesFactory.addDragonBonesData(db);
+            var tx:dragonBones.EgretTextureAtlas = new dragonBones.EgretTextureAtlas(texture, textureData);
+            dragonbonesFactory.addTextureAtlasData(tx);
+            if (cache) {
+                armature = dragonbonesFactory.buildFastArmature(bones);
+                armature.enableAnimationCache(cache);
+            } else
+                armature = dragonbonesFactory.buildArmature(bones);
             return armature;
         }
 
@@ -158,18 +160,8 @@ module xlLib {
                 else{
                     armature.animation.gotoAndStop(animationName,0);
                 }
-                var _time:number;
-                egret.startTick((timeStamp)=>{
-                        if(!_time) {
-                        _time = timeStamp;
-                        }
-                        var now = timeStamp;
-                        var pass = now - _time;
-                        _time = now;
-                        dragonBones.WorldClock.clock.advanceTime(pass / 1000);
-                        return false;
-                }, armature);
         }
+
 
         /**
          * 设置按钮变灰
@@ -204,9 +196,6 @@ module xlLib {
             }
             dragonBones.WorldClock.clock.remove(armature);
             armature.animation.stop();
-            egret.stopTick((timeStamp)=>{
-                return true;
-            }, armature);
             armature.dispose();
         }
         /**

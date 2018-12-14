@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="InthematchSkin" width="800" height="450" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="1674ebbb283" ></w:Config>
-	<e:Image horizontalCenter="0" verticalCenter="0" source="nn_bg1_png"/>
+	<e:Image horizontalCenter="0" verticalCenter="0" source="nn_bg1" locked="true"/>
 
 
 
@@ -10,12 +10,12 @@
 	<e:Button id="_quxiao" label="" x="660" y="14">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="nn_close_png" source.down="nn_close_png"/>
+			<e:Image width="100%" height="100%" source="nn_close" source.down="nn_close"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Image width="68" height="32" y="22" source="qznn_tips_tittle_png" horizontalCenter="0"/>
+	<e:Image width="68" height="32" y="22" source="qznn_tips_tittle" horizontalCenter="0"/>
 	<e:Label text="正在为您匹配牌桌" y="152" size="35" horizontalCenter="0"/>
 	<e:Label id="_waitfor" text="游戏开始即将开始，请耐心等待" y="282" size="35" horizontalCenter="0"/>
 </e:Skin>

@@ -49,6 +49,16 @@ class LoginView extends eui.Component {
 
 		EventUtil.addEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);
 		EventUtil.addEventListener(EventConst.ON_SOCKET_FAIL, this.onSocketFail, this);
+
+
+		let liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp',"wzqp");
+        dragonBones.WorldClock.clock.add(liuguang);
+        let armatureDisplay = liuguang.getDisplay();
+        armatureDisplay.x = 1230;
+        armatureDisplay.y = 400;
+        this.addChild(armatureDisplay);
+
+        xlLib.DisplayUtils.runDragonBonesArmature(liuguang,"wzqp");
 	}
 
 	private onBlack(e: egret.TouchEvent): void {

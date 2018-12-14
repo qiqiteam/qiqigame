@@ -74,7 +74,19 @@ declare class BJLTypeItemSkin extends eui.Skin{
 }
 declare class BJLViewSkin extends eui.Skin{
 }
+declare class BJLframeSkin extends eui.Skin{
+}
+declare class BJLjiesuan_1Skin extends eui.Skin{
+}
+declare class BJLjiesuan_2Skin extends eui.Skin{
+}
+declare class BJLjiesuan_3Skin extends eui.Skin{
+}
 declare class BJLroomViewSkin extends eui.Skin{
+}
+declare class BJLtingzhiSkin extends eui.Skin{
+}
+declare class BJLxiazhuSkin extends eui.Skin{
 }
 declare class BRNNHeadSkin extends eui.Skin{
 }
@@ -130,6 +142,8 @@ declare class QZNNVictorySkin extends eui.Skin{
 }
 declare class QZNNViewSkin extends eui.Skin{
 }
+declare class QZNNroomEffSkin extends eui.Skin{
+}
 declare class QZNNroomViewSkin extends eui.Skin{
 }
 declare class TenshuNiuBeiSkin extends eui.Skin{
@@ -161,6 +175,8 @@ declare class SetViewSkin extends eui.Skin{
 declare class TBNNHeadSkin extends eui.Skin{
 }
 declare class TBNNViewSkin extends eui.Skin{
+}
+declare class TBNNroomEffSkin extends eui.Skin{
 }
 declare class TBNNroomViewSkin extends eui.Skin{
 }

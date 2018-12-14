@@ -105,54 +105,72 @@ var xlLib;
             return sp;
         };
         /**
-         * 创建DragonBones显示对象
-         */
-        DisplayUtils.createDragonBonesDisplay = function (dragonJson, json, png, bones, cache) {
-            var dragonbonesData = RES.getRes(dragonJson);
-            if (png && png != null) {
-                var textureData = RES.getRes(json);
-                var texture = RES.getRes(png);
+    * 创建DragonBones显示对象
+    */
+        DisplayUtils.createDragonBonesDisplay = function (source, bones, cache) {
+            var dragonbonesData = RES.getRes(source + "_ske_json");
+            var textureData = RES.getRes(source + "_tex_json");
+            var texture = RES.getRes(source + "_tex_png");
+            if (!dragonbonesData || !textureData || !texture) {
+                console.log("资源" + source + "不存在");
+                return;
             }
-            else {
-                var textureData = RES.getRes(json + "_json");
-                var texture = RES.getRes(json + "_png");
-            }
-            if (xlLib.StringUtils.stringIsNullOrEmpty(bones))
+            if (xlLib.StringUtils.stringIsNullOrEmpty(bones)) {
                 bones = "armature";
-            var armature;
-            if (dragonBones) {
-                var dragonbonesFactory = new dragonBones["EgretFactory"]();
-                dragonbonesFactory.addDragonBonesData(dragonBones["DataParser"].parseDragonBonesData(dragonbonesData));
-                dragonbonesFactory.addTextureAtlas(new dragonBones["EgretTextureAtlas"](texture, textureData));
-                if (cache) {
-                    armature = dragonbonesFactory.buildFastArmature(bones);
-                    armature.enableAnimationCache(cache);
-                }
-                else
-                    armature = dragonbonesFactory.buildArmature(bones);
             }
+            var armature;
+            var dragonbonesFactory = new dragonBones.EgretFactory();
+            var db = dragonBones.DataParser.parseDragonBonesData(dragonbonesData);
+            dragonbonesFactory.addDragonBonesData(db);
+            var tx = new dragonBones.EgretTextureAtlas(texture, textureData);
+            dragonbonesFactory.addTextureAtlasData(tx);
+            if (cache) {
+                armature = dragonbonesFactory.buildFastArmature(bones);
+                armature.enableAnimationCache(cache);
+            }
+            else
+                armature = dragonbonesFactory.buildArmature(bones);
             return armature;
         };
+        DisplayUtils.stopDragonBonesArmature = function (armature) {
+            var _time;
+            egret.stopTick(function (timeStamp) {
+                return true;
+            }, armature);
+            armature.animation.stop();
+            dragonBones.WorldClock.clock.remove(armature);
+        };
         /**
-         * 运行龙骨动画
-         * @param animationName {string} 指定播放的动画名称.
-         * @param playTimes {number} 动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN
-         * @returns {AnimationState} 动画播放状态实例
-         *
-         */
+       * 运行龙骨动画
+       * @param animationName {string} 指定播放的动画名称.
+       * @param playTimes {number} 动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN
+       * @returns {AnimationState} 动画播放状态实例
+       *
+       */
         DisplayUtils.runDragonBonesArmature = function (armature, animationName, playTimes, isPlay) {
             if (isPlay === void 0) { isPlay = true; }
             if (armature == null) {
                 xlLib.Console.error("armature不能为空");
                 return;
             }
-            dragonBones["WorldClock"].clock.add(armature);
+            dragonBones.WorldClock.clock.add(armature);
             if (isPlay) {
                 armature.animation.gotoAndPlay(animationName, 0, -1, playTimes, 0);
             }
             else {
                 armature.animation.gotoAndStop(animationName, 0);
             }
+            var _time;
+            egret.startTick(function (timeStamp) {
+                if (!_time) {
+                    _time = timeStamp;
+                }
+                var now = timeStamp;
+                var pass = now - _time;
+                _time = now;
+                dragonBones.WorldClock.clock.advanceTime(pass / 1000);
+                return false;
+            }, armature);
         };
         /**
          * 设置按钮变灰

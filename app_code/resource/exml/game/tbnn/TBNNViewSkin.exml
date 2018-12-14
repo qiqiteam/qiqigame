@@ -4,7 +4,7 @@
 	<e:Group width="1472" height="828" horizontalCenter="0" verticalCenter="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" width="100%" height="100%" source="bg_tbnn_jpg" locked="true"/>
 		<e:Image horizontalCenter="0" verticalCenter="0" source="tb_bg_table_png" locked="true"/>
-		<e:Image source="gameID_png" x="888.73" y="17.99" locked="true"/>
+		<e:Image source="gameID" x="888.73" y="17.99" locked="true"/>
 		<e:Label id="_paijubh" text="50-1543687800-31296807-1" x="1009.11" y="24.99" textColor="0xe0a500" size="26" locked="true"/>
 	</e:Group>
 

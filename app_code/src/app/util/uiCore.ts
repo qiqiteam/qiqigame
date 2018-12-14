@@ -473,6 +473,19 @@ module uiCore {
         }
     }
 
+    export class KShape extends egret.Shape {
+
+        constructor() {
+            super();
+            this.graphics.beginFill(0xff0000);
+            this.graphics.drawRect(0,0,100,100);
+            this.graphics.endFill();
+        }
+
+        public childrenCreated() {
+
+        }
+    }
 }
 /*
     var uiCore;
