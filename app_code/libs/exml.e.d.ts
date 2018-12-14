@@ -74,7 +74,19 @@ declare class BJLTypeItemSkin extends eui.Skin{
 }
 declare class BJLViewSkin extends eui.Skin{
 }
+declare class BJLframeSkin extends eui.Skin{
+}
+declare class BJLjiesuan_1Skin extends eui.Skin{
+}
+declare class BJLjiesuan_2Skin extends eui.Skin{
+}
+declare class BJLjiesuan_3Skin extends eui.Skin{
+}
 declare class BJLroomViewSkin extends eui.Skin{
+}
+declare class BJLtingzhiSkin extends eui.Skin{
+}
+declare class BJLxiazhuSkin extends eui.Skin{
 }
 declare class BRNNHeadSkin extends eui.Skin{
 }

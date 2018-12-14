@@ -50,7 +50,7 @@ class BJLUtil {
         }
         return src;
     }
-
+    /**音乐 */
     public getSoundEffect(type): string {
         switch (type) {
             case 0:
@@ -77,41 +77,25 @@ class BJLUtil {
     public getCoinsPos(index: Number): egret.Point {
         var point: egret.Point = new egret.Point();
         switch (index) {
-            case 1:                 // 1是庄家赢
-                point.x = 1090;
-                point.y = 270;
+            case 1:                 // 1是庄
+                point.x = 340;
+                point.y = 240;
                 break;
-            case 2:                 // 2是闲家赢
-                point.x = 330;
-                point.y = 270;
+            case 2:                 // 2是闲
+                point.x = 1020;
+                point.y = 240;
                 break;
-            case 3:                 // 3是上庄赢
-                point.x = 630;
-                point.y = 310;
+            case 3:                 // 3是庄对
+                point.x = 360;
+                point.y = 430;
                 break;
-            case 4:                 // 4是上庄输
-                point.x = 805;
-                point.y = 310;
+            case 4:                 // 4是闲对
+                point.x = 1030;
+                point.y = 430;
                 break;
             case 5:                 // 5是和
-                point.x = 670;
-                point.y = 510;
-                break;
-            case 6:                 // 6是庄对
-                point.x = 1190;
-                point.y = 510;
-                break;
-            case 7:                 // 7是闲队
-                point.x = 210;
-                point.y = 510;
-                break;
-            case 8:                 // 8是大
-                point.x = 400;
-                point.y = 510;
-                break;
-            case 9:                 // 9是小
-                point.x = 1000;
-                point.y = 510;
+                point.x = 690;
+                point.y = 430;
                 break;
         }
         return point;
@@ -135,44 +119,45 @@ class BJLUtil {
     }
 
     //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(pos: egret.Point, num): Array<eui.Image> {
+    public coinsType(pos: egret.Point, num: number): Array<eui.Image> {
         var coinArr = [];
         var coinNum: number = 0;
         var src: string = '';
-        num = Math.round(num / 10000);
-        if (num > 0 && num < 10) {  //1w
+        if (num == 4) {  //4
             coinNum = num;
-            src = 'b1a';
+            src = 'baccarat_game_icon_chouma_4_png';
         }
-        else if (num > 9 && num < 100) {   //1000w---10w
-            coinNum = num / 10;
-            src = 'b2a';
+        else if (num == 10) {   //10
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_10_png';
         }
-        else if (num > 99 && num < 1000) {   //5000w---100w
-            coinNum = num / 100;
-            src = 'b3a';
+        else if (num == 20) {   //10
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_20_png';
         }
-        else if (num > 999 && num < 10000) { //1y----1000w
-            coinNum = num / 1000;
-            src = 'b4a';
+        else if (num == 50) { //50
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_50_png';
         }
-        else if (num > 9999 && num < 100000) { //3y---1y
-            coinNum = num / 10000;
-            src = 'b5a';
+        else if (num == 100) { //100
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_100_png';
+        } else if (num == 200) { //500
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_200_png';
         }
-        else {  //5y
-            coinNum = num / 50000;
-            src = 'b6a';
-        }
-        for (var i = 0; i < Math.round(coinNum); i++) {
-            var coin: eui.Image = new eui.Image(src);
-            //var p: egret.Point = this.coinPos();
-            coin.x = pos.x;
-            coin.y = pos.y;
-            coinArr.push(coin);
-        }
+        // for (var i = 0; i < Math.round(coinNum); i++) {
+        var coin: eui.Image = new eui.Image(src);
+        //var p: egret.Point = this.coinPos();
+        coin.x = pos.x;
+        coin.y = pos.y;
+        coin.scaleX = 0.3;
+        coin.scaleY = 0.3;
+        coinArr.push(coin);
+        // }
         return coinArr;
     }
+
 
     private coinPos(): egret.Point {
         var p: egret.Point = new egret.Point();

@@ -413,6 +413,7 @@ class BRNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.onUserList, this.initGameIconList, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
+        EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
 
     }
     /**游戏状态 */
@@ -504,13 +505,13 @@ class BRNNView extends eui.Component {
     /**游戏结束,百人牛牛休息 */
     private onrest(data: any): void {
         this.startCountDown(data._obj.seconds);
-        UserInfo.getInstance().isGameStart = true;
+        UserInfo.getInstance().isGameStart = false;
+
     }
     /**百人牛牛洗牌 */
     private onshuffle(data: any): void {
 
         this.resetGame();
-
         this.startCountDown(data._obj.seconds);
     }
     /**百人牛牛发牌 */
@@ -526,7 +527,7 @@ class BRNNView extends eui.Component {
 
         if (data._obj.code == 200) {
             if (UserInfo.getInstance().uid == data._obj.userid) {
-                UserInfo.getInstance().isGameStart = false;  //游戏状态
+                UserInfo.getInstance().isGameStart = true;  //游戏状态
                 this.onGenZhuClick(data._obj.money, data._obj.deskNum);
                 this.onplaygrade(data._obj.myMoney, data._obj.deskNum);
                 this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
@@ -620,6 +621,8 @@ class BRNNView extends eui.Component {
             if (this.isAction) {
                 this.sendamessage(EventConst.niuniu_dobet, 4, this.multipleList[this.lastTouchBetIndex - 1]);
             }
+        } else if (e.target == this._btn_close) {
+            this.buttonClose();
         }
     }
 
@@ -664,17 +667,18 @@ class BRNNView extends eui.Component {
 
     }
 
+    /**退出房间成功 */
+    private onleave(data: any) {
+        if (data._obj.code == 200) {
+            xlLib.PopUpMgr.removePopUp(Inthematch, 1);
+            xlLib.SoundMgr.instance.stopBgMusic();
+            let musicBg = ["hall_bg_mp3"];
+            xlLib.SoundMgr.instance.playBgMusic(musicBg);
+            xlLib.SceneMgr.instance.changeScene(Lobby);
+        }
+    }
     /**返回游戏大厅 */
     private buttonClose(): void {
-
-        // let senddata: any = {
-        //     userid: UserInfo.getInstance().uid,
-        //     token: UserInfo.getInstance().token,
-        // };
-        // xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
-
-        //     xlLib.SceneMgr.instance.changeScene(Lobby);
-        // }, this);
 
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         if (UserInfo.getInstance().isGameStart) {
@@ -682,12 +686,12 @@ class BRNNView extends eui.Component {
             return;
         }
 
-        xlLib.SoundMgr.instance.stopBgMusic();
-        let musicBg = ["hall_bg_mp3"];
-        xlLib.SoundMgr.instance.playBgMusic(musicBg);
-
-        xlLib.SceneMgr.instance.changeScene(Lobby);
-
+        let senddata: any = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+        };
+        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
+        }, this);
     }
 
     /**播放 胜利 通杀 通赔 动画 */
@@ -903,7 +907,7 @@ class BRNNView extends eui.Component {
 
     private playCardFly(): void {
         var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
-        card.source = 'nn.card_100';
+        card.source = 'qznn_card_100';
         card.x = 713.5;
         card.y = 250;
         card.anchorOffsetX = card.width / 2;
@@ -928,7 +932,6 @@ class BRNNView extends eui.Component {
             this.flyIndex1++;
         }
     }
-
     private bankerCardFly(): void {
         if (this.flyBankerIndex == 5) {
             this.flyBankerIndex = 0;
@@ -939,7 +942,7 @@ class BRNNView extends eui.Component {
         var card: eui.Image = this['bankerCard_' + this.flyBankerIndex];
         card.x = 713.5;
         card.y = 250;
-        card.source = 'nn.card_100';
+        card.source = 'qznn_card_100';
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
         this.orginBankerCardPos;
@@ -963,7 +966,7 @@ class BRNNView extends eui.Component {
         var index = this.effectPlayerIndex;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
-            card.source = 'nn.card_100';
+            card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'nn.card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
@@ -995,7 +998,7 @@ class BRNNView extends eui.Component {
         var poke = this.cardResult.pokes[0];
         for (var i = 0; i < 5; i++) {
             var card = this['bankerCard_' + i];
-            card.source = 'nn.card_100';
+            card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'nn.card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
@@ -1207,24 +1210,18 @@ class BRNNView extends eui.Component {
     }
     /**游戏场景重置 */
     private resetGame(): void {
-        // for (var i = 0; i < 4; i++) {
-        //     this['labBetsPool' + i].text = '';
-        //     this['labBetsSelf' + i].text = '';
-        //     egret.Tween.removeTweens(this['effectSelect' + i]);
-        // }
+  
         for (var i = 0; i < 5; i++) {
-            // this['bankerCard_' + i].source = '';
             let card: eui.Image = this['bankerCard_' + i];
             card.source = '';
             egret.Tween.removeTweens(card);
 
         }
         for (var index = 0; index < 4; index++) {
-            // this['labCardResult' + index].text = '';
+
             this['labCardType' + index].visible = false;
             this.labCardTypeBanker.visible = false;
             for (var j = 0; j < 5; j++) {
-                // this['grpCard_' + index + '_' + j].source = '';
                 let card: eui.Image = this['grpCard_' + index + '_' + j];
                 card.source = '';
                 egret.Tween.removeTweens(card);
@@ -1234,15 +1231,6 @@ class BRNNView extends eui.Component {
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
 
-        // while (this.grpCoins.numChildren > 0) {
-        //     this.grpCoins.removeChildAt(0);
-        // }
-        // for (var i = 0; i < 4; i++) {
-        //     this['effectSelect' + i].visible = false;
-        // }
-        // for (let i = 0; i < 4; i++) {
-        //     this['labTipsClick' + i].visible = true;
-        // }
         this.isCanBets = true;
         this.isBets = false;
         this.imgBaoZhuang.visible = false;
@@ -1250,9 +1238,6 @@ class BRNNView extends eui.Component {
         this.grpCaijin.visible = false;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
-
-        // this.cdNum = 10;
-        // this.cdTimer.start();
 
         this.initData();
 
@@ -1317,6 +1302,7 @@ class BRNNView extends eui.Component {
 
     public destroy(): void {
         this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.packup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1329,12 +1315,11 @@ class BRNNView extends eui.Component {
         this.effectTouch2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
-
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.removeEventListener(EventConst.onUserList, this.initGameIconList, this);
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
+        EventUtil.removeEventListener(EventConst.onUserLeave, this.onleave, this);
 
     }
 

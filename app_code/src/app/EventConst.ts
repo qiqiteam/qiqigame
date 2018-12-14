@@ -55,9 +55,9 @@ class EventConst {
     public static erbagang_hog: string = "erbagang_hog";
     /**投注倍数*/
     public static erbagang_bet: string = "erbagang_bet";
-     /**关闭自动跟注 */
+    /**关闭自动跟注 */
     public static closeAutoFollow: string = "closeAutoFollow";
-     /**自动跟注 */
+    /**自动跟注 */
     public static onAutoFollow: string = "onAutoFollow";
 
     //------------------S to C---------------------服务端回包监听数据
@@ -95,34 +95,42 @@ class EventConst {
     // /**时间*/
     // public static roomTime: string = "roomTime";
 
-    /**进入百家乐房间成功of失败*/
-    public static baccaratOnJoinRoom: string = "baccaratOnJoinRoom";
+    // /**进入百家乐房间成功of失败*/
+    // public static baccaratOnJoinRoom: string = "baccaratOnJoinRoom";
     /**进入百家乐房间列表成功of失败*/
     public static parteySuccess: string = "parteySuccess";
-    /**（赔率）*/
-    public static onBJLjoinroom: string = "onBJLjoinroom";
-    /**（可以开始下注5秒倒计时）*/
-    public static startBeton: string = "startBeton";
-    /**自己下注*/
-    public static onCatch: string = "onCatch";
-    /**其他玩家下注*/
-    public static dealCatch: string = "dealCatch";
-    /**(开始发牌)*/
-    public static baccaratDeil: string = "baccaratDeil";
-    /**("参数异常")*/
-    public static theNumberOfTooMuch: string = "theNumberOfTooMuch";
-    /**(5秒后开始下注,处理结算动画)*/
-    public static beginBteon: string = "beginBteon";
-    /**( 金币不足**)*/
-    public static bsogc: string = "bsogc";
+    /**请求玩家列表 */
+    public static playersUserWin: string = "playersUserWin";
+    /**前20名玩家 */
+    public static userwin: string = "userwin";
+    /**(筹码)*/
+    public static onSendJetton: string = "onSendJetton";
+    /**(个人限红通知)*/
+    public static OnUpdateLimitItem: string = "OnUpdateLimitItem";
+    // /**（赔率）*/
+    // public static onBJLjoinroom: string = "onBJLjoinroom";
+    // /**（可以开始下注5秒倒计时）*/
+    // public static startBeton: string = "startBeton";
+    // /**自己下注*/
+    // public static onCatch: string = "onCatch";
+    // /**其他玩家下注*/
+    // public static dealCatch: string = "dealCatch";
+    // /**(开始发牌)*/
+    // public static baccaratDeil: string = "baccaratDeil";
+    // /**("参数异常")*/
+    // public static theNumberOfTooMuch: string = "theNumberOfTooMuch";
+    // /**(5秒后开始下注,处理结算动画)*/
+    // public static beginBteon: string = "beginBteon";
+    // /**( 金币不足**)*/
+    // public static bsogc: string = "bsogc";
     /**( 金币变为**)*/
-    public static acquisitionGolb: string = "acquisitionGolb";
-    /**( 5局之后不下注将要被踢出房间，当前第三局：)*/
-    public static isStartBeton: string = "isStartBeton";
-    /**( 你被请出房间**)*/
-    public static isStartBetonST: string = "isStartBetonST";
-    /**(百家乐退出房间)*/
-    public static gameOverSucces: string = "gameOverSucces";
+    public static onUpdateUserBalance: string = "onUpdateUserBalance";
+    // /**( 5局之后不下注将要被踢出房间，当前第三局：)*/
+    // public static isStartBeton: string = "isStartBeton";
+    // /**( 你被请出房间**)*/
+    // public static isStartBetonST: string = "isStartBetonST";
+    // /**(百家乐退出房间)*/
+    // public static gameOverSucces: string = "gameOverSucces";
 
     /**推送*玩家全压 */
     public static onUserAllPress: string = "onUserAllPress";
@@ -134,7 +142,7 @@ class EventConst {
     public static onUserWaiveCard: string = "onUserWaiveCard";
     /**(推送*异常及时通知)*/
     public static onTimelyNotify: string = "onTimelyNotify";
-     /**(推送*ai比牌)*/
+    /**(推送*ai比牌)*/
     public static singonAiReadyTocard: string = "singonAiReadyTocard";
     /**(推送*检查玩家是否中途退出房间)*/
     public static gamestatus: string = "gamestatus";

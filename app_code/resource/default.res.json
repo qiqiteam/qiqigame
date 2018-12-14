@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,gf_btn_game_begin_normal.2_png,gf_txt_btn.png_)2_png,gf_txt_btn.png_+2_png,gf_txt_btn.png_,2_png,gf_txt_btn.png_-2_png,gf_txt_btn.png_.2_png,gf_txt_btn.png_02_png,gf_txt_btn.png_12_png,gf_txt_btn.png_22_png,gf_txt_btn.png_32_png,gf_txt_btn.png_42_png,gf_txt_btn.png_52_png,gf_txt_btn.png_62_png,gf_txt_btn.png_72_png,gf_txt_btn.png_82_png,gf_txt_btn.png_92_png,lab_bipai2_png,lab_genzhu2_png,lab_jiazhu2_png,lab_zjh_up_discard2_png,queding2_png,quxiao2_png,qznn_btn42_png,qznn_btn4_12_png,qznn_btn_beishu12_png,qznn_btn_beishu1_12_png,qznn_btn_beishu22_png,qznn_btn_beishu2_12_png,qznn_btn_qipai2_png,qznn_btn_qipai12_png,qznn_btn_zidonggenzhu2_png,qznn_btn_zidonggenzhu12_png,tijiao2_png,zidonggenzhu2_png,bar_plus_bg2_png,bar_reduce_bg2_png,bg_12_jpg,bg_jianbian_22_png,di2_png,fanpai0_tex2_png,fanpai1_tex2_png,gf_genzhu_02_png,gf_genzhu_110_png,gf_genzhu_102_png,gf_genzhu_112_png,gf_genzhu_122_png,gf_genzhu_132_png,gf_genzhu_142_png,gf_genzhu_152_png,gf_genzhu_162_png,gf_genzhu_172_png,gf_genzhu_182_png,gf_genzhu_192_png,gf_genzhu_210_png,gf_genzhu_202_png,gf_genzhu_212_png,gf_genzhu_222_png,gf_genzhu_232_png,gf_genzhu_242_png,gf_genzhu_252_png,gf_genzhu_262_png,gf_genzhu_272_png,gf_genzhu_282_png,gf_genzhu_292_png,gf_genzhu_32_png,gf_genzhu_302_png,gf_genzhu_312_png,gf_genzhu_42_png,gf_genzhu_52_png,gf_genzhu_62_png,gf_genzhu_72_png,gf_genzhu_82_png,gf_genzhu_92_png,gf_guzhuyizhi02_png,gf_guzhuyizhi12_png,gf_guzhuyizhi22_png,gf_guzhuyizhi32_png,gf_guzhuyizhi42_png,gf_guzhuyizhi52_png,gf_guzhuyizhi62_png,gf_guzhuyizhi72_png,gf_guzhuyizhi82_png,gf_guzhuyizhi92_png,goldflower_effect_daoguang_02_png,goldflower_effect_daoguang_12_png,goldflower_effect_daoguang_22_png,goldflower_effect_daoguang_32_png,goldflower_effect_daoguang_42_png,goldflower_effect_daoguang_52_png,goldflower_effect_daoguang_62_png,goldflower_effect_daoguang_72_png,goldflower_effect_daoguang_82_png,goldflower_effect_daoguang_92_png,zjh_effect_win_0_tex2_png,zjh_effect_win_1_tex2_png,zjh_effect_youwin_tex_12_png,zjh_effect_youwin_tex_22_png,zjh_effect_youwin_tex_32_png,zjh_effect_youwin_tex_42_png,zjh_effect_youwin_tex_52_png,zjh_effect_youwin_tex_62_png,zjh_effect_youwin_tex_72_png,zjh_effect_youwin_tex_82_png,zjh_vs_tex12_png,zjh_vs_tex22_png,zjh_vs_tex32_png,zjh_vs_tex42_png,zjh_vs_tex52_png,zjh_vs_tex62_png,zjh_vs_tex72_png,zjh_vs_tex82_png,gf_Avatar_box2_png,gf_Avatar_zz2_png,gf_bg2_png,gf_bg_close2_png,gf_bg_close022_png,gf_bg_jiazhu2_png,gf_bg_l2_png,gf_bg_leaf2_png,gf_bg_match2_png,gf_bg_match_close2_png,gf_bg_match_word2_png,gf_bg_menu2_png,gf_bg_pk12_png,gf_bipaiguang2_png,gf_btn_ban2_png,gf_btn_chat2_png,gf_btn_follow2_png,gf_btn_game_begin_normal2_png,gf_btn_menu2_png,gf_btn_pk2_png,gf_btn_txt_qxgz2_png,gf_btn_txt_zdgz2_png,gf_chip_bg2_png,gf_dialogue2_png,gf_dialogue12_png,gf_dialogue_bipai2_png,gf_dialogue_genzhu2_png,gf_dialogue_jiazhu2_png,gf_dialogue_kanpai2_png,gf_dialogue_qipai2_png,gf_effect_kiss_02_png,gf_emoji292_png,gf_flag_bpsb2_png,gf_flag_qp2_png,gf_flag_ykp2_png,gf_game_bet_bg2_png,gf_game_continiu_title2_png,gf_game_light2_png,gf_game_room_bg_1_22_png,gf_game_tips2_png,gf_guzhuyizhi03_png,gf_heguan2_png,gf_huoping_02_png,gf_icon_bullion2_PNG,gf_icon_chip_sm12_png,gf_icon_chip_sm22_png,gf_icon_chip_sm32_PNG,gf_icon_chip_sm42_png,gf_icon_chip_sm52_png,gf_icon_chip_sm62_png,gf_icon_chip_sm72_png,gf_icon_chip_yellow2_png,gf_icon_leave2_png,gf_icon_record2_png,gf_icon_shezhi2_png,gf_icon_wanfa2_png,gf_icon_xiqian_close2_png,gf_match_bg2_png,gf_mengban12_png,gf_mengban22_png,gf_mengban32_png,gf_paixing2_png,gf_peilv2_png,gf_poker02_png,gf_poker0_12_png,gf_poker0_22_png,gf_poker110_png,gf_poker102_png,gf_poker112_png,gf_poker122_png,gf_poker132_png,gf_poker142_png,gf_poker152_png,gf_poker162_png,gf_poker172_png,gf_poker182_png,gf_poker192_png,gf_poker210_png,gf_poker202_png,gf_poker212_png,gf_poker222_png,gf_poker232_png,gf_poker242_png,gf_poker252_png,gf_poker262_png,gf_poker272_png,gf_poker282_png,gf_poker292_png,gf_poker310_png,gf_poker302_png,gf_poker312_png,gf_poker322_png,gf_poker332_png,gf_poker342_png,gf_poker352_png,gf_poker362_png,gf_poker372_png,gf_poker382_png,gf_poker392_png,gf_poker410_png,gf_poker402_png,gf_poker412_png,gf_poker422_png,gf_poker432_png,gf_poker442_png,gf_poker452_png,gf_poker462_png,gf_poker472_png,gf_poker482_png,gf_poker492_png,gf_poker510_png,gf_poker502_png,gf_poker512_png,gf_poker522_png,gf_poker532_png,gf_poker542_png,gf_poker552_png,gf_poker562_png,gf_poker572_png,gf_poker582_png,gf_poker592_png,gf_poker62_png,gf_poker602_png,gf_poker612_png,gf_poker72_png,gf_poker82_png,gf_poker92_png,gf_px12_png,gf_px22_png,gf_px32_png,gf_px42_png,gf_px52_png,gf_px62_png,gf_pxzs2_png,gf_queding2_png,gf_room_dizhu2_png,gf_rule2_png,gf_table2_png,gf_table_02_png,gf_tip_anniu2_png,gf_tip_ts2_png,gf_tips22_png,gf_tips_click_card2_png,gf_tips_leave2_png,gf_typebg_black2_png,gf_wait3_png,gf_wait22_png,gf_wanfa2_png,gf_xiqian2_png,brnn_imformation2_png,gamehall_BtnClose2_png,gamehall_BtnTxtSave2_png,gamehall_comfirm_btn2_png,gamehall_headBg2_png,gamehall_headbg12_png,gamehall_headBgL2_png,gamehall_headBigbg2_png,gamehall_headSelected2_png,gamehall_headSelected_txt2_png,gamehall_sexSelectBtn2_png,gamehall_sexSelectBtn_light2_png,gamehall_title_headSelected2_png,gf_effcet_pic_person2_png,gf_effect_kiss_03_png,gf_game_room_bg_12_png,gf_game_room_bg_22_png,gf_game_room_bg_32_png,gf_game_room_bg_42_png,gf_logo2_png,gf_lowBetNumber_+2_png,gf_lowBetNumber_-2_png,gf_lowBetNumber_.2_png,gf_lowBetNumber_02_png,gf_lowBetNumber_12_png,gf_lowBetNumber_22_png,gf_lowBetNumber_32_png,gf_lowBetNumber_42_png,gf_lowBetNumber_52_png,gf_lowBetNumber_62_png,gf_lowBetNumber_72_png,gf_lowBetNumber_82_png,gf_lowBetNumber_92_png,gf_lowBetNumber_）2_png,gf_room_bg2_png,gf_room_gold2_png,gf_room_icon_help2_png,gf_room_icon_record2_png,gf_room_pic_bg2_png,gf_room_return2_png,gf_room_user_bg2_png,lv22_png,lv32_png,lv42_png,lv52_png,zajinhua2_png,bar_reduce_font_,2_png,bar_reduce_font_-2_png,bar_reduce_font_.2_png,bar_reduce_font_02_png,bar_reduce_font_12_png,bar_reduce_font_22_png,bar_reduce_font_32_png,bar_reduce_font_42_png,bar_reduce_font_52_png,bar_reduce_font_62_png,bar_reduce_font_72_png,bar_reduce_font_82_png,bar_reduce_font_92_png,gf_betChip_number_.2_png,gf_betChip_number_02_png,gf_betChip_number_12_png,gf_betChip_number_22_png,gf_betChip_number_32_png,gf_betChip_number_42_png,gf_betChip_number_52_png,gf_betChip_number_62_png,gf_betChip_number_72_png,gf_betChip_number_82_png,gf_betChip_number_92_png,gf_bet_number_.2_png,gf_bet_number_02_png,gf_bet_number_12_png,gf_bet_number_22_png,gf_bet_number_32_png,gf_bet_number_42_png,gf_bet_number_52_png,gf_bet_number_62_png,gf_bet_number_72_png,gf_bet_number_82_png,gf_bet_number_92_png,gf_cutmoneyNum_export_+2_png,gf_cutmoneyNum_export_-2_png,gf_cutmoneyNum_export_12_png,gf_cutmoneyNum_export_22_png,gf_cutmoneyNum_export_32_png,gf_cutmoneyNum_export_42_png,gf_cutmoneyNum_export_52_png,gf_cutmoneyNum_export_62_png,gf_cutmoneyNum_export_72_png,gf_cutmoneyNum_export_82_png,gf_cutmoneyNum_export_92_png,gf_moneyNumber_)2_png,gf_moneyNumber_+2_png,gf_moneyNumber_-2_png,gf_moneyNumber_.2_png,gf_moneyNumber_02_png,gf_moneyNumber_12_png,gf_moneyNumber_22_png,gf_moneyNumber_32_png,gf_moneyNumber_42_png,gf_moneyNumber_52_png,gf_moneyNumber_62_png,gf_moneyNumber_72_png,gf_moneyNumber_82_png,gf_moneyNumber_92_png,gf_moneyNumber_，2_png,gf_txt_btn.png_(2_png,zjh_btn_fankui2_png",
+			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,gf_btn_game_begin_normal.2_png,gf_txt_btn.png_)2_png,gf_txt_btn.png_+2_png,gf_txt_btn.png_,2_png,gf_txt_btn.png_-2_png,gf_txt_btn.png_.2_png,gf_txt_btn.png_02_png,gf_txt_btn.png_12_png,gf_txt_btn.png_22_png,gf_txt_btn.png_32_png,gf_txt_btn.png_42_png,gf_txt_btn.png_52_png,gf_txt_btn.png_62_png,gf_txt_btn.png_72_png,gf_txt_btn.png_82_png,gf_txt_btn.png_92_png,lab_bipai2_png,lab_genzhu2_png,lab_jiazhu2_png,lab_zjh_up_discard2_png,queding2_png,quxiao2_png,qznn_btn42_png,qznn_btn4_12_png,qznn_btn_beishu12_png,qznn_btn_beishu1_12_png,qznn_btn_beishu22_png,qznn_btn_beishu2_12_png,qznn_btn_qipai2_png,qznn_btn_qipai12_png,qznn_btn_zidonggenzhu2_png,qznn_btn_zidonggenzhu12_png,tijiao2_png,zidonggenzhu2_png,bar_plus_bg2_png,bar_reduce_bg2_png,bg_12_jpg,bg_jianbian_22_png,di2_png,fanpai0_tex2_png,fanpai1_tex2_png,gf_genzhu_02_png,gf_genzhu_110_png,gf_genzhu_102_png,gf_genzhu_112_png,gf_genzhu_122_png,gf_genzhu_132_png,gf_genzhu_142_png,gf_genzhu_152_png,gf_genzhu_162_png,gf_genzhu_172_png,gf_genzhu_182_png,gf_genzhu_192_png,gf_genzhu_210_png,gf_genzhu_202_png,gf_genzhu_212_png,gf_genzhu_222_png,gf_genzhu_232_png,gf_genzhu_242_png,gf_genzhu_252_png,gf_genzhu_262_png,gf_genzhu_272_png,gf_genzhu_282_png,gf_genzhu_292_png,gf_genzhu_32_png,gf_genzhu_302_png,gf_genzhu_312_png,gf_genzhu_42_png,gf_genzhu_52_png,gf_genzhu_62_png,gf_genzhu_72_png,gf_genzhu_82_png,gf_genzhu_92_png,gf_guzhuyizhi02_png,gf_guzhuyizhi12_png,gf_guzhuyizhi22_png,gf_guzhuyizhi32_png,gf_guzhuyizhi42_png,gf_guzhuyizhi52_png,gf_guzhuyizhi62_png,gf_guzhuyizhi72_png,gf_guzhuyizhi82_png,gf_guzhuyizhi92_png,goldflower_effect_daoguang_02_png,goldflower_effect_daoguang_12_png,goldflower_effect_daoguang_22_png,goldflower_effect_daoguang_32_png,goldflower_effect_daoguang_42_png,goldflower_effect_daoguang_52_png,goldflower_effect_daoguang_62_png,goldflower_effect_daoguang_72_png,goldflower_effect_daoguang_82_png,goldflower_effect_daoguang_92_png,zjh_effect_win_0_tex2_png,zjh_effect_win_1_tex2_png,zjh_effect_youwin_tex_12_png,zjh_effect_youwin_tex_22_png,zjh_effect_youwin_tex_32_png,zjh_effect_youwin_tex_42_png,zjh_effect_youwin_tex_52_png,zjh_effect_youwin_tex_62_png,zjh_effect_youwin_tex_72_png,zjh_effect_youwin_tex_82_png,zjh_vs_tex12_png,zjh_vs_tex22_png,zjh_vs_tex32_png,zjh_vs_tex42_png,zjh_vs_tex52_png,zjh_vs_tex62_png,zjh_vs_tex72_png,zjh_vs_tex82_png,gf_Avatar_box2_png,gf_Avatar_zz2_png,gf_bg2_png,gf_bg_close2_png,gf_bg_close022_png,gf_bg_jiazhu2_png,gf_bg_l2_png,gf_bg_leaf2_png,gf_bg_match2_png,gf_bg_match_close2_png,gf_bg_match_word2_png,gf_bg_menu2_png,gf_bg_pk12_png,gf_bipaiguang2_png,gf_btn_ban2_png,gf_btn_chat2_png,gf_btn_follow2_png,gf_btn_game_begin_normal2_png,gf_btn_menu2_png,gf_btn_pk2_png,gf_btn_txt_qxgz2_png,gf_btn_txt_zdgz2_png,gf_chip_bg2_png,gf_dialogue2_png,gf_dialogue12_png,gf_dialogue_bipai2_png,gf_dialogue_genzhu2_png,gf_dialogue_jiazhu2_png,gf_dialogue_kanpai2_png,gf_dialogue_qipai2_png,gf_effect_kiss_02_png,gf_emoji292_png,gf_flag_bpsb2_png,gf_flag_qp2_png,gf_flag_ykp2_png,gf_game_bet_bg2_png,gf_game_continiu_title2_png,gf_game_light2_png,gf_game_room_bg_1_22_png,gf_game_tips2_png,gf_guzhuyizhi03_png,gf_heguan2_png,gf_huoping_02_png,gf_icon_bullion2_PNG,gf_icon_chip_sm12_png,gf_icon_chip_sm22_png,gf_icon_chip_sm32_PNG,gf_icon_chip_sm42_png,gf_icon_chip_sm52_png,gf_icon_chip_sm62_png,gf_icon_chip_sm72_png,gf_icon_chip_yellow2_png,gf_icon_leave2_png,gf_icon_record2_png,gf_icon_shezhi2_png,gf_icon_wanfa2_png,gf_icon_xiqian_close2_png,gf_match_bg2_png,gf_mengban12_png,gf_mengban22_png,gf_mengban32_png,gf_paixing2_png,gf_peilv2_png,gf_poker02_png,gf_poker0_12_png,gf_poker0_22_png,gf_poker110_png,gf_poker102_png,gf_poker112_png,gf_poker122_png,gf_poker132_png,gf_poker142_png,gf_poker152_png,gf_poker162_png,gf_poker172_png,gf_poker182_png,gf_poker192_png,gf_poker210_png,gf_poker202_png,gf_poker212_png,gf_poker222_png,gf_poker232_png,gf_poker242_png,gf_poker252_png,gf_poker262_png,gf_poker272_png,gf_poker282_png,gf_poker292_png,gf_poker310_png,gf_poker302_png,gf_poker312_png,gf_poker322_png,gf_poker332_png,gf_poker342_png,gf_poker352_png,gf_poker362_png,gf_poker372_png,gf_poker382_png,gf_poker392_png,gf_poker410_png,gf_poker402_png,gf_poker412_png,gf_poker422_png,gf_poker432_png,gf_poker442_png,gf_poker452_png,gf_poker462_png,gf_poker472_png,gf_poker482_png,gf_poker492_png,gf_poker510_png,gf_poker502_png,gf_poker512_png,gf_poker522_png,gf_poker532_png,gf_poker542_png,gf_poker552_png,gf_poker562_png,gf_poker572_png,gf_poker582_png,gf_poker592_png,gf_poker62_png,gf_poker602_png,gf_poker612_png,gf_poker72_png,gf_poker82_png,gf_poker92_png,gf_px12_png,gf_px22_png,gf_px32_png,gf_px42_png,gf_px52_png,gf_px62_png,gf_pxzs2_png,gf_queding2_png,gf_room_dizhu2_png,gf_rule2_png,gf_table2_png,gf_table_02_png,gf_tip_anniu2_png,gf_tip_ts2_png,gf_tips22_png,gf_tips_click_card2_png,gf_tips_leave2_png,gf_typebg_black2_png,gf_wait3_png,gf_wait22_png,gf_wanfa2_png,gf_xiqian2_png,brnn_imformation2_png,gamehall_BtnClose2_png,gamehall_BtnTxtSave2_png,gamehall_comfirm_btn2_png,gamehall_headBg2_png,gamehall_headbg12_png,gamehall_headBgL2_png,gamehall_headBigbg2_png,gamehall_headSelected2_png,gamehall_headSelected_txt2_png,gamehall_sexSelectBtn2_png,gamehall_sexSelectBtn_light2_png,gamehall_title_headSelected2_png,gf_effcet_pic_person2_png,gf_effect_kiss_03_png,gf_game_room_bg_12_png,gf_game_room_bg_22_png,gf_game_room_bg_32_png,gf_game_room_bg_42_png,gf_logo2_png,gf_lowBetNumber_+2_png,gf_lowBetNumber_-2_png,gf_lowBetNumber_.2_png,gf_lowBetNumber_02_png,gf_lowBetNumber_12_png,gf_lowBetNumber_22_png,gf_lowBetNumber_32_png,gf_lowBetNumber_42_png,gf_lowBetNumber_52_png,gf_lowBetNumber_62_png,gf_lowBetNumber_72_png,gf_lowBetNumber_82_png,gf_lowBetNumber_92_png,gf_lowBetNumber_）2_png,gf_room_bg2_png,gf_room_gold2_png,gf_room_icon_help2_png,gf_room_icon_record2_png,gf_room_pic_bg2_png,gf_room_return2_png,gf_room_user_bg2_png,lv22_png,lv32_png,lv42_png,lv52_png,zajinhua2_png,bar_reduce_font_,2_png,bar_reduce_font_-2_png,bar_reduce_font_.2_png,bar_reduce_font_02_png,bar_reduce_font_12_png,bar_reduce_font_22_png,bar_reduce_font_32_png,bar_reduce_font_42_png,bar_reduce_font_52_png,bar_reduce_font_62_png,bar_reduce_font_72_png,bar_reduce_font_82_png,bar_reduce_font_92_png,gf_betChip_number_.2_png,gf_betChip_number_02_png,gf_betChip_number_12_png,gf_betChip_number_22_png,gf_betChip_number_32_png,gf_betChip_number_42_png,gf_betChip_number_52_png,gf_betChip_number_62_png,gf_betChip_number_72_png,gf_betChip_number_82_png,gf_betChip_number_92_png,gf_bet_number_.2_png,gf_bet_number_02_png,gf_bet_number_12_png,gf_bet_number_22_png,gf_bet_number_32_png,gf_bet_number_42_png,gf_bet_number_52_png,gf_bet_number_62_png,gf_bet_number_72_png,gf_bet_number_82_png,gf_bet_number_92_png,gf_cutmoneyNum_export_+2_png,gf_cutmoneyNum_export_-2_png,gf_cutmoneyNum_export_12_png,gf_cutmoneyNum_export_22_png,gf_cutmoneyNum_export_32_png,gf_cutmoneyNum_export_42_png,gf_cutmoneyNum_export_52_png,gf_cutmoneyNum_export_62_png,gf_cutmoneyNum_export_72_png,gf_cutmoneyNum_export_82_png,gf_cutmoneyNum_export_92_png,gf_moneyNumber_)2_png,gf_moneyNumber_+2_png,gf_moneyNumber_-2_png,gf_moneyNumber_.2_png,gf_moneyNumber_02_png,gf_moneyNumber_12_png,gf_moneyNumber_22_png,gf_moneyNumber_32_png,gf_moneyNumber_42_png,gf_moneyNumber_52_png,gf_moneyNumber_62_png,gf_moneyNumber_72_png,gf_moneyNumber_82_png,gf_moneyNumber_92_png,gf_moneyNumber_，2_png,gf_txt_btn.png_(2_png,zjh_btn_fankui2_png,baccarat_game_bg_png,baccarat_game_btn_zhupanlu1_png,baccarat_game_btn_dalu_png,baccarat_game_btn_dalu1_png,baccarat_game_btn_full_png,baccarat_game_btn_players_png,baccarat_game_btn_quanlu_png,baccarat_game_btn_quanlu1_png,baccarat_game_btn_zhupanlu_png,baccarat_game_table_png,baccarat_game_userinfo_bg_png,baccarat_game_icon_decorate2_png,baccarat_game_icon_decorate_png,baccarat_game_chips_bg_png,baccarat_game_icon_chouma_25000_png,baccarat_game_chouma_light_png,baccarat_game_icon_chouma_4_png,baccarat_game_icon_chouma_5_png,baccarat_game_icon_chouma_10_png,baccarat_game_icon_chouma_20_png,baccarat_game_icon_chouma_40_png,baccarat_game_icon_chouma_50_png,baccarat_game_icon_chouma_100_png,baccarat_game_icon_chouma_200_png,baccarat_game_icon_chouma_500_png,baccarat_game_icon_chouma_1000_png,baccarat_game_icon_chouma_2000_png,baccarat_game_icon_chouma_2500_png,baccarat_game_icon_chouma_3000_png,baccarat_game_icon_chouma_5000_png,baccarat_game_icon_chouma_6000_png,baccarat_game_icon_chouma_10000_png,baccarat_game_icon_chouma_20000_png,baccarat_game_xiazhu_light_6_png,baccarat_game_xiazhu_light_1_png,baccarat_game_xiazhu_light_3_png,baccarat_game_cardsNumber_bg_png,baccarat_tips_close_png,baccarat_playersBg_png,baccarat_players_rankBg_png,baccarat_players_betIcon_png,baccarat_game_txt_player_png,baccarat_game_txt_bank_png,baccarat_game_mipai_bg_png,gf_poker03_png,baccarat_game_mipai_infobgR_png,baccarat_game_mipai_infobgB_png,zjh_effect_xz_tex005_png,bg_bjl_chouma1_png,bg_bjl_chouma2_png,bg_bjl_chouma3_png,bg_bjl_chouma4_png,bg_bjl_chouma5_png,bg_bjl_chouma6_png,bg_bjl_he_png,bg_bjl_jiesuandi_png,bg_bjl_xian_png,bg_bjl_xingxing_png,bg_bjl_yanhua_png,bg_bjl_ying_png,bg_bjl_zhuang_png,zjh_effect_xz_tex000_png,zjh_effect_xz_tex001_png,zjh_effect_xz_tex002_png,zjh_effect_xz_tex003_png,zjh_effect_xz_tex004_png",
 			"name": "preload"
 		},
 		{
@@ -29,7 +29,7 @@
 			"name": "brnn"
 		},
 		{
-			"keys": "bg_bjl_jpg,bg_jilv_png,bg_timer_png,img_100zhu_png,img_10zhu_png,img_20zhu_png,img_500zhu_png,img_50zhu_png,img_dibu_png,img_puke_7_png,img_zuoxia_png",
+			"keys": "bg_bjl_jpg,bg_jilv_png,bg_timer_png,img_dibu_png,img_puke_7_png,img_zuoxia_png",
 			"name": "bjl"
 		}
 	],
@@ -66,31 +66,6 @@
 			"name": "bg_timer_png"
 		},
 		{
-			"url": "assets/game/baijiale/img_100zhu.png",
-			"type": "image",
-			"name": "img_100zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_10zhu.png",
-			"type": "image",
-			"name": "img_10zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_20zhu.png",
-			"type": "image",
-			"name": "img_20zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_500zhu.png",
-			"type": "image",
-			"name": "img_500zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_50zhu.png",
-			"type": "image",
-			"name": "img_50zhu_png"
-		},
-		{
 			"url": "assets/game/baijiale/img_dibu.png",
 			"type": "image",
 			"name": "img_dibu_png"
@@ -104,26 +79,6 @@
 			"url": "assets/game/baijiale/img_zuoxia.png",
 			"type": "image",
 			"name": "img_zuoxia_png"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_blue.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_blue_PNG"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_blue_gang.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_blue_gang_PNG"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_red.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_red_PNG"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_red_gang.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_red_gang_PNG"
 		},
 		{
 			"url": "assets/game/brnn/bg_sz.png",
@@ -8557,6 +8512,336 @@
 			"name": "zjh_btn_fankui2_png",
 			"type": "image",
 			"url": "assets/game/zhajh/zjh_btn_fankui.png"
+		},
+		{
+			"name": "baccarat_game_bg_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_bg.png"
+		},
+		{
+			"name": "baccarat_game_btn_zhupanlu1_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_zhupanlu1.png"
+		},
+		{
+			"name": "baccarat_game_btn_dalu_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_dalu.png"
+		},
+		{
+			"name": "baccarat_game_btn_dalu1_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_dalu1.png"
+		},
+		{
+			"name": "baccarat_game_btn_full_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_full.png"
+		},
+		{
+			"name": "baccarat_game_btn_players_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_players.png"
+		},
+		{
+			"name": "baccarat_game_btn_quanlu_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_quanlu.png"
+		},
+		{
+			"name": "baccarat_game_btn_quanlu1_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_quanlu1.png"
+		},
+		{
+			"name": "baccarat_game_btn_zhupanlu_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_btn_zhupanlu.png"
+		},
+		{
+			"name": "baccarat_game_table_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_table.png"
+		},
+		{
+			"name": "baccarat_game_userinfo_bg_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_userinfo_bg.png"
+		},
+		{
+			"name": "baccarat_game_icon_decorate2_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_decorate2.png"
+		},
+		{
+			"name": "baccarat_game_icon_decorate_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_decorate.png"
+		},
+		{
+			"name": "baccarat_game_chips_bg_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_chips_bg.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_25000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_25000.png"
+		},
+		{
+			"name": "baccarat_game_chouma_light_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_chouma_light.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_4_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_4.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_5_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_5.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_10_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_10.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_20_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_20.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_40_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_40.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_50_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_50.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_100_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_100.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_200_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_200.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_500_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_500.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_1000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_1000.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_2000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_2000.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_2500_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_2500.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_3000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_3000.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_5000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_5000.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_6000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_6000.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_10000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_10000.png"
+		},
+		{
+			"name": "baccarat_game_icon_chouma_20000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_icon_chouma_20000.png"
+		},
+		{
+			"name": "baccarat_game_xiazhu_light_6_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_xiazhu_light_6.png"
+		},
+		{
+			"name": "baccarat_game_xiazhu_light_1_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_xiazhu_light_1.png"
+		},
+		{
+			"name": "baccarat_game_xiazhu_light_3_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_xiazhu_light_3.png"
+		},
+		{
+			"name": "baccarat_game_cardsNumber_bg_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_cardsNumber_bg.png"
+		},
+		{
+			"name": "baccarat_tips_close_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_tips_close.png"
+		},
+		{
+			"name": "baccarat_playersBg_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_playersBg.png"
+		},
+		{
+			"name": "baccarat_players_rankBg_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_players_rankBg.png"
+		},
+		{
+			"name": "baccarat_players_betIcon_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_players_betIcon.png"
+		},
+		{
+			"name": "baccarat_game_txt_player_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_txt_player.png"
+		},
+		{
+			"name": "baccarat_game_txt_bank_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_txt_bank.png"
+		},
+		{
+			"name": "baccarat_game_mipai_bg_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_mipai_bg.png"
+		},
+		{
+			"name": "gf_poker03_png",
+			"type": "image",
+			"url": "assets/game/baijiale/gf_poker0.png"
+		},
+		{
+			"name": "baccarat_game_mipai_infobgR_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_mipai_infobgR.png"
+		},
+		{
+			"name": "baccarat_game_mipai_infobgB_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_game_mipai_infobgB.png"
+		},
+		{
+			"name": "zjh_effect_xz_tex005_png",
+			"type": "image",
+			"url": "assets/game/baijiale/zjh_effect_xz_tex005.png"
+		},
+		{
+			"name": "bg_bjl_chouma1_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_chouma1.png"
+		},
+		{
+			"name": "bg_bjl_chouma2_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_chouma2.png"
+		},
+		{
+			"name": "bg_bjl_chouma3_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_chouma3.png"
+		},
+		{
+			"name": "bg_bjl_chouma4_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_chouma4.png"
+		},
+		{
+			"name": "bg_bjl_chouma5_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_chouma5.png"
+		},
+		{
+			"name": "bg_bjl_chouma6_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_chouma6.png"
+		},
+		{
+			"name": "bg_bjl_he_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_he.png"
+		},
+		{
+			"name": "bg_bjl_jiesuandi_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_jiesuandi.png"
+		},
+		{
+			"name": "bg_bjl_xian_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_xian.png"
+		},
+		{
+			"name": "bg_bjl_xingxing_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_xingxing.png"
+		},
+		{
+			"name": "bg_bjl_yanhua_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_yanhua.png"
+		},
+		{
+			"name": "bg_bjl_ying_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_ying.png"
+		},
+		{
+			"name": "bg_bjl_zhuang_png",
+			"type": "image",
+			"url": "assets/game/baijiale/bg_bjl_zhuang.png"
+		},
+		{
+			"name": "zjh_effect_xz_tex000_png",
+			"type": "image",
+			"url": "assets/game/baijiale/zjh_effect_xz_tex000.png"
+		},
+		{
+			"name": "zjh_effect_xz_tex001_png",
+			"type": "image",
+			"url": "assets/game/baijiale/zjh_effect_xz_tex001.png"
+		},
+		{
+			"name": "zjh_effect_xz_tex002_png",
+			"type": "image",
+			"url": "assets/game/baijiale/zjh_effect_xz_tex002.png"
+		},
+		{
+			"name": "zjh_effect_xz_tex003_png",
+			"type": "image",
+			"url": "assets/game/baijiale/zjh_effect_xz_tex003.png"
+		},
+		{
+			"name": "zjh_effect_xz_tex004_png",
+			"type": "image",
+			"url": "assets/game/baijiale/zjh_effect_xz_tex004.png"
 		}
 	]
 }
