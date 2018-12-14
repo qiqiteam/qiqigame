@@ -72,6 +72,15 @@ class GameIconItem extends eui.Component {
 		this.icondata = icondata;
 		let armatureDisplay:dragonBones.EgretArmatureDisplay;
 		let armatureIconDisplay:dragonBones.EgretArmatureDisplay;
+		this.effectmask = xlLib.DisplayUtils.createDragonBonesDisplay('bg_xiaoliuguang',"Sprite");
+		dragonBones.WorldClock.clock.add(this.effectmask);
+		armatureDisplay = this.effectmask.getDisplay();
+		armatureDisplay.width = this.width;
+		armatureDisplay.height = this.height;
+		armatureDisplay.x = 350;
+		armatureDisplay.y = 250;
+		this.addChild(armatureDisplay);
+		xlLib.DisplayUtils.runDragonBonesArmature(this.effectmask,"Sprite");
         if(icondata.ishot)
 		{
 		  	this.effecthot = xlLib.DisplayUtils.createDragonBonesDisplay('bg_remen',"Armature");
@@ -158,16 +167,5 @@ class GameIconItem extends eui.Component {
 		this.addChild(armatureDisplay);
         dragonBones.WorldClock.clock.add(this.effectfront);
 		xlLib.DisplayUtils.runDragonBonesArmature(this.effectfront,"Sprite");
-
-
-		this.effectmask = xlLib.DisplayUtils.createDragonBonesDisplay('bg_xiaoliuguang',"Sprite");
-		dragonBones.WorldClock.clock.add(this.effectmask);
-		armatureDisplay = this.effectmask.getDisplay();
-		armatureDisplay.width = this.width;
-		armatureDisplay.height = this.height;
-		armatureDisplay.x = 350;
-		armatureDisplay.y = 250;
-		this.addChild(armatureDisplay);
-		xlLib.DisplayUtils.runDragonBonesArmature(this.effectmask,"Sprite");
 	}
 }

@@ -1929,22 +1929,7 @@
 			"url": "assets/bjlroom/baccarat_hall.json",
 			"type": "sheet",
 			"name": "baccarat_hall_json",
-			"subkeys": "baccarat_hall_btn_column,baccarat_hall_btn_enter,baccarat_hall_column_selected2,baccarat_hall_person,baccarat_hall_right_bg,baccarat_hall_selected2,baccarat_hall_title1_0,baccarat_hall_title1_1,baccarat_hall_title2_0,baccarat_hall_title2_1,baccarat_hall_title3_0,baccarat_hall_title3_1,baccarat_hall_title4_0,baccarat_hall_title4_1"
-		},
-		{
-			"url": "assets/bjlroom/baccarat_hall_bg.jpg",
-			"type": "image",
-			"name": "baccarat_hall_bg_jpg"
-		},
-		{
-			"url": "assets/brnnroom/brnn_hall_effect_hg.json",
-			"type": "json",
-			"name": "brnn_hall_effect_hg_json"
-		},
-		{
-			"url": "assets/brnnroom/brnn_hall_effect_hg.png",
-			"type": "image",
-			"name": "brnn_hall_effect_hg_png"
+			"subkeys": "baccarat_game_bg_lu,baccarat_hall_icon_hong,baccarat_hall_icon_hong2,baccarat_hall_icon_lan,baccarat_hall_icon_lan2,baccarat_hall_list_bg,baccarat_hall_list_choosed_1,baccarat_hall_list_choosed_2,baccarat_hall_list_choosed_4,baccarat_hall_person,baccarat_hall_roomIcon1_0,baccarat_hall_roomIcon1_1,baccarat_hall_roomIcon2_0,baccarat_hall_roomIcon2_1,baccarat_hall_roomIcon3_0,baccarat_hall_roomIcon3_1,baccarat_hall_roomIcon4_0,baccarat_hall_roomIcon4_1,baccarat_hall_title1_0,baccarat_hall_title1_1,baccarat_hall_title2_0,baccarat_hall_title2_1,baccarat_hall_title3_0,baccarat_hall_title3_1,baccarat_hall_title4_0,baccarat_hall_title4_1,norm_number,norm_number1,norm_number1_colon,norm_number1_colon_0,norm_number1_colon_1,norm_number1_colon_2,norm_number1_colon_3,norm_number1_colon_4,norm_number1_colon_5,norm_number1_colon_6,norm_number1_colon_7,norm_number1_colon_8,norm_number1_colon_9,norm_number1_semicolon,norm_number_colon,norm_number_colon_0,norm_number_colon_1,norm_number_colon_2,norm_number_colon_3,norm_number_colon_4,norm_number_colon_5,norm_number_colon_6,norm_number_colon_7,norm_number_colon_8,norm_number_colon_9,norm_number_semicolon"
 		},
 		{
 			"url": "assets/brnnroom/room_brnn.json",
@@ -6726,6 +6711,21 @@
 			"url": "assets/dragonbones/brnn_rukou/brnn_rukou_tex.json",
 			"type": "json",
 			"name": "brnn_rukou_tex_json"
+		},
+		{
+			"url": "assets/effects/brnn_hall_effect/brnn_hall_effect_hg.png",
+			"type": "image",
+			"name": "brnn_hall_effect_hg_png"
+		},
+		{
+			"url": "assets/effects/brnn_hall_effect/brnn_hall_effect_hg.json",
+			"type": "json",
+			"name": "brnn_hall_effect_hg_json"
+		},
+		{
+			"url": "assets/bjlroom/baccarat_hall_bg.png",
+			"type": "image",
+			"name": "baccarat_hall_bg_png"
 		}
 	]
 }

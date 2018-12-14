@@ -1,13 +1,11 @@
 class BJLroomView extends eui.Component implements eui.UIComponent {
-	public bgImg: eui.Image;
-	public _menu: eui.Button;
-	public _rule: eui.Button;
-	public _coin_label: eui.Label;
-	public _btn_close: eui.Button;
-	public _record: eui.Button;
-	public _btn_enter: eui.Button;
-	public menubar: eui.TabBar;
-
+	public bgImg:eui.Image;
+	public _btn_enter:eui.Button;
+	public _menu:eui.Button;
+	public _rule:eui.Button;
+	public _coin_label:eui.Label;
+	public _btn_close:eui.Button;
+	public _record:eui.Button;
 
 
 	private gameIconData: GameIconData;
