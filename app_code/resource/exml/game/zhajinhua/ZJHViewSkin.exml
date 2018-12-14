@@ -214,20 +214,7 @@
 		<e:Label id="labchip4" text="6" x="499.03" y="34" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" touchEnabled="false"/>
 		<e:Label id="labchip5" text="7" x="609.81" y="34" width="60" verticalAlign="middle" textAlign="center" textColor="0xFFFFFF" height="40" size="40" bold="true" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="grpprepare" y="225.99" horizontalCenter="0" width="700" locked="true" visible="false">
-		<e:Image width="666" height="262" y="0" source="gf_bg_match_png" x="17"/>
-		<e:Image width="69" height="35" y="10.24" source="gf_tip_ts_png" x="316"/>
-		<e:Label text="游戏即将开始，请您耐心等待..." y="116" x="142" textColor="0x89511a"/>
-		<e:Button id="_btn_hintclose" label="" x="613.33" y="16.77">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="gf_bg_close02_png" source.down="gf_bg_close02_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
 
-		</e:Button>
-	</e:Group>
 	<e:Button id="_btn_menu" label="" y="18.44" x="17">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -236,8 +223,21 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
+	<e:Group id="grpprepare" y="225.99" horizontalCenter="0" width="700" locked="true" visible="false">
+		<e:Image width="666" height="262" y="0" source="gf_bg_match_png" x="17"/>
+		<e:Image width="69" height="35" y="10.24" source="gf_tip_ts_png" x="316"/>
+		<e:Label text="游戏即将开始，请您耐心等待..." y="116" x="142" textColor="0x89511a"/>
+		<e:Button id="_btn_hintclose" label="" x="613.33" y="16.77">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="gf_bg_close02_png" source.down="gf_bg_close02_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+	</e:Group>
 	<e:Group id="grp_menu" width="203" height="355" y="104.08" x="21.28" visible="false">
-		<e:Image width="203" height="355" source="gf_bg_menu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="menu_bg" width="203" height="355" source="gf_bg_menu_png" horizontalCenter="0" verticalCenter="0"/>
 		<e:Button id="_btn_out" label="" y="30" x="23">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">

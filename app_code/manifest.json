@@ -34,6 +34,7 @@
 		"bin-debug/app/data/typeData.js",
 		"bin-debug/app/data/UserInfo.js",
 		"bin-debug/app/EventConst.js",
+		"bin-debug/app/game/bjl/BJLframe.js",
 		"bin-debug/app/game/bjl/BJLHead.js",
 		"bin-debug/app/game/bjl/BJLjiesuan1.js",
 		"bin-debug/app/game/bjl/BJLjiesuan2.js",
@@ -66,10 +67,10 @@
 		"bin-debug/app/game/qznn/NiuZhang0.js",
 		"bin-debug/app/game/qznn/NiuZhang1.js",
 		"bin-debug/app/game/qznn/QZNNGameStart.js",
-		"bin-debug/app/game/qznn/QZNNGoldFly.js",
 		"bin-debug/app/game/qznn/QZNNHead.js",
 		"bin-debug/app/game/qznn/QZNNHEff.js",
 		"bin-debug/app/game/qznn/QZNNHHeadEff.js",
+		"bin-debug/app/game/qznn/QZNNroomEff.js",
 		"bin-debug/app/game/qznn/QZNNroomView.js",
 		"bin-debug/app/game/qznn/QZNNScene.js",
 		"bin-debug/app/game/qznn/QZNNTongpei.js",
@@ -96,11 +97,12 @@
 		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/tbnn/TBNNHead.js",
+		"bin-debug/app/game/tbnn/TBNNroomEff.js",
 		"bin-debug/app/game/tbnn/TBNNroomView.js",
 		"bin-debug/app/game/tbnn/TBNNScene.js",
 		"bin-debug/app/game/tbnn/TBNNUtil.js",
-		"bin-debug/app/game/tbnn/TBNNView.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/game/welfare/AwardItem.js",
 		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
@@ -186,6 +188,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/game/welfare/AwardItem.js"
+		"bin-debug/app/game/tbnn/TBNNView.js"
 	]
 }

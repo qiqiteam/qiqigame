@@ -142,6 +142,8 @@ declare class QZNNVictorySkin extends eui.Skin{
 }
 declare class QZNNViewSkin extends eui.Skin{
 }
+declare class QZNNroomEffSkin extends eui.Skin{
+}
 declare class QZNNroomViewSkin extends eui.Skin{
 }
 declare class TenshuNiuBeiSkin extends eui.Skin{
@@ -173,6 +175,8 @@ declare class SetViewSkin extends eui.Skin{
 declare class TBNNHeadSkin extends eui.Skin{
 }
 declare class TBNNViewSkin extends eui.Skin{
+}
+declare class TBNNroomEffSkin extends eui.Skin{
 }
 declare class TBNNroomViewSkin extends eui.Skin{
 }

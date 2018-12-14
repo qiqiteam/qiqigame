@@ -11,130 +11,127 @@ class ZJHView extends eui.Component {
 
     public pailist: any[] = [];//临时存储牌的信息
 
-    public img_deskgoldbg: eui.Image;
-    public img_deskgoldIcon: eui.Image;
-    public lab_deskGolds: eui.Label;
-    public grpCoins: eui.Group;
-    public grpCard: eui.Group;
-    public grpCard4_0: eui.Image;
-    public grpCard4_1: eui.Image;
-    public grpCard4_2: eui.Image;
-    public grpCard3_0: eui.Image;
-    public grpCard3_1: eui.Image;
-    public grpCard3_2: eui.Image;
-    public grpCard2_0: eui.Image;
-    public grpCard2_1: eui.Image;
-    public grpCard2_2: eui.Image;
-    public grpCard1_0: eui.Image;
-    public grpCard1_1: eui.Image;
-    public grpCard1_2: eui.Image;
-    public grpCard0_0: eui.Image;
-    public grpCard0_1: eui.Image;
-    public grpCard0_2: eui.Image;
-    public imgCardbg0: eui.Image;
-    public imgCardbg1: eui.Image;
-    public imgCardbg2: eui.Image;
-    public imgCardbg3: eui.Image;
-    public imgCardbg4: eui.Image;
-    public imgCardType0: eui.Image;
-    public imgCardType1: eui.Image;
-    public imgCardType2: eui.Image;
-    public imgCardType3: eui.Image;
-    public imgCardType4: eui.Image;
-    public labstatus0: eui.Label;
-    public labstatus1: eui.Label;
-    public labstatus2: eui.Label;
-    public labstatus3: eui.Label;
-    public labstatus4: eui.Label;
-    public img_xzgold0: eui.Image;
-    public img_xzgold1: eui.Image;
-    public img_xzgold2: eui.Image;
-    public img_xzgold3: eui.Image;
-    public img_xzgold4: eui.Image;
-    public lab_xzgold0: eui.Label;
-    public lab_xzgold1: eui.Label;
-    public lab_xzgold2: eui.Label;
-    public lab_xzgold3: eui.Label;
-    public lab_xzgold4: eui.Label;
-    public img_abandon1: eui.Image;
-    public img_abandon2: eui.Image;
-    public img_abandon3: eui.Image;
-    public img_abandon4: eui.Image;
-    public grpHead1: ZJHHead;
-    public grpHead2: ZJHHead;
-    public grpHead3: ZJHHead;
-    public grpHead4: ZJHHead;
-    public grpHead5: ZJHHead;
-    public grpHead6: ZJHHead;
-    public grpHead7: ZJHHead;
-    public grpHead8: ZJHHead;
-    public grpHead9: ZJHHead;
-    public grpCountdown: eui.Group;
-    public labCountdown0: eui.BitmapLabel;
-    public labCountdown1: eui.BitmapLabel;
-    public timeTxt: eui.Label;
-    public _btn_kanpai: eui.Button;
-    public grpHead0: eui.Group;
-    public imghead0: eui.Image;
-    public labelHead0: eui.Label;
-    public labelGold0: eui.Label;
-    public grp_operatbtn: eui.Group;
-    public _btn_qipai: eui.Button;
-    public _btn_jiazhu: eui.Button;
-    public _btn_bipai: eui.Button;
-    public _btn_quanxia: eui.Button;
-    public _btn_genzhu: eui.Button;
-    public _btn_autogenzhu: eui.Button;
-    public _btn_cancelautogenzhu: eui.Button;
-    public img_qipai: eui.Image;
-    public img_jiazhu: eui.Image;
-    public img_bipai: eui.Image;
-    public img_quanya: eui.Image;
-    public img_genzhu: eui.Image;
-    public img_autogenzhu: eui.Image;
-    public img_cancelautogenzhu0: eui.Image;
-    public img_cancelautogenzhu1: eui.Image;
-    public lab_tankNumber: eui.Label;
-    public lab_quanyaNumber: eui.Label;
-    public lab_callNumber: eui.Label;
-    public grp_btncm0: eui.Group;
-    public _btn_jiacm_0: eui.Button;
-    public _btn_jiacm_1: eui.Button;
-    public _btn_jiacm_2: eui.Button;
-    public _btn_jiacm_3: eui.Button;
-    public _btn_jiacm_4: eui.Button;
-    public _btn_jiacm_5: eui.Button;
-    public labchip0: eui.Label;
-    public labchip1: eui.Label;
-    public labchip2: eui.Label;
-    public labchip3: eui.Label;
-    public labchip4: eui.Label;
-    public labchip5: eui.Label;
-    public grpprepare: eui.Group;
-    public _btn_hintclose: eui.Button;
-    public _btn_menu: eui.Button;
-    public grp_menu: eui.Group;
-    public _btn_out: eui.Button;
-    public _btn_setting: eui.Button;
-    public _btn_record: eui.Button;
-    public _btn_playmethod: eui.Button;
-    public _btn_feedback: eui.Button;
-    public grp_out_hint: eui.Group;
-    public _btn_cancel: eui.Button;
-    public _btn_quite: eui.Button;
-    public grp_setting_hint: eui.Group;
-    public _btn_set_close: eui.Button;
-    public tab_selestwanfa: eui.TabBar;
-    public Vk_wanfa: eui.ViewStack;
-    public grp_paixing: eui.Group;
-    public grp_wanfa: eui.Group;
-    public grp_odds: eui.Group;
-    public grp_aboutus: eui.Group;
-    public grp_feedback_panel: eui.Group;
-    public _btn_feedback_close: eui.Button;
-    public _btn_submit_close: eui.Button;
-    public _btn_luckmoney: eui.Button;
-    public _btn_continuegame: eui.Button;
+public img_deskgoldbg:eui.Image;
+public img_deskgoldIcon:eui.Image;
+public lab_deskGolds:eui.Label;
+public grpCoins:eui.Group;
+public grpCard:eui.Group;
+public grpCard4_0:eui.Image;
+public grpCard4_1:eui.Image;
+public grpCard4_2:eui.Image;
+public grpCard3_0:eui.Image;
+public grpCard3_1:eui.Image;
+public grpCard3_2:eui.Image;
+public grpCard2_0:eui.Image;
+public grpCard2_1:eui.Image;
+public grpCard2_2:eui.Image;
+public grpCard1_0:eui.Image;
+public grpCard1_1:eui.Image;
+public grpCard1_2:eui.Image;
+public grpCard0_0:eui.Image;
+public grpCard0_1:eui.Image;
+public grpCard0_2:eui.Image;
+public imgCardbg0:eui.Image;
+public imgCardbg1:eui.Image;
+public imgCardbg2:eui.Image;
+public imgCardbg3:eui.Image;
+public imgCardbg4:eui.Image;
+public imgCardType0:eui.Image;
+public imgCardType1:eui.Image;
+public imgCardType2:eui.Image;
+public imgCardType3:eui.Image;
+public imgCardType4:eui.Image;
+public labstatus0:eui.Label;
+public labstatus1:eui.Label;
+public labstatus2:eui.Label;
+public labstatus3:eui.Label;
+public labstatus4:eui.Label;
+public img_xzgold0:eui.Image;
+public img_xzgold1:eui.Image;
+public img_xzgold2:eui.Image;
+public img_xzgold3:eui.Image;
+public img_xzgold4:eui.Image;
+public lab_xzgold0:eui.Label;
+public lab_xzgold1:eui.Label;
+public lab_xzgold2:eui.Label;
+public lab_xzgold3:eui.Label;
+public lab_xzgold4:eui.Label;
+public img_abandon1:eui.Image;
+public img_abandon2:eui.Image;
+public img_abandon3:eui.Image;
+public img_abandon4:eui.Image;
+public grpHead1:ZJHHead;
+public grpHead2:ZJHHead;
+public grpHead3:ZJHHead;
+public grpHead4:ZJHHead;
+public grpHead5:ZJHHead;
+public grpHead6:ZJHHead;
+public grpHead7:ZJHHead;
+public grpHead8:ZJHHead;
+public grpHead9:ZJHHead;
+public grpCountdown:eui.Group;
+public labCountdown0:eui.BitmapLabel;
+public labCountdown1:eui.BitmapLabel;
+public timeTxt:eui.Label;
+public _btn_kanpai:eui.Button;
+public grpHead0:eui.Group;
+public imghead0:eui.Image;
+public labelHead0:eui.Label;
+public labelGold0:eui.Label;
+public grp_operatbtn:eui.Group;
+public _btn_qipai:eui.Button;
+public _btn_jiazhu:eui.Button;
+public _btn_bipai:eui.Button;
+public _btn_quanxia:eui.Button;
+public _btn_genzhu:eui.Button;
+public _btn_autogenzhu:eui.Button;
+public _btn_cancelautogenzhu:eui.Button;
+public img_qipai:eui.Image;
+public img_jiazhu:eui.Image;
+public img_bipai:eui.Image;
+public img_quanya:eui.Image;
+public img_genzhu:eui.Image;
+public img_autogenzhu:eui.Image;
+public img_cancelautogenzhu0:eui.Image;
+public img_cancelautogenzhu1:eui.Image;
+public lab_tankNumber:eui.Label;
+public lab_quanyaNumber:eui.Label;
+public lab_callNumber:eui.Label;
+public grp_btncm0:eui.Group;
+public _btn_jiacm_0:eui.Button;
+public _btn_jiacm_1:eui.Button;
+public _btn_jiacm_2:eui.Button;
+public _btn_jiacm_3:eui.Button;
+public _btn_jiacm_4:eui.Button;
+public _btn_jiacm_5:eui.Button;
+public labchip0:eui.Label;
+public labchip1:eui.Label;
+public labchip2:eui.Label;
+public labchip3:eui.Label;
+public labchip4:eui.Label;
+public labchip5:eui.Label;
+public grpprepare:eui.Group;
+public _btn_hintclose:eui.Button;
+public _btn_menu:eui.Button;
+public grp_menu:eui.Group;
+public menu_bg:eui.Image;
+public _btn_out:eui.Button;
+public _btn_setting:eui.Button;
+public _btn_record:eui.Button;
+public _btn_playmethod:eui.Button;
+public _btn_feedback:eui.Button;
+public grp_out_hint:eui.Group;
+public _btn_cancel:eui.Button;
+public _btn_quite:eui.Button;
+public grp_setting_hint:eui.Group;
+public _btn_set_close:eui.Button;
+public grp_feedback_panel:eui.Group;
+public _btn_feedback_close:eui.Button;
+public _btn_submit_close:eui.Button;
+public _btn_luckmoney:eui.Button;
+public _btn_continuegame:eui.Button;
+
+
 
 
 
@@ -393,7 +390,7 @@ class ZJHView extends eui.Component {
         } else if (e.target == this._btn_quanxia) {
             xlLib.TipsUtils.showFloatWordTips("全压");
             this.sendamessage(EventConst.pressure, null);
-            this.onGenZhuClick();
+            this.onGenZhuClick(0,this.shortGold);
         } else if (e.target == this._btn_qipai) {
             this.sendamessage(EventConst.abandon, null);
             xlLib.TipsUtils.showFloatWordTips("弃牌");
@@ -412,14 +409,12 @@ class ZJHView extends eui.Component {
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[1]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            this.onGenZhuClick();
             console.log(this.byOpenId);
         } else if (e.target == this.grpHead2) {
             xlLib.TipsUtils.showFloatWordTips("点击玩家2");
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[2]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            //this.onGenZhuClick();
             console.log("可以与2号玩家比牌");
             console.log(this.byOpenId);
         } else if (e.target == this.grpHead3) {
@@ -427,7 +422,6 @@ class ZJHView extends eui.Component {
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[3]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            //this.onGenZhuClick();
             console.log("可以与3号玩家比牌");
             console.log(this.byOpenId);
         } else if (e.target == this.grpHead4) {
@@ -435,7 +429,6 @@ class ZJHView extends eui.Component {
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[4]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
-            //this.onGenZhuClick();
             console.log("可以与4号玩家比牌");
             console.log(this.byOpenId);
         } else if (e.target == this._btn_menu) {
@@ -624,7 +617,27 @@ class ZJHView extends eui.Component {
         this._btn_set_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_feedback_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_feedback.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        egret.MainContext.instance.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
     }
+
+	private onTouchStageHandler(evt:egret.Event):void
+	{
+		if(
+			!(evt.target ==  this.grp_menu
+            ||evt.target ==  this._btn_menu
+            ||evt.target ==  this.menu_bg
+            ||evt.target ==  this._btn_out
+            ||evt.target ==  this._btn_setting
+            ||evt.target ==  this._btn_record
+            ||evt.target ==  this._btn_playmethod
+            ||evt.target ==  this._btn_feedback
+            )
+		)
+		{
+			this.grp_menu.visible = false;
+		}
+	}
+
     private addtime: number;//计时器从0+到10
     /**开始倒计时*/
     private startCountDown(time: number): void {
@@ -666,6 +679,9 @@ class ZJHView extends eui.Component {
     private gamestatue(data: any): void {
         /**0.准备中  1.开始游戏 2.游戏结束*/
         if (data.param.command == "onGameStatusChange") {
+            if (data.param.roomStatus == 0) {
+                this.grpprepare.visible = true;//准备提示弹框
+            }
             if (data.param.roomStatus == 1) {
                 console.log("游戏开始，发牌");
                 this.zhangIndex = UserInfo.getInstance().findSeatNumber(data.param.index);
@@ -724,6 +740,7 @@ class ZJHView extends eui.Component {
     private callnum: number;//存放每次能加注的倍数
     private UsId: string;//存储我的id
     public nowUserGolds: number;//当前玩家剩余金币
+    public shortGold:number;//当前玩家剩余金币不足，
     /**判断进行操作 接收下注类型*/
     private gametype(data: any): void {
         if (data.param.code == 200) {
@@ -791,6 +808,7 @@ class ZJHView extends eui.Component {
                 this.img_quanya.visible = true;
                 this.lab_quanyaNumber.visible = true;
                 this.lab_quanyaNumber.text = (this.nowUserGolds).toString();
+                this.shortGold=this.nowUserGolds;
             }
         }
     }
@@ -798,7 +816,7 @@ class ZJHView extends eui.Component {
 
     private Bet(data: any): void {
         if (data.param.command == "onUserBetOrderUpdate" && UserInfo.getInstance().uid == data.param.userId) {
-            this.onGenZhuClick();
+            this.onGenZhuClick(data.param.index, data.param.data);
             this._btn_genzhu.visible = false;
             this.img_genzhu.visible = false;
             this.lab_callNumber.visible = false;
@@ -822,7 +840,7 @@ class ZJHView extends eui.Component {
     private otherplayerBet(data: any): void {
         //this.notAbandbotp=[];//清空
         if (data.param.command == "onAiBetOrderUpdate" && UserInfo.getInstance().uid != data.param.userId) {
-            this.onPlayerGenZhu(data.param.index, 10000);
+            this.onPlayerGenZhu(data.param.index, data.param.data);
             this.lab_deskGolds.text = (data.param.golds / 100).toString();//玩家下注更新牌桌金币数
             let otherId: string;
             let therGolds: number;
@@ -844,7 +862,8 @@ class ZJHView extends eui.Component {
             console.log(this.notAbandbotp);
 
         }
-    }
+    } 
+   
     /**全压*/
     private ALLIN(data: any): void {
         if (data.param.command == "onUserAllPress" && data.param.code == 200) {
@@ -859,7 +878,7 @@ class ZJHView extends eui.Component {
     }
     /***(推送*异常及时通知 比牌结果推送)*/
     private timeInfo(data: any): void {
-        if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 3) {
+        if (data.param.command == "onTimelyNotify" && data.param.autoButState == 300) {
             console.log("玩家全压和其他玩家比牌", data);
             console.log(data.param.json);
             /**AI玩家胜利 */
@@ -890,16 +909,17 @@ class ZJHView extends eui.Component {
                 console.log("玩家全压获胜");
                 this.anotherDontCard(data.param.index);
             }
-        } else if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 0) {
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoButState == 100) {
             //开启自动跟注
-            console.log("++++++++++++++++++++++++++data.param.state == 0",data);
+            console.log("++++++++++++++++++++++++++data.param.state == 100", data);
+            this.img_autogenzhu.visible = false;
             this.img_autogenzhu.visible = false;
             this._btn_cancelautogenzhu.visible = true;
             this.img_cancelautogenzhu0.visible = true;
             this.img_cancelautogenzhu1.visible = true;
-        } else if (data.param.command == "onTimelyNotify" && data.param.autoBtnState == 1) {
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoButState != 100&&data.param.autoButState != 300) {
             //关闭自动跟注
-            console.log("++++++++++++++++++++++++++data.param.state == 1",data);
+            console.log("++++++++++++++++++++++++++data.param.state == 200", data);
             this.img_autogenzhu.visible = true;
             this._btn_autogenzhu.visible = true;
             this._btn_cancelautogenzhu.visible = false;
@@ -1109,11 +1129,11 @@ class ZJHView extends eui.Component {
         var poke = data.pokes;
     }
     /**玩家跟注 */
-    private onGenZhuClick() {
+    private onGenZhuClick(index,gold) {
         var p: egret.Point = new egret.Point();
         p.x = 580;
         p.y = 620;
-        this.showCoins(p, 10000);
+        this.showCoins(p, gold);
     }
     /**其他玩家跟注 */
     private onPlayerGenZhu(index, gold) {

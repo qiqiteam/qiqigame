@@ -43,6 +43,13 @@ var LoginView = (function (_super) {
         this._btn_black.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBlack, this);
         EventUtil.addEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);
         EventUtil.addEventListener(EventConst.ON_SOCKET_FAIL, this.onSocketFail, this);
+        var liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp', "wzqp");
+        dragonBones.WorldClock.clock.add(liuguang);
+        var armatureDisplay = liuguang.getDisplay();
+        armatureDisplay.x = 1230;
+        armatureDisplay.y = 400;
+        this.addChild(armatureDisplay);
+        xlLib.DisplayUtils.runDragonBonesArmature(liuguang, "wzqp");
     };
     LoginView.prototype.onBlack = function (e) {
         this._group_btn_0.visible = true;

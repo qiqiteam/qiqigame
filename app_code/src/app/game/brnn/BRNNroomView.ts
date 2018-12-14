@@ -28,8 +28,8 @@ class BRNNroomView extends eui.Component implements eui.UIComponent {
 		this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
 		this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("brnn_hall_effect_hg", "brnn_hall_effect_hg");
 		this.effectIcon.play(-1);
-		this.effectIcon.x = 400;
-		this.effectIcon.y = 205;
+		this.effectIcon.x = 80;
+		this.effectIcon.y = 208;
 		this.effectIcon.frameRate = 20;
 		this.addChild(this.effectIcon);
 		this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);

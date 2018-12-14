@@ -531,8 +531,8 @@ class BRNNView extends eui.Component {
                 this.onGenZhuClick(data._obj.money, data._obj.deskNum);
                 this.onplaygrade(data._obj.myMoney, data._obj.deskNum);
                 this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
-                // UserInfo.getInstance().goldcoins = data._obj.goldcoins;
-                // this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
+                UserInfo.getInstance().goldcoins = data._obj.balance;
+                this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
             } else {
                 this.onPlayerGenZhu(data._obj.money, data._obj.deskNum);
                 this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);

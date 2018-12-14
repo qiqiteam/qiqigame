@@ -9,6 +9,10 @@ class BJLView extends eui.Component {
     }
     private r: any = null;
 
+    public dianshu_0: eui.Group;
+    public dianshu_img_0: eui.Image;
+    public dianshu_1: eui.Group;
+    public dianshu_img_1: eui.Image;
     public grpCoins: eui.Group;
     public grpCard: eui.Group;
     public grpCard_0_1: eui.Image;
@@ -72,8 +76,6 @@ class BJLView extends eui.Component {
     public xian_Label: eui.Label;
     public zhuang_tishi: eui.Group;
     public zhuang_Label: eui.Label;
-
-
 
 
 
@@ -169,6 +171,11 @@ class BJLView extends eui.Component {
         // this._bei_puke_0_0.visible = false;
         // this._bei_puke_0_1.visible = false;
 
+        // this.isAction = true;
+        // for (let i = 0; i < 5; i++) {
+        //     this['effectTouch' + i].alpha = 1;
+        // }
+
     }
 
     /**数据初始化 */
@@ -183,7 +190,7 @@ class BJLView extends eui.Component {
         this.grpTips.visible = false;
         this.grpCard.visible = true;
 
-        this.lastTouchBetIndex = 1;
+        // this.lastTouchBetIndex = 1;
 
         this.istzxzDh = false;
 
@@ -196,6 +203,12 @@ class BJLView extends eui.Component {
 
         //------------------------------------
         this.arrCoin = [];
+
+        this.wjlistkuang.visible = false;
+        this.dianshu_0.visible = false;
+        this.dianshu_1.visible = false;
+        this.dianshu_img_0.source = '';
+        this.dianshu_img_1.source = '';
 
         this.Themitoken.visible = false;
         this.xian_tishi.visible = false;
@@ -249,6 +262,7 @@ class BJLView extends eui.Component {
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
         if (e.target == this.wanjialist) {
+            this.wjlistkuang.visible = true;
             this.wanjialiebiao(EventConst.playersUserWin);
         } else if (e.target == this._image_1) {
             this.onTouchBet(1);
@@ -288,6 +302,10 @@ class BJLView extends eui.Component {
             // this.addjiesuan_1Effect();
             // this.addjiesuan_2Effect();
             // this.addjiesuan_3Effect();
+            // this.onGenZhuClick(200, 3);
+            // this.onPlayerGenZhu(200, 3);
+        } else if (e.target == this.packup) {
+            this.wjlistkuang.visible = false;
         }
     }
     /**发送请求 sendstr：命令 extparams：{ "moneys": 金额, "types": 押注类型 }*/
@@ -321,6 +339,7 @@ class BJLView extends eui.Component {
 
         this._btn_meun.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.wanjialist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.packup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.onCheckout, this.bofangEffect, this);
@@ -329,6 +348,7 @@ class BJLView extends eui.Component {
         EventUtil.addEventListener(EventConst.onSendJetton, this.SendJetton, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
         EventUtil.addEventListener(EventConst.userwin, this.initGameIconList, this);
+        EventUtil.addEventListener(EventConst.onTimelyNotify, this.initGameIconList, this);
 
     }
     /**个人限红通知 */
@@ -402,6 +422,10 @@ class BJLView extends eui.Component {
     private xianjiamipai(data: any) {
         this.istzxzDh = false;
         this.startCountDown(data._obj.seconds);
+
+        this.dianshu_0.visible = true;
+        this.dianshu_img_0.source = 'baccarat_game_point_' + data._obj.playersce + '_png';
+
         this.Themitoken.visible = true;
         this.xian_tishi.visible = true;
         this.xian_Label.text = "闲家咪牌中";
@@ -418,6 +442,10 @@ class BJLView extends eui.Component {
     /**庄家咪牌 */
     private zhuangjiamipai(data: any) {
         this.startCountDown(data._obj.seconds);
+
+        this.dianshu_1.visible = true;
+        this.dianshu_img_1.source = 'baccarat_game_point_' + data._obj.bankersce + '_png';
+
         this.xian_tishi.visible = false;
         this.zhuang_tishi.visible = true;
         this.zhuang_Label.text = "庄家咪牌中";
@@ -433,6 +461,7 @@ class BJLView extends eui.Component {
     /**闲家补牌 */
     private xianjiaBupai(data: any) {
         this.startCountDown(data._obj.seconds);
+        this.dianshu_img_0.source = 'baccarat_game_point_' + data._obj.playersce + '_png';
         this.xian_tishi.visible = true;
         this.xian_Label.text = "闲家补牌中";
         this.zhuang_tishi.visible = false;
@@ -450,6 +479,7 @@ class BJLView extends eui.Component {
     /**庄家补牌 */
     private zhuangjiaBupai(data: any) {
         this.startCountDown(data._obj.seconds);
+        this.dianshu_img_1.source = 'baccarat_game_point_' + data._obj.bankersce + '_png';
         this.xian_tishi.visible = false;
         this.zhuang_Label.text = "庄家补牌中";
         this.zhuang_tishi.visible = true;
@@ -477,6 +507,9 @@ class BJLView extends eui.Component {
     }
     /**结算（派奖） */
     private onBeginBteonBack(data: any): void {
+        this.dianshu_0.visible = false;
+        this.dianshu_1.visible = false;
+
         this.Themitoken.visible = false;
         this.startCountDown(data._obj.seconds);
 
@@ -492,7 +525,14 @@ class BJLView extends eui.Component {
             this.addjiesuan_3Effect();
         }
     }
+    /**5局不下注踢出房间，3局不下注提示 */
+    private tishi(data: any) {
+        if (data._obj.jushu == 3) {
 
+        } else if (data._obj.jushu == 5) {
+            xlLib.SceneMgr.instance.changeScene(Lobby);
+        }
+    }
     /**请求玩家列表*/
     private wanjialiebiao(sendstr: string): void {
         let senddata: any = {
@@ -536,12 +576,12 @@ class BJLView extends eui.Component {
     private initGameIconList(data: any): void {
         let dataArr: any[] = [];
         let otherplayer: any;
-        for (let i = 0; i < data._obj.player.length; i++) {
+        for (let i = 0; i < data._obj.subList.length; i++) {
             otherplayer = new Object()
             otherplayer.index = data._obj.subList[i].index;
             otherplayer.name = data._obj.subList[i].username;
             otherplayer.gold = data._obj.subList[i].goldcoins;
-            otherplayer.gold1 = data._obj.subList[i].goldcoins1;
+            otherplayer.gold1 = data._obj.subList[i].goldcoins;
             otherplayer.img = "women7_png";
             dataArr.push(otherplayer);
         }
@@ -613,15 +653,15 @@ class BJLView extends eui.Component {
     /**自己点击跟注 (丢筹码动作) */
     private onGenZhuClick(num: number, index: number) {
         var p: egret.Point = new egret.Point();
-        p.x = 268;
-        p.y = 792;
+        p.x = 68;
+        p.y = 762;
         this.showCoins(p, num, index);
     }
     /**其他玩家跟注 (丢筹码动作) */
     private onPlayerGenZhu(num: number, index: number) {
         var p: egret.Point = new egret.Point();
-        p.x = 80;
-        p.y = 400 + Math.random() * 80;
+        p.x = 50;
+        p.y = 604;
         this.showCoins(p, num, index);
     }
     /**筹码池分数(总分)  */
@@ -1201,7 +1241,7 @@ class BJLView extends eui.Component {
 
         var arr = BJLUtil.getInstance().coinsType(pos, num);
         for (var i = 0; i < arr.length; i++) {
-            var tx = point.x + Math.random() * 80;
+            var tx = point.x + Math.random() * 250;
             var ty = point.y + Math.random() * 80;
             this.grpCoins.addChild(arr[i]);
 
@@ -1715,6 +1755,10 @@ class BJLView extends eui.Component {
         this.effectTouch2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+
+        this._btn_meun.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.packup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.onCheckout, this.bofangEffect, this);

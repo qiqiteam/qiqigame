@@ -78,23 +78,23 @@ class BJLUtil {
         var point: egret.Point = new egret.Point();
         switch (index) {
             case 1:                 // 1是庄
-                point.x = 340;
+                point.x = 240;
                 point.y = 240;
                 break;
             case 2:                 // 2是闲
-                point.x = 1020;
+                point.x = 920;
                 point.y = 240;
                 break;
-            case 3:                 // 3是庄对
-                point.x = 360;
+            case 3:                 // 3是闲对
+                point.x = 260;
                 point.y = 430;
                 break;
-            case 4:                 // 4是闲对
-                point.x = 1030;
+            case 4:                 // 4是庄对
+                point.x = 930;
                 point.y = 430;
                 break;
             case 5:                 // 5是和
-                point.x = 690;
+                point.x = 590;
                 point.y = 430;
                 break;
         }
