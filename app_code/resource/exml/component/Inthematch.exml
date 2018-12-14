@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="InthematchSkin" width="800" height="450" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="1674ebbb283" ></w:Config>
-	<e:Image horizontalCenter="0" verticalCenter="0" source="nn_bg1_png" locked="true"/>
+	<e:Image horizontalCenter="0" verticalCenter="0" source="nn_bg1_png"/>
 
 
 

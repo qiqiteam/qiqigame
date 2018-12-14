@@ -15,6 +15,10 @@ class GlobalData {
     public static hasNetwork: boolean = true;
     /**重连次数 */
     public static recNum: number = 0;
+    /**是否点击过准备面板关闭按钮*/
+    public static liveCloseBtn: boolean = false;
+    /**点击准备面板关闭按钮,推送是否能够退出房间*/
+    public static isLiveRoom: boolean = false;
     /**清除数据 */
     public static clearData(isReconnect: boolean = false) {
         // if (!isReconnect) {
