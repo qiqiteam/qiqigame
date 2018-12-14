@@ -4,24 +4,8 @@
 	<e:Group horizontalCenter="0" verticalCenter="0" locked="true">
 		<e:Image y="0" x="0" source="brnn_game_bg_png" locked="true"/>
 		<e:Image x="0" y="0" source="brnn_game_bigbg_png" locked="true"/>
-		<e:Button id="_btn_close" label="" x="15" y="20" scaleX="1" scaleY="1">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
 
-		</e:Button>
-		<e:Button id="_btn_meun" label="" x="116.52" y="20" scaleX="1" scaleY="1">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
 
-		</e:Button>
 		<e:Group width="420" height="118" scaleX="1" scaleY="1" horizontalCenter="0" top="0" locked="true">
 			<e:Image scaleX="1" scaleY="1" source="brnn_game_hardbg_png" x="0" y="0"/>
 			<e:Image scaleX="1" scaleY="1" x="34" source="brnn_game_head_png" y="13"/>
@@ -30,7 +14,7 @@
 	</e:Group>
 	<e:Group id="grpCoins" width="100%" height="100%" y="0" locked="true">
 	</e:Group>
-	<e:Image source="nn.cardbg" x="234.67" y="221" scale9Grid="16,6,98,42" anchorOffsetX="0" width="168.66"  locked="true" visible="false"/>
+
 
 
 
@@ -600,7 +584,7 @@
 
 
 	</e:Group>
-	<e:Group id="wanjia" width="237" height="476" anchorOffsetY="0" y="164" x="-273" locked="true">
+	<e:Group id="wanjia" width="237" height="476" anchorOffsetY="0" y="164" x="0" locked="true">
 		<e:Image width="237" height="413" source="brnn_game_open_png" horizontalCenter="0" y="0" locked="true"/>
 		<e:Image id="packup" width="237" height="63" source="brnn_game_open1_png" y="413" x="0" locked="true"/>
 		<e:Scroller id="scroller" width="230" height="360" y="47.04" x="4" scrollPolicyV="on">
@@ -614,6 +598,22 @@
 			</e:Group>
 		</e:Scroller>
 	</e:Group>
+	<e:Button id="_btn_close" label="" x="15" y="20" scaleX="1" scaleY="1" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_meun" label="" x="116.52" y="20" scaleX="1" scaleY="1" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
 	<e:Button id="wanjialist" label="" scaleX="1" scaleY="1" y="265" x="0" locked="true">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">

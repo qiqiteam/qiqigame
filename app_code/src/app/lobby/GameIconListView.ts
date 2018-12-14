@@ -22,7 +22,7 @@ class GameIconListView extends eui.Component {
 			gameIconItem.setGameIconData(iconlist[i]);
 			this.gamelist_grp.addChild(gameIconItem);
 			let num = i % 4;
-			gameIconItem.x = 10 + num*245;
+			gameIconItem.x = 20 + num*270;
 			if (num == 0 && i != 0) {
 				yy = 285;
 			}

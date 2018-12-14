@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BJLframeSkin" width="800" height="80" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="40" height="40" x="59.36" y="20" source="baccarat_players_rankBg_png"/>
+	<e:Label id="label_index" text="0" x="64.07" y="25" fontFamily="Microsoft YaHei" size="20" width="30" height="30" verticalAlign="middle" textAlign="center" textColor="0xffffff"/>
+	<e:Image width="68" height="66" x="173.36" source="lh_game_left_headBg2_png" y="7"/>
+	<e:Image id="imghead" width="60" height="58" x="175.67" y="11" source="women7_png"/>
+	<e:Label text="ID：" x="250.07" y="30" fontFamily="Microsoft YaHei" textColor="0x93A3DA" size="20"/>
+	<e:Label id="labelName" text="名字名字" x="289.2" y="27" fontFamily="Microsoft YaHei" textColor="0x93a3da" anchorOffsetX="0" width="98.4" size="20" anchorOffsetY="0" height="26" textAlign="center" verticalAlign="middle"/>
+	<e:Image width="32" height="34" x="413.14" y="23" source="nn_cion_png"/>
+	<e:Label id="labelGold" text="48949" x="450.94" y="27" fontFamily="Microsoft YaHei" textColor="0x93a3da" anchorOffsetX="0" width="109.13" size="20" height="26" verticalAlign="middle"/>
+	<e:Image width="75" height="40" x="593.14" y="20" source="baccarat_players_betIcon_png"/>
+	<e:Label id="labelGold1" text="48949" x="675.94" y="27" fontFamily="Microsoft YaHei" textColor="0x93A3DA" anchorOffsetX="0" width="109.13" size="20" height="26" verticalAlign="middle"/>
+</e:Skin>

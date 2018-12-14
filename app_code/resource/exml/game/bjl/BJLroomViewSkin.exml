@@ -1,10 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BJLroomViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="bgImg" width="100%" height="100%" source="room_zjh_bg_jpg"/>
-	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0">
-		<e:Image scaleX="1" scaleY="1" x="415.23" bottom="0" source="baccarat_hall_person"/>
+	<e:Image id="bgImg" width="100%" height="100%" source="room_zjh_bg_jpg" horizontalCenter="0" verticalCenter="0"/>
+	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+		<e:Image scaleX="1" scaleY="1" x="125.21" bottom="-2" source="baccarat_hall_person"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_list_bg" x="542.21" y="191"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_list_choosed_4" x="543" y="194"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_list_choosed_4" x="543" y="611"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_list_choosed_4" x="543" y="472"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_list_choosed_4" x="543" y="333"/>
+		<e:Image source="baccarat_hall_json.baccarat_game_bg_lu" x="737" y="207" anchorOffsetX="0" width="658" anchorOffsetY="0" height="133"/>
+		<e:Image source="baccarat_hall_json.baccarat_game_bg_lu" x="737" y="623" anchorOffsetX="0" width="658" anchorOffsetY="0" height="133"/>
+		<e:Image source="baccarat_hall_json.baccarat_game_bg_lu" x="737" y="484" anchorOffsetX="0" width="658" anchorOffsetY="0" height="133"/>
+		<e:Image source="baccarat_hall_json.baccarat_game_bg_lu" x="737" y="346" anchorOffsetX="0" width="658" anchorOffsetY="0" height="133"/>
+		<e:Button id="_btn_enter" label="" x="562" y="205">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="baccarat_hall_json.baccarat_hall_roomIcon1_0" source.down="baccarat_hall_json.baccarat_hall_roomIcon1_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button label="" x="562" y="627">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="baccarat_hall_json.baccarat_hall_roomIcon4_0" source.down="baccarat_hall_json.baccarat_hall_roomIcon4_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button label="" x="562" y="486">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="baccarat_hall_json.baccarat_hall_roomIcon3_0" source.down="baccarat_hall_json.baccarat_hall_roomIcon3_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button label="" x="562" y="346">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="baccarat_hall_json.baccarat_hall_roomIcon2_0" source.down="baccarat_hall_json.baccarat_hall_roomIcon2_1"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="baccarat_hall_json.baccarat_hall_title1_0" x="573" y="245.5" touchEnabled="false"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_title2_0" x="573" y="386" touchEnabled="false"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_title3_0" x="573" y="526" touchEnabled="false"/>
+		<e:Image source="baccarat_hall_json.baccarat_hall_title4_0" x="573" y="666.5" touchEnabled="false"/>
 	</e:Group>
-	<e:Group width="100%" height="96" y="0" x="0">
+	<e:Group width="100%" height="96" horizontalCenter="0" verticalCenter="-366">
 		<e:Image scaleX="1" scaleY="1" source="ding" horizontalCenter="0" top="0"/>
 		<e:Button id="_menu" label="" x="1278.58" y="1">
 			<e:skinName>
@@ -42,11 +87,7 @@
 			</e:skinName>
 		</e:Button>
 		<e:Image width="186" height="62" touchEnabled="false" x="267.71" y="9" source="title_baijiale"/>
-
-	</e:Group>
-	<e:Group width="294" height="742" anchorOffsetY="0" anchorOffsetX="0" y="86" x="0">
-		<e:Image source="room_menu_bg" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
-		<e:Button id="_record" label="" x="57" y="633">
+		<e:Button id="_record" label="" x="913" y="-3">
 			<e:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="btn_xuanzhe_0" source.down="btn_xuanzhe_1"/>
@@ -54,53 +95,7 @@
 			</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Image width="154" height="76" touchEnabled="false" x="57" y="633" source="root_record_btn_0"/>
-	</e:Group>
-	<e:Group width="627.28" height="740.91" anchorOffsetX="0" anchorOffsetY="0" x="844.72" y="87.09000000000003">
-		<e:Image touchEnabled="false" y="68" source="baccarat_hall_right_bg"/>
-		<e:Image touchEnabled="false" y="76" x="10" source="baccarat_hall_btn_column"/>
-		<e:Button id="_btn_enter" label="" y="171.66" scaleX="1" scaleY="1" x="518">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="baccarat_hall_btn_enter" source.down="baccarat_hall_btn_enter"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button label="" y="565.66" scaleX="1" scaleY="1" x="518">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="baccarat_hall_btn_enter" source.down="baccarat_hall_btn_enter"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button label="" y="434.32" scaleX="1" scaleY="1" x="518">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="baccarat_hall_btn_enter" source.down="baccarat_hall_btn_enter"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button label="" y="305.66" scaleX="1" scaleY="1" x="516">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="baccarat_hall_btn_enter" source.down="baccarat_hall_btn_enter"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:TabBar id="menubar" width="601" height="52" x="10" y="76" anchorOffsetY="0" anchorOffsetX="0">
-			<e:layout>
-				<e:VerticalLayout/>
-			</e:layout>
-		</e:TabBar>
-
-
-
-
-
+		<e:Image width="154" height="76" touchEnabled="false" x="913" y="-3" source="root_record_btn_0"/>
 
 	</e:Group>
 </e:Skin>
