@@ -577,6 +577,19 @@ class BJLView extends eui.Component {
         let otherplayer: any;
         for (let i = 0; i < data._obj.subList.length; i++) {
             otherplayer = new Object()
+            if (i == 0) {
+                otherplayer.tp = 'baccarat_players_rank1_png';
+                otherplayer.fot = false;
+            } else if (i == 1) {
+                otherplayer.tp = 'baccarat_players_rank2_png';
+                otherplayer.fot = false;
+            } else if (i == 2) {
+                otherplayer.tp = 'baccarat_players_rank3_png';
+                otherplayer.fot = false;
+            } else {
+                otherplayer.tp = 'baccarat_players_rankBg_png';
+                otherplayer.fot = true;
+            }
             otherplayer.index = data._obj.subList[i].index + 1;
             otherplayer.name = data._obj.subList[i].username;
             otherplayer.gold = data._obj.subList[i].goldcoins;
