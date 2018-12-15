@@ -303,6 +303,10 @@ public _continue_img_1:eui.Image;
         }
         this.grpCountdown.visible = false;
         this.labCountdown.text = "5";
+
+        for(let i=0; i<10; i++) {
+            this["_label_bar_" + i].text = "0";
+        }
     }
 
     private gamePlayIndex:number = -1;
@@ -489,7 +493,7 @@ public _continue_img_1:eui.Image;
             case 4: this.onDingzhuang(data); break; // 定庄
             case 5: this.onbetBack(data); break;    // 下注
             case 6: this.gameResult(data); break;
-            //case 7: this.showGameResult(data); break;
+            case 7: this.showGameResult(data); break;
         }
     }
 
@@ -710,6 +714,10 @@ public _continue_img_1:eui.Image;
     public gameResult(data: any):void {
         
         this.cardResult = data._obj;
+        //console.log("++++++++++++++123456789++++++++++++++++++" + this.cardResult.players[0].username);
+        //console.log("++++++++++++++#########++++++++++++++++++" + this.cardResult.players[0].index);
+
+        
         this.gamePlayIndex = setInterval(this.shakeDice.bind(this), 5000);
     }
 
@@ -841,6 +849,7 @@ public _continue_img_1:eui.Image;
         300).call(function() {
             egret.Tween.removeTweens(_img);
             _img.visible = false;
+            _img.y = e;
         }, [_img]);
         this.gamePlayIndex = setInterval(this.startSendPai.bind(this), 2000);
     }
@@ -957,16 +966,17 @@ public _continue_img_1:eui.Image;
     /**筹码飞向玩家 */
     public flyCoinByPlayer():void {
         clearInterval(this.flyIntval);
-        let num = 0;
+        //let num = 0;
         let win_arr = [];
         for(let i=0; i<4; i++) {
-            if(i==this.zhaungIndex) {
+            let index = UserInfo.getInstance().findSeatNumber(this.cardResult.players[i].index);
+            if(index==this.zhaungIndex) {
                 continue;
-            } 
-            
+            }
+
             if(this.cardResult.players[i].win) {
-                num++;
-                win_arr.push(i);
+                //num++;
+                win_arr.push(index);
             }
         }
         //console.log("_____总筹码数______" + this._coin_arr.length);
@@ -1106,7 +1116,7 @@ public _continue_img_1:eui.Image;
             }, [img]);
         }
 
-        this.flyIntval = setInterval(this.showGameResult.bind(this), 4000);
+        //this.flyIntval = setInterval(this.showGameResult.bind(this), 4000);
     }
 
     //-------------------------------服务器回调------------------------------
@@ -1185,7 +1195,7 @@ public _continue_img_1:eui.Image;
      */
     private setGameResult(data): void {
         //this.grpCountdown.visible = false;
-        this.cardResult = data;
+        //this.cardResult = data;
 
     }
 
@@ -1273,7 +1283,13 @@ public _continue_img_1:eui.Image;
         }
         
         this.playClickSound(RBGUtil.getInstance().getSoundEffect(7));
-        var poke = this.cardResult.players;
+        var poke = null;
+        for(let i=0; i<4; i++) {
+            if(UserInfo.getInstance().findSeatNumber(this.cardResult.players[i].index) == this.effectPlayerIndex0) {
+                poke = this.cardResult.players[i];
+                break;
+            }
+        }
 
         var card_0 = this['grpCard_' + this.effectPlayerIndex0 + '_' + 0];
         card_0.setPai(null);
@@ -1282,7 +1298,7 @@ public _continue_img_1:eui.Image;
         egret.Tween.get(card_0).to({  }, 10).call(function () {
             this[0].setPai(this[1]);
             this[0].setAnPai(false);
-        }, [card_0, poke[this.effectPlayerIndex1].cardsList[0]]);
+        }, [card_0, poke.cardsList[0]]);
 
         var card_1 = this['grpCard_' + this.effectPlayerIndex0 + '_' + 1];
         card_1.setPai(null);
@@ -1291,19 +1307,19 @@ public _continue_img_1:eui.Image;
         egret.Tween.get(card_1).to({  }, 10).wait(300).call(function () {
             this[0].setPai(this[1]);
             this[0].setAnPai(false);
-        }, [card_1, poke[this.effectPlayerIndex1].cardsList[1]]);
+        }, [card_1, poke.cardsList[1]]);
 
         var _group_bg = this["labCardType_bg_" + this.effectPlayerIndex0];
         var _group = this["labCardType" + this.effectPlayerIndex0];
-        _group.source = "bar_point_"+ poke[this.effectPlayerIndex1].nameType +"_png";
+        _group.source = "bar_point_"+ poke.nameType +"_png";
         _group.anchorOffsetX = _group.width / 2;
         _group.anchorOffsetY = _group.height / 2;
         _group.x = this.orginCardTypePos[this.effectPlayerIndex0].x;
         _group.y = this.orginCardTypePos[this.effectPlayerIndex0].y;
 
-        if(poke[this.effectPlayerIndex1].nameType == 0) {
+        if(poke.nameType == 0) {
             _group_bg.source = "bar_point_bg_0_png";
-        } else if(poke[this.effectPlayerIndex1].nameType > 19) {
+        } else if(poke.nameType > 19) {
             _group_bg.source = "bar_point_bg_2_png";
         } else {
             _group_bg.source = "bar_point_bg_1_png";
@@ -1323,16 +1339,15 @@ public _continue_img_1:eui.Image;
 
 
 
-    //private showGameResult(data: any): void {
     private showGameResult(data: any): void {
-        clearInterval(this.flyIntval);
+        //clearInterval(this.flyIntval);
         this.flyIntval = -1;
         var value = this.cardResult;
         this._group_settlement.visible = true;
-        console.log("+++++++++" + this.gamePlayIndex);
-        console.log("+++++++++" + this.flyIntval);
-        console.log("+++++++++" + this.diceInterval);
-        console.log("+++++++++" + this.turn0);
+        //console.log("+++++++++" + this.gamePlayIndex);
+        //console.log("+++++++++" + this.flyIntval);
+        //console.log("+++++++++" + this.diceInterval);
+        //console.log("+++++++++" + this.turn0);
 
         for(let i=0; i<10; i++) {
             this["_label_bar_" + i].text = value.count[i] + "";
@@ -1387,7 +1402,7 @@ public _continue_img_1:eui.Image;
 
         this.resetGame();
 
-        if(value.round == 5) {
+        if(value.gameRoomOver == true) {
             this._label_timing.visible = false;
             this._label_des.visible = false;
             this._continue_btn_1.visible = true;
@@ -1452,6 +1467,7 @@ public _continue_img_1:eui.Image;
 
     /**继续游戏 */
     private onRestartGame(): void {
+        UserInfo.getInstance().playes = [];
         let gameData:gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ERBAGANG);
         let typeData:typeData = gameData.getTypeDataByindex(Const.TYPE_ERBAGANGJINDIAN);
         let playway:playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
@@ -1463,6 +1479,10 @@ public _continue_img_1:eui.Image;
             //xlLib.SceneMgr.instance.changeScene(RBGScene);
             //xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
         },this);
+
+        this.init_desktop();
+        this.wait_start();
+        this.initData();
     }
 
     public Onquit(): void {
@@ -1477,6 +1497,7 @@ public _continue_img_1:eui.Image;
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
 
         xlLib.SceneMgr.instance.changeScene(Lobby);
+        UserInfo.getInstance().playes = [];
     }
 
     public destroy(): void {
