@@ -168,87 +168,47 @@ var RBGUtil = (function () {
         }
     };
     //筹码类型
-    RBGUtil.prototype.coinsType = function (num) {
-        var coinArr = [];
-        var coinNum = 0;
+    RBGUtil.prototype.coinsType = function (index, num) {
         var src = '';
-        num = Math.round(num / 10000);
-        if (num > 0 && num < 10) {
-            coinNum = num;
-            src = 'nn.b1a';
+        if (num == 0) {
+            src = 'bar_chip_10_png';
         }
-        else if (num > 9 && num < 100) {
-            coinNum = num / 10;
-            src = 'nn.b2a';
+        else if (num == 1) {
+            src = 'bar_chip_50_png';
         }
-        else if (num > 99 && num < 1000) {
-            coinNum = num / 100;
-            src = 'nn.b3a';
+        else if (num == 2) {
+            src = 'bar_chip_100_png';
         }
-        else if (num > 999 && num < 5000) {
-            coinNum = num / 1000;
-            src = 'nn.b4a';
+        else if (num == 3) {
+            src = 'bar_chip_500_png';
         }
-        else if (num > 4999 && num < 10000) {
-            coinNum = num / 5000;
-            src = 'nn.b5a';
+        else if (num == 4) {
+            src = 'bar_chip_2000_png';
         }
-        else {
-            coinNum = num / 10000;
-            src = 'nn.b6a';
+        else if (num == 5) {
+            src = 'bar_chip_10000_png';
         }
-        // if (num > 9 && num < 50) {
-        //     coinNum = num / 10;
-        //     src = 'nn.b1a';
-        // }
-        // else if (num > 49 && num < 100) {
-        //     coinNum = num / 50;
-        //     src = 'nn.b2a';
-        // }
-        // else if (num > 99 && num < 500) {
-        //     coinNum = num / 100;
-        //     src = 'nn.b3a';
-        // }
-        // else if (num > 499 && num < 1000) {
-        //     coinNum = num / 500;
-        //     src = 'nn.b4a';
-        // }
-        // else if (num > 999 && num < 5000) {
-        //     coinNum = num / 1000;
-        //     src = 'nn.b5a';
-        // }
-        // else {
-        //     coinNum = num / 5000;
-        //     src = 'nn.b6a';
-        // }
-        for (var i = 0; i < Math.round(coinNum); i++) {
-            var coin = new eui.Image(src);
-            var p = this.coinPos();
-            coin.x = p.x;
-            coin.y = p.y;
-            coinArr.push(coin);
-        }
-        return coinArr;
+        var coin = new eui.Image(src);
+        return coin;
     };
-    RBGUtil.prototype.coinPos = function () {
+    RBGUtil.prototype.coinPos = function (index) {
         var p = new egret.Point();
-        var index = Math.floor(Math.random() * 4);
         switch (index) {
             case 0:
-                p.x = -100;
-                p.y = 400;
+                p.x = 737;
+                p.y = 635;
                 break;
             case 1:
-                p.x = -100;
-                p.y = 800;
+                p.x = 100;
+                p.y = 350;
                 break;
             case 2:
-                p.x = 650;
-                p.y = 400;
+                p.x = 737;
+                p.y = 115;
                 break;
             case 3:
-                p.x = 650;
-                p.y = 800;
+                p.x = 1365;
+                p.y = 350;
                 break;
         }
         return p;

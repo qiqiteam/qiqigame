@@ -68,5 +68,5 @@ var BRNNroomView = (function (_super) {
     };
     return BRNNroomView;
 }(eui.Component));
-__reflect(BRNNroomView.prototype, "BRNNroomView", ["eui.UIComponent", "egret.DisplayObject"]);
+__reflect(BRNNroomView.prototype, "BRNNroomView");
 //# sourceMappingURL=BRNNroomView.js.map

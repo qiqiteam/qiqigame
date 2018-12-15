@@ -105,8 +105,8 @@ var xlLib;
             return sp;
         };
         /**
-          * 创建DragonBones显示对象
-          */
+         * 创建DragonBones显示对象
+         */
         DisplayUtils.createDragonBonesDisplay = function (source, bones, cache) {
             var dragonbonesData = RES.getRes(source + "_ske_json");
             var textureData = RES.getRes(source + "_tex_json");
@@ -189,9 +189,8 @@ var xlLib;
                 xlLib.Console.error("armature不能为空");
                 return;
             }
-            dragonBones["WorldClock"].clock.remove(armature);
+            dragonBones.WorldClock.clock.remove(armature);
             armature.animation.stop();
-            //egret.stopTick(this.onTicker,this);
             armature.dispose();
         };
         /**

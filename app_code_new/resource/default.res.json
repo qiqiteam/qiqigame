@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,loding_json,loding_bg_jpg,bg_baijiale_ske_json,bg_baijiale_tex_json,bg_baijiale_tex_png,bg_bairenniuniu_ske_json,bg_bairenniuniu_tex_json,bg_bairenniuniu_tex_png,bg_daliuguang_ske_json,bg_daliuguang_tex_json,bg_daliuguang_tex_png,bg_ewrbagang_ske_json,bg_ewrbagang_tex_json,bg_ewrbagang_tex_png,bg_qiangzhuangniuniu_ske_json,bg_qiangzhuangniuniu_tex_json,bg_qiangzhuangniuniu_tex_png,bg_remen_ske_json,bg_remen_tex_json,bg_remen_tex_png,bg_tongbiniuniu_ske_json,bg_tongbiniuniu_tex_json,bg_tongbiniuniu_tex_png,bg_xiaoliuguang_ske_json,bg_xiaoliuguang_tex_json,bg_xiaoliuguang_tex_png,bg_xin_ske_json,bg_xin_tex_json,bg_xin_tex_png,bg_zhajinhua_ske_json,bg_zhajinhua_tex_json,bg_zhajinhua_tex_png,bjl_rukou_ske_json,bjl_rukou_tex_json,bjl_rukou_tex_png,brnn_rukou_ske_json,brnn_rukou_tex_json,brnn_rukou_tex_png,ebg_rukou_ske_json,ebg_rukou_tex_json,ebg_rukou_tex_png,qznn_nvrenwu_ske_json,qznn_nvrenwu_tex_json,qznn_nvrenwu_tex_png,qznn_rukou_ske_json,qznn_rukou_tex_json,qznn_rukou_tex_png,tbnn_rukou_ske_json,tbnn_rukou_tex_json,tbnn_rukou_tex_png,tongbiniuniu_ske_json,tongbiniuniu_tex_json,tongbiniuniu_tex_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_rukou_ske_json,zjh_rukou_tex_json,zjh_rukou_tex_png",
+			"keys": "loading_png,loding_json,loding_bg_jpg,bg_baijiale_ske_json,bg_baijiale_tex_json,bg_baijiale_tex_png,bg_bairenniuniu_ske_json,bg_bairenniuniu_tex_json,bg_bairenniuniu_tex_png,bg_daliuguang_ske_json,bg_daliuguang_tex_json,bg_daliuguang_tex_png,bg_ewrbagang_ske_json,bg_ewrbagang_tex_json,bg_ewrbagang_tex_png,bg_qiangzhuangniuniu_ske_json,bg_qiangzhuangniuniu_tex_json,bg_qiangzhuangniuniu_tex_png,bg_remen_ske_json,bg_remen_tex_json,bg_remen_tex_png,bg_tongbiniuniu_ske_json,bg_tongbiniuniu_tex_json,bg_tongbiniuniu_tex_png,bg_xiaoliuguang_ske_json,bg_xiaoliuguang_tex_json,bg_xiaoliuguang_tex_png,bg_xin_ske_json,bg_xin_tex_json,bg_xin_tex_png,bg_zhajinhua_ske_json,bg_zhajinhua_tex_json,bg_zhajinhua_tex_png,bjl_rukou_ske_json,bjl_rukou_tex_json,bjl_rukou_tex_png,brnn_rukou_ske_json,brnn_rukou_tex_json,brnn_rukou_tex_png,ebg_rukou_ske_json,ebg_rukou_tex_json,ebg_rukou_tex_png,qznn_nvrenwu_ske_json,qznn_nvrenwu_tex_json,qznn_nvrenwu_tex_png,qznn_rukou_ske_json,qznn_rukou_tex_json,qznn_rukou_tex_png,tbnn_rukou_ske_json,tbnn_rukou_tex_json,tbnn_rukou_tex_png,tongbiniuniu_ske_json,tongbiniuniu_tex_json,tongbiniuniu_tex_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_rukou_ske_json,zjh_rukou_tex_json,zjh_rukou_tex_png,room_ebg_json",
 			"name": "preload"
 		},
 		{
@@ -6867,6 +6867,147 @@
 			"url": "assets/sound/tbnn/tbnn_gamebgMusic.mp3",
 			"type": "sound",
 			"name": "tbnn_gamebgMusic_mp3"
+		},
+		{
+			"url": "assets/game/erbagang/bar_bet_tip_bg.png",
+			"type": "image",
+			"name": "bar_bet_tip_bg_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_btn_1_normal.png",
+			"type": "image",
+			"name": "bar_btn_1_normal_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_btn_grab_times.png",
+			"type": "image",
+			"name": "bar_btn_grab_times_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_btn_no_grab_times.png",
+			"type": "image",
+			"name": "bar_btn_no_grab_times_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_btn_txt_continue.png",
+			"type": "image",
+			"name": "bar_btn_txt_continue_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_first_player.png",
+			"type": "image",
+			"name": "bar_first_player_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_banker.png",
+			"type": "image",
+			"name": "bar_over_banker_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_btn_lose_close.png",
+			"type": "image",
+			"name": "bar_over_btn_lose_close_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_lose_bg.png",
+			"type": "image",
+			"name": "bar_over_lose_bg_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_lose_hat.png",
+			"type": "image",
+			"name": "bar_over_lose_hat_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_lose_light.png",
+			"type": "image",
+			"name": "bar_over_lose_light_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_lose_title.png",
+			"type": "image",
+			"name": "bar_over_lose_title_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_txt_bg.png",
+			"type": "image",
+			"name": "bar_over_txt_bg_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_win_bg.png",
+			"type": "image",
+			"name": "bar_over_win_bg_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_win_hat.png",
+			"type": "image",
+			"name": "bar_over_win_hat_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_win_light.png",
+			"type": "image",
+			"name": "bar_over_win_light_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_over_win_title.png",
+			"type": "image",
+			"name": "bar_over_win_title_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_reduce_font.fnt",
+			"type": "font",
+			"name": "bar_reduce_font_fnt"
+		},
+		{
+			"url": "assets/game/erbagang/bar_reduce_font.png",
+			"type": "image",
+			"name": "bar_reduce_font_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_start_title_bet.png",
+			"type": "image",
+			"name": "bar_start_title_bet_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_start_title_grab.png",
+			"type": "image",
+			"name": "bar_start_title_grab_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_tip_bg.png",
+			"type": "image",
+			"name": "bar_tip_bg_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_tip_close.png",
+			"type": "image",
+			"name": "bar_tip_close_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_tip_title_1.png",
+			"type": "image",
+			"name": "bar_tip_title_1_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_total_number.fnt",
+			"type": "font",
+			"name": "bar_total_number_fnt"
+		},
+		{
+			"url": "assets/game/erbagang/bar_total_number.png",
+			"type": "image",
+			"name": "bar_total_number_png"
+		},
+		{
+			"url": "assets/ebgroom/room_ebg_bg.jpg",
+			"type": "image",
+			"name": "room_ebg_bg_jpg"
+		},
+		{
+			"url": "assets/ebgroom/room_ebg.json",
+			"type": "sheet",
+			"name": "room_ebg_json",
+			"subkeys": "bar_base_score_flag,bar_girl"
 		}
 	]
 }

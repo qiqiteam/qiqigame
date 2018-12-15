@@ -45,6 +45,9 @@ var RBGHead = (function (_super) {
     RBGHead.prototype.setZhuang = function (value) {
         this.img_zhuang.visible = value;
     };
+    RBGHead.prototype.setZhuangEf = function (value) {
+        this._img_zhuang_ef.visible = value;
+    };
     RBGHead.prototype.setGold = function (gold) {
         this.labelGold.text = gold + "";
     };

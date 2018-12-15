@@ -5,13 +5,16 @@ var Const = (function () {
     function Const() {
     }
     //正式版本----------------------------------------
-    // public static GAME_HOST:string = "47.52.138.199";
-    // public static GAME_PORT:string = "9081";
-    // public static httpUrl:string = "http://47.52.138.199:80";
+    //public static GAME_HOST:string = "47.52.138.199";
+    //public static GAME_PORT:string = "9081";
+    //public static httpUrl:string = "http://47.52.138.199:80";
     // //测试服----------------------------------------
-    Const.GAME_HOST = "192.168.1.73";
+    // public static GAME_HOST: string = "192.168.1.7";
+    // public static GAME_PORT: string = "9081";
+    // public static httpUrl: string = "http://192.168.1.7";
+    Const.GAME_HOST = "192.168.1.49";
     Const.GAME_PORT = "9081";
-    Const.httpUrl = "http://192.168.1.73";
+    Const.httpUrl = "http://192.168.1.49";
     //---------------------------游戏分类
     /**牛牛*/
     Const.GAME_NIUNIU = "niuniu";
