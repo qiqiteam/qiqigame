@@ -1,4 +1,4 @@
-class BRNNroomView extends eui.Component implements eui.UIComponent {
+class BRNNroomView extends eui.Component{
 	public bgImg: eui.Image;
 	public _menu: eui.Button;
 	public _rule: eui.Button;

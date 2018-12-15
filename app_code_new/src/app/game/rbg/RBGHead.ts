@@ -7,7 +7,7 @@ class RBGHead extends eui.Component {
     public labelName:eui.Label;
     public labelGold:eui.Label;
     public img_zhuang:eui.Image;
-
+    public _img_zhuang_ef:eui.Image;
 
     constructor() {
         super();
@@ -42,6 +42,10 @@ class RBGHead extends eui.Component {
 
     public setZhuang(value:boolean):void {
         this.img_zhuang.visible = value;
+    }
+
+    public setZhuangEf(value:boolean):void {
+        this._img_zhuang_ef.visible = value;
     }
 
     public setGold(gold:number):void {

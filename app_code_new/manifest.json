@@ -59,7 +59,6 @@
 		"bin-debug/app/game/brnn/BRNNScene.js",
 		"bin-debug/app/game/brnn/BRNNUtil.js",
 		"bin-debug/app/game/brnn/BRNNView.js",
-		"bin-debug/app/game/erbagang/ErBaGangView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
 		"bin-debug/app/game/message/SystemMsgView.js",
@@ -90,18 +89,21 @@
 		"bin-debug/app/game/qznn/TenshuNiuBeiSkin.js",
 		"bin-debug/app/game/qznn/WuNiuNBei.js",
 		"bin-debug/app/game/qznn/ZhuangIconTX.js",
+		"bin-debug/app/game/rbg/ErBaGangroomEff.js",
 		"bin-debug/app/game/rbg/ErBaGangroomView.js",
 		"bin-debug/app/game/rbg/RBGHead.js",
 		"bin-debug/app/game/rbg/RBGMahjong.js",
 		"bin-debug/app/game/rbg/RBGScene.js",
+		"bin-debug/app/game/rbg/RBGSEff.js",
 		"bin-debug/app/game/rbg/RBGUtil.js",
+		"bin-debug/app/game/rbg/RBGVEff.js",
 		"bin-debug/app/game/rbg/RBGView.js",
 		"bin-debug/app/game/recharge/orderinquiry.js",
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
 		"bin-debug/app/game/safebox/SafeBoxTypeItem.js",
-		"bin-debug/app/game/safebox/SafeBoxView.js",
 		"bin-debug/Global.js",
+		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/tbnn/TBNNHead.js",
 		"bin-debug/app/game/tbnn/TBNNroomEff.js",
@@ -191,6 +193,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/app/game/set/SetTypeItem.js"
+		"bin-debug/app/game/safebox/SafeBoxView.js"
 	]
 }

@@ -1855,8 +1855,6 @@ class TBNNView extends eui.Component {
                 //card.source = '';
                 egret.Tween.removeTweens(card);
             }
-
-
         }
         for (let i = 0; i < 5; i++) {
             let card_banker: eui.Image = this['bankerCard_' + i];

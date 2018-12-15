@@ -94,6 +94,8 @@ declare class BRNNroomViewSkin extends eui.Skin{
 }
 declare class BRNNViewSkin extends eui.Skin{
 }
+declare class ErBaGangroomEffSkin extends eui.Skin{
+}
 declare class ErBaGangroomViewSkin extends eui.Skin{
 }
 declare class ErBaGangViewSkin extends eui.Skin{
@@ -153,6 +155,10 @@ declare class ZhuangIconSkin extends eui.Skin{
 declare class RBGHeadSkin extends eui.Skin{
 }
 declare class RBGMahjongSkin extends eui.Skin{
+}
+declare class RBGSEffSkin extends eui.Skin{
+}
+declare class RBGVEffSkin extends eui.Skin{
 }
 declare class RBGViewSkin extends eui.Skin{
 }

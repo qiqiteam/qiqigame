@@ -6,8 +6,18 @@
 		<e:Image source="baccarat_game_table_png" x="122" y="78" locked="true"/>
 		<e:Image x="422.94" y="119.74" source="baccarat_game_icon_decorate_png" locked="true"/>
 		<e:Image x="966.27" y="118.74" source="baccarat_game_icon_decorate2_png" locked="true"/>
-		<e:Image x="736.27" y="180" source="baccarat_game_txt_bank_png" locked="true"/>
-		<e:Image x="688.27" y="180" source="baccarat_game_txt_player_png" locked="true"/>
+
+
+		<e:Group x="400.03" y="156.02" width="38">
+			<e:Image source="baccarat_game_cardsNumber_bg_png" y="0" x="0"/>
+			<e:Label id="sypai_0" text="0" width="38" height="18" fontFamily="Microsoft YaHei" size="15" textAlign="center" verticalAlign="middle" y="0" x="0"/>
+		</e:Group>
+		<e:Group x="1064.03" y="156.02" width="38">
+			<e:Image source="baccarat_game_cardsNumber_bg_png" y="0" x="0"/>
+			<e:Label id="sypai_1" text="416" width="38" height="18" fontFamily="Microsoft YaHei" size="15" textAlign="center" verticalAlign="middle" y="0" x="0"/>
+		</e:Group>
+		<e:Image x="740.27" y="195" source="baccarat_game_txt_bank_png" locked="true"/>
+		<e:Image x="688.27" y="195" source="baccarat_game_txt_player_png" locked="true"/>
 		<e:Group id="dianshu_0" x="674.59" y="246.05" locked="true">
 			<e:Image id="dianshu_img_0" x="0" y="0" source="baccarat_game_point_5_png" width="24" height="30"/>
 			<e:Image x="25.75" y="0" width="24" height="30" source="baccarat_game_point_dian_png"/>
@@ -16,6 +26,11 @@
 			<e:Image id="dianshu_img_1" x="0" y="0" source="baccarat_game_point_5_png" width="24" height="30"/>
 			<e:Image x="25.75" y="0" source="baccarat_game_point_dian_png" width="24" height="30"/>
 		</e:Group>
+		<e:Image id="jushu_bg" width="80" height="26" x="561" y="161" source="baccarat_font_bureau_diju2_png" locked="true"/>
+		<e:Image id="js_shi" width="14" height="26" x="585" y="161" source="baccarat_font_bureau_5_png" locked="true"/>
+		<e:Image id="js_ge" width="14" height="26" x="601" y="161" source="baccarat_font_bureau_5_png" locked="true"/>
+		<e:Image id="tishi_zi_0" width="100" height="30" x="698" y="159" source="baccarat_font_stage_3_png" locked="true"/>
+		<e:Image id="tishi_zi_1" width="180" height="30" x="652" y="159" source="baccarat_font_stage_5_png" locked="true" visible="false"/>
 	</e:Group>
 
 
@@ -47,13 +62,10 @@
 
 
 
-	<e:Group id="grpTips" x="416" y="294" locked="true" visible="false">
-		<e:Image id="grpTipsbg" source="nn.d1" y="0" x="0" />
-		<e:Image id="grpTipsInfo" source="nn.d2" y="0" x="0" />
-	</e:Group>
 
 
-	<e:Group width="1472" height="162" x="0" bottom="0" locked="true">
+
+	<e:Group width="1472" height="162" x="0" y="666" locked="true">
 		<e:Image id="_image_1" x="347.73" scaleX="1" scaleY="1" source="baccarat_game_icon_chouma_4_png" y="-81"/>
 		<e:Image id="xuanzho" x="337.78" scaleX="1" scaleY="1" y="-97" source="baccarat_game_chouma_light_png"/>
 		<e:Image id="_image_2" x="484.39" scaleX="1" scaleY="1" y="-61" source="baccarat_game_icon_chouma_10_png"/>
@@ -117,32 +129,36 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"/>
-	<e:Group x="246.84" y="175.49" locked="true">
-		<e:Image id="effectTouch0" width="304" height="223" x="0" y="0" source="baccarat_game_xiazhu_light_1_png"/>
-		<e:Label id="grade_text_0_0" text="1231231" x="13.68" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xf4a938" verticalAlign="middle" textAlign="left"/>
-		<e:Label text="1231231" x="185.82" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left" id="grade_text_0_1"/>
+	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0" locked="true">
 	</e:Group>
 	<e:Group x="919.92" y="175.49" locked="true">
+		<e:Image id="effectTouch0" width="304" height="223" x="0" y="0" source="baccarat_game_xiazhu_light_1_png"/>
+		<e:Label id="grade_text_0_0" text="1231231" x="13.68" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
+		<e:Label id="grade_text_0_1" text="1231231" x="185.82" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
+	</e:Group>
+	<e:Group x="246.84" y="175.49" locked="true">
 		<e:Image id="effectTouch1" width="304" height="223" x="0" y="0" source="baccarat_game_xiazhu_light_1_png"/>
-		<e:Label id="grade_text_1_0" text="1231231" x="13.68" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
+		<e:Label id="grade_text_1_0" text="1231231" x="13.68" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xf4a938" verticalAlign="middle" textAlign="left"/>
 		<e:Label id="grade_text_1_1" text="1231231" x="185.82" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
 	</e:Group>
-	<e:Group x="246.84" y="396.07" locked="true">
-		<e:Image id="effectTouch2" width="304" height="158" x="0" y="0" source="baccarat_game_xiazhu_light_6_png"/>
+	<e:Group x="545.07" y="396.07" locked="true">
+		<e:Image id="effectTouch2" width="381" height="156" x="0" y="0" source="baccarat_game_xiazhu_light_3_png"/>
 		<e:Label id="grade_text_2_0" text="1231231" x="13.68" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
-		<e:Label id="grade_text_2_1" text="1231231" x="185.82" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
+		<e:Label id="grade_text_2_1" text="1231231" x="257.04" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
 	</e:Group>
 	<e:Group x="919.92" y="396.07" locked="true">
 		<e:Image id="effectTouch3" width="304" height="158" x="0" y="0" source="baccarat_game_xiazhu_light_6_png"/>
 		<e:Label id="grade_text_3_0" text="1231231" x="13.68" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
 		<e:Label id="grade_text_3_1" text="1231231" x="185.82" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
 	</e:Group>
-	<e:Group x="545.07" y="396.07" locked="true">
-		<e:Image id="effectTouch4" width="381" height="156" x="0" y="0" source="baccarat_game_xiazhu_light_3_png"/>
+
+	<e:Group x="246.84" y="396.07" locked="true">
+		<e:Image id="effectTouch4" width="304" height="158" x="0" y="0" source="baccarat_game_xiazhu_light_6_png"/>
 		<e:Label id="grade_text_4_0" text="1231231" x="13.68" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
-		<e:Label id="grade_text_4_1" text="1231231" x="257.04" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
+		<e:Label id="grade_text_4_1" text="1231231" x="185.82" y="9.47" height="30" fontFamily="Microsoft YaHei" size="26" textColor="0xF4A938" verticalAlign="middle" textAlign="left"/>
 	</e:Group>
+
+
 	<e:Group id="wjlistkuang" x="311" y="183" locked="true" visible="false">
 		<e:Image width="850" height="463" source="baccarat_playersBg_png" x="0" y="0" locked="true"/>
 		<e:Image id="packup" width="128" height="57" source="baccarat_tips_close_png" y="2.66" x="711.36" locked="true"/>
@@ -158,18 +174,18 @@
 	</e:Group>
 	<e:Group id="Themitoken" x="0" y="205" locked="true" visible="false">
 		<e:Image scaleX="1" scaleY="1" width="1472" height="419" source="baccarat_game_mipai_bg_png" x="0" y="0" locked="true"/>
-		<e:Image id="_bei_puke_0_0" x="304" y="78" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png"/>
-		<e:Image id="_bei_puke_0_1" x="538" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
-		<e:Image id="puke_0_0" x="304" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
-		<e:Image id="puke_0_1" x="538" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
+		<e:Image id="_bei_puke_0_0" x="223.95" y="78" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png"/>
+		<e:Image id="_bei_puke_0_1" x="457.95" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
+		<e:Image id="puke_0_0" x="51.23" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
+		<e:Image id="puke_0_1" x="283.71" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
 		<e:Image id="_bei_puke_0_2" x="381.51" scaleX="1" scaleY="1" width="170" height="255" rotation="-90" y="295" source="gf_poker0_png"/>
-		<e:Image id="puke_0_2" x="381.51" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="295"/>
-		<e:Image id="_bei_puke_1_0" x="772.33" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
-		<e:Image id="_bei_puke_1_1" x="1006.07" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
-		<e:Image id="puke_1_0" x="772.33" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
-		<e:Image id="puke_1_1" x="1006.07" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
+		<e:Image id="puke_0_2" x="123.93" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="295"/>
+		<e:Image id="_bei_puke_1_0" x="692.28" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
+		<e:Image id="_bei_puke_1_1" x="926.02" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
+		<e:Image id="puke_1_0" x="522.6" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
+		<e:Image id="puke_1_1" x="754.77" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
 		<e:Image id="_bei_puke_1_2" x="850.39" scaleX="1" scaleY="1" width="170" height="255" rotation="-90" y="295" source="gf_poker0_png"/>
-		<e:Image id="puke_1_2" x="850.39" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="295"/>
+		<e:Image id="puke_1_2" x="594.31" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="295"/>
 		<e:Group id="xian_tishi" x="276" y="16">
 			<e:Image width="401" height="35" source="baccarat_game_mipai_infobgB_png" x="0" y="0"/>
 			<e:Label id="xian_Label" text="闲家咪牌中" anchorOffsetX="0" width="401" height="32" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" x="0" y="2"/>
