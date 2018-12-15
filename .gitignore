@@ -1,3 +1,5 @@
 /app_code/bin-debug
 /app_code/bin-release
 /app_code_v/bin-debug
+/app_code_new/bin-release
+/app_code_new/bin-debug
