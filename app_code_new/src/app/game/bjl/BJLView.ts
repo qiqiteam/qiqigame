@@ -64,18 +64,30 @@ class BJLView extends eui.Component {
     public scroller: eui.Scroller;
     public userlist: eui.List;
     public Themitoken: eui.Group;
+    public cardgrp_0: eui.Group;
     public _bei_puke_0_0: eui.Image;
-    public _bei_puke_0_1: eui.Image;
     public puke_0_0: eui.Image;
+    public mask_0: eui.Rect;
+    public cardgrp_1: eui.Group;
+    public _bei_puke_0_1: eui.Image;
     public puke_0_1: eui.Image;
-    public _bei_puke_0_2: eui.Image;
-    public puke_0_2: eui.Image;
+    public mask_1: eui.Rect;
+    public cardgrp_2: eui.Group;
     public _bei_puke_1_0: eui.Image;
-    public _bei_puke_1_1: eui.Image;
     public puke_1_0: eui.Image;
+    public mask_2: eui.Rect;
+    public cardgrp_3: eui.Group;
+    public _bei_puke_1_1: eui.Image;
     public puke_1_1: eui.Image;
-    public _bei_puke_1_2: eui.Image;
+    public mask_3: eui.Rect;
+    public cardgrp_4: eui.Group;
+    public puke_0_2: eui.Image;
+    public _bei_puke_0_2: eui.Image;
+    public mask_4: eui.Rect;
+    public cardgrp_5: eui.Group;
     public puke_1_2: eui.Image;
+    public _bei_puke_1_2: eui.Image;
+    public mask_5: eui.Rect;
     public xian_tishi: eui.Group;
     public xian_Label: eui.Label;
     public zhuang_tishi: eui.Group;
@@ -167,6 +179,7 @@ class BJLView extends eui.Component {
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
         this.juegengxin(1);
+
     }
 
     /**数据初始化 */
@@ -214,6 +227,10 @@ class BJLView extends eui.Component {
             this['puke_1_' + i].source = '';
             this['puke_1_' + i].visible = false;
         }
+        for (let i = 0; i < 6; i++) {
+            this['cardgrp_' + i].mask = this['mask_' + i];
+        }
+
         this._bei_puke_0_2.visible = false;
         this._bei_puke_1_2.visible = false;
 
@@ -242,9 +259,6 @@ class BJLView extends eui.Component {
             var cardPos = [];
             for (var j = 0; j < 3; j++) {
                 var card: eui.Image = this['_bei_puke_' + index + '_' + j];
-                card.source = '';
-                card.anchorOffsetX = card.width / 2;
-                card.x += card.width / 2;
                 var pos: egret.Point = new egret.Point;
                 pos.x = card.x;
                 pos.y = card.y;
@@ -296,7 +310,9 @@ class BJLView extends eui.Component {
                 this.sendamessage(EventConst.baijialebeton, this.multipleList[this.lastTouchBetIndex - 1], 5);
             }
         } else if (e.target == this._btn_meun) {
-
+            // this.addjiesuan_1Effect();
+            // this.addjiesuan_2Effect();
+            // this.addjiesuan_3Effect();
         } else if (e.target == this.packup) {
             this.wjlistkuang.visible = false;
         } else if (e.target == this._btn_close) {
@@ -359,7 +375,7 @@ class BJLView extends eui.Component {
             this.js_ge.source = 'baccarat_font_bureau_' + index % 10 + '_png';
             this.js_ge.x = 601;
         } else {
-            this.js_shi.visible = true;
+            this.js_shi.visible = false;
             this.js_ge.visible = true;
             this.jushu_bg.source = 'baccarat_font_bureau_diju1_png';
             this.js_ge.source = 'baccarat_font_bureau_' + index + '_png';
@@ -474,16 +490,20 @@ class BJLView extends eui.Component {
         this.grpCard_0_1.source = 'qznn_card_' + data._obj.playerCard[1];
         this.puke_0_0.source = 'qznn_card_' + data._obj.playerCard[1];
 
-        this.puke_0_0.x = this.orginPlayePos[0][0].x - 170;
+        // this.puke_0_0.x = this.orginPlayePos[0][0].x - 170;
         this.puke_0_0.visible = true;
         this.puke_0_1.source = 'qznn_card_' + data._obj.playerCard[0];
 
-        this.puke_0_1.x = this.orginPlayePos[0][1].x - 170;
+        // this.puke_0_1.x = this.orginPlayePos[0][1].x - 170;
         this.puke_0_1.visible = true;
 
         for (let i = 0; i < 2; i++) {
             this['_bei_puke_0_' + i].visible = true;
+            this['_bei_puke_0_' + i].x = this.orginPlayePos[0][i].x;
+            this['_bei_puke_0_' + i].y = this.orginPlayePos[0][i].y;
             this['_bei_puke_1_' + i].visible = true;
+            this['_bei_puke_1_' + i].x = this.orginPlayePos[0][i].x;
+            this['_bei_puke_1_' + i].y = this.orginPlayePos[0][i].y;
         }
 
         this.fanpaixiaog(0);
@@ -505,11 +525,11 @@ class BJLView extends eui.Component {
         this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[1];
         this.puke_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
 
-        this.puke_1_0.x = this.orginPlayePos[1][0].x - 170;
+        // this.puke_1_0.x = this.orginPlayePos[1][0].x - 170;
         this.puke_1_0.visible = true;
         this.puke_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
 
-        this.puke_1_1.x = this.orginPlayePos[1][1].x - 170;
+        // this.puke_1_1.x = this.orginPlayePos[1][1].x - 170;
         this.puke_1_1.visible = true;
         this._bei_puke_1_0.visible = true;
         this._bei_puke_1_1.visible = true;
@@ -534,6 +554,8 @@ class BJLView extends eui.Component {
         this.puke_0_2.source = 'qznn_card_' + data._obj.playerCard[0];
         this.puke_0_2.visible = true;
         this._bei_puke_0_2.visible = true;
+        this._bei_puke_0_2.x = this.orginPlayePos[0][2].x;
+        this._bei_puke_0_2.y = this.orginPlayePos[0][2].y;
 
         this.fapai2(0, data._obj.playerCard[0]);
     }
@@ -555,6 +577,9 @@ class BJLView extends eui.Component {
         this.puke_1_2.source = 'qznn_card_' + data._obj.bankerCard[0];
         this.puke_1_2.visible = true;
         this._bei_puke_1_2.visible = true;
+        this._bei_puke_1_2.x = this.orginPlayePos[1][2].x;
+        this._bei_puke_1_2.y = this.orginPlayePos[1][2].y;
+
         this.fapai2(1, data._obj.bankerCard[0]);
     }
 
@@ -562,7 +587,7 @@ class BJLView extends eui.Component {
     private onAcquisitionGolbBack(data: any): void {
         if (data._obj.code == 200) {
             if (UserInfo.getInstance().uid == data._obj.userid) {
-                UserInfo.getInstance().goldcoins = data._obj.wingolb;
+                UserInfo.getInstance().goldcoins = data._obj.goldcoins;
                 this.labelGold0.text = GlobalFunction.Formatconversion(data._obj.goldcoins);
             }
         }
@@ -839,519 +864,19 @@ class BJLView extends eui.Component {
 
     /**翻牌动作效果 */
     private fanpaixiaog(index: number): void {
+
         for (let i = 0; i < 2; i++) {
-            var square2: egret.Shape = new egret.Shape();
-            square2.graphics.beginFill(0xff0000);
-            square2.graphics.drawRect(0, 0, 170, 255);
-            square2.graphics.endFill();
-            this.Themitoken.addChild(square2);
-            let _card2 = this["puke_" + index + "_" + i];
-            square2.x = this.orginPlayePos[index][i].x;
-            square2.y = this.orginPlayePos[index][i].y;
-
-            _card2.mask = square2;
-            egret.Tween.get(_card2).to({ x: _card2.x + 170, y: _card2.y }, 600);
-
-            var square1: egret.Shape = new egret.Shape();
-            square1.graphics.beginFill(0xff0000);
-            square1.graphics.drawRect(0, 0, 170, 255);
-            square1.graphics.endFill();
-            this.Themitoken.addChild(square1);
-            let _card1 = this["_bei_puke_" + index + "_" + i];
-            square1.x = this.orginPlayePos[index][i].x;
-            square1.y = this.orginPlayePos[index][i].x;
-
-            _card1.mask = square1;
-            egret.Tween.get(_card1).to({ x: _card1.x - 170, y: _card1.y }, 800);
-
+            let _card1 = this["puke_" + index + "_" + i];
+            let _card2 = this["_bei_puke_" + index + "_" + i];
+            _card1.x = 0;
+            _card1.y = this.orginPlayePos[index][i].y;
+            _card2.x = this.orginPlayePos[index][i].x;
+            _card2.y = this.orginPlayePos[index][i].y;
+            egret.Tween.get(_card1).to({ x: 170, y: 0 }, 1200);
+            egret.Tween.get(_card2).to({ x: 0, y: 0 }, 800);
         }
 
     }
-    //设置彩金
-    //private setHandsel(num): void {
-    //this.labHandsel.text = QuickManage.moneyStr(num);
-    //}
-    /**
-     * 定时器
-     */
-    // private setCountdown(): void {
-    //     this.cdTimer = new egret.Timer(1000);
-    //     this.cdTimer.addEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
-    // }
-
-    // private clacTimer(): void {
-    //     //if (this.cdNum % 7 == 0) {
-    //     //    this.getBets();
-    //     //}
-    //     if (this.cdNum > 0) {
-    //         this.cdNum--;
-    //     }
-    //     else {
-    //         this.cdTimer.stop();
-    //         this.cdNum = 0;
-
-    //         this.resetGame();
-
-
-    //         this.cdNum = 5;
-    //         this.cardEffect();
-    //     }
-    //     if (this.cdNum < 10) {
-    //         this.labCountdown0.text = '0';
-    //         this.labCountdown1.text = this.cdNum + '';
-    //     }
-    //     else {
-    //         this.labCountdown0.text = (this.cdNum + '').split('')[0];
-    //         this.labCountdown1.text = (this.cdNum + '').split('')[1];
-    //     }
-    // }
-
-    // //msg.state     1 free 禁止玩儿游戏   2 下注中  3 封盘倒计时
-    // private joinCallback(msg): void {
-    //     if (msg.code == 200) {
-    //         this.curRate = msg.data.rate;
-    //         var data = msg.data;
-    //         var seats = msg.data.seats;
-    //         for (var i = 0; i < seats.length; i++) {
-    //             this['imghead' + seats[i].seat].source = seats[i].headurl;
-    //             this['labelHead' + seats[i].seat].text = seats[i].name;
-    //             this['imghead' + seats[i].seat].height = this['imghead' + seats[i].seat].width = 70;
-    //         }
-    //         this.limitGold = data.limitGold;
-    //         this.limitVip = data.limitVip;
-    //         //this.setHandsel(data.caijin);
-    //         //设置庄信息
-    //         //this.setBankerInfo(data.zhuang);
-    //         //设置倒计时
-    //         this.cdNum = data.time;
-    //         this.cdTimer.start();
-    //         if (msg.state == 1) {
-    //             this.isCanBets = false;
-    //         }
-    //         else if (msg.state == 2) {
-    //             this.isCanBets = true;
-    //         }
-    //         else if (msg.state == 3) {
-    //             this.isCanBets = false;
-    //         }
-    //         console.log('join_game: ' + data.state);
-    //     }
-    //     else {
-    //         //TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-    //     }
-    // }
-
-    // public onMsgListen(data): void {
-    //     var msg = data.msg
-    //     console.log('onMsgListen: ' + msg.type, '_niuniuMsgListen_');
-    //     switch (msg.type) {
-    //         case 0: //开始下注
-    //             this.cdNum = parseInt(msg.time) + 3;
-    //             this.cdTimer.start();
-    //             break;
-    //         case 1: //封盘
-    //             this.isCanBets = false;
-    //             this.showGameTips(3);
-    //             break;
-    //         case 2: //结算
-    //             this.setGameResult(msg.data);
-    //             break;
-    //         case 3: //更换庄家
-    //             this.changeBankerObj = msg.zhuang;
-    //             this.isChangeBanker = true;
-    //             break;
-    //         case 4: //更新座位
-    //             this.updataSeat(1, msg.data);
-    //             break;
-    //         case 5:	//离开座位
-    //             this.updataSeat(2, msg.seat);
-    //             break;
-    //         case 6://同步彩金
-    //             this.updateHandsel(msg);
-    //             break;
-    //         case 7://通知庄 名次
-    //             //this.updateBankerRank(msg);
-    //             break;
-    //     }
-    // }
-
-    // /**
-    //  * 获取结算数据，显示结果面板时设置
-    //  */
-    // private setGameResult(data): void {
-    //     //this.grpCountdown.visible = false;
-    //     this.cardResult = data;
-
-    // }
-
-    // /**
-    //  * 同步座位
-    //  */
-    // private updataSeat(type, data): void {
-    //     if (type == 1) {
-    //         this['imghead' + data.seat].source = data.headurl;
-    //         this['imghead' + data.seat].height = this['imghead' + data.seat].width = 70;
-    //         this['labelHead' + data.seat].text = data.nick;
-    //     }
-    //     else {
-    //         this['imghead' + data].source = '';
-    //         this['labelHead' + data].text = '';
-    //     }
-    // }
-
-    // //同步彩金 （包含庄结算输赢）
-    // private updateHandsel(data): void {
-    //     if (this.cardResult == null)
-    //         return;
-    //     //this.resultCaijin = parseInt(data.data.gift);
-    //     //this.totalCaijin = parseInt(data.data.caijin);
-    //     // this.setHandsel(data.data.caijin);
-    //     this.maxUserData = data.data.max;
-    //     this.banker_total_gold = data.data.bankerTotalGold;
-    //     for (let i = 0; i < 4; i++) {
-    //         this['labTipsClick' + i].visible = false;
-    //     }
-    //     this.cardEffect();
-    // }
-
-    //同步庄的顺位
-    /*
-    private updateBankerRank(data): void {
-        if (!this.isApplyBanker)
-            return;
-        var id = GlobalData.openid + '@' + GlobalData.platform;
-        if (data.id == id) {
-            this.curBankerRanking = data.pos;
-        }
-        else if (data.pos < this.curBankerRanking || data.pos == this.curBankerRanking) {
-            this.curBankerRanking++;
-        }
-        this.labBankerRank.text = '排庄' + this.curBankerRanking;
-    }*/
-
-    //获取上庄列表
-    //private getBankerList(e): void {
-    //    if (e.target && (e.target.name == 'btnUpBanker' || e.target.name == 'btnDownBanker')) {
-    //        return;
-    //    }
-    //    Net.send(Protocol.NIUNIU_BANKER_LIST, {}, this.bankerListCallback.bind(this));
-    //}
-
-    //上庄列表
-    /*
-    private bankerListCallback(msg): void {
-        if (msg.code == 200) {
-            this.grpBankerList.visible = true;
-            for (var i = 0; i < 10; i++) {
-                if (i < msg.list.length) {
-                    this['bankerListItem' + i].visible = true;
-                    this['itemRank' + i].text = i + 1 + '';
-                    this['itemName' + i].text = msg.list[i].name;
-                    this['itemMoney' + i].text = QuickManage.moneyStr(msg.list[i].gold);
-                    this['itemVip' + i].text = 'v' + msg.list[i].vip;
-                }
-                else {
-                    if (i < 3) {
-                        this['bankerListItem' + i].visible = true;
-                        this['itemRank' + i].text = i + 1 + '';
-                        this['itemName' + i].text = '';
-                        this['itemMoney' + i].text = '';
-                        this['itemVip' + i].text = '';
-                    }
-                    else {
-                        this['bankerListItem' + i].visible = false;
-                    }
-                }
-            }
-        }
-        else {
-            TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-        }
-    }*/
-
-    //private onTouchCloseBankerList(): void {
-    //    this.grpBankerList.visible = false;
-    //}
-
-    //同步下注消息
-    //private getBets(): void {
-    //    Net.send(Protocol.NIUNIU_GET_BETS, {}, this.getBetsCallback.bind(this));
-    //}
-
-    // //定时同步下注筹码
-    // private getBetsCallback(msg): void {
-    //     if (msg.code == 200) {
-    //         var list = msg.list;
-    //         // console.log('------------------- start ----------------------');
-    //         for (var i = 1; i < 5; i++) {
-    //             if (list[i].score != 0) {
-    //                 // console.log('list ' + i + ':' + list[i].score);
-    //                 // console.log('pool ' + i + ':' + this.poolBetArray[i]);
-    //                 if (list[i].score == this.poolBetArray[i])
-    //                     continue;
-    //                 if (this.isCanBets) {
-    //                     //this.showCoins(list[i].score - this.poolBetArray[i], i);//list[i].score
-    //                 }
-    //                 if (parseInt(this['labBetsPool' + (i - 1)].text) < (list[i].score / 10000)) {
-    //                     //this['labBetsPool' + (i - 1)].text = QuickManage.moneyStr(list[i].score);
-    //                     this.poolBetArray[i] = list[i].score;
-    //                 }
-    //                 // this['labBetsPool' + (i - 1)].text = QuickManage.moneyStr(list[i].score);
-    //                 // this.poolBetArray[i] = list[i].score;
-    //             }
-    //         }
-    //         // console.log('------------------- end ----------------------');
-    //     }
-    // }
-
-    //离开游戏判断
-    /*
-    private onTouchClose(): void {
-        if (this.isBanker) {
-            //TipsManage.showTips('您是庄家，下庄后方可离开！');
-            return;
-        }
-        if (this.isBets) {
-            //TipsManage.showTips('您已经下注，这局结束后方可离开！')
-            return;
-        }
-        Net.send(Protocol.NIUNIU_LEAVE_GAME, {}, (function (msg) {
-            if (msg.code == 200) {
-                this.dispose();
-            }
-            else {
-                //TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }).bind(this));
-    }*/
-
-    // //充值
-    // private onTouchCharge(): void {
-    //     //PanelManage.openShop(3);
-    // }
-
-    //充值返回
-    /*
-    private updatePayData(data): void {
-        GlobalData.user.gold = data.param.msg.gold;
-        lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-        this.labTitleVip.text = 'v' + GlobalData.user.vip;
-    }
-
-    //上庄
-    private onTouchUpBank(): void {
-        if (parseInt(GlobalData.user.vip) < this.limitVip) {
-            TipsManage.showTips('您的VIP等级未满' + this.limitVip + '级,不能上庄！');
-            return;
-        }
-        if (parseInt(GlobalData.user.gold) < this.limitGold) {
-            TipsManage.showTips('您的金币未满' + QuickManage.moneyStr(this.limitGold) + ',不能上庄！');
-            return;
-        }
-        Net.send(Protocol.NIUNIU_UP_BANKER, {}, this.upBankerCallback.bind(this));
-    }
-
-    //上庄回调
-    private upBankerCallback(msg): void {
-        if (msg.code == 200) {
-            TipsManage.showTips('申请上庄成功！');
-            this.btnDownBanker.visible = true;
-            this.btnUpBanker.visible = false;
-            this.isApplyBanker = true;
-        }
-    }
-
-    //下庄
-    private onTouchDownBank(): void {
-        Net.send(Protocol.NIUNIU_DOWN_BANKER, {}, this.downBankerCallback.bind(this));
-    }
-
-    //下庄回调
-    private downBankerCallback(msg): void {
-        if (msg.code == 200) {
-            TipsManage.showTips('申请下庄成功！');
-            this.btnDownBanker.visible = false;
-            this.btnUpBanker.visible = true;
-            this.isApplyBanker = false;
-            this.curBankerRanking = -1;
-        }
-    }
-
-    //vip 座位
-    private onTouchSeat(index): void {
-        if (this.isBanker) {
-            TipsManage.showTips('当前您是庄，不能坐下！');
-            return;
-        }
-        Net.send(Protocol.NIUNIU_SEAT_DOWN, { seat: index }, (function (msg) {
-            if (msg.code != 200) {
-                TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }).bind(this));
-    }*/
-
-    //筹码选择
-    /*
-    private onTouchBet(index): void {
-        if (this.isBanker) {
-            TipsManage.showTips('您是庄家，不能下注！');
-            return;
-        }
-        if (!this.isCoinsReturn) {
-            console.log('touche  Bet++++++++++++++')
-            TipsManage.showTips('操作过于频繁，请稍等！');
-            return;
-        }
-        if (this.lastTouchBetIndex == index) {
-            return;
-        }
-        if (this.lastTouchBetIndex != -1) {
-            this['btnBet' + this.lastTouchBetIndex].scaleX = this['btnBet' + this.lastTouchBetIndex].scaleY = 1;
-        }
-        this.lastTouchBetIndex = index;
-        this['btnBet' + index].scaleX = this['btnBet' + index].scaleY = 1.2;
-        this.betsNum = BJLUtil.getInstance().getBetNumber(index);
-        this.labCurChip.text = '注码：' + this['labBet' + index].text;
-    }*/
-    /*
-        private onTouchSelectIndex(index): void {
-            if (this.isCardEffectShow)
-                return;
-            let curTime: number = (new Date).getTime();
-            if ((curTime - this.lastTouchBetTime) < 400) {
-                return;
-            }
-            this.lastTouchBetTime = curTime;
-            if (this.isBanker) {
-                TipsManage.showTips('您是庄家，不能下注！');
-                return;
-            }
-            if (!this.isCoinsReturn) {
-                // console.log('touche  select ========================')
-                TipsManage.showTips('操作过于频繁，请稍等！');
-                return;
-            }
-            if (this.isCanBets) {
-                this.betsPostion = index + 1;
-                this.isCoinsReturn = false;
-                // console.log('下注位置：' + this.betsPostion + '  金额：' + this.betsNum);
-                Net.send(Protocol.NIUNIU_BET_GOLD, { betId: this.betsPostion, gold: this.betsNum }, this.betGlodCallback.bind(this), false);
-            }
-        }
-    
-        //下注
-        private betGlodCallback(msg): void {
-            this.isCoinsReturn = true;
-            if (msg.code == 200) {
-                this.isBets = true;
-                GlobalData.user.gold = (parseInt(GlobalData.user.gold) - this.betsNum) + '';
-                this.titleLabMoney.text = QuickManage.moneyStr(parseInt(GlobalData.user.gold));
-                // console.log('下注成功 index：' + this.betsPostion + '  金额：' + this.betsNum);
-                this.selfbetsNum[this.betsPostion] = parseInt(this.selfbetsNum[this.betsPostion]) + this.betsNum
-                this.poolBetArray[this.betsPostion] = parseInt(this.poolBetArray[this.betsPostion]) + this.betsNum;
-                this['labBetsPool' + (this.betsPostion - 1)].text = QuickManage.moneyStr(this.poolBetArray[this.betsPostion]);
-                this.showCoins(this.betsNum, this.betsPostion);
-                //同步自己的金币
-                for (var i = 0; i < 4; i++) {
-                    this['labBetsSelf' + i].text = QuickManage.moneyStr(this.selfbetsNum[i + 1]);
-                }
-            }
-            else {
-                TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }
-    
-        private isFirstSetBanker: boolean = true;
-        //设置庄家的消息
-        private setBankerInfo(banker): void {
-            if (banker.sys == 1) {
-                this.bankerHead.source = 'nn.head';
-                this.bankerHead.width = this.bankerHead.height = 55;
-                this.bankerName.text = '萌萌哒';
-                this.labBankerMoney.text = QuickManage.moneyStr(88888880000);
-                this.isSysBanker = true;
-                this.labBankerLastNum.text = '剩余' + parseInt(banker.num) + '次';
-                this.lastGameBankerNum = banker.num;
-                this.isBanker = false;
-                this.labBankerVip.text = 'v10';
-            }
-            else {
-                if (banker.id == GlobalData.openid + '@' + GlobalData.platform) {
-                    this.isBanker = true;
-                    this.labBankerRank.text = '';
-                }
-                else {
-                    if (this.isApplyBanker) {
-                        if (banker.pos < this.curBankerRanking) {
-                            this.curBankerRanking--;
-                            this.labBankerRank.text = '排庄' + this.curBankerRanking;
-                        }
-                    }
-                    else {
-                        this.labBankerRank.text = '';
-                        this.btnDownBanker.visible = false;
-                        this.btnUpBanker.visible = true;
-                    }
-                    this.isBanker = false;
-                }
-                if (this.bankerName.text != '萌萌哒') {
-                    if (!this.isFirstSetBanker) {
-                        PanelManage.chat.sendGameChat(this.bankerName.text + '下庄了');
-                    }
-                }
-                this.bankerHead.source = banker.headurl//GlobalData.user.headurl;
-                this.bankerHead.width = this.bankerHead.height = 55;
-                this.bankerName.text = banker.nick;
-                this.labBankerMoney.text = QuickManage.moneyStr(banker.gold);
-                this.labBankerLastNum.text = '剩余' + parseInt(banker.num) + '次';
-                this.lastGameBankerNum = banker.num;
-                this.isSysBanker = false;
-                this.labBankerVip.text = 'v' + banker.vip;
-                if (!this.isFirstSetBanker) {
-                    PanelManage.chat.sendGameChat(this.bankerName.text + '上庄了');
-                }
-            }
-            this.isFirstSetBanker = false;
-        }
-    
-        //设置开奖记录
-        private setHistory(): void {
-            for (var i = 0; i < 10; i++) {
-                this['grpHistory' + i].visible = false;
-                for (var m = 0; m < 4; m++) {
-                    this['grpHistory' + m + '_' + i].source = '';
-                }
-            }
-        }
-    
-        private updateGold(): void {
-            Net.send(Protocol.NIUNIU_GET_GOLD, {}, this.getGoldCallback.bind(this));
-        }
-    
-        private getGoldCallback(data): void {
-            if (data.code == 200) {
-                GlobalData.user.gold = data.data.gold;
-                lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-            }
-        }
-    
-    */
-    //========================== Effect Show ===============================
-
-    // //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
-    // private showGameTips(type): void {
-    //     this.grpTipsInfo.source = BRNNUtil.getInstance().getMsgSource(type);
-    //     this.grpTips.visible = true;
-    //     this.grpTipsbg.alpha = 0;
-    //     this.grpTipsInfo.x = 640;
-    //     this.playClickSound(BRNNUtil.getInstance().getSoundEffect(type));
-    //     egret.Tween.get(this.grpTipsbg).to({ alpha: 1 }, 400).wait(400).call(function () {
-    //         egret.Tween.get(this).to({ alpha: 0 }, 400);
-    //     }, this.grpTipsbg);
-    //     egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
-    //         egret.Tween.get(this).to({ x: -1640 }, 400);
-    //     }, this.grpTipsInfo);
-    // }
 
     //显示筹码
     private showCoins(pos: egret.Point, num: number, msg: number): void {
@@ -1406,40 +931,16 @@ class BJLView extends eui.Component {
     }
     /**补牌动画 */
     private fapai2(index: number, num: number) {
-        var card: eui.Image = this['grpCard_' + index + '_2'];
-        card.x = 713.5;
-        card.y = 100;
-        card.source = 'qznn_card_' + num;
-        var pos = this.orginPlayerCardPos[index][2];
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400);
 
-        var square2: egret.Shape = new egret.Shape();
-        square2.graphics.beginFill(0xff0000);
-        square2.graphics.drawRect(0, 0, 255, 170);
-        square2.graphics.endFill();
-        this.Themitoken.addChild(square2);
-        let _card2 = this["puke_" + index + "_2"];
+        let _card1 = this["puke_" + index + "_2"];
+        let _card2 = this["_bei_puke_" + index + "_2"];
+        _card1.x = 0;
+        _card1.y = this.orginPlayePos[index][2].y;
+        _card2.x = this.orginPlayePos[index][2].x;
+        _card2.y = this.orginPlayePos[index][2].y;
 
-        square2.x = this.orginPlayePos[index][2].x;
-        square2.y = this.orginPlayePos[index][2].y;
-
-        _card2.mask = square2;
-        egret.Tween.get(_card2).to({ x: _card2.x + 255, y: _card2.y }, 600);
-
-        var square1: egret.Shape = new egret.Shape();
-        square1.graphics.beginFill(0xff0000);
-        square1.graphics.drawRect(0, 0, 255, 170);
-        square1.graphics.endFill();
-        this.Themitoken.addChild(square1);
-        let _card1 = this["_bei_puke_" + index + "_2"];
-        square1.x = this.orginPlayePos[index][2].x;
-        square1.y = this.orginPlayePos[index][2].y;
-        _card1.mask = square1;
-        egret.Tween.get(_card1).to({ x: _card1.x - 255, y: _card1.y }, 800);
-
-
-
-
+        egret.Tween.get(_card1).to({ x: 255 }, 1200);
+        egret.Tween.get(_card2).to({ x: 0 }, 800);
     }
 
     private flyIntval: number = 0;  //
