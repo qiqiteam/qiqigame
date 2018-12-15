@@ -174,23 +174,60 @@
 	</e:Group>
 	<e:Group id="Themitoken" x="0" y="205" locked="true" visible="false">
 		<e:Image scaleX="1" scaleY="1" width="1472" height="419" source="baccarat_game_mipai_bg_png" x="0" y="0" locked="true"/>
-		<e:Image id="_bei_puke_0_0" x="223.95" y="78" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png"/>
-		<e:Image id="_bei_puke_0_1" x="457.95" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
-		<e:Image id="puke_0_0" x="51.23" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
-		<e:Image id="puke_0_1" x="283.71" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
-		<e:Image id="_bei_puke_0_2" x="381.51" scaleX="1" scaleY="1" width="170" height="255" rotation="-90" y="295" source="gf_poker0_png"/>
-		<e:Image id="puke_0_2" x="123.93" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="295"/>
-		<e:Image id="_bei_puke_1_0" x="692.28" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
-		<e:Image id="_bei_puke_1_1" x="926.02" y="78" scaleX="1" scaleY="1" width="170" height="255" source="gf_poker0_png"/>
-		<e:Image id="puke_1_0" x="522.6" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
-		<e:Image id="puke_1_1" x="754.77" y="78" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png"/>
-		<e:Image id="_bei_puke_1_2" x="850.39" scaleX="1" scaleY="1" width="170" height="255" rotation="-90" y="295" source="gf_poker0_png"/>
-		<e:Image id="puke_1_2" x="594.31" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="295"/>
-		<e:Group id="xian_tishi" x="276" y="16">
+
+
+		<e:Group id="cardgrp_0" x="104.33" y="78" locked="true">
+			<e:Image id="_bei_puke_0_0" x="170" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png" y="0"/>
+			<e:Image id="puke_0_0" x="0" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" y="0"/>
+
+		</e:Group>
+		<e:Rect id="mask_0" width="170" height="255" x="273.03" verticalCenter="0" locked="true"/>
+		<e:Group id="cardgrp_1" x="335.52" y="78" locked="true">
+			<e:Image id="_bei_puke_0_1" x="170" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png" y="0"/>
+			<e:Image id="puke_0_1" x="0" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" y="0"/>
+
+		</e:Group>
+		<e:Rect id="mask_1" width="170" height="255" x="503.34" verticalCenter="0" locked="true"/>
+		<e:Group id="cardgrp_2" x="608.22" y="78" locked="true">
+			<e:Image id="_bei_puke_1_0" x="170" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png" y="0"/>
+			<e:Image id="puke_1_0" x="0" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" y="0"/>
+
+		</e:Group>
+		<e:Rect id="mask_2" width="170" height="255" x="775.52" y="82" locked="true"/>
+		<e:Group id="cardgrp_3" x="815.22" y="78" locked="true">
+			<e:Image id="_bei_puke_1_1" x="170" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png" y="0"/>
+			<e:Image id="puke_1_1" x="0" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" y="0"/>
+
+		</e:Group>
+		<e:Rect id="mask_3" width="170" height="255" x="982.95" verticalCenter="0" locked="true"/>
+		<e:Group id="cardgrp_4" x="100.01" width="500" height="170" y="125" locked="true">
+			<e:Image id="_bei_puke_0_2" x="255" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png" rotation="-90" y="170"/>
+			<e:Image id="puke_0_2" x="0" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="170"/>
+
+
+		</e:Group>
+		<e:Rect id="mask_4" width="255" height="170" scaleX="1" scaleY="1" x="348.07" y="125" locked="true"/>
+		<e:Group x="600" width="500" height="170" id="cardgrp_5" y="125">
+			<e:Image id="_bei_puke_1_2" x="255" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png" rotation="-90" y="170"/>
+			<e:Image id="puke_1_2" x="0" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="170"/>
+
+
+		</e:Group>
+		<e:Rect id="mask_5" width="255" height="170" scaleX="1" scaleY="1" y="125" x="849.64" locked="true"/>
+
+
+
+
+
+
+
+
+
+		<e:Group id="xian_tishi" x="276" y="16" visible="false">
 			<e:Image width="401" height="35" source="baccarat_game_mipai_infobgB_png" x="0" y="0"/>
 			<e:Label id="xian_Label" text="闲家咪牌中" anchorOffsetX="0" width="401" height="32" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" x="0" y="2"/>
 		</e:Group>
-		<e:Group id="zhuang_tishi" x="785" y="16">
+		<e:Group id="zhuang_tishi" x="785" y="16" visible="false">
 			<e:Image width="401" height="35" x="0" y="0" source="baccarat_game_mipai_infobgR_png"/>
 			<e:Label id="zhuang_Label" text="庄家咪牌中" anchorOffsetX="0" width="401" height="32" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" x="0" y="2"/>
 		</e:Group>
