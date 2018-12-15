@@ -99,7 +99,7 @@ module xlLib {
             return sp;
         }
 
-       /**
+        /**
          * 创建DragonBones显示对象
          */
         public static createDragonBonesDisplay(source: string,bones?: string, cache?: number): dragonBones.Armature {
@@ -162,6 +162,7 @@ module xlLib {
                 }
         }
 
+
         /**
          * 设置按钮变灰
          * 	xlLib.DisplayUtils.setButtonEnabled(this._btn_visitor,false);
@@ -193,9 +194,8 @@ module xlLib {
                 xlLib.Console.error("armature不能为空");
                 return;
             }
-            dragonBones["WorldClock"].clock.remove(armature);
+            dragonBones.WorldClock.clock.remove(armature);
             armature.animation.stop();
-            //egret.stopTick(this.onTicker,this);
             armature.dispose();
         }
         /**
