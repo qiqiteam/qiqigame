@@ -20,8 +20,8 @@ class Const {
     public static GAME_ZHAJINHUA: string = "zhajinhua";
     //---------------------------游戏类型
     /**抢庄牛牛 */
-    public static TYPE_QZNN: string = "qznn";
-    // public static TYPE_QZNN:string  = "niuniu";
+    // public static TYPE_QZNN: string = "qznn";
+    public static TYPE_QZNN:string  = "niuniu";
     /**通比牛牛 */
     public static TYPE_TBNN: string = "tbnn";
     /**千人牛牛 */
