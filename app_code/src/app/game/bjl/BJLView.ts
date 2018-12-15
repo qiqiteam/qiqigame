@@ -359,7 +359,7 @@ class BJLView extends eui.Component {
             this.js_ge.source = 'baccarat_font_bureau_' + index % 10 + '_png';
             this.js_ge.x = 601;
         } else {
-            this.js_shi.visible = false;
+            this.js_shi.visible = true;
             this.js_ge.visible = true;
             this.jushu_bg.source = 'baccarat_font_bureau_diju1_png';
             this.js_ge.source = 'baccarat_font_bureau_' + index + '_png';
@@ -480,8 +480,11 @@ class BJLView extends eui.Component {
 
         this.puke_0_1.x = this.orginPlayePos[0][1].x - 170;
         this.puke_0_1.visible = true;
-        this._bei_puke_0_0.visible = true;
-        this._bei_puke_0_1.visible = true;
+
+        for (let i = 0; i < 2; i++) {
+            this['_bei_puke_0_' + i].visible = true;
+            this['_bei_puke_1_' + i].visible = true;
+        }
 
         this.fanpaixiaog(0);
 
@@ -557,7 +560,6 @@ class BJLView extends eui.Component {
 
     /**金币变为** */
     private onAcquisitionGolbBack(data: any): void {
-        console.log("金币变为**");
         if (data._obj.code == 200) {
             if (UserInfo.getInstance().uid == data._obj.userid) {
                 UserInfo.getInstance().goldcoins = data._obj.wingolb;
@@ -1417,8 +1419,10 @@ class BJLView extends eui.Component {
         square2.graphics.endFill();
         this.Themitoken.addChild(square2);
         let _card2 = this["puke_" + index + "_2"];
-        square2.x = _card2.x + 255;
-        square2.y = _card2.y - 170;
+
+        square2.x = this.orginPlayePos[index][2].x;
+        square2.y = this.orginPlayePos[index][2].y;
+
         _card2.mask = square2;
         egret.Tween.get(_card2).to({ x: _card2.x + 255, y: _card2.y }, 600);
 
@@ -1428,8 +1432,8 @@ class BJLView extends eui.Component {
         square1.graphics.endFill();
         this.Themitoken.addChild(square1);
         let _card1 = this["_bei_puke_" + index + "_2"];
-        square1.x = _card1.x;
-        square1.y = _card1.y - 170;
+        square1.x = this.orginPlayePos[index][2].x;
+        square1.y = this.orginPlayePos[index][2].y;
         _card1.mask = square1;
         egret.Tween.get(_card1).to({ x: _card1.x - 255, y: _card1.y }, 800);
 
