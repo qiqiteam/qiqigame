@@ -299,6 +299,9 @@ var xlLib;
                 var isonce = void 0;
                 for (var i = 0; i < len; i++) {
                     var msg = arr[i];
+                    if (!msg) {
+                        continue;
+                    }
                     listen = msg[0];
                     if (!listen) {
                         continue;

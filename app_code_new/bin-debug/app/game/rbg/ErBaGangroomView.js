@@ -13,7 +13,6 @@ var ErBaGangroomView = (function (_super) {
     function ErBaGangroomView() {
         var _this = _super.call(this) || this;
         _this.skinName = "ErBaGangroomViewSkin";
-        xlLib.SoundMgr.instance.stopBgMusic();
         var musicBg = ["qznn_bg_mp3"];
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
         return _this;
@@ -22,18 +21,21 @@ var ErBaGangroomView = (function (_super) {
         _super.prototype.childrenCreated.call(this);
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
-        this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
+        this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
         this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        this.ebgroomeff = new ErBaGangroomEff();
+        this.addChildAt(this.ebgroomeff, 0);
+        this.ebgroomeff.play();
     };
     /**游戏状态 */
     ErBaGangroomView.prototype.GameStatus = function (data) {
         if (data._obj.code == 200) {
             xlLib.SceneMgr.instance.changeScene(RBGScene);
-            xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
         }
     };
     ErBaGangroomView.prototype.onEnterGame = function () {
+        this.playClickSound();
         if (!this.gameIconData) {
             return;
         }
@@ -45,23 +47,27 @@ var ErBaGangroomView = (function (_super) {
             token: UserInfo.getInstance().token, playway: playway.id
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, function (data) {
-            //xlLib.SceneMgr.instance.changeScene(RBGScene);
-            //xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
         }, this);
     };
     ErBaGangroomView.prototype.setGameIconData = function (gameIconData) {
         this.gameIconData = gameIconData;
     };
     ErBaGangroomView.prototype.dispose = function () {
-        xlLib.SoundMgr.instance.stopBgMusic();
+        // xlLib.SoundMgr.instance.stopBgMusic();
         var musicBg = ["hall_bg_mp3"];
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
         xlLib.PopUpMgr.removePopUp(this, 1);
     };
+    ErBaGangroomView.prototype.playClickSound = function () {
+        xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
+    };
     ErBaGangroomView.prototype.destroy = function () {
+        xlLib.DisplayUtils.destoryDragonBonesArmature(this.playerDb, "newAnimation");
+        this.ebgroomeff.stop();
         this.gameIconData = null;
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        this._btn_cjc.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
     };
     return ErBaGangroomView;
 }(eui.Component));
