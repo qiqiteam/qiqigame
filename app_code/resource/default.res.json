@@ -21,7 +21,7 @@
 			"name": "zhajinhua"
 		},
 		{
-			"keys": "tb_bg_table_png,bg_tbnn_jpg,nn_btn_tanpai_png,tongbi_bei2_png,tongbi_bei1_png,tongbi_bei_png",
+			"keys": "",
 			"name": "tbnn"
 		},
 		{
@@ -66,31 +66,6 @@
 			"name": "bg_timer_png"
 		},
 		{
-			"url": "assets/game/baijiale/img_100zhu.png",
-			"type": "image",
-			"name": "img_100zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_10zhu.png",
-			"type": "image",
-			"name": "img_10zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_20zhu.png",
-			"type": "image",
-			"name": "img_20zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_500zhu.png",
-			"type": "image",
-			"name": "img_500zhu_png"
-		},
-		{
-			"url": "assets/game/baijiale/img_50zhu.png",
-			"type": "image",
-			"name": "img_50zhu_png"
-		},
-		{
 			"url": "assets/game/baijiale/img_dibu.png",
 			"type": "image",
 			"name": "img_dibu_png"
@@ -104,26 +79,6 @@
 			"url": "assets/game/baijiale/img_zuoxia.png",
 			"type": "image",
 			"name": "img_zuoxia_png"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_blue.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_blue_PNG"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_blue_gang.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_blue_gang_PNG"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_red.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_red_PNG"
-		},
-		{
-			"url": "assets/game/baijiale/lh_game_dalu_red_gang.PNG",
-			"type": "bin",
-			"name": "lh_game_dalu_red_gang_PNG"
 		},
 		{
 			"url": "assets/game/brnn/bg_sz.png",
@@ -4221,36 +4176,6 @@
 			"name": "qznn_tongpei_mp3"
 		},
 		{
-			"url": "assets/game/tbnn/bg_tbnn.jpg",
-			"type": "image",
-			"name": "bg_tbnn_jpg"
-		},
-		{
-			"url": "assets/game/tbnn/nn_btn_tanpai.png",
-			"type": "image",
-			"name": "nn_btn_tanpai_png"
-		},
-		{
-			"url": "assets/game/tbnn/tb_bg_table.png",
-			"type": "image",
-			"name": "tb_bg_table_png"
-		},
-		{
-			"url": "assets/game/tbnn/tongbi_bei.png",
-			"type": "image",
-			"name": "tongbi_bei_png"
-		},
-		{
-			"url": "assets/game/tbnn/tongbi_bei1.png",
-			"type": "image",
-			"name": "tongbi_bei1_png"
-		},
-		{
-			"url": "assets/game/tbnn/tongbi_bei2.png",
-			"type": "image",
-			"name": "tongbi_bei2_png"
-		},
-		{
 			"url": "assets/sound/tbnn/tbnn_gamebgMusic.mp3",
 			"type": "sound",
 			"name": "tbnn_gamebgMusic_mp3"
@@ -4517,11 +4442,6 @@
 			"name": "bg_jianbian_2_png"
 		},
 		{
-			"url": "assets/game/zhajh/bg_zjh_buttom.png",
-			"type": "image",
-			"name": "bg_zjh_buttom_png"
-		},
-		{
 			"url": "assets/game/zhajh/checkbox_down.png",
 			"type": "image",
 			"name": "checkbox_down_png"
@@ -4677,11 +4597,6 @@
 			"name": "gf_flag_qp_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_flag_ykp.png",
-			"type": "image",
-			"name": "gf_flag_ykp_png"
-		},
-		{
 			"url": "assets/game/zhajh/gf_game_bet_bg.png",
 			"type": "image",
 			"name": "gf_game_bet_bg_png"
@@ -4815,21 +4730,6 @@
 			"url": "assets/game/zhajh/gf_match_bg.png",
 			"type": "image",
 			"name": "gf_match_bg_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_mengban1.png",
-			"type": "image",
-			"name": "gf_mengban1_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_mengban2.png",
-			"type": "image",
-			"name": "gf_mengban2_png"
-		},
-		{
-			"url": "assets/game/zhajh/gf_mengban3.png",
-			"type": "image",
-			"name": "gf_mengban3_png"
 		},
 		{
 			"url": "assets/game/zhajh/gf_paixing.png",
@@ -7481,11 +7381,6 @@
 			"url": "assets/game/baijiale/bg_bjl_zhuang.png",
 			"type": "image",
 			"name": "bg_bjl_zhuang_png"
-		},
-		{
-			"url": "assets/game/baijiale/gf_poker0.png",
-			"type": "image",
-			"name": "gf_poker0_png"
 		},
 		{
 			"url": "assets/game/baijiale/zjh_effect_xz_tex001.png",
