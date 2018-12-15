@@ -192,9 +192,15 @@ declare class ZJHHeadSkin extends eui.Skin{
 }
 declare class ZJHHelpPanlSkin extends eui.Skin{
 }
+declare class ZJHIsLiveRoomSkin extends eui.Skin{
+}
+declare class ZJHNotLiveRoomSkin extends eui.Skin{
+}
 declare class ZJHRecordPanlSkin extends eui.Skin{
 }
 declare class ZJHViewSkin extends eui.Skin{
+}
+declare class ZJHpaprePanlSkin extends eui.Skin{
 }
 declare class ZhajhhelpTypeSkin extends eui.Skin{
 }

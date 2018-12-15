@@ -34,6 +34,7 @@ class EventConst {
     /**百家乐离开房间 */
     public static BaccaratOnleave: string = "BaccaratOnleave";
 
+    /**经典炸金花 */
     /**准备 */
     public static prepare: string = "prepare";
     /**发牌 */
@@ -48,6 +49,14 @@ class EventConst {
     public static compareCard: string = "compareCard";
     /**弃牌 */
     public static abandon: string = "abandon";
+    /**(退出房间,取消准备)*/
+    public static leave: string = "leave";
+    /**(点击退出按钮)*/
+    public static isLeave: string = "isLeave";
+    /**(退出面板点击确定)*/
+    public static zjhLeave: string = "zjhLeave";
+    /**(准备时定点击离开)*/
+    public static outRoom: string = "outRoom";
     /**二八杠 */
     /**开始游戏 */
     public static erbagang_start: string = "erbagang_start";
@@ -158,9 +167,6 @@ class EventConst {
     public static onUserExceWaiveCard: string = "onUserExceWaiveCard";
     /**(推送*结算，游戏结束)*/
     public static onCheckout: string = "onCheckout";
-    /**(推送*退出房间)*/
-    public static leave: string = "leave";
-
     /**(金花其他下注)*/
     public static otherBotpour: string = "otherBotpour";
     /**(金花其他看牌)*/
@@ -175,6 +181,9 @@ class EventConst {
     //public static botpour:string ="botpour";
     /**(结算)*/
     public static settlement: string = "settlement";
-    /**(退出房间)*/
+   /**(推送*点击退出按钮,离开房间)*/
+    public static onUserIsLeave: string = "onUserIsLeave";
+    /**(推送*点击退出面板,确定按钮离开房间)*/
+    public static onUserOutRoom: string = "onUserOutRoom";
 
 }

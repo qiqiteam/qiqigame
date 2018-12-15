@@ -17,14 +17,14 @@ class ZJHHead extends eui.Component {
 		super.childrenCreated();
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
 
-        var mask2: egret.Shape = new egret.Shape;
+        /*var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
         mask2.graphics.drawCircle(46, 46, 46);
         mask2.graphics.endFill();
         mask2.x = this.imghead.x+3;
         mask2.y = this.imghead.y+3;
         this.addChild(mask2);
-        this.imghead.mask = mask2;
+        this.imghead.mask = mask2;*/
     }
 
     /**

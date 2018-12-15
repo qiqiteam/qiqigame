@@ -60,15 +60,19 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserExceWaiveCard, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onCheckout, this.onMessage);//结算，游戏结束
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.leave, this.onMessage);//离开房间
-			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onGameStatusChange, this.onMessage);//房间状态
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.zjhLeave, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserIsLeave, this.onMessage);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserOutRoom, this.onMessage);
+
 		}
 
 		private onMessage(msg: any): void {
 			switch (msg.command) {
-				// case "EventConst.betnum":
-				//处理逻辑----------
-				//EventUtil.dispatchEvent(msg.command,msg);
-				// return ;
+				case EventConst.onGameStatusChange:
+					//处理逻辑----------
+					UserInfo.getInstance().gameStatu(msg);
+					EventUtil.dispatchEvent(msg.command,msg);
+					return ;
 				case EventConst.players:
 					console.log(msg);
 					UserInfo.getInstance().addPlayes(msg);

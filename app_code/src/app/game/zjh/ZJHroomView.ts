@@ -35,6 +35,7 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 			xlLib.SceneMgr.instance.changeScene(ZJHScene);
 			xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 		}
+		
 	}
 	private onEnterGame(): void {
 		if (!this.gameIconData) {
