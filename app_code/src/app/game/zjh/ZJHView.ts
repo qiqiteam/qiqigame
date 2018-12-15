@@ -138,6 +138,12 @@ class ZJHView extends eui.Component {
     public _btn_submit_close: eui.Button;
     public _btn_luckmoney: eui.Button;
     public _btn_continuegame: eui.Button;
+    public img_light0: eui.Image;
+    public img_light1: eui.Image;
+    public img_light2: eui.Image;
+    public img_light3: eui.Image;
+    public img_light4: eui.Image;
+
 
 
 
@@ -278,6 +284,7 @@ class ZJHView extends eui.Component {
         UserInfo.getInstance().isGameStart = true;
         this.deskNum(false);
         this.botpGolds(false);
+        this.playersLight(false);
         /**----------------------------------------------------------- */
     }
     //获取原始扑克的位置
@@ -481,7 +488,7 @@ class ZJHView extends eui.Component {
 
     //-----------------------------------------------------------------------------
     private byOpenId: string[] = ['', '', '', '', ''];
-    private abandonId: string[] = [];
+    private abandonId: string[] = [];//临时存储弃牌玩家ID
     /**获取所有能和玩家比牌的玩家 */
     private onBiPaiClick() {
         this.byOpenId = [];
@@ -534,6 +541,12 @@ class ZJHView extends eui.Component {
         this.img_deskgoldbg.visible = state;
         this.img_deskgoldIcon.visible = state;
 
+    }
+    /**照射玩家的灯光 */
+    private playersLight(state: boolean): void {
+        for (let i = 0; i < 5; i++) {
+            this['img_light' + i].visible = state;
+        }
     }
     private sendamessage(sendstr: string, bet: number): void {
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
@@ -604,6 +617,7 @@ class ZJHView extends eui.Component {
         EventUtil.addEventListener(EventConst.onAiBetOrderUpdate, this.otherplayerBet, this);
         EventUtil.addEventListener(EventConst.onTimelyNotify, this.timeInfo, this);
         EventUtil.addEventListener(EventConst.onUserWaiveCard, this.discard, this);
+        EventUtil.addEventListener(EventConst.onNowUserWaiveCard, this.discard, this);
         EventUtil.addEventListener(EventConst.onAiWaiveCard, this.otherdiscard, this);
         EventUtil.addEventListener(EventConst.onUserExceWaiveCard, this.disAutoCard, this);
         EventUtil.addEventListener(EventConst.onCheckout, this.settleaccount, this);
@@ -611,6 +625,8 @@ class ZJHView extends eui.Component {
         //EventUtil.addEventListener(EventConst.onUserLeave, this.cancelpapre, this);
         EventUtil.addEventListener(EventConst.onUserIsLeave, this.onClickoutBtn, this);
         EventUtil.addEventListener(EventConst.onUserOutRoom, this.ocClickContuite, this);
+        EventUtil.addEventListener(EventConst.onAiOperate, this.aioperate, this);
+
 
         this._btn_menu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_kanpai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
@@ -714,6 +730,8 @@ class ZJHView extends eui.Component {
             zjhpaprePanl.TYPE_TAP = Const.TYPE_JINGDIANJINHUA;
             this.shortTimegameStatue = data.roomStatus;
         } else if (data.roomStatus == 1) {
+            this['img_light' + data.index].visible = true;
+            this.playerSeria = data.index;
             console.log("游戏开始，发牌");
             this.grp_roungNum.visible = true;
             this.shortTimegameStatue = data.roomStatus;
@@ -730,6 +748,7 @@ class ZJHView extends eui.Component {
                 this['lab_xzgold' + i].text = data.golds / 500;
             }
             this.cardEffect();//飞牌动动作
+
         } else if (data.roomStatus == 2) {
             this.shortTimegameStatue = data.roomStatus;
             console.log("游戏结束");
@@ -750,7 +769,8 @@ class ZJHView extends eui.Component {
     }
     /**玩家看牌 */
     private Check(data: any): void {
-        if (data.param.command == "onUserSeeCard" && UserInfo.getInstance().uid == data.param.userId) {
+        //if (data.param.command == "onUserSeeCard" && UserInfo.getInstance().uid == data.param.userId) {
+        if (data.param.code == 200) {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             xlLib.TipsUtils.showFloatWordTips("看牌");
@@ -761,12 +781,13 @@ class ZJHView extends eui.Component {
             };
             this.onKanPaiClick(poke);
             this._btn_kanpai.visible = false;
-            this.playerOperatingState[0] = 2;//已看牌
+            this.playerOperatingState[data.param.index] = 2;//已看牌
         }
     }
-    /**其他玩家看牌 */
+    /**AI看牌 */
     private otherCheck(data: any): void {
-        if (data.param.command == "onAiSeeCard" && UserInfo.getInstance().uid != data.param.userId) {
+        //if (data.param.command == "onAiSeeCard" && UserInfo.getInstance().uid != data.param.userId) {
+        if (data.param.code == 200) {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             let seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
@@ -781,9 +802,13 @@ class ZJHView extends eui.Component {
     private UsId: string;//存储我的id
     public nowUserGolds: number;//当前玩家剩余金币
     public shortGold: number;//当前玩家剩余金币不足，
-    /**判断进行操作 接收下注类型*/
+    public playersData: any[] = [];//存储玩家信息
+    /**判断玩家操作 接收下注类型，操作时间*/
     private gametype(data: any): void {
         if (data.param.code == 200) {
+            this['img_light' + this.playerSeria].visible = false;
+            this['img_light' + data.param.index].visible = true;
+            this.playerSeria = data.param.index;
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             this._btn_autogenzhu.visible = false;
@@ -794,7 +819,7 @@ class ZJHView extends eui.Component {
             this.numtime = data.param.seconds;
             this.UsId = data.param.userId;
             console.log(data);
-            if (this.playerOperatingState[0] != 2) {
+            if (this.playerOperatingState[data.param.index] != 2) {
                 this.startCountDown(this.numtime);
             }
             //this.betarr = data.param.limit.split(",");
@@ -854,10 +879,18 @@ class ZJHView extends eui.Component {
             }
         }
     }
+    /**判断AI操作 接收下注类型，操作时间*/
+    private aioperate(data: any): void {
+        if (data.param.code == 200) {
+            this['img_light' + this.playerSeria].visible = false;
+            this['img_light' + data.param.index].visible = true;
+            this.playerSeria = data.param.index;
+        }
+    }
     /**玩家下注*/
-
+    public playerSeria: number = 0;//玩家序号
     private Bet(data: any): void {
-        if (data.param.command == "onUserBetOrderUpdate" && UserInfo.getInstance().uid == data.param.userId) {
+        if (data.param.code == 200) {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             this.onGenZhuClick(data.param.index, data.param.data);
@@ -879,12 +912,13 @@ class ZJHView extends eui.Component {
             this.lab_xzgold0.text = String(this.oldMybotpGold);
         }
     }
-    public notAbandbotp: number = 0;//存储其他玩家当前下注数
-    public therGolds: number = 0;//更新其他玩家金币
+    public notAbandbotp: number = 0;//存储AI当前下注数
+    public therGolds: number = 0;//更新Ai金币
     public otherId: string;
-    /**其他玩家下注*/
+    /**AI下注*/
     private otherplayerBet(data: any): void {
-        if (data.param.command == "onAiBetOrderUpdate" && UserInfo.getInstance().uid != data.param.userId) {
+        //if (data.param.command == "onAiBetOrderUpdate" && UserInfo.getInstance().uid != data.param.userId) {
+        if (data.param.code == 200) {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             this.onPlayerGenZhu(data.param.index, data.param.data);
@@ -907,13 +941,13 @@ class ZJHView extends eui.Component {
             this['lab_xzgold' + data.param.index].text = String(this.oldOtherbotpGold[data.param.index]);
             this.notAbandbotp = data.param.data / 100;
             console.log(this.notAbandbotp);
-
         }
     }
 
     /**全压*/
     private ALLIN(data: any): void {
-        if (data.param.command == "onUserAllPress" && data.param.code == 200) {
+        //if (data.param.command == "onUserAllPress" && data.param.code == 200) {
+        if (data.param.code == 200) {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             console.log("金币不足玩家全压", data);
@@ -932,13 +966,13 @@ class ZJHView extends eui.Component {
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             console.log("玩家全压和其他玩家比牌", data);
             console.log(data.param.json);
+            let losepoke = {
+                value: data.param.json.loseCard,//牌值
+                type: data.param.json.loseType //牌型
+            };//牌型
             /**AI玩家胜利 */
             if (data.param.data == 1) {
                 console.log("AI全压获胜");
-                let losepoke = {
-                    type: data.param.json.loseCard,//牌值
-                    value: data.param.json.loseType
-                };//牌型
                 if (this.playerOperatingState[0] != 2) {
                     this.onKanPaiClick(losepoke);
                     for (var i = 0; i < 3; i++) {
@@ -985,33 +1019,87 @@ class ZJHView extends eui.Component {
 
     /**玩家比牌结果*/
     private Thancard(data: any): void {
-        if (data.param.command == "onUserToCard" && data.param.code == 200) {
-            console.log("玩家比牌结果");
+        if (data.param.code == 200) {
+            console.log("玩家比牌结果", data.param.json);
+            let losepoke = {
+                value: data.param.json.loseCard,//牌值
+                type: data.param.json.loseType //牌型
+            };
+            //执行玩家图像被轰炸动作{}................玩家比牌输
+            if (this.playerOperatingState[data.param.index] != 2 && UserInfo.getInstance().uid == data.param.userId) {
+                this._btn_kanpai.visible = false;
+                this.onKanPaiClick(losepoke);
+                this['imgCardType' + data.param.index].source = 'gf_flag_bpsb_png';
+                this.playerOperatingState[data.param.index] = 3
+                this.abandonStateBtn();
+            } else if (this.playerOperatingState[data.param.index] == 2 && UserInfo.getInstance().uid == data.param.userId) {
+                this.playClickSound(ZJHUtil.getInstance().getSoundEffect(7));
+                for (var i = 0; i < 3; i++) {
+                    var card = this['grpCard' + 0 + '_' + i];
+                    card.source = 'gf_poker0_png';
+                    this[0].source = 'qznn_card_' + this[1];
+                    [card, losepoke.value[i]]
+                }
+                this['imgCardbg' + data.param.index].source = 'gf_pxzs_png';
+                this['imgCardType' + data.param.index].visible = true;
+                this['imgCardType' + data.param.index].source = 'gf_flag_bpsb_png';
+                this._btn_kanpai.visible = false;
+                this.playerOperatingState[0] = 3
+                this.abandonStateBtn();
+            } else if (UserInfo.getInstance().uid != data.param.userId) {
+                //执行AI图像被轰炸动作{}................AI比牌输
+                this.onPlayerKanPai(data.param.index, losepoke);
+                this['imgCardType' + data.param.index].source = 'gf_flag_bpsb_png';
+                this.playerOperatingState[data.param.index] = 3
+                xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
+                //xlLib.DisplayUtils.setComponentEnabled(this._btn_bipai, false);
+                this._btn_autogenzhu.visible = true;
+                this.img_autogenzhu.visible = true;
+                //this._btn_quanxia.visible=true;
+            }
 
-
+            //this.anotherDontCard(data.param.index);
+            //UserInfo.getInstance().playes[i]
         }
     }
 
     /**玩家弃牌*/
     private discard(data: any): void {
-        if (data.param.command == "onUserWaiveCard" && UserInfo.getInstance().uid == data.param.userId) {
+        if (data.param.code == 200) {
+            console.log(data);
             let poke = {
                 type: data.param.cardGenre,//牌型
                 value: data.param.cardtype //牌值
             };
             for (var i = 0; i < 3; i++) {
                 let val = poke.value[i];
-                var card = this['grpCard' + 0 + '_' + i];
+                var card = this['grpCard' + data.param.index + '_' + i];
                 card.source = 'gf_poker0_png';
                 egret.Tween.get(card).to({ scaleX: 0 }, 200).call(function () {
                     this[0].source = 'qznn_card_' + this[1];
                     egret.Tween.get(this[0]).to({ scaleX: 1 }, 100);
                 }, [card, val]);
             }
-            this.playerOperatingState[0] = 3;
+            if (data.param.index != 0) {
+                this.abandonId.push(data.param.userId);
+            }
+            this.playerOperatingState[data.param.index] = 3;
             this.abandonStateBtn();
             UserInfo.getInstance().isGameStart = false;
 
+        }
+    }
+    /**存储所有玩家id信息 */
+    private OtherPlayer: string[] = [];
+    private seatnum: number;//
+    /**AI弃牌*/
+    private otherdiscard(data: any): void {
+        if (data.param.code == 200) {
+            this.seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
+            this.anotherDontCard(this.seatnum);
+            this['img_abandon' + this.seatnum].source = 'gf_flag_qp_png';
+            this.abandonId.push(data.param.userId);
+            this.playerOperatingState[data.param.index] = 3;
         }
     }
     //玩家弃牌,结算按钮状态
@@ -1038,19 +1126,7 @@ class ZJHView extends eui.Component {
         this.lab_quanyaNumber.visible = false;
         this.lab_callNumber.visible = false;
     }
-    /**存储所有玩家id信息 */
-    private OtherPlayer: string[] = [];
-    private seatnum: number;//
-    /**其他玩家弃牌*/
-    private otherdiscard(data: any): void {
-        if (data.param.command == "onAiWaiveCard" && UserInfo.getInstance().uid != data.param.userId) {
-            this.seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
-            this.anotherDontCard(this.seatnum);
-            this['img_abandon' + this.seatnum].source = 'gf_flag_qp_png';
-            this.abandonId.push(data.param.userId);
-        }
-    }
-    //设置AI玩家弃牌 颜色
+    //设置玩家弃牌 颜色
     private anotherDontCard(seatPos: number): void {
         this['imgCardbg' + seatPos].source = '';
         this['imgCardType' + seatPos].source = '';
@@ -1071,7 +1147,8 @@ class ZJHView extends eui.Component {
     }
     /**超时自动弃牌*///自己不进行任何操作超过操作时间 视为弃牌状态 
     private disAutoCard(data: any): void {
-        if (data.param.command == "onUserExceWaiveCard" && UserInfo.getInstance().uid == data.param.userId && this.addtime >= this.numtime) {
+        //if (data.param.command == "onUserExceWaiveCard" && UserInfo.getInstance().uid == data.param.userId && this.addtime >= this.numtime) {
+        if (data.param.code == 200) {
             console.log(this.addtime);
             let poke = {
                 type: data.param.cardGenre,//牌型
@@ -1087,7 +1164,7 @@ class ZJHView extends eui.Component {
                 }, [card, val]);
             }
             xlLib.TipsUtils.showFloatWordTips("自动弃牌");
-            this.playerOperatingState[0] = 3;//玩家弃牌状态
+            this.playerOperatingState[data.param.index] = 3;//玩家弃牌状态
             this.abandonStateBtn();
             UserInfo.getInstance().isGameStart = false;
         }
@@ -1102,10 +1179,12 @@ class ZJHView extends eui.Component {
     /**点击退出，收到推送 */
     private onClickoutBtn(data: any): void {
         //接收状态 leave (true 可离开 false 不可离开)
-        if (data.param.leave == true) {
-            let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHIsLiveRoom, this, true, true, null, 1);
-        } else if (data.param.leave == false) {
-            let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHNotLiveRoom, this, true, true, null, 1);
+        if (data.param.code == 200) {
+            if (data.param.leave == true) {
+                let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHIsLiveRoom, this, true, true, null, 1);
+            } else if (data.param.leave == false) {
+                let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHNotLiveRoom, this, true, true, null, 1);
+            }
         }
     }
 
@@ -1121,9 +1200,11 @@ class ZJHView extends eui.Component {
 
     /**结算游戏结束 */
     private settleaccount(data: any): void {
-        console.log("结算:" + data);
-        //this._btn_continuegame.visible = true;
-        this.abandonStateBtn();
+        if (data.param.code == 200) {
+            console.log("结算:" + data);
+            //this._btn_continuegame.visible = true;
+            this.abandonStateBtn();
+        }
     }
     /**离开房间*/
     private leaveroom(data: any): void {
@@ -1136,6 +1217,8 @@ class ZJHView extends eui.Component {
 
     //加入房间新玩家
     public playerJoinRoom(data): void {
+        this.playersData.push(data);
+        console.log('+++++++++++++++++++++++++++++存储玩家信息+++++++++++++++++++++++', this.playersData);
         console.log(data._obj.player.id);
         this.OtherPlayer.push(data._obj.player.id);
         console.log(UserInfo.getInstance().myPlayer.id);
@@ -1145,8 +1228,6 @@ class ZJHView extends eui.Component {
             this['grpHead' + data._obj.player.index].visible = true;
             this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins / 100, "women7_png");
         }
-        //this.grpprepare.visible = false;//准备提示弹框
-
         xlLib.PopUpMgr.removePopUp(ZJHpaprePanl, 1);
 
         this.isprepare = false;
@@ -1158,14 +1239,7 @@ class ZJHView extends eui.Component {
 
         //设置自己信息
         this.OtherPlayer.push(data._obj.player[0].id);
-        /*var mask2: egret.Shape = new egret.Shape;
-        mask2.graphics.beginFill(0xff0000);
-        mask2.graphics.drawCircle(62, 62, 62);
-        mask2.graphics.endFill();
-        mask2.x = this.imghead0.x + 6;
-        mask2.y = this.imghead0.y + 5;
-        this.grpHead0.addChild(mask2);
-        this.imghead0.mask = mask2;*/
+        this.playersData.push(data);
 
         if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
             this.grpHead0.visible = true;
@@ -1343,7 +1417,6 @@ class ZJHView extends eui.Component {
     }
     /**自己点击看牌 */
     private onKanPaiClick(poke: any) {
-        //let poke = { num: 2, type: 2, value: [408, 308, 401] };
         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(7));
         for (var i = 0; i < 3; i++) {
             var card = this['grpCard' + 0 + '_' + i];
@@ -1368,6 +1441,8 @@ class ZJHView extends eui.Component {
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke.value[i]]);
         }
+        this['imgCardType' + index].visible = true;
+        this['imgCardbg' + index].source = 'gf_pxzs_png';
         this['imgCardType' + index].source = ZJHUtil.getInstance().getCardType(poke.type);
     }
     private setStartBet(): void {
@@ -1446,6 +1521,8 @@ class ZJHView extends eui.Component {
         this._btn_jiacm_4.touchEnabled = true;
         this._btn_jiacm_5.touchEnabled = true;
         this.grpCoins.removeChildren();
+        this.playerSeria = 0;
+        this.playersData = [];
         //this.labCountdown0.text = '0';
         //this.labCountdown1.text = '0';
         /*this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
@@ -1495,9 +1572,11 @@ class ZJHView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.Bet, this);
         EventUtil.removeEventListener(EventConst.onAiBetOrderUpdate, this.otherplayerBet, this);
         EventUtil.removeEventListener(EventConst.onUserWaiveCard, this.discard, this);
+        EventUtil.removeEventListener(EventConst.onNowUserWaiveCard, this.discard, this);
         EventUtil.removeEventListener(EventConst.onAiWaiveCard, this.otherdiscard, this);
         EventUtil.removeEventListener(EventConst.onUserExceWaiveCard, this.disAutoCard, this);
         EventUtil.removeEventListener(EventConst.onCheckout, this.settleaccount, this);
+        EventUtil.removeEventListener(EventConst.onAiOperate, this.aioperate, this);
         //EventUtil.removeEventListener(EventConst.zjhleave, this.cancelpapre, this);
         //EventUtil.removeEventListener(EventConst.onUserLeave, this.cancelpapre, this);
         EventUtil.removeEventListener(EventConst.onUserIsLeave, this.onClickoutBtn, this);

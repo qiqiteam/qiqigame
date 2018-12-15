@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="ZJHViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Image x="0" width="1472" height="828" source="gf_bg_png" alpha="1" y="-5"/>
+	<e:Image x="0" width="1472" height="828" source="gf_bg_png" alpha="1" y="-5" locked="true"/>
 	<e:Image  source="gf_table_png" anchorOffsetX="0" width="1891" x="-209" y="0" locked="true"/>
 	<e:Image source="gf_bg_leaf_png" width="180" x="1292" y="0" locked="true"/>
 
 
-	<e:Group id="grp_roungNum" width="378" height="104" y="4" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+	<e:Group id="grp_roungNum" width="378" height="104" y="4" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" locked="true">
 		<e:Label text="牌局编号：" x="-436.98" y="13.64" size="25" anchorOffsetX="0" width="128" textAlign="left" textColor="0x827f77" bold="true" fontFamily="SimHei" scaleX="1" scaleY="1"/>
 		<e:Label id="lab_paijuNum" text="50-154492645-358995561" x="-316.31" y="13.64" size="25" anchorOffsetX="0" width="300" textAlign="left" textColor="0x827F77" fontFamily="SimHei" height="25" scaleX="1" scaleY="1"/>
 		<e:Image id="img_dizhu_dinhzhu_bg" width="320" height="32" y="11.01" horizontalCenter="0" source="gf_game_bet_bg_png" x="29" scaleX="1" scaleY="1"/>
@@ -20,9 +20,9 @@
 		<e:Label id="lab_end_roundNum" text="20" x="195" y="66" size="23" anchorOffsetX="0" width="25" textAlign="center" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
 		<e:Label text="轮" x="223" y="66" size="23" anchorOffsetX="0" width="25" textAlign="center" fontFamily="SimHei" textColor="0xB5B1B1" height="25" scaleX="1" scaleY="1"/>
 	</e:Group>
-	<e:Image id="img_deskgoldbg" width="153" height="25" y="117.67" source="gf_chip_bg_png" horizontalCenter="0"/>
-	<e:Image id="img_deskgoldIcon" width="30" height="35" y="113.77" source="gf_icon_chip_sm7_png" x="659"/>
-	<e:Label id="lab_deskGolds" text="0" x="692" y="118.3" size="25" anchorOffsetX="0" width="113" textAlign="center" bold="true" textColor="0xf2c826"/>
+	<e:Image id="img_deskgoldbg" width="153" height="25" y="117.67" source="gf_chip_bg_png" horizontalCenter="0" locked="true"/>
+	<e:Image id="img_deskgoldIcon" width="30" height="35" y="113.77" source="gf_icon_chip_sm7_png" x="659" locked="true"/>
+	<e:Label id="lab_deskGolds" text="0" x="692" y="118.3" size="25" anchorOffsetX="0" width="113" textAlign="center" bold="true" textColor="0xf2c826" locked="true"/>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true"/>
 	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
 		<e:Image id="grpCard4_0" x="331.58" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
@@ -75,7 +75,7 @@
 		<e:Image width="90" height="89" x="296.5" y="220.33" source="gf_flag_qp_png" id="img_abandon3"/>
 		<e:Image width="90" height="89" x="341.2" y="451" source="gf_flag_qp_png" id="img_abandon4"/>
 	</e:Group>
-	<e:Group x="0" y="0" width="1472" height="828">
+	<e:Group x="0" y="0" width="1472" height="828" locked="true">
 		<ns1:ZJHHead id="grpHead1" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="1171.19" y="410"/>
 		<ns1:ZJHHead id="grpHead2" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" y="175" x="1211.63"/>
 		<ns1:ZJHHead id="grpHead3" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="121.77" y="175"/>
@@ -86,21 +86,14 @@
 		<ns1:ZJHHead id="grpHead8" width="20" height="20" x="1280" y="350" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" visible="false"/>
 		<ns1:ZJHHead id="grpHead9" width="20" height="20" x="1180" y="510" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" visible="false"/>
 	</e:Group>
-	<e:Group id="grpCountdown" y="412" x="706" visible="false">
+	<e:Group id="grpCountdown" y="412" x="706" visible="false" locked="true">
 		<e:Image source="a20" y="0" x="0" />
 		<e:BitmapLabel id="labCountdown0" x="9" y="11" font="bitmapnum0_fnt" text="0" width="20" />
 		<e:BitmapLabel id="labCountdown1" x="32" y="11" font="bitmapnum0_fnt" text="0" width="20" anchorOffsetX="0" />
 		<e:Label id="timeTxt" text="10" x="-126" y="-48" scaleX="1" scaleY="1" textColor="0xfc1c07" bold="true" anchorOffsetX="0" width="53.7" anchorOffsetY="0" height="42.12" size="40" visible="false"/>
 	</e:Group>
-	<e:Button id="_btn_kanpai" label="" scaleX="1" scaleY="1" x="734.77" y="549.96">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="gf_tips_click_card_png" source.down="gf_tips_click_card_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
-	</e:Button>
-	<e:Group id="grpHead0" width="130" height="173" anchorOffsetY="0" anchorOffsetX="0" x="516.43" y="486">
+
+	<e:Group id="grpHead0" width="130" height="173" anchorOffsetY="0" anchorOffsetX="0" x="516.43" y="486" locked="true">
 		<e:Image anchorOffsetY="0" height="180" anchorOffsetX="0" width="136" source="gf_wait_png" x="-3" y="-3" visible="false"/>
 		<e:Image anchorOffsetY="0" height="161" anchorOffsetX="0" width="125" source="gf_Avatar_box_png" x="3" y="6"/>
 
@@ -109,7 +102,7 @@
 		<e:Label id="labelGold0" text="1000000" y="136.93" textColor="0xf4d727" textAlign="center" size="22" bold="true" x="22"/>
 
 	</e:Group>
-	<e:Group id="grp_operatbtn" width="1470.67" height="104" y="724" x="1.33" touchEnabled="false" anchorOffsetX="0">
+	<e:Group id="grp_operatbtn" width="1470.67" height="104" y="724" x="1.33" touchEnabled="false" anchorOffsetX="0" locked="true">
 		<e:Button id="_btn_qipai" label="" x="156.76" scaleX="1" scaleY="1" y="28">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -178,7 +171,7 @@
 		<e:Label id="lab_quanyaNumber" text="12" x="1150.98" y="45.66" width="60" height="30" touchEnabled="false"/>
 		<e:Label id="lab_callNumber" text="12" x="1311.18" y="47" width="60" height="30" touchEnabled="false" visible="false"/>
 	</e:Group>
-	<e:Group id="grp_btncm0" width="724.72" height="110.67" anchorOffsetX="0" anchorOffsetY="0" x="336.62" y="717.33" visible="false">
+	<e:Group id="grp_btncm0" width="724.72" height="110.67" anchorOffsetX="0" anchorOffsetY="0" x="336.62" y="717.33" visible="false" locked="true">
 		<e:Image width="748" height="94" source="gf_bg_jiazhu_png" x="-12" y="16.67"/>
 		<e:Button id="_btn_jiacm_0" label="" x="26.65" width="112" height="88" scaleX="1" scaleY="1" y="3">
 			<e:skinName>
@@ -288,7 +281,7 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-	<e:Group id="grp_out_hint" width="666" height="335" y="114.08" horizontalCenter="0" visible="false">
+	<e:Group id="grp_out_hint" width="666" height="335" y="114.08" horizontalCenter="0" visible="false" locked="true">
 		<e:Image width="666" height="335" x="0" y="0" source="gf_match_bg_png"/>
 		<e:Image width="69" height="35" y="8.5" source="gf_tip_ts_png" x="299"/>
 		<e:Button id="_btn_cancel" label="" y="224.52" x="74.88">
@@ -311,7 +304,7 @@
 		<e:Image width="69" height="35" y="239.72" x="437.18" source="queding_png"/>
 		<e:Label text="确定要退出游戏吗？" y="65.97" bold="true" anchorOffsetY="0" height="142.12" anchorOffsetX="0" width="569.94" textAlign="center" verticalAlign="middle" x="51"/>
 	</e:Group>
-	<e:Group id="grp_setting_hint" width="666" height="262" y="114.08" horizontalCenter="0" visible="false">
+	<e:Group id="grp_setting_hint" width="666" height="262" y="114.08" horizontalCenter="0" visible="false" locked="true">
 		<e:Image width="666" height="262" source="gf_bg_match_png" x="0" y="0"/>
 		<e:Image width="69" height="35" y="8.5" source="gf_tip_ts_png" x="299"/>
 		<e:Button id="_btn_set_close" label="" y="11.09" x="609.78">
@@ -329,7 +322,7 @@
 	</e:Group>
 
 
-	<e:Group id="grp_feedback_panel" width="666" height="335" x="403" y="247" visible="false">
+	<e:Group id="grp_feedback_panel" width="666" height="335" x="403" y="247" visible="false" locked="true">
 		<e:Image width="666" height="335" x="0" y="0" source="gf_match_bg_png"/>
 		<e:Image width="69" height="35" y="10" source="gf_tip_ts_png" x="299"/>
 		<e:EditableText width="574.25" height="150" text="您对我们的游戏的建议和吐槽都可以在这里告诉我们哟~如果游戏中遇到任何问题请联系网站人工客服协助解决，谢谢您的支持（10~60个字符）" x="47.45" y="63" anchorOffsetX="0" anchorOffsetY="0" textAlign="left" multiline="true" bold="true"/>
@@ -351,7 +344,7 @@
 		</e:Button>
 		<e:Image width="69" height="35" y="240.53" x="296.37" source="tijiao_png"/>
 	</e:Group>
-	<e:Button id="_btn_luckmoney" label="" x="1348.98" y="1.03">
+	<e:Button id="_btn_luckmoney" label="" x="1348.98" y="1.03" locked="true">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="gf_icon_xiqian_close_png" source.down="gf_icon_xiqian_close_png"/>
@@ -359,14 +352,29 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Image x="-334.9" bottom="2" width="1472" height="828" source="bg_1_jpg" visible="false"/>
 	<e:Button id="_btn_continuegame" label="" scaleX="1" scaleY="1" y="716.76" x="628" locked="true" visible="false">
 		<e:skinName>
-			<e:Skin states="up,down,disabled">
+		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="gf_btn_game_begin_normal._png" source.down="gf_btn_game_begin_normal._png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+		</e:Skin>
 		</e:skinName>
-	</e:Button>-->
+	</e:Button>
+	<e:Group x="624.43" y="55.34" locked="true">
+		<e:Image id="img_light0" width="203" height="464" y="111.64" source="gf_game_light_png" x="0" rotation="346.77" locked="true"/>
+		<e:Image id="img_light1" width="203" height="464" y="163.16" source="gf_game_light_png" x="28.27" rotation="314.02" locked="true"/>
+		<e:Image id="img_light2" y="189.05" source="gf_game_light_png" x="69.66" rotation="286.75" locked="true"/>
+		<e:Image id="img_light3" y="-7.34" source="gf_game_light_png" x="78.2" rotation="72.91" locked="true"/>
+		<e:Image id="img_light4" y="20.66" source="gf_game_light_png" x="31.24" rotation="44.06" locked="true"/>
+	</e:Group>
+	<e:Button id="_btn_kanpai" label="" scaleX="1" scaleY="1" x="734.77" y="549.96" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="gf_tips_click_card_png" source.down="gf_tips_click_card_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+-->
 
 </e:Skin>

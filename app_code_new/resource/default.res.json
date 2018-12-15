@@ -7008,6 +7008,126 @@
 			"type": "sheet",
 			"name": "room_ebg_json",
 			"subkeys": "bar_base_score_flag,bar_girl"
+		},
+		{
+			"url": "assets/game/tbnn/bg_tbnn.jpg",
+			"type": "image",
+			"name": "bg_tbnn_jpg"
+		},
+		{
+			"url": "assets/game/tbnn/nn_btn_tanpai.png",
+			"type": "image",
+			"name": "nn_btn_tanpai_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei.png",
+			"type": "image",
+			"name": "tongbi_bei_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei1.png",
+			"type": "image",
+			"name": "tongbi_bei1_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei2.png",
+			"type": "image",
+			"name": "tongbi_bei2_png"
+		},
+		{
+			"url": "assets/game/tbnn/tb_bg_table.png",
+			"type": "image",
+			"name": "tb_bg_table_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_1.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_1_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_0.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_0_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_4.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_4_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_5.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_5_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_3.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_3_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_6.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_6_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_7.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_7_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_8.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_8_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_9.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_9_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju1.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_diju1_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju2.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_diju2_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_stage_1.png",
+			"type": "image",
+			"name": "baccarat_font_stage_1_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_stage_2.png",
+			"type": "image",
+			"name": "baccarat_font_stage_2_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_stage_3.png",
+			"type": "image",
+			"name": "baccarat_font_stage_3_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_stage_4.png",
+			"type": "image",
+			"name": "baccarat_font_stage_4_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_stage_5.png",
+			"type": "image",
+			"name": "baccarat_font_stage_5_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_stage_6.png",
+			"type": "image",
+			"name": "baccarat_font_stage_6_png"
+		},
+		{
+			"url": "assets/game/baijiale/baccarat_font_bureau_2.png",
+			"type": "image",
+			"name": "baccarat_font_bureau_2_png"
 		}
 	]
 }

@@ -151,34 +151,30 @@ class EventConst {
     public static onUserWaiveCard: string = "onUserWaiveCard";
     /**(推送*异常及时通知)*/
     public static onTimelyNotify: string = "onTimelyNotify";
+    /**(推送*当前操作状态玩家)*/
+    public static onNowUserWaiveCard: string = "onNowUserWaiveCard";
     /**(推送*ai比牌)*/
     public static singonAiReadyTocard: string = "singonAiReadyTocard";
     /**(推送*检查玩家是否中途退出房间)*/
     public static gamestatus: string = "gamestatus";
     /**(推送*玩家下注类型)*/
     public static onUserBetSelect: string = "onUserBetSelect";
-    /**(推送*金花其他玩家下注)*/
+     /**(推送*AI下注类型)*/
+    public static onAiOperate: string = "onAiOperate";
+    /**(推送*金花AI下注)*/
     public static onAiBetOrderUpdate: string = "onAiBetOrderUpdate";
-    /**(推送*金花其他看牌)*/
+    /**(推送*金花AI看牌)*/
     public static onAiSeeCard: string = "onAiSeeCard";
-    /**(推送*金花其他弃牌)*/
+    /**(推送*金花AI弃牌)*/
     public static onAiWaiveCard: string = "onAiWaiveCard";
     /**(推送*玩家超时弃牌)*/
     public static onUserExceWaiveCard: string = "onUserExceWaiveCard";
     /**(推送*结算，游戏结束)*/
     public static onCheckout: string = "onCheckout";
-    /**(金花其他下注)*/
-    public static otherBotpour: string = "otherBotpour";
-    /**(金花其他看牌)*/
-    public static otherSeecard: string = "otherSeecard";
-    /**(金花其他弃牌)*/
-    public static otherAbandon: string = "otherAbandon";
     /**(游戏结束)*/
     public static gameOver: string = "gameOver";
     /**(游戏类型)*/
     public static gambleType: string = "gambleType";
-    /**(玩家下注)*/
-    //public static botpour:string ="botpour";
     /**(结算)*/
     public static settlement: string = "settlement";
    /**(推送*点击退出按钮,离开房间)*/

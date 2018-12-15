@@ -2,18 +2,21 @@
  * 大厅界面
  * */
 class LobbyView extends eui.Component {
-	public bgImg: eui.Image;
-	public _set: eui.Button;
-	public _service: eui.Button;
-	public _playerinfo: eui.Button;
-	public _head_label: eui.Label;
-	public _coin_label: eui.Label;
-	public _generalize: eui.Button;
-	public _safebox: eui.Button;
-	public _information: eui.Button;
-	public _welfare: eui.Button;
-	public _shoppingmall: eui.Button;
-	public _topup: eui.Button;
+	public bgImg:eui.Image;
+	public _set:eui.Button;
+	public _service:eui.Button;
+	public _playerinfo:eui.Button;
+	public _head_label:eui.Label;
+	public _coin_label:eui.Label;
+	public icon_img:eui.Image;
+	public maskbg:eui.Rect;
+	public _generalize:eui.Button;
+	public _safebox:eui.Button;
+	public _information:eui.Button;
+	public _welfare:eui.Button;
+	public _shoppingmall:eui.Button;
+	public _topup:eui.Button;
+
 
 	private gamelistView: GameIconListView;
 	private gameIconDataList: GameIconData[];
@@ -34,6 +37,8 @@ class LobbyView extends eui.Component {
 		this._welfare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._shoppingmall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
 		this._topup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick2, this);
+
+		this.icon_img.mask = this.maskbg;
 	}
 
 	protected childrenCreated() {

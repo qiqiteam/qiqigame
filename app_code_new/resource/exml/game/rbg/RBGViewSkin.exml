@@ -40,23 +40,23 @@
 		</e:Group>
 		<e:Group id="_group_bet_point_0" width="180" height="50" y="779.47" x="736.47" anchorOffsetX="90" anchorOffsetY="25" visible="false">
 			<e:Image source="bar_bet_time_bg_png" scale9Grid="20,6,121,36" x="10" y="1"/>
-			<e:BitmapLabel id="_label_bet_0" y="9.94" text="88" font="bar_bet_time_fnt" x="14.16" textAlign="right" width="63" height="30"/>
-			<e:Image x="74.68" y="8.93" source="bar_bet_time_text_png"/>
+			<e:BitmapLabel id="_label_bet_0" y="9.94" text="8" font="bar_bet_time_fnt" x="-1.04" textAlign="right" width="63" height="30"/>
+			<e:Image x="62.52" y="8.93" source="bar_bet_time_text_png"/>
 		</e:Group>
 		<e:Group id="_group_bet_point_1" width="180" height="50" y="493.7" x="96.17" anchorOffsetX="90" anchorOffsetY="25" visible="false">
 			<e:Image source="bar_bet_time_bg_png" scale9Grid="20,6,121,36" x="10" y="1"/>
-			<e:BitmapLabel id="_label_bet_1" y="9.94" text="88" font="bar_bet_time_fnt" x="14.16" textAlign="right" width="63" height="30"/>
-			<e:Image x="74.68" y="8.93" source="bar_bet_time_text_png"/>
+			<e:BitmapLabel id="_label_bet_1" y="9.94" text="8" font="bar_bet_time_fnt" x="-1.04" textAlign="right" width="63" height="30"/>
+			<e:Image x="62.52" y="8.93" source="bar_bet_time_text_png"/>
 		</e:Group>
 		<e:Group id="_group_bet_point_2" width="180" height="50" y="259.23" x="737.26" anchorOffsetX="90" anchorOffsetY="25" visible="false">
 			<e:Image source="bar_bet_time_bg_png" scale9Grid="20,6,121,36" x="10" y="1"/>
-			<e:BitmapLabel id="_label_bet_2" y="9.94" text="88" font="bar_bet_time_fnt" x="14.16" textAlign="right" width="63" height="30"/>
-			<e:Image x="74.68" y="8.93" source="bar_bet_time_text_png"/>
+			<e:BitmapLabel id="_label_bet_2" y="9.94" text="8" font="bar_bet_time_fnt" x="-1.04" textAlign="right" width="63" height="30"/>
+			<e:Image x="62.52" y="8.93" source="bar_bet_time_text_png"/>
 		</e:Group>
 		<e:Group id="_group_bet_point_3" width="180" height="50" y="493.08" x="1357.63" anchorOffsetX="90" anchorOffsetY="25" visible="false">
 			<e:Image source="bar_bet_time_bg_png" scale9Grid="20,6,121,36" x="10" y="1"/>
-			<e:BitmapLabel id="_label_bet_3" y="9.94" text="88" font="bar_bet_time_fnt" x="14.16" textAlign="right" width="63" height="30"/>
-			<e:Image x="74.68" y="8.93" source="bar_bet_time_text_png"/>
+			<e:BitmapLabel id="_label_bet_3" y="9.94" text="8" font="bar_bet_time_fnt" x="-1.04" textAlign="right" width="63" height="30"/>
+			<e:Image x="62.52" y="8.93" source="bar_bet_time_text_png"/>
 		</e:Group>
 
 
@@ -122,8 +122,8 @@
 		<e:Image id="_card_an_3_1" x="810" y="310" scaleX="1" scaleY="1" source="mahjong_cover_png"/>
 	</e:Group>
 	<e:Image id="btnCardHistroy" x="1370" y="25"  source="bar_btn_game_record_png" locked="true"/>
-	<e:Group id="_group_bar_histroy" width="209" height="120" x="1150.43" y="28.56" locked="true" visible="false">
-		<e:Image x="0" y="0" source="bar_total_card_png"/>
+	<e:Group id="_group_bar_histroy" width="209" height="120" x="1150.43" y="28.56" visible="false" locked="true">
+		<e:Image x="0" y="0" source="bar_total_card_png" smoothing="true"/>
 		<e:BitmapLabel id="_label_bar_0" x="25.13" y="32.36" font="bar_total_number_fnt" text="0"/>
 		<e:BitmapLabel x="66.95" y="31.76" font="bar_total_number_fnt" text="0" id="_label_bar_1"/>
 		<e:BitmapLabel x="108.01" y="32.48" font="bar_total_number_fnt" text="0" id="_label_bar_2"/>
@@ -244,7 +244,7 @@
 
 
 
-	<e:Group id="_group_wait" width="1472" height="828" x="0" y="0" locked="true" visible="false">
+	<e:Group id="_group_wait" width="1472" height="828" x="0" y="0" visible="false">
 		<e:Rect width="1472" height="828" x="0" y="0" fillAlpha="0.5" scaleX="1" scaleY="1"/>
 		<e:Image source="bar_tip_bg_png" y="282" x="480"/>
 		<e:Image source="bar_tip_title_1_png" y="305" x="648"/>
@@ -375,7 +375,7 @@
 		</e:skinName>
 	</e:Button>
 	<e:Image id="_continue_img_0" y="496.35" source="bar_btn_txt_continue_png" touchEnabled="false" scaleX="1" scaleY="1" x="674" visible="false" locked="true"/>
-	<e:Group id="_group_settlement" width="1472" height="828" x="0" y="0" locked="true" visible="false">
+	<e:Group id="_group_settlement" width="1472" height="828" x="0" y="0" visible="false" locked="true">
 		<e:Rect id="_rect_re_touch" width="1472" height="828" y="0" fillAlpha="0.4" x="0"/>
 		<e:Image id="_img_re_bg" source="bar_over_lose_bg_png" y="152" x="105"/>
 		<e:Image id="_img_guang" source="bar_over_lose_light_png" y="-72.75" x="400"/>
