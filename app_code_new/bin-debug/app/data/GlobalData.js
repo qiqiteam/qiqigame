@@ -35,6 +35,10 @@ var GlobalData = (function () {
     GlobalData.hasNetwork = true;
     /**重连次数 */
     GlobalData.recNum = 0;
+    /**是否点击过准备面板关闭按钮*/
+    GlobalData.liveCloseBtn = false;
+    /**点击准备面板关闭按钮,推送是否能够退出房间*/
+    GlobalData.isLiveRoom = false;
     return GlobalData;
 }());
 __reflect(GlobalData.prototype, "GlobalData");

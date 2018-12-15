@@ -104,17 +104,17 @@ class ZJHUtil {
     public getCardType(index): string {
         switch (index) {
             case 1:
-                return '豹子';
+                return 'gf_px6_png';
             case 2:
-                return '同花顺';
+                return 'gf_px5_png';
             case 3:
-                return '金花';
+                return 'gf_px4_png';
             case 4:
-                return '顺子';
+                return 'gf_px3_png';
             case 5:
-                return '对子';
+                return 'gf_px2_png';
             case 6:
-                return '单张';
+                return 'gf_px1_png';
         }
     }
     /**显示玩家加注类型 */
@@ -135,7 +135,7 @@ class ZJHUtil {
         }
     }
     /**显示玩家操作状态*/
-     public getplayerstatue(index): string {
+    public getplayerstatue(index): string {
         switch (index) {
             case 1:
                 return '豹子';
@@ -152,43 +152,90 @@ class ZJHUtil {
         }
     }
     //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(pos:egret.Point, num): Array<eui.Image> {
-        var coinArr = [];
+    public coinsType(pos: egret.Point, num): Array<egret.Sprite> {
+        var splist: Array<egret.Sprite>=[];
         var coinNum: number = 0;
         var src: string = '';
-        num = Math.round(num / 10000);
-        if (num > 0 && num < 10) {  //1w
+        num = Math.round(num / 100);
+        if (num == 1 || num == 2) {  //（初级场：1，2）
             coinNum = num;
-            src = 'b1a';
+            src = 'gf_icon_chip_sm1_png';
+        } else if (num == 3 || num == 6) {  //（初级场：3，6）
+            coinNum = num;
+            src = 'gf_icon_chip_sm5_png';
+        } else if (num == 4 || num == 8) {  //（初级场：4，8）
+            coinNum = num;
+            src = 'gf_icon_chip_sm3_png';
+        } else if (num == 5 || num == 10) {  //（初级场：5，10）
+            coinNum = num;
+            src = 'gf_icon_chip_sm6_png';
+        } else if (num == 6 || num == 12) {  //（初级场：6，12）
+            coinNum = num;
+            src = 'gf_icon_chip_sm4_png';
+        } else if (num == 7 || num == 14) {  //（初级场：7，14）
+            coinNum = num;
+            src = 'gf_icon_chip_sm2_png';
         }
-        else if (num > 9 && num < 100) {   //1000w---10w
-            coinNum = num / 10;
-            src = 'b2a';
-        }
-        else if (num > 99 && num < 1000) {   //5000w---100w
-            coinNum = num / 100;
-            src = 'b3a';
-        }
-        else if (num > 999 && num < 10000) { //1y----1000w
-            coinNum = num / 1000;
-            src = 'b4a';
-        }
-        else if (num > 9999 && num < 100000) { //3y---1y
-            coinNum = num / 10000;
-            src = 'b5a';
-        }
-        else {  //5y
-            coinNum = num / 50000;
-            src = 'b6a';
-        }
-        for (var i = 0; i < Math.round(coinNum); i++) {
+        /*for (var i = 0; i < Math.round(coinNum); i++) {
             var coin: eui.Image = new eui.Image(src);
-            //var p: egret.Point = this.coinPos();
             coin.x = pos.x;
             coin.y = pos.y;
             coinArr.push(coin);
+        }*/
+        /*if (Math.round(coinNum) <= 7) {
+            var coin: eui.Image = new eui.Image(src);
+            coin.x = pos.x;
+            coin.y = pos.y;
+            coinArr.push(coin);
+        } else if (Math.round(coinNum) > 7 && Math.round(coinNum) <= 14) {
+            for (let i = 0; i < 2; i++) {
+                var coin: eui.Image = new eui.Image(src);
+                coin.x = pos.x;
+                coin.y = pos.y;
+                coinArr.push(coin);
+            }
+        }*/
+
+        if (Math.round(coinNum) <= 7) {
+            var sp: egret.Sprite = new egret.Sprite();
+            var coin: eui.Image = new eui.Image(src);
+            var cmnum: eui.Label = new eui.Label(Math.round(coinNum).toString());
+            coin.name = "img";
+            coin.x = 0;
+            coin.y = 0;
+            cmnum.name = "txt";
+            cmnum.x = 0;
+            cmnum.y = 10;
+            cmnum.width = 62;
+            cmnum.height = 20;
+            cmnum.textAlign = egret.HorizontalAlign.CENTER;
+            sp.addChild(coin);
+            sp.addChild(cmnum);
+            sp.x = pos.x;
+            sp.y = pos.y;
+            splist.push(sp);
+        } else if (Math.round(coinNum) > 7 && Math.round(coinNum) <= 14) {
+            for (let i = 0; i < 2; i++) {
+                var sp: egret.Sprite = new egret.Sprite();
+                var coin: eui.Image = new eui.Image(src);
+                var cmnum: eui.Label = new eui.Label(Math.round(coinNum/2).toString());
+                coin.name = "img";
+                coin.x = 0;
+                coin.y = 0;
+                cmnum.name = "txt";
+                cmnum.x = 0;
+                cmnum.y = 10;
+                cmnum.width = 62;
+                cmnum.height = 20;
+                cmnum.textAlign = egret.HorizontalAlign.CENTER;
+                sp.addChild(coin);
+                sp.addChild(cmnum);
+                sp.x = pos.x;
+                sp.y = pos.y;
+                splist.push(sp);
+            }
         }
-        return coinArr;
+        return splist;
     }
 
     private coinPos(): egret.Point {

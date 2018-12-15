@@ -351,6 +351,21 @@ var uiCore;
     }());
     uiCore.LabelEffect = LabelEffect;
     __reflect(LabelEffect.prototype, "uiCore.LabelEffect");
+    var KShape = (function (_super) {
+        __extends(KShape, _super);
+        function KShape() {
+            var _this = _super.call(this) || this;
+            _this.graphics.beginFill(0xff0000);
+            _this.graphics.drawRect(0, 0, 100, 100);
+            _this.graphics.endFill();
+            return _this;
+        }
+        KShape.prototype.childrenCreated = function () {
+        };
+        return KShape;
+    }(egret.Shape));
+    uiCore.KShape = KShape;
+    __reflect(KShape.prototype, "uiCore.KShape");
 })(uiCore || (uiCore = {}));
 /*
     var uiCore;

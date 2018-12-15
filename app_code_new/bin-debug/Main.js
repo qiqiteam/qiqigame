@@ -85,6 +85,7 @@ var Main = (function (_super) {
         xlLib.init(option);
         xlLib.UIMgr.instance.commonLoadUI = LodingView;
         xlLib.UIMgr.instance.tipsLoadUI = TipsLoading;
+        xlLib.ResUtils.init();
         xlLib.ReceiveMessageMgr.getInstance().initPushMessage();
         //初始化Resource资源加载库
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);

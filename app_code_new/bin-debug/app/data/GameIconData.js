@@ -10,6 +10,7 @@ var GameIconData = (function () {
         this.game = data.game;
         this.type = data.type;
         this.ishot = data.ishot;
+        this.isNew = data.isNew;
         return this;
     };
     return GameIconData;

@@ -18,9 +18,18 @@ var ZJHroomView = (function (_super) {
     ZJHroomView.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        this._return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
+        this._record.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
+        this._help.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
         this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
         this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
+        EventUtil.addEventListener(EventConst.onGameStatusChange, this.JoinRoomPrepare, this);
+    };
+    ZJHroomView.prototype.JoinRoomPrepare = function (data) {
+        if (data.param.code == 200) {
+            xlLib.SceneMgr.instance.changeScene(ZJHScene);
+            xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
+        }
     };
     ZJHroomView.prototype.onEnterGame = function () {
         if (!this.gameIconData) {
@@ -34,19 +43,38 @@ var ZJHroomView = (function (_super) {
             token: UserInfo.getInstance().token, playway: playway.id
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, function (data) {
-            xlLib.SceneMgr.instance.changeScene(ZJHScene);
-            xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
         }, this);
     };
     ZJHroomView.prototype.setGameIconData = function (gameIconData) {
         this.gameIconData = gameIconData;
     };
-    ZJHroomView.prototype.dispose = function () {
-        xlLib.PopUpMgr.removePopUp(this, 1);
+    /***------------------------------------------------------------------------------------------------------------ */
+    ZJHroomView.prototype.Onclickpanl = function (e) {
+        if (e.target == this._return) {
+            xlLib.PopUpMgr.removePopUp(this, 1);
+        }
+        else if (e.target == this._record) {
+            this.addrecordPanl();
+        }
+        else if (e.target == this._help) {
+            this.addhelpPanl();
+        }
+    };
+    //记录面板
+    ZJHroomView.prototype.addrecordPanl = function () {
+        xlLib.PopUpMgr.addPopUp(ZJHRecordPanl, null, true, true, null, 1);
+    };
+    //帮助面板
+    ZJHroomView.prototype.addhelpPanl = function () {
+        // xlLib.PopUpMgr.addPopUp(ZJHHelpPanl, null, true,false);
+        xlLib.PopUpMgr.addPopUp(ZJHHelpPanl, null, true, true, null, 1);
     };
     ZJHroomView.prototype.destroy = function () {
         this.gameIconData = null;
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        this._return.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
+        this._record.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
+        this._help.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.JoinRoomPrepare, this);
     };
     return ZJHroomView;
 }(eui.Component));

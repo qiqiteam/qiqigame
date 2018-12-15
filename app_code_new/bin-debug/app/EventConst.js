@@ -13,6 +13,8 @@ var EventConst = (function () {
     //------------------C to S---------------------请求发送服务器协议
     /**发送自己拼牌顺序 */
     EventConst.niuniu_manual = "niuniu_manual";
+    /**请求玩家列表 */
+    EventConst.niuniu_player = "niuniu_player";
     /**加入房间 */
     EventConst.joinroom = "joinroom";
     /**开始牛牛游戏*/
@@ -33,6 +35,7 @@ var EventConst = (function () {
     EventConst.baijialebeton = "baijialebeton";
     /**百家乐离开房间 */
     EventConst.BaccaratOnleave = "BaccaratOnleave";
+    /**经典炸金花 */
     /**准备 */
     EventConst.prepare = "prepare";
     /**发牌 */
@@ -47,6 +50,14 @@ var EventConst = (function () {
     EventConst.compareCard = "compareCard";
     /**弃牌 */
     EventConst.abandon = "abandon";
+    /**(退出房间,取消准备)*/
+    EventConst.leave = "leave";
+    /**(点击退出按钮)*/
+    EventConst.isLeave = "isLeave";
+    /**(退出面板点击确定)*/
+    EventConst.zjhLeave = "zjhLeave";
+    /**(准备时定点击离开)*/
+    EventConst.outRoom = "outRoom";
     /**二八杠 */
     /**开始游戏 */
     EventConst.erbagang_start = "erbagang_start";
@@ -54,8 +65,10 @@ var EventConst = (function () {
     EventConst.erbagang_hog = "erbagang_hog";
     /**投注倍数*/
     EventConst.erbagang_bet = "erbagang_bet";
-    /**返回骰子*/
-    //public static dice: string = "dice";
+    /**关闭自动跟注 */
+    EventConst.closeAutoFollow = "closeAutoFollow";
+    /**自动跟注 */
+    EventConst.onAutoFollow = "onAutoFollow";
     //------------------S to C---------------------服务端回包监听数据
     /**抢庄牛牛拼牌通知(所有人) */
     EventConst.onUserShowOrderUpdate = "onUserShowOrderUpdate";
@@ -63,6 +76,8 @@ var EventConst = (function () {
     EventConst.onGameStatusChange = "onGameStatusChange";
     /**所有玩家列表*/
     EventConst.players = "players";
+    /**前20名玩家列表*/
+    EventConst.onUserList = "onUserList";
     /**新玩家加入*/
     EventConst.onNewUserEnterGame = "onNewUserEnterGame";
     /**下注通知(所有人)*/
@@ -85,44 +100,68 @@ var EventConst = (function () {
     EventConst.summary = "summary";
     // /**时间*/
     // public static roomTime: string = "roomTime";
-    /**进入百家乐房间成功of失败*/
-    EventConst.baccaratOnJoinRoom = "baccaratOnJoinRoom";
+    // /**进入百家乐房间成功of失败*/
+    // public static baccaratOnJoinRoom: string = "baccaratOnJoinRoom";
     /**进入百家乐房间列表成功of失败*/
     EventConst.parteySuccess = "parteySuccess";
-    /**（赔率）*/
-    EventConst.onBJLjoinroom = "onBJLjoinroom";
-    /**（可以开始下注5秒倒计时）*/
-    EventConst.startBeton = "startBeton";
-    /**自己下注*/
-    EventConst.onCatch = "onCatch";
-    /**其他玩家下注*/
-    EventConst.dealCatch = "dealCatch";
-    /**(开始发牌)*/
-    EventConst.baccaratDeil = "baccaratDeil";
-    /**("参数异常")*/
-    EventConst.theNumberOfTooMuch = "theNumberOfTooMuch";
-    /**(5秒后开始下注,处理结算动画)*/
-    EventConst.beginBteon = "beginBteon";
-    /**( 金币不足**)*/
-    EventConst.bsogc = "bsogc";
+    /**请求玩家列表 */
+    EventConst.playersUserWin = "playersUserWin";
+    /**前20名玩家 */
+    EventConst.userwin = "userwin";
+    /**(筹码)*/
+    EventConst.onSendJetton = "onSendJetton";
+    /**(个人限红通知)*/
+    EventConst.OnUpdateLimitItem = "OnUpdateLimitItem";
+    // /**（赔率）*/
+    // public static onBJLjoinroom: string = "onBJLjoinroom";
+    // /**（可以开始下注5秒倒计时）*/
+    // public static startBeton: string = "startBeton";
+    // /**自己下注*/
+    // public static onCatch: string = "onCatch";
+    // /**其他玩家下注*/
+    // public static dealCatch: string = "dealCatch";
+    // /**(开始发牌)*/
+    // public static baccaratDeil: string = "baccaratDeil";
+    // /**("参数异常")*/
+    // public static theNumberOfTooMuch: string = "theNumberOfTooMuch";
+    // /**(5秒后开始下注,处理结算动画)*/
+    // public static beginBteon: string = "beginBteon";
+    // /**( 金币不足**)*/
+    // public static bsogc: string = "bsogc";
     /**( 金币变为**)*/
-    EventConst.acquisitionGolb = "acquisitionGolb";
-    /**( 5局之后不下注将要被踢出房间，当前第三局：)*/
-    EventConst.isStartBeton = "isStartBeton";
-    /**( 你被请出房间**)*/
-    EventConst.isStartBetonST = "isStartBetonST";
-    /**(百家乐退出房间)*/
-    EventConst.gameOverSucces = "gameOverSucces";
-    /**(检查玩家是否中途退出房间)*/
+    EventConst.onUpdateUserBalance = "onUpdateUserBalance";
+    // /**( 5局之后不下注将要被踢出房间，当前第三局：)*/
+    // public static isStartBeton: string = "isStartBeton";
+    // /**( 你被请出房间**)*/
+    // public static isStartBetonST: string = "isStartBetonST";
+    /**(退出游戏成功)*/
+    EventConst.onUserLeaveGame = "onUserLeaveGame";
+    /**推送*玩家全压 */
+    EventConst.onUserAllPress = "onUserAllPress";
+    /**推送*玩家看牌 */
+    EventConst.onUserSeeCard = "onUserSeeCard";
+    /**推送*玩家比牌结果 */
+    EventConst.onUserToCard = "onUserToCard";
+    /**推送*玩家弃牌 */
+    EventConst.onUserWaiveCard = "onUserWaiveCard";
+    /**(推送*异常及时通知)*/
+    EventConst.onTimelyNotify = "onTimelyNotify";
+    /**(推送*ai比牌)*/
+    EventConst.singonAiReadyTocard = "singonAiReadyTocard";
+    /**(推送*检查玩家是否中途退出房间)*/
     EventConst.gamestatus = "gamestatus";
-    /**(游戏类型)*/
-    EventConst.gambleType = "gambleType";
-    /**(玩家下注)*/
-    //public static botpour:string ="botpour";
-    /**(结算)*/
-    EventConst.settlement = "settlement";
-    /**(退出房间)*/
-    EventConst.leave = "leave";
+    /**(推送*玩家下注类型)*/
+    EventConst.onUserBetSelect = "onUserBetSelect";
+    /**(推送*金花其他玩家下注)*/
+    EventConst.onAiBetOrderUpdate = "onAiBetOrderUpdate";
+    /**(推送*金花其他看牌)*/
+    EventConst.onAiSeeCard = "onAiSeeCard";
+    /**(推送*金花其他弃牌)*/
+    EventConst.onAiWaiveCard = "onAiWaiveCard";
+    /**(推送*玩家超时弃牌)*/
+    EventConst.onUserExceWaiveCard = "onUserExceWaiveCard";
+    /**(推送*结算，游戏结束)*/
+    EventConst.onCheckout = "onCheckout";
     /**(金花其他下注)*/
     EventConst.otherBotpour = "otherBotpour";
     /**(金花其他看牌)*/
@@ -131,6 +170,16 @@ var EventConst = (function () {
     EventConst.otherAbandon = "otherAbandon";
     /**(游戏结束)*/
     EventConst.gameOver = "gameOver";
+    /**(游戏类型)*/
+    EventConst.gambleType = "gambleType";
+    /**(玩家下注)*/
+    //public static botpour:string ="botpour";
+    /**(结算)*/
+    EventConst.settlement = "settlement";
+    /**(推送*点击退出按钮,离开房间)*/
+    EventConst.onUserIsLeave = "onUserIsLeave";
+    /**(推送*点击退出面板,确定按钮离开房间)*/
+    EventConst.onUserOutRoom = "onUserOutRoom";
     return EventConst;
 }());
 __reflect(EventConst.prototype, "EventConst");

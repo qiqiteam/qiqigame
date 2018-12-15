@@ -105,8 +105,8 @@ var xlLib;
             return sp;
         };
         /**
-    * 创建DragonBones显示对象
-    */
+          * 创建DragonBones显示对象
+          */
         DisplayUtils.createDragonBonesDisplay = function (source, bones, cache) {
             var dragonbonesData = RES.getRes(source + "_ske_json");
             var textureData = RES.getRes(source + "_tex_json");
@@ -141,12 +141,12 @@ var xlLib;
             dragonBones.WorldClock.clock.remove(armature);
         };
         /**
-       * 运行龙骨动画
-       * @param animationName {string} 指定播放的动画名称.
-       * @param playTimes {number} 动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN
-       * @returns {AnimationState} 动画播放状态实例
-       *
-       */
+         * 运行龙骨动画
+         * @param animationName {string} 指定播放的动画名称.
+         * @param playTimes {number} 动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN
+         * @returns {AnimationState} 动画播放状态实例
+         *
+         */
         DisplayUtils.runDragonBonesArmature = function (armature, animationName, playTimes, isPlay) {
             if (isPlay === void 0) { isPlay = true; }
             if (armature == null) {
@@ -160,17 +160,6 @@ var xlLib;
             else {
                 armature.animation.gotoAndStop(animationName, 0);
             }
-            var _time;
-            egret.startTick(function (timeStamp) {
-                if (!_time) {
-                    _time = timeStamp;
-                }
-                var now = timeStamp;
-                var pass = now - _time;
-                _time = now;
-                dragonBones.WorldClock.clock.advanceTime(pass / 1000);
-                return false;
-            }, armature);
         };
         /**
          * 设置按钮变灰

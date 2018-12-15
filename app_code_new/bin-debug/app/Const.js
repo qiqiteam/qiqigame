@@ -5,17 +5,13 @@ var Const = (function () {
     function Const() {
     }
     //正式版本----------------------------------------
-    // public static GAME_HOST:string = "192.168.1.73";
-    Const.GAME_HOST = "47.52.138.199";
-    // public static GAME_HOST:string = "192.168.1.49";
-    Const.GAME_PORT = "9081";
-    // public static httpUrl:string = "http://192.168.1.49:80";
-    // public static httpUrl:string = "http://192.168.1.73:80";
-    Const.httpUrl = "http://47.52.138.199:80";
-    // //测试服----------------------------------------
-    // public static GAME_HOST:string = "192.168.1.36";
+    // public static GAME_HOST:string = "47.52.138.199";
     // public static GAME_PORT:string = "9081";
-    // public static httpUrl:string = "http://192.168.1.36";
+    // public static httpUrl:string = "http://47.52.138.199:80";
+    // //测试服----------------------------------------
+    Const.GAME_HOST = "192.168.1.73";
+    Const.GAME_PORT = "9081";
+    Const.httpUrl = "http://192.168.1.73";
     //---------------------------游戏分类
     /**牛牛*/
     Const.GAME_NIUNIU = "niuniu";
@@ -29,7 +25,8 @@ var Const = (function () {
     Const.GAME_ZHAJINHUA = "zhajinhua";
     //---------------------------游戏类型
     /**抢庄牛牛 */
-    Const.TYPE_QZNN = "qznn";
+    // public static TYPE_QZNN: string = "qznn";
+    Const.TYPE_QZNN = "niuniu";
     /**通比牛牛 */
     Const.TYPE_TBNN = "tbnn";
     /**千人牛牛 */
@@ -43,6 +40,10 @@ var Const = (function () {
     //---------------------------房间类型
     /**初级场 */
     Const.PLAYWAY_CHUJICHANG = "chujichang";
+    /**体验房 */
+    Const.PLAYWAY_TIYANFANG = "tiyanfang";
+    /**体验场 */
+    Const.PLAYWAY_TIYANCHANG = "tiyanchang";
     return Const;
 }());
 __reflect(Const.prototype, "Const");

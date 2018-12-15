@@ -27,12 +27,19 @@ var BRNNroomView = (function (_super) {
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("brnn_hall_effect_hg", "brnn_hall_effect_hg");
         this.effectIcon.play(-1);
-        this.effectIcon.x = 400;
-        this.effectIcon.y = 205;
+        this.effectIcon.x = 80;
+        this.effectIcon.y = 208;
         this.effectIcon.frameRate = 20;
         this.addChild(this.effectIcon);
-        this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
+        this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
         this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
+        EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+    };
+    /**游戏状态 */
+    BRNNroomView.prototype.GameStatus = function (data) {
+        if (data._obj.code == 200) {
+            xlLib.SceneMgr.instance.changeScene(BRNNScene);
+        }
     };
     BRNNroomView.prototype.onEnterGame = function () {
         if (!this.gameIconData) {
@@ -46,8 +53,6 @@ var BRNNroomView = (function (_super) {
             token: UserInfo.getInstance().token, playway: playway.id
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.joinroom, senddata, function (data) {
-            xlLib.SceneMgr.instance.changeScene(BRNNScene);
-            xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
         }, this);
     };
     BRNNroomView.prototype.setGameIconData = function (gameIconData) {
@@ -59,6 +64,7 @@ var BRNNroomView = (function (_super) {
     BRNNroomView.prototype.destroy = function () {
         this.gameIconData = null;
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
     };
     return BRNNroomView;
 }(eui.Component));

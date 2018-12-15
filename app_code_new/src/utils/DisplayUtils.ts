@@ -99,7 +99,7 @@ module xlLib {
             return sp;
         }
 
-             /**
+       /**
          * 创建DragonBones显示对象
          */
         public static createDragonBonesDisplay(source: string,bones?: string, cache?: number): dragonBones.Armature {
@@ -141,8 +141,7 @@ module xlLib {
             armature.animation.stop();
             dragonBones.WorldClock.clock.remove(armature);
         }
-
-          /**
+        /**
          * 运行龙骨动画
          * @param animationName {string} 指定播放的动画名称.
          * @param playTimes {number} 动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN
@@ -161,17 +160,6 @@ module xlLib {
                 else{
                     armature.animation.gotoAndStop(animationName,0);
                 }
-                var _time:number;
-                egret.startTick((timeStamp)=>{
-                        if(!_time) {
-                        _time = timeStamp;
-                        }
-                        var now = timeStamp;
-                        var pass = now - _time;
-                        _time = now;
-                        dragonBones.WorldClock.clock.advanceTime(pass / 1000);
-                        return false;
-                }, armature);
         }
 
         /**

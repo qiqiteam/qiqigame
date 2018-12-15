@@ -15,6 +15,13 @@ var BRNNView = (function (_super) {
     __extends(BRNNView, _super);
     function BRNNView() {
         var _this = _super.call(this) || this;
+        _this.arr = [0, 0];
+        _this.multipleList = [0, 0, 0, 0, 0]; //倍数表
+        _this.game_result = 0; //动画状态
+        _this.isAction = false; //能否下注
+        _this.isPaly = false; //是否下过注
+        _this.isWin = false; //是否输赢
+        _this.isScore = 0; //输赢金币
         //-----------------------------------------------
         _this.interval = -1; // 游戏计时器间隔
         _this.selfbetsNum = {}; // 下注总计 
@@ -41,7 +48,7 @@ var BRNNView = (function (_super) {
         _this.resultCaijin = 0;
         _this.totalCaijin = 0;
         _this.cdNum = 10; //倒计时计数
-        _this.lastTouchBetIndex = -1; //上一次点击的筹码
+        _this.lastTouchBetIndex = 1; //上一次点击的筹码
         _this.coinsNumArr = {}; //计数桌面4个方位的筹码个数
         _this.isCoinsReturn = true;
         _this.curRate = 0;
@@ -57,17 +64,25 @@ var BRNNView = (function (_super) {
         //this.r = r;
     }
     BRNNView.prototype.childrenCreated = function () {
-        //this.setTouchEnabled();
         this.getOrginCardPos();
-        //this.setCountdown();
         this.addEvent();
         this.initData();
-        //this.onTouchBet(0);
-        //this.setSelfInfo();
-        //PanelManage.openChat(this, 112, 300, "10003");
-        //this.joinCallback(this.r);
-        //this.labelHead0.text = UserInfo.getInstance().username;
-        //this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
+        this.labelHead0.text = UserInfo.getInstance().username;
+        this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
+    };
+    /**设置金币最多的20个玩家数据 */
+    BRNNView.prototype.initGameIconList = function (data) {
+        var dataArr = [];
+        var otherplayer;
+        for (var i = 0; i < data._obj.player.length; i++) {
+            otherplayer = new Object();
+            otherplayer.name = data._obj.player[i].username;
+            otherplayer.gold = data._obj.player[i].goldcoins;
+            otherplayer.img = "women7_png";
+            dataArr.push(otherplayer);
+        }
+        this.userlist.dataProvider = new eui.ArrayCollection(dataArr);
+        this.scroller.viewport = this.userlist;
     };
     BRNNView.prototype.initData = function () {
         this.labBankerRank.text = '';
@@ -76,7 +91,6 @@ var BRNNView = (function (_super) {
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.grpBankerList.visible = false;
-        this.grpCoins.touchEnabled = false;
         this.grpTips.touchEnabled = false;
         this.grpTips.touchChildren = false;
         this.grpSecondPanel.visible = false;
@@ -89,6 +103,15 @@ var BRNNView = (function (_super) {
         this.grpCardType.touchEnabled = false;
         this.grpCaijin.visible = false;
         this.grpCard.visible = true;
+        this.isAction = false;
+        for (var i = 0; i < 4; i++) {
+            this['grade_text_' + i + '_0'].text = '';
+            this['grade_text_' + i + '_1'].text = '';
+        }
+        this.wanjia.x = -237;
+        this.isPaly = false;
+        this.isWin = false;
+        this.isScore = 0;
     };
     //获取原始扑克的位置
     BRNNView.prototype.getOrginCardPos = function () {
@@ -104,7 +127,6 @@ var BRNNView = (function (_super) {
         }
         this.labCardTypeBanker.visible = false;
         for (var index = 0; index < 4; index++) {
-            this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
             var cardPos = [];
             for (var j = 0; j < 5; j++) {
@@ -121,37 +143,8 @@ var BRNNView = (function (_super) {
         }
     };
     BRNNView.prototype.addEvent = function () {
-        /*
-        EventManage.addButtonEvent(this, this.btnClose, egret.TouchEvent.TOUCH_TAP, this.onTouchClose.bind(this));
-        EventManage.addButtonEvent(this, this.btnCharge, egret.TouchEvent.TOUCH_TAP, this.onTouchCharge.bind(this));
-        EventManage.addButtonEvent(this, this.btnUpBanker, egret.TouchEvent.TOUCH_TAP, this.onTouchUpBank.bind(this));
-        EventManage.addButtonEvent(this, this.btnDownBanker, egret.TouchEvent.TOUCH_TAP, this.onTouchDownBank.bind(this));
-        EventManage.addEvent(this, this.grpBankerInfo, egret.TouchEvent.TOUCH_TAP, this.getBankerList.bind(this));
-        EventManage.addEvent(this, this.grpBankerList, egret.TouchEvent.TOUCH_TAP, this.onTouchCloseBankerList.bind(this));
-
-        EventManage.addButtonEvent(this, this.btnCardType, egret.TouchEvent.TOUCH_TAP, this.onTouchCardType.bind(this));
-        EventManage.addButtonEvent(this, this.btnCardHistroy, egret.TouchEvent.TOUCH_TAP, this.onTouchCardHistory.bind(this));
-        EventManage.addButtonEvent(this, this.secondClose, egret.TouchEvent.TOUCH_TAP, this.onTouchCloseSecondPanel.bind(this));
-
-        EventManage.addEvent(this, this.btnRedBox, egret.TouchEvent.TOUCH_TAP, this.onTouchRedBox.bind(this));
-        for (var i = 0; i < 8; i++) {
-            if (i < 6) {
-                EventUtil.addEvent(this, this['btnBet' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchBet.bind(this, i));
-                this['labBet' + i].touchEnabled = false;
-            }
-            if (i < 4) {
-                EventUtil.addEvent(this, this['effectTouch' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSelectIndex.bind(this, i));
-                this['labBetsPool' + i].text = '0';
-                this['labBetsSelf' + i].text = '0';
-            }
-            EventUtil.addButtonEvent(this, this['grpHead' + i], egret.TouchEvent.TOUCH_TAP, this.onTouchSeat.bind(this, i));
-            this['imghead' + i].source = '';
-            this['labelHead' + i].text = '';
-        }
-        EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.OPERTE_REDBOX_COMPLETE, this.operateBoxComplete.bind(this));
-        EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_PAY, this.updatePayData.bind(this));
-        EventManage.addEvent(this, lcp.LListener.getInstance(), EventData.UPDATE_MAIN, this.updateDataGold.bind(this));
-        */
+        this.wanjialist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.packup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
         this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -162,71 +155,252 @@ var BRNNView = (function (_super) {
         this.effectTouch1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        for (var i = 0; i < 4; i++) {
-            this['labBetsPool' + i].text = '';
-            this['labBetsSelf' + i].text = '';
-        }
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
-        EventUtil.addEventListener(EventConst.bet, this.onHogBack1, this);
-        EventUtil.addEventListener(EventConst.summary, this.over, this);
-        var data = {
-            pokes: [{ num: 3, type: 10, value: [406, 202, 301, 408, 303] },
-                { num: 3, type: 10, value: [201, 307, 412, 308, 104] },
-                { num: 1, type: 0, value: [313, 208, 409, 304, 105] },
-                { num: 1, type: 4, value: [402, 305, 203, 213, 404] },
-                { num: 2, type: 9, value: [112, 211, 212, 204, 205] }],
+        EventUtil.addEventListener(EventConst.onUserList, this.initGameIconList, this);
+        EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
+        EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
+    };
+    /**游戏状态 */
+    BRNNView.prototype.GameStatus = function (data) {
+        console.log(data._obj.roomStatus);
+        switch (data._obj.roomStatus) {
+            case 1:
+                this.onprepare(data);
+                break; //准备中
+            case 4:
+                this.onbetBack(data);
+                break; //下注
+            case 5:
+                this.onstopBack(data);
+                break; //停止下注(千人牛牛开牌)
+            case 7:
+                this.onjiesuan(data);
+                break; //结算、百人牛牛派奖中
+            case 8:
+                this.onrest(data);
+                break; //游戏结束,百人牛牛休息
+            case 9:
+                this.onshuffle(data);
+                break; //百人牛牛洗牌
+            case 10:
+                this.onfapai(data);
+                break; //百人牛牛发牌
+        }
+    };
+    /**准备 */
+    BRNNView.prototype.onprepare = function (data) {
+        this.startCountDown(data._obj.seconds);
+    };
+    /**下注 */
+    BRNNView.prototype.onbetBack = function (data) {
+        this.startCountDown(data._obj.seconds);
+        this.showGameTips(2);
+        this.isAction = true;
+        for (var i = 0; i < 4; i++) {
+            if (data._obj.hogList[i].allow) {
+            }
+            else {
+                this['_btn_double_' + i].touchEnabled = false;
+                this['_btn_double_' + i].visible = false;
+            }
+        }
+        for (var i = 0; i < 5; i++) {
+            this.multipleList[i] = data._obj.hogList[i].hogOrBet;
+        }
+    };
+    /**停止下注(千人牛牛开牌) */
+    BRNNView.prototype.onstopBack = function (data) {
+        this.isAction = false;
+        this.showGameTips(3);
+        this.startCountDown(data._obj.seconds);
+        this.isPaly = data._obj.play;
+        this.isWin = data._obj.win;
+        UserInfo.getInstance().goldcoins = data._obj.balance;
+        this.isScore = data._obj.score;
+        this.game_result = data._obj.result;
+        var result = {
+            pokes: [],
             result: [1, 0, 0, 0],
             bankerWin: 0,
             rate: "0.05",
             bomb: "0"
         };
-        this.cdNum = 0;
-        this.cardResult = data;
-        this.setCountdown();
-        this.addPlayers(data);
-        //this.cardEffect();
-        this.setStartBet();
+        for (var i = 0; i < data._obj.players.length; i++) {
+            var err = {
+                // num: data._obj.players[i].ratio,
+                type: data._obj.players[i].pai.niu,
+                value: data._obj.players[i].cardsList,
+            };
+            result.pokes.push(err);
+        }
+        this.cardResult = result;
+        this.interval = setInterval(this.playerCardRotation.bind(this), 800);
+    };
+    /**结算、百人牛牛派奖中 */
+    BRNNView.prototype.onjiesuan = function (data) {
+        this.startCountDown(data._obj.seconds);
+        this.victoryEffect();
+        if (this.isPaly) {
+            //执行金币加减动画
+            //this.isWin   //(代表输赢)
+            //this.isScore //(代表输赢金币数量)
+            //更新界面金币数量显示
+            this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
+        }
+    };
+    /**游戏结束,百人牛牛休息 */
+    BRNNView.prototype.onrest = function (data) {
+        this.startCountDown(data._obj.seconds);
+        UserInfo.getInstance().isGameStart = false;
+    };
+    /**百人牛牛洗牌 */
+    BRNNView.prototype.onshuffle = function (data) {
+        this.resetGame();
+        this.startCountDown(data._obj.seconds);
+    };
+    /**百人牛牛发牌 */
+    BRNNView.prototype.onfapai = function (data) {
+        this.startCountDown(data._obj.seconds);
+        this.cardEffect();
+    };
+    /**更新下注通知(所有人) */
+    BRNNView.prototype.OnBetUpdate = function (data) {
+        // console.log(data._obj.index + "号下注");
+        console.log(UserInfo.getInstance().uid);
+        console.log(data._obj.userid);
+        if (data._obj.code == 200) {
+            if (UserInfo.getInstance().uid == data._obj.userid) {
+                UserInfo.getInstance().isGameStart = true; //游戏状态
+                this.onGenZhuClick(data._obj.money, data._obj.deskNum);
+                this.onplaygrade(data._obj.myMoney, data._obj.deskNum);
+                this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
+                UserInfo.getInstance().goldcoins = data._obj.balance;
+                this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
+            }
+            else {
+                this.onPlayerGenZhu(data._obj.money, data._obj.deskNum);
+                this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
+            }
+        }
+        else {
+            xlLib.TipsUtils.showFloatWordTips(data._obj.message);
+        }
+    };
+    /**自己点击跟注 (丢筹码动作) */
+    BRNNView.prototype.onGenZhuClick = function (num, index) {
+        var p = new egret.Point();
+        p.x = 268;
+        p.y = 792;
+        this.showCoins(p, num, index);
+    };
+    /**其他玩家跟注 (丢筹码动作) */
+    BRNNView.prototype.onPlayerGenZhu = function (num, index) {
+        var p = new egret.Point();
+        p.x = 80;
+        p.y = 400 + Math.random() * 80;
+        this.showCoins(p, num, index);
+    };
+    /**筹码池分数(总分)  */
+    BRNNView.prototype.onJettongrade = function (num, index) {
+        var str = this['grade_text_' + (index - 1) + '_0'].text;
+        if (str == '') {
+            this['grade_text_' + (index - 1) + '_0'].text = '' + num;
+        }
+        else {
+            var type = parseInt(str);
+            if (type < num) {
+                this['grade_text_' + (index - 1) + '_0'].text = '' + num;
+            }
+        }
+    };
+    /**筹码池分数(自己)  */
+    BRNNView.prototype.onplaygrade = function (num, index) {
+        var str = this['grade_text_' + (index - 1) + '_1'].text;
+        if (str == '') {
+            this['grade_text_' + (index - 1) + '_1'].text = '' + num;
+        }
+        else {
+            var type = parseInt(str);
+            if (type < num) {
+                this['grade_text_' + (index - 1) + '_1'].text = '' + num;
+            }
+        }
     };
     /**准备 开始回调 */
     BRNNView.prototype.onClick = function (e) {
-        if (e.target == this._btn_double_1) {
-            console.log("_btn_double_1");
+        if (e.target == this.wanjialist) {
+            this.wanjialiebiao(EventConst.niuniu_player);
+            this.wanjialist.visible = false;
+            egret.Tween.get(this.wanjia).to({ x: 0 }, 400);
+        }
+        else if (e.target == this.packup) {
+            egret.Tween.get(this.wanjia).to({ x: -237 }, 400).call(function () {
+                this.wanjialist.visible = true;
+            }, this);
+        }
+        else if (e.target == this._btn_double_1) {
             this.onTouchBet(1);
         }
         else if (e.target == this._btn_double_2) {
-            console.log("_btn_double_2");
             this.onTouchBet(2);
         }
         else if (e.target == this._btn_double_3) {
-            console.log("_btn_double_3");
             this.onTouchBet(3);
         }
         else if (e.target == this._btn_double_4) {
-            console.log("_btn_double_4");
             this.onTouchBet(4);
         }
         else if (e.target == this._btn_double_5) {
-            console.log("_btn_double_5");
             this.onTouchBet(5);
         }
         else if (e.target == this.effectTouch0) {
-            console.log("effectTouch0");
-            this.onTouchSelectIndex(0);
+            console.log(this.lastTouchBetIndex);
+            if (this.isAction) {
+                this.sendamessage(EventConst.niuniu_dobet, 1, this.multipleList[this.lastTouchBetIndex - 1]);
+            }
         }
         else if (e.target == this.effectTouch1) {
-            console.log("effectTouch1");
-            this.onTouchSelectIndex(1);
+            console.log(this.lastTouchBetIndex);
+            if (this.isAction) {
+                this.sendamessage(EventConst.niuniu_dobet, 2, this.multipleList[this.lastTouchBetIndex - 1]);
+            }
         }
         else if (e.target == this.effectTouch2) {
-            console.log("effectTouch2");
-            this.onTouchSelectIndex(2);
+            console.log(this.lastTouchBetIndex);
+            if (this.isAction) {
+                this.sendamessage(EventConst.niuniu_dobet, 3, this.multipleList[this.lastTouchBetIndex - 1]);
+            }
         }
         else if (e.target == this.effectTouch3) {
-            console.log("effectTouch3");
-            this.onTouchSelectIndex(3);
+            console.log(this.lastTouchBetIndex);
+            if (this.isAction) {
+                this.sendamessage(EventConst.niuniu_dobet, 4, this.multipleList[this.lastTouchBetIndex - 1]);
+            }
         }
+        else if (e.target == this._btn_close) {
+            this.buttonClose();
+        }
+    };
+    /**下注 sendstr 命令 bet 倍数 0~5*/
+    BRNNView.prototype.sendamessage = function (sendstr, num, bet) {
+        var senddata = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+            data: num,
+            money: bet
+        };
+        xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, function (data) {
+        }, this);
+    };
+    /**请求玩家列表*/
+    BRNNView.prototype.wanjialiebiao = function (sendstr) {
+        var senddata = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+        };
+        xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, function (data) {
+        }, this);
     };
     /**
  * 自己加入房间
@@ -241,472 +415,105 @@ var BRNNView = (function (_super) {
         mask2.y = this.imghead0.y + 5;
         this.grpHead0.addChild(mask2);
         this.imghead0.mask = mask2;
-        this.labelHead0.text = "中国第一赌神";
-        this.labelGold0.text = 8888888 + "";
+        this.labelHead0.text = UserInfo.getInstance().username;
+        this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
         this.imghead0.source = "F1_03_png";
-        //if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
-        //    this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
-        //    this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
-        //    this.imghead0.source = "F1_03_png";
-        //}
-        // //设置其他玩家信息
-        // for (let i = 1; i < 10; i++) {
-        //     if (data._obj.player[i] != null) {
-        //         this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
-        //     } else {
-        //         //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
-        //         this['grpHead' + i].setUserInfo("", "", "");
-        //     }
-        // }
     };
-    BRNNView.prototype.over = function (data) {
-        // console.log(data);
-        var result = {
-            pokes: [],
-            result: [1, 0, 0, 0],
-            bankerWin: 0,
-            rate: "0.05",
-            bomb: "0"
-        };
-        for (var i = 0; i < data._obj.players.length; i++) {
-            var err = {
-                num: data._obj.players[i].pai.ratio,
-                type: data._obj.players[i].pai.niu,
-                value: data._obj.players[i].cardsList,
-                win: data._obj.players[i].win,
-                score: data._obj.players[i].score
-            };
-            result.pokes.push(err);
-        }
-        this.cardResult = result;
-        this.cardEffect();
-        UserInfo.getInstance().isGameStart = false; //游戏状态
-    };
-    BRNNView.prototype.onHogBack1 = function (data) {
-        // this._group_qiang.visible = false;
-        //this.showGameTips(2);
-        //this._btn_switch.visible = true;
-    };
-    //加入房间新玩家
-    BRNNView.prototype.playerJoinRoom = function (data) {
-        console.log(data._obj.player.id);
-        console.log(UserInfo.getInstance().myPlayer.id);
-        if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
-        }
-        else {
-            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "F4_03_png");
+    /**退出房间成功 */
+    BRNNView.prototype.onleave = function (data) {
+        if (data._obj.code == 200) {
+            xlLib.PopUpMgr.removePopUp(Inthematch, 1);
+            xlLib.SoundMgr.instance.stopBgMusic();
+            var musicBg = ["hall_bg_mp3"];
+            xlLib.SoundMgr.instance.playBgMusic(musicBg);
+            xlLib.SceneMgr.instance.changeScene(Lobby);
         }
     };
+    /**返回游戏大厅 */
     BRNNView.prototype.buttonClose = function () {
-        xlLib.SceneMgr.instance.changeScene(Lobby);
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
+        if (UserInfo.getInstance().isGameStart) {
+            xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
+            return;
+        }
+        var senddata = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+        };
+        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, function (data) {
+        }, this);
+    };
+    /**播放 胜利 通杀 通赔 动画 */
+    BRNNView.prototype.victoryEffect = function () {
+        clearInterval(this.interval);
+        this.interval = 0;
+        if (this.game_result == 1) {
+            // this.addNNVictoryEffect();
+            this.game_result = 0;
+        }
+        else if (this.game_result == 2) {
+            // this.addTongsha();
+            this.game_result = 0;
+        }
+        else if (this.game_result == 3) {
+            // this.addTongpei();
+            this.game_result = 0;
+        }
     };
     BRNNView.prototype.resize = function () {
     };
-    //设置顶部自身数据
-    BRNNView.prototype.setSelfInfo = function () {
-        //this.titleHead.source = GlobalData.user.headurl;
-        //this.titleHead.width = this.titleHead.height = 86;
-        var mask2 = new egret.Shape;
-        mask2.graphics.beginFill(0xff0000);
-        mask2.graphics.drawCircle(55, 52, 40);
-        mask2.graphics.endFill();
-        this.addChild(mask2);
-        this.titleHead.mask = mask2;
-        //this.titleName.text = GlobalData.user.nickname;
-        //this.titleLabMoney.text = QuickManage.moneyStr(parseInt(GlobalData.user.gold));
-        //this.labTitleVip.text = 'v' + GlobalData.user.vip;
-    };
-    //设置彩金
-    //private setHandsel(num): void {
-    //    this.labHandsel.text = QuickManage.moneyStr(num);
-    //}
-    BRNNView.prototype.setCountdown = function () {
-        this.cdTimer = new egret.Timer(1000);
-        this.cdTimer.addEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
-    };
-    BRNNView.prototype.clacTimer = function () {
-        if (this.cdNum % 7 == 0) {
-            //this.getBets();
-        }
-        if (this.cdNum > 0) {
-            this.cdNum--;
-        }
-        else {
-            this.cdTimer.stop();
-            this.cdNum = 0;
-            this.cardEffect();
-        }
-        if (this.cdNum < 10) {
-            this.labCountdown0.text = '0';
-            this.labCountdown1.text = this.cdNum + '';
-        }
-        else {
-            this.labCountdown0.text = (this.cdNum + '').split('')[0];
-            this.labCountdown1.text = (this.cdNum + '').split('')[1];
+    /**开始倒计时*/
+    BRNNView.prototype.startCountDown = function (time) {
+        this.timeTxt.visible = true;
+        this.time = time;
+        if (this.timer == null) {
+            this.timer = new egret.Timer(1000);
+            this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+            this.timer.start();
         }
     };
-    //msg.state     1 free 禁止玩儿游戏   2 下注中  3 封盘倒计时
-    /*
-    private joinCallback(msg): void {
-        if (msg.code == 200) {
-            this.curRate = msg.data.rate;
-            var data = msg.data;
-            var seats = msg.data.seats;
-            for (var i = 0; i < seats.length; i++) {
-                this['imghead' + seats[i].seat].source = seats[i].headurl;
-                this['labelHead' + seats[i].seat].text = seats[i].name;
-                this['imghead' + seats[i].seat].height = this['imghead' + seats[i].seat].width = 70;
-            }
-            this.limitGold = data.limitGold;
-            this.limitVip = data.limitVip;
-            this.setHandsel(data.caijin);
-            //设置庄信息
-            this.setBankerInfo(data.zhuang);
-            //设置倒计时
-            this.cdNum = data.time;
-            this.cdTimer.start();
-            if (msg.state == 1) {
-                this.isCanBets = false;
-            }
-            else if (msg.state == 2) {
-                this.isCanBets = true;
-            }
-            else if (msg.state == 3) {
-                this.isCanBets = false;
-            }
-            console.log('join_game: ' + data.state);
+    /**倒计时处理*/
+    BRNNView.prototype.timerFunc = function (evt) {
+        if (this.time >= 0) {
+            this.timeTxt.text = "" + this.time;
+            this.time--;
         }
         else {
-            TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
+            this.timeTxt.text = "0";
+            this.clearTime();
         }
-    }
-
-    public onMsgListen(data): void {
-        var msg = data.msg
-        console.log('onMsgListen: ' + msg.type, '_niuniuMsgListen_');
-        switch (msg.type) {
-            case 0: //开始下注
-                this.cdNum = parseInt(msg.time) + 3;
-                this.cdTimer.start();
-                break;
-            case 1: //封盘
-                this.isCanBets = false;
-                this.showGameTips(3);
-                break;
-            case 2: //结算
-                this.setGameResult(msg.data);
-                break;
-            case 3: //更换庄家
-                this.changeBankerObj = msg.zhuang;
-                this.isChangeBanker = true;
-                break;
-            case 4: //更新座位
-                this.updataSeat(1, msg.data);
-                break;
-            case 5:	//离开座位
-                this.updataSeat(2, msg.seat);
-                break;
-            case 6://同步彩金
-                this.updateHandsel(msg);
-                break;
-            case 7://通知庄 名次
-                this.updateBankerRank(msg);
-                break;
+    };
+    /**清除倒计时*/
+    BRNNView.prototype.clearTime = function () {
+        if (this.timer) {
+            this.timer.stop();
+            this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+            this.timer = null;
         }
-    }
-
-    //获取结算数据，显示结果面板时设置
-    private setGameResult(data): void {
-        this.grpCountdown.visible = false;
-        this.cardResult = data;
-        console.log(this.cardResult);
-        console.log(this.cardResult.poke);
-    }
-
-    //同步座位
-    private updataSeat(type, data): void {
-        if (type == 1) {
-            this['imghead' + data.seat].source = data.headurl;
-            this['imghead' + data.seat].height = this['imghead' + data.seat].width = 70;
-            this['labelHead' + data.seat].text = data.nick;
-        }
-        else {
-            this['imghead' + data].source = '';
-            this['labelHead' + data].text = '';
-        }
-    }
-
-    //同步彩金 （包含庄结算输赢）
-    private updateHandsel(data): void {
-        if (this.cardResult == null)
-            return;
-        this.resultCaijin = parseInt(data.data.gift);
-        this.totalCaijin = parseInt(data.data.caijin);
-        // this.setHandsel(data.data.caijin);
-        this.maxUserData = data.data.max;
-        this.banker_total_gold = data.data.bankerTotalGold;
-        for (let i = 0; i < 4; i++) {
-            this['labTipsClick' + i].visible = false;
-        }
-        this.cardEffect();
-    }
-
-    //同步庄的顺位
-    private updateBankerRank(data): void {
-        if (!this.isApplyBanker)
-            return;
-        var id = GlobalData.openid + '@' + GlobalData.platform;
-        if (data.id == id) {
-            this.curBankerRanking = data.pos;
-        }
-        else if (data.pos < this.curBankerRanking || data.pos == this.curBankerRanking) {
-            this.curBankerRanking++;
-        }
-        this.labBankerRank.text = '排庄' + this.curBankerRanking;
-    }
-
-    //获取上庄列表
-    private getBankerList(e): void {
-        if (e.target && (e.target.name == 'btnUpBanker' || e.target.name == 'btnDownBanker')) {
-            return;
-        }
-        Net.send(Protocol.NIUNIU_BANKER_LIST, {}, this.bankerListCallback.bind(this));
-    }
-
-    //上庄列表
-    private bankerListCallback(msg): void {
-        if (msg.code == 200) {
-            this.grpBankerList.visible = true;
-            for (var i = 0; i < 10; i++) {
-                if (i < msg.list.length) {
-                    this['bankerListItem' + i].visible = true;
-                    this['itemRank' + i].text = i + 1 + '';
-                    this['itemName' + i].text = msg.list[i].name;
-                    this['itemMoney' + i].text = QuickManage.moneyStr(msg.list[i].gold);
-                    this['itemVip' + i].text = 'v' + msg.list[i].vip;
-                }
-                else {
-                    if (i < 3) {
-                        this['bankerListItem' + i].visible = true;
-                        this['itemRank' + i].text = i + 1 + '';
-                        this['itemName' + i].text = '';
-                        this['itemMoney' + i].text = '';
-                        this['itemVip' + i].text = '';
-                    }
-                    else {
-                        this['bankerListItem' + i].visible = false;
-                    }
-                }
-            }
-        }
-        else {
-            TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-        }
-    }
-
-    private onTouchCloseBankerList(): void {
-        this.grpBankerList.visible = false;
-    }
-
-    //同步下注消息
-    private getBets(): void {
-        Net.send(Protocol.NIUNIU_GET_BETS, {}, this.getBetsCallback.bind(this));
-    }
-
-    //定时同步下注筹码
-    private getBetsCallback(msg): void {
-        if (msg.code == 200) {
-            var list = msg.list;
-            // console.log('------------------- start ----------------------');
-            for (var i = 1; i < 5; i++) {
-                if (list[i].score != 0) {
-                    // console.log('list ' + i + ':' + list[i].score);
-                    // console.log('pool ' + i + ':' + this.poolBetArray[i]);
-                    if (list[i].score == this.poolBetArray[i])
-                        continue;
-                    if (this.isCanBets) {
-                        this.showCoins(list[i].score - this.poolBetArray[i], i);//list[i].score
-                    }
-                    if (parseInt(this['labBetsPool' + (i - 1)].text) < (list[i].score / 10000)) {
-                        this['labBetsPool' + (i - 1)].text = QuickManage.moneyStr(list[i].score);
-                        this.poolBetArray[i] = list[i].score;
-                    }
-                    // this['labBetsPool' + (i - 1)].text = QuickManage.moneyStr(list[i].score);
-                    // this.poolBetArray[i] = list[i].score;
-                }
-            }
-            // console.log('------------------- end ----------------------');
-        }
-    }
-
-    //离开游戏判断
-    private onTouchClose(): void {
-        if (this.isBanker) {
-            TipsManage.showTips('您是庄家，下庄后方可离开！');
-            return;
-        }
-        if (this.isBets) {
-            TipsManage.showTips('您已经下注，这局结束后方可离开！')
-            return;
-        }
-        Net.send(Protocol.NIUNIU_LEAVE_GAME, {}, (function (msg) {
-            if (msg.code == 200) {
-                this.dispose();
-            }
-            else {
-                TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }).bind(this));
-    }
-
-    //充值
-    private onTouchCharge(): void {
-        PanelManage.openShop(3);
-    }
-
-    //充值返回
-    private updatePayData(data): void {
-        GlobalData.user.gold = data.param.msg.gold;
-        lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-        this.labTitleVip.text = 'v' + GlobalData.user.vip;
-    }
-
-    //上庄
-    private onTouchUpBank(): void {
-        if (parseInt(GlobalData.user.vip) < this.limitVip) {
-            TipsManage.showTips('您的VIP等级未满' + this.limitVip + '级,不能上庄！');
-            return;
-        }
-        if (parseInt(GlobalData.user.gold) < this.limitGold) {
-            TipsManage.showTips('您的金币未满' + QuickManage.moneyStr(this.limitGold) + ',不能上庄！');
-            return;
-        }
-        Net.send(Protocol.NIUNIU_UP_BANKER, {}, this.upBankerCallback.bind(this));
-    }
-
-    //上庄回调
-    private upBankerCallback(msg): void {
-        if (msg.code == 200) {
-            TipsManage.showTips('申请上庄成功！');
-            this.btnDownBanker.visible = true;
-            this.btnUpBanker.visible = false;
-            this.isApplyBanker = true;
-        }
-    }
-
-    //下庄
-    private onTouchDownBank(): void {
-        Net.send(Protocol.NIUNIU_DOWN_BANKER, {}, this.downBankerCallback.bind(this));
-    }
-
-    //下庄回调
-    private downBankerCallback(msg): void {
-        if (msg.code == 200) {
-            TipsManage.showTips('申请下庄成功！');
-            this.btnDownBanker.visible = false;
-            this.btnUpBanker.visible = true;
-            this.isApplyBanker = false;
-            this.curBankerRanking = -1;
-        }
-    }
-
-    //vip 座位
-    private onTouchSeat(index): void {
-        if (this.isBanker) {
-            TipsManage.showTips('当前您是庄，不能坐下！');
-            return;
-        }
-        Net.send(Protocol.NIUNIU_SEAT_DOWN, { seat: index }, (function (msg) {
-            if (msg.code != 200) {
-                TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-            }
-        }).bind(this));
-    }
-*/
+    };
     //筹码选择
     BRNNView.prototype.onTouchBet = function (index) {
-        //if (this.isBanker) {
-        //    TipsManage.showTips('您是庄家，不能下注！');
-        //    return;
-        //}
-        //if (!this.isCoinsReturn) {
-        //    console.log('touche  Bet++++++++++++++')
-        //    TipsManage.showTips('操作过于频繁，请稍等！');
-        //    return;
-        //}
         if (this.lastTouchBetIndex == index) {
             return;
         }
-        if (this.lastTouchBetIndex != -1) {
-            this['_btn_double_' + this.lastTouchBetIndex].scaleX = this['_btn_double_' + this.lastTouchBetIndex].scaleY = 1;
-        }
         this.lastTouchBetIndex = index;
-        this['_btn_double_' + index].scaleX = this['_btn_double_' + index].scaleY = 1.1;
-        this.betsNum = this.getBetNumber(index);
-        //this.labCurChip.text = '注码：' + this['labBet' + index].text;
-    };
-    //获取筹码数量    1w  10w     100w    1000w   5000w   1y
-    BRNNView.prototype.getBetNumber = function (index) {
         switch (index) {
-            case 0:
-                return Math.pow(10, 4);
             case 1:
-                return Math.pow(10, 5);
+                this._xuanzho.x = 92.49;
+                break;
             case 2:
-                return Math.pow(10, 6);
+                this._xuanzho.x = 244.97;
+                break;
             case 3:
-                return Math.pow(10, 7);
+                this._xuanzho.x = 396.51;
+                break;
             case 4:
-                return 5 * Math.pow(10, 7);
+                this._xuanzho.x = 547.43;
+                break;
             case 5:
-                return Math.pow(10, 8);
+                this._xuanzho.x = 695.9;
+                break;
         }
-    };
-    BRNNView.prototype.onTouchSelectIndex = function (index) {
-        if (this.isCardEffectShow)
-            return;
-        var curTime = (new Date).getTime();
-        if ((curTime - this.lastTouchBetTime) < 400) {
-            return;
-        }
-        this.lastTouchBetTime = curTime;
-        //if (this.isBanker) {
-        //TipsManage.showTips('您是庄家，不能下注！');
-        //return;
-        //}
-        //if (!this.isCoinsReturn) {
-        // console.log('touche  select ========================')
-        //TipsManage.showTips('操作过于频繁，请稍等！');
-        //return;
-        //}
-        //if (this.isCanBets) {
-        this.betsPostion = index + 1;
-        this.isCoinsReturn = false;
-        // console.log('下注位置：' + this.betsPostion + '  金额：' + this.betsNum);
-        //Net.send(Protocol.NIUNIU_BET_GOLD, { betId: this.betsPostion, gold: this.betsNum }, this.betGlodCallback.bind(this), false);
-        //}
-        this.betGlodCallback();
-    };
-    //下注
-    BRNNView.prototype.betGlodCallback = function () {
-        this.isCoinsReturn = true;
-        //if (msg.code == 200) {
-        this.isBets = true;
-        //GlobalData.user.gold = (parseInt(GlobalData.user.gold) - this.betsNum) + '';
-        //this.titleLabMoney.text = QuickManage.moneyStr(parseInt(GlobalData.user.gold));
-        // console.log('下注成功 index：' + this.betsPostion + '  金额：' + this.betsNum);
-        this.selfbetsNum[this.betsPostion] = parseInt(this.selfbetsNum[this.betsPostion]) + this.betsNum;
-        this.poolBetArray[this.betsPostion] = parseInt(this.poolBetArray[this.betsPostion]) + this.betsNum;
-        this['labBetsPool' + (this.betsPostion - 1)].text = this.moneyStr(this.poolBetArray[this.betsPostion]);
-        this.showCoins(this.betsNum, this.betsPostion);
-        //同步自己的金币
-        for (var i = 0; i < 4; i++) {
-            this['labBetsSelf' + i].text = this.moneyStr(this.selfbetsNum[i + 1]);
-        }
-        //}
-        //else {
-        //    TipsManage.showTips(ErrorMessage.errorMsg(msg.msg));
-        //}
     };
     BRNNView.prototype.moneyStr = function (money) {
         if (money >= 10000 && money < 100000000) {
@@ -820,27 +627,17 @@ var BRNNView = (function (_super) {
         }, this.grpTipsInfo);
     };
     //显示筹码
-    BRNNView.prototype.showCoins = function (num, index) {
+    BRNNView.prototype.showCoins = function (pos, num, msg) {
         var isRemove = false;
         this.playClickSound(BRNNUtil.getInstance().getSoundEffect(8));
-        var point = BRNNUtil.getInstance().getCoinsPos(index);
-        var arr = BRNNUtil.getInstance().coinsType(num);
-        if (this.coinsNumArr[index] < 50) {
-            this.coinsNumArr[index] = parseInt(this.coinsNumArr[index]) + arr.length;
-            isRemove = false;
-        }
-        else {
-            isRemove = true;
-        }
+        var point = BRNNUtil.getInstance().getCoinsPos(msg);
+        var arr = BRNNUtil.getInstance().coinsType(pos, num);
         for (var i = 0; i < arr.length; i++) {
-            var tx = point.x + Math.random() * 50;
-            var ty = point.y + Math.random() * 50;
+            var tx = point.x + Math.random() * 80;
+            var ty = point.y + Math.random() * 80;
             this.grpCoins.addChild(arr[i]);
-            egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call(function () {
-                //if (this[0]) {
-                //    this[1].parent.removeChild(this[1]);
-                //}
-            }, [isRemove, arr[i]]);
+            egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call(function (mc) {
+            }, this, [arr[i]]);
         }
     };
     BRNNView.prototype.cardEffect = function () {
@@ -849,7 +646,7 @@ var BRNNView = (function (_super) {
     };
     BRNNView.prototype.playCardFly = function () {
         var card = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
-        card.source = 'nn.card_100';
+        card.source = 'qznn_card_100';
         card.x = 713.5;
         card.y = 250;
         card.anchorOffsetX = card.width / 2;
@@ -878,13 +675,13 @@ var BRNNView = (function (_super) {
         if (this.flyBankerIndex == 5) {
             this.flyBankerIndex = 0;
             clearInterval(this.flyIntval);
-            this.interval = setInterval(this.playerCardRotation.bind(this), 800);
+            // this.interval = setInterval(this.playerCardRotation.bind(this), 800);
             return;
         }
         var card = this['bankerCard_' + this.flyBankerIndex];
         card.x = 713.5;
         card.y = 250;
-        card.source = 'nn.card_100';
+        card.source = 'qznn_card_100';
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
         this.orginBankerCardPos;
@@ -905,7 +702,7 @@ var BRNNView = (function (_super) {
         var index = this.effectPlayerIndex;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
-            card.source = 'nn.card_100';
+            card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'nn.card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
@@ -918,7 +715,7 @@ var BRNNView = (function (_super) {
         ;
         this['labCardType' + index].width = 98;
         this['labCardType' + index].height = 44;
-        this['labCardResult' + index].text = ''; //this.cardResult.result[index] == 1 ? '赢' : '输';
+        // this['labCardResult' + index].text = '';//this.cardResult.result[index] == 1 ? '赢' : '输';
         if (poke[index + 1].type != 0) {
             for (var i = 0; i < 5; i++) {
                 var card = this['grpCard_' + index + '_' + i];
@@ -937,7 +734,7 @@ var BRNNView = (function (_super) {
         var poke = this.cardResult.pokes[0];
         for (var i = 0; i < 5; i++) {
             var card = this['bankerCard_' + i];
-            card.source = 'nn.card_100';
+            card.source = 'qznn_card_100';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
                 this[0].source = 'nn.card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
@@ -967,8 +764,8 @@ var BRNNView = (function (_super) {
         var result = this.cardResult.result;
         for (var i = 0; i < 4; i++) {
             if (result[i] == 1) {
-                this['effectSelect' + i].visible = true;
-                EffectUtils.blinkEffect(this['effectSelect' + i], 200);
+                // this['effectSelect' + i].visible = true;
+                // EffectUtils.blinkEffect(this['effectSelect' + i], 200);
             }
         }
         this.interval = setInterval(this.cardEffectEnd.bind(this), 2000);
@@ -1123,7 +920,7 @@ var BRNNView = (function (_super) {
         }
     */
     BRNNView.prototype.setStartBet = function () {
-        this.resetGame();
+        // this.resetGame();
         this.grpResult.visible = false;
         clearInterval(this.interval);
         this.showGameTips(2);
@@ -1138,24 +935,17 @@ var BRNNView = (function (_super) {
             this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
         }
     };
+    /**游戏场景重置 */
     BRNNView.prototype.resetGame = function () {
-        for (var i = 0; i < 4; i++) {
-            this['labBetsPool' + i].text = '';
-            this['labBetsSelf' + i].text = '';
-            egret.Tween.removeTweens(this['effectSelect' + i]);
-        }
         for (var i = 0; i < 5; i++) {
-            // this['bankerCard_' + i].source = '';
             var card = this['bankerCard_' + i];
             card.source = '';
             egret.Tween.removeTweens(card);
         }
         for (var index = 0; index < 4; index++) {
-            this['labCardResult' + index].text = '';
             this['labCardType' + index].visible = false;
             this.labCardTypeBanker.visible = false;
             for (var j = 0; j < 5; j++) {
-                // this['grpCard_' + index + '_' + j].source = '';
                 var card = this['grpCard_' + index + '_' + j];
                 card.source = '';
                 egret.Tween.removeTweens(card);
@@ -1164,15 +954,6 @@ var BRNNView = (function (_super) {
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        while (this.grpCoins.numChildren > 0) {
-            this.grpCoins.removeChildAt(0);
-        }
-        for (var i = 0; i < 4; i++) {
-            this['effectSelect' + i].visible = false;
-        }
-        for (var i_1 = 0; i_1 < 4; i_1++) {
-            this['labTipsClick' + i_1].visible = true;
-        }
         this.isCanBets = true;
         this.isBets = false;
         this.imgBaoZhuang.visible = false;
@@ -1180,20 +961,9 @@ var BRNNView = (function (_super) {
         this.grpCaijin.visible = false;
         this.isCoinsReturn = true;
         this.isCardEffectShow = false;
-        this.cdNum = 10;
-        this.cdTimer.start();
+        this.initData();
     };
     //========================== Second Panel ==============================
-    //牌型
-    BRNNView.prototype.onTouchCardType = function () {
-        this.grpSecondPanel.visible = true;
-        this.grpCardType.visible = true;
-        this.grpHistory.visible = false;
-    };
-    //走势
-    BRNNView.prototype.onTouchCardHistory = function () {
-        //Net.send(Protocol.NIUNIU_GAME_RECORD, {}, this.getHistoryCallback.bind(this));
-    };
     BRNNView.prototype.getHistoryCallback = function (msg) {
         var list = msg.data;
         for (var i = 0; i < 10; i++) {
@@ -1239,23 +1009,9 @@ var BRNNView = (function (_super) {
     BRNNView.prototype.playClickSound = function (res) {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     };
-    BRNNView.prototype.Onquit = function () {
-        if (UserInfo.getInstance().isGameStart) {
-            xlLib.TipsUtils.showFloatWordTips("游戏中！");
-            return;
-        }
-        var senddata = {
-            userid: UserInfo.getInstance().uid,
-            token: UserInfo.getInstance().token,
-        };
-        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, function (data) {
-            //if (this.parent) {
-            //    this.parent.removeChild(this);
-            //}
-            xlLib.SceneMgr.instance.changeScene(Lobby);
-        }, this);
-    };
     BRNNView.prototype.destroy = function () {
+        this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this.packup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1266,14 +1022,11 @@ var BRNNView = (function (_super) {
         this.effectTouch1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
-        EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
-        EventUtil.removeEventListener(EventConst.bet, this.onHogBack1, this);
-        EventUtil.removeEventListener(EventConst.summary, this.over, this);
-        if (this.cdTimer != null) {
-            this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
-        }
+        EventUtil.removeEventListener(EventConst.onUserList, this.initGameIconList, this);
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
+        EventUtil.removeEventListener(EventConst.onUserLeave, this.onleave, this);
     };
     return BRNNView;
 }(eui.Component));

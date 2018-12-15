@@ -12,6 +12,7 @@ var Inthematch = (function (_super) {
     __extends(Inthematch, _super);
     function Inthematch() {
         var _this = _super.call(this) || this;
+        _this.TYPE_TAP = "";
         _this.skinName = "InthematchSkin";
         return _this;
     }
@@ -32,6 +33,7 @@ var Inthematch = (function (_super) {
             xlLib.SoundMgr.instance.playBgMusic(musicBg);
             xlLib.SceneMgr.instance.changeScene(Lobby);
         }
+        this.destroy();
     };
     Inthematch.prototype.onClick = function (e) {
         this.quxiaopipei();
@@ -39,7 +41,7 @@ var Inthematch = (function (_super) {
     /**取消匹配 */
     Inthematch.prototype.quxiaopipei = function () {
         var gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
-        var typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+        var typeData = gameData.getTypeDataByindex(this.TYPE_TAP);
         var playway = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
         var senddata = {
             userid: UserInfo.getInstance().uid,
@@ -89,6 +91,11 @@ var Inthematch = (function (_super) {
             this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
             this.timer = null;
         }
+    };
+    Inthematch.prototype.destroy = function () {
+        this.TYPE_TAP = "";
+        this._quxiao.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        EventUtil.removeEventListener(EventConst.onUserLeave, this.onleave, this);
     };
     return Inthematch;
 }(eui.Component));

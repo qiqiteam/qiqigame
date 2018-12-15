@@ -13,11 +13,20 @@ var QZNNroomView = (function (_super) {
     function QZNNroomView() {
         var _this = _super.call(this) || this;
         _this.skinName = "QZNNroomViewSkin";
-        xlLib.SoundMgr.instance.stopBgMusic();
         var musicBg = ["qznn_bg_mp3"];
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
         return _this;
     }
+    QZNNroomView.prototype.playPlayerDragonBones = function () {
+        this.playerDb = xlLib.DisplayUtils.createDragonBonesDisplay('qznn_nvrenwu', "armatureName");
+        dragonBones.WorldClock.clock.add(this.playerDb);
+        var armatureDisplay = this.playerDb.getDisplay();
+        armatureDisplay.scaleX = armatureDisplay.scaleY = 1.2;
+        armatureDisplay.x = 300;
+        armatureDisplay.y = 500;
+        this.addChild(armatureDisplay);
+        xlLib.DisplayUtils.runDragonBonesArmature(this.playerDb, "newAnimation");
+    };
     QZNNroomView.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
@@ -25,6 +34,10 @@ var QZNNroomView = (function (_super) {
         this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
         this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        this.qzroomeff = new QZNNroomEff();
+        this.addChildAt(this.qzroomeff, 0);
+        this.qzroomeff.play();
+        this.playPlayerDragonBones();
     };
     /**游戏状态 */
     QZNNroomView.prototype.GameStatus = function (data) {
@@ -37,7 +50,6 @@ var QZNNroomView = (function (_super) {
         if (!this.gameIconData) {
             return;
         }
-        // xlLib.SceneMgr.instance.changeScene(QZNNScene);
         var gameData = UserInfo.getInstance().getGameDataByindex(this.gameIconData.game);
         var typeData = gameData.getTypeDataByindex(this.gameIconData.type);
         var playway = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
@@ -52,7 +64,7 @@ var QZNNroomView = (function (_super) {
         this.gameIconData = gameIconData;
     };
     QZNNroomView.prototype.dispose = function () {
-        xlLib.SoundMgr.instance.stopBgMusic();
+        // xlLib.SoundMgr.instance.stopBgMusic();
         var musicBg = ["hall_bg_mp3"];
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
         xlLib.PopUpMgr.removePopUp(this, 1);
@@ -61,9 +73,12 @@ var QZNNroomView = (function (_super) {
         xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
     };
     QZNNroomView.prototype.destroy = function () {
+        xlLib.DisplayUtils.destoryDragonBonesArmature(this.playerDb, "newAnimation");
+        this.qzroomeff.stop();
         this.gameIconData = null;
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        this._btn_cjc.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
     };
     return QZNNroomView;
 }(eui.Component));

@@ -23,6 +23,9 @@ var UserInfo = (function () {
         }
         return gamedata;
     };
+    UserInfo.prototype.gameStatu = function (data) {
+        this.gameData = data;
+    };
     UserInfo.prototype.addPlayes = function (data) {
         for (var i = 0; i < data.player.length; i++) {
             if (data.player[i].id == this.uid) {

@@ -36,42 +36,26 @@ var LoginView = (function (_super) {
         this.lfSubscription = false;
         this._btn_visitor.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
         this._btn_account.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
-        this._btn_continue.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
-        this._btn_register.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
         this._btn_login.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
         this._btn_verify.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGetCode, this);
         this._btn_black.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBlack, this);
         EventUtil.addEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);
         EventUtil.addEventListener(EventConst.ON_SOCKET_FAIL, this.onSocketFail, this);
-        var liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp', "wzqp");
-        dragonBones.WorldClock.clock.add(liuguang);
-        var armatureDisplay = liuguang.getDisplay();
-        armatureDisplay.x = 1230;
-        armatureDisplay.y = 400;
-        this.addChild(armatureDisplay);
-        xlLib.DisplayUtils.runDragonBonesArmature(liuguang, "wzqp");
+        this.logineffectView = new LoginEffectView();
+        this.addChildAt(this.logineffectView, 1);
+        this.logineffectView.play();
     };
     LoginView.prototype.onBlack = function (e) {
         this._group_btn_0.visible = true;
         this._group_btn_2.visible = false;
     };
     LoginView.prototype._onVisitorLogin = function (e) {
-        // this._group_btn_0.visible = false;
-        // this._group_btn_1.visible = true;
         xlLib.UIMgr.instance.showLoading(TipsLoading);
         xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl, null, null, this.onLoginSucess, this.onLoginFail);
-        // xlLib.PopUpMgr.addPopUp(LobbyView, null, true, true, null, 1);
     };
     LoginView.prototype._onAccountLogin = function (e) {
         this._group_btn_0.visible = false;
         this._group_btn_2.visible = true;
-    };
-    LoginView.prototype._onContinueLogin = function (e) {
-        xlLib.UIMgr.instance.showLoading(TipsLoading);
-        xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl, null, null, this.onLoginSucess, this.onLoginFail);
-        // xlLib.PopUpMgr.addPopUp(LobbyView, null, true, true, null ,1);
-    };
-    LoginView.prototype._onRegister = function (e) {
     };
     LoginView.prototype.onGetCode = function (e) {
         xlLib.HttpManager.getInstance().send(HttpAddress.sendmsgUrl, { mobile: this._phone_txt.text }, null, function (mes) {
@@ -115,8 +99,6 @@ var LoginView = (function (_super) {
     LoginView.prototype.destroy = function () {
         this._btn_visitor.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
         this._btn_account.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
-        this._btn_continue.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
-        this._btn_register.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
         this._btn_login.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
         this._btn_verify.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onGetCode, this);
         EventUtil.removeEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);

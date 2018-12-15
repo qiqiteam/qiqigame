@@ -49,6 +49,7 @@ var BJLUtil = (function () {
         }
         return src;
     };
+    /**音乐 */
     BJLUtil.prototype.getSoundEffect = function (type) {
         switch (type) {
             case 0:
@@ -74,41 +75,25 @@ var BJLUtil = (function () {
     BJLUtil.prototype.getCoinsPos = function (index) {
         var point = new egret.Point();
         switch (index) {
-            case 1:// 1是庄家赢
-                point.x = 1090;
-                point.y = 270;
+            case 1:// 1是庄
+                point.x = 240;
+                point.y = 240;
                 break;
-            case 2:// 2是闲家赢
-                point.x = 330;
-                point.y = 270;
+            case 2:// 2是闲
+                point.x = 920;
+                point.y = 240;
                 break;
-            case 3:// 3是上庄赢
-                point.x = 630;
-                point.y = 310;
+            case 3:// 3是闲对
+                point.x = 260;
+                point.y = 430;
                 break;
-            case 4:// 4是上庄输
-                point.x = 805;
-                point.y = 310;
+            case 4:// 4是庄对
+                point.x = 930;
+                point.y = 430;
                 break;
             case 5:// 5是和
-                point.x = 670;
-                point.y = 510;
-                break;
-            case 6:// 6是庄对
-                point.x = 1190;
-                point.y = 510;
-                break;
-            case 7:// 7是闲队
-                point.x = 210;
-                point.y = 510;
-                break;
-            case 8:// 8是大
-                point.x = 400;
-                point.y = 510;
-                break;
-            case 9:// 9是小
-                point.x = 1000;
-                point.y = 510;
+                point.x = 590;
+                point.y = 430;
                 break;
         }
         return point;
@@ -134,38 +119,39 @@ var BJLUtil = (function () {
         var coinArr = [];
         var coinNum = 0;
         var src = '';
-        num = Math.round(num / 10000);
-        if (num > 0 && num < 10) {
+        if (num == 4) {
             coinNum = num;
-            src = 'b1a';
+            src = 'baccarat_game_icon_chouma_4_png';
         }
-        else if (num > 9 && num < 100) {
-            coinNum = num / 10;
-            src = 'b2a';
+        else if (num == 10) {
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_10_png';
         }
-        else if (num > 99 && num < 1000) {
-            coinNum = num / 100;
-            src = 'b3a';
+        else if (num == 20) {
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_20_png';
         }
-        else if (num > 999 && num < 10000) {
-            coinNum = num / 1000;
-            src = 'b4a';
+        else if (num == 50) {
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_50_png';
         }
-        else if (num > 9999 && num < 100000) {
-            coinNum = num / 10000;
-            src = 'b5a';
+        else if (num == 100) {
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_100_png';
         }
-        else {
-            coinNum = num / 50000;
-            src = 'b6a';
+        else if (num == 200) {
+            coinNum = num;
+            src = 'baccarat_game_icon_chouma_200_png';
         }
-        for (var i = 0; i < Math.round(coinNum); i++) {
-            var coin = new eui.Image(src);
-            //var p: egret.Point = this.coinPos();
-            coin.x = pos.x;
-            coin.y = pos.y;
-            coinArr.push(coin);
-        }
+        // for (var i = 0; i < Math.round(coinNum); i++) {
+        var coin = new eui.Image(src);
+        //var p: egret.Point = this.coinPos();
+        coin.x = pos.x;
+        coin.y = pos.y;
+        coin.scaleX = 0.3;
+        coin.scaleY = 0.3;
+        coinArr.push(coin);
+        // }
         return coinArr;
     };
     BJLUtil.prototype.coinPos = function () {

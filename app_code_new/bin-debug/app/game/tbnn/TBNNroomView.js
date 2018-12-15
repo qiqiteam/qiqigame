@@ -13,15 +13,30 @@ var TBNNroomView = (function (_super) {
     function TBNNroomView() {
         var _this = _super.call(this) || this;
         _this.skinName = "TBNNroomViewSkin";
+        var musicBg = ["tbnn_gamebgMusic_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
         return _this;
     }
+    TBNNroomView.prototype.playPlayerDragonBones = function () {
+        this.playerDb = xlLib.DisplayUtils.createDragonBonesDisplay('tongbiniuniu', "armatureName");
+        dragonBones.WorldClock.clock.add(this.playerDb);
+        var armatureDisplay = this.playerDb.getDisplay();
+        armatureDisplay.x = 450 + armatureDisplay.width;
+        armatureDisplay.y = 600;
+        this.addChild(armatureDisplay);
+        xlLib.DisplayUtils.runDragonBonesArmature(this.playerDb, "newAnimation");
+    };
     TBNNroomView.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
-        this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
+        this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
         this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
+        this.playPlayerDragonBones();
+        this.tbroomeff = new TBNNroomEff();
+        this.addChildAt(this.tbroomeff, 0);
+        this.tbroomeff.play();
     };
     /**游戏状态 */
     TBNNroomView.prototype.GameStatus = function (data) {
@@ -47,11 +62,18 @@ var TBNNroomView = (function (_super) {
         this.gameIconData = gameIconData;
     };
     TBNNroomView.prototype.dispose = function () {
+        var musicBg = ["hall_bg_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
         xlLib.PopUpMgr.removePopUp(this, 1);
     };
     TBNNroomView.prototype.destroy = function () {
+        this.tbroomeff.stop();
+        xlLib.DisplayUtils.destoryDragonBonesArmature(this.playerDb, "newAnimation");
+        this.playerDb = null;
         this.gameIconData = null;
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        this._btn_cjc.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
     };
     return TBNNroomView;
 }(eui.Component));

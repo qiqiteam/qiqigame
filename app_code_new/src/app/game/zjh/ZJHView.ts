@@ -9,24 +9,18 @@ class ZJHView extends eui.Component {
     }
     private r: any = null;
 
-    public pailist: any[] = [];//临时存储牌的信息
+    public grp_roungNum: eui.Group;
+    public lab_paijuNum: eui.Label;
+    public img_dizhu_dinhzhu_bg: eui.Image;
+    public lab_dizhu_num: eui.Label;
+    public lab_dingzhu_num: eui.Label;
+    public lab_now_roundNum: eui.Label;
+    public lab_end_roundNum: eui.Label;
+    public img_deskgoldbg: eui.Image;
+    public img_deskgoldIcon: eui.Image;
+    public lab_deskGolds: eui.Label;
     public grpCoins: eui.Group;
     public grpCard: eui.Group;
-    public bankerCard_0: eui.Image;
-    public bankerCard_1: eui.Image;
-    public bankerCard_2: eui.Image;
-    public grpCard8_0: eui.Image;
-    public grpCard8_1: eui.Image;
-    public grpCard8_2: eui.Image;
-    public grpCard7_0: eui.Image;
-    public grpCard7_1: eui.Image;
-    public grpCard7_2: eui.Image;
-    public grpCard6_0: eui.Image;
-    public grpCard6_1: eui.Image;
-    public grpCard6_2: eui.Image;
-    public grpCard5_0: eui.Image;
-    public grpCard5_1: eui.Image;
-    public grpCard5_2: eui.Image;
     public grpCard4_0: eui.Image;
     public grpCard4_1: eui.Image;
     public grpCard4_2: eui.Image;
@@ -42,22 +36,40 @@ class ZJHView extends eui.Component {
     public grpCard0_0: eui.Image;
     public grpCard0_1: eui.Image;
     public grpCard0_2: eui.Image;
-    public labCardType0: eui.Label;
-    public labCardType1: eui.Label;
-    public labCardType2: eui.Label;
-    public labCardType3: eui.Label;
-    public labCardType4: eui.Label;
-    public labCardType5: eui.Label;
-    public labCardType6: eui.Label;
-    public labCardType7: eui.Label;
-    public labCardType8: eui.Label;
-
+    public imgCardbg0: eui.Image;
+    public imgCardbg1: eui.Image;
+    public imgCardbg2: eui.Image;
+    public imgCardbg3: eui.Image;
+    public imgCardbg4: eui.Image;
+    public imgCardType0: eui.Image;
+    public imgCardType1: eui.Image;
+    public imgCardType2: eui.Image;
+    public imgCardType3: eui.Image;
+    public imgCardType4: eui.Image;
     public labstatus0: eui.Label;
     public labstatus1: eui.Label;
     public labstatus2: eui.Label;
     public labstatus3: eui.Label;
     public labstatus4: eui.Label;
-
+    public img_xzgold_bg0: eui.Image;
+    public img_xzgold_bg1: eui.Image;
+    public img_xzgold_bg2: eui.Image;
+    public img_xzgold_bg3: eui.Image;
+    public img_xzgold_bg4: eui.Image;
+    public img_xzgold0: eui.Image;
+    public img_xzgold1: eui.Image;
+    public img_xzgold2: eui.Image;
+    public img_xzgold3: eui.Image;
+    public img_xzgold4: eui.Image;
+    public lab_xzgold0: eui.Label;
+    public lab_xzgold1: eui.Label;
+    public lab_xzgold2: eui.Label;
+    public lab_xzgold3: eui.Label;
+    public lab_xzgold4: eui.Label;
+    public img_abandon1: eui.Image;
+    public img_abandon2: eui.Image;
+    public img_abandon3: eui.Image;
+    public img_abandon4: eui.Image;
     public grpHead1: ZJHHead;
     public grpHead2: ZJHHead;
     public grpHead3: ZJHHead;
@@ -67,220 +79,74 @@ class ZJHView extends eui.Component {
     public grpHead7: ZJHHead;
     public grpHead8: ZJHHead;
     public grpHead9: ZJHHead;
-    public btnCharge: eui.Image;
-    public titleName: eui.Label;
-    public maskhead: eui.Group;
-    public titleHead: eui.Image;
-    public btnVip: eui.Image;
-    public titleLabMoney: eui.BitmapLabel;
-    public btnClose: eui.Image;
-    public btnCardHistroy: eui.Image;
-    public btnCardType: eui.Image;
-    public grpBanker: eui.Group;
-    public btnDownBanker: eui.Image;
-    public btnBankerDown: eui.Image;
-    public btnUpBanker: eui.Image;
-    public bankerHead: eui.Image;
-    public labBankerMoney: eui.BitmapLabel;
-    public bankerName: eui.Label;
-    public btnVip0: eui.Image;
-    public effectTouch3: eui.Image;
-    public effectTouch2: eui.Image;
-    public effectTouch1: eui.Image;
-    public effectTouch0: eui.Image;
     public grpCountdown: eui.Group;
     public labCountdown0: eui.BitmapLabel;
     public labCountdown1: eui.BitmapLabel;
-    public btnBet0: eui.Image;
-    public btnBet1: eui.Image;
-    public btnBet2: eui.Image;
-    public btnBet3: eui.Image;
-    public btnBet4: eui.Image;
-    public btnBet5: eui.Image;
-    public labBet0: eui.Label;
-    public labBet1: eui.Label;
-    public labBet2: eui.Label;
-    public labBet3: eui.Label;
-    public labBet4: eui.Label;
-    public labBet5: eui.Label;
-    public bankerListItem0: eui.Group;
-    public itemRank0: eui.Label;
-    public itemName0: eui.Label;
-    public itemMoney0: eui.Label;
-    public itemVip0: eui.BitmapLabel;
-    public bankerListItem1: eui.Group;
-    public itemRank1: eui.Label;
-    public itemName1: eui.Label;
-    public itemMoney1: eui.Label;
-    public itemVip1: eui.BitmapLabel;
-    public bankerListItem2: eui.Group;
-    public itemRank2: eui.Label;
-    public itemName2: eui.Label;
-    public itemMoney2: eui.Label;
-    public itemVip2: eui.BitmapLabel;
-    public bankerListItem3: eui.Group;
-    public itemRank3: eui.Label;
-    public itemName3: eui.Label;
-    public itemMoney3: eui.Label;
-    public itemVip3: eui.BitmapLabel;
-    public bankerListItem4: eui.Group;
-    public itemRank4: eui.Label;
-    public itemName4: eui.Label;
-    public itemMoney4: eui.Label;
-    public itemVip4: eui.BitmapLabel;
-    public bankerListItem5: eui.Group;
-    public itemRank5: eui.Label;
-    public itemName5: eui.Label;
-    public itemMoney5: eui.Label;
-    public itemVip5: eui.BitmapLabel;
-    public bankerListItem6: eui.Group;
-    public itemRank6: eui.Label;
-    public itemName6: eui.Label;
-    public itemMoney6: eui.Label;
-    public itemVip6: eui.BitmapLabel;
-    public bankerListItem7: eui.Group;
-    public itemRank7: eui.Label;
-    public itemName7: eui.Label;
-    public itemMoney7: eui.Label;
-    public itemVip7: eui.BitmapLabel;
-    public bankerListItem8: eui.Group;
-    public itemRank8: eui.Label;
-    public itemName8: eui.Label;
-    public itemMoney8: eui.Label;
-    public itemVip8: eui.BitmapLabel;
-    public bankerListItem9: eui.Group;
-    public itemRank9: eui.Label;
-    public itemName9: eui.Label;
-    public itemMoney9: eui.Label;
-    public itemVip9: eui.BitmapLabel;
-    public grpSecondPanel: eui.Group;
-    public secondClose: eui.Image;
-    public grpHistory: eui.Group;
-    public grpHistroy0: eui.Group;
-    public grpHistroy0_0: eui.Image;
-    public grpHistroy1_0: eui.Image;
-    public grpHistroy2_0: eui.Image;
-    public grpHistroy3_0: eui.Image;
-    public grpHistroy1: eui.Group;
-    public grpHistroy0_1: eui.Image;
-    public grpHistroy1_1: eui.Image;
-    public grpHistroy2_1: eui.Image;
-    public grpHistroy3_1: eui.Image;
-    public grpHistroy2: eui.Group;
-    public grpHistroy0_2: eui.Image;
-    public grpHistroy1_2: eui.Image;
-    public grpHistroy2_2: eui.Image;
-    public grpHistroy3_2: eui.Image;
-    public grpHistroy3: eui.Group;
-    public grpHistroy0_3: eui.Image;
-    public grpHistroy1_3: eui.Image;
-    public grpHistroy2_3: eui.Image;
-    public grpHistroy3_3: eui.Image;
-    public grpHistroy4: eui.Group;
-    public grpHistroy0_4: eui.Image;
-    public grpHistroy1_4: eui.Image;
-    public grpHistroy2_4: eui.Image;
-    public grpHistroy3_4: eui.Image;
-    public grpHistroy5: eui.Group;
-    public grpHistroy0_5: eui.Image;
-    public grpHistroy1_5: eui.Image;
-    public grpHistroy2_5: eui.Image;
-    public grpHistroy3_5: eui.Image;
-    public grpHistroy6: eui.Group;
-    public grpHistroy0_6: eui.Image;
-    public grpHistroy1_6: eui.Image;
-    public grpHistroy2_6: eui.Image;
-    public grpHistroy3_6: eui.Image;
-    public grpHistroy7: eui.Group;
-    public grpHistroy0_7: eui.Image;
-    public grpHistroy1_7: eui.Image;
-    public grpHistroy2_7: eui.Image;
-    public grpHistroy3_7: eui.Image;
-    public grpHistroy8: eui.Group;
-    public grpHistroy0_8: eui.Image;
-    public grpHistroy1_8: eui.Image;
-    public grpHistroy2_8: eui.Image;
-    public grpHistroy3_8: eui.Image;
-    public grpHistroy9: eui.Group;
-    public grpHistroy0_9: eui.Image;
-    public grpHistroy1_9: eui.Image;
-    public grpHistroy2_9: eui.Image;
-    public grpHistroy3_9: eui.Image;
-    public grpCardType: eui.Group;
-    public grpResult: eui.Group;
-    public grpMax: eui.Group;
-    public grpMaxHead: eui.Image;
-    public grpMaxGold: eui.Label;
-    public grpMaxName: eui.Label;
-    public grpBankerHead: eui.Image;
-    public grpBankerBeishu: eui.Label;
-    public grpBankerGold: eui.Label;
-    public grpBankerName: eui.Label;
-    public labResult0_0: eui.Label;
-    public labResult1_0: eui.Label;
-    public labResult2_0: eui.Label;
-    public labResult0_1: eui.Label;
-    public labResult1_1: eui.Label;
-    public labResult2_1: eui.Label;
-    public labResult0_2: eui.Label;
-    public labResult1_2: eui.Label;
-    public labResult2_2: eui.Label;
-    public labResult0_3: eui.Label;
-    public labResult1_3: eui.Label;
-    public labResult2_3: eui.Label;
-    public resultType0: eui.Label;
-    public resultType1: eui.Label;
-    public resultType2: eui.Label;
-    public resultType3: eui.Label;
-    public grpTips: eui.Group;
-    public grpTipsbg: eui.Image;
-    public grpTipsInfo: eui.Image;
+    public timeTxt: eui.Label;
+    public _btn_kanpai: eui.Button;
     public grpHead0: eui.Group;
     public imghead0: eui.Image;
     public labelHead0: eui.Label;
     public labelGold0: eui.Label;
-    public _btn_gendaodi: eui.Button;
-    public _btn_genzhu: eui.Button;
-    public _btn_jiazhu: eui.Button;
-    public _btn_quanxia: eui.Button;
-    public _btn_kanpai: eui.Button;
+    public grp_operatbtn: eui.Group;
     public _btn_qipai: eui.Button;
+    public _btn_jiazhu: eui.Button;
     public _btn_bipai: eui.Button;
-    public _btn_close: eui.Button;
-    public _btn_meun: eui.Button;
-    public _btn_chat: eui.Button;
-    public _btn_voice: eui.Button;
-    public _btn_continuegame: eui.Button;
-
-    public _btn_prepare: eui.Button;
-    public grp_btncm: eui.Button;
-    public grp_btncmbar: eui.Button;
+    public _btn_quanxia: eui.Button;
+    public _btn_genzhu: eui.Button;
+    public _btn_autogenzhu: eui.Button;
+    public _btn_cancelautogenzhu: eui.Button;
+    public img_qipai: eui.Image;
+    public img_jiazhu: eui.Image;
+    public img_bipai: eui.Image;
+    public img_quanya: eui.Image;
+    public img_genzhu: eui.Image;
+    public img_autogenzhu: eui.Image;
+    public img_cancelautogenzhu0: eui.Image;
+    public img_cancelautogenzhu1: eui.Image;
+    public lab_tankNumber: eui.Label;
+    public lab_quanyaNumber: eui.Label;
+    public lab_callNumber: eui.Label;
+    public grp_btncm0: eui.Group;
+    public _btn_jiacm_0: eui.Button;
     public _btn_jiacm_1: eui.Button;
     public _btn_jiacm_2: eui.Button;
     public _btn_jiacm_3: eui.Button;
     public _btn_jiacm_4: eui.Button;
     public _btn_jiacm_5: eui.Button;
-    public _btn_jiacm_6: eui.Button;
-    public timeTxt: eui.Label;
-    private kanpaistatue: boolean;
+    public labchip0: eui.Label;
+    public labchip1: eui.Label;
+    public labchip2: eui.Label;
+    public labchip3: eui.Label;
+    public labchip4: eui.Label;
+    public labchip5: eui.Label;
+    public _btn_menu: eui.Button;
+    public grp_menu: eui.Group;
+    public menu_bg: eui.Image;
+    public _btn_out: eui.Button;
+    public _btn_setting: eui.Button;
+    public _btn_record: eui.Button;
+    public _btn_playmethod: eui.Button;
+    public _btn_feedback: eui.Button;
+    public grp_out_hint: eui.Group;
+    public _btn_cancel: eui.Button;
+    public _btn_quite: eui.Button;
+    public grp_setting_hint: eui.Group;
+    public _btn_set_close: eui.Button;
+    public grp_feedback_panel: eui.Group;
+    public _btn_feedback_close: eui.Button;
+    public _btn_submit_close: eui.Button;
+    public _btn_luckmoney: eui.Button;
+    public _btn_continuegame: eui.Button;
 
 
-    public labHandsel: eui.BitmapLabel;
-    public labTips: eui.Label;
-    private labResultValue: eui.Label;
-    private grpSelectBet: eui.Group;    //筹码底背景
-    private grpBankerList: eui.Group;
-    private labelBankerType: eui.Label;
-    private labBankerLastNum: eui.Label;
-    private labBankerRank: eui.Label;
-    private imgBaoZhuang: eui.Image;
-    private labTitleVip: eui.BitmapLabel;
-    private labBankerVip: eui.BitmapLabel;
-    private btnRedBox: eui.Image;
-    //private labCardTypeBanker: eui.Label;
+
     //public grpCaijin: eui.Group;
     //public grpCaijinLabel: eui.Label;
-
+    public isprepare: boolean;//准备状态
+    public isoperat: boolean;//是否玩家操作状态
+    public isCall: boolean;//跟注状态
+    public autoWithnote: boolean
     //-----------------------------------------------
     private interval: number = -1;      // 游戏计时器间隔
     private selfbetsNum = {};           // 下注总计 
@@ -329,6 +195,13 @@ class ZJHView extends eui.Component {
 
     // private testNum: number = 0;
 
+    //------------------------------------------------------------
+
+    public playerOperatingState: number[] = [0, 0, 0, 0, 0]; //（无任何操作：0 玩家出牌：1 玩家看牌：2 玩家弃牌：3 玩家自动跟注：4 玩家取消自动跟注：5）//按当前桌子以我为参照（我是0）排序
+
+
+    //------------------------------------------------------------
+
     protected childrenCreated(): void {
 
         //this.setTouchEnabled();
@@ -345,57 +218,74 @@ class ZJHView extends eui.Component {
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
+        let annular: Annular = new Annular(300, 300, 0, 200, 0xffffff);
+        //this.addChild(annular);
+        let opepro: Opeprogress = new Opeprogress(173, 219, 10);
+        this.addChild(opepro);
+        this.gamestatue(UserInfo.getInstance().gameData);
     }
-
+    public isClickjixuGameBtn: boolean = false;//是否点击过继续游戏按钮
+    public isClickqipaiBtn: boolean = false;//是否点击过弃牌按钮
     private initData(): void {
-        this.labBankerRank.text = '';
-        this.labBankerLastNum.text = '';
-        //this.labCardTypeBanker.text = '';
         this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.grpBankerList.visible = false;
         this.grpCoins.touchEnabled = false;
-        this.grpTips.touchEnabled = false;
-        this.grpTips.touchChildren = false;
-        this.grpSecondPanel.visible = false;
-        this.btnUpBanker.visible = true;
-        this.btnDownBanker.visible = false;
-        this.grpTips.visible = false;
-        this.grpResult.visible = false;
-        this.imgBaoZhuang.visible = false;
-        this.grpCardType.touchChildren = false;
-        this.grpCardType.touchEnabled = false;
 
-        this.kanpaistatue = false;
+        /**----------------------------------------------------------- */
+
+        this.isprepare = true;
+        this.isoperat = false;//玩家操作状态
+        this.isCall = false;//玩家跟注状态
+
+
+
+        this.img_autogenzhu.visible = false;
         this.grpCard.visible = true;
-        this._btn_prepare.visible = true;
         this._btn_jiazhu.visible = false;
         this._btn_kanpai.visible = false;
+        this._btn_bipai.visible = false;
+        this._btn_genzhu.visible = false;
+        this._btn_autogenzhu.visible = false;
+        this._btn_cancelautogenzhu.visible = false;
+        this.img_cancelautogenzhu0.visible = false;
+        this.img_cancelautogenzhu1.visible = false;
+        this.img_qipai.visible = false;
+        this.img_jiazhu.visible = false;
+        this.img_bipai.visible = false;
         this._btn_qipai.visible = false;
-        this.grp_btncm.visible = false;
+        this.grp_btncm0.visible = false;
         this._btn_continuegame.visible = false;
-
-
-
+        this.img_genzhu.visible = false;
+        this._btn_luckmoney.touchEnabled = false;
+        this._btn_luckmoney.visible = false;
+        this.lab_callNumber.visible = false;
+        this.lab_tankNumber.visible = false;
+        this.lab_quanyaNumber.visible = false;
+        this.img_quanya.visible = false;
+        this._btn_quanxia.visible = false;
+        this.grp_menu.visible = false;
+        this.grp_out_hint.visible = false;
+        this.grp_setting_hint.visible = false;
+        this.grp_feedback_panel.visible = false;
+        this.grp_roungNum.visible = false;
+        this.lab_now_roundNum.text = String(0);
+        this.grpHead0.visible = false;
+        this.grpHead1.visible = false;
+        this.grpHead2.visible = false;
+        this.grpHead3.visible = false;
+        this.grpHead4.visible = false;
+        UserInfo.getInstance().isGameStart = true;
+        this.deskNum(false);
+        this.botpGolds(false);
+        /**----------------------------------------------------------- */
     }
-
     //获取原始扑克的位置
     private getOrginCardPos(): void {
-        /*
-        for (var i = 0; i < 3; i++) {
-            var card: eui.Image = this['bankerCard_' + i];
-            card.source = '';
-            card.anchorOffsetX = card.width / 2;
-            card.x += card.width / 2;
-            var pos: egret.Point = new egret.Point;
-            pos.x = card.x;
-            pos.y = card.y;
-            this.orginBankerCardPos[i] = pos;
-        }*/
         for (var index = 0; index < 5; index++) {
             // this['labCardResult' + index].text = '';
-            this['labCardType' + index].text = '';
+            this['imgCardbg' + index].source = '';
+            this['imgCardType' + index].source = '';
             this['labstatus' + index].text = '';
             var cardPos = [];
             for (var j = 0; j < 3; j++) {
@@ -404,145 +294,252 @@ class ZJHView extends eui.Component {
                 card.anchorOffsetX = card.width / 2;
                 card.x += card.width / 2;
                 var pos: egret.Point = new egret.Point;
-                pos.x = card.x + 24;
+                pos.x = card.x;
                 pos.y = card.y;
                 cardPos[j] = pos;
             }
             this.orginPlayerCardPos[index] = cardPos;
         }
-        for (let i = 1; i < 10; i++) {
-            this['grpHead' + i].setUserInfo("", "", "");
+        for (var index = 1; index < 5; index++) {
+            this['img_abandon' + index].source = '';
         }
     }
 
     public resize(): void {
 
     }
+    public OnClickautogenzhutime: number = 0;
     private OnClick(e: egret.TouchEvent): void {
-        if (e.target == this._btn_prepare) {
-            console.log("_btn_prepare");
-
-            let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
-            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
-            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-
-            let senddata: any = {
-                userid: UserInfo.getInstance().uid,
-                token: UserInfo.getInstance().token,
-                playway: playway.id
-            };
-            xlLib.WebSocketMgr.getInstance().send(EventConst.prepare, senddata, (data) => {
-                xlLib.TipsUtils.showFloatWordTips("开始准备");
-                console.log("开始准备");
-
-                this._btn_prepare.visible = false;
-
-            }, this);
-        } else if (e.target == this._btn_kanpai) {
-            console.log("_btn_kanpai");
-            let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
-            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
-            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-
-            let senddata: any = {
-                userid: UserInfo.getInstance().uid,
-                token: UserInfo.getInstance().token,
-                playway: playway.id
-            };
-            xlLib.WebSocketMgr.getInstance().send(EventConst.seecard, senddata, (data) => {
-                xlLib.TipsUtils.showFloatWordTips("看牌");
-                console.log("看牌");
-                let poke = {
-                    type: data.cardGenre,//牌型
-                    value: data.cardtype //牌值
-                };
-                this.onKanPaiClick(poke);
-                this._btn_kanpai.visible = false;
-                this.kanpaistatue = true;
-            }, this);
+        if (e.target == this._btn_kanpai) {
+            console.log("看牌");
+            this.sendamessage(EventConst.seecard, null);
         } else if (e.target == this._btn_genzhu) {
-            this.sendamessage(EventConst.botpour, 1);
-            this.onGenZhuClick();
-            xlLib.TipsUtils.showFloatWordTips("跟注");
-            this._btn_genzhu.visible = false;
+            if (this.img_genzhu.source == "lab_genzhu_png") {
+                this.sendamessage(EventConst.botpour, this.callnum);
+                xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
+                this._btn_autogenzhu.visible = true;
+                this.img_autogenzhu.visible = true;
+                this.img_genzhu.visible = false;
+                this.lab_callNumber.visible = false;
+                this._btn_genzhu.touchEnabled = false;
+                this._btn_jiazhu.touchEnabled = false;
+                xlLib.DisplayUtils.setComponentEnabled(this._btn_genzhu, false);
+                xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
+            }
+        } else if (e.target == this._btn_autogenzhu) {
+            this.sendamessage(EventConst.onAutoFollow, null);
+            xlLib.TipsUtils.showFloatWordTips("自动跟注");
+            this.playerOperatingState[0] = 4;//玩家自动跟注
+        } else if (e.target == this._btn_cancelautogenzhu) {
+            this.sendamessage(EventConst.closeAutoFollow, null);
+            xlLib.TipsUtils.showFloatWordTips("取消自动跟注");
         } else if (e.target == this._btn_jiazhu) {
-            this.grp_btncm.visible = true;
+            this.grp_btncm0.visible = true;
+        } else if (e.target == this._btn_jiacm_0) {
+            this.sendamessage(EventConst.botpour, parseInt(this.betarr[0]));
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this.Clickaddtohide();
+            xlLib.TipsUtils.showFloatWordTips("加注金币:" + parseInt(this.betarr[0]));
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_0, false);
         } else if (e.target == this._btn_jiacm_1) {
-            this.sendamessage(EventConst.botpour, 2);
-            this.onGenZhuClick();
-            xlLib.TipsUtils.showFloatWordTips("加注2金币");
-
-            this._btn_jiazhu.visible = false;
-            this.grp_btncm.visible = false;
+            this.sendamessage(EventConst.botpour, parseInt(this.betarr[1]));
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this.Clickaddtohide();
+            xlLib.TipsUtils.showFloatWordTips("加注金币:" + parseInt(this.betarr[1]));
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_0, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_1, false);
         } else if (e.target == this._btn_jiacm_2) {
-            this.sendamessage(EventConst.botpour, 3);
-            this.onGenZhuClick();
-            xlLib.TipsUtils.showFloatWordTips("加注3金币");
-            this._btn_jiazhu.visible = false;
-            this.grp_btncm.visible = false;
+            this.sendamessage(EventConst.botpour, parseInt(this.betarr[2]));
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this.Clickaddtohide();
+            xlLib.TipsUtils.showFloatWordTips("加注金币:" + parseInt(this.betarr[2]));
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_0, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_1, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_2, false);
         } else if (e.target == this._btn_jiacm_3) {
-            this.sendamessage(EventConst.botpour, 4);
-            this.onGenZhuClick();
-            xlLib.TipsUtils.showFloatWordTips("加注4金币");
-            this._btn_jiazhu.visible = false;
-            this.grp_btncm.visible = false;
+            this.sendamessage(EventConst.botpour, parseInt(this.betarr[3]));
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this.Clickaddtohide();
+            xlLib.TipsUtils.showFloatWordTips("加注金币:" + parseInt(this.betarr[3]));
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_0, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_1, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_2, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_3, false);
         } else if (e.target == this._btn_jiacm_4) {
-            this.sendamessage(EventConst.botpour, 5);
-            this.onGenZhuClick();
-            xlLib.TipsUtils.showFloatWordTips("加注5金币");
-            this._btn_jiazhu.visible = false;
-            this.grp_btncm.visible = false;
+            this.sendamessage(EventConst.botpour, parseInt(this.betarr[4]));
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this.Clickaddtohide();
+            xlLib.TipsUtils.showFloatWordTips("加注金币:" + parseInt(this.betarr[4]));
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_0, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_1, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_2, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_3, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_4, false);
         } else if (e.target == this._btn_jiacm_5) {
-            this.sendamessage(EventConst.botpour, 6);
-            this.onGenZhuClick();
-            xlLib.TipsUtils.showFloatWordTips("加注6金币");
-            this._btn_jiazhu.visible = false;
-            this.grp_btncm.visible = false;
-        } else if (e.target == this._btn_jiacm_6) {
-            this.sendamessage(EventConst.botpour, 7);
-            this.onGenZhuClick();
-            xlLib.TipsUtils.showFloatWordTips("加注7金币");
-            this._btn_jiazhu.visible = false;
-            this.grp_btncm.visible = false;
-        } else if (e.target == this._btn_gendaodi) {
-            xlLib.TipsUtils.showFloatWordTips("跟到底");
+            this.sendamessage(EventConst.botpour, parseInt(this.betarr[5]));
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this.Clickaddtohide();
+            xlLib.TipsUtils.showFloatWordTips("加注金币:" + parseInt(this.betarr[5]));
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_0, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_1, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_2, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_3, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_4, false);
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_5, false);
         } else if (e.target == this._btn_quanxia) {
-
-            xlLib.TipsUtils.showFloatWordTips("全下");
+            xlLib.TipsUtils.showFloatWordTips("全压");
+            this.sendamessage(EventConst.pressure, null);
+            this.onGenZhuClick(0, this.shortGold);
         } else if (e.target == this._btn_qipai) {
-            this.sendamessage2(EventConst.abandon);
+            this.sendamessage(EventConst.abandon, null);
+            this.isClickqipaiBtn = true;
             xlLib.TipsUtils.showFloatWordTips("弃牌");
         } else if (e.target == this._btn_bipai) {
-            this._btn_qipai.visible = false;
-            let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
-            let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
-            let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-
-            let senddata: any = {
-                userid: UserInfo.getInstance().uid,
-                token: UserInfo.getInstance().token,
-                playway: playway.id,
-            };
-            xlLib.WebSocketMgr.getInstance().send(EventConst.compareCard, senddata, (data) => {
-                xlLib.TipsUtils.showFloatWordTips("比牌");
-
-            }, this);
-
+            this.onBiPaiClick();
+            xlLib.TipsUtils.showFloatWordTips("比牌")
         } else if (e.target == this._btn_continuegame) {
+            //继续游戏
+            this.isClickjixuGameBtn = true;
+            this.sendamessage(EventConst.outRoom, null);
             this.sendamessage(EventConst.joinroom, null);
-            xlLib.SceneMgr.instance.changeScene(ZJHScene);
+            UserInfo.getInstance().isGameStart = true;
+            this.resetGame();//重置游戏场景
             xlLib.TipsUtils.showFloatWordTips("继续游戏");
+        } else if (e.target == this.grpHead1) {
+            xlLib.TipsUtils.showFloatWordTips("点击玩家1");
+            console.log("可以与1号玩家比牌");
+            this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[1]);
+            this.sendamessage(EventConst.botpour, this.callnum);
+            xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
+            console.log(this.byOpenId);
+        } else if (e.target == this.grpHead2) {
+            xlLib.TipsUtils.showFloatWordTips("点击玩家2");
+            this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[2]);
+            this.sendamessage(EventConst.botpour, this.callnum);
+            xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
+            console.log("可以与2号玩家比牌");
+            console.log(this.byOpenId);
+        } else if (e.target == this.grpHead3) {
+            xlLib.TipsUtils.showFloatWordTips("点击玩家3");
+            this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[3]);
+            this.sendamessage(EventConst.botpour, this.callnum);
+            xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
+            console.log("可以与3号玩家比牌");
+            console.log(this.byOpenId);
+        } else if (e.target == this.grpHead4) {
+            xlLib.TipsUtils.showFloatWordTips("点击玩家4");
+            this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[4]);
+            this.sendamessage(EventConst.botpour, this.callnum);
+            xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
+            console.log("可以与4号玩家比牌");
+            console.log(this.byOpenId);
+        } else if (e.target == this._btn_menu) {
+            xlLib.TipsUtils.showFloatWordTips("菜单");
+            this.grp_menu.visible = true;
+        } else if (e.target == this._btn_luckmoney) {
+            xlLib.TipsUtils.showFloatWordTips("喜钱");
+        } else if (e.target == this._btn_out) {
+            this.grp_menu.visible = false;
+            if (GlobalData.isLiveRoom == true) {
+                let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHIsLiveRoom, this, true, true, null, 1);
+            } else if (GlobalData.isLiveRoom == false) {
+                let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHNotLiveRoom, this, true, true, null, 1);
+            }
+            if (GlobalData.liveCloseBtn == false) {
+                this.sendamessage(EventConst.isLeave, null);
+            }
+        } else if (e.target == this._btn_setting) {
+            this.grp_menu.visible = false;
+            this.grp_setting_hint.visible = true;
+            xlLib.TipsUtils.showFloatWordTips("设置");
+        } else if (e.target == this._btn_record) {
+            this.grp_menu.visible = false;
+            xlLib.TipsUtils.showFloatWordTips("记录");
+            xlLib.PopUpMgr.addPopUp(ZJHRecordPanl, null, true);
+        } else if (e.target == this._btn_playmethod) {
+            this.grp_menu.visible = false;
+            xlLib.TipsUtils.showFloatWordTips("玩法");
+            xlLib.PopUpMgr.addPopUp(ZJHHelpPanl, null, true);
+        } else if (e.target == this._btn_feedback) {
+            this.grp_menu.visible = false;
+            this.grp_feedback_panel.visible = true;
+            xlLib.TipsUtils.showFloatWordTips("反馈");
+        } else if (e.target == this._btn_set_close) {
+            this.grp_setting_hint.visible = false;
+            xlLib.TipsUtils.showFloatWordTips("退出设置面板");
+        } else if (e.target == this._btn_feedback_close) {
+            this.grp_feedback_panel.visible = false
+            xlLib.TipsUtils.showFloatWordTips("退出反馈面板");
         }
-
     }
-    private residueGolds() {
-        
+
+    //-----------------------------------------------------------------------------
+    private byOpenId: string[] = ['', '', '', '', ''];
+    private abandonId: string[] = [];
+    /**获取所有能和玩家比牌的玩家 */
+    private onBiPaiClick() {
+        this.byOpenId = [];
+        for (let i = 1; i < this.playerOperatingState.length; i++) {
+            if (this.playerOperatingState[i] != 3) {
+                let user = UserInfo.getInstance().playes[i];
+                this["grpHead" + i].touchEnabled = true;
+                this["grpHead" + i].touchChildren = false;
+                this.byOpenId[i] = this.OtherPlayer[i];
+                if (this.abandonId.length == 3) {
+                    this.sendamessage2(EventConst.compareCard, this.UsId, this.OtherPlayer[i]);
+                    this.sendamessage(EventConst.botpour, this.callnum);
+                }
+            }
+        }
+        this._btn_bipai.touchEnabled = false;
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_bipai, false);
+    }
+
+    //-----------------------------------------------------------------------------
+    /**点击加注倍数按钮后隐藏 */
+    private Clickaddtohide() {
+        this._btn_jiazhu.touchEnabled = false;
+        this.grp_btncm0.visible = false;
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
+    }
+    /**玩家加注金币 */
+    private botpGolds(state: boolean): void {
+        this.img_xzgold_bg0.visible = state;
+        this.img_xzgold_bg1.visible = state;
+        this.img_xzgold_bg2.visible = state;
+        this.img_xzgold_bg3.visible = state;
+        this.img_xzgold_bg4.visible = state;
+
+        this.img_xzgold0.visible = state;
+        this.img_xzgold1.visible = state;
+        this.img_xzgold2.visible = state;
+        this.img_xzgold3.visible = state;
+        this.img_xzgold4.visible = state;
+
+        this.lab_xzgold0.visible = state;
+        this.lab_xzgold1.visible = state;
+        this.lab_xzgold2.visible = state;
+        this.lab_xzgold3.visible = state;
+        this.lab_xzgold4.visible = state;
+    }
+    /**桌面金币图标 */
+    private deskNum(state: boolean): void {
+        this.lab_deskGolds.visible = state;
+        this.img_deskgoldbg.visible = state;
+        this.img_deskgoldIcon.visible = state;
+
     }
     private sendamessage(sendstr: string, bet: number): void {
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
         let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
         let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-
+        //bet :下注倍数
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token,
@@ -550,38 +547,27 @@ class ZJHView extends eui.Component {
             data: bet
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
-        
+
         }, this);
     }
-    private sendamessage2(sendstr: string): void {
+
+    private sendamessage2(sendstr: string, open: string, byopen: string): void {
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
         let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
         let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-
+        //bet :下注倍数
+        let data = { "open": open, "byopen": byopen };
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token,
-            playway: playway.id
+            playway: playway.id,
+            data: data
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
-            let poke = {
-                type: data.cardGenre,//牌型
-                value: data.cardtype //牌值
-            };
-            for (var i = 0; i < 3; i++) {
-                let val = poke.value[i];
-                var card = this['grpCard' + 0 + '_' + i];
-                card.source = '';
-                egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                    this[0].source = 'card_' + this[1];
-                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-                }, [card, val]);
-                xlLib.DisplayUtils.setComponentEnabled(card, false);
-            }
 
         }, this);
-        this._btn_kanpai.visible = false;
     }
+    /**------------------------------------------------------------------------------------- */
     private addEvent(): void {
         /*
          var data = {
@@ -605,39 +591,75 @@ class ZJHView extends eui.Component {
         //this.setGameResult(data);
         //this.setCountdown();
         //this.cardEffect();
-        // this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
+        EventUtil.addEventListener(EventConst.onGameStatusChange, this.onGameStatusChange, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
-        EventUtil.addEventListener(EventConst.play, this.playpai, this);
-        EventUtil.addEventListener(EventConst.gambleType, this.gametype, this);
-        EventUtil.addEventListener(EventConst.otherSeecard, this.kanpai, this);
-        EventUtil.addEventListener(EventConst.compareCard, this.Thancard, this);
-        EventUtil.addEventListener(EventConst.pressure, this.ALLIN, this);
-        EventUtil.addEventListener(EventConst.otherBotpour, this.otherplayerxiazhu, this);
-        EventUtil.addEventListener(EventConst.botpour, this.xiazhu, this);
-        EventUtil.addEventListener(EventConst.otherAbandon, this.otherdiscard, this);
-        EventUtil.addEventListener(EventConst.abandon, this.discard, this);
-        EventUtil.addEventListener(EventConst.settlement, this.settleaccount, this);
-        EventUtil.addEventListener(EventConst.gameOver, this.gameover, this);
-        EventUtil.addEventListener(EventConst.leave, this.leaveroom, this);
+        EventUtil.addEventListener(EventConst.onUserBetSelect, this.gametype, this);
+        EventUtil.addEventListener(EventConst.onUserSeeCard, this.Check, this);
+        EventUtil.addEventListener(EventConst.onAiSeeCard, this.otherCheck, this);
+        EventUtil.addEventListener(EventConst.onUserToCard, this.Thancard, this);
+        EventUtil.addEventListener(EventConst.onUserAllPress, this.ALLIN, this);
+        EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.Bet, this);
+        EventUtil.addEventListener(EventConst.onAiBetOrderUpdate, this.otherplayerBet, this);
+        EventUtil.addEventListener(EventConst.onTimelyNotify, this.timeInfo, this);
+        EventUtil.addEventListener(EventConst.onUserWaiveCard, this.discard, this);
+        EventUtil.addEventListener(EventConst.onAiWaiveCard, this.otherdiscard, this);
+        EventUtil.addEventListener(EventConst.onUserExceWaiveCard, this.disAutoCard, this);
+        EventUtil.addEventListener(EventConst.onCheckout, this.settleaccount, this);
+        //EventUtil.addEventListener(EventConst.zjhleave, this.leaveroom, this);
+        //EventUtil.addEventListener(EventConst.onUserLeave, this.cancelpapre, this);
+        EventUtil.addEventListener(EventConst.onUserIsLeave, this.onClickoutBtn, this);
+        EventUtil.addEventListener(EventConst.onUserOutRoom, this.ocClickContuite, this);
 
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
-        this._btn_prepare.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_menu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_kanpai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiazhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_jiacm_0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this._btn_jiacm_6.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this._btn_gendaodi.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_quanxia.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_qipai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_bipai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_continuegame.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_luckmoney.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_genzhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_autogenzhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_cancelautogenzhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        //----------------------------------------------------------------------------------
+        this["grpHead" + 1].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["grpHead" + 2].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["grpHead" + 3].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["grpHead" + 4].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
 
+        this._btn_out.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_setting.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_record.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_playmethod.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_set_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_feedback_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_feedback.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        egret.MainContext.instance.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
     }
+    private onTouchStageHandler(evt: egret.Event): void {
+        if (
+            !(evt.target == this.grp_menu
+                || evt.target == this._btn_menu
+                || evt.target == this.menu_bg
+                || evt.target == this._btn_out
+                || evt.target == this._btn_setting
+                || evt.target == this._btn_record
+                || evt.target == this._btn_playmethod
+                || evt.target == this._btn_feedback
+            )
+        ) {
+            this.grp_menu.visible = false;
+        }
+    }
+
     private addtime: number;//计时器从0+到10
     /**开始倒计时*/
     private startCountDown(time: number): void {
@@ -653,12 +675,10 @@ class ZJHView extends eui.Component {
     /**倒计时处理*/
     private timerFunc(evt: egret.TimerEvent): void {
         if (this.time >= 0 && this.time <= 15) {
-
             this.time--;
             this.addtime = 15 - this.time;
             console.log("addtime", 15 - this.time);
             //console.log(this.time);
-
         }
         else {
             this.clearTime();
@@ -674,102 +694,384 @@ class ZJHView extends eui.Component {
         }
     }
     /**发牌 */
-    private playpai(data: any): void {
+    public oldMybotpGold: number = 1;
+    public oldOtherbotpGold: number[] = [1, 1, 1, 1, 1];
+    private goldarr: number[] = [];//存储所有玩家的初始金币数
+    public dizhu: number;//玩家地注
+    public shortTimegameStatue: number;//游戏状态
+    public nowroundNum: number = 0;//当前轮数
 
-        this.zhangIndex = UserInfo.getInstance().findSeatNumber(data.param.index);
-        this.flyIndex0 = UserInfo.getInstance().findSeatNumber(data.param.index);
-        this.cardEffect();//飞牌动动作
-
-        this._btn_kanpai.touchEnabled = true;
+    private onGameStatusChange(data: any): void {
+        this._btn_continuegame.visible = false;
+        this.gamestatue(data.param);
     }
-    /**看牌 */
-    private kanpai(data: any): void {
-        if (data.param.command == "otherSeecard" && UserInfo.getInstance().uid != data.param.userId) {
+    private gamestatue(data: any): void {
+        /**0.准备中  1.开始游戏 2.游戏结束*/
+        if (data.roomStatus == 0) {
+            console.log("游戏状态是0");
+            //this.grpprepare.visible = false;//准备提示弹框
+            let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHpaprePanl, this, true, true, null, 1);
+            zjhpaprePanl.TYPE_TAP = Const.TYPE_JINGDIANJINHUA;
+            this.shortTimegameStatue = data.roomStatus;
+        } else if (data.roomStatus == 1) {
+            console.log("游戏开始，发牌");
+            this.grp_roungNum.visible = true;
+            this.shortTimegameStatue = data.roomStatus;
+            this.zhangIndex = UserInfo.getInstance().findSeatNumber(data.index);
+            this.flyIndex0 = UserInfo.getInstance().findSeatNumber(data.index);
+            this.deskNum(true);
+            this.lab_dizhu_num.text = String(data.score / 100);//最小底注
+            this.lab_dingzhu_num.text = String(data.maxScore / 100);//最大顶注
+            this.dizhu = data.golds / 500;
+            this.lab_deskGolds.text = String(data.golds / 100);//牌桌底注
+            this.botpGolds(true);
+            //玩家下的地注
+            for (let i = 0; i < 5; i++) {
+                this['lab_xzgold' + i].text = data.golds / 500;
+            }
+            this.cardEffect();//飞牌动动作
+        } else if (data.roomStatus == 2) {
+            this.shortTimegameStatue = data.roomStatus;
+            console.log("游戏结束");
+        }
+        for (let key in data.goldMap) {
+            console.log("--------------" + key);
+            console.log("------------" + data.goldMap[key]);
+            this.nowUserGolds = this.goldarr[0] / 100;
+            this.goldarr.push(data.goldMap[key]);
+            this.labelGold0.text = String(this.goldarr[0] / 100);
+        }
+
+        for (let i = 1; i < this.goldarr.length; i++) {
+            this['grpHead' + i].setOtherGold(this.goldarr[i] / 100);
+        }
+        this._btn_kanpai.touchEnabled = true;
+
+    }
+    /**玩家看牌 */
+    private Check(data: any): void {
+        if (data.param.command == "onUserSeeCard" && UserInfo.getInstance().uid == data.param.userId) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            xlLib.TipsUtils.showFloatWordTips("看牌");
+            console.log("看牌");
+            let poke = {
+                type: data.param.cardGenre,//牌型
+                value: data.param.cardtype //牌值
+            };
+            this.onKanPaiClick(poke);
+            this._btn_kanpai.visible = false;
+            this.playerOperatingState[0] = 2;//已看牌
+        }
+    }
+    /**其他玩家看牌 */
+    private otherCheck(data: any): void {
+        if (data.param.command == "onAiSeeCard" && UserInfo.getInstance().uid != data.param.userId) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
             let seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
             this['labstatus' + seatnum].text = '已看牌';
+            this.playerOperatingState[seatnum] = 2;
         }
 
     }
     private numtime: number;//剩余操作时间
-    /**判断是否进行操作*/
+    private betarr: string[] = [];//存储可以下的注数 数组
+    private callnum: number;//存放每次能加注的倍数
+    private UsId: string;//存储我的id
+    public nowUserGolds: number;//当前玩家剩余金币
+    public shortGold: number;//当前玩家剩余金币不足，
+    /**判断进行操作 接收下注类型*/
     private gametype(data: any): void {
-        this.numtime = data.param.seconds;
-        console.log(data);
-        if (this.kanpaistatue == false) {
-            this.startCountDown(this.numtime);
-        }
-        this._btn_bipai.visible = true;
-
-
-        let betarr: string[] = data.param.limit.split(",");
-        if (betarr.length >= 1) {
-            console.log("可以加注*********************************");
+        if (data.param.code == 200) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            this._btn_autogenzhu.visible = false;
+            this.img_autogenzhu.visible = false;
+            this.img_genzhu.visible = true;
+            this._btn_genzhu.visible = true;
+            this.betarr = [];
+            this.numtime = data.param.seconds;
+            this.UsId = data.param.userId;
+            console.log(data);
+            if (this.playerOperatingState[0] != 2) {
+                this.startCountDown(this.numtime);
+            }
+            //this.betarr = data.param.limit.split(",");
+            console.log("可以进行加注操作*********************************");
             this._btn_jiazhu.visible = true;
-            /* if (betarr.length == 2) {
-                 console.log("可以加注1.5倍，2倍");
-                 this._btn_jiazhu.touchEnabled = true;
-             }*/
+            this._btn_jiazhu.touchEnabled = true;
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, true);//按钮恢复颜色
+            let index: number = 0;
+            let all: boolean = false;
+            for (let key in data.param.butPourMap) {
+                console.log("--------------" + key);
+                console.log("------------" + data.param.butPourMap[key]);
+                this.betarr.push(key);
+                this['labchip' + index].text = key;
+                if (data.param.butPourMap[key] == false) {
+                    this["_btn_jiacm_" + index].touchEnabled = false;
+                } else {
+                    all = true;
+                }
+                index++
+            }
+            if (!all) {
+                this._btn_jiazhu.touchEnabled = false;
+                xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
+            }
+            /**可以进行比牌 */
+            if (data.param.compare == true && UserInfo.getInstance().uid == data.param.userId) {
+                console.log("compare=true可以比牌");
+                this.lab_tankNumber.text = data.param.followPour;
+                this.lab_tankNumber.visible = true;
+                this._btn_bipai.visible = true;
+                this._btn_bipai.touchEnabled = true;
+                xlLib.DisplayUtils.setComponentEnabled(this._btn_bipai, true);//按钮恢复颜色
+            }
+            /**可以进行跟注 */
+            this.isCall = true;
+            this.img_genzhu.source = "lab_genzhu_png";
+            this.callnum = data.param.followPour;
+            this.lab_callNumber.text = data.param.followPour;
+            this.lab_callNumber.visible = true;
+            this._btn_genzhu.touchEnabled = true;
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_genzhu, true);//按钮恢复颜色
+            this.isoperat = true;
+
+            /**金币不足 全压 */
+            //this.nowUserGolds=this.goldarr[0] / 100;
+            console.log("当前玩家剩余金币，其他玩家下的注，当前应下注数" + this.nowUserGolds, this.notAbandbotp, data.param.followPour);
+            if (this.nowUserGolds < this.notAbandbotp || (this.nowUserGolds >= this.notAbandbotp && this.nowUserGolds < data.param.followPour)) {
+
+                this.lab_tankNumber.visible = false;
+                this._btn_bipai.visible = false;
+                this._btn_quanxia.visible = true;
+                this.img_quanya.visible = true;
+                this.lab_quanyaNumber.visible = true;
+                this.lab_quanyaNumber.text = (this.nowUserGolds).toString();
+                this.shortGold = this.nowUserGolds;
+            }
         }
     }
     /**玩家下注*/
-    private xiazhu(data: any): void {
-        if (data.param.command == "botpour" && UserInfo.getInstance().uid == data.param.id) {
-            UserInfo.getInstance().goldcoins=data.param.golds;
-            this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
+
+    private Bet(data: any): void {
+        if (data.param.command == "onUserBetOrderUpdate" && UserInfo.getInstance().uid == data.param.userId) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            this.onGenZhuClick(data.param.index, data.param.data);
+            this._btn_genzhu.visible = false;
+            this.img_genzhu.visible = false;
+            this.lab_callNumber.visible = false;
+            this._btn_bipai.touchEnabled = false;
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_bipai, false);//按钮恢复颜色
+            this.lab_deskGolds.text = (data.param.golds / 100).toString();//玩家下注更新牌桌金币数
+            for (let key in data.param.goldMap) {
+                console.log("--------------" + key);
+                console.log("------------" + data.param.goldMap[key]);
+                this.labelGold0.text = String(data.param.goldMap[key] / 100);//玩家下注更新金币数
+                this.nowUserGolds = data.param.goldMap[key] / 100;
+            }
+            this.lab_tankNumber.text = String(data.param.data / 100);
+            this.lab_callNumber.text = String(data.param.data / 100);
+            this.oldMybotpGold += data.param.data / 100;
+            this.lab_xzgold0.text = String(this.oldMybotpGold);
+        }
+    }
+    public notAbandbotp: number = 0;//存储其他玩家当前下注数
+    public therGolds: number = 0;//更新其他玩家金币
+    public otherId: string;
+    /**其他玩家下注*/
+    private otherplayerBet(data: any): void {
+        if (data.param.command == "onAiBetOrderUpdate" && UserInfo.getInstance().uid != data.param.userId) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            this.onPlayerGenZhu(data.param.index, data.param.data);
+            this.lab_deskGolds.text = (data.param.golds / 100).toString();//玩家下注更新牌桌金币数
+            //let otherId: string;
+            //let therGolds: number;
+            //下注更新其他玩家金币
+            for (let key in data.param.goldMap) {
+                console.log("--------------" + key);
+                console.log("------------" + data.param.goldMap[key]);
+                this.otherId = key;
+                this.therGolds = data.param.goldMap[key]
+            }
+            for (let i = 1; i < this.OtherPlayer.length; i++) {
+                if (this.OtherPlayer[i] == this.otherId) {
+                    this['grpHead' + i].setOtherGold(this.therGolds / 100);
+                }
+            }
+            this.oldOtherbotpGold[data.param.index] += data.param.data / 100;
+            this['lab_xzgold' + data.param.index].text = String(this.oldOtherbotpGold[data.param.index]);
+            this.notAbandbotp = data.param.data / 100;
+            console.log(this.notAbandbotp);
 
         }
     }
-    /**其他玩家下注*/
-    private otherplayerxiazhu(data: any): void {
-        if (data.param.command == "otherBotpour" && UserInfo.getInstance().uid != data.param.id) {
-            this.onPlayerGenZhu(data.param.index, 10000);
-            if (data.param.code == "200") {
-               
-            }
-        }
-    }
+
     /**全压*/
     private ALLIN(data: any): void {
-        if (data.param.command == "pressure" && UserInfo.getInstance().uid != data.param.id) {
-
+        if (data.param.command == "onUserAllPress" && data.param.code == 200) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            console.log("金币不足玩家全压", data);
+            for (let key in data.param.goldMap) {
+                console.log("--------------" + key);
+                console.log("------------" + data.param.goldMap[key]);
+                this.labelGold0.text = String(data.param.goldMap[key]);//全压更新玩家金币数
+            }
+            //执行比牌动作..........{}
         }
     }
-    /*玩家比牌*/
+    /***(推送*异常及时通知 比牌结果推送)*/
+    private timeInfo(data: any): void {
+        if (data.param.command == "onTimelyNotify" && data.param.autoButState == 300) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            console.log("玩家全压和其他玩家比牌", data);
+            console.log(data.param.json);
+            /**AI玩家胜利 */
+            if (data.param.data == 1) {
+                console.log("AI全压获胜");
+                let losepoke = {
+                    type: data.param.json.loseCard,//牌值
+                    value: data.param.json.loseType
+                };//牌型
+                if (this.playerOperatingState[0] != 2) {
+                    this.onKanPaiClick(losepoke);
+                    for (var i = 0; i < 3; i++) {
+                        let val = losepoke.value[i];
+                        var card = this['grpCard' + 0 + '_' + i];
+                        xlLib.DisplayUtils.setComponentEnabled(card, false);
+                    }
+                } else if (this.playerOperatingState[0] == 2) {
+                    for (var i = 0; i < 3; i++) {
+                        let val = losepoke.value[i];
+                        var card = this['grpCard' + 0 + '_' + i];
+                        xlLib.DisplayUtils.setComponentEnabled(card, false);
+                    }
+                    UserInfo.getInstance().isGameStart = false;
+                }
+                this.playerOperatingState[data.param.index] = 3;
+                this.abandonStateBtn();
+            } else if (data.param.data == 0) {
+                //执行AI玩家图像被轰炸动作{}................
+                console.log("玩家全压获胜");
+                this.anotherDontCard(data.param.index);
+            }
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoButState == 100) {
+            this.nowroundNum = data.param.circleNum;
+            //开启自动跟注
+            console.log("++++++++++++++++++++++++++data.param.state == 100", data);
+            this.img_autogenzhu.visible = false;
+            this.img_autogenzhu.visible = false;
+            this._btn_cancelautogenzhu.visible = true;
+            this.img_cancelautogenzhu0.visible = true;
+            this.img_cancelautogenzhu1.visible = true;
+        } else if (data.param.command == "onTimelyNotify" && data.param.autoButState != 100 && data.param.autoButState != 300) {
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            //关闭自动跟注
+            console.log("++++++++++++++++++++++++++data.param.state == 200", data);
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this._btn_cancelautogenzhu.visible = false;
+            this.img_cancelautogenzhu0.visible = false;
+            this.img_cancelautogenzhu1.visible = false;
+        }
+    }
+
+    /**玩家比牌结果*/
     private Thancard(data: any): void {
-        if (data.param.command == "compareCard" && UserInfo.getInstance().uid != data.param.id) {
-            console.log("其他玩家比牌");
+        if (data.param.command == "onUserToCard" && data.param.code == 200) {
+            console.log("玩家比牌结果");
 
-        } else if (data.param.command == "compareCard" && UserInfo.getInstance().uid == data.param.id) {
-            console.log("玩家自己和其他玩家比");
-            this._btn_bipai.visible = true;
+
         }
     }
 
+    /**玩家弃牌*/
+    private discard(data: any): void {
+        if (data.param.command == "onUserWaiveCard" && UserInfo.getInstance().uid == data.param.userId) {
+            let poke = {
+                type: data.param.cardGenre,//牌型
+                value: data.param.cardtype //牌值
+            };
+            for (var i = 0; i < 3; i++) {
+                let val = poke.value[i];
+                var card = this['grpCard' + 0 + '_' + i];
+                card.source = 'gf_poker0_png';
+                egret.Tween.get(card).to({ scaleX: 0 }, 200).call(function () {
+                    this[0].source = 'qznn_card_' + this[1];
+                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 100);
+                }, [card, val]);
+            }
+            this.playerOperatingState[0] = 3;
+            this.abandonStateBtn();
+            UserInfo.getInstance().isGameStart = false;
+
+        }
+    }
+    //玩家弃牌,结算按钮状态
+    private abandonStateBtn(): void {
+        this.grp_btncm0.visible = false;
+        this._btn_jiazhu.visible = false;
+        this._btn_kanpai.visible = false;
+        this._btn_qipai.visible = false;
+        this._btn_genzhu.visible = false;
+        this._btn_autogenzhu.visible = false;
+        this._btn_cancelautogenzhu.visible = false;
+        this._btn_bipai.visible = false;
+        this._btn_quanxia.visible = false;
+        this._btn_continuegame.visible = true;
+        this.img_qipai.visible = false;
+        this.img_jiazhu.visible = false;
+        this.img_bipai.visible = false;
+        this.img_quanya.visible = false;
+        this.img_genzhu.visible = false;
+        this.img_autogenzhu.visible = false;
+        this.img_cancelautogenzhu0.visible = false;
+        this.img_cancelautogenzhu1.visible = false;
+        this.lab_tankNumber.visible = false;
+        this.lab_quanyaNumber.visible = false;
+        this.lab_callNumber.visible = false;
+    }
+    /**存储所有玩家id信息 */
+    private OtherPlayer: string[] = [];
+    private seatnum: number;//
     /**其他玩家弃牌*/
     private otherdiscard(data: any): void {
-        if (data.param.command == "otherAbandon" && UserInfo.getInstance().uid != data.param.userId) {
-            let seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
-            this['labCardType' + seatnum].text = '弃牌';
-            this['labstatus' + seatnum].text = '';
-            var cardPos = [];
-            for (var j = 0; j < 3; j++) {
-                var card = this['grpCard' + seatnum + '_' + j];
-                card.source = 'card_100';
-                card.anchorOffsetX = card.width / 2;
-                card.x += card.width / 2;
-                var pos: egret.Point = new egret.Point;
-                pos.x = card.x + 24;
-                pos.y = card.y;
-                cardPos[j] = pos;
-                xlLib.DisplayUtils.setComponentEnabled(card, false);
-            }
-            this.orginPlayerCardPos[seatnum] = cardPos;
-            //xlLib.DisplayUtils.setComponentEnabled(card, false); 
+        if (data.param.command == "onAiWaiveCard" && UserInfo.getInstance().uid != data.param.userId) {
+            this.seatnum = UserInfo.getInstance().findSeatNumber(data.param.index);
+            this.anotherDontCard(this.seatnum);
+            this['img_abandon' + this.seatnum].source = 'gf_flag_qp_png';
+            this.abandonId.push(data.param.userId);
         }
     }
-    /**玩家弃牌*///自己不进行任何操作超过操作时间 视为弃牌状态 
-    private discard(data: any): void {
-        if (data.param.command == "abandon" && UserInfo.getInstance().uid == data.param.userId && this.addtime >= this.numtime) {
+    //设置AI玩家弃牌 颜色
+    private anotherDontCard(seatPos: number): void {
+        this['imgCardbg' + seatPos].source = '';
+        this['imgCardType' + seatPos].source = '';
+        this['labstatus' + seatPos].text = '';
+        var cardPos = [];
+        for (var j = 0; j < 3; j++) {
+            var card = this['grpCard' + seatPos + '_' + j];
+            card.source = 'gf_poker0_2_png';
+            card.anchorOffsetX = card.width / 2;
+            //card.x += card.width / 2;
+            var pos: egret.Point = new egret.Point;
+            pos.x = card.x;
+            pos.y = card.y;
+            cardPos[j] = pos;
+        }
+        this.orginPlayerCardPos[seatPos] = cardPos;
+        this.playerOperatingState[seatPos] = 3;//其他玩家弃牌状态
+    }
+    /**超时自动弃牌*///自己不进行任何操作超过操作时间 视为弃牌状态 
+    private disAutoCard(data: any): void {
+        if (data.param.command == "onUserExceWaiveCard" && UserInfo.getInstance().uid == data.param.userId && this.addtime >= this.numtime) {
             console.log(this.addtime);
             let poke = {
                 type: data.param.cardGenre,//牌型
@@ -778,45 +1080,76 @@ class ZJHView extends eui.Component {
             for (var i = 0; i < 3; i++) {
                 let val = poke.value[i];
                 var card = this['grpCard' + 0 + '_' + i];
-                card.source = 'card_100';
-                egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                    this[0].source = 'card_' + this[1];
-                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
+                card.source = 'gf_poker0_png';
+                egret.Tween.get(card).to({ scaleX: 0 }, 200).call(function () {
+                    this[0].source = 'qznn_card_' + this[1];
+                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 100);
                 }, [card, val]);
-                xlLib.DisplayUtils.setComponentEnabled(card, false);
             }
             xlLib.TipsUtils.showFloatWordTips("自动弃牌");
-            this._btn_kanpai.visible = false;
+            this.playerOperatingState[0] = 3;//玩家弃牌状态
+            this.abandonStateBtn();
+            UserInfo.getInstance().isGameStart = false;
         }
     }
 
 
-    /**结算 */
-    private settleaccount(data: any): void {
-        console.log("结算");
-        this.grpResult.visible = true;
+    public mygameTyp: boolean;//是否有可以离开游戏
+    /**取消准备 */
+    //private cancelpapre(data: any): void {
+    //}
 
+    /**点击退出，收到推送 */
+    private onClickoutBtn(data: any): void {
+        //接收状态 leave (true 可离开 false 不可离开)
+        if (data.param.leave == true) {
+            let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHIsLiveRoom, this, true, true, null, 1);
+        } else if (data.param.leave == false) {
+            let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHNotLiveRoom, this, true, true, null, 1);
+        }
     }
-    /**游戏结束*/
-    private gameover(data: any): void {
-        console.log(data);
-        this._btn_continuegame.visible = true;
+
+    /**点击继续按钮发送离开房间，收到推送 */
+    private ocClickContuite(data: any): void {
+        if (data.param.code == 200) {
+            console.log('点击继续按钮发送离开房间', data);
+            if (this.isClickjixuGameBtn == false && this.isClickqipaiBtn == false) {
+                this._btn_continuegame.visible = true;
+            }
+        }
+    }
+
+    /**结算游戏结束 */
+    private settleaccount(data: any): void {
+        console.log("结算:" + data);
+        //this._btn_continuegame.visible = true;
+        this.abandonStateBtn();
     }
     /**离开房间*/
     private leaveroom(data: any): void {
-        console.log(data);
+        if (data.param.code == 200) {
+            console.log(data);
+            //this._btn_continuegame.visible = true;
+            //xlLib.SceneMgr.instance.changeScene(Lobby);
+        }
     }
+
     //加入房间新玩家
     public playerJoinRoom(data): void {
         console.log(data._obj.player.id);
+        this.OtherPlayer.push(data._obj.player.id);
         console.log(UserInfo.getInstance().myPlayer.id);
-
-
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
 
         } else {
-            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "F4_03_png");
+            this['grpHead' + data._obj.player.index].visible = true;
+            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins / 100, "women7_png");
         }
+        //this.grpprepare.visible = false;//准备提示弹框
+
+        xlLib.PopUpMgr.removePopUp(ZJHpaprePanl, 1);
+
+        this.isprepare = false;
     }
     /**
     * 自己加入房间
@@ -824,43 +1157,39 @@ class ZJHView extends eui.Component {
     private addPlayers(data): void {
 
         //设置自己信息
-        var mask2: egret.Shape = new egret.Shape;
+        this.OtherPlayer.push(data._obj.player[0].id);
+        /*var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
         mask2.graphics.drawCircle(62, 62, 62);
         mask2.graphics.endFill();
         mask2.x = this.imghead0.x + 6;
         mask2.y = this.imghead0.y + 5;
         this.grpHead0.addChild(mask2);
-        this.imghead0.mask = mask2;
+        this.imghead0.mask = mask2;*/
 
         if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
+            this.grpHead0.visible = true;
             this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
-            this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
-            this.imghead0.source = "F1_03_png";
+            this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins / 100 + "";
+            this.imghead0.source = "women7_png";
+            this.playerOperatingState[0] = 0;
         }
-
         //设置其他玩家信息  for (let i = 1; i < 10; i++) {
         for (let i = 1; i < 5; i++) {
+            this.playerOperatingState[i] = 0;
             if (data._obj.player[i] != null) {
-                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "F4_03_png");//data._obj.player[i].headimg
+                this['grpHead' + i].visible = true;
+                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins / 100, "women7_png");//data._obj.player[i].headimg  
+                //this.nodiscard.push(data._obj.player[i].id);
             } else {
-                //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
-                this['grpHead' + i].setUserInfo("", "", "");
+                this['grpHead' + i].setUserInfo("", "", "", "");
             }
         }
-
-
     }
-
-    private setTips(): void {
-        this.labTips.text = '';
-    }
-
     private setCountdown(): void {
         this.cdTimer = new egret.Timer(1000);
         this.cdTimer.addEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
     }
-
     private clacTimer(): void {
         //if (this.cdNum % 7 == 0) {
         //    this.getBets();
@@ -871,10 +1200,7 @@ class ZJHView extends eui.Component {
         else {
             this.cdTimer.stop();
             this.cdNum = 0;
-
-            this.resetGame();
-
-
+            //this.resetGame();
             this.cdNum = 5;
             this.cardEffect();
         }
@@ -887,22 +1213,19 @@ class ZJHView extends eui.Component {
             this.labCountdown1.text = (this.cdNum + '').split('')[1];
         }
     }
-
     //获取结算数据，显示结果面板时设置
     private setGameResult(data): void {
         //this.grpCountdown.visible = false;
         this.cardResult = data;
         var poke = data.pokes;
     }
-
-    private onGenZhuClick() {
+    /**玩家跟注 */
+    private onGenZhuClick(index, gold) {
         var p: egret.Point = new egret.Point();
-        p.x = 268;
-        p.y = 792;
-        this.showCoins(p, 10000);
+        p.x = 580;
+        p.y = 620;
+        this.showCoins(p, gold);
     }
-
-
     /**其他玩家跟注 */
     private onPlayerGenZhu(index, gold) {
         var p: egret.Point = new egret.Point();
@@ -910,38 +1233,37 @@ class ZJHView extends eui.Component {
         p.y = this["grpHead" + index].y + 110;
         this.showCoins(p, gold);
     }
-
     //========================== Effect Show ===============================
     //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
     private showGameTips(type): void {
-        this.grpTipsInfo.source = ZJHUtil.getInstance().getMsgSource(type);
-        this.grpTips.visible = true;
-        this.grpTipsbg.alpha = 0;
-        this.grpTipsInfo.x = 640;
         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(type));
-        egret.Tween.get(this.grpTipsbg).to({ alpha: 1 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ alpha: 0 }, 400);
-        }, this.grpTipsbg);
-        egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ x: -640 }, 400);
-        }, this.grpTipsInfo);
     }
+    /* //显示筹码
+     private showCoins(pos: egret.Point, num): void {
+         console.log("显示筹码");
+         var isRemove: boolean = false;
+         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(8));
+         var point: egret.Point = ZJHUtil.getInstance().getCoinsPos();
+         var arr = ZJHUtil.getInstance().coinsType(pos, num);//Arr
+         for (var i = 0; i < arr.length; i++) {
+             var tx = point.x + Math.random() * 80;
+             var ty = point.y + Math.random() * 80;
+             this.grpCoins.addChild(arr[i]);
+             egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call(function () {
+                 if (this[0]) {
+                     this[1].parent.removeChild(this[1]);
+                 }
+             }, [isRemove, arr[i]]);
+         }
+     }*/
 
     //显示筹码
     private showCoins(pos: egret.Point, num): void {
+        console.log("显示筹码");
         var isRemove: boolean = false;
         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(8));
-        //var point: egret.Point = ZJHUtil.getInstance().getCoinsPos(index);
         var point: egret.Point = ZJHUtil.getInstance().getCoinsPos();
-
-        var arr = ZJHUtil.getInstance().coinsType(pos, num);
-        //if (this.coinsNumArr[index] < 50) {
-        //    this.coinsNumArr[index] = parseInt(this.coinsNumArr[index]) + arr.length;
-        //    isRemove = false;
-        //}
-        //else {
-        //    isRemove = true;
-        //}
+        var arr = ZJHUtil.getInstance().coinsType(pos, num);//Arr
         for (var i = 0; i < arr.length; i++) {
             var tx = point.x + Math.random() * 80;
             var ty = point.y + Math.random() * 80;
@@ -953,7 +1275,6 @@ class ZJHView extends eui.Component {
             }, [isRemove, arr[i]]);
         }
     }
-
     private zhangIndex: number = 4;//庄的位置
     private flyIntval: number = 0;  //
     private flyIndex0: number = 4;  //扑克位置(东西南北)
@@ -962,19 +1283,19 @@ class ZJHView extends eui.Component {
 
     private cardEffect(): void {
         this.isCardEffectShow = true;
-        this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
+        this.flyIntval = setInterval(this.playCardFly.bind(this), 0);
     }
-
     private playCardFly(data: any): void {
         var card: eui.Image = this['grpCard' + this.flyIndex0 + '_' + this.flyIndex1];
-        card.source = 'card_100';
+        card.source = 'gf_poker0_1_png';
         card.x = 713.5;
         card.y = 300;
         card.anchorOffsetX = card.width / 2;
         card.x += card.width / 2;
+        card.rotation = 0;
         var pos = this.orginPlayerCardPos[this.flyIndex0][this.flyIndex1];
         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y, rotation: 360 }, 400);
         // if (this.flyIndex0 == 9) {
         if (this.flyIndex1 == 2) {
             if (this.flyIndex0 == 4) {
@@ -982,16 +1303,14 @@ class ZJHView extends eui.Component {
                 this.flyIndex1 = 0;
                 if (this.zhangIndex == 0) {
                     clearInterval(this.flyIntval);
-                    this._btn_kanpai.visible = true;
-                    this._btn_qipai.visible=true;
+                    this.showControl();
                     return;
                 }
             } else if (this.flyIndex0 == this.zhangIndex - 1) {
                 this.flyIndex0 = 0;
                 this.flyIndex1 = 0;
                 clearInterval(this.flyIntval);
-                this._btn_kanpai.visible = true;
-                this._btn_qipai.visible=true;
+                this.showControl();
                 return;
             } else {
                 this.flyIndex1 = 0;
@@ -1003,20 +1322,39 @@ class ZJHView extends eui.Component {
             this.flyIndex1++;
         }
     }
-
+    public showControl(): void {
+        console.log("飞完牌+++++++++++++++++++++++++++++++++");
+        this._btn_luckmoney.visible = true;
+        this._btn_luckmoney.touchEnabled = true;
+        this._btn_kanpai.visible = true;
+        this._btn_autogenzhu.visible = true;//发完牌跟注，弃牌按钮显示
+        this.img_autogenzhu.visible = true;
+        this._btn_jiazhu.visible = true;
+        this._btn_bipai.visible = true;
+        this._btn_qipai.visible = true;
+        this.img_qipai.visible = true;
+        this.img_jiazhu.visible = true;
+        this.img_bipai.visible = true;
+        this.lab_tankNumber.visible = true;
+        this.lab_tankNumber.text = String(this.dizhu);
+        this.lab_callNumber.text = String(this.dizhu);
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_bipai, false);
+    }
     /**自己点击看牌 */
     private onKanPaiClick(poke: any) {
         //let poke = { num: 2, type: 2, value: [408, 308, 401] };
         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(7));
         for (var i = 0; i < 3; i++) {
             var card = this['grpCard' + 0 + '_' + i];
-            card.source = 'card_100';
+            card.source = 'gf_poker0_png';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'card_' + this[1];
+                this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke.value[i]]);
         }
-        this['labCardType' + 0].text = ZJHUtil.getInstance().getCardType(poke.type);
+        this['imgCardbg' + 0].source = 'gf_pxzs_png';
+        this['imgCardType' + 0].source = ZJHUtil.getInstance().getCardType(poke.type);
     }
 
     /**其他玩家看牌 */
@@ -1024,76 +1362,102 @@ class ZJHView extends eui.Component {
         this.playClickSound(ZJHUtil.getInstance().getSoundEffect(7));
         for (var i = 0; i < 3; i++) {
             var card = this['grpCard' + index + '_' + i];
-            card.source = 'card_100';
+            card.source = 'gf_poker0_1_png';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'card_' + this[1];
+                this[0].source = 'qznn_card_' + this[1];
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke.value[i]]);
         }
-        this['labCardType' + index].text = ZJHUtil.getInstance().getCardType(poke.type);
+        this['imgCardType' + index].source = ZJHUtil.getInstance().getCardType(poke.type);
     }
-
     private setStartBet(): void {
-        this.resetGame();
-        this.grpResult.visible = false;
+        //this.resetGame();
         clearInterval(this.interval);
         this.showGameTips(2);
-        this.grpCountdown.visible = true;
+        //this.grpCountdown.visible = true;
         if (!this.isSysBanker && !this.isChangeBanker) {
             this.lastGameBankerNum--;
-            this.labBankerLastNum.text = '剩余' + this.lastGameBankerNum + '次';
         }
         if (this.isChangeBanker) {
             this.isChangeBanker = false;
-            //this.setBankerInfo(this.changeBankerObj);
-            this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
         }
     }
-
     private resetGame(): void {
-        for (var index = 0; index < 9; index++) {
-            // this['labCardResult' + index].text = '';
-            this['labCardType' + index].text = '';
+        this.initData();
+        for (var index = 0; index < 5; index++) {
             for (var j = 0; j < 3; j++) {
                 let card: eui.Image = this['grpCard' + index + '_' + j];
                 card.source = '';
                 egret.Tween.removeTweens(card);
-                // this['grpCard' + index + '_' + j].source = '';
+                this['grpCard' + index + '_' + j].source = '';
             }
+            this['lab_xzgold' + index].text = '';
+            this['img_xzgold_bg' + index].visible = false;
+            this['img_xzgold' + index].visible = false;
+            this['labstatus' + index].text = '';
+            this['imgCardbg' + index].source = '';
+            this['imgCardType' + index].source = '';
         }
-
-        this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
-
-        while (this.grpCoins.numChildren > 0) {
-            this.grpCoins.removeChildAt(0);
+        for (var index = 1; index < 5; index++) {
+            this['img_abandon' + index].source = '';
         }
+        this.playerOperatingState = [0, 0, 0, 0, 0];
+        this.lab_deskGolds.text = "";
         this.isCanBets = true;
         this.isBets = false;
-        this.imgBaoZhuang.visible = false;
-        //this.labCardTypeBanker.text = '';
-        this.resultCaijin = 0;
-        //this.grpCaijin.visible = false;
-        this.isCoinsReturn = true;
-        this.isCardEffectShow = false;
-        this.labCountdown0.text = '0';
-        this.labCountdown1.text = '0';
+        //this.isCardEffectShow = false;
+        this.byOpenId = ['', '', '', '', ''];
+        this.abandonId = [];
+        this.addtime = 0;
+
+        this.oldMybotpGold = 1;
+        this.oldOtherbotpGold = [1, 1, 1, 1, 1];
+        this.goldarr = [];
+        this.dizhu = 0;
+        this.shortTimegameStatue = 0;
+        this.nowroundNum = 0;
+
+        this.numtime = 0;
+        this.betarr = [];
+        this.callnum = 0;
+        this.UsId = '';
+        this.nowUserGolds = 0;
+        this.shortGold = 0;
+        this.notAbandbotp = 0;
+        this.therGolds = 0;
+        this.otherId = '';
+        this.OtherPlayer = [];
+        this.seatnum = 0;
+        this._btn_continuegame.visible = false;
+        this.isClickjixuGameBtn = false;
+        this.isClickqipaiBtn = false;
+        GlobalData.liveCloseBtn = false;
+        GlobalData.isLiveRoom = false;
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_0, true);
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_1, true);
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_2, true);
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_3, true);
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_4, true);
+        xlLib.DisplayUtils.setComponentEnabled(this._btn_jiacm_5, true);
+        this._btn_jiacm_0.touchEnabled = true;
+        this._btn_jiacm_1.touchEnabled = true;
+        this._btn_jiacm_2.touchEnabled = true;
+        this._btn_jiacm_3.touchEnabled = true;
+        this._btn_jiacm_4.touchEnabled = true;
+        this._btn_jiacm_5.touchEnabled = true;
+        this.grpCoins.removeChildren();
+        //this.labCountdown0.text = '0';
+        //this.labCountdown1.text = '0';
+        /*this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
+       this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
+       this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };*/
+
+        /*  while (this.grpCoins.numChildren > 0) {
+              this.grpCoins.removeChildAt(0);
+          }*/
     }
 
     //========================== Second Panel ==============================
-    //牌型
-    private onTouchCardType(): void {
-        this.grpSecondPanel.visible = true;
-        this.grpCardType.visible = true;
-        this.grpHistory.visible = false;
-    }
-
-    //走势
-    private onTouchCardHistory(): void {
-        //Net.send(Protocol.GOLDEN_GAME_RECORD, {}, this.getHistoryCallback.bind(this));
-    }
-
     private getHistoryCallback(msg): void {
         var list = msg.data;
         for (var i = 0; i < 10; i++) {
@@ -1108,56 +1472,65 @@ class ZJHView extends eui.Component {
                 this['grpHistroy' + i].visible = false;
             }
         }
-        this.grpSecondPanel.visible = true;
-        this.grpCardType.visible = false;
-        this.grpHistory.visible = true;
     }
-
     private onTouchCloseSecondPanel(): void {
-        this.grpSecondPanel.visible = false;
     }
-    //只更新玩家的金币
-    private updateDataGold(): void {
-        //EffectUtils.numEffect(this.titleLabMoney, parseInt(GlobalData.user.gold));
-    }
-
     public playClickSound(res): void {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     }
+    /*public dispose(): void {
 
-    public dispose(): void {
         xlLib.SceneMgr.instance.changeScene(Lobby);
-    }
+    }*/
 
     public destroy(): void {
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);
+        EventUtil.removeEventListener(EventConst.onGameStatusChange, this.onGameStatusChange, this);
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
-        EventUtil.removeEventListener(EventConst.play, this.playpai, this);
-        EventUtil.removeEventListener(EventConst.gambleType, this.gametype, this);
-        EventUtil.removeEventListener(EventConst.otherSeecard, this.kanpai, this);
-        EventUtil.removeEventListener(EventConst.compareCard, this.Thancard, this);
-        EventUtil.removeEventListener(EventConst.pressure, this.ALLIN, this);
-        EventUtil.removeEventListener(EventConst.otherBotpour, this.otherplayerxiazhu, this);
-        EventUtil.removeEventListener(EventConst.botpour, this.xiazhu, this);
-        EventUtil.removeEventListener(EventConst.otherAbandon, this.otherdiscard, this);
-        EventUtil.removeEventListener(EventConst.abandon, this.discard, this);
-        EventUtil.removeEventListener(EventConst.settlement, this.settleaccount, this);
-        EventUtil.removeEventListener(EventConst.gameOver, this.gameover, this);
-        EventUtil.removeEventListener(EventConst.leave, this.leaveroom, this);
-        this._btn_prepare.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        EventUtil.removeEventListener(EventConst.onUserBetSelect, this.gametype, this);
+        EventUtil.removeEventListener(EventConst.onUserSeeCard, this.Check, this);
+        EventUtil.removeEventListener(EventConst.onAiSeeCard, this.otherCheck, this);
+        EventUtil.removeEventListener(EventConst.onUserToCard, this.Thancard, this);
+        EventUtil.removeEventListener(EventConst.onUserAllPress, this.ALLIN, this);
+        EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.Bet, this);
+        EventUtil.removeEventListener(EventConst.onAiBetOrderUpdate, this.otherplayerBet, this);
+        EventUtil.removeEventListener(EventConst.onUserWaiveCard, this.discard, this);
+        EventUtil.removeEventListener(EventConst.onAiWaiveCard, this.otherdiscard, this);
+        EventUtil.removeEventListener(EventConst.onUserExceWaiveCard, this.disAutoCard, this);
+        EventUtil.removeEventListener(EventConst.onCheckout, this.settleaccount, this);
+        //EventUtil.removeEventListener(EventConst.zjhleave, this.cancelpapre, this);
+        //EventUtil.removeEventListener(EventConst.onUserLeave, this.cancelpapre, this);
+        EventUtil.removeEventListener(EventConst.onUserIsLeave, this.onClickoutBtn, this);
+        EventUtil.removeEventListener(EventConst.onUserOutRoom, this.ocClickContuite, this);
+        this._btn_menu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_kanpai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiazhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_jiacm_0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiacm_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this._btn_jiacm_6.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this._btn_gendaodi.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_quanxia.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_qipai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_bipai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_luckmoney.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_genzhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_autogenzhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_cancelautogenzhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+
+        this["grpHead" + 1].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["grpHead" + 2].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["grpHead" + 3].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["grpHead" + 4].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_out.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_setting.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_record.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_playmethod.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_feedback.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_set_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this._btn_feedback_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        egret.MainContext.instance.stage.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
         }

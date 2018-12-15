@@ -21,14 +21,14 @@ var ZJHHead = (function (_super) {
     ZJHHead.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-        var mask2 = new egret.Shape;
+        /*var mask2: egret.Shape = new egret.Shape;
         mask2.graphics.beginFill(0xff0000);
         mask2.graphics.drawCircle(46, 46, 46);
         mask2.graphics.endFill();
-        mask2.x = this.imghead.x + 3;
-        mask2.y = this.imghead.y + 3;
+        mask2.x = this.imghead.x+3;
+        mask2.y = this.imghead.y+3;
         this.addChild(mask2);
-        this.imghead.mask = mask2;
+        this.imghead.mask = mask2;*/
     };
     /**
      * _name 名字
@@ -38,6 +38,10 @@ var ZJHHead = (function (_super) {
     ZJHHead.prototype.setUserInfo = function (_name, _gold, _imghead) {
         this.imghead.source = _imghead;
         this.labelName.text = _name;
+        this.labelGold.text = _gold;
+    };
+    //设置其他玩家更新金币
+    ZJHHead.prototype.setOtherGold = function (_gold) {
         this.labelGold.text = _gold;
     };
     ZJHHead.prototype.destroy = function () {

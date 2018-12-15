@@ -496,83 +496,69 @@ var EffectUtils;
     /**
      * 金币飞行的效
      */
-    /*
-    export function coinsFly(obj: egret.DisplayObjectContainer, startX, startY, endX = 140, endY = 64): void {
-        var interval: number = 0;
-        var coinsNum: number = 0;
-        var flyEffect: Function = function () {
-            if (coinsNum > 8) {
+    function coinsFly_1(obj, startX, startY, endX, endY) {
+        if (endX === void 0) { endX = 140; }
+        if (endY === void 0) { endY = 64; }
+        var interval = 0;
+        var coinsNum = 0;
+        var flyEffect = function () {
+            if (coinsNum > 10) {
                 clearInterval(interval);
                 coinsNum = 0;
                 return;
             }
             coinsNum++;
-            var coin: eui.Image = new eui.Image('gold');
+            var coin = new eui.Image('nn_cion_png');
             coin.x = startX;
             coin.y = startY;
-            coin.scaleX = 0.6;
-            coin.scaleY = 0.6;
+            coin.scaleX = 1;
+            coin.scaleY = 1;
             obj.addChild(coin);
             egret.Tween.get(coin).to({ x: endX, y: endY, scaleX: 1.1, scaleY: 1.1 }, 600)
                 .wait(100)
                 .call(function () {
-                    obj.removeChild(coin);
-                }, [obj, coin])
-        }
+                obj.removeChild(coin);
+            }, [obj, coin]);
+        };
         interval = setInterval(flyEffect.bind(this), 100);
-    }*/
+    }
+    EffectUtils.coinsFly_1 = coinsFly_1;
     /**
      * 金币飞行的效
      */
-    function coinsFly(obj, startX, startY, endX, endY) {
+    function coinsFly_2(obj, startX, startY, endX, endY) {
         var interval = 0;
         var coinsNum = 0;
-        var _interval = 0;
-        var coin_arr = [];
-        var _flyEffect = function () {
-            clearInterval(_interval);
-            _interval = 0;
-            for (var i = 0; i < coin_arr.length; i++) {
-                egret.Tween.removeTweens(coin_arr[i]);
-                coin_arr[i].parent.removeChild(coin_arr[i]);
-            }
-            return;
-        };
         var flyEffect = function () {
-            if (coinsNum > 8) {
-                clearInterval(interval);
-                interval = 0;
-                coinsNum = 0;
-                _interval = setInterval(_flyEffect.bind(this), 1200);
-                return;
-            }
-            coinsNum++;
-            var randomNum = Math.round(Math.random() * 10 + 5);
-            for (var i = 0; i < randomNum; i++) {
-                var coin = new eui.Image('gold');
-                coin.x = startX + Math.round(Math.random() * 150 + 10);
-                coin.y = startY + Math.round(Math.random() * 150 + 10);
+            var randomNum = Math.round(Math.random() * 6 + 2);
+            var _loop_1 = function (i) {
+                var coin = new eui.Image('nn_cion_png');
+                coin.x = startX + Math.round(Math.random() * 100 + 10);
+                coin.y = startY + Math.round(Math.random() * 100 + 10);
                 coin.scaleX = 0.8;
                 coin.scaleY = 0.8;
                 obj.addChild(coin);
-                coin_arr.push(coin);
-                var z_x = endX + Math.round(Math.random() * 60 + 1);
-                var z_y = endY + Math.round(Math.random() * 60 + 1);
-                egret.Tween.get(coin).to({ x: z_x, y: z_y }, 1000)
-                    .wait(100)
+                var z_x = endX + Math.round(Math.random() * 30 + 1);
+                var z_y = endY + Math.round(Math.random() * 30 + 1);
+                egret.Tween.get(coin).to({ x: z_x, y: z_y, scaleX: 1.1, scaleY: 1.1 }, 500)
                     .call(function () {
-                    //if(coin){
-                    //    egret.Tween.removeTweens(coin);
-                    //    obj.removeChild(coin);
-                    //    coin = null;
-                    //    console.log("111");
-                    //    
-                    //}
-                }, [obj, coin]);
+                    egret.Tween.removeTweens(coin);
+                    coin.parent.removeChild(coin);
+                }, [coin]);
+            };
+            for (var i = 0; i < randomNum; i++) {
+                _loop_1(i);
+            }
+            coinsNum++;
+            if (coinsNum >= 10) {
+                clearInterval(interval);
+                //interval = 0;
+                coinsNum = 0;
+                return;
             }
         };
-        interval = setInterval(flyEffect.bind(this), 50);
+        interval = setInterval(flyEffect.bind(this), 30);
     }
-    EffectUtils.coinsFly = coinsFly;
+    EffectUtils.coinsFly_2 = coinsFly_2;
 })(EffectUtils || (EffectUtils = {}));
 //# sourceMappingURL=EffectUtils.js.map

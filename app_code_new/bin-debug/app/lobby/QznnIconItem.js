@@ -21,11 +21,14 @@ var QznnIconItem = (function (_super) {
     };
     QznnIconItem.prototype.partRemoved = function (partName, instance) {
         if (this.effecthot) {
-            this.effecthot.stop();
+            xlLib.DisplayUtils.destoryDragonBonesArmature(this.effecthot, "newAnimation");
         }
-        if (this.effectIcon) {
-            this.effectIcon.stop();
+        if (this.effectnew) {
+            xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectnew, "newAnimation");
         }
+        xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectmask, "Sprite");
+        xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectfront, "Sprite");
+        xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectIcon, "newAnimation");
         _super.prototype.partRemoved.call(this, partName, instance);
     };
     QznnIconItem.prototype.onEnterGame = function (e) {
@@ -45,25 +48,53 @@ var QznnIconItem = (function (_super) {
     };
     QznnIconItem.prototype.setGameIconData = function (icondata) {
         this.icondata = icondata;
-        this.bg_img.source = icondata.url;
+        var armatureDisplay;
+        var armatureIconDisplay;
+        this.effectmask = xlLib.DisplayUtils.createDragonBonesDisplay('bg_daliuguang', "Sprite");
+        dragonBones.WorldClock.clock.add(this.effectmask);
+        armatureDisplay = this.effectmask.getDisplay();
+        armatureDisplay.width = this.width;
+        armatureDisplay.height = this.height;
+        armatureDisplay.x = 650;
+        armatureDisplay.y = 260;
+        this.addChild(armatureDisplay);
+        xlLib.DisplayUtils.runDragonBonesArmature(this.effectmask, "Sprite");
         if (icondata.ishot) {
-            this.effecthot = xlLib.DisplayUtils.createAsyncMovieClicp("effcet_hot", "effcet_hot");
-            this.effecthot.x = 25;
-            this.effecthot.y = 0;
-            this.addChild(this.effecthot);
+            this.effecthot = xlLib.DisplayUtils.createDragonBonesDisplay('bg_remen', "Armature");
+            dragonBones.WorldClock.clock.add(this.effecthot);
+            armatureDisplay = this.effecthot.getDisplay();
+            armatureDisplay.x = 10;
+            armatureDisplay.y = 95;
+            this.addChild(armatureDisplay);
+            xlLib.DisplayUtils.runDragonBonesArmature(this.effecthot, "newAnimation");
         }
-        this.effecthot.play(-1);
-        if (icondata.game == Const.GAME_NIUNIU) {
-            this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("game_830_effect_logo", "game_830_effect_logo");
-            this.effectIcon.x = 130;
-            this.addChild(this.effectIcon);
+        if (icondata.isNew) {
+            this.effectnew = xlLib.DisplayUtils.createDragonBonesDisplay('bg_xin', "Armature");
+            dragonBones.WorldClock.clock.add(this.effectnew);
+            armatureDisplay = this.effectnew.getDisplay();
+            armatureDisplay.x = 60;
+            armatureDisplay.y = 95;
+            this.addChild(armatureDisplay);
+            xlLib.DisplayUtils.runDragonBonesArmature(this.effectnew, "newAnimation");
         }
-        this.effectIcon.play(-1);
-        this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_830_effect", "game_830_effect");
-        this.effectmask.touchEnabled = false;
-        this.effectmask.x = 20;
-        this.effectmask.y = -9;
-        this.addChild(this.effectmask);
+        switch (icondata.type) {
+            case Const.TYPE_QZNN:
+                this.effectfront = xlLib.DisplayUtils.createDragonBonesDisplay('bg_qiangzhuangniuniu', "Sprite");
+                armatureDisplay = this.effectfront.getDisplay();
+                armatureDisplay.x = 650;
+                armatureDisplay.y = 260;
+                this.effectIcon = xlLib.DisplayUtils.createDragonBonesDisplay('qznn_rukou', "armatureName");
+                armatureIconDisplay = this.effectIcon.getDisplay();
+                armatureIconDisplay.x = 650;
+                armatureIconDisplay.y = 260;
+                break;
+        }
+        this.addChildAt(armatureIconDisplay, 0);
+        dragonBones.WorldClock.clock.add(this.effectIcon);
+        xlLib.DisplayUtils.runDragonBonesArmature(this.effectIcon, "newAnimation");
+        this.addChild(armatureDisplay);
+        dragonBones.WorldClock.clock.add(this.effectfront);
+        xlLib.DisplayUtils.runDragonBonesArmature(this.effectfront, "Sprite");
     };
     return QznnIconItem;
 }(eui.Component));
