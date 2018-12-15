@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ZJHpaprePanlSkin" width="666" height="262" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="666" height="262" source="gf_bg_match_png" y="0" x="0"/>
+	<e:Image width="69" height="35" y="9" source="gf_tip_ts_png" horizontalCenter="0.5"/>
+	<e:Label id="lab_papreTips" text="游戏即将开始，请您耐心等待" verticalCenter="0" horizontalCenter="0" textColor="0xb26a2a" fontFamily="SimHei" size="25"/>
+	<e:Button id="_btn_hintclose" label="" x="604" y="19">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="gf_bg_close02_png" source.down="gf_bg_close02_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>
