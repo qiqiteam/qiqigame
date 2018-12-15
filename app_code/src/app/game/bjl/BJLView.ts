@@ -166,7 +166,7 @@ class BJLView extends eui.Component {
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
-
+        this.juegengxin(1);
     }
 
     /**数据初始化 */
@@ -349,20 +349,20 @@ class BJLView extends eui.Component {
         EventUtil.addEventListener(EventConst.onTimelyNotify, this.TimelyNotify, this);
     }
     /**局数更新 */
-    private juegengxin(data: any): void {
+    private juegengxin(index: number): void {
         this.jushu_bg.visible = true;
-        if (data._obj >= 10 && data._obj < 20) {
+        if (index >= 10 && index < 20) {
             this.js_shi.visible = true;
             this.js_ge.visible = true;
             this.jushu_bg.source = 'baccarat_font_bureau_diju2_png';
             this.js_shi.source = 'baccarat_font_bureau_1_png';
-            this.js_ge.source = 'baccarat_font_bureau_' + data._obj % 10 + '_png';
+            this.js_ge.source = 'baccarat_font_bureau_' + index % 10 + '_png';
             this.js_ge.x = 601;
         } else {
             this.js_shi.visible = false;
             this.js_ge.visible = true;
             this.jushu_bg.source = 'baccarat_font_bureau_diju1_png';
-            this.js_ge.source = 'baccarat_font_bureau_' + data._obj + '_png';
+            this.js_ge.source = 'baccarat_font_bureau_' + index + '_png';
             this.js_ge.x = 593;
         }
     }
@@ -404,6 +404,7 @@ class BJLView extends eui.Component {
     /**第二轮开始 */
     private Zhuangbeizho(data): void {
         this.startCountDown(data._obj.seconds);
+        this.juegengxin(data._obj.jushu);
         this.sypai_0.text = data._obj.leftcardlh + '';
         this.sypai_1.text = data._obj.deskcards + '';
         this.resetGame();
@@ -794,7 +795,7 @@ class BJLView extends eui.Component {
         if (this.time >= 0) {
             this.timeTxt.text = this.time + "";
             this.time--;
-            if (this.time == 1) {
+            if (this.time == 0) {
                 if (this.istzxzDh) {
                     this.tingzhi_Effect();
                 }
@@ -837,18 +838,6 @@ class BJLView extends eui.Component {
     /**翻牌动作效果 */
     private fanpaixiaog(index: number): void {
         for (let i = 0; i < 2; i++) {
-            var square1: egret.Shape = new egret.Shape();
-            square1.graphics.beginFill(0xff0000);
-            square1.graphics.drawRect(0, 0, 170, 255);
-            square1.graphics.endFill();
-            this.Themitoken.addChild(square1);
-            let _card1 = this["_bei_puke_" + index + "_" + i];
-            square1.x = this.orginPlayePos[index][i].x;
-            square1.y = this.orginPlayePos[index][i].x;
-
-            _card1.mask = square1;
-            egret.Tween.get(_card1).to({ x: _card1.x - 170, y: _card1.y }, 600);
-
             var square2: egret.Shape = new egret.Shape();
             square2.graphics.beginFill(0xff0000);
             square2.graphics.drawRect(0, 0, 170, 255);
@@ -860,6 +849,19 @@ class BJLView extends eui.Component {
 
             _card2.mask = square2;
             egret.Tween.get(_card2).to({ x: _card2.x + 170, y: _card2.y }, 600);
+
+            var square1: egret.Shape = new egret.Shape();
+            square1.graphics.beginFill(0xff0000);
+            square1.graphics.drawRect(0, 0, 170, 255);
+            square1.graphics.endFill();
+            this.Themitoken.addChild(square1);
+            let _card1 = this["_bei_puke_" + index + "_" + i];
+            square1.x = this.orginPlayePos[index][i].x;
+            square1.y = this.orginPlayePos[index][i].x;
+
+            _card1.mask = square1;
+            egret.Tween.get(_card1).to({ x: _card1.x - 170, y: _card1.y }, 800);
+
         }
 
     }
@@ -1409,17 +1411,6 @@ class BJLView extends eui.Component {
         var pos = this.orginPlayerCardPos[index][2];
         egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400);
 
-        var square1: egret.Shape = new egret.Shape();
-        square1.graphics.beginFill(0xff0000);
-        square1.graphics.drawRect(0, 0, 255, 170);
-        square1.graphics.endFill();
-        this.Themitoken.addChild(square1);
-        let _card1 = this["_bei_puke_" + index + "_2"];
-        square1.x = _card1.x;
-        square1.y = _card1.y - 170;
-        _card1.mask = square1;
-        egret.Tween.get(_card1).to({ x: _card1.x - 255, y: _card1.y }, 600);
-
         var square2: egret.Shape = new egret.Shape();
         square2.graphics.beginFill(0xff0000);
         square2.graphics.drawRect(0, 0, 255, 170);
@@ -1430,6 +1421,19 @@ class BJLView extends eui.Component {
         square2.y = _card2.y - 170;
         _card2.mask = square2;
         egret.Tween.get(_card2).to({ x: _card2.x + 255, y: _card2.y }, 600);
+
+        var square1: egret.Shape = new egret.Shape();
+        square1.graphics.beginFill(0xff0000);
+        square1.graphics.drawRect(0, 0, 255, 170);
+        square1.graphics.endFill();
+        this.Themitoken.addChild(square1);
+        let _card1 = this["_bei_puke_" + index + "_2"];
+        square1.x = _card1.x;
+        square1.y = _card1.y - 170;
+        _card1.mask = square1;
+        egret.Tween.get(_card1).to({ x: _card1.x - 255, y: _card1.y }, 800);
+
+
 
 
     }
