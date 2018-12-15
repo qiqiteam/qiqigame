@@ -69,6 +69,8 @@
     "resource/exml/game/qznn/ZhuangIconSkin.exml",
     "resource/exml/game/rbg/RBGHeadSkin.exml",
     "resource/exml/game/rbg/RBGMahjongSkin.exml",
+    "resource/exml/game/rbg/RBGSEffSkin.exml",
+    "resource/exml/game/rbg/RBGVEffSkin.exml",
     "resource/exml/game/rbg/RBGViewSkin.exml",
     "resource/exml/game/recharge/RechargeTypeItemSkin.exml",
     "resource/exml/game/recharge/RechargeView.exml",

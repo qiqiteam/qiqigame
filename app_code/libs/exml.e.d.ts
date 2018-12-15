@@ -158,6 +158,10 @@ declare class RBGHeadSkin extends eui.Skin{
 }
 declare class RBGMahjongSkin extends eui.Skin{
 }
+declare class RBGSEffSkin extends eui.Skin{
+}
+declare class RBGVEffSkin extends eui.Skin{
+}
 declare class RBGViewSkin extends eui.Skin{
 }
 declare class RechargeTypeItemSkin extends eui.Skin{

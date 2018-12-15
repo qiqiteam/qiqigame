@@ -185,7 +185,7 @@ module EffectUtils {
             obj.scaleX = 1;
             obj.scaleY = 1;
             if (cb != null) {
-                 cb.call(thisArg);
+                 cb.apply(thisArg);
             }
             egret.Tween.removeTweens(obj);
             this.isPlayEffectPlay = false;

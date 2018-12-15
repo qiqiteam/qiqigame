@@ -87,7 +87,9 @@
 		"bin-debug/app/game/rbg/RBGHead.js",
 		"bin-debug/app/game/rbg/RBGMahjong.js",
 		"bin-debug/app/game/rbg/RBGScene.js",
+		"bin-debug/app/game/rbg/RBGSEff.js",
 		"bin-debug/app/game/rbg/RBGUtil.js",
+		"bin-debug/app/game/rbg/RBGVEff.js",
 		"bin-debug/app/game/rbg/RBGView.js",
 		"bin-debug/app/game/recharge/orderinquiry.js",
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
@@ -102,8 +104,8 @@
 		"bin-debug/app/game/tbnn/TBNNScene.js",
 		"bin-debug/app/game/tbnn/TBNNUtil.js",
 		"bin-debug/app/game/tbnn/TBNNView.js",
-		"bin-debug/app/game/welfare/AwardItem.js",
 		"bin-debug/app/component/ComBox.js",
+		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
 		"bin-debug/app/game/zjh/Annular.js",
@@ -191,6 +193,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/app/component/DatePickerView.js",
 		"bin-debug/app/component/EToggleSwitch.js",
-		"bin-debug/app/game/welfare/LotteryPanel.js"
+		"bin-debug/app/game/welfare/AwardItem.js"
 	]
 }
