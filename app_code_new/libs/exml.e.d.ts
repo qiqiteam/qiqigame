@@ -64,21 +64,37 @@ declare class HintSkin extends eui.Skin{
 }
 declare class InthematchSkin extends eui.Skin{
 }
+declare class BJLframeSkin extends eui.Skin{
+}
 declare class BJLHeadSkin extends eui.Skin{
+}
+declare class BJLjiesuan_1Skin extends eui.Skin{
+}
+declare class BJLjiesuan_2Skin extends eui.Skin{
+}
+declare class BJLjiesuan_3Skin extends eui.Skin{
 }
 declare class BJLRoomMenuItemSkin extends eui.Skin{
 }
 declare class BJLroomViewSkin extends eui.Skin{
 }
+declare class BJLtingzhiSkin extends eui.Skin{
+}
 declare class BJLTypeItemSkin extends eui.Skin{
 }
 declare class BJLViewSkin extends eui.Skin{
+}
+declare class BJLxiazhuSkin extends eui.Skin{
+}
+declare class BRNNframeSkin extends eui.Skin{
 }
 declare class BRNNHeadSkin extends eui.Skin{
 }
 declare class BRNNroomViewSkin extends eui.Skin{
 }
 declare class BRNNViewSkin extends eui.Skin{
+}
+declare class ErBaGangroomEffSkin extends eui.Skin{
 }
 declare class ErBaGangroomViewSkin extends eui.Skin{
 }
@@ -108,11 +124,13 @@ declare class NiuNBeiSkin extends eui.Skin{
 }
 declare class QZNNGameStartSkin extends eui.Skin{
 }
-declare class QZNNHEffSkin extends eui.Skin{
-}
 declare class QZNNHeadSkin extends eui.Skin{
 }
+declare class QZNNHEffSkin extends eui.Skin{
+}
 declare class QZNNHHeadEffSkin extends eui.Skin{
+}
+declare class QZNNroomEffSkin extends eui.Skin{
 }
 declare class QZNNroomViewSkin extends eui.Skin{
 }
@@ -138,6 +156,10 @@ declare class RBGHeadSkin extends eui.Skin{
 }
 declare class RBGMahjongSkin extends eui.Skin{
 }
+declare class RBGSEffSkin extends eui.Skin{
+}
+declare class RBGVEffSkin extends eui.Skin{
+}
 declare class RBGViewSkin extends eui.Skin{
 }
 declare class orderinquirySkin extends eui.Skin{
@@ -156,6 +178,8 @@ declare class SetViewSkin extends eui.Skin{
 }
 declare class TBNNHeadSkin extends eui.Skin{
 }
+declare class TBNNroomEffSkin extends eui.Skin{
+}
 declare class TBNNroomViewSkin extends eui.Skin{
 }
 declare class TBNNViewSkin extends eui.Skin{
@@ -168,9 +192,21 @@ declare class WelfareTypeItemSkin extends eui.Skin{
 }
 declare class WelfareViewSkin extends eui.Skin{
 }
+declare class ZhajhhelpTypeSkin extends eui.Skin{
+}
 declare class ZhajhroomViewSkin extends eui.Skin{
 }
 declare class ZJHHeadSkin extends eui.Skin{
+}
+declare class ZJHHelpPanlSkin extends eui.Skin{
+}
+declare class ZJHIsLiveRoomSkin extends eui.Skin{
+}
+declare class ZJHNotLiveRoomSkin extends eui.Skin{
+}
+declare class ZJHpaprePanlSkin extends eui.Skin{
+}
+declare class ZJHRecordPanlSkin extends eui.Skin{
 }
 declare class ZJHViewSkin extends eui.Skin{
 }
@@ -191,6 +227,8 @@ declare class RoomTypeItemSkin extends eui.Skin{
 declare class RoomViewSkin extends eui.Skin{
 }
 declare class LodingViewSkin extends eui.Skin{
+}
+declare class LoginEffectViewSkin extends eui.Skin{
 }
 declare class LoginViewSkin extends eui.Skin{
 }

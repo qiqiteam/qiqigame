@@ -1,115 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BRNNViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Image x="0" bottom="0"  source="bg_brnn_png" locked="true"/>
-	<e:Image source="nn.cardbg" x="234.67" y="221" scale9Grid="16,6,98,42" anchorOffsetX="0" width="168.66"  visible="false" locked="true"/>
+	<e:Group horizontalCenter="0" verticalCenter="0" locked="true">
+		<e:Image y="0" x="0" source="brnn_game_bg_png" locked="true"/>
+		<e:Image x="0" y="0" source="brnn_game_bigbg_png" locked="true"/>
 
 
-
-
-	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true">
-	</e:Group>
-
-
-	<e:Group x="0" y="0" locked="true" visible="false">
-		<e:Image x="0" y="0" source="nn.titlebg" />
-		<e:Image x="115" y="63" anchorOffsetX="0" source="hall.goldbg"/>
-		<e:Image source="gold" y="64.3" x="104"/>
-		<e:Image id="btnCharge" source="btnChong" y="63.3" x="354.5"/>
-		<e:Label id="titleName" y="20" height="33" text="" fontFamily="微软雅黑" textAlign="left" width="259" size="28" x="110"
-		         bold="true" />
-		<e:Group id="maskhead" x="13" y="13">
-			<e:Image id="titleHead" height="84" width="84" x="0" y="0"/>
-			<e:Image x="0.5" y="0" source="headbg"/>
+		<e:Group width="420" height="118" scaleX="1" scaleY="1" horizontalCenter="0" top="0" locked="true">
+			<e:Image scaleX="1" scaleY="1" source="brnn_game_hardbg_png" x="0" y="0"/>
+			<e:Image scaleX="1" scaleY="1" x="34" source="brnn_game_head_png" y="13"/>
+			<e:Image width="86" height="84" source="women7_png" y="16.66" x="37.32"/>
 		</e:Group>
-		<e:Image id="btnVip" source="vipbg" x="27" y="77"/>
-		<e:Label id="labTitleVip" text="VIP.15" x="31" y="82" size="16" width="50" textAlign="center" touchEnabled="false"/>
-		<e:BitmapLabel id="titleLabMoney" y="64.5" text="10000万" font="goldtext_fnt" x="132"  anchorOffsetX="0" width="219"/>
-		<e:Image id="btnClose" x="535.66" y="29.67" source="c.btnclose2" />
 	</e:Group>
-	<e:Group width="230" height="260" x="246" y="282" touchEnabled="false">
-		<e:Image source="nn.east" x="68" y="96" scaleX="1" scaleY="1"/>
-		<e:Image id="effectSelect0" source="nn.u6" x="64" y="89" width="98" height="95" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labTipsClick0" text="点击下注" x="54" y="120" size="16" width="120" textAlign="center" bold="true" textColor="0xFFC400" touchEnabled="false" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label text="豹子" x="75" y="96" size="16" bold="true" textAlign="center" width="82" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labCardResult0" y="169" text="赢" textAlign="center" bold="true" width="82" size="16" x="73" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labBetsPool0" text="标签" x="56" y="88" size="20" width="120" textAlign="center" bold="true" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labBetsSelf0" text="标签" x="56" y="171" size="20" width="120" textAlign="center" bold="true" textColor="0xffc400" scaleX="1" scaleY="1"/>
-		<e:Image id="effectTouch0" source="nn.u6" y="83" x="66.33000000000001" width="95" height="100" alpha="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1"/>
+	<e:Group id="grpCoins" width="100%" height="100%" y="0" locked="true">
 	</e:Group>
-	<e:Group width="230" height="260" x="492" y="282" touchEnabled="false">
-		<e:Image x="74" y="90" source="nn.west" scaleX="1" scaleY="1"/>
-		<e:Image id="effectSelect1" source="nn.u6" width="98" y="83" height="95" x="70" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labTipsClick1" text="点击下注" x="59" y="114" size="16" width="120" textAlign="center" bold="true" textColor="0xFFC400" touchEnabled="false" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label x="78" y="90" text="豹子" textAlign="center" bold="true" width="82" size="16" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label x="79" y="176" text="赢" textAlign="center" bold="true" width="82" size="16" id="labCardResult1" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label x="59" y="82" text="标签" textAlign="center" width="120" size="20" id="labBetsPool1" bold="true" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labBetsSelf1" x="59" y="165" text="标签" textAlign="center" width="120" size="20" bold="true" textColor="0xffc400" scaleX="1" scaleY="1"/>
-		<e:Image id="effectTouch1" source="nn.u6" y="79.66000000000003" x="70.18" width="95" height="100" alpha="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1"/>
+
+
+
+
+
+
+
+
+
+	<e:Group width="230" height="260" x="246" y="282" touchEnabled="false" locked="true">
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_pitch1_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Label id="grade_text_0_0" text="11" textAlign="center" width="218" size="30" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" y="6.96" x="6"/>
+		<e:Label id="grade_text_0_1" y="217.26" text="11" textAlign="center" width="218" size="30" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" x="6"/>
+		<e:Image id="effectTouch0" width="100%" height="160" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="nn.u6" alpha="0" horizontalCenter="0" verticalCenter="0"/>
+
+
+
+
+
+
 	</e:Group>
-	<e:Group width="230" height="260" x="738" y="282" touchEnabled="false">
-		<e:Image x="70" y="100" source="nn.south" scaleX="1" scaleY="1"/>
-		<e:Image id="effectSelect2" source="nn.u6" width="98" y="94" height="95" x="66" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labTipsClick2" text="点击下注" x="56" y="125" size="16" width="120" textAlign="center" bold="true" textColor="0xFFC400" touchEnabled="false" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label y="101" text="豹子" textAlign="center" bold="true" width="82" size="16" x="77" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labCardResult2" y="182" text="赢" textAlign="center" bold="true" width="82" size="16" x="75" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labBetsPool2" y="93" text="标签" textAlign="center" width="120" size="20" x="58" bold="true" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labBetsSelf2" y="176" text="标签" textAlign="center" width="120" size="20" x="58" bold="true" textColor="0xffc400" scaleX="1" scaleY="1"/>
-		<e:Image id="effectTouch2" source="nn.u6" y="92.67999999999995" x="68.33000000000001" width="95" height="100" alpha="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1"/>
+	<e:Group width="230" height="260" x="492" y="282" touchEnabled="false" locked="true">
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_pitch1_png" x="-1" y="3"/>
+		<e:Label id="grade_text_1_0" text="11" textAlign="center" width="218" size="30" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" x="6" y="7.6"/>
+
+
+		<e:Label id="grade_text_1_1" y="217.26" text="11" textAlign="center" width="218" size="30" scaleX="1" scaleY="1" textColor="0xffffff" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" x="6"/>
+
+
+
+		<e:Image id="effectTouch1" source="nn.u6" width="100%" height="160" alpha="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
 	</e:Group>
-	<e:Group width="230" height="260" x="984" y="282" touchEnabled="false">
-		<e:Image x="74" y="92" source="nn.north" scaleX="1" scaleY="1"/>
-		<e:Image id="effectSelect3" source="nn.u6" width="98" y="86" height="95" x="70" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labTipsClick3" text="点击下注" x="59" y="117" size="16" width="120" textAlign="center" bold="true" textColor="0xFFC400" touchEnabled="false" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label x="78" y="93" text="豹子" textAlign="center" bold="true" width="82" size="16" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label x="79" y="174" text="赢" textAlign="center" bold="true" width="82" size="16" id="labCardResult3" textColor="0xfaec13" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label x="59" y="85" text="标签" textAlign="center" width="120" size="20" id="labBetsPool3" bold="true" scaleX="1" scaleY="1" visible="false"/>
-		<e:Label id="labBetsSelf3" x="59" y="168" text="标签" textAlign="center" width="120" size="20" bold="true" textColor="0xffc400" scaleX="1" scaleY="1"/>
-		<e:Image id="effectTouch3" source="nn.u6" y="86.00999999999999" x="69.00999999999999" width="100" height="95" alpha="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1"/>
+	<e:Group width="230" height="260" x="738" y="282" touchEnabled="false" locked="true">
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_pitch1_png" x="-1" y="3"/>
+		<e:Label id="grade_text_2_0" text="11" textAlign="center" width="218" size="30" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" y="8.48" x="6"/>
+		<e:Label id="grade_text_2_1" y="217.26" text="11" textAlign="center" width="218" size="30" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" x="6"/>
+
+
+
+
+
+
+		<e:Image id="effectTouch2" source="nn.u6" width="100%" height="160" alpha="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" x="0" y="50"/>
 	</e:Group>
-	<e:Group id="grpCard" x="0" y="0" touchEnabled="false">
-		<e:Image id="bankerCard_0" x="553" y="190.15" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_1" x="575" y="190.15" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_2" x="597" y="190.15" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_3" x="619" y="190.15" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="bankerCard_4" x="641" y="190.15" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_0_0" x="294" y="472" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_0_1" x="316" y="472" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_0_2" x="338" y="472" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_0_3" x="360" y="472" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_0_4" x="382" y="472" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_0" x="547" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_1" x="569" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_2" x="591" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_3" x="613" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_1_4" x="635" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_0" x="793.79" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_1" x="815.79" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_2" x="837.79" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_3" x="859.79" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_2_4" x="881.79" y="475" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_3_0" x="1038" y="473" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_3_1" x="1060" y="473" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_3_2" x="1082" y="473" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_3_3" x="1104" y="473" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
-		<e:Image id="grpCard_3_4" x="1126" y="473" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+	<e:Group width="230" height="260" x="984" y="282" touchEnabled="false" locked="true">
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_pitch1_png" x="-1" y="3"/>
+		<e:Label id="grade_text_3_0" text="11" textAlign="center" width="218" size="30" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" x="6" y="7.6"/>
+		<e:Label id="grade_text_3_1" text="11" textAlign="center" width="218" size="30" textColor="0xFFFFFF" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" verticalAlign="middle" height="37" x="6" y="218.44"/>
+
+
+
+
+
+
+		<e:Image id="effectTouch3" source="nn.u6" width="100%" height="160" alpha="0" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" y="50" x="0"/>
+	</e:Group>
+	<e:Group id="grpCard" x="0" y="0" touchEnabled="false" locked="true">
+		<e:Image id="bankerCard_0" x="740.88" y="34.08" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="bankerCard_1" x="762.88" y="34.08" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="bankerCard_2" x="784.88" y="34.08" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="bankerCard_3" x="806.88" y="34.08" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="bankerCard_4" x="828.88" y="34.08" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_0_0" x="294" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_0_1" x="316" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_0_2" x="338" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_0_3" x="360" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_0_4" x="382" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_0" x="547" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_1" x="569" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_2" x="591" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_3" x="613" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_1_4" x="635" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_2_0" x="793.79" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_2_1" x="815.79" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_2_2" x="837.79" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_2_3" x="859.79" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_2_4" x="881.79" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_3_0" x="1038" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_3_1" x="1060" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_3_2" x="1082" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_3_3" x="1104" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
+		<e:Image id="grpCard_3_4" x="1126" y="567" scaleX="1" scaleY="1" source="nn.card_101" width="38" height="50"/>
 		<e:Label text="豹子" x="276.67" y="278.33" size="16" bold="true" textAlign="center" width="82" textColor="0xFAEC13" visible="false"/>
-		<e:Image id="labCardTypeBanker" source="nn.n1" x="563" y="204.15" scaleX="1" scaleY="1" width="98" height="44"/>
-		<e:Image id="labCardType0" source="nn.n1" x="309" y="486" width="98" height="44"/>
-		<e:Image id="labCardType1" source="nn.n1" x="560" y="489" width="98" height="44"/>
-		<e:Image id="labCardType2" source="nn.n1" x="809.79" y="481" width="98" height="44"/>
+		<e:Image id="labCardTypeBanker" source="nn.n1" x="749.38" y="35.97" scaleX="1" scaleY="1" width="98" height="44"/>
+		<e:Image id="labCardType0" source="nn.n1" x="309" y="570" width="98" height="44"/>
+		<e:Image id="labCardType1" source="nn.n1" x="560" y="570" width="98" height="44"/>
+		<e:Image id="labCardType2" source="nn.n1" x="809.79" y="570" width="98" height="44"/>
 		<e:Label id="labCurChip" text="注码：5000万" x="499" y="867" textColor="0xffff32" bold="true" size="20" height="20" width="130" textAlign="right"/>
-		<e:Image id="labCardType3" source="nn.n1" x="1054" y="480" width="98" height="44"/>
+		<e:Image id="labCardType3" source="nn.n1" x="1054" y="570" width="98" height="44"/>
 	</e:Group>
-	<e:Image id="btnCardHistroy" x="590" y="123" source="nn.btnhistory"  visible="false" locked="true"/>
-	<e:Image id="btnCardType" x="13" y="125" source="nn.btncardtype"  visible="false" locked="true"/>
+	<e:Image id="btnCardHistroy" x="590" y="123" source="nn.btnhistory"  locked="true" visible="false"/>
+	<e:Image id="btnCardType" x="13" y="125" source="nn.btncardtype"  locked="true" visible="false"/>
 	<e:Image id="btnRedBox" source="nn.btnred" x="21" y="857" scaleX="1" scaleY="1" anchorOffsetX="0" width="122"
-	         anchorOffsetY="0" height="36"  visible="false" locked="true"/>
-	<e:Group x="0" y="227.34" visible="false" locked="true">
+	         anchorOffsetY="0" height="36"  locked="true" visible="false"/>
+	<e:Group x="0" y="227.34" locked="true" visible="false">
 		<e:Image x="0" y="0" source="nn.caijin" />
 		<e:BitmapLabel id="labHandsel" y="11" text="100万" x="5.83" anchorOffsetX="0" width="180.33" font="goldtext_fnt" />
 	</e:Group>
-	<e:Group id="grpBankerInfo" x="119" y="104.29" width="398" height="100" visible="false" locked="true">
+	<e:Group id="grpBankerInfo" x="119" y="104.29" width="398" height="100" locked="true" visible="false">
 		<e:Image x="0" y="0" source="nn.bankerbg" />
 		<e:Image id="btnDownBanker" x="264" y="25" height="33" source="nn.btnDownBanker" name="btnDownBanker" />
 		<e:Image id="btnBankerDown" x="354" y="62" source="nn.btndownlist" />
@@ -125,14 +128,13 @@
 		<e:Image id="btnVip0" source="vipbg" x="45" y="73"/>
 		<e:Label id="labBankerVip" text="VIP 15" x="47" y="78" size="16" width="50" textAlign="center" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="grpCountdown" x="700" y="212" locked="true">
-		<e:Image y="0" x="0" source="nn.timerbg" />
-		<e:BitmapLabel id="labCountdown0" x="14.97" y="16.15" text="0" width="14.3" font="nnBitmapCountdown_fnt"
-		               anchorOffsetX="0" />
-		<e:BitmapLabel id="labCountdown1" x="29.77" y="16.15" text="0" width="14.3" font="nnBitmapCountdown_fnt"
-		               anchorOffsetX="0" />
+	<e:Group id="grpCountdown" x="421.36" y="15.2" width="90" locked="true">
+		<e:Image  source="brnn_game_alarm_png" x="0" y="0"/>
+		<e:Label id="timeTxt" text="0" fontFamily="Microsoft YaHei" bold="true" horizontalCenter="0" verticalCenter="0" size="40"/>
+
+
 	</e:Group>
-	<e:Group x="420" y="541.31" visible="false">
+	<e:Group x="420" y="541.31" locked="true" visible="false">
 		<e:Image x="0" y="0" source="nn.bottom" />
 		<e:Image id="btnBet0y" x="61" y="83.69" source="nn.coin3" anchorOffsetX="43" anchorOffsetY="47" />
 		<e:Image id="btnBet1y" x="164" y="70.98" source="nn.coin2" anchorOffsetX="47" anchorOffsetY="47" />
@@ -554,108 +556,81 @@
 	</e:Group>
 
 
-	<e:Group id="_group_di" width="1364" height="104" y="724" x="108">
-		<e:Image width="1364" height="104" x="0" y="0" source="img_di_png"/>
+	<e:Group id="_group_di" width="1472" height="152" x="0" y="676" locked="true">
+		<e:Image width="1472" height="152" source="brnn_game_bgdown_png"/>
 
-		<e:Group id="grpHead0" scaleX="1" scaleY="1" x="15" y="-35">
-			<e:Image y="0" x="0" source="img_tx_png"/>
-			<e:Image id="imghead0" width="135" height="135" x="0" source="F1_03_png" y="0"/>
-			<e:Label id="labelHead0" text="世界第一赌神" x="150.01999999999998" y="61" textColor="0xf2b354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
-			<e:Label id="labelGold0" text="1000000" x="191.84000000000003" y="104.33000000000004" size="30" fontFamily="SimHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1"/>
-			<e:Image width="36" height="36" x="145" source="img_jinbi_png" y="103" scaleX="1" scaleY="1"/>
-			<e:Image id="_my_img_zhuang" x="101.32" y="-7.34" source="img_zhuang_png" scaleX="0.6" scaleY="0.6" visible="false"/>
+		<e:Group id="grpHead0" scaleX="1" scaleY="1" x="15" y="19.08">
+			<e:Image y="25.76" x="24.24" source="brnn_game_head_png" width="93" height="93"/>
+			<e:Image id="imghead0" width="88" height="88" x="25.83" y="27.28" source="women7_png"/>
+			<e:Label id="labelHead0" text="世界第一赌神" x="136.36" y="38.2" textColor="0xf2b354" size="25" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1"/>
+			<e:Label id="labelGold0" text="1000000" x="171.53" y="80.2" size="30" fontFamily="Microsoft YaHei" textColor="0xf4d727" textAlign="center" scaleX="1" scaleY="1"/>
+			<e:Image width="36" height="36" x="131.34" source="img_jinbi" y="80.2" scaleX="1" scaleY="1"/>
+
 		</e:Group>
-		<e:Group id="_btn_switch" width="809.79" height="100%" anchorOffsetX="0" verticalCenter="0" x="338">
-			<e:Button id="_btn_double_1" label="" x="28" y="-52" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_jetton_10_png" source.down="btn_jetton_10_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="_btn_double_2" label="" x="184" y="-52" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_jetton_20_png" source.down="btn_jetton_20_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="_btn_double_3" label="" x="335" y="-53" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_jetton_50_png" source.down="btn_jetton_50_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="_btn_double_4" label="" x="495" y="-52" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_jetton_100_png" source.down="btn_jetton_100_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="_btn_double_5" label="" x="649.5999999999999" y="-52" scaleX="1" scaleY="1">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="btn_jetton_500_png" source.down="btn_jetton_500_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
+		<e:Group id="_btn_switch" width="809.79" height="100%" anchorOffsetX="0" y="0" x="331">
+
+
+
+
+			<e:Image id="_btn_double_1" width="111" height="109" x="95" source="brnn_couma_1_1_png" y="43"/>
+
+			<e:Image id="_btn_double_2" width="111" height="109" x="246" y="43" source="brnn_couma_1_2_png"/>
+			<e:Image id="_btn_double_3" width="111" height="109" x="397" y="43" source="brnn_couma_1_3_png"/>
+			<e:Image id="_btn_double_4" width="111" height="109" x="548" y="43" source="brnn_couma_1_4_png"/>
+			<e:Image id="_btn_double_5" width="111" height="109" x="698.79" y="43" source="brnn_couma_1_5_png"/>
+			<e:Image id="_xuanzho" width="111" height="109" x="92.49" source="brnn_betBtn_light_png" y="39" touchEnabled="false" scaleX="1" scaleY="1"/>
 		</e:Group>
 
 
-		<e:Button id="_btn_record" label="" x="1190" y="22">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="btn_jilu_0_png" source.down="btn_jilu_0_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
-		</e:Button>
+
 	</e:Group>
+	<e:Group id="wanjia" width="237" height="476" anchorOffsetY="0" y="164" x="0" locked="true">
+		<e:Image width="237" height="413" source="brnn_game_open_png" horizontalCenter="0" y="0" locked="true"/>
+		<e:Image id="packup" width="237" height="63" source="brnn_game_open1_png" y="413" x="0" locked="true"/>
+		<e:Scroller id="scroller" width="230" height="360" y="47.04" x="4" scrollPolicyV="on">
+			<e:Group>
+				<e:List id="userlist" height="100%" y="0" width="100%" x="0" anchorOffsetY="0" scaleX="1" scaleY="1" itemRenderer="BRNNframe">
+					<e:layout>
+					<e:VerticalLayout gap="2"/>
+					</e:layout>
 
-
-
-
-
-	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">
+				</e:List>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+	<e:Button id="_btn_close" label="" x="15" y="20" scaleX="1" scaleY="1" locked="true">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_fanhui_0_png" source.down="btn_fanhui_0_png"/>
+			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="_btn_meun" label="" x="1365" y="20" locked="true">
+	<e:Button id="_btn_meun" label="" x="116.52" y="20" scaleX="1" scaleY="1" locked="true">
 		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_caidan_0_png" source.down="btn_caidan_0_png"/>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="_btn_chat" label="" x="15" y="590" locked="true">
+	<e:Button id="wanjialist" label="" scaleX="1" scaleY="1" y="265" x="0" locked="true">
 		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_yuyin_0_png" source.down="btn_yuyin_0_png"/>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="brnn_game_moreplayer_png" source.down="brnn_game_moreplayer_png"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="_btn_voice" label="" x="15" y="715" locked="true">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_liaotian_0_png" source.down="btn_liaotian_0_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
 
-	</e:Button>
+
+
+
+
+
+
+
+
 
 
 </e:Skin>

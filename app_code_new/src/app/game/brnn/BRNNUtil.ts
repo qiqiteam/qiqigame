@@ -55,20 +55,20 @@ class BRNNUtil {
         var point: egret.Point = new egret.Point();
         switch (index) {
             case 1:
-                point.x = 340;
-                point.y = 300;
+                point.x = 320;
+                point.y = 350;
                 break;
             case 2:
-                point.x = 570;
-                point.y = 300;
+                point.x = 550;
+                point.y = 350;
                 break;
             case 3:
-                point.x = 810;
-                point.y = 300;
+                point.x = 800;
+                point.y = 350;
                 break;
             case 4:
                 point.x = 1050;
-                point.y = 300;
+                point.y = 350;
                 break;
         }
         return point;
@@ -171,67 +171,40 @@ class BRNNUtil {
         }
     }
 
-    //筹码类型
-    public coinsType(num): Array<eui.Image> {
+    //筹码类型        1000w   5000w   1y  3y  5y
+    public coinsType(pos: egret.Point, num: number): Array<eui.Image> {
         var coinArr = [];
         var coinNum: number = 0;
         var src: string = '';
-        num = Math.round(num / 10000);
-        if (num > 0 && num < 10) {  //1w
+        if (num == 2) {  //2
             coinNum = num;
-            src = 'nn.b1a';
+            src = 'brnn_couma_1_1_png';
         }
-        else if (num > 9 && num < 100) {    //10w
-            coinNum = num / 10;
-            src = 'nn.b2a';
+        else if (num == 5) {   //5
+            coinNum = num;
+            src = 'brnn_couma_1_2_png';
         }
-        else if (num > 99 && num < 1000) {  //100w
-            coinNum = num / 100;
-            src = 'nn.b3a';
+        else if (num == 10) {   //10
+            coinNum = num;
+            src = 'brnn_couma_1_3_png';
         }
-        else if (num > 999 && num < 5000) { //1000w
-            coinNum = num / 1000;
-            src = 'nn.b4a';
+        else if (num == 20) { //20
+            coinNum = num;
+            src = 'brnn_couma_1_4_png';
         }
-        else if (num > 4999 && num < 10000) { //5000w
-            coinNum = num / 5000;
-            src = 'nn.b5a';
+        else if (num == 50) { //50
+            coinNum = num;
+            src = 'brnn_couma_1_5_png';
         }
-        else {  //1y
-            coinNum = num / 10000;
-            src = 'nn.b6a';
-        }
-        // if (num > 9 && num < 50) {
-        //     coinNum = num / 10;
-        //     src = 'nn.b1a';
-        // }
-        // else if (num > 49 && num < 100) {
-        //     coinNum = num / 50;
-        //     src = 'nn.b2a';
-        // }
-        // else if (num > 99 && num < 500) {
-        //     coinNum = num / 100;
-        //     src = 'nn.b3a';
-        // }
-        // else if (num > 499 && num < 1000) {
-        //     coinNum = num / 500;
-        //     src = 'nn.b4a';
-        // }
-        // else if (num > 999 && num < 5000) {
-        //     coinNum = num / 1000;
-        //     src = 'nn.b5a';
-        // }
-        // else {
-        //     coinNum = num / 5000;
-        //     src = 'nn.b6a';
-        // }
-        for (var i = 0; i < Math.round(coinNum); i++) {
+        // for (var i = 0; i < Math.round(coinNum); i++) {
             var coin: eui.Image = new eui.Image(src);
-            var p: egret.Point = this.coinPos();
-            coin.x = p.x;
-            coin.y = p.y;
+            //var p: egret.Point = this.coinPos();
+            coin.x = pos.x;
+            coin.y = pos.y;
+            coin.scaleX = 0.3;
+            coin.scaleY = 0.3;
             coinArr.push(coin);
-        }
+        // }
         return coinArr;
     }
 

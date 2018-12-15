@@ -27,7 +27,7 @@ class ComBox extends eui.Component
 
 	private initEventListener() 
 	{
-		this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
+		egret.MainContext.instance.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
 		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
 		this.table_list.addEventListener(egret.TouchEvent.TOUCH_TAP, this.itemClickHandler, this);
 		this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
@@ -96,7 +96,7 @@ class ComBox extends eui.Component
          this.thisArg = null;
 		 this.scroller.stopAnimation();
 		 this.table_list.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.itemClickHandler, this);
-		 this.stage.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
+		 egret.MainContext.instance.stage.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchStageHandler, this);
 		 this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchHandler, this);
 	 }
 }

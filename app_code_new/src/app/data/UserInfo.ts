@@ -7,6 +7,7 @@ class UserInfo {
     public playes: PlayerData[] = [];//玩家数据表
     public myPlayer: PlayerData;
     public isGameStart: boolean;
+    public gameData:any;//游戏状态
     private static _instance: UserInfo;
 
     public constructor() { }
@@ -30,6 +31,9 @@ class UserInfo {
         return gamedata;
     }
     
+    public gameStatu(data): void {
+       this.gameData=data;
+    }
     public addPlayes(data): void {
         for (let i = 0; i < data.player.length; i++) {
             if (data.player[i].id == this.uid) {

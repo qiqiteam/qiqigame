@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="SystemMsgViewSkin" width="1340" height="696" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image width="100%" height="100%" scale9Grid="106,66,636,396" source="img_bg_png" horizontalCenter="0" verticalCenter="0" locked="true"/>
-	<e:Image width="480" height="95" horizontalCenter="0" source="img_bottom_png" top="0"/>
+	<e:Image width="100%" height="100%" scale9Grid="106,66,636,396" source="img_bg" horizontalCenter="0" verticalCenter="0" locked="true"/>
+	<e:Image width="480" height="95" horizontalCenter="0" source="img_bottom" top="0"/>
 	<e:Image width="116" height="49" horizontalCenter="0" y="18" source="title_msg_png"/>
 	<e:Button id="_btn_close" label="" x="1260.01" y="1.68">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_ cancel_0_png" source.down="btn_ cancel_1_png"/>
+			<e:Image width="100%" height="100%" source="btn_cancel_0" source.down="btn_cancel_1"/>
 			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
 		</e:skinName>
 
 	</e:Button>
 	<e:Group width="311" height="593" x="20" y="88">
-		<e:Image width="311" height="593" source="btn_bg_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image width="311" height="593" source="btn_bg" x="0" y="0" scaleX="1" scaleY="1"/>
 
 
 

@@ -1,10 +1,10 @@
 class GameIconItem extends eui.Component {
-	public bg_img:eui.Image;
-	public icon_img:eui.Image;
     private icondata:GameIconData;
-	private  effecthot: egret.MovieClip;
-	private  effectIcon: egret.MovieClip;
-	private  effectmask:egret.MovieClip;
+	private  effecthot:dragonBones.Armature;
+	private  effectnew:dragonBones.Armature;
+	private  effectfront:dragonBones.Armature;
+	private  effectIcon:dragonBones.Armature;
+	private  effectmask:dragonBones.Armature;
 	constructor() {
 		super();
 		this.skinName = "GameIconItemSkin";
@@ -18,11 +18,14 @@ class GameIconItem extends eui.Component {
 	protected partRemoved(partName: string, instance: any): void
 	{
 		if(this.effecthot){
-			this.effecthot.stop();
+			xlLib.DisplayUtils.destoryDragonBonesArmature(this.effecthot,"newAnimation");
 		}
-		if(this.effectIcon){
-			this.effectIcon.stop();
+		if(this.effectnew){
+			xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectnew,"newAnimation");
 		}
+		xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectmask,"Sprite");
+		xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectfront,"Sprite");
+		xlLib.DisplayUtils.destoryDragonBonesArmature(this.effectIcon,"newAnimation");
        super.partRemoved(partName,instance);
 	}
 
@@ -67,30 +70,102 @@ class GameIconItem extends eui.Component {
 	public setGameIconData(icondata:GameIconData):void
 	{
 		this.icondata = icondata;
-        this.bg_img.source = icondata.url;
+		let armatureDisplay:dragonBones.EgretArmatureDisplay;
+		let armatureIconDisplay:dragonBones.EgretArmatureDisplay;
+		this.effectmask = xlLib.DisplayUtils.createDragonBonesDisplay('bg_xiaoliuguang',"Sprite");
+		dragonBones.WorldClock.clock.add(this.effectmask);
+		armatureDisplay = this.effectmask.getDisplay();
+		armatureDisplay.width = this.width;
+		armatureDisplay.height = this.height;
+		armatureDisplay.x = 350;
+		armatureDisplay.y = 250;
+		this.addChild(armatureDisplay);
+		xlLib.DisplayUtils.runDragonBonesArmature(this.effectmask,"Sprite");
         if(icondata.ishot)
 		{
-			this.effecthot = xlLib.DisplayUtils.createAsyncMovieClicp("effcet_hot", "effcet_hot");
-			this.effecthot.x = 25;
-			this.effecthot.y = 0;
-			this.effecthot.play(-1);
-			this.addChild(this.effecthot);
+		  	this.effecthot = xlLib.DisplayUtils.createDragonBonesDisplay('bg_remen',"Armature");
+			dragonBones.WorldClock.clock.add(this.effecthot);
+			armatureDisplay = this.effecthot.getDisplay();
+			armatureDisplay.x = 25;
+			armatureDisplay.y = 92;
+			this.addChild(armatureDisplay);
+			xlLib.DisplayUtils.runDragonBonesArmature(this.effecthot,"newAnimation");
 		}
-        if(icondata.game==Const.GAME_ERBAGANG){
-			this.effectIcon = xlLib.DisplayUtils.createAsyncMovieClicp("game_720_effect_logo", "game_720_effect_logo");
-			this.effectIcon.x = 130; 
-			this.effectIcon.play(-1);
-           	this.addChild(this.effectIcon);
-		    this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_720_effect", "game_720_effect");
-		}else if(icondata.game==Const.GAME_ZHAJINHUA){
-			 this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_610_effect", "game_610_effect");
-		}else{
- 			this.effectmask = xlLib.DisplayUtils.createAsyncMovieClicp("game_230_effect", "game_230_effect");
+		if(icondata.isNew)
+		{
+		  	this.effectnew = xlLib.DisplayUtils.createDragonBonesDisplay('bg_xin',"Armature");
+			dragonBones.WorldClock.clock.add(this.effectnew);
+			armatureDisplay = this.effectnew.getDisplay();
+			armatureDisplay.x = 80;
+			armatureDisplay.y = 92;
+			this.addChild(armatureDisplay);
+			xlLib.DisplayUtils.runDragonBonesArmature(this.effectnew,"newAnimation");
 		}
-				this.effectmask.play(-1);
-		this.effectmask.touchEnabled = false;
-		this.effectmask.x = -12;
-		this.effectmask.y = -11;
-  		this.addChild(this.effectmask);
+
+        switch(icondata.type){
+          	case Const.TYPE_TBNN:
+			  	this.effectfront = xlLib.DisplayUtils.createDragonBonesDisplay('bg_tongbiniuniu',"Sprite");
+				armatureDisplay = this.effectfront.getDisplay();
+				armatureDisplay.x = 63;
+				armatureDisplay.y = -15;
+
+				this.effectIcon = xlLib.DisplayUtils.createDragonBonesDisplay('tbnn_rukou',"armatureName");
+				armatureIconDisplay = this.effectIcon.getDisplay();
+				armatureIconDisplay.x = 63;
+				armatureIconDisplay.y = -15;
+		    	break;
+			case Const.TYPE_JINGDIANBAIJIALE:
+				this.effectfront = xlLib.DisplayUtils.createDragonBonesDisplay('bg_baijiale',"Sprite");
+				armatureDisplay = this.effectfront.getDisplay();
+				armatureDisplay.x = 70;
+				armatureDisplay.y = 255;
+
+				this.effectIcon = xlLib.DisplayUtils.createDragonBonesDisplay('bjl_rukou',"armatureName");
+				armatureIconDisplay = this.effectIcon.getDisplay();
+				armatureIconDisplay.x = 70;
+				armatureIconDisplay.y = 255;
+		    	break;
+			case Const.TYPE_ERBAGANGJINDIAN:
+				this.effectfront = xlLib.DisplayUtils.createDragonBonesDisplay('bg_ewrbagang',"Sprite");
+				armatureDisplay = this.effectfront.getDisplay();
+				armatureDisplay.x = -220;
+				armatureDisplay.y = 255;
+
+				this.effectIcon = xlLib.DisplayUtils.createDragonBonesDisplay('ebg_rukou',"armatureName");
+				armatureIconDisplay = this.effectIcon.getDisplay();
+				armatureIconDisplay.x = -220;
+				armatureIconDisplay.y = 255;
+		    	break;
+			case Const.TYPE_QRNIUNIU:
+				this.effectfront = xlLib.DisplayUtils.createDragonBonesDisplay('bg_bairenniuniu',"Sprite");
+				armatureDisplay = this.effectfront.getDisplay();
+				armatureDisplay.x = 350;
+				armatureDisplay.y = -15;
+
+				this.effectIcon = xlLib.DisplayUtils.createDragonBonesDisplay('brnn_rukou',"armatureName");
+				armatureIconDisplay = this.effectIcon.getDisplay();
+				armatureIconDisplay.x = 350;
+				armatureIconDisplay.y = -15;
+		    	break;
+			case Const.TYPE_JINGDIANJINHUA:
+				this.effectfront = xlLib.DisplayUtils.createDragonBonesDisplay('bg_zhajinhua',"Sprite");
+				armatureDisplay = this.effectfront.getDisplay();
+				armatureDisplay.x = 350;
+				armatureDisplay.y = 255;
+
+				this.effectIcon = xlLib.DisplayUtils.createDragonBonesDisplay('zjh_rukou',"armatureName");
+				armatureIconDisplay = this.effectIcon.getDisplay();
+				armatureIconDisplay.x = 350;
+				armatureIconDisplay.y = 255;
+		    	break;
+		}
+
+		this.addChildAt(armatureIconDisplay,0);
+		dragonBones.WorldClock.clock.add(this.effectIcon);
+		xlLib.DisplayUtils.runDragonBonesArmature(this.effectIcon,"newAnimation");
+
+		this.addChild(armatureDisplay);
+        dragonBones.WorldClock.clock.add(this.effectfront);
+		xlLib.DisplayUtils.runDragonBonesArmature(this.effectfront,"Sprite");
 	}
 }

@@ -2,25 +2,23 @@
  * 登录界面
  * */
 class LoginView extends eui.Component {
-	public bgImg: eui.Image;
-	public _group_btn_0: eui.Group;
-	public _btn_visitor: eui.Button;
-	public _btn_account: eui.Button;
-	public _group_btn_1: eui.Group;
-	public _btn_continue: eui.Button;
-	public _btn_register: eui.Button;
-	public _group_btn_2: eui.Group;
-	public _phone_txt: eui.EditableText;
-	public _verify_code_txt: eui.EditableText;
-	public zzzh_btn: eui.CheckBox;
-	public _btn_login: eui.Button;
-	public _btn_verify: eui.Button;
-	public _btn_black: eui.Button;
+	public bgImg:eui.Image;
+	public _group_btn_0:eui.Group;
+	public _btn_visitor:eui.Button;
+	public _btn_account:eui.Button;
+	public _group_btn_2:eui.Group;
+	public _phone_txt:eui.EditableText;
+	public _verify_code_txt:eui.EditableText;
+	public zzzh_btn:eui.CheckBox;
+	public _btn_login:eui.Button;
+	public _btn_verify:eui.Button;
+	public _btn_black:eui.Button;
 
 	private bjlSubscription: boolean = false;
 	private lfSubscription: boolean = false;
 	private xjSubscription: boolean = false;
 	private nnSubscription: boolean = true;
+	private logineffectView:LoginEffectView;
 	constructor() {
 		super();
 		this.skinName = "LoginViewSkin";
@@ -41,8 +39,6 @@ class LoginView extends eui.Component {
 		this.lfSubscription = false;
 		this._btn_visitor.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
 		this._btn_account.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
-		this._btn_continue.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
-		this._btn_register.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
 		this._btn_login.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
 		this._btn_verify.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGetCode, this);
 		this._btn_black.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBlack, this);
@@ -50,15 +46,9 @@ class LoginView extends eui.Component {
 		EventUtil.addEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);
 		EventUtil.addEventListener(EventConst.ON_SOCKET_FAIL, this.onSocketFail, this);
 
-
-		let liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp',"wzqp");
-        dragonBones.WorldClock.clock.add(liuguang);
-        let armatureDisplay = liuguang.getDisplay();
-        armatureDisplay.x = 1230;
-        armatureDisplay.y = 400;
-        this.addChild(armatureDisplay);
-
-        xlLib.DisplayUtils.runDragonBonesArmature(liuguang,"wzqp");
+		this.logineffectView = new LoginEffectView();
+        this.addChildAt(this.logineffectView,1);
+		this.logineffectView.play();
 	}
 
 	private onBlack(e: egret.TouchEvent): void {
@@ -67,11 +57,8 @@ class LoginView extends eui.Component {
 	}
 
 	private _onVisitorLogin(e: egret.TouchEvent): void {
-		// this._group_btn_0.visible = false;
-		// this._group_btn_1.visible = true;
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
 		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
-		// xlLib.PopUpMgr.addPopUp(LobbyView, null, true, true, null, 1);
 	}
 
 	private _onAccountLogin(e: egret.TouchEvent): void {
@@ -79,16 +66,6 @@ class LoginView extends eui.Component {
 		this._group_btn_2.visible = true;
 	}
 
-	private _onContinueLogin(e: egret.TouchEvent): void {
-		xlLib.UIMgr.instance.showLoading(TipsLoading);
-		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl, null, null, this.onLoginSucess, this.onLoginFail);
-
-		// xlLib.PopUpMgr.addPopUp(LobbyView, null, true, true, null ,1);
-	}
-
-	private _onRegister(e: egret.TouchEvent): void {
-
-	}
 
 	private onGetCode(e: egret.TouchEvent): void {
 		xlLib.HttpManager.getInstance().send(HttpAddress.sendmsgUrl, { mobile: this._phone_txt.text }
@@ -140,11 +117,8 @@ class LoginView extends eui.Component {
 	public destroy() {
 		this._btn_visitor.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onVisitorLogin, this);
 		this._btn_account.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onAccountLogin, this);
-		this._btn_continue.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onContinueLogin, this);
-		this._btn_register.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onRegister, this);
 		this._btn_login.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onLogin, this);
 		this._btn_verify.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onGetCode, this);
-
 		EventUtil.removeEventListener(EventConst.ON_SOCKET_SUC, this.onSocketSuc, this);
 		EventUtil.removeEventListener(EventConst.ON_SOCKET_FAIL, this.onSocketFail, this);
 	}

@@ -71,6 +71,7 @@ class Main extends xlLib.GameDoc {
         xlLib.init(option);
         xlLib.UIMgr.instance.commonLoadUI = LodingView;
         xlLib.UIMgr.instance.tipsLoadUI = TipsLoading;
+        xlLib.ResUtils.init();
         xlLib.ReceiveMessageMgr.getInstance().initPushMessage();
 
           //初始化Resource资源加载库

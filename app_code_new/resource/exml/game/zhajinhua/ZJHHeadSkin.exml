@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ZJHHeadSkin" width="140" height="140" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image width="100" height="100" x="20" y="0" source="img_tx_png"/>
-	<e:Image id="imghead" width="100" height="100" x="19.81" y="-1.52" source="F11_03_png"/>
-	<e:Image width="110" height="60" y="80.78" source="img_big_png" x="15"/>
-	<e:Image width="30" height="30" x="21" y="110" source="img_jinbi_png"/>
-	<e:Label id="labelName" text="名字名字" y="86.68" size="22" width="140" textColor="0xf2eeb3" fontFamily="Arial" textAlign="center" bold="true" x="0" height="22" wordWrap="false"/>
-	<e:Label id="labelGold" text="100000" x="52" y="115" size="22" bold="true" textAlign="left" textColor="0xf2eeb3" width="88"/>
+<e:Skin class="ZJHHeadSkin" width="130" height="173" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="130" height="180" anchorOffsetY="0" anchorOffsetX="0" source="gf_wait_png" x="0" y="-3" visible="false"/>
+	<e:Image width="125" height="161" anchorOffsetY="0" anchorOffsetX="0" source="gf_Avatar_box_png" y="4" x="3"/>
+
+	<e:Image id="imghead" width="100" height="100" anchorOffsetX="0" source="women7_png" y="33.8" x="15"/>
+
+
+	<e:Label id="labelName" text="名字名字" size="23" width="115" fontFamily="SimHei" textAlign="center" bold="true" height="22" wordWrap="false" y="8.2" anchorOffsetX="0" textColor="0xf7f7f4" x="8"/>
+	<e:Label id="labelGold" text="100000" y="136.2" size="22" bold="true" textAlign="center" width="111" anchorOffsetX="0" textColor="0xd6ca24" x="10"/>
 </e:Skin>

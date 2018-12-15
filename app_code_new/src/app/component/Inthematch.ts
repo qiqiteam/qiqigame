@@ -7,10 +7,10 @@ class Inthematch extends eui.Component {
 	public _quxiao: eui.Button;
 	public _waitfor: eui.Label;
 
+	public TYPE_TAP: string = "";
 
 	public time: number;        //秒数
 	public timer: egret.Timer;  //计时器
-
 	public str: string;
 
 	protected partAdded(partName: string, instance: any): void {
@@ -34,6 +34,7 @@ class Inthematch extends eui.Component {
 			xlLib.SoundMgr.instance.playBgMusic(musicBg);
 			xlLib.SceneMgr.instance.changeScene(Lobby);
 		}
+		this.destroy();
 	}
 
 	private onClick(e: egret.TouchEvent) {
@@ -41,8 +42,9 @@ class Inthematch extends eui.Component {
 	}
 	/**取消匹配 */
 	private quxiaopipei() {
+
 		let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
-		let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_QZNN);
+		let typeData: typeData = gameData.getTypeDataByindex(this.TYPE_TAP);
 		let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
 		let senddata: any = {
 			userid: UserInfo.getInstance().uid,
@@ -88,5 +90,10 @@ class Inthematch extends eui.Component {
 			this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
 			this.timer = null;
 		}
+	}
+	public destroy(): void {
+		this.TYPE_TAP = "";
+		this._quxiao.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+		EventUtil.removeEventListener(EventConst.onUserLeave, this.onleave, this);
 	}
 }
