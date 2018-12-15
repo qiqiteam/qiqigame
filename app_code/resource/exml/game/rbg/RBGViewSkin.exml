@@ -122,8 +122,8 @@
 		<e:Image id="_card_an_3_1" x="810" y="310" scaleX="1" scaleY="1" source="mahjong_cover_png"/>
 	</e:Group>
 	<e:Image id="btnCardHistroy" x="1370" y="25"  source="bar_btn_game_record_png" locked="true"/>
-	<e:Group id="_group_bar_histroy" width="209" height="120" x="1150.43" y="28.56" locked="true" visible="false">
-		<e:Image x="0" y="0" source="bar_total_card_png"/>
+	<e:Group id="_group_bar_histroy" width="209" height="120" x="1150.43" y="28.56" visible="false" locked="true">
+		<e:Image x="0" y="0" source="bar_total_card_png" smoothing="true"/>
 		<e:BitmapLabel id="_label_bar_0" x="25.13" y="32.36" font="bar_total_number_fnt" text="0"/>
 		<e:BitmapLabel x="66.95" y="31.76" font="bar_total_number_fnt" text="0" id="_label_bar_1"/>
 		<e:BitmapLabel x="108.01" y="32.48" font="bar_total_number_fnt" text="0" id="_label_bar_2"/>

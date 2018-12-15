@@ -183,6 +183,7 @@ public _continue_img_1:eui.Image;
 
     private orginPlayerCardPos = [];    // 存储玩家扑克位置
     private orginAnCardPos = [];        // 存储暗扑克位置
+    private orginCardTypePos = [];      // 牌类型显示位置
 
     private cdNum: number = 5;     //倒计时计数
     private cdTimer: egret.Timer;   //倒计时时间
@@ -244,6 +245,17 @@ public _continue_img_1:eui.Image;
         for (var index = 0; index < 4; index++) {
             var cardPos = [];
             var an_cardPos = [];
+
+            let card_type = this['labCardType' + index];
+            var t_pos: egret.Point = new egret.Point;
+            card_type.anchorOffsetX = card_type.width / 2;
+            card_type.anchorOffsetY = card_type.height / 2;
+            card_type.x += card_type.width / 2;
+            card_type.y += card_type.height / 2;
+            t_pos.x = card_type.x;
+            t_pos.y = card_type.y;
+            this.orginCardTypePos[index] = t_pos;
+
             for (var j = 0; j < 2; j++) {
                 var card:RBGMahjong = this['grpCard_' + index + '_' + j];
                 card.setPai(null);
@@ -477,7 +489,7 @@ public _continue_img_1:eui.Image;
             case 4: this.onDingzhuang(data); break; // 定庄
             case 5: this.onbetBack(data); break;    // 下注
             case 6: this.gameResult(data); break;
-            case 7: this.showGameResult(data); break;
+            //case 7: this.showGameResult(data); break;
         }
     }
 
@@ -569,6 +581,7 @@ public _continue_img_1:eui.Image;
             this.random_arr = [];
             this.timeNum = 0;
             clearInterval(this.turn0);
+            this.turn0 = -1;
             this.setbanker(this.bet_data);
             return;
         }
@@ -705,6 +718,7 @@ public _continue_img_1:eui.Image;
     public shakeDice():void {
         clearInterval(this.gamePlayIndex);
         this._group_bz.visible = true;
+        this.numTime = 0;
         this.diceInterval = setInterval(this.setDiceAnimation.bind(this), 200);
     }
 
@@ -840,9 +854,9 @@ public _continue_img_1:eui.Image;
     public setDiceAnimation() {
         if(this.numTime == 8) {
             clearInterval(this.diceInterval);
+            this.numTime = 0;
             //egret.Tween.removeTweens(this._img_bz);
             this.playDiceResult();
-            //this.diceInterval = setInterval(this.playDiceResult.bind(this), 200);
         }
 
         this._dice_0.source = "bar_sicbo_"+ this.cardResult.dice[0] +"_png";
@@ -891,7 +905,6 @@ public _continue_img_1:eui.Image;
                 alpha: 0
             },
             50);
-            //this.getPlayerViewBySeatID(this.firstPlayer).setFirstAnimation()
         },
         this);
         this.diceInterval = setInterval(this.firstPlayer1.bind(this), 1500);
@@ -899,6 +912,7 @@ public _continue_img_1:eui.Image;
 
     public firstPlayer1(){
         clearInterval(this.diceInterval);
+        this.diceInterval = -1;
         this._img_bz.visible = false;
         this._img_bz_d.visible = false;
         this._dice_0.visible = false;
@@ -1092,7 +1106,7 @@ public _continue_img_1:eui.Image;
             }, [img]);
         }
 
-        //this.flyIntval = setInterval(this.showGameResult.bind(this), 4000);
+        this.flyIntval = setInterval(this.showGameResult.bind(this), 4000);
     }
 
     //-------------------------------服务器回调------------------------------
@@ -1189,6 +1203,7 @@ public _continue_img_1:eui.Image;
      */
     private cardEffect(): void {
         clearInterval(this.gamePlayIndex);
+        this.gamePlayIndex = -1;
         let index = UserInfo.getInstance().findSeatNumber(this.cardResult.index);
         this.initPaiPos(index);
         this.flyIntval = setInterval(this.playCardFly.bind(this), 180);
@@ -1283,8 +1298,8 @@ public _continue_img_1:eui.Image;
         _group.source = "bar_point_"+ poke[this.effectPlayerIndex1].nameType +"_png";
         _group.anchorOffsetX = _group.width / 2;
         _group.anchorOffsetY = _group.height / 2;
-        _group.x += _group.width / 2;
-        _group.y += _group.height / 2;
+        _group.x = this.orginCardTypePos[this.effectPlayerIndex0].x;
+        _group.y = this.orginCardTypePos[this.effectPlayerIndex0].y;
 
         if(poke[this.effectPlayerIndex1].nameType == 0) {
             _group_bg.source = "bar_point_bg_0_png";
@@ -1308,10 +1323,16 @@ public _continue_img_1:eui.Image;
 
 
 
+    //private showGameResult(data: any): void {
     private showGameResult(data: any): void {
-        //clearInterval(this.flyIntval);
+        clearInterval(this.flyIntval);
+        this.flyIntval = -1;
         var value = this.cardResult;
         this._group_settlement.visible = true;
+        console.log("+++++++++" + this.gamePlayIndex);
+        console.log("+++++++++" + this.flyIntval);
+        console.log("+++++++++" + this.diceInterval);
+        console.log("+++++++++" + this.turn0);
 
         for(let i=0; i<10; i++) {
             this["_label_bar_" + i].text = value.count[i] + "";
@@ -1397,11 +1418,8 @@ public _continue_img_1:eui.Image;
     }
 
     private resetGame(): void {
-        egret.Tween.removeTweens(this._img_bz);
-        egret.Tween.removeTweens(this._img_bz_g);
-
-        for(let i = 0; i < this._coin_arr.length; i++) {
-            this._coin_arr[i].parent.removeChild(this._coin_arr[i]);
+        for(let n = 0; n < this._coin_arr.length; n++) {
+            this._coin_arr[n].parent.removeChild(this._coin_arr[n]);
         }
 
         for (var i = 0; i < 4; i++) {
@@ -1417,8 +1435,15 @@ public _continue_img_1:eui.Image;
             this["labCardType_bg_" + i].visible = false;
             this['grpHead' + i].setZhuang(false);
         }
-        this.zhaungIndex = 0;
-        
+
+        egret.Tween.removeTweens(this._img_bz);
+        egret.Tween.removeTweens(this._img_bz_g);
+
+        this.zhaungIndex = 0;   //庄的座位号（当前游戏的座位号）
+        this._coin_arr = [];
+        this.qz_player_arr = [];
+        this.cardResult = null;
+        this.cdNum = 5;
     }
 
     public playClickSound(res): void {
