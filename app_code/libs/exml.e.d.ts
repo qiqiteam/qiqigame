@@ -98,6 +98,8 @@ declare class BRNNroomViewSkin extends eui.Skin{
 }
 declare class ErBaGangViewSkin extends eui.Skin{
 }
+declare class ErBaGangroomEffSkin extends eui.Skin{
+}
 declare class ErBaGangroomViewSkin extends eui.Skin{
 }
 declare class SystemMsgItemSkin extends eui.Skin{
