@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,tongbiniuniu_tex_png,tongbiniuniu_tex_json,tongbiniuniu_ske_json,qznn_nvrenwu_tex_json,qznn_nvrenwu_tex_png,qznn_nvrenwu_ske_json,bg_remen_tex_png,bg_remen_tex_json,bg_remen_ske_json,bg_zhajinhua_tex_png,bg_zhajinhua_tex_json,bg_zhajinhua_ske_json,bg_xin_ske_json,bg_xin_tex_json,bg_xin_tex_png,bg_xiaoliuguang_tex_png,bg_xiaoliuguang_tex_json,bg_xiaoliuguang_ske_json,bg_tongbiniuniu_tex_png,bg_tongbiniuniu_tex_json,bg_tongbiniuniu_ske_json,bg_qiangzhuangniuniu_tex_png,bg_qiangzhuangniuniu_tex_json,bg_qiangzhuangniuniu_ske_json,bg_ewrbagang_tex_png,bg_ewrbagang_tex_json,bg_ewrbagang_ske_json,bg_daliuguang_tex_png,bg_daliuguang_tex_json,bg_daliuguang_ske_json,bg_bairenniuniu_tex_png,bg_bairenniuniu_tex_json,bg_bairenniuniu_ske_json,bg_baijiale_tex_png,bg_baijiale_tex_json,bg_baijiale_ske_json,ebg_rukou_tex_png,ebg_rukou_ske_json,ebg_rukou_tex_json,qznn_rukou_tex_png,qznn_rukou_ske_json,qznn_rukou_tex_json,tbnn_rukou_tex_png,tbnn_rukou_ske_json,tbnn_rukou_tex_json,zjh_rukou_tex_png,zjh_rukou_ske_json,zjh_rukou_tex_json,bjl_rukou_ske_json,bjl_rukou_tex_json,bjl_rukou_tex_png,brnn_rukou_tex_png,brnn_rukou_ske_json,brnn_rukou_tex_json,baccarat_hall_bg2_png,bjl_rukou_ske2_json,bjl_rukou_tex2_json,bjl_rukou_tex2_png,brnn_rukou_ske2_json,brnn_rukou_tex2_json,brnn_rukou_tex2_png,ebg_rukou_ske2_json,ebg_rukou_tex2_json,ebg_rukou_tex2_png,qznn_nvrenwu_ske2_json,qznn_nvrenwu_tex2_json,qznn_nvrenwu_tex2_png,qznn_rukou_ske2_json,qznn_rukou_tex2_json,qznn_rukou_tex2_png,tbnn_rukou_ske2_json,tbnn_rukou_tex2_json,tbnn_rukou_tex2_png,tongbiniuniu_ske2_json,tongbiniuniu_tex2_json,tongbiniuniu_tex2_png,zjh_rukou_ske2_json,zjh_rukou_tex2_json,zjh_rukou_tex2_png,brnn_hall_effect_hg2_json,brnn_hall_effect_hg2_png,suijin_json,suijin_png,baccarat_game_point_dian_png,baccarat_game_point_0_png,baccarat_game_point_1_png,baccarat_game_point_2_png,baccarat_game_point_3_png,baccarat_game_point_4_png,baccarat_game_point_5_png,baccarat_game_point_6_png,baccarat_game_point_7_png,baccarat_game_point_8_png,baccarat_game_point_9_png,baccarat_players_rank3_png,baccarat_players_rank1_png,baccarat_players_rank2_png,gf_chip_bg1_png,bar_bet_time_fnt,bar_bet_time_png,bar_bet_times2_png,bar_bet_time_bg_png,bar_bet_time_text_png,bar_bet_tip_bg_png,bar_btn_1_normal_png,bar_btn_bet_png,bar_btn_game_record_png,bar_btn_grab_png,bar_btn_grab_times_png,bar_btn_no_grab_times_png,bar_btn_txt_continue_png,bar_chip_10_png,bar_chip_100_png,bar_chip_10000_png,bar_chip_2000_png,bar_chip_50_png,bar_chip_500_png,bar_first_player_png,bar_flag_banker_png,bar_game_bet_times_fnt,bar_game_bet_times_png,bar_game_countdown_fnt,bar_game_countdown_png,bar_grab_time_txt_png,bar_no_grab_fnt,bar_no_grab_png,bar_over_banker_png,bar_over_btn_lose_close_png,bar_over_lose_bg_png,bar_over_lose_hat_png,bar_over_lose_light_png,bar_over_lose_title_png,bar_over_txt_bg_png,bar_over_win_bg_png,bar_over_win_hat_png,bar_over_win_light_png,bar_over_win_title_png,bar_person_bg_png,bar_plus_bg2_png,bar_plus_font_fnt,bar_plus_font_png,bar_point_0_png,bar_point_1_png,bar_point_11_png,bar_point_12_png,bar_point_13_png,bar_point_14_png,bar_point_15_png,bar_point_16_png,bar_point_17_png,bar_point_18_png,bar_point_19_png,bar_point_2_png,bar_point_20_png,bar_point_21_png,bar_point_22_png,bar_point_23_png,bar_point_24_png,bar_point_25_png,bar_point_26_png,bar_point_27_png,bar_point_28_png,bar_point_29_png,bar_point_3_png,bar_point_30_png,bar_point_4_png,bar_point_5_png,bar_point_6_png,bar_point_7_png,bar_point_8_png,bar_point_9_png,bar_point_bg_0_png,bar_point_bg_1_png,bar_point_bg_2_png,bar_random_banker_png,bar_reduce_bg2_png,bar_reduce_font_fnt,bar_reduce_font_png,bar_start_title_bet_png,bar_start_title_grab_png,bar_statu_no_grab_png,bar_thinking_png,bar_thinking_0_png,bar_tip_bg_png,bar_tip_close_png,bar_tip_title_1_png,bar_total_card_png,bar_total_number_fnt,bar_total_number_png,Icon_zhuang_png,Img_bg_jpg,Img_bg_png,Img_bottom_bg_png,Img_chouma_1_png,Img_chouma_10_png,Img_chouma_2_png,Img_chouma_5_png,Img_chouma_50_png,Img_chouma_bg_png,Img_heng_back_png,Img_heng_front_png,Img_num_0_png,Img_num_1_png,Img_num_2_png,Img_num_3_png,Img_num_4_png,Img_qiang_1_png,Img_qiang_2_png,Img_qiang_3_png,Img_qiang_4_png,Img_shu_back_png,Img_shu_front_png,Img_xianshi_png,Img_zhanshi_png,Img_zhanshi_bg_png,lab_buqiang_png,mahjong_0_png,mahjong_1_png,mahjong_2_png,mahjong_3_png,mahjong_4_png,mahjong_5_png,mahjong_6_png,mahjong_7_png,mahjong_8_png,mahjong_9_png,mahjong_cover_png,mahjong_turn_png,bar_effect_30_0_png,bar_effect_30_1_png,bar_effect_30_10_png,bar_effect_30_11_png,bar_effect_30_12_png,bar_effect_30_13_png,bar_effect_30_14_png,bar_effect_30_15_png,bar_effect_30_16_png,bar_effect_30_2_png,bar_effect_30_3_png,bar_effect_30_4_png,bar_effect_30_5_png,bar_effect_30_6_png,bar_effect_30_7_png,bar_effect_30_8_png,bar_effect_30_9_png,bar_effect_banker_0_png,bar_effect_banker_1_png,bar_effect_banker_10_png,bar_effect_banker_2_png,bar_effect_banker_3_png,bar_effect_banker_4_png,bar_effect_banker_5_png,bar_effect_banker_6_png,bar_effect_banker_7_png,bar_effect_banker_8_png,bar_effect_banker_9_png,bar_effect_kill_0_png,bar_effect_kill_1_png,bar_effect_kill_10_png,bar_effect_kill_11_png,bar_effect_kill_12_png,bar_effect_kill_13_png,bar_effect_kill_2_png,bar_effect_kill_3_png,bar_effect_kill_4_png,bar_effect_kill_5_png,bar_effect_kill_6_png,bar_effect_kill_7_png,bar_effect_kill_8_png,bar_effect_kill_9_png,bar_effect_start_0_png,bar_effect_start_1_png,bar_effect_start_10_png,bar_effect_start_11_png,bar_effect_start_12_png,bar_effect_start_13_png,bar_effect_start_14_png,bar_effect_start_15_png,bar_effect_start_16_png,bar_effect_start_2_png,bar_effect_start_3_png,bar_effect_start_4_png,bar_effect_start_5_png,bar_effect_start_6_png,bar_effect_start_7_png,bar_effect_start_8_png,bar_effect_start_9_png,bar_sicbo_1_png,bar_sicbo_2_png,bar_sicbo_3_png,bar_sicbo_4_png,bar_sicbo_5_png,bar_sicbo_6_png,bar_sicbo_all_png,bar_sicbo_bottom_png,bar_sicbo_top_png,baccarat_font_bureau_0_png,baccarat_font_bureau_1_png,baccarat_font_bureau_2_png,baccarat_font_bureau_3_png,baccarat_font_bureau_4_png,baccarat_font_bureau_5_png,baccarat_font_bureau_6_png,baccarat_font_bureau_7_png,baccarat_font_bureau_8_png,baccarat_font_bureau_9_png,baccarat_font_bureau_diju1_png,baccarat_font_bureau_diju2_png,baccarat_font_stage_1_png,baccarat_font_stage_2_png,baccarat_font_stage_3_png,baccarat_font_stage_4_png,baccarat_font_stage_5_png,baccarat_font_stage_6_png",
+			"keys": "loding_json,loding_bg_jpg,wzqp_tex_png,wzqp_tex_json,wzqp_ske_json,tongbiniuniu_tex_png,tongbiniuniu_tex_json,tongbiniuniu_ske_json,qznn_nvrenwu_tex_json,qznn_nvrenwu_tex_png,qznn_nvrenwu_ske_json,bg_remen_tex_png,bg_remen_tex_json,bg_remen_ske_json,bg_zhajinhua_tex_png,bg_zhajinhua_tex_json,bg_zhajinhua_ske_json,bg_xin_ske_json,bg_xin_tex_json,bg_xin_tex_png,bg_xiaoliuguang_tex_png,bg_xiaoliuguang_tex_json,bg_xiaoliuguang_ske_json,bg_tongbiniuniu_tex_png,bg_tongbiniuniu_tex_json,bg_tongbiniuniu_ske_json,bg_qiangzhuangniuniu_tex_png,bg_qiangzhuangniuniu_tex_json,bg_qiangzhuangniuniu_ske_json,bg_ewrbagang_tex_png,bg_ewrbagang_tex_json,bg_ewrbagang_ske_json,bg_daliuguang_tex_png,bg_daliuguang_tex_json,bg_daliuguang_ske_json,bg_bairenniuniu_tex_png,bg_bairenniuniu_tex_json,bg_bairenniuniu_ske_json,bg_baijiale_tex_png,bg_baijiale_tex_json,bg_baijiale_ske_json,ebg_rukou_tex_png,ebg_rukou_ske_json,ebg_rukou_tex_json,qznn_rukou_tex_png,qznn_rukou_ske_json,qznn_rukou_tex_json,tbnn_rukou_tex_png,tbnn_rukou_ske_json,tbnn_rukou_tex_json,zjh_rukou_tex_png,zjh_rukou_ske_json,zjh_rukou_tex_json,bjl_rukou_ske_json,bjl_rukou_tex_json,bjl_rukou_tex_png,brnn_rukou_tex_png,brnn_rukou_ske_json,brnn_rukou_tex_json,baccarat_hall_bg2_png,bjl_rukou_ske2_json,bjl_rukou_tex2_json,bjl_rukou_tex2_png,brnn_rukou_ske2_json,brnn_rukou_tex2_json,brnn_rukou_tex2_png,ebg_rukou_ske2_json,ebg_rukou_tex2_json,ebg_rukou_tex2_png,qznn_nvrenwu_ske2_json,qznn_nvrenwu_tex2_json,qznn_nvrenwu_tex2_png,qznn_rukou_ske2_json,qznn_rukou_tex2_json,qznn_rukou_tex2_png,tbnn_rukou_ske2_json,tbnn_rukou_tex2_json,tbnn_rukou_tex2_png,tongbiniuniu_ske2_json,tongbiniuniu_tex2_json,tongbiniuniu_tex2_png,zjh_rukou_ske2_json,zjh_rukou_tex2_json,zjh_rukou_tex2_png,brnn_hall_effect_hg2_json,brnn_hall_effect_hg2_png,suijin_json,suijin_png,baccarat_game_point_dian_png,baccarat_game_point_0_png,baccarat_game_point_1_png,baccarat_game_point_2_png,baccarat_game_point_3_png,baccarat_game_point_4_png,baccarat_game_point_5_png,baccarat_game_point_6_png,baccarat_game_point_7_png,baccarat_game_point_8_png,baccarat_game_point_9_png,baccarat_players_rank3_png,baccarat_players_rank1_png,baccarat_players_rank2_png,gf_chip_bg1_png,bar_bet_time_fnt,bar_bet_time_png,bar_bet_times2_png,bar_bet_time_bg_png,bar_bet_time_text_png,bar_bet_tip_bg_png,bar_btn_1_normal_png,bar_btn_bet_png,bar_btn_game_record_png,bar_btn_grab_png,bar_btn_grab_times_png,bar_btn_no_grab_times_png,bar_btn_txt_continue_png,bar_chip_10_png,bar_chip_100_png,bar_chip_10000_png,bar_chip_2000_png,bar_chip_50_png,bar_chip_500_png,bar_first_player_png,bar_flag_banker_png,bar_game_bet_times_fnt,bar_game_bet_times_png,bar_game_countdown_fnt,bar_game_countdown_png,bar_grab_time_txt_png,bar_no_grab_fnt,bar_no_grab_png,bar_over_banker_png,bar_over_btn_lose_close_png,bar_over_lose_bg_png,bar_over_lose_hat_png,bar_over_lose_light_png,bar_over_lose_title_png,bar_over_txt_bg_png,bar_over_win_bg_png,bar_over_win_hat_png,bar_over_win_light_png,bar_over_win_title_png,bar_person_bg_png,bar_plus_bg2_png,bar_plus_font_fnt,bar_plus_font_png,bar_point_0_png,bar_point_1_png,bar_point_11_png,bar_point_12_png,bar_point_13_png,bar_point_14_png,bar_point_15_png,bar_point_16_png,bar_point_17_png,bar_point_18_png,bar_point_19_png,bar_point_2_png,bar_point_20_png,bar_point_21_png,bar_point_22_png,bar_point_23_png,bar_point_24_png,bar_point_25_png,bar_point_26_png,bar_point_27_png,bar_point_28_png,bar_point_29_png,bar_point_3_png,bar_point_30_png,bar_point_4_png,bar_point_5_png,bar_point_6_png,bar_point_7_png,bar_point_8_png,bar_point_9_png,bar_point_bg_0_png,bar_point_bg_1_png,bar_point_bg_2_png,bar_random_banker_png,bar_reduce_bg2_png,bar_reduce_font_fnt,bar_reduce_font_png,bar_start_title_bet_png,bar_start_title_grab_png,bar_statu_no_grab_png,bar_thinking_png,bar_thinking_0_png,bar_tip_bg_png,bar_tip_close_png,bar_tip_title_1_png,bar_total_card_png,bar_total_number_fnt,bar_total_number_png,Icon_zhuang_png,Img_bg_jpg,Img_bg_png,Img_bottom_bg_png,Img_chouma_1_png,Img_chouma_10_png,Img_chouma_2_png,Img_chouma_5_png,Img_chouma_50_png,Img_chouma_bg_png,Img_heng_back_png,Img_heng_front_png,Img_num_0_png,Img_num_1_png,Img_num_2_png,Img_num_3_png,Img_num_4_png,Img_qiang_1_png,Img_qiang_2_png,Img_qiang_3_png,Img_qiang_4_png,Img_shu_back_png,Img_shu_front_png,Img_xianshi_png,Img_zhanshi_png,Img_zhanshi_bg_png,lab_buqiang_png,mahjong_0_png,mahjong_1_png,mahjong_2_png,mahjong_3_png,mahjong_4_png,mahjong_5_png,mahjong_6_png,mahjong_7_png,mahjong_8_png,mahjong_9_png,mahjong_cover_png,mahjong_turn_png,bar_effect_30_0_png,bar_effect_30_1_png,bar_effect_30_10_png,bar_effect_30_11_png,bar_effect_30_12_png,bar_effect_30_13_png,bar_effect_30_14_png,bar_effect_30_15_png,bar_effect_30_16_png,bar_effect_30_2_png,bar_effect_30_3_png,bar_effect_30_4_png,bar_effect_30_5_png,bar_effect_30_6_png,bar_effect_30_7_png,bar_effect_30_8_png,bar_effect_30_9_png,bar_effect_banker_0_png,bar_effect_banker_1_png,bar_effect_banker_10_png,bar_effect_banker_2_png,bar_effect_banker_3_png,bar_effect_banker_4_png,bar_effect_banker_5_png,bar_effect_banker_6_png,bar_effect_banker_7_png,bar_effect_banker_8_png,bar_effect_banker_9_png,bar_effect_kill_0_png,bar_effect_kill_1_png,bar_effect_kill_10_png,bar_effect_kill_11_png,bar_effect_kill_12_png,bar_effect_kill_13_png,bar_effect_kill_2_png,bar_effect_kill_3_png,bar_effect_kill_4_png,bar_effect_kill_5_png,bar_effect_kill_6_png,bar_effect_kill_7_png,bar_effect_kill_8_png,bar_effect_kill_9_png,bar_effect_start_0_png,bar_effect_start_1_png,bar_effect_start_10_png,bar_effect_start_11_png,bar_effect_start_12_png,bar_effect_start_13_png,bar_effect_start_14_png,bar_effect_start_15_png,bar_effect_start_16_png,bar_effect_start_2_png,bar_effect_start_3_png,bar_effect_start_4_png,bar_effect_start_5_png,bar_effect_start_6_png,bar_effect_start_7_png,bar_effect_start_8_png,bar_effect_start_9_png,bar_sicbo_1_png,bar_sicbo_2_png,bar_sicbo_3_png,bar_sicbo_4_png,bar_sicbo_5_png,bar_sicbo_6_png,bar_sicbo_all_png,bar_sicbo_bottom_png,bar_sicbo_top_png,baccarat_font_bureau_0_png,baccarat_font_bureau_1_png,baccarat_font_bureau_2_png,baccarat_font_bureau_3_png,baccarat_font_bureau_4_png,baccarat_font_bureau_5_png,baccarat_font_bureau_6_png,baccarat_font_bureau_7_png,baccarat_font_bureau_8_png,baccarat_font_bureau_9_png,baccarat_font_bureau_diju1_png,baccarat_font_bureau_diju2_png,baccarat_font_stage_1_png,baccarat_font_stage_2_png,baccarat_font_stage_3_png,baccarat_font_stage_4_png,baccarat_font_stage_5_png,baccarat_font_stage_6_png,baccarat_font_bureau_02_png,baccarat_font_bureau_12_png,baccarat_font_bureau_22_png,baccarat_font_bureau_32_png,baccarat_font_bureau_42_png,baccarat_font_bureau_52_png,baccarat_font_bureau_62_png,baccarat_font_bureau_72_png,baccarat_font_bureau_82_png,baccarat_font_bureau_92_png,baccarat_font_bureau_diju12_png,baccarat_font_bureau_diju22_png,baccarat_font_stage_12_png,baccarat_font_stage_22_png,baccarat_font_stage_32_png,baccarat_font_stage_42_png,baccarat_font_stage_52_png,baccarat_font_stage_62_png",
 			"name": "preload"
 		},
 		{
@@ -6789,6 +6789,96 @@
 		},
 		{
 			"name": "baccarat_font_stage_6_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_stage_6.png"
+		},
+		{
+			"name": "baccarat_font_bureau_02_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_0.png"
+		},
+		{
+			"name": "baccarat_font_bureau_12_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_1.png"
+		},
+		{
+			"name": "baccarat_font_bureau_22_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_2.png"
+		},
+		{
+			"name": "baccarat_font_bureau_32_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_3.png"
+		},
+		{
+			"name": "baccarat_font_bureau_42_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_4.png"
+		},
+		{
+			"name": "baccarat_font_bureau_52_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_5.png"
+		},
+		{
+			"name": "baccarat_font_bureau_62_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_6.png"
+		},
+		{
+			"name": "baccarat_font_bureau_72_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_7.png"
+		},
+		{
+			"name": "baccarat_font_bureau_82_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_8.png"
+		},
+		{
+			"name": "baccarat_font_bureau_92_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_9.png"
+		},
+		{
+			"name": "baccarat_font_bureau_diju12_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju1.png"
+		},
+		{
+			"name": "baccarat_font_bureau_diju22_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju2.png"
+		},
+		{
+			"name": "baccarat_font_stage_12_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_stage_1.png"
+		},
+		{
+			"name": "baccarat_font_stage_22_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_stage_2.png"
+		},
+		{
+			"name": "baccarat_font_stage_32_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_stage_3.png"
+		},
+		{
+			"name": "baccarat_font_stage_42_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_stage_4.png"
+		},
+		{
+			"name": "baccarat_font_stage_52_png",
+			"type": "image",
+			"url": "assets/game/baijiale/baccarat_font_stage_5.png"
+		},
+		{
+			"name": "baccarat_font_stage_62_png",
 			"type": "image",
 			"url": "assets/game/baijiale/baccarat_font_stage_6.png"
 		}
