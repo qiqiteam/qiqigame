@@ -5638,1249 +5638,1279 @@
 			"name": "baccarat_game_icon_chouma_6000_png"
 		},
 		{
-			"name": "baccarat_game_point_dian_png",
+			"url": "assets/game/baijiale/baccarat_game_point_dian.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_dian.png"
+			"name": "baccarat_game_point_dian_png"
 		},
 		{
-			"name": "baccarat_game_point_0_png",
+			"url": "assets/game/baijiale/baccarat_game_point_0.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_0.png"
+			"name": "baccarat_game_point_0_png"
 		},
 		{
-			"name": "baccarat_game_point_1_png",
+			"url": "assets/game/baijiale/baccarat_game_point_1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_1.png"
+			"name": "baccarat_game_point_1_png"
 		},
 		{
-			"name": "baccarat_game_point_2_png",
+			"url": "assets/game/baijiale/baccarat_game_point_2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_2.png"
+			"name": "baccarat_game_point_2_png"
 		},
 		{
-			"name": "baccarat_game_point_3_png",
+			"url": "assets/game/baijiale/baccarat_game_point_3.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_3.png"
+			"name": "baccarat_game_point_3_png"
 		},
 		{
-			"name": "baccarat_game_point_4_png",
+			"url": "assets/game/baijiale/baccarat_game_point_4.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_4.png"
+			"name": "baccarat_game_point_4_png"
 		},
 		{
-			"name": "baccarat_game_point_5_png",
+			"url": "assets/game/baijiale/baccarat_game_point_5.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_5.png"
+			"name": "baccarat_game_point_5_png"
 		},
 		{
-			"name": "baccarat_game_point_6_png",
+			"url": "assets/game/baijiale/baccarat_game_point_6.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_6.png"
+			"name": "baccarat_game_point_6_png"
 		},
 		{
-			"name": "baccarat_game_point_7_png",
+			"url": "assets/game/baijiale/baccarat_game_point_7.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_7.png"
+			"name": "baccarat_game_point_7_png"
 		},
 		{
-			"name": "baccarat_game_point_8_png",
+			"url": "assets/game/baijiale/baccarat_game_point_8.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_8.png"
+			"name": "baccarat_game_point_8_png"
 		},
 		{
-			"name": "baccarat_game_point_9_png",
+			"url": "assets/game/baijiale/baccarat_game_point_9.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_game_point_9.png"
+			"name": "baccarat_game_point_9_png"
 		},
 		{
-			"name": "baccarat_players_rank3_png",
+			"url": "assets/game/baijiale/baccarat_players_rank3.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_players_rank3.png"
+			"name": "baccarat_players_rank3_png"
 		},
 		{
-			"name": "baccarat_players_rank1_png",
+			"url": "assets/game/baijiale/baccarat_players_rank1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_players_rank1.png"
+			"name": "baccarat_players_rank1_png"
 		},
 		{
-			"name": "baccarat_players_rank2_png",
+			"url": "assets/game/baijiale/baccarat_players_rank2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_players_rank2.png"
+			"name": "baccarat_players_rank2_png"
 		},
 		{
-			"name": "gf_chip_bg1_png",
+			"url": "assets/game/zhajh/gf_chip_bg1.png",
 			"type": "image",
-			"url": "assets/game/zhajh/gf_chip_bg1.png"
+			"name": "gf_chip_bg1_png"
 		},
 		{
-			"name": "bar_bet_time_fnt",
+			"url": "assets/game/erbagang/bar_bet_time.fnt",
 			"type": "font",
-			"url": "assets/game/erbagang/bar_bet_time.fnt"
+			"name": "bar_bet_time_fnt"
 		},
 		{
-			"name": "bar_bet_time_png",
+			"url": "assets/game/erbagang/bar_bet_time.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_bet_time.png"
+			"name": "bar_bet_time_png"
 		},
 		{
-			"name": "bar_bet_times2_png",
+			"url": "assets/game/erbagang/bar_bet_times.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_bet_times.png"
+			"name": "bar_bet_times2_png"
 		},
 		{
-			"name": "bar_bet_time_bg_png",
+			"url": "assets/game/erbagang/bar_bet_time_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_bet_time_bg.png"
+			"name": "bar_bet_time_bg_png"
 		},
 		{
-			"name": "bar_bet_time_text_png",
+			"url": "assets/game/erbagang/bar_bet_time_text.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_bet_time_text.png"
+			"name": "bar_bet_time_text_png"
 		},
 		{
-			"name": "bar_bet_tip_bg_png",
+			"url": "assets/game/erbagang/bar_bet_tip_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_bet_tip_bg.png"
+			"name": "bar_bet_tip_bg_png"
 		},
 		{
-			"name": "bar_btn_1_normal_png",
+			"url": "assets/game/erbagang/bar_btn_1_normal.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_btn_1_normal.png"
+			"name": "bar_btn_1_normal_png"
 		},
 		{
-			"name": "bar_btn_bet_png",
+			"url": "assets/game/erbagang/bar_btn_bet.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_btn_bet.png"
+			"name": "bar_btn_bet_png"
 		},
 		{
-			"name": "bar_btn_game_record_png",
+			"url": "assets/game/erbagang/bar_btn_game_record.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_btn_game_record.png"
+			"name": "bar_btn_game_record_png"
 		},
 		{
-			"name": "bar_btn_grab_png",
+			"url": "assets/game/erbagang/bar_btn_grab.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_btn_grab.png"
+			"name": "bar_btn_grab_png"
 		},
 		{
-			"name": "bar_btn_grab_times_png",
+			"url": "assets/game/erbagang/bar_btn_grab_times.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_btn_grab_times.png"
+			"name": "bar_btn_grab_times_png"
 		},
 		{
-			"name": "bar_btn_no_grab_times_png",
+			"url": "assets/game/erbagang/bar_btn_no_grab_times.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_btn_no_grab_times.png"
+			"name": "bar_btn_no_grab_times_png"
 		},
 		{
-			"name": "bar_btn_txt_continue_png",
+			"url": "assets/game/erbagang/bar_btn_txt_continue.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_btn_txt_continue.png"
+			"name": "bar_btn_txt_continue_png"
 		},
 		{
-			"name": "bar_chip_10_png",
+			"url": "assets/game/erbagang/bar_chip_10.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_chip_10.png"
+			"name": "bar_chip_10_png"
 		},
 		{
-			"name": "bar_chip_100_png",
+			"url": "assets/game/erbagang/bar_chip_100.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_chip_100.png"
+			"name": "bar_chip_100_png"
 		},
 		{
-			"name": "bar_chip_10000_png",
+			"url": "assets/game/erbagang/bar_chip_10000.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_chip_10000.png"
+			"name": "bar_chip_10000_png"
 		},
 		{
-			"name": "bar_chip_2000_png",
+			"url": "assets/game/erbagang/bar_chip_2000.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_chip_2000.png"
+			"name": "bar_chip_2000_png"
 		},
 		{
-			"name": "bar_chip_50_png",
+			"url": "assets/game/erbagang/bar_chip_50.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_chip_50.png"
+			"name": "bar_chip_50_png"
 		},
 		{
-			"name": "bar_chip_500_png",
+			"url": "assets/game/erbagang/bar_chip_500.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_chip_500.png"
+			"name": "bar_chip_500_png"
 		},
 		{
-			"name": "bar_first_player_png",
+			"url": "assets/game/erbagang/bar_first_player.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_first_player.png"
+			"name": "bar_first_player_png"
 		},
 		{
-			"name": "bar_flag_banker_png",
+			"url": "assets/game/erbagang/bar_flag_banker.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_flag_banker.png"
+			"name": "bar_flag_banker_png"
 		},
 		{
-			"name": "bar_game_bet_times_fnt",
+			"url": "assets/game/erbagang/bar_game_bet_times.fnt",
 			"type": "font",
-			"url": "assets/game/erbagang/bar_game_bet_times.fnt"
+			"name": "bar_game_bet_times_fnt"
 		},
 		{
-			"name": "bar_game_bet_times_png",
+			"url": "assets/game/erbagang/bar_game_bet_times.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_game_bet_times.png"
+			"name": "bar_game_bet_times_png"
 		},
 		{
-			"name": "bar_game_countdown_fnt",
+			"url": "assets/game/erbagang/bar_game_countdown.fnt",
 			"type": "font",
-			"url": "assets/game/erbagang/bar_game_countdown.fnt"
+			"name": "bar_game_countdown_fnt"
 		},
 		{
-			"name": "bar_game_countdown_png",
+			"url": "assets/game/erbagang/bar_game_countdown.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_game_countdown.png"
+			"name": "bar_game_countdown_png"
 		},
 		{
-			"name": "bar_grab_time_txt_png",
+			"url": "assets/game/erbagang/bar_grab_time_txt.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_grab_time_txt.png"
+			"name": "bar_grab_time_txt_png"
 		},
 		{
-			"name": "bar_no_grab_fnt",
+			"url": "assets/game/erbagang/bar_no_grab.fnt",
 			"type": "font",
-			"url": "assets/game/erbagang/bar_no_grab.fnt"
+			"name": "bar_no_grab_fnt"
 		},
 		{
-			"name": "bar_no_grab_png",
+			"url": "assets/game/erbagang/bar_no_grab.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_no_grab.png"
+			"name": "bar_no_grab_png"
 		},
 		{
-			"name": "bar_over_banker_png",
+			"url": "assets/game/erbagang/bar_over_banker.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_banker.png"
+			"name": "bar_over_banker_png"
 		},
 		{
-			"name": "bar_over_btn_lose_close_png",
+			"url": "assets/game/erbagang/bar_over_btn_lose_close.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_btn_lose_close.png"
+			"name": "bar_over_btn_lose_close_png"
 		},
 		{
-			"name": "bar_over_lose_bg_png",
+			"url": "assets/game/erbagang/bar_over_lose_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_lose_bg.png"
+			"name": "bar_over_lose_bg_png"
 		},
 		{
-			"name": "bar_over_lose_hat_png",
+			"url": "assets/game/erbagang/bar_over_lose_hat.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_lose_hat.png"
+			"name": "bar_over_lose_hat_png"
 		},
 		{
-			"name": "bar_over_lose_light_png",
+			"url": "assets/game/erbagang/bar_over_lose_light.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_lose_light.png"
+			"name": "bar_over_lose_light_png"
 		},
 		{
-			"name": "bar_over_lose_title_png",
+			"url": "assets/game/erbagang/bar_over_lose_title.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_lose_title.png"
+			"name": "bar_over_lose_title_png"
 		},
 		{
-			"name": "bar_over_txt_bg_png",
+			"url": "assets/game/erbagang/bar_over_txt_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_txt_bg.png"
+			"name": "bar_over_txt_bg_png"
 		},
 		{
-			"name": "bar_over_win_bg_png",
+			"url": "assets/game/erbagang/bar_over_win_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_win_bg.png"
+			"name": "bar_over_win_bg_png"
 		},
 		{
-			"name": "bar_over_win_hat_png",
+			"url": "assets/game/erbagang/bar_over_win_hat.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_win_hat.png"
+			"name": "bar_over_win_hat_png"
 		},
 		{
-			"name": "bar_over_win_light_png",
+			"url": "assets/game/erbagang/bar_over_win_light.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_win_light.png"
+			"name": "bar_over_win_light_png"
 		},
 		{
-			"name": "bar_over_win_title_png",
+			"url": "assets/game/erbagang/bar_over_win_title.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_over_win_title.png"
+			"name": "bar_over_win_title_png"
 		},
 		{
-			"name": "bar_person_bg_png",
+			"url": "assets/game/erbagang/bar_person_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_person_bg.png"
+			"name": "bar_person_bg_png"
 		},
 		{
-			"name": "bar_plus_bg2_png",
+			"url": "assets/game/erbagang/bar_plus_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_plus_bg.png"
+			"name": "bar_plus_bg2_png"
 		},
 		{
-			"name": "bar_plus_font_fnt",
+			"url": "assets/game/erbagang/bar_plus_font.fnt",
 			"type": "font",
-			"url": "assets/game/erbagang/bar_plus_font.fnt"
+			"name": "bar_plus_font_fnt"
 		},
 		{
-			"name": "bar_plus_font_png",
+			"url": "assets/game/erbagang/bar_plus_font.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_plus_font.png"
+			"name": "bar_plus_font_png"
 		},
 		{
-			"name": "bar_point_0_png",
+			"url": "assets/game/erbagang/bar_point_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_0.png"
+			"name": "bar_point_0_png"
 		},
 		{
-			"name": "bar_point_1_png",
+			"url": "assets/game/erbagang/bar_point_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_1.png"
+			"name": "bar_point_1_png"
 		},
 		{
-			"name": "bar_point_11_png",
+			"url": "assets/game/erbagang/bar_point_11.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_11.png"
+			"name": "bar_point_11_png"
 		},
 		{
-			"name": "bar_point_12_png",
+			"url": "assets/game/erbagang/bar_point_12.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_12.png"
+			"name": "bar_point_12_png"
 		},
 		{
-			"name": "bar_point_13_png",
+			"url": "assets/game/erbagang/bar_point_13.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_13.png"
+			"name": "bar_point_13_png"
 		},
 		{
-			"name": "bar_point_14_png",
+			"url": "assets/game/erbagang/bar_point_14.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_14.png"
+			"name": "bar_point_14_png"
 		},
 		{
-			"name": "bar_point_15_png",
+			"url": "assets/game/erbagang/bar_point_15.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_15.png"
+			"name": "bar_point_15_png"
 		},
 		{
-			"name": "bar_point_16_png",
+			"url": "assets/game/erbagang/bar_point_16.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_16.png"
+			"name": "bar_point_16_png"
 		},
 		{
-			"name": "bar_point_17_png",
+			"url": "assets/game/erbagang/bar_point_17.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_17.png"
+			"name": "bar_point_17_png"
 		},
 		{
-			"name": "bar_point_18_png",
+			"url": "assets/game/erbagang/bar_point_18.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_18.png"
+			"name": "bar_point_18_png"
 		},
 		{
-			"name": "bar_point_19_png",
+			"url": "assets/game/erbagang/bar_point_19.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_19.png"
+			"name": "bar_point_19_png"
 		},
 		{
-			"name": "bar_point_2_png",
+			"url": "assets/game/erbagang/bar_point_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_2.png"
+			"name": "bar_point_2_png"
 		},
 		{
-			"name": "bar_point_20_png",
+			"url": "assets/game/erbagang/bar_point_20.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_20.png"
+			"name": "bar_point_20_png"
 		},
 		{
-			"name": "bar_point_21_png",
+			"url": "assets/game/erbagang/bar_point_21.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_21.png"
+			"name": "bar_point_21_png"
 		},
 		{
-			"name": "bar_point_22_png",
+			"url": "assets/game/erbagang/bar_point_22.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_22.png"
+			"name": "bar_point_22_png"
 		},
 		{
-			"name": "bar_point_23_png",
+			"url": "assets/game/erbagang/bar_point_23.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_23.png"
+			"name": "bar_point_23_png"
 		},
 		{
-			"name": "bar_point_24_png",
+			"url": "assets/game/erbagang/bar_point_24.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_24.png"
+			"name": "bar_point_24_png"
 		},
 		{
-			"name": "bar_point_25_png",
+			"url": "assets/game/erbagang/bar_point_25.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_25.png"
+			"name": "bar_point_25_png"
 		},
 		{
-			"name": "bar_point_26_png",
+			"url": "assets/game/erbagang/bar_point_26.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_26.png"
+			"name": "bar_point_26_png"
 		},
 		{
-			"name": "bar_point_27_png",
+			"url": "assets/game/erbagang/bar_point_27.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_27.png"
+			"name": "bar_point_27_png"
 		},
 		{
-			"name": "bar_point_28_png",
+			"url": "assets/game/erbagang/bar_point_28.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_28.png"
+			"name": "bar_point_28_png"
 		},
 		{
-			"name": "bar_point_29_png",
+			"url": "assets/game/erbagang/bar_point_29.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_29.png"
+			"name": "bar_point_29_png"
 		},
 		{
-			"name": "bar_point_3_png",
+			"url": "assets/game/erbagang/bar_point_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_3.png"
+			"name": "bar_point_3_png"
 		},
 		{
-			"name": "bar_point_30_png",
+			"url": "assets/game/erbagang/bar_point_30.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_30.png"
+			"name": "bar_point_30_png"
 		},
 		{
-			"name": "bar_point_4_png",
+			"url": "assets/game/erbagang/bar_point_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_4.png"
+			"name": "bar_point_4_png"
 		},
 		{
-			"name": "bar_point_5_png",
+			"url": "assets/game/erbagang/bar_point_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_5.png"
+			"name": "bar_point_5_png"
 		},
 		{
-			"name": "bar_point_6_png",
+			"url": "assets/game/erbagang/bar_point_6.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_6.png"
+			"name": "bar_point_6_png"
 		},
 		{
-			"name": "bar_point_7_png",
+			"url": "assets/game/erbagang/bar_point_7.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_7.png"
+			"name": "bar_point_7_png"
 		},
 		{
-			"name": "bar_point_8_png",
+			"url": "assets/game/erbagang/bar_point_8.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_8.png"
+			"name": "bar_point_8_png"
 		},
 		{
-			"name": "bar_point_9_png",
+			"url": "assets/game/erbagang/bar_point_9.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_9.png"
+			"name": "bar_point_9_png"
 		},
 		{
-			"name": "bar_point_bg_0_png",
+			"url": "assets/game/erbagang/bar_point_bg_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_bg_0.png"
+			"name": "bar_point_bg_0_png"
 		},
 		{
-			"name": "bar_point_bg_1_png",
+			"url": "assets/game/erbagang/bar_point_bg_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_bg_1.png"
+			"name": "bar_point_bg_1_png"
 		},
 		{
-			"name": "bar_point_bg_2_png",
+			"url": "assets/game/erbagang/bar_point_bg_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_point_bg_2.png"
+			"name": "bar_point_bg_2_png"
 		},
 		{
-			"name": "bar_random_banker_png",
+			"url": "assets/game/erbagang/bar_random_banker.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_random_banker.png"
+			"name": "bar_random_banker_png"
 		},
 		{
-			"name": "bar_reduce_bg2_png",
+			"url": "assets/game/erbagang/bar_reduce_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_reduce_bg.png"
+			"name": "bar_reduce_bg2_png"
 		},
 		{
-			"name": "bar_reduce_font_fnt",
+			"url": "assets/game/erbagang/bar_reduce_font.fnt",
 			"type": "font",
-			"url": "assets/game/erbagang/bar_reduce_font.fnt"
+			"name": "bar_reduce_font_fnt"
 		},
 		{
-			"name": "bar_reduce_font_png",
+			"url": "assets/game/erbagang/bar_reduce_font.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_reduce_font.png"
+			"name": "bar_reduce_font_png"
 		},
 		{
-			"name": "bar_start_title_bet_png",
+			"url": "assets/game/erbagang/bar_start_title_bet.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_start_title_bet.png"
+			"name": "bar_start_title_bet_png"
 		},
 		{
-			"name": "bar_start_title_grab_png",
+			"url": "assets/game/erbagang/bar_start_title_grab.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_start_title_grab.png"
+			"name": "bar_start_title_grab_png"
 		},
 		{
-			"name": "bar_statu_no_grab_png",
+			"url": "assets/game/erbagang/bar_statu_no_grab.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_statu_no_grab.png"
+			"name": "bar_statu_no_grab_png"
 		},
 		{
-			"name": "bar_thinking_png",
+			"url": "assets/game/erbagang/bar_thinking.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_thinking.png"
+			"name": "bar_thinking_png"
 		},
 		{
-			"name": "bar_thinking_0_png",
+			"url": "assets/game/erbagang/bar_thinking_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_thinking_0.png"
+			"name": "bar_thinking_0_png"
 		},
 		{
-			"name": "bar_tip_bg_png",
+			"url": "assets/game/erbagang/bar_tip_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_tip_bg.png"
+			"name": "bar_tip_bg_png"
 		},
 		{
-			"name": "bar_tip_close_png",
+			"url": "assets/game/erbagang/bar_tip_close.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_tip_close.png"
+			"name": "bar_tip_close_png"
 		},
 		{
-			"name": "bar_tip_title_1_png",
+			"url": "assets/game/erbagang/bar_tip_title_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_tip_title_1.png"
+			"name": "bar_tip_title_1_png"
 		},
 		{
-			"name": "bar_total_card_png",
+			"url": "assets/game/erbagang/bar_total_card.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_total_card.png"
+			"name": "bar_total_card_png"
 		},
 		{
-			"name": "bar_total_number_fnt",
+			"url": "assets/game/erbagang/bar_total_number.fnt",
 			"type": "font",
-			"url": "assets/game/erbagang/bar_total_number.fnt"
+			"name": "bar_total_number_fnt"
 		},
 		{
-			"name": "bar_total_number_png",
+			"url": "assets/game/erbagang/bar_total_number.png",
 			"type": "image",
-			"url": "assets/game/erbagang/bar_total_number.png"
+			"name": "bar_total_number_png"
 		},
 		{
-			"name": "Icon_zhuang_png",
+			"url": "assets/game/erbagang/Icon_zhuang.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Icon_zhuang.png"
+			"name": "Icon_zhuang_png"
 		},
 		{
-			"name": "Img_bg_jpg",
+			"url": "assets/game/erbagang/Img_bg.jpg",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_bg.jpg"
+			"name": "Img_bg_jpg"
 		},
 		{
-			"name": "Img_bg_png",
+			"url": "assets/game/erbagang/Img_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_bg.png"
+			"name": "Img_bg_png"
 		},
 		{
-			"name": "Img_bottom_bg_png",
+			"url": "assets/game/erbagang/Img_bottom_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_bottom_bg.png"
+			"name": "Img_bottom_bg_png"
 		},
 		{
-			"name": "Img_chouma_1_png",
+			"url": "assets/game/erbagang/Img_chouma_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_chouma_1.png"
+			"name": "Img_chouma_1_png"
 		},
 		{
-			"name": "Img_chouma_10_png",
+			"url": "assets/game/erbagang/Img_chouma_10.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_chouma_10.png"
+			"name": "Img_chouma_10_png"
 		},
 		{
-			"name": "Img_chouma_2_png",
+			"url": "assets/game/erbagang/Img_chouma_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_chouma_2.png"
+			"name": "Img_chouma_2_png"
 		},
 		{
-			"name": "Img_chouma_5_png",
+			"url": "assets/game/erbagang/Img_chouma_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_chouma_5.png"
+			"name": "Img_chouma_5_png"
 		},
 		{
-			"name": "Img_chouma_50_png",
+			"url": "assets/game/erbagang/Img_chouma_50.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_chouma_50.png"
+			"name": "Img_chouma_50_png"
 		},
 		{
-			"name": "Img_chouma_bg_png",
+			"url": "assets/game/erbagang/Img_chouma_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_chouma_bg.png"
+			"name": "Img_chouma_bg_png"
 		},
 		{
-			"name": "Img_heng_back_png",
+			"url": "assets/game/erbagang/Img_heng_back.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_heng_back.png"
+			"name": "Img_heng_back_png"
 		},
 		{
-			"name": "Img_heng_front_png",
+			"url": "assets/game/erbagang/Img_heng_front.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_heng_front.png"
+			"name": "Img_heng_front_png"
 		},
 		{
-			"name": "Img_num_0_png",
+			"url": "assets/game/erbagang/Img_num_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_num_0.png"
+			"name": "Img_num_0_png"
 		},
 		{
-			"name": "Img_num_1_png",
+			"url": "assets/game/erbagang/Img_num_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_num_1.png"
+			"name": "Img_num_1_png"
 		},
 		{
-			"name": "Img_num_2_png",
+			"url": "assets/game/erbagang/Img_num_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_num_2.png"
+			"name": "Img_num_2_png"
 		},
 		{
-			"name": "Img_num_3_png",
+			"url": "assets/game/erbagang/Img_num_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_num_3.png"
+			"name": "Img_num_3_png"
 		},
 		{
-			"name": "Img_num_4_png",
+			"url": "assets/game/erbagang/Img_num_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_num_4.png"
+			"name": "Img_num_4_png"
 		},
 		{
-			"name": "Img_qiang_1_png",
+			"url": "assets/game/erbagang/Img_qiang_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_qiang_1.png"
+			"name": "Img_qiang_1_png"
 		},
 		{
-			"name": "Img_qiang_2_png",
+			"url": "assets/game/erbagang/Img_qiang_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_qiang_2.png"
+			"name": "Img_qiang_2_png"
 		},
 		{
-			"name": "Img_qiang_3_png",
+			"url": "assets/game/erbagang/Img_qiang_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_qiang_3.png"
+			"name": "Img_qiang_3_png"
 		},
 		{
-			"name": "Img_qiang_4_png",
+			"url": "assets/game/erbagang/Img_qiang_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_qiang_4.png"
+			"name": "Img_qiang_4_png"
 		},
 		{
-			"name": "Img_shu_back_png",
+			"url": "assets/game/erbagang/Img_shu_back.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_shu_back.png"
+			"name": "Img_shu_back_png"
 		},
 		{
-			"name": "Img_shu_front_png",
+			"url": "assets/game/erbagang/Img_shu_front.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_shu_front.png"
+			"name": "Img_shu_front_png"
 		},
 		{
-			"name": "Img_xianshi_png",
+			"url": "assets/game/erbagang/Img_xianshi.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_xianshi.png"
+			"name": "Img_xianshi_png"
 		},
 		{
-			"name": "Img_zhanshi_png",
+			"url": "assets/game/erbagang/Img_zhanshi.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_zhanshi.png"
+			"name": "Img_zhanshi_png"
 		},
 		{
-			"name": "Img_zhanshi_bg_png",
+			"url": "assets/game/erbagang/Img_zhanshi_bg.png",
 			"type": "image",
-			"url": "assets/game/erbagang/Img_zhanshi_bg.png"
+			"name": "Img_zhanshi_bg_png"
 		},
 		{
-			"name": "lab_buqiang_png",
+			"url": "assets/game/erbagang/lab_buqiang.png",
 			"type": "image",
-			"url": "assets/game/erbagang/lab_buqiang.png"
+			"name": "lab_buqiang_png"
 		},
 		{
-			"name": "mahjong_0_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_0.png"
+			"name": "mahjong_0_png"
 		},
 		{
-			"name": "mahjong_1_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_1.png"
+			"name": "mahjong_1_png"
 		},
 		{
-			"name": "mahjong_2_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_2.png"
+			"name": "mahjong_2_png"
 		},
 		{
-			"name": "mahjong_3_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_3.png"
+			"name": "mahjong_3_png"
 		},
 		{
-			"name": "mahjong_4_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_4.png"
+			"name": "mahjong_4_png"
 		},
 		{
-			"name": "mahjong_5_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_5.png"
+			"name": "mahjong_5_png"
 		},
 		{
-			"name": "mahjong_6_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_6.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_6.png"
+			"name": "mahjong_6_png"
 		},
 		{
-			"name": "mahjong_7_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_7.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_7.png"
+			"name": "mahjong_7_png"
 		},
 		{
-			"name": "mahjong_8_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_8.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_8.png"
+			"name": "mahjong_8_png"
 		},
 		{
-			"name": "mahjong_9_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_9.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_9.png"
+			"name": "mahjong_9_png"
 		},
 		{
-			"name": "mahjong_cover_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_cover.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_cover.png"
+			"name": "mahjong_cover_png"
 		},
 		{
-			"name": "mahjong_turn_png",
+			"url": "assets/game/erbagang/mahjong/mahjong_turn.png",
 			"type": "image",
-			"url": "assets/game/erbagang/mahjong/mahjong_turn.png"
+			"name": "mahjong_turn_png"
 		},
 		{
-			"name": "bar_effect_30_0_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_0.png"
+			"name": "bar_effect_30_0_png"
 		},
 		{
-			"name": "bar_effect_30_1_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_1.png"
+			"name": "bar_effect_30_1_png"
 		},
 		{
-			"name": "bar_effect_30_10_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_10.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_10.png"
+			"name": "bar_effect_30_10_png"
 		},
 		{
-			"name": "bar_effect_30_11_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_11.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_11.png"
+			"name": "bar_effect_30_11_png"
 		},
 		{
-			"name": "bar_effect_30_12_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_12.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_12.png"
+			"name": "bar_effect_30_12_png"
 		},
 		{
-			"name": "bar_effect_30_13_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_13.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_13.png"
+			"name": "bar_effect_30_13_png"
 		},
 		{
-			"name": "bar_effect_30_14_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_14.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_14.png"
+			"name": "bar_effect_30_14_png"
 		},
 		{
-			"name": "bar_effect_30_15_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_15.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_15.png"
+			"name": "bar_effect_30_15_png"
 		},
 		{
-			"name": "bar_effect_30_16_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_16.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_16.png"
+			"name": "bar_effect_30_16_png"
 		},
 		{
-			"name": "bar_effect_30_2_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_2.png"
+			"name": "bar_effect_30_2_png"
 		},
 		{
-			"name": "bar_effect_30_3_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_3.png"
+			"name": "bar_effect_30_3_png"
 		},
 		{
-			"name": "bar_effect_30_4_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_4.png"
+			"name": "bar_effect_30_4_png"
 		},
 		{
-			"name": "bar_effect_30_5_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_5.png"
+			"name": "bar_effect_30_5_png"
 		},
 		{
-			"name": "bar_effect_30_6_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_6.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_6.png"
+			"name": "bar_effect_30_6_png"
 		},
 		{
-			"name": "bar_effect_30_7_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_7.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_7.png"
+			"name": "bar_effect_30_7_png"
 		},
 		{
-			"name": "bar_effect_30_8_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_8.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_8.png"
+			"name": "bar_effect_30_8_png"
 		},
 		{
-			"name": "bar_effect_30_9_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_9.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_30_9.png"
+			"name": "bar_effect_30_9_png"
 		},
 		{
-			"name": "bar_effect_banker_0_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_0.png"
+			"name": "bar_effect_banker_0_png"
 		},
 		{
-			"name": "bar_effect_banker_1_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_1.png"
+			"name": "bar_effect_banker_1_png"
 		},
 		{
-			"name": "bar_effect_banker_10_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_10.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_10.png"
+			"name": "bar_effect_banker_10_png"
 		},
 		{
-			"name": "bar_effect_banker_2_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_2.png"
+			"name": "bar_effect_banker_2_png"
 		},
 		{
-			"name": "bar_effect_banker_3_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_3.png"
+			"name": "bar_effect_banker_3_png"
 		},
 		{
-			"name": "bar_effect_banker_4_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_4.png"
+			"name": "bar_effect_banker_4_png"
 		},
 		{
-			"name": "bar_effect_banker_5_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_5.png"
+			"name": "bar_effect_banker_5_png"
 		},
 		{
-			"name": "bar_effect_banker_6_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_6.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_6.png"
+			"name": "bar_effect_banker_6_png"
 		},
 		{
-			"name": "bar_effect_banker_7_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_7.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_7.png"
+			"name": "bar_effect_banker_7_png"
 		},
 		{
-			"name": "bar_effect_banker_8_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_8.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_8.png"
+			"name": "bar_effect_banker_8_png"
 		},
 		{
-			"name": "bar_effect_banker_9_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_9.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_banker_9.png"
+			"name": "bar_effect_banker_9_png"
 		},
 		{
-			"name": "bar_effect_kill_0_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_0.png"
+			"name": "bar_effect_kill_0_png"
 		},
 		{
-			"name": "bar_effect_kill_1_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_1.png"
+			"name": "bar_effect_kill_1_png"
 		},
 		{
-			"name": "bar_effect_kill_10_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_10.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_10.png"
+			"name": "bar_effect_kill_10_png"
 		},
 		{
-			"name": "bar_effect_kill_11_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_11.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_11.png"
+			"name": "bar_effect_kill_11_png"
 		},
 		{
-			"name": "bar_effect_kill_12_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_12.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_12.png"
+			"name": "bar_effect_kill_12_png"
 		},
 		{
-			"name": "bar_effect_kill_13_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_13.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_13.png"
+			"name": "bar_effect_kill_13_png"
 		},
 		{
-			"name": "bar_effect_kill_2_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_2.png"
+			"name": "bar_effect_kill_2_png"
 		},
 		{
-			"name": "bar_effect_kill_3_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_3.png"
+			"name": "bar_effect_kill_3_png"
 		},
 		{
-			"name": "bar_effect_kill_4_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_4.png"
+			"name": "bar_effect_kill_4_png"
 		},
 		{
-			"name": "bar_effect_kill_5_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_5.png"
+			"name": "bar_effect_kill_5_png"
 		},
 		{
-			"name": "bar_effect_kill_6_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_6.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_6.png"
+			"name": "bar_effect_kill_6_png"
 		},
 		{
-			"name": "bar_effect_kill_7_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_7.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_7.png"
+			"name": "bar_effect_kill_7_png"
 		},
 		{
-			"name": "bar_effect_kill_8_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_8.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_8.png"
+			"name": "bar_effect_kill_8_png"
 		},
 		{
-			"name": "bar_effect_kill_9_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_9.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_kill_9.png"
+			"name": "bar_effect_kill_9_png"
 		},
 		{
-			"name": "bar_effect_start_0_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_0.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_0.png"
+			"name": "bar_effect_start_0_png"
 		},
 		{
-			"name": "bar_effect_start_1_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_1.png"
+			"name": "bar_effect_start_1_png"
 		},
 		{
-			"name": "bar_effect_start_10_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_10.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_10.png"
+			"name": "bar_effect_start_10_png"
 		},
 		{
-			"name": "bar_effect_start_11_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_11.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_11.png"
+			"name": "bar_effect_start_11_png"
 		},
 		{
-			"name": "bar_effect_start_12_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_12.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_12.png"
+			"name": "bar_effect_start_12_png"
 		},
 		{
-			"name": "bar_effect_start_13_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_13.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_13.png"
+			"name": "bar_effect_start_13_png"
 		},
 		{
-			"name": "bar_effect_start_14_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_14.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_14.png"
+			"name": "bar_effect_start_14_png"
 		},
 		{
-			"name": "bar_effect_start_15_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_15.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_15.png"
+			"name": "bar_effect_start_15_png"
 		},
 		{
-			"name": "bar_effect_start_16_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_16.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_16.png"
+			"name": "bar_effect_start_16_png"
 		},
 		{
-			"name": "bar_effect_start_2_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_2.png"
+			"name": "bar_effect_start_2_png"
 		},
 		{
-			"name": "bar_effect_start_3_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_3.png"
+			"name": "bar_effect_start_3_png"
 		},
 		{
-			"name": "bar_effect_start_4_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_4.png"
+			"name": "bar_effect_start_4_png"
 		},
 		{
-			"name": "bar_effect_start_5_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_5.png"
+			"name": "bar_effect_start_5_png"
 		},
 		{
-			"name": "bar_effect_start_6_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_6.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_6.png"
+			"name": "bar_effect_start_6_png"
 		},
 		{
-			"name": "bar_effect_start_7_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_7.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_7.png"
+			"name": "bar_effect_start_7_png"
 		},
 		{
-			"name": "bar_effect_start_8_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_8.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_8.png"
+			"name": "bar_effect_start_8_png"
 		},
 		{
-			"name": "bar_effect_start_9_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_9.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_effect_start_9.png"
+			"name": "bar_effect_start_9_png"
 		},
 		{
-			"name": "bar_sicbo_1_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_1.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_1.png"
+			"name": "bar_sicbo_1_png"
 		},
 		{
-			"name": "bar_sicbo_2_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_2.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_2.png"
+			"name": "bar_sicbo_2_png"
 		},
 		{
-			"name": "bar_sicbo_3_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_3.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_3.png"
+			"name": "bar_sicbo_3_png"
 		},
 		{
-			"name": "bar_sicbo_4_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_4.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_4.png"
+			"name": "bar_sicbo_4_png"
 		},
 		{
-			"name": "bar_sicbo_5_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_5.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_5.png"
+			"name": "bar_sicbo_5_png"
 		},
 		{
-			"name": "bar_sicbo_6_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_6.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_6.png"
+			"name": "bar_sicbo_6_png"
 		},
 		{
-			"name": "bar_sicbo_all_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_all.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_all.png"
+			"name": "bar_sicbo_all_png"
 		},
 		{
-			"name": "bar_sicbo_bottom_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_bottom.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_bottom.png"
+			"name": "bar_sicbo_bottom_png"
 		},
 		{
-			"name": "bar_sicbo_top_png",
+			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_top.png",
 			"type": "image",
-			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_top.png"
+			"name": "bar_sicbo_top_png"
 		},
 		{
-			"name": "baccarat_font_bureau_0_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_0.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_0.png"
+			"name": "baccarat_font_bureau_0_png"
 		},
 		{
-			"name": "baccarat_font_bureau_1_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_1.png"
+			"name": "baccarat_font_bureau_1_png"
 		},
 		{
-			"name": "baccarat_font_bureau_2_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_2.png"
+			"name": "baccarat_font_bureau_2_png"
 		},
 		{
-			"name": "baccarat_font_bureau_3_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_3.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_3.png"
+			"name": "baccarat_font_bureau_3_png"
 		},
 		{
-			"name": "baccarat_font_bureau_4_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_4.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_4.png"
+			"name": "baccarat_font_bureau_4_png"
 		},
 		{
-			"name": "baccarat_font_bureau_5_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_5.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_5.png"
+			"name": "baccarat_font_bureau_5_png"
 		},
 		{
-			"name": "baccarat_font_bureau_6_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_6.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_6.png"
+			"name": "baccarat_font_bureau_6_png"
 		},
 		{
-			"name": "baccarat_font_bureau_7_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_7.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_7.png"
+			"name": "baccarat_font_bureau_7_png"
 		},
 		{
-			"name": "baccarat_font_bureau_8_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_8.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_8.png"
+			"name": "baccarat_font_bureau_8_png"
 		},
 		{
-			"name": "baccarat_font_bureau_9_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_9.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_9.png"
+			"name": "baccarat_font_bureau_9_png"
 		},
 		{
-			"name": "baccarat_font_bureau_diju1_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_diju1.png"
+			"name": "baccarat_font_bureau_diju1_png"
 		},
 		{
-			"name": "baccarat_font_bureau_diju2_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_diju2.png"
+			"name": "baccarat_font_bureau_diju2_png"
 		},
 		{
-			"name": "baccarat_font_stage_1_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_1.png"
+			"name": "baccarat_font_stage_1_png"
 		},
 		{
-			"name": "baccarat_font_stage_2_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_2.png"
+			"name": "baccarat_font_stage_2_png"
 		},
 		{
-			"name": "baccarat_font_stage_3_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_3.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_3.png"
+			"name": "baccarat_font_stage_3_png"
 		},
 		{
-			"name": "baccarat_font_stage_4_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_4.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_4.png"
+			"name": "baccarat_font_stage_4_png"
 		},
 		{
-			"name": "baccarat_font_stage_5_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_5.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_5.png"
+			"name": "baccarat_font_stage_5_png"
 		},
 		{
-			"name": "baccarat_font_stage_6_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_6.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_6.png"
+			"name": "baccarat_font_stage_6_png"
 		},
 		{
-			"name": "baccarat_font_bureau_02_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_0.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_0.png"
+			"name": "baccarat_font_bureau_02_png"
 		},
 		{
-			"name": "baccarat_font_bureau_12_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_1.png"
+			"name": "baccarat_font_bureau_12_png"
 		},
 		{
-			"name": "baccarat_font_bureau_22_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_2.png"
+			"name": "baccarat_font_bureau_22_png"
 		},
 		{
-			"name": "baccarat_font_bureau_32_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_3.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_3.png"
+			"name": "baccarat_font_bureau_32_png"
 		},
 		{
-			"name": "baccarat_font_bureau_42_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_4.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_4.png"
+			"name": "baccarat_font_bureau_42_png"
 		},
 		{
-			"name": "baccarat_font_bureau_52_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_5.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_5.png"
+			"name": "baccarat_font_bureau_52_png"
 		},
 		{
-			"name": "baccarat_font_bureau_62_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_6.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_6.png"
+			"name": "baccarat_font_bureau_62_png"
 		},
 		{
-			"name": "baccarat_font_bureau_72_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_7.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_7.png"
+			"name": "baccarat_font_bureau_72_png"
 		},
 		{
-			"name": "baccarat_font_bureau_82_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_8.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_8.png"
+			"name": "baccarat_font_bureau_82_png"
 		},
 		{
-			"name": "baccarat_font_bureau_92_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_9.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_9.png"
+			"name": "baccarat_font_bureau_92_png"
 		},
 		{
-			"name": "baccarat_font_bureau_diju12_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_diju1.png"
+			"name": "baccarat_font_bureau_diju12_png"
 		},
 		{
-			"name": "baccarat_font_bureau_diju22_png",
+			"url": "assets/game/baijiale/baccarat_font_bureau_diju2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_bureau_diju2.png"
+			"name": "baccarat_font_bureau_diju22_png"
 		},
 		{
-			"name": "baccarat_font_stage_12_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_1.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_1.png"
+			"name": "baccarat_font_stage_12_png"
 		},
 		{
-			"name": "baccarat_font_stage_22_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_2.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_2.png"
+			"name": "baccarat_font_stage_22_png"
 		},
 		{
-			"name": "baccarat_font_stage_32_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_3.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_3.png"
+			"name": "baccarat_font_stage_32_png"
 		},
 		{
-			"name": "baccarat_font_stage_42_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_4.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_4.png"
+			"name": "baccarat_font_stage_42_png"
 		},
 		{
-			"name": "baccarat_font_stage_52_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_5.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_5.png"
+			"name": "baccarat_font_stage_52_png"
 		},
 		{
-			"name": "baccarat_font_stage_62_png",
+			"url": "assets/game/baijiale/baccarat_font_stage_6.png",
 			"type": "image",
-			"url": "assets/game/baijiale/baccarat_font_stage_6.png"
+			"name": "baccarat_font_stage_62_png"
+		},
+		{
+			"url": "assets/game/tbnn/tb_bg_table.png",
+			"type": "image",
+			"name": "tb_bg_table_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei.png",
+			"type": "image",
+			"name": "tongbi_bei_png"
+		},
+		{
+			"url": "assets/game/tbnn/nn_btn_tanpai.png",
+			"type": "image",
+			"name": "nn_btn_tanpai_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei1.png",
+			"type": "image",
+			"name": "tongbi_bei1_png"
+		},
+		{
+			"url": "assets/game/tbnn/tongbi_bei2.png",
+			"type": "image",
+			"name": "tongbi_bei2_png"
+		},
+		{
+			"url": "assets/game/tbnn/bg_tbnn.jpg",
+			"type": "image",
+			"name": "bg_tbnn_jpg"
 		}
 	]
 }
