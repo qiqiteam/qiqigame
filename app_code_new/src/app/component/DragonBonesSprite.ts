@@ -1,5 +1,9 @@
 class DragonBonesSprite  extends egret.DisplayObjectContainer{
-	private armature:dragonBones.Armature;
+	private armatureDisplay:dragonBones.EgretArmatureDisplay;
+	private isPlay:boolean;
+	private isStop:boolean;
+	private animationName:string;
+	private isDestroy:boolean;
 	constructor(source: string,bones?: string){
         super();
 	  	this.init(source,bones);
@@ -7,22 +11,50 @@ class DragonBonesSprite  extends egret.DisplayObjectContainer{
     }
 
     private init(source: string,bones?: string){
-		this.armature = xlLib.DisplayUtils.createDragonBonesDisplay(source,bones);
-        let armatureDisplay:dragonBones.EgretArmatureDisplay = this.armature.getDisplay();
-		this.addChild(armatureDisplay);
+		xlLib.DisplayUtils.createDragonBonesDisplay(source,bones,this.onDragonBonesCreate,this);
+	}
+
+	private onDragonBonesCreate(armatureDisplay:dragonBones.EgretArmatureDisplay):void
+	{
+        this.armatureDisplay = armatureDisplay;
+		this.addChild(this.armatureDisplay);
+		if(this.isPlay){
+			xlLib.DisplayUtils.runDragonBonesArmature(this.armatureDisplay.armature,this.animationName);
+		}
+		if(this.isStop){
+			xlLib.DisplayUtils.stopDragonBonesArmature(this.armatureDisplay.armature,this.animationName);
+		}
+		if(this.isDestroy){
+			xlLib.DisplayUtils.destoryDragonBonesArmature(this.armatureDisplay.armature);
+		}
 	}
 
 	public play(animationName:string):void
 	{
-		xlLib.DisplayUtils.runDragonBonesArmature(this.armature,animationName);
+		this.animationName = animationName;
+		this.isPlay = true;
+		this.isStop = false;
+		if(this.armatureDisplay){
+			xlLib.DisplayUtils.runDragonBonesArmature(this.armatureDisplay.armature,this.animationName);
+		}
 	}
 
 	public stop(animationName?:string):void
 	{
-		xlLib.DisplayUtils.stopDragonBonesArmature(this.armature,animationName);
+		this.animationName = animationName;
+		this.isPlay = false;
+		this.isStop = true;
+		if(this.armatureDisplay){
+			xlLib.DisplayUtils.stopDragonBonesArmature(this.armatureDisplay.armature,this.animationName);
+		}
 	}
 
 	public destroy(){
-		xlLib.DisplayUtils.destoryDragonBonesArmature(this.armature);
+		this.isDestroy = false;
+		this.isPlay = false;
+		this.isStop = false;
+		if(this.armatureDisplay){
+			xlLib.DisplayUtils.destoryDragonBonesArmature(this.armatureDisplay.armature);
+		}
 	}
 }

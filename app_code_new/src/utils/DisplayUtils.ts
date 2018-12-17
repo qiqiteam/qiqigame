@@ -11,25 +11,6 @@ module xlLib {
             return result;
         }
 
-        /**
-         * 创建DragonBones显示对象
-         */
-        public static createAsyncDragonBonesDisplay(source: string,bones?: string): dragonBones.Armature {
-            let dragonbonesData = RES.getResAsync(source + "_ske_json");
-            let textureData = RES.getResAsync(source + "_tex_json");
-            let texture = RES.getResAsync(source + "_tex_png");
-
-
-            var armature: dragonBones.Armature;
-            // var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
-            // var db:dragonBones.DragonBonesData = dragonBones.DataParser.parseDragonBonesData(dragonbonesData);
-            // dragonbonesFactory.addDragonBonesData(db);
-            // var tx:dragonBones.EgretTextureAtlas = new dragonBones.EgretTextureAtlas(texture, textureData);
-            // dragonbonesFactory.addTextureAtlasData(tx);
-            // armature = dragonbonesFactory.buildArmature(bones);
-            return armature;
-        }
-
         public static createAsyncMovieClicp(groupName: string, keyName?: string,isloop:boolean=true, playTimes?:number): egret.MovieClip 
         {
             var mdf:egret.MovieClipDataFactory;
@@ -121,18 +102,110 @@ module xlLib {
         /**
          * 创建DragonBones显示对象
          */
-        public static createDragonBonesDisplay(source: string,bones?: string): dragonBones.Armature {
+        public static createDragonBonesDisplay(source: string,bones?: string,compFunc?: Function, thisObject?: any):void {
+            let armatureDisplay:dragonBones.EgretArmatureDisplay = new dragonBones.EgretArmatureDisplay();
             let dragonbonesData = RES.getRes(source + "_ske_json");
             let textureData = RES.getRes(source + "_tex_json");
             let texture = RES.getRes(source + "_tex_png");
-            if (!dragonbonesData || !textureData || !texture)
-            {
-               console.log("资源" +source + "不存在");
-               return;
-            }
             if (StringUtils.stringIsNullOrEmpty(bones))
             {
                 bones = "armature";
+            }
+            var armature: dragonBones.Armature;
+            if(dragonbonesData)
+            {
+                armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                if(armature){
+                    armatureDisplay = armature.display;
+                    if (thisObject != null) {
+                        compFunc.call(thisObject,armatureDisplay);
+                    } else {
+                        if (compFunc)
+                            compFunc(armatureDisplay);
+                    }
+                }
+            }
+            else
+            {
+                xlLib.ResUtils.getRes(source + "_ske_json",(db:any,url:string)=>{
+                    dragonbonesData = db
+                    armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                    if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                    }
+                }
+                });
+            }
+            if(textureData)
+            {
+               armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                  if(armature){
+                    armatureDisplay = armature.display;
+                    if (thisObject != null) {
+                        compFunc.call(thisObject,armatureDisplay);
+                    } else {
+                        if (compFunc)
+                            compFunc(armatureDisplay);
+                    }
+                  }
+            }
+            else
+            {
+               xlLib.ResUtils.getRes(source + "_tex_json",(td:any,url:string)=>{
+                    textureData = td;
+                    armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                    if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                        }
+                    }
+                });
+            }
+            if(texture)
+            {
+                armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                        }
+                    }
+            }
+            else
+            {
+                 xlLib.ResUtils.getRes(source + "_tex_png",(tr:any,url:string)=>{
+                    texture = tr;
+                    armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                    if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                        }
+                    }
+                });
+            }
+        }
+
+        private static creatArmature(dragonbonesData,textureData,texture,bones?:string):dragonBones.Armature
+        {
+            if (!dragonbonesData || !textureData || !texture)
+            {
+               return;
             }
             var armature: dragonBones.Armature;
             var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
