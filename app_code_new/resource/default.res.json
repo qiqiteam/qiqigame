@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,bg_qznn_niujiao_tex_png,bg_qznn_niujiao_tex_json,bg_qznn_niujiao_ske_json",
+			"keys": "loading_png",
 			"name": "preload"
 		},
 		{
