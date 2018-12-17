@@ -29,7 +29,8 @@ class LodingView extends  eui.Component
     public load_img:eui.Image;
 
     public ami: egret.tween.TweenGroup;
-    private  liuguang:dragonBones.Armature;
+    private liuguang:DragonBonesSprite;
+
     constructor()
     {
         super();
@@ -39,13 +40,11 @@ class LodingView extends  eui.Component
 
     private playLiuguang():void
     {
-        this.liuguang = xlLib.DisplayUtils.createDragonBonesDisplay('wzqp',"wzqp");
-        dragonBones.WorldClock.clock.add(this.liuguang);
-        let armatureDisplay = this.liuguang.getDisplay();
-        armatureDisplay.x = 1230;
-        armatureDisplay.y = 400;
-        this.addChild(armatureDisplay);
-        xlLib.DisplayUtils.runDragonBonesArmature(this.liuguang,"wzqp");
+        this.liuguang = new DragonBonesSprite('wzqp',"wzqp");
+        this.liuguang.x = 1230;
+        this.liuguang.y = 400;
+        this.addChild(this.liuguang);
+        this.liuguang.play("wzqp");
     }
 
 
@@ -60,8 +59,8 @@ class LodingView extends  eui.Component
 
     protected partRemoved(partName: string, instance: any): void
     {
+        this.liuguang.destroy();
         this.stop();
-         xlLib.DisplayUtils.destoryDragonBonesArmature(this.liuguang,"wzqp");
         super.partRemoved(partName,instance);
     }
 

@@ -8,7 +8,7 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 
 
 	private gameIconData: GameIconData;
-	private playerDb:dragonBones.Armature;
+	private playerDb:DragonBonesSprite;
 	private tbroomeff:TBNNroomEff;
 	public constructor() {
 		super();
@@ -20,13 +20,11 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 
 	private playPlayerDragonBones():void
     {
-        this.playerDb = xlLib.DisplayUtils.createDragonBonesDisplay('tongbiniuniu',"armatureName");
-        dragonBones.WorldClock.clock.add(this.playerDb);
-        let armatureDisplay:dragonBones.EgretArmatureDisplay = this.playerDb.getDisplay();
-        armatureDisplay.x = 450+armatureDisplay.width;
-        armatureDisplay.y = 600;
-        this.addChild(armatureDisplay);
-        xlLib.DisplayUtils.runDragonBonesArmature(this.playerDb,"newAnimation");
+        this.playerDb = new DragonBonesSprite('tongbiniuniu',"armatureName");
+        this.playerDb.x = 772;
+        this.playerDb.y = 600;
+        this.addChild(this.playerDb);
+        this.playerDb.play("newAnimation");
     }
 
 	protected childrenCreated(): void {
@@ -76,7 +74,7 @@ class TBNNroomView extends eui.Component implements eui.UIComponent {
 
 	public destroy(): void {
 		this.tbroomeff.stop();
-		xlLib.DisplayUtils.destoryDragonBonesArmature(this.playerDb,"newAnimation");
+		this.playerDb.destroy();
 		this.playerDb = null;
 		this.gameIconData = null;
 		this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);

@@ -26,6 +26,7 @@
 		"bin-debug/app/component/ComBox.js",
 		"bin-debug/app/component/ComBoxItem.js",
 		"bin-debug/app/component/DatePickerView.js",
+		"bin-debug/app/component/DragonBonesSprite.js",
 		"bin-debug/app/component/EToggleSwitch.js",
 		"bin-debug/app/component/Hint.js",
 		"bin-debug/app/component/Inthematch.js",
@@ -101,8 +102,8 @@
 		"bin-debug/app/game/recharge/orderinquiry.js",
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
-		"bin-debug/app/game/safebox/SafeBoxTypeItem.js",
 		"bin-debug/Global.js",
+		"bin-debug/app/game/safebox/SafeBoxView.js",
 		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/tbnn/TBNNHead.js",
@@ -133,7 +134,6 @@
 		"bin-debug/app/interface/IGameTableData.js",
 		"bin-debug/app/lobby/GameIconItem.js",
 		"bin-debug/app/lobby/GameIconListView.js",
-		"bin-debug/app/lobby/GameTypeItem.js",
 		"bin-debug/app/lobby/Lobby.js",
 		"bin-debug/app/lobby/LobbyView.js",
 		"bin-debug/app/lobby/QznnIconItem.js",
@@ -193,6 +193,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/app/game/safebox/SafeBoxView.js"
+		"bin-debug/app/game/safebox/SafeBoxTypeItem.js"
 	]
 }
