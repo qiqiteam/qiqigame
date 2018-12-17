@@ -68,7 +68,6 @@
 		"bin-debug/app/game/playerinfo/PlayerInfoTypeItem.js",
 		"bin-debug/app/game/playerinfo/PlayerInfoView.js",
 		"bin-debug/app/game/qznn/INiuNiuBetEffect.js",
-		"bin-debug/app/game/qznn/NiuJiao.js",
 		"bin-debug/app/game/qznn/NiuNBei.js",
 		"bin-debug/app/game/qznn/NiuZhang0.js",
 		"bin-debug/app/game/qznn/NiuZhang1.js",
@@ -102,8 +101,8 @@
 		"bin-debug/app/game/recharge/orderinquiry.js",
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
+		"bin-debug/app/game/safebox/SafeBoxTypeItem.js",
 		"bin-debug/Global.js",
-		"bin-debug/app/game/safebox/SafeBoxView.js",
 		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/tbnn/TBNNHead.js",
@@ -193,6 +192,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/app/game/safebox/SafeBoxTypeItem.js"
+		"bin-debug/app/game/safebox/SafeBoxView.js"
 	]
 }

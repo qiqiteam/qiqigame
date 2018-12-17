@@ -118,8 +118,6 @@ declare class DZHEffSkin extends eui.Skin{
 }
 declare class DZVEffSkin extends eui.Skin{
 }
-declare class NiuJiaoSkin extends eui.Skin{
-}
 declare class NiuNBeiSkin extends eui.Skin{
 }
 declare class QZNNGameStartSkin extends eui.Skin{

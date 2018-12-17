@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_mp3,bar_game_start_0_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3",
+			"keys": "loading_png,bg_qznn_niujiao_tex_png,bg_qznn_niujiao_tex_json,bg_qznn_niujiao_ske_json",
 			"name": "preload"
 		},
 		{
@@ -1263,36 +1263,6 @@
 			"url": "assets/effects/game/qznn_effect_5_5.png",
 			"type": "image",
 			"name": "qznn_effect_5_5_png"
-		},
-		{
-			"url": "assets/effects/game/qznn_effect_robot_tex1.png",
-			"type": "image",
-			"name": "qznn_effect_robot_tex1_png"
-		},
-		{
-			"url": "assets/effects/game/qznn_effect_robot_tex2.png",
-			"type": "image",
-			"name": "qznn_effect_robot_tex2_png"
-		},
-		{
-			"url": "assets/effects/game/qznn_effect_robot_tex3.png",
-			"type": "image",
-			"name": "qznn_effect_robot_tex3_png"
-		},
-		{
-			"url": "assets/effects/game/qznn_effect_robot_tex5.png",
-			"type": "image",
-			"name": "qznn_effect_robot_tex5_png"
-		},
-		{
-			"url": "assets/effects/game/qznn_effect_robot_tex6.png",
-			"type": "image",
-			"name": "qznn_effect_robot_tex6_png"
-		},
-		{
-			"url": "assets/effects/game/qznn_effect_robot_tex7.png",
-			"type": "image",
-			"name": "qznn_effect_robot_tex7_png"
 		},
 		{
 			"url": "assets/effects/game/qznn_win_tex1.png",
@@ -6613,6 +6583,21 @@
 			"url": "assets/dragonbones/bg_ebg_tianwang/bg_ebg_tianwang_tex.json",
 			"type": "json",
 			"name": "bg_ebg_tianwang_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.png",
+			"type": "image",
+			"name": "bg_qznn_niujiao_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_ske.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_ske_json"
 		}
 	]
 }

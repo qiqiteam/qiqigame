@@ -222,10 +222,6 @@ module xlLib {
 
         public static stopDragonBonesArmature(armature:dragonBones.Armature,animationName?:string):void
         {
-            var _time:number;
-            egret.stopTick((timeStamp)=>{
-                return true;
-            }, armature);
             armature.animation.stop(animationName);
             dragonBones.WorldClock.clock.remove(armature);
         }
