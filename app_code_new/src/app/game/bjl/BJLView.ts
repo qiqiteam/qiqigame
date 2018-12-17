@@ -205,10 +205,12 @@ class BJLView extends eui.Component {
 
         //------------------------------------
         this.arrCoin = [];
-        this.jushu_bg.visible = false;
-        this.js_shi.visible = false;
-        this.js_ge.visible = false;
-        this.js_ge.x = 603;
+
+        // this.jushu_bg.visible = true;
+        // this.js_shi.visible = false;
+        // this.js_ge.visible = true;
+        // this.js_ge.x = 603;
+        
         this.tishi_zi_0.visible = false;
         this.tishi_zi_1.visible = false;
         this.wjlistkuang.visible = false;
@@ -429,6 +431,7 @@ class BJLView extends eui.Component {
     private SendJetton(data: any): void {
         for (let i = 0; i < data._obj.betrules.length; i++) {
             this.multipleList[i] = data._obj.betrules[i];
+            this['_image_' + (i + 1)].source = 'baccarat_game_icon_chouma_' + this.multipleList[i] + '_png';
         }
     }
     /**赔率 */
@@ -586,10 +589,10 @@ class BJLView extends eui.Component {
     /**金币变为** */
     private onAcquisitionGolbBack(data: any): void {
         if (data._obj.code == 200) {
-            if (UserInfo.getInstance().uid == data._obj.userid) {
-                UserInfo.getInstance().goldcoins = data._obj.goldcoins;
-                this.labelGold0.text = GlobalFunction.Formatconversion(data._obj.goldcoins);
-            }
+            // if (UserInfo.getInstance().uid == data._obj.userid) {
+            UserInfo.getInstance().goldcoins = data._obj.goldcoins;
+            this.labelGold0.text = GlobalFunction.Formatconversion(data._obj.goldcoins);
+            // }
         }
     }
     /**结算（派奖） */
@@ -691,8 +694,8 @@ class BJLView extends eui.Component {
             case 1: ; break;    //当前房间状态不能下注
             case 2: ; break;    //余额不足
             case 3: ; break;
-            case 4: this.tichufj(); break;    //5局不下注踢出房间
-            case 5: ; break;    //3局不下注提示
+            case 5: this.tichufj(); break;    //5局不下注踢出房间
+            case 4: ; break;    //3局不下注提示
             case 6: ; break;    //
             case 7: ; break;    //金币不足
         }
@@ -931,6 +934,14 @@ class BJLView extends eui.Component {
     }
     /**补牌动画 */
     private fapai2(index: number, num: number) {
+
+        var card: eui.Image = this['grpCard_' + index + '_2'];
+        card.x = 713.5;
+        card.y = 100;
+        card.source = 'qznn_card_' + num;
+        var pos = this.orginPlayerCardPos[index][2];
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400)
+
 
         let _card1 = this["puke_" + index + "_2"];
         let _card2 = this["_bei_puke_" + index + "_2"];

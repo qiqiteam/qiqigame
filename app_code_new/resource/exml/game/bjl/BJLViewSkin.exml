@@ -172,7 +172,7 @@
 			</e:Group>
 		</e:Scroller>
 	</e:Group>
-	<e:Group id="Themitoken" x="0" y="205">
+	<e:Group id="Themitoken" x="0" y="205" locked="true" visible="false">
 		<e:Image scaleX="1" scaleY="1" width="1472" height="419" source="baccarat_game_mipai_bg_png" x="0" y="0" locked="true"/>
 
 
@@ -206,14 +206,14 @@
 
 
 		</e:Group>
-		<e:Rect id="mask_4" width="255" height="170" scaleX="1" scaleY="1" x="348.07" y="125" locked="true"/>
+		<e:Rect id="mask_4" width="255" height="170" scaleX="1" scaleY="1" x="350.07" y="125" locked="true"/>
 		<e:Group x="600" width="500" height="170" id="cardgrp_5" y="125" locked="true">
 			<e:Image id="_bei_puke_1_2" x="255" scaleX="1" scaleY="1" width="170" height="255" alpha="1" source="gf_poker0_png" rotation="-90" y="170"/>
 			<e:Image id="puke_1_2" x="0" scaleX="1" scaleY="1" width="170" height="255" source="img_puke_7_png" rotation="-90" y="170"/>
 
 
 		</e:Group>
-		<e:Rect id="mask_5" width="255" height="170" scaleX="1" scaleY="1" y="125" x="849.64"/>
+		<e:Rect id="mask_5" width="255" height="170" scaleX="1" scaleY="1" y="125" x="849.64" locked="true"/>
 
 
 
