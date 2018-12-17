@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png",
+			"keys": "loading_png,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_mp3,bar_game_start_0_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3",
 			"name": "preload"
 		},
 		{
@@ -6513,6 +6513,106 @@
 			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_top.png",
 			"type": "image",
 			"name": "bar_sicbo_top_png"
+		},
+		{
+			"url": "assets/sound/rbg/bar_drop_coin.mp3",
+			"type": "sound",
+			"name": "bar_drop_coin_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_game_all_kill.mp3",
+			"type": "sound",
+			"name": "bar_game_all_kill_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_game_all_win.mp3",
+			"type": "sound",
+			"name": "bar_game_all_win_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_game_kill_effect.mp3",
+			"type": "sound",
+			"name": "bar_game_kill_effect_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_game_start.mp3",
+			"type": "sound",
+			"name": "bar_game_start_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_game_start_0.mp3",
+			"type": "sound",
+			"name": "bar_game_start_0_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_open_card.mp3",
+			"type": "sound",
+			"name": "bar_open_card_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_player_select.mp3",
+			"type": "sound",
+			"name": "bar_player_select_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_player_selected.mp3",
+			"type": "sound",
+			"name": "bar_player_selected_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_player_win.mp3",
+			"type": "sound",
+			"name": "bar_player_win_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_send_card.mp3",
+			"type": "sound",
+			"name": "bar_send_card_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/bar_throw_dice.mp3",
+			"type": "sound",
+			"name": "bar_throw_dice_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/hall_bg.mp3",
+			"type": "sound",
+			"name": "hall_bg2_mp3"
+		},
+		{
+			"url": "assets/sound/rbg/window_open.mp3",
+			"type": "sound",
+			"name": "window_open_mp3"
+		},
+		{
+			"url": "assets/dragonbones/bg_ebg_tongsha/bg_ebg_tongsha_tex.png",
+			"type": "image",
+			"name": "bg_ebg_tongsha_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_ebg_tongsha/bg_ebg_tongsha_tex.json",
+			"type": "json",
+			"name": "bg_ebg_tongsha_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_ebg_tongsha/bg_ebg_tongsha_ske.json",
+			"type": "json",
+			"name": "bg_ebg_tongsha_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_ebg_tianwang/bg_ebg_tianwang_tex.png",
+			"type": "image",
+			"name": "bg_ebg_tianwang_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_ebg_tianwang/bg_ebg_tianwang_ske.json",
+			"type": "json",
+			"name": "bg_ebg_tianwang_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_ebg_tianwang/bg_ebg_tianwang_tex.json",
+			"type": "json",
+			"name": "bg_ebg_tianwang_tex_json"
 		}
 	]
 }

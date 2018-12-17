@@ -222,25 +222,25 @@ class RBGUtil {
     public getSoundEffect(type): string {
         switch (type) {
             case 0:
-                return 'bgm';    //背景音乐
+                return 'bgm';
             case 1:
-                return 'nn.jackpot'; //自己赢得最多
+                return 'bar_game_start';
             case 2:
-                return 'nn.start';   //下注开始
+                return 'bar_game_start_0';
             case 3:
-                return 'nn.end'; //下注结束
+                return 'bar_player_select';
             case 4:
-                return 'nn.ts';  //通杀
+                return 'bar_player_selected';
             case 5:
-                return 'nn.tp';  //通赔
+                return 'bar_drop_coin';
             case 6:
-                return 'nn.dealCard';  //发牌
+                return 'bar_throw_dice';
             case 7:
-                return 'nn.openCard';  //开牌
+                return 'bar_send_card';
             case 8:
-                return 'nn.stake';   //筹码
+                return 'bar_open_card';
             case 9:
-                return 'gold_diaoluo';   //金币飞起
+                return 'bar_player_win';
         }
     }
 }

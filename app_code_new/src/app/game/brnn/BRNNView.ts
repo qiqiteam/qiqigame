@@ -429,6 +429,28 @@ class BRNNView extends eui.Component {
             case 10: this.onfapai(data); break;       //百人牛牛发牌
         }
     }
+/*
+    public startGameEffect(e) {
+        var t = this;
+        this.brnn_gameEffImg.source = e,
+        this.brnn_gameStart.alpha = 0,
+        this.brnn_gameStart.horizontalCenter = -200,
+        this.brnn_gameStart.visible = !0,
+        this.pushEffectList("brnn_gameStart"),
+        egret.Tween.get(this.brnn_gameStart).to({
+            horizontalCenter: 0,
+            alpha: 1
+        },
+        200, egret.Ease.bounceOut).wait(300).to({
+            horizontalCenter: 200,
+            alpha: 0
+        },
+        200, egret.Ease.bounceOut).call(function() {
+            t.brnn_gameStart.visible = !1
+        },
+        this)
+    }*/
+
     /**准备 */
     private onprepare(data: any): void {
         this.startCountDown(data._obj.seconds);
