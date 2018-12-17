@@ -5,6 +5,7 @@ class DragonBonesSprite  extends egret.DisplayObjectContainer{
 	private animationName:string;
 	private playTimes:number = 0;
 	private isDestroy:boolean;
+	public onPlayComplete:Function;
 	constructor(source: string,bones?: string){
         super();
 	  	this.init(source,bones);
@@ -18,6 +19,7 @@ class DragonBonesSprite  extends egret.DisplayObjectContainer{
 	private onDragonBonesCreate(armatureDisplay:dragonBones.EgretArmatureDisplay):void
 	{
         this.armatureDisplay = armatureDisplay;
+		this.armatureDisplay.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this);
 		this.addChild(this.armatureDisplay);
 		if(this.isPlay){
 			xlLib.DisplayUtils.runDragonBonesArmature(this.armatureDisplay.armature,this.animationName,this.playTimes);
@@ -28,6 +30,10 @@ class DragonBonesSprite  extends egret.DisplayObjectContainer{
 		if(this.isDestroy){
 			xlLib.DisplayUtils.destoryDragonBonesArmature(this.armatureDisplay.armature);
 		}
+	}
+
+	private  onAnimationComplete(e) {
+		this.onPlayComplete && this.onPlayComplete();
 	}
 
 	public play(animationName:string,playTimes?: number):void
@@ -57,6 +63,7 @@ class DragonBonesSprite  extends egret.DisplayObjectContainer{
 		this.isStop = false;
 		if(this.armatureDisplay){
 			xlLib.DisplayUtils.destoryDragonBonesArmature(this.armatureDisplay.armature);
+			this.armatureDisplay.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this);
 		}
 	}
 }
