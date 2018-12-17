@@ -11,6 +11,25 @@ module xlLib {
             return result;
         }
 
+        /**
+         * 创建DragonBones显示对象
+         */
+        public static createAsyncDragonBonesDisplay(source: string,bones?: string): dragonBones.Armature {
+            let dragonbonesData = RES.getResAsync(source + "_ske_json");
+            let textureData = RES.getResAsync(source + "_tex_json");
+            let texture = RES.getResAsync(source + "_tex_png");
+
+
+            var armature: dragonBones.Armature;
+            // var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
+            // var db:dragonBones.DragonBonesData = dragonBones.DataParser.parseDragonBonesData(dragonbonesData);
+            // dragonbonesFactory.addDragonBonesData(db);
+            // var tx:dragonBones.EgretTextureAtlas = new dragonBones.EgretTextureAtlas(texture, textureData);
+            // dragonbonesFactory.addTextureAtlasData(tx);
+            // armature = dragonbonesFactory.buildArmature(bones);
+            return armature;
+        }
+
         public static createAsyncMovieClicp(groupName: string, keyName?: string,isloop:boolean=true, playTimes?:number): egret.MovieClip 
         {
             var mdf:egret.MovieClipDataFactory;
@@ -102,7 +121,7 @@ module xlLib {
         /**
          * 创建DragonBones显示对象
          */
-        public static createDragonBonesDisplay(source: string,bones?: string, cache?: number): dragonBones.Armature {
+        public static createDragonBonesDisplay(source: string,bones?: string): dragonBones.Armature {
             let dragonbonesData = RES.getRes(source + "_ske_json");
             let textureData = RES.getRes(source + "_tex_json");
             let texture = RES.getRes(source + "_tex_png");
@@ -121,24 +140,20 @@ module xlLib {
             dragonbonesFactory.addDragonBonesData(db);
             var tx:dragonBones.EgretTextureAtlas = new dragonBones.EgretTextureAtlas(texture, textureData);
             dragonbonesFactory.addTextureAtlasData(tx);
-            if (cache) {
-                armature = dragonbonesFactory.buildFastArmature(bones);
-                armature.enableAnimationCache(cache);
-            } else
-                armature = dragonbonesFactory.buildArmature(bones);
+            armature = dragonbonesFactory.buildArmature(bones);
             return armature;
         }
 
         private static ticketStarted: boolean=false;
 
 
-        public static stopDragonBonesArmature(armature:dragonBones.Armature):void
+        public static stopDragonBonesArmature(armature:dragonBones.Armature,animationName?:string):void
         {
             var _time:number;
             egret.stopTick((timeStamp)=>{
                 return true;
             }, armature);
-            armature.animation.stop();
+            armature.animation.stop(animationName);
             dragonBones.WorldClock.clock.remove(armature);
         }
         /**
@@ -189,7 +204,7 @@ module xlLib {
         /**
          * 删除龙骨动画
          */ 
-        public static destoryDragonBonesArmature(armature:any,animationName: string) {
+        public static destoryDragonBonesArmature(armature:any) {
             if(armature == null) {
                 xlLib.Console.error("armature不能为空");
                 return;
