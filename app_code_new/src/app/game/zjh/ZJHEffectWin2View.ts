@@ -10,6 +10,8 @@ class ZJHEffectWin2View extends eui.Component {
 
 	protected childrenCreated() {
 		super.childrenCreated();
+		this.anchorOffsetX = -this.width/2;
+		this.anchorOffsetY = -this.height/2;
 		this.donghua.addEventListener(egret.Event.COMPLETE, this.onTweenComplete, this);
 	}
 
