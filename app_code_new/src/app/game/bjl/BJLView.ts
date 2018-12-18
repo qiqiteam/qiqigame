@@ -81,12 +81,12 @@ class BJLView extends eui.Component {
     public puke_1_1: eui.Image;
     public mask_3: eui.Rect;
     public cardgrp_4: eui.Group;
-    public puke_0_2: eui.Image;
     public _bei_puke_0_2: eui.Image;
+    public puke_0_2: eui.Image;
     public mask_4: eui.Rect;
     public cardgrp_5: eui.Group;
-    public puke_1_2: eui.Image;
     public _bei_puke_1_2: eui.Image;
+    public puke_1_2: eui.Image;
     public mask_5: eui.Rect;
     public xian_tishi: eui.Group;
     public xian_Label: eui.Label;
@@ -96,17 +96,18 @@ class BJLView extends eui.Component {
 
 
 
-
     ///----------------------------------------------------------------
 
     public num: number = 0;    //下注数量
     public time: number;        //秒数
     public timer: egret.Timer;  //计时器
-    public arrCoin = [];        //下注筹码池   
+    //public arrCoin = [];        //下注筹码池   
     public isAction: boolean = false;               //能否下注    
     public multipleList: number[] = [0, 0, 0, 0, 0, 0];   //倍数表
 
     private orginPlayePos = [];    // 存储玩家扑克位置
+
+    public xjzjdianshu: number[] = [0, 0];  //闲庄的点数
 
     public istzxzDh: boolean = false;
 
@@ -115,6 +116,13 @@ class BJLView extends eui.Component {
     private jiesuan_3: BJLjiesuan3;
     private tingzhi: BJLtingzhi;
     private xiazhu: BJLxiazhu;
+
+    //筹码池
+    private coin_1_arr = [];
+    private coin_2_arr = [];
+    private coin_3_arr = [];
+    private coin_4_arr = [];
+    private coin_5_arr = [];
 
     //----------------------------------------------------------------
 
@@ -171,6 +179,8 @@ class BJLView extends eui.Component {
     private isCardEffectShow: boolean = false; //是否正在显示扑克动画
 
     protected childrenCreated(): void {
+        let musicBg = ["bjl_37_bg_play_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
 
         this.getOrginCardPos();
         this.addEvent();
@@ -185,14 +195,10 @@ class BJLView extends eui.Component {
     /**数据初始化 */
     private initData(): void {
 
-        this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
         this.grpCoins.touchEnabled = false;
 
         this.grpCard.visible = true;
 
-        // this.lastTouchBetIndex = 1;
         UserInfo.getInstance().isGameStart = false;
         this.istzxzDh = false;
 
@@ -203,14 +209,13 @@ class BJLView extends eui.Component {
             this['effectTouch' + i].alpha = 0;
         }
 
-        //------------------------------------
-        this.arrCoin = [];
 
-        // this.jushu_bg.visible = true;
-        // this.js_shi.visible = false;
-        // this.js_ge.visible = true;
-        // this.js_ge.x = 603;
-        
+        this.coin_1_arr = [];
+        this.coin_2_arr = [];
+        this.coin_3_arr = [];
+        this.coin_5_arr = [];
+        this.coin_4_arr = [];
+
         this.tishi_zi_0.visible = false;
         this.tishi_zi_1.visible = false;
         this.wjlistkuang.visible = false;
@@ -236,7 +241,6 @@ class BJLView extends eui.Component {
         this._bei_puke_0_2.visible = false;
         this._bei_puke_1_2.visible = false;
 
-        this.Themitoken.visible = false;
 
     }
     /**获取原始扑克的位置 */
@@ -247,8 +251,8 @@ class BJLView extends eui.Component {
             for (var j = 0; j < 3; j++) {
                 var card: eui.Image = this['grpCard_' + index + '_' + j];
                 card.source = '';
-                card.anchorOffsetX = card.width / 2;
-                card.x += card.width / 2;
+                // card.anchorOffsetX = card.width / 2;
+                // card.x += card.width / 2;
                 var pos: egret.Point = new egret.Point;
                 pos.x = card.x;
                 pos.y = card.y;
@@ -276,6 +280,7 @@ class BJLView extends eui.Component {
     }
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
+        this.playClickSound(BJLUtil.getInstance().getSoundEffect(9));
         if (e.target == this.wanjialist) {
             this.wjlistkuang.visible = true;
             this.wanjialiebiao(EventConst.playersUserWin);
@@ -355,9 +360,8 @@ class BJLView extends eui.Component {
         this.wanjialist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
+        // EventUtil.addEventListener(EventConst.onSendGameRoom, this.Joinhalfway, this);
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
-        EventUtil.addEventListener(EventConst.onCheckout, this.bofangEffect, this);
-        EventUtil.addEventListener(EventConst.onUpdateUserBalance, this.onAcquisitionGolbBack, this);
         EventUtil.addEventListener(EventConst.OnUpdateLimitItem, this.UpdateLimitItem, this);
         EventUtil.addEventListener(EventConst.onSendJetton, this.SendJetton, this);
         EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
@@ -400,33 +404,33 @@ class BJLView extends eui.Component {
             case 7: this.xianjiaBupai(data); break;    //闲家补牌
             case 8: this.zhuangjiaBupai(data); break;    //庄家补牌
             case 4: this.onBeginBteonBack(data); break;    //派奖（结算）
-            case 9: this.Zhuangbeizho(data); break;    //第二轮开始
 
         }
     }
     /**发牌中 字体显示 */
     private zitixianshi(data: any): void {
         this.startCountDown(data._obj.seconds);
+        this.playClickSound(BJLUtil.getInstance().getSoundEffect(10));
         this.tishi_zi_0.visible = true;
         this.tishi_zi_0.source = 'baccarat_font_stage_2_png';
         this.fapai();
     }
     /**准备中 */
     private zhunbeizho(data: any): void {
-        this.startCountDown(data._obj.seconds);
+        this.resetGame();
 
+        this.startCountDown(data._obj.seconds);
         this.tishi_zi_0.visible = true;
         this.tishi_zi_0.source = 'baccarat_font_stage_3_png';
 
-    }
-    /**第二轮开始 */
-    private Zhuangbeizho(data): void {
         this.startCountDown(data._obj.seconds);
         this.juegengxin(data._obj.jushu);
         this.sypai_0.text = data._obj.leftcardlh + '';
         this.sypai_1.text = data._obj.deskcards + '';
-        this.resetGame();
+
     }
+
+
     /**(筹码) */
     private SendJetton(data: any): void {
         for (let i = 0; i < data._obj.betrules.length; i++) {
@@ -441,6 +445,7 @@ class BJLView extends eui.Component {
     /**可以开始下注  倒计时*/
     private onStartBetonBack(data: any): void {
         console.log("可以开始下注  倒计时");
+        this.playClickSound(BJLUtil.getInstance().getSoundEffect(2));
         this.tishi_zi_0.visible = true;
         this.tishi_zi_0.source = 'baccarat_font_stage_6_png';
         this.xiazhu_Effect();
@@ -482,9 +487,11 @@ class BJLView extends eui.Component {
 
         this.istzxzDh = false;
         this.startCountDown(data._obj.seconds);
+        this.xjzjdianshu[0] = data._obj.playersce;
 
         this.dianshu_0.visible = true;
         this.dianshu_img_0.source = 'baccarat_game_point_' + data._obj.playersce + '_png';
+
         this.Themitoken.visible = true;
         this.xian_tishi.visible = true;
         this.xian_Label.text = "闲家咪牌中";
@@ -493,11 +500,9 @@ class BJLView extends eui.Component {
         this.grpCard_0_1.source = 'qznn_card_' + data._obj.playerCard[1];
         this.puke_0_0.source = 'qznn_card_' + data._obj.playerCard[1];
 
-        // this.puke_0_0.x = this.orginPlayePos[0][0].x - 170;
         this.puke_0_0.visible = true;
         this.puke_0_1.source = 'qznn_card_' + data._obj.playerCard[0];
 
-        // this.puke_0_1.x = this.orginPlayePos[0][1].x - 170;
         this.puke_0_1.visible = true;
 
         for (let i = 0; i < 2; i++) {
@@ -518,6 +523,7 @@ class BJLView extends eui.Component {
         this.tishi_zi_1.visible = true;
         this.tishi_zi_1.source = 'baccarat_font_stage_5_png';
 
+        this.xjzjdianshu[1] = data._obj.bankersce;
         this.dianshu_1.visible = true;
         this.dianshu_img_1.source = 'baccarat_game_point_' + data._obj.bankersce + '_png';
 
@@ -528,11 +534,9 @@ class BJLView extends eui.Component {
         this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[1];
         this.puke_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
 
-        // this.puke_1_0.x = this.orginPlayePos[1][0].x - 170;
         this.puke_1_0.visible = true;
         this.puke_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
 
-        // this.puke_1_1.x = this.orginPlayePos[1][1].x - 170;
         this.puke_1_1.visible = true;
         this._bei_puke_1_0.visible = true;
         this._bei_puke_1_1.visible = true;
@@ -542,6 +546,14 @@ class BJLView extends eui.Component {
     /**闲家补牌 */
     private xianjiaBupai(data: any) {
         this.startCountDown(data._obj.seconds);
+
+        this.playClickSound(BJLUtil.getInstance().getSoundEffect(14));
+        setTimeout(() => {
+            this.playClickSound(BJLUtil.getInstance().getSoundEffect(16));
+        }, 1000);
+
+        this.xjzjdianshu[0] = data._obj.playersce;
+        this.dianshu_0.visible = true;
         this.dianshu_img_0.source = 'baccarat_game_point_' + data._obj.playersce + '_png';
         this.xian_tishi.visible = true;
         this.xian_Label.text = "闲家补牌中";
@@ -565,6 +577,13 @@ class BJLView extends eui.Component {
     /**庄家补牌 */
     private zhuangjiaBupai(data: any) {
         this.startCountDown(data._obj.seconds);
+
+        this.playClickSound(BJLUtil.getInstance().getSoundEffect(15));
+        setTimeout(() => {
+            this.playClickSound(BJLUtil.getInstance().getSoundEffect(16));
+        }, 1000);
+
+        this.xjzjdianshu[1] = data._obj.bankersce;
         this.dianshu_img_1.source = 'baccarat_game_point_' + data._obj.bankersce + '_png';
         this.xian_tishi.visible = false;
         this.zhuang_Label.text = "庄家补牌中";
@@ -598,22 +617,192 @@ class BJLView extends eui.Component {
     /**结算（派奖） */
     private onBeginBteonBack(data: any): void {
         UserInfo.getInstance().isGameStart = false;
-        this.dianshu_0.visible = false;
-        this.dianshu_1.visible = false;
+        this.startCountDown(data._obj.seconds);
+
+        UserInfo.getInstance().goldcoins = data._obj.golbcontis;
+        this.labelGold0.text = GlobalFunction.Formatconversion(data._obj.golbcontis);
 
         this.Themitoken.visible = false;
-        this.startCountDown(data._obj.seconds);
+
+        this.tishi_zi_1.visible = false;
+        this.tishi_zi_0.visible = true;
+        this.tishi_zi_0.source = 'baccarat_font_stage_1_png';
+        this.feixingEffect(data._obj.base, data._obj.userwingolb);
+        if (data._obj.userwingolb > 0) {
+            let label = new eui.BitmapLabel;
+            let str: string = "";
+            label.font = "qznn_win_fnt";
+            label.text = "0";
+            str = "+";
+            label.y = -50;
+            this.grpHead0.addChild(label);
+
+            uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data._obj.userwingolb / 100, regulator: 50 }, str);
+
+        }
+
+
+        this.playClickSound(BJLUtil.getInstance().getSoundEffect(14));
+        setTimeout(() => {
+            this.playClickSound(BJLUtil.getInstance().dianshuSoundEffect(this.xjzjdianshu[0]));
+            setTimeout(() => {
+                this.playClickSound(BJLUtil.getInstance().getSoundEffect(15));
+                setTimeout(() => {
+                    this.playClickSound(BJLUtil.getInstance().dianshuSoundEffect(this.xjzjdianshu[1]));
+                    setTimeout(() => {
+                        this.bofangEffect(data._obj.base);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }
+    /**结算筹码飞行效果 */
+    private feixingEffect(index: number, golb: number) {
+        var point: egret.Point = BJLUtil.getInstance().getCoinsPos(index);
+        var tx = point.x + Math.random() * 250;
+        var ty = point.y + Math.random() * 80;
+
+        var p: egret.Point = new egret.Point();
+        p.x = 736;
+        p.y = 150;
+
+        var p1: egret.Point = new egret.Point();
+        p1.x = 50;
+        p1.y = 604;
+
+        for (let i = 1; i < 6; i++) {
+            if (index != i) {
+                for (let j = 0; j < this['coin_' + j + '_arr'].length; j++) {
+                    var chouma = this['coin_' + j + '_arr'];
+                    egret.Tween.get(chouma).to({ x: p.x, y: p.y }, 600);
+                }
+            }
+        }
+        setTimeout(() => {
+            for (let i = 1; i < 6; i++) {
+                if (index != i) {
+                    for (let j = 0; j < this['coin_' + j + '_arr'].length; j++) {
+                        var chouma = this['coin_' + j + '_arr'];
+                        egret.Tween.get(chouma).to({ x: tx, y: tx }, 600);
+                    }
+                }
+            }
+            setTimeout(() => {
+                for (let i = 1; i < 6; i++) {
+                    for (let j = 0; j < this['coin_' + j + '_arr'].length; j++) {
+                        var chouma = this['coin_' + j + '_arr'];
+                        egret.Tween.get(chouma).to({ x: p1, y: p1 }, 600);
+                    }
+                }
+
+                if (golb > 0) {
+                    var suiji = Math.random() * 10;
+                    var p: egret.Point = new egret.Point();
+                    p.x = tx;
+                    p.y = ty;
+                    var coin = BJLUtil.getInstance().coinsType(p, 10);
+                    egret.Tween.get(coin).to({ x: 68, y: 762 }, 600);
+                }
+
+            }, 600);
+        }, 600);
 
     }
     /**当前牌局的 庄赢 闲赢  和 */
-    private bofangEffect(data: any) {
-        this.startCountDown(data._obj.seconds);
-        if (data._obj.base == 1) {
+    private bofangEffect(index: number) {
+        if (index == 1) {
             this.addjiesuan_1Effect();
-        } else if (data._obj.base == 2) {
+        } else if (index == 2) {
             this.addjiesuan_2Effect();
-        } else if (data._obj.base == 3) {
+        } else if (index == 3) {
             this.addjiesuan_3Effect();
+        }
+    }
+
+    /**中途加入房间，数据恢复 */
+    private Joinhalfway(data: any) {
+        console.log(data);
+        this.juegengxin(data._obj.jushu);              //局数恢复
+
+        this.tishizithuifu(data._obj.roomStatus);   /**提示字恢复 */
+
+        this.startCountDown(data._obj.seconds); //倒计时恢复
+
+        this.sypai_0.text = data._obj.leftcardlh + '';  //剩余牌数恢复
+        this.sypai_1.text = data._obj.deskcards + '';
+
+        //庄家牌面信息恢复 加点数
+        if (data._obj.bankerCard != null) {
+
+            this.grpCard_1_0.source = 'qznn_card_' + data._obj.bankerCard[0];
+            this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[1];
+            this.puke_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
+            this.puke_1_0.visible = true;
+            this.puke_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
+
+            if (data._obj.bankersce != -1) {
+                this.dianshu_1.visible = true;
+                this.dianshu_img_1.source = 'baccarat_game_point_' + data._obj.bankersce + '_png';
+            }
+        }
+        //闲家牌面信息恢复 加点数
+        if (data._obj.playerCard != null) {
+            this.grpCard_0_0.source = 'qznn_card_' + data._obj.playerCard[0];
+            this.grpCard_0_1.source = 'qznn_card_' + data._obj.playerCard[1];
+            this.puke_0_0.source = 'qznn_card_' + data._obj.playerCard[1];
+            this.puke_0_0.visible = true;
+            this.puke_0_1.source = 'qznn_card_' + data._obj.playerCard[0];
+
+            if (data._obj.bankersce != -1) {
+                this.dianshu_0.visible = true;
+                this.dianshu_img_0.source = 'baccarat_game_point_' + data._obj.playersce + '_png';
+            }
+        }
+        //已丢筹码恢复
+        if (data._obj.board.playerList != null) {
+            this.choumahuifu(data._obj.board.playerList);
+        }
+    }
+    /**已丢筹码恢复 */
+    private choumahuifu(data: any) {
+
+        // var point: egret.Point = BJLUtil.getInstance().getCoinsPos(data.msg);
+        // var arr = BJLUtil.getInstance().coinsType(point, data.num);
+
+    }
+
+    /**提示字恢复 */
+    private tishizithuifu(index: number) {
+        switch (index) {
+            case 1: this.tishi_zi_0.visible = true;
+                this.tishi_zi_1.visible = false;
+                this.tishi_zi_0.source = 'baccarat_font_stage_3_png';
+                break;    //准备中
+            case 2: this.tishi_zi_0.visible = true;
+                this.tishi_zi_1.visible = false;
+                this.tishi_zi_0.source = 'baccarat_font_stage_6_png'; break;    //下注中
+            case 5: this.tishi_zi_0.visible = true;
+                this.tishi_zi_1.visible = false;
+                this.tishi_zi_0.source = 'baccarat_font_stage_2_png'; break;    //发牌（动画）
+            case 3: this.Themitoken.visible = true;
+                this.tishi_zi_0.visible = false;
+                this.tishi_zi_1.visible = true;
+                this.tishi_zi_1.source = 'baccarat_font_stage_5_png'; break;    //闲家咪牌（发牌）
+            case 6: this.Themitoken.visible = true;
+                this.tishi_zi_0.visible = false;
+                this.tishi_zi_1.visible = true;
+                this.tishi_zi_1.source = 'baccarat_font_stage_4_png'; break;    //庄家咪牌（发牌）
+            case 7: this.Themitoken.visible = true;
+                this.xian_tishi.visible = true;
+                this.xian_Label.text = "闲家补牌中";
+                this.zhuang_tishi.visible = false; break;    //闲家补牌
+            case 8: this.Themitoken.visible = true;
+                this.xian_tishi.visible = false;
+                this.zhuang_Label.text = "庄家补牌中";
+                this.zhuang_tishi.visible = true; break;    //庄家补牌
+            case 4: this.tishi_zi_0.visible = true;
+                this.tishi_zi_1.visible = false;
+                this.tishi_zi_0.source = 'baccarat_font_stage_1_png'; break;    //派奖（结算）
         }
     }
 
@@ -827,6 +1016,7 @@ class BJLView extends eui.Component {
             this.time--;
             if (this.time == 0) {
                 if (this.istzxzDh) {
+                    this.playClickSound(BJLUtil.getInstance().getSoundEffect(3));
                     this.tingzhi_Effect();
                 }
             }
@@ -885,22 +1075,31 @@ class BJLView extends eui.Component {
     private showCoins(pos: egret.Point, num: number, msg: number): void {
         var isRemove: boolean = false;
         this.playClickSound(BJLUtil.getInstance().getSoundEffect(8));
-        //var point: egret.Point = BJLUtil.getInstance().getCoinsPos(index);
         var point: egret.Point = BJLUtil.getInstance().getCoinsPos(msg);
 
-        var arr = BJLUtil.getInstance().coinsType(pos, num);
-        for (var i = 0; i < arr.length; i++) {
-            var tx = point.x + Math.random() * 250;
-            var ty = point.y + Math.random() * 80;
-            this.grpCoins.addChild(arr[i]);
-
-            egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call((mc) => {
-                // if (mc) {
-                //     mc.parent.removeChild(mc);
-                // }
-            }, this, [arr[i]]);
-            this.arrCoin.push(arr[i]);
+        var coin = BJLUtil.getInstance().coinsType(pos, num);
+        var tx = point.x + Math.random() * 250;
+        var ty = point.y + Math.random() * 80;
+        this.grpCoins.addChild(coin);
+        egret.Tween.get(coin).to({ x: tx, y: ty }, 200);
+        switch (msg) {
+            case 1:                 // 1是庄
+                this.coin_1_arr.push(coin);
+                break;
+            case 2:                 // 2是闲
+                this.coin_2_arr.push(coin);
+                break;
+            case 3:                 // 3是和       
+                this.coin_3_arr.push(coin);
+                break;
+            case 4:                 // 4是庄对
+                this.coin_1_arr.push(coin);
+                break;
+            case 5:                 // 5是闲对
+                this.coin_5_arr.push(coin);
+                break;
         }
+
     }
 
     private fapai_0: number = 0;
@@ -936,11 +1135,15 @@ class BJLView extends eui.Component {
     private fapai2(index: number, num: number) {
 
         var card: eui.Image = this['grpCard_' + index + '_2'];
+        card.source = 'gf_poker0_png';
         card.x = 713.5;
         card.y = 100;
-        card.source = 'qznn_card_' + num;
+
         var pos = this.orginPlayerCardPos[index][2];
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400)
+
+        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400).call(() => {
+            card.source = 'qznn_card_' + num;
+        });
 
 
         let _card1 = this["puke_" + index + "_2"];
@@ -954,357 +1157,8 @@ class BJLView extends eui.Component {
         egret.Tween.get(_card2).to({ x: 0 }, 800);
     }
 
-    private flyIntval: number = 0;  //
-    private flyBankerIndex: number = 0;
-
-
-    private flyIndex0: number = 0;  //扑克位置(东西南北)
-    private flyIndex1: number = 0;  //扑克(指定位置1，2，3)
-
-    /**显示发牌 */
-    private cardEffect(): void {
-
-        //this.isCardEffectShow = true;
-        //this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
-        this.flyIndex0 = 0;
-        this.flyIndex1 = 0;
-        this.playCardFly();
-    }
-
-    private playCardFly(): void {
-        var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
-        card.x = 713.5;
-        card.y = 100;
-        card.source = 'gf_poker0_png';
-        card.anchorOffsetX = card.width / 2;
-        card.x += card.width / 2;
-        var pos = this.orginPlayerCardPos[this.flyIndex0][this.flyIndex1];
-        this.playClickSound(BJLUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400).call(this.playerCardRotation, this);
-
-    }
-
-    private playerCardRotation(): void {
-        this.playClickSound(BJLUtil.getInstance().getSoundEffect(7));
-        var poke = this.cardResult.pokes;
-        var card = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
-        card.source = 'gf_poker0_png';
-        egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-            this[0].source = 'nn.card_' + this[1];
-            egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-        }, [card, poke[this.flyIndex0].value[this.flyIndex1]]).call(this.cycleCallback, this);
-
-    }
-
-    private cycleCallback(): void {
-        if (this.flyIndex0 == 1) {
-            this.flyIndex0 = 0;
-            this.flyIndex1++;
-        } else {
-            this.flyIndex0++;
-        }
-
-        if (this.cardResult.pokes[this.flyIndex0].value[this.flyIndex1] == -1) {
-            //this.flyIndex0 = 0;
-            //this.flyIndex1 = 0;
-            this.cycleCallback();
-            return;
-        }
-
-        if (this.flyIndex1 > 2) {
-            this.flyIndex0 = 0;
-            this.flyIndex1 = 0;
-            if (this.flyIntval != 0) {
-                clearInterval(this.flyIntval);
-            }
-            return;
-        }
-        this.playCardFly();
-    }
-
-
-
-    private bankerCardFly(): void {
-        if (this.flyBankerIndex == 5) {
-            this.flyBankerIndex = 0;
-            clearInterval(this.flyIntval);
-            this.interval = setInterval(this.playerCardRotation.bind(this), 800);
-            return;
-        }
-        var card: eui.Image = this['bankerCard_' + this.flyBankerIndex];
-        card.x = 713.5;
-        card.y = 300;
-        card.source = 'gf_poker0_png';
-        card.anchorOffsetX = card.width / 2;
-        card.x += card.width / 2;
-        this.orginBankerCardPos;
-        var pos = this.orginBankerCardPos[this.flyBankerIndex];
-        this.playClickSound(BJLUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400);
-        this.flyBankerIndex++;
-    }
-
-    private effectPlayerIndex = 0;
-    /*
-    private playerCardRotation(): void {
-        if (this.effectPlayerIndex == this.cardResult.pokes.length - 1) {
-            clearInterval(this.interval)
-            this.effectPlayerIndex = 0;
-            this.bankerCardRotation();
-            return;
-        }
-        this.playClickSound(BJLUtil.getInstance().getSoundEffect(7));
-        var poke = this.cardResult.pokes;
-        var index = this.effectPlayerIndex;
-        for (var i = 0; i < 5; i++) {
-            var card = this['grpCard_' + index + '_' + i];
-            card.source = 'gf_poker0_png';
-            egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'nn.card_' + this[1];
-                egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-            }, [card, poke[index + 1].value[i]]);
-            // console.log('poke_' + this.effectPlayerIndex + ': ' + poke[this.effectPlayerIndex].value[i]);
-        }
-        this['labCardType' + index].source = BJLUtil.getInstance().getCardType(poke[index + 1].type);
-        this.playClickSound(BJLUtil.getInstance().getCardMusicType(poke[index + 1].type));
-        this['labCardType' + index].visible = true;;
-        this['labCardType' + index].width = 98;
-        this['labCardType' + index].height = 44;
-        //this['labCardResult' + index].text = '';//this.cardResult.result[index] == 1 ? '赢' : '输';
-        if (poke[index + 1].type != 0) {
-            for (var i = 0; i < 5; i++) {
-                var card = this['grpCard_' + index + '_' + i];
-                if (i < 3) {
-                    egret.Tween.get(card).wait(700).to({ x: card.x - 10 }, 100);
-                }
-                else {
-                    egret.Tween.get(card).wait(700).to({ x: card.x + 10 }, 100);
-                }
-            }
-        }
-        this.effectPlayerIndex++;
-    }*/
-
-    // private bankerCardRotation(): void {
-    //     this.playClickSound(BJLUtil.getInstance().getSoundEffect(7));
-    //     var poke = this.cardResult.pokes[0];
-    //     for (var i = 0; i < 5; i++) {
-    //         var card = this['bankerCard_' + i];
-    //         card.source = 'gf_poker0_png';
-    //         egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-    //             this[0].source = 'nn.card_' + this[1];
-    //             egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-    //         }, [card, poke.value[i]])
-    //         // console.log('poke_banker: ' + poke.value[i]);
-    //     }
-    //     // this.labCardTypeBanker.source = BJLUtil.getInstance().getCardType(poke.type);
-    //     // this.playClickSound(BJLUtil.getInstance().getCardMusicType(poke.type));
-    //     // this.labCardTypeBanker.visible = true;
-    //     // this.labCardTypeBanker.width = 98;
-    //     // this.labCardTypeBanker.height = 44;
-    //     if (poke.type != 0) {
-    //         for (var i = 0; i < 5; i++) {
-    //             var card = this['bankerCard_' + i];
-    //             if (i < 3) {
-    //                 egret.Tween.get(card).wait(700).to({ x: card.x - 10 }, 100);
-    //             }
-    //             else {
-    //                 egret.Tween.get(card).wait(700).to({ x: card.x + 10 }, 100);
-    //             }
-    //         }
-    //     }
-    //     this.interval = setInterval(this.blinkEffect.bind(this), 500);
-    // }
-
-    // private blinkEffect(): void {
-    //     clearInterval(this.interval);
-    //     var result = this.cardResult.result;
-    //     for (var i = 0; i < 4; i++) {
-    //         if (result[i] == 1) {
-    //             //this['effectSelect' + i].visible = true;
-    //             //EffectUtils.blinkEffect(this['effectSelect' + i], 200);
-    //         }
-    //     }
-    //     this.interval = setInterval(this.cardEffectEnd.bind(this), 2000);
-    // }
-
-    // private cardEffectEnd(): void {
-    //     clearInterval(this.interval);
-    //     var data = this.cardResult;
-    //     var isShow: boolean = false;
-    //     //显示比牌结果，显示是否通赔或者通杀
-    //     if (data.result[0] == 1 && data.result[1] == 1 && data.result[2] == 1 && data.result[3] == 1) {
-    //         this.showGameTips(5);
-    //         isShow = true;
-    //     }
-    //     if (data.result[0] == 0 && data.result[1] == 0 && data.result[2] == 0 && data.result[3] == 0) {
-    //         this.showGameTips(4);
-    //         isShow = true;
-    //     }
-    //     if (isShow) {
-    //         //this.interval = setInterval(this.showGameResult.bind(this), 1000);
-    //     }
-    //     else {
-    //         //this.showGameResult();
-    //     }
-    //     //this.cdTimer.start();
-    // }
-
-    //============================================  Game Result
-    /*
-    private showGameResult(): void {
-        clearInterval(this.interval);
-        lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.CHAT_GAME_RESULT));
-        var data = this.cardResult;
-        this.grpResult.visible = true;
-        if (this.maxUserData != null) {
-            this.grpMax.visible = true;
-            this.grpMaxHead.source = this.maxUserData.headurl;
-            this.grpMaxHead.width = this.grpMaxHead.height = 70;
-            this.grpMaxGold.text = '赢 ' + QuickManage.moneyStr(this.maxUserData.gold);
-            this.grpMaxName.text = this.maxUserData.name;
-            if (this.maxUserData.name == GlobalData.user.nickname) {
-                this.playClickSound(BJLUtil.getInstance().getSoundEffect(1));
-            }
-        }
-        else {
-            this.grpMax.visible = false;
-        }
-
-        this.grpBankerHead.source = this.bankerHead.source; //
-        this.grpBankerName.text = this.bankerName.text;
-
-        this.grpBankerBeishu.text = data.pokes[0].num + '倍';
-        this.grpBankerType.source = '';//this.getCardType(data.pokes[0].type);//;
-        this.labelBankerType.text = BJLUtil.getInstance().getCardType2(data.pokes[0].type);
-        if (parseInt(data.bankerWin) < 0) {
-            this.grpBankerGold.text = '输 ' + QuickManage.moneyStr(Math.abs(data.bankerWin));
-            PanelManage.chat.sendGameChat('庄家输了 ' + QuickManage.moneyStr(Math.abs(data.bankerWin)));
-        }
-        else {
-            this.grpBankerGold.text = '赢 ' + QuickManage.moneyStr(data.bankerWin);
-            if (data.bankerWin != 0) {
-                PanelManage.chat.sendGameChat('庄家赢了 ' + QuickManage.moneyStr(Math.abs(data.bankerWin)));
-            }
-        }
-
-        var userGold: number = 0;
-        for (var i = 0; i < 4; i++) {
-            var betss = parseInt(data.pokes[i + 1].num)
-            this['resultType' + i].text = BJLUtil.getInstance().getCardType2(data.pokes[i + 1].type);
-            this['labResult0_' + i].text = betss + '倍';//倍率
-            this['labResult1_' + i].text = QuickManage.moneyStr(this.selfbetsNum[i + 1]); //押注
-            var gold = this.selfbetsNum[i + 1];
-            if (gold != 0) {
-                this['labResult2_' + i].text = '';
-                if (data.result[i] == 1) {
-                    var bets0 = 0;
-                    if (this.isBanker) {
-                        bets0 = parseInt(data.pokes[0].num)
-                    }
-                    else {
-                        bets0 = parseInt(data.pokes[i + 1].num)
-                    }
-                    userGold += parseInt(gold) * (bets0 + 1);
-                }
-                else {
-                    var bets1 = 0;//1倍不再减少
-                    if (this.isBanker) {
-                        bets1 = parseInt(data.pokes[i + 1].num)
-                    }
-                    else {
-                        bets1 = parseInt(data.pokes[0].num)
-                    }
-                    if (bets1 == 1) {
-                        // userGold -= parseInt(gold);
-                    }
-                    else {
-                        userGold -= parseInt(gold) * (bets1 - 1);
-                    }
-                }
-            }
-            else {
-                this['labResult2_' + i].text = 0;
-            }
-        }
-
-        var betsGold = 0;
-        for (var i = 1; i < 5; i++) {
-            betsGold += this.selfbetsNum[i];
-        }
-        if (userGold > 0 || userGold == 0) {
-            // userGold *= (1 - data.rate);
-            userGold *= (1 - this.curRate);
-        }
-        userGold -= betsGold;
-        if (userGold > 0 || userGold == 0) {
-            this.labResultValue.text = '结算：' + QuickManage.moneyStr(userGold);
-        }
-        else {
-            this.labResultValue.text = '结算：-' + QuickManage.moneyStr(Math.abs(userGold));
-        }
-        if (userGold > 0) {
-            EffectUtils.coinsFly(this, 320, 500);
-        }
-        this.updateGold();
-        //更新来自更新彩金时所带的庄家金币
-        if (!this.isSysBanker) {
-            this.labBankerMoney.text = QuickManage.moneyStr(this.banker_total_gold);
-        }
-        this.setHandsel(this.totalCaijin);
-        if (userGold > 0 && this.resultCaijin > 0) {
-            this.interval = setInterval(this.caijinShow.bind(this), 3000);
-        }
-        else {
-            if (this.cardResult.bomb == 0) {
-                this.interval = setInterval(this.setStartBet.bind(this), 4000);
-            }
-            else {
-                this.interval = setInterval(this.boomShow.bind(this), 3000);
-            }
-        }
-    }
-
-    private boomShow(): void {
-        this.grpCaijin.visible = false;
-        this.imgBaoZhuang.visible = true;
-        clearInterval(this.interval);
-        this.interval = setInterval(this.setStartBet.bind(this), 4000);
-    }
-    */
-    /*
-    private caijinShow(msg): void {
-        PanelManage.chat.sendGameChat('恭喜你获得彩金 ' + this.resultCaijin);
-        this.grpCaijinLabel.text = '恭喜你获得' + this.resultCaijin + '彩金';
-        this.grpCaijin.visible = true;
-        clearInterval(this.interval);
-        if (this.cardResult.bomb == 0) {
-            this.interval = setInterval(this.setStartBet.bind(this), 4000);
-        }
-        else {
-            this.interval = setInterval(this.boomShow.bind(this), 3000);
-        }
-    }*/
-
-    // private setStartBet(): void {
-    //     this.resetGame();
-    //     this.grpResult.visible = false;
-    //     clearInterval(this.interval);
-    //     this.showGameTips(2);
-    //     this.grpCountdown.visible = true;
-    //     if (!this.isSysBanker && !this.isChangeBanker) {
-    //         this.lastGameBankerNum--;
-    //         this.labBankerLastNum.text = '剩余' + Math.round(this.lastGameBankerNum) + '次';
-    //     }
-    //     if (this.isChangeBanker) {
-    //         this.isChangeBanker = false;
-    //         //this.setBankerInfo(this.changeBankerObj);
-    //         this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
-    //     }
-    // }
     /**重置界面 */
     private resetGame(): void {
-        this.initData();
 
         for (var index = 0; index < 2; index++) {
 
@@ -1317,14 +1171,18 @@ class BJLView extends eui.Component {
         while (this.grpCoins.numChildren > 0) {
             this.grpCoins.removeChildAt(0);
         }
-        for (let i = 0; i < this.arrCoin.length; i++) {
-            if (this.arrCoin[i].parent != null) {
-                //egret.Tween.removeTweens(this.arrCoin[i]);
-                this.arrCoin[i].parent.removeChild(this.arrCoin[i]);
-            }
-        }
-        this.arrCoin = [];
 
+
+        for (let i = 1; i < 6; i++) {
+            for (let j = 0; j < this['coin_' + i + '_arr'].length; j++) {
+                if (this['coin_' + i + '_arr'].parent != null) {
+                    this['coin_' + i + '_arr'].parent.removeChild(this['coin_' + i + '_arr']);
+                }
+            }
+            this['coin_' + i + '_arr'] = [];
+        }
+
+        this.initData();
     }
 
     //========================== Second Panel ==============================
@@ -1340,24 +1198,24 @@ class BJLView extends eui.Component {
     //    Net.send(Protocol.NIUNIU_GAME_RECORD, {}, this.getHistoryCallback.bind(this));
     //}
 
-    private getHistoryCallback(msg): void {
-        var list = msg.data;
-        for (var i = 0; i < 10; i++) {
-            if (i < list.length) {
-                this['grpHistroy' + i].visible = true;
-                var arr = list[i];
-                for (var j = 0; j < 4; j++) {
-                    this['grpHistroy' + j + '_' + i].source = arr[j] == 1 ? 'nn.a8' : 'nn.a7';
-                }
-            }
-            else {
-                this['grpHistroy' + i].visible = false;
-            }
-        }
-        // this.grpSecondPanel.visible = true;
-        // this.grpCardType.visible = false;
-        // this.grpHistory.visible = true;
-    }
+    // private getHistoryCallback(msg): void {
+    //     var list = msg.data;
+    //     for (var i = 0; i < 10; i++) {
+    //         if (i < list.length) {
+    //             this['grpHistroy' + i].visible = true;
+    //             var arr = list[i];
+    //             for (var j = 0; j < 4; j++) {
+    //                 this['grpHistroy' + j + '_' + i].source = arr[j] == 1 ? 'nn.a8' : 'nn.a7';
+    //             }
+    //         }
+    //         else {
+    //             this['grpHistroy' + i].visible = false;
+    //         }
+    //     }
+    //     // this.grpSecondPanel.visible = true;
+    //     // this.grpCardType.visible = false;
+    //     // this.grpHistory.visible = true;
+    // }
 
     //private onTouchCloseSecondPanel(): void {
     //    this.grpSecondPanel.visible = false;
@@ -1373,9 +1231,9 @@ class BJLView extends eui.Component {
     //    lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
     //}
 
-    private updateDataGold(): void {
-        //EffectUtils.numEffect(this.titleLabMoney, parseInt(GlobalData.user.gold));
-    }
+    // private updateDataGold(): void {
+    //     //EffectUtils.numEffect(this.titleLabMoney, parseInt(GlobalData.user.gold));
+    // }
 
 
     //public dispose(): void {
@@ -1391,6 +1249,7 @@ class BJLView extends eui.Component {
     public playClickSound(res): void {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     }
+
     /**退出游戏 */
     public Onquit(): void {
         if (UserInfo.getInstance().isGameStart) {
@@ -1420,13 +1279,13 @@ class BJLView extends eui.Component {
         this.effectTouch3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_meun.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
+        // EventUtil.addEventListener(EventConst.onSendGameRoom, this.Joinhalfway, this);
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
-        EventUtil.removeEventListener(EventConst.onCheckout, this.bofangEffect, this);
-        EventUtil.removeEventListener(EventConst.onUpdateUserBalance, this.onAcquisitionGolbBack, this);
         EventUtil.removeEventListener(EventConst.OnUpdateLimitItem, this.UpdateLimitItem, this);
         EventUtil.removeEventListener(EventConst.onSendJetton, this.SendJetton, this);
         EventUtil.removeEventListener(EventConst.onGameStatusChange, this.GameStatus, this);

@@ -37,10 +37,10 @@
 	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
 		<e:Image id="grpCard_0_1" x="559.38" y="284.76" scaleX="1" scaleY="1" width="74" height="104" source="img_puke_7_png"/>
 		<e:Image id="grpCard_0_0" x="641.87" y="284.76" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104"/>
-		<e:Image id="grpCard_0_2" x="522.94" y="242.7" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104" rotation="-90"/>
+		<e:Image id="grpCard_0_2" x="558.94" y="279.7" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104" rotation="-90"/>
 		<e:Image id="grpCard_1_0" y="284.76" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104" x="751.83"/>
 		<e:Image id="grpCard_1_1" y="284.76" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104" x="836.86"/>
-		<e:Image id="grpCard_1_2" x="769.95" y="242.7" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104" rotation="-90"/>
+		<e:Image id="grpCard_1_2" x="805.95" y="279.7" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104" rotation="-90"/>
 
 
 
@@ -65,7 +65,7 @@
 
 
 
-	<e:Group width="1472" height="162" x="0" y="666" locked="true">
+	<e:Group width="1472" height="162" x="0" y="666">
 		<e:Image id="_image_1" x="347.73" scaleX="1" scaleY="1" source="baccarat_game_icon_chouma_4_png" y="-81"/>
 		<e:Image id="xuanzho" x="337.78" scaleX="1" scaleY="1" y="-97" source="baccarat_game_chouma_light_png"/>
 		<e:Image id="_image_2" x="484.39" scaleX="1" scaleY="1" y="-61" source="baccarat_game_icon_chouma_10_png"/>
@@ -75,7 +75,7 @@
 		<e:Image id="_image_6" x="1006.07" scaleX="1" scaleY="1" y="-61" source="baccarat_game_icon_chouma_200_png"/>
 		<e:Image width="1472" height="162" source="img_dibu_png" x="0" y="0"/>
 
-		<e:Group id="grpHead0" scaleX="1" scaleY="1" x="15" y="23">
+		<e:Group id="grpHead0" scaleX="1" scaleY="1" x="15" y="23" locked="true">
 			<e:Image y="0" x="0" source="baccarat_game_userinfo_bg_png"/>
 			<e:Image id="imghead0" width="83" height="82" x="18.4" y="40" source="women7_png"/>
 			<e:Label id="labelHead0" text="世界第一赌神" x="117.23" y="48.98" textColor="0xf2b354" size="25" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" width="160" height="30" verticalAlign="middle"/>
@@ -103,32 +103,9 @@
 	</e:Group>
 	<e:Image scaleX="1" scaleY="1" source="baccarat_game_chips_bg_png" x="325" y="652.67" locked="true"/>
 
-	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
 
-	</e:Button>
-	<e:Button id="_btn_meun" label="" x="1365" y="20" locked="true">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
 
-	</e:Button>
-	<e:Button id="wanjialist" label="" y="574.05" x="0" locked="true">
-		<e:skinName>
-		<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="baccarat_game_btn_players_png" source.down="baccarat_game_btn_players_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-		</e:Skin>
-		</e:skinName>
-	</e:Button>
+
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0" locked="true">
 	</e:Group>
 	<e:Group x="919.92" y="175.49" locked="true">
@@ -159,19 +136,7 @@
 	</e:Group>
 
 
-	<e:Group id="wjlistkuang" x="311" y="183" locked="true" visible="false">
-		<e:Image width="850" height="463" source="baccarat_playersBg_png" x="0" y="0" locked="true"/>
-		<e:Image id="packup" width="128" height="57" source="baccarat_tips_close_png" y="2.66" x="711.36" locked="true"/>
-		<e:Scroller id="scroller" width="816" height="330.67" y="83.34" anchorOffsetX="0" anchorOffsetY="0" x="17">
-			<e:Group>
-				<e:List id="userlist" width="100%" height="100%" x="0" y="0" itemRenderer="BJLframe">
-					<e:layout>
-						<e:VerticalLayout/>
-					</e:layout>
-				</e:List>
-			</e:Group>
-		</e:Scroller>
-	</e:Group>
+
 	<e:Group id="Themitoken" x="0" y="205" locked="true" visible="false">
 		<e:Image scaleX="1" scaleY="1" width="1472" height="419" source="baccarat_game_mipai_bg_png" x="0" y="0" locked="true"/>
 
@@ -232,6 +197,43 @@
 			<e:Label id="zhuang_Label" text="庄家咪牌中" anchorOffsetX="0" width="401" height="32" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" x="0" y="2"/>
 		</e:Group>
 	</e:Group>
+	<e:Group id="wjlistkuang" x="311" y="183" locked="true" visible="false">
+		<e:Image width="850" height="463" source="baccarat_playersBg_png" x="0" y="0" locked="true"/>
+		<e:Image id="packup" width="128" height="57" source="baccarat_tips_close_png" y="2.66" x="711.36" locked="true"/>
+		<e:Scroller id="scroller" width="816" height="330.67" y="83.34" anchorOffsetX="0" anchorOffsetY="0" x="17">
+		<e:Group>
+			<e:List id="userlist" width="100%" height="100%" x="0" y="0" itemRenderer="BJLframe">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+			</e:List>
+		</e:Group>
+		</e:Scroller>
+	</e:Group>
+	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_meun" label="" x="1365" y="20" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="wanjialist" label="" y="574.05" x="0" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="baccarat_game_btn_players_png" source.down="baccarat_game_btn_players_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
 
 
 
