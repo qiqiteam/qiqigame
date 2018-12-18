@@ -43,13 +43,13 @@ class Main extends xlLib.GameDoc {
         // })
 
         egret.lifecycle.onPause = () => {
-            egret.ticker.pause();
+            // egret.ticker.pause();
             xlLib.SoundMgr.instance.musicOpen = false;
             xlLib.SoundMgr.instance.soundOpen = false;
         }
 
         egret.lifecycle.onResume = () => {
-            egret.ticker.resume();
+            // egret.ticker.resume();
            xlLib.SoundMgr.instance.musicOpen = true;
             xlLib.SoundMgr.instance.soundOpen = true;
         }
