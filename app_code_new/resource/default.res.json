@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_mp3,bar_game_start_0_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3",
+			"keys": "loading_png,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_mp3,bar_game_start_0_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3,bjl_00_zero_mp3,bjl_01_deal_mp3,bjl_02_start_mp3,bjl_03_stop_mp3,bjl_08_player_mp3,bjl_09_banker_mp3,bjl_10_draw_mp3,bjl_11_one_mp3,bjl_12_two_mp3,bjl_13_three_mp3,bjl_14_four_mp3,bjl_15_five_mp3,bjl_16_six_mp3,bjl_17_seven_mp3,bjl_18_eight_mp3,bjl_19_nine_mp3,bjl_20_bankwin_mp3,bjl_21_playwin_mp3,bjl_22_tie_mp3,bjl_35_bg_imi_mp3,bjl_37_bg_play_mp3,lh_chipfly_long_mp3",
 			"name": "preload"
 		},
 		{
@@ -6613,6 +6613,116 @@
 			"url": "assets/dragonbones/bg_ebg_tianwang/bg_ebg_tianwang_tex.json",
 			"type": "json",
 			"name": "bg_ebg_tianwang_tex_json"
+		},
+		{
+			"name": "bjl_00_zero_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_00_zero.mp3"
+		},
+		{
+			"name": "bjl_01_deal_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_01_deal.mp3"
+		},
+		{
+			"name": "bjl_02_start_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_02_start.mp3"
+		},
+		{
+			"name": "bjl_03_stop_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_03_stop.mp3"
+		},
+		{
+			"name": "bjl_08_player_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_08_player.mp3"
+		},
+		{
+			"name": "bjl_09_banker_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_09_banker.mp3"
+		},
+		{
+			"name": "bjl_10_draw_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_10_draw.mp3"
+		},
+		{
+			"name": "bjl_11_one_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_11_one.mp3"
+		},
+		{
+			"name": "bjl_12_two_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_12_two.mp3"
+		},
+		{
+			"name": "bjl_13_three_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_13_three.mp3"
+		},
+		{
+			"name": "bjl_14_four_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_14_four.mp3"
+		},
+		{
+			"name": "bjl_15_five_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_15_five.mp3"
+		},
+		{
+			"name": "bjl_16_six_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_16_six.mp3"
+		},
+		{
+			"name": "bjl_17_seven_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_17_seven.mp3"
+		},
+		{
+			"name": "bjl_18_eight_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_18_eight.mp3"
+		},
+		{
+			"name": "bjl_19_nine_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_19_nine.mp3"
+		},
+		{
+			"name": "bjl_20_bankwin_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_20_bankwin.mp3"
+		},
+		{
+			"name": "bjl_21_playwin_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_21_playwin.mp3"
+		},
+		{
+			"name": "bjl_22_tie_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_22_tie.mp3"
+		},
+		{
+			"name": "bjl_35_bg_imi_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_35_bg_imi.mp3"
+		},
+		{
+			"name": "bjl_37_bg_play_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/bjl_37_bg_play.mp3"
+		},
+		{
+			"name": "lh_chipfly_long_mp3",
+			"type": "sound",
+			"url": "assets/sound/bjl/lh_chipfly_long.mp3"
 		}
 	]
 }

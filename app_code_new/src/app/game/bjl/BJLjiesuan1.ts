@@ -35,8 +35,12 @@ class BJLjiesuan1 extends eui.Component {
     public play(): void {
         this.visible = true;
         this.zhuangyin.play(0);
+        this.playClickSound(BJLUtil.getInstance().getSoundEffect(11));
     }
 
+    public playClickSound(res): void {
+        xlLib.SoundMgr.instance.playSound(res + "_mp3");
+    }
 
     public stop(): void {
         this.zhuangyin.stop();
