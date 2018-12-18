@@ -58,6 +58,7 @@
 		"bin-debug/app/game/brnn/BrnnMainView.js",
 		"bin-debug/app/game/brnn/BRNNroomView.js",
 		"bin-debug/app/game/brnn/BRNNScene.js",
+		"bin-debug/app/game/brnn/BrnnShuffle.js",
 		"bin-debug/app/game/brnn/BRNNUtil.js",
 		"bin-debug/app/game/brnn/BRNNView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",

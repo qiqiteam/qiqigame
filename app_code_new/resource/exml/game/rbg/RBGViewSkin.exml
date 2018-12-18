@@ -244,9 +244,9 @@
 
 
 
-	<e:Group id="_group_wait" width="1472" height="828" x="0" y="0" visible="false">
+	<e:Group id="_group_wait" width="1472" height="828" x="0" y="0" visible="false" locked="true">
 		<e:Rect width="1472" height="828" x="0" y="0" fillAlpha="0.5" scaleX="1" scaleY="1"/>
-		<e:Image source="bar_tip_bg_png" y="282" x="480"/>
+		<e:Image source="bar_tip_bg_png" y="282" x="480" touchEnabled="false"/>
 		<e:Image source="bar_tip_title_1_png" y="305" x="648"/>
 		<e:Label text="正在为您匹配牌桌" y="370" x="616"/>
 		<e:Label id="_label_wait" text="游戏即将开始，请耐心等待..." y="441" horizontalCenter="0"/>
@@ -259,7 +259,7 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-	<e:Group id="_btn_switch" width="950" height="140" scaleX="1" scaleY="1" y="436.57" x="261" visible="false" locked="true">
+	<e:Group id="_btn_switch" width="950" height="140" scaleX="1" scaleY="1" y="436.57" x="261" locked="true" visible="false">
 		<e:Image y="24" source="bar_bet_tip_bg_png" x="120"/>
 		<e:Label text="请选择投注倍数" y="29.04" horizontalCenter="13" size="20" textAlign="center"/>
 		<e:Button id="_btn_double_1" label="" x="30" y="57.49">
@@ -313,7 +313,7 @@
 		<e:Image x="659.27" y="77.49" source="bar_bet_times_png" touchEnabled="false"/>
 		<e:Image x="840.8" y="77.49" source="bar_bet_times_png" touchEnabled="false"/>
 	</e:Group>
-	<e:Group id="_group_qiang" width="950" height="140" scaleX="1" scaleY="1" y="436.57" x="261" touchEnabled="false" visible="false" locked="true">
+	<e:Group id="_group_qiang" width="950" height="140" scaleX="1" scaleY="1" y="436.57" x="261" touchEnabled="false" locked="true" visible="false">
 		<e:Image y="24" source="bar_bet_tip_bg_png" x="120"/>
 		<e:Label text="请选择本局能承受的最大赔付倍数进行抢庄" y="29.04" horizontalCenter="13" size="20" textAlign="center"/>
 		<e:Button id="_btn_buqiang" label="" x="30" y="57.49">
@@ -366,7 +366,7 @@
 		<e:Image x="632" y="77.49" source="bar_btn_grab_times_png" touchEnabled="false"/>
 		<e:Image x="812" y="77.49" source="bar_btn_grab_times_png" touchEnabled="false"/>
 	</e:Group>
-	<e:Button id="_continue_btn_0" label="" y="470.83" scaleX="1" scaleY="1" x="628" visible="false" locked="true">
+	<e:Button id="_continue_btn_0" label="" y="470.83" scaleX="1" scaleY="1" x="628" locked="true" visible="false">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="bar_btn_1_normal_png" source.down="bar_btn_1_normal_png"/>
@@ -374,8 +374,8 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Image id="_continue_img_0" y="496.35" source="bar_btn_txt_continue_png" touchEnabled="false" scaleX="1" scaleY="1" x="674" visible="false" locked="true"/>
-	<e:Group id="_group_settlement" width="1472" height="828" x="0" y="0" visible="false" locked="true">
+	<e:Image id="_continue_img_0" y="496.35" source="bar_btn_txt_continue_png" touchEnabled="false" scaleX="1" scaleY="1" x="674" locked="true" visible="false"/>
+	<e:Group id="_group_settlement" width="1472" height="828" x="0" y="0" locked="true" visible="false">
 		<e:Rect id="_rect_re_touch" width="1472" height="828" y="0" fillAlpha="0.4" x="0"/>
 		<e:Image id="_img_re_bg" y="152" x="105" touchEnabled="false" source="bar_over_lose_bg_png"/>
 		<e:Image id="_img_guang" source="bar_over_lose_light_png" y="-72.75" x="400"/>
@@ -429,6 +429,7 @@
 		</e:Button>
 		<e:Image id="_continue_img_1" x="671.48" y="645.4" source="bar_btn_txt_continue_png" touchEnabled="false" scaleX="1" scaleY="1"/>
 	</e:Group>
+	<e:Image id="_tongpei_img" source="bar_effect_lost_0_png" y="319" x="490" touchEnabled="false" visible="false" locked="true"/>
 
 
 </e:Skin>
