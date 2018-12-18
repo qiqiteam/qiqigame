@@ -2,20 +2,20 @@
  * 大厅界面
  * */
 class LobbyView extends eui.Component {
-	public bgImg:eui.Image;
-	public _set:eui.Button;
-	public _service:eui.Button;
-	public _playerinfo:eui.Button;
-	public _head_label:eui.Label;
-	public _coin_label:eui.Label;
-	public icon_img:eui.Image;
-	public maskbg:eui.Rect;
-	public _generalize:eui.Button;
-	public _safebox:eui.Button;
-	public _information:eui.Button;
-	public _welfare:eui.Button;
-	public _shoppingmall:eui.Button;
-	public _topup:eui.Button;
+	public bgImg: eui.Image;
+	public _set: eui.Button;
+	public _service: eui.Button;
+	public _playerinfo: eui.Button;
+	public _head_label: eui.Label;
+	public _coin_label: eui.Label;
+	public icon_img: eui.Image;
+	public maskbg: eui.Rect;
+	public _generalize: eui.Button;
+	public _safebox: eui.Button;
+	public _information: eui.Button;
+	public _welfare: eui.Button;
+	public _shoppingmall: eui.Button;
+	public _topup: eui.Button;
 
 
 	private gamelistView: GameIconListView;
@@ -46,15 +46,22 @@ class LobbyView extends eui.Component {
 		this._head_label.text = UserInfo.getInstance().username;
 		this._coin_label.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
 		this.initGameIconList();
+
+		/*let operateTimer: OperateTimer = new OperateTimer();
+		operateTimer.x = 400;
+		operateTimer.y = 300;
+		this.addChild(operateTimer);
+		this.setChildIndex(operateTimer, this.numChildren - 1);*/
+
 	}
 
 	private initGameIconList(): void {
 		let allgameList: GameIconData[] = [
-			new GameIconData().initData({ name: "通比牛牛", ishot: true, isOpen: true,isNew:false, game: Const.GAME_NIUNIU, type: Const.TYPE_TBNN }),
-			new GameIconData().initData({ name: "炸金花", ishot: true, isOpen: true,isNew:false, game: Const.GAME_ZHAJINHUA, type: Const.TYPE_JINGDIANJINHUA }),
-			new GameIconData().initData({ name: "百家乐", ishot: true, isOpen: true,isNew:false, game: Const.GAME_BAIJIALE, type: Const.TYPE_JINGDIANBAIJIALE }),
-			new GameIconData().initData({ name: "二八杠", ishot: true, isOpen: true,isNew:false, game: Const.GAME_ERBAGANG, type: Const.TYPE_ERBAGANGJINDIAN }),
-			new GameIconData().initData({ name: "百人牛牛", ishot: true, isOpen: true,isNew:true, game: Const.GAME_NIUNIU, type: Const.TYPE_QRNIUNIU })
+			new GameIconData().initData({ name: "通比牛牛", ishot: true, isOpen: true, isNew: false, game: Const.GAME_NIUNIU, type: Const.TYPE_TBNN }),
+			new GameIconData().initData({ name: "炸金花", ishot: true, isOpen: true, isNew: false, game: Const.GAME_ZHAJINHUA, type: Const.TYPE_JINGDIANJINHUA }),
+			new GameIconData().initData({ name: "百家乐", ishot: true, isOpen: true, isNew: false, game: Const.GAME_BAIJIALE, type: Const.TYPE_JINGDIANBAIJIALE }),
+			new GameIconData().initData({ name: "二八杠", ishot: true, isOpen: true, isNew: false, game: Const.GAME_ERBAGANG, type: Const.TYPE_ERBAGANGJINDIAN }),
+			new GameIconData().initData({ name: "百人牛牛", ishot: true, isOpen: true, isNew: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QRNIUNIU })
 		]
 		this.gameIconDataList = allgameList;
 		this.gamelistView = new GameIconListView();
@@ -63,7 +70,7 @@ class LobbyView extends eui.Component {
 		this.gamelistView.setData(this.gameIconDataList);
 		this.addChild(this.gamelistView);
 
-		this.qznnGameIconData = new GameIconData().initData({ name: "抢庄牛牛", ishot: true,isNew:false, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QZNN });
+		this.qznnGameIconData = new GameIconData().initData({ name: "抢庄牛牛", ishot: true, isNew: false, isOpen: true, game: Const.GAME_NIUNIU, type: Const.TYPE_QZNN });
 		this.qznnGameIcon = new QznnIconItem();
 		this.qznnGameIcon.x = 42;
 		this.qznnGameIcon.y = 158;

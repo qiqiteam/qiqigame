@@ -14,20 +14,20 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 		super();
 		this.skinName = "ZhajhroomViewSkin";
 	}
-
+	public resize(): void {
+		this.bgImg.width = xlLib.Global.screenWidth;
+		this.bgImg.height = xlLib.Global.screenHeight;
+	}
 	protected childrenCreated(): void {
 		super.childrenCreated();
 		this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
-
+		
 		this._return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
 		this._record.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
 		this._help.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
 		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
 		this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
 		EventUtil.addEventListener(EventConst.onGameStatusChange, this.JoinRoomPrepare, this);
-		
-		
-
 
 	}
 	private JoinRoomPrepare(data: any): void {
@@ -35,7 +35,7 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 			xlLib.SceneMgr.instance.changeScene(ZJHScene);
 			xlLib.TipsUtils.showFloatWordTips("加入房间成功！");
 		}
-		
+
 	}
 	private onEnterGame(): void {
 		if (!this.gameIconData) {
@@ -55,7 +55,7 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 	public setGameIconData(gameIconData: GameIconData): void {
 		this.gameIconData = gameIconData;
 	}
-/***------------------------------------------------------------------------------------------------------------ */
+	/***------------------------------------------------------------------------------------------------------------ */
 	public Onclickpanl(e: egret.TouchEvent): void {
 		if (e.target == this._return) {
 			xlLib.PopUpMgr.removePopUp(this, 1);
@@ -63,7 +63,7 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 			this.addrecordPanl();
 		} else if (e.target == this._help) {
 			this.addhelpPanl();
-		} 
+		}
 	}
 	//记录面板
 	public addrecordPanl(): void {

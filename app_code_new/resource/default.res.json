@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png",
+			"keys": "loading_png,gf_icon_chip_sm3_png",
 			"name": "preload"
 		},
 		{
@@ -3773,11 +3773,6 @@
 			"name": "gf_icon_chip_sm2_png"
 		},
 		{
-			"url": "assets/game/zhajh/gf_icon_chip_sm3.PNG",
-			"type": "bin",
-			"name": "gf_icon_chip_sm3_PNG"
-		},
-		{
 			"url": "assets/game/zhajh/gf_icon_chip_sm4.png",
 			"type": "image",
 			"name": "gf_icon_chip_sm4_png"
@@ -6513,6 +6508,16 @@
 			"url": "assets/game/erbagang/rbg_animation/bar_sicbo_top.png",
 			"type": "image",
 			"name": "bar_sicbo_top_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_icon_chip_sm3.png",
+			"type": "image",
+			"name": "gf_icon_chip_sm3_png"
+		},
+		{
+			"url": "assets/game/zhajh/gf_flag_ykp.png",
+			"type": "image",
+			"name": "gf_flag_ykp_png"
 		}
 	]
 }

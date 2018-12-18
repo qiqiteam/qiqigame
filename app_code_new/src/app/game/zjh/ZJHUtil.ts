@@ -74,6 +74,34 @@ class ZJHUtil {
         }
     }
 
+    /**获取玩家初始图像位置 */
+    public getPlayerIconPos(index): egret.Point {
+        var point: egret.Point = new egret.Point();
+        switch (index) {
+            case 0:
+                point.x = 516;
+                point.y = 486;
+                break;
+            case 1:
+                point.x = 1171;
+                point.y = 410;
+                break;
+            case 2:
+                point.x = 1211;
+                point.y = 175;
+                break;
+            case 3:
+                point.x = 121;
+                point.y = 175;
+                break;
+            case 4:
+                point.x = 170;
+                point.y = 410;
+                break;
+        }
+        return point;
+    }
+    /**飞筹码的范围 */
     public getCoinsPos(): egret.Point {
         var point: egret.Point = new egret.Point();
         /*
@@ -100,7 +128,61 @@ class ZJHUtil {
         point.y = 300;
         return point;
     }
-
+    /**气泡背景 */
+    public operateTypeBGPos(index: number): egret.Point {
+        var pos: egret.Point = new egret.Point();
+        switch (index) {
+            case 0:
+                pos.x = 760;
+                pos.y = 512;
+                break;
+            case 1:
+                pos.x = 1020;
+                pos.y = 449;
+                break;
+            case 2:
+                pos.x = 1060;
+                pos.y = 219;
+                break;
+            case 3:
+                pos.x = 290;
+                pos.y = 219;
+                break;
+            case 4:
+                pos.x = 339;
+                pos.y = 449;
+                break;
+        }
+        return pos;
+    }
+    /**气泡状态 */
+    public operateTypePos(index: number): egret.Point {
+        var pos: egret.Point = new egret.Point();
+        switch (index) {
+            case 0:
+                pos.x = 790;
+                pos.y = 520;
+                break;
+            case 1:
+                pos.x = 1048;
+                pos.y = 457;
+                break;
+            case 2:
+                pos.x = 1090;
+                pos.y = 229;
+                break;
+            case 3:
+                pos.x = 317;
+                pos.y = 229;
+                break;
+            case 4:
+                pos.x = 372;
+                pos.y = 457;
+                break;
+        }
+        return pos;
+    }
+    /**牌型 */
     public getCardType(index): string {
         switch (index) {
             case 1:
@@ -153,7 +235,7 @@ class ZJHUtil {
     }
     //筹码类型        1000w   5000w   1y  3y  5y
     public coinsType(pos: egret.Point, num): Array<egret.Sprite> {
-        var splist: Array<egret.Sprite>=[];
+        var splist: Array<egret.Sprite> = [];
         var coinNum: number = 0;
         var src: string = '';
         num = Math.round(num / 100);
@@ -218,7 +300,7 @@ class ZJHUtil {
             for (let i = 0; i < 2; i++) {
                 var sp: egret.Sprite = new egret.Sprite();
                 var coin: eui.Image = new eui.Image(src);
-                var cmnum: eui.Label = new eui.Label(Math.round(coinNum/2).toString());
+                var cmnum: eui.Label = new eui.Label(Math.round(coinNum / 2).toString());
                 coin.name = "img";
                 coin.x = 0;
                 coin.y = 0;
