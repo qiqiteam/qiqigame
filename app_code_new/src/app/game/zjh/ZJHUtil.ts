@@ -101,6 +101,34 @@ class ZJHUtil {
         }
         return point;
     }
+
+    /**获取玩家比牌胜利标 */
+    public getP(index): egret.Point {
+        var point: egret.Point = new egret.Point();
+        switch (index) {
+             case 0:
+                point.x = 220;
+                point.y = 160;
+                break;
+            case 1:
+                point.x = -125;
+                point.y = -315;
+                break;
+            case 2:
+                point.x = -85;
+                point.y = -550;
+                break;
+            case 3:
+                point.x = -860;
+                point.y = -550;
+                break;
+            case 4:
+                point.x = -810;
+                point.y = -315;
+                break;
+        }
+        return point;
+    }
     /**飞筹码的范围 */
     public getCoinsPos(): egret.Point {
         var point: egret.Point = new egret.Point();

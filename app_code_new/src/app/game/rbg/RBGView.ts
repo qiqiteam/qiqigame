@@ -174,6 +174,7 @@ class RBGView extends eui.Component {
     public _label_des:eui.Label;
     public _continue_btn_1:eui.Button;
     public _continue_img_1:eui.Image;
+    public _tongpei_img:eui.Image;
 
 
     //-----------------------------------------------
@@ -199,9 +200,9 @@ class RBGView extends eui.Component {
 
     private _coin_arr = [];                 //筹码池
 
-    private tianWang:DragonBonesSprite;
+    private tianWang:DragonBonesSprite = null;
 
-    private tongSha:DragonBonesSprite;
+    private tongSha:DragonBonesSprite = null;
 
     //-----------------------------------------------
 
@@ -238,6 +239,7 @@ class RBGView extends eui.Component {
         this._close_btn.visible = false;
         this._group_settlement.visible = false;
         this._rect_re_touch.touchEnabled = false;
+        this._tongpei_img.visible = false;
         //-----------------------------------------------
     }
 
@@ -387,7 +389,6 @@ class RBGView extends eui.Component {
             } else {
                 this._group_bar_histroy.visible = false;
             }
-            this.playTongSha();
         } else if(e.target == this._rect_re_touch) {
             this._rect_re_touch.touchEnabled = false;
             this._group_settlement.visible = false;
@@ -960,7 +961,6 @@ class RBGView extends eui.Component {
         }
 
         let player = this['grpHead' + this.zhaungIndex];
-        //uiCore.SoundManager.playEffect("bar_drop_coin_mp3");
         for(let i=0; i<this._coin_arr.length; i++) {
             let coin = this._coin_arr[i];
             egret.Tween.get(coin).to({
@@ -1130,25 +1130,47 @@ class RBGView extends eui.Component {
             }, [img]);
         }
 
-        //this.flyIntval = setInterval(this.showGameResult.bind(this), 4000);
+        this.flyIntval = setInterval(this.resultBack.bind(this), 3000);
     }
 
     private playTianWang():void
     {
-        this.tianWang = new DragonBonesSprite('bg_ebg_tianwang',"Sprite");
-        this.tianWang.x = 1230;
-        this.tianWang.y = 400;
-        this.addChild(this.tianWang);
-        this.tianWang.play("Sprite");
+        if(this.tianWang == null) {
+            this.tianWang = new DragonBonesSprite('bg_ebg_tianwang',"Sprite");
+            this.tianWang.x = xlLib.Global.screenWidth / 2;
+            this.tianWang.y = xlLib.Global.screenHeight / 2;
+            this.tianWang.touchEnabled = false;
+            this.tianWang.touchChildren = false;
+            this.addChild(this.tianWang);
+        }
+        
+        this.tianWang.play("Sprite", 1);
+        this.tianWang.onPlayComplete = ()=>{
+            this.tianWang.destroy();
+            this.tianWang.parent.removeChild(this.tianWang);
+            this.tianWang = null;
+        }
     }
 
     private playTongSha():void
     {
-        this.tongSha = new DragonBonesSprite('bg_ebg_tongsha',"Sprite");
-        this.tongSha.x = 500;
-        this.tongSha.y = 300;
-        this.addChild(this.tongSha);
+        if(this.tongSha == null) {
+            this.tongSha = new DragonBonesSprite('bg_ebg_tongsha',"Sprite");
+            this.tongSha.x = xlLib.Global.screenWidth / 2;
+            this.tongSha.y = xlLib.Global.screenHeight / 2;
+            this.tongSha.touchEnabled = false;
+            this.tongSha.touchChildren = false;
+            this.addChild(this.tongSha);
+        }
+        
         this.tongSha.play("Sprite", 1);
+        this.tongSha.onPlayComplete = ()=>{
+            this.tongSha.destroy();
+            this.tongSha.parent.removeChild(this.tongSha);
+            this.tongSha = null;
+        }
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(10));
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(12));
     }
 
     //-------------------------------服务器回调------------------------------
@@ -1355,6 +1377,9 @@ class RBGView extends eui.Component {
         _group.anchorOffsetY = _group.height / 2;
         _group.x = this.orginCardTypePos[this.effectPlayerIndex0].x;
         _group.y = this.orginCardTypePos[this.effectPlayerIndex0].y;
+        if(poke.nameType == 30) {//天王
+            this.playTianWang();
+        }
 
         if(poke.nameType == 0) {
             _group_bg.source = "bar_point_bg_0_png";
@@ -1376,13 +1401,23 @@ class RBGView extends eui.Component {
 
     //============================================  Game Result
 
-
-
-    private showGameResult(data: any): void {
-        //clearInterval(this.flyIntval);
+    private resultBack() {
+        clearInterval(this.flyIntval);
         this.flyIntval = -1;
         var value = this.cardResult;
+        if(value.result == 2) {//通杀
+            this.playTongSha();
+        } else if(value.result == 3) {//通赔
+            this.playClickSound(RBGUtil.getInstance().getSoundEffect(11));
+            this._tongpei_img.visible = true;
+        }
+    }
+
+    private showGameResult(data: any): void {
+        
+        var value = this.cardResult;
         this._group_settlement.visible = true;
+        this._tongpei_img.visible = false;
         //console.log("+++++++++" + this.gamePlayIndex);
         //console.log("+++++++++" + this.flyIntval);
         //console.log("+++++++++" + this.diceInterval);

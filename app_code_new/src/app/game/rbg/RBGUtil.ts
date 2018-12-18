@@ -241,6 +241,12 @@ class RBGUtil {
                 return 'bar_open_card';
             case 9:
                 return 'bar_player_win';
+            case 10:
+                return 'bar_game_all_kill';//通杀
+            case 11:
+                return 'bar_game_all_win';//通赔
+            case 12:
+                return 'bar_game_kill_effect';//通赔ef
         }
     }
 }
