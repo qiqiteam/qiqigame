@@ -104,8 +104,8 @@
 		"bin-debug/app/game/safebox/SafeBoxTypeItem.js",
 		"bin-debug/app/game/safebox/SafeBoxView.js",
 		"bin-debug/app/game/set/SetTypeItem.js",
+		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/Global.js",
-		"bin-debug/app/game/tbnn/TBNNHead.js",
 		"bin-debug/app/game/tbnn/TBNNroomEff.js",
 		"bin-debug/app/game/tbnn/TBNNroomView.js",
 		"bin-debug/app/game/tbnn/TBNNScene.js",
@@ -120,6 +120,7 @@
 		"bin-debug/app/game/zjh/NiyingleEffect.js",
 		"bin-debug/app/game/zjh/NiyingleVSEffect.js",
 		"bin-debug/app/game/zjh/Opeprogress.js",
+		"bin-debug/app/game/zjh/OperateTimer.js",
 		"bin-debug/app/game/zjh/ZJHEffectWin1View.js",
 		"bin-debug/app/game/zjh/ZJHEffectWin2View.js",
 		"bin-debug/app/game/zjh/ZJHHead.js",
@@ -129,6 +130,7 @@
 		"bin-debug/app/game/zjh/ZJHNotLiveRoom.js",
 		"bin-debug/app/game/zjh/ZJHpaprePanl.js",
 		"bin-debug/app/game/zjh/ZJHRecordPanl.js",
+		"bin-debug/app/game/zjh/ZJHroom.js",
 		"bin-debug/app/game/zjh/ZJHroomView.js",
 		"bin-debug/app/game/zjh/ZJHScene.js",
 		"bin-debug/app/game/zjh/ZJHUtil.js",
@@ -197,6 +199,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/app/game/set/SetView.js"
+		"bin-debug/app/game/tbnn/TBNNHead.js"
 	]
 }
