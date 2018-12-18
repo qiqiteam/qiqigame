@@ -1491,19 +1491,21 @@ class RBGView extends eui.Component {
             this._label_des.text = "后开始第"+ value.round +"局游戏，共5局";
             /**计时开始下一局 */
             this.timing = 3;
-            this.flyIntval = setInterval(this.startNextGame.bind(this), 1000);
+            this.endIntval = setInterval(this.startNextGame.bind(this), 1000);
         }
     }
 
-    private timing:number = -1;
+    private timing:number = 0;
+    private endIntval:number = -1;
     public startNextGame():void {
         if(this.timing == 0) {
-            clearInterval(this.flyIntval);
+            clearInterval(this.endIntval);
+            this.endIntval = -1;
             this._group_settlement.visible = false;
             this.timing = 0;
         }
-        this._label_timing.text = this.timing + "S";
         this.timing--;
+        this._label_timing.text = this.timing + "S";
     }
 
     private resetGame(): void {
