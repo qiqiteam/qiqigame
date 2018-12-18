@@ -760,7 +760,7 @@ class BJLView extends eui.Component {
         //闲家牌面信息恢复 加点数
         if (data._obj.playerCard != null) {
             this.grpCard_0_0.source = 'qznn_card_' + data._obj.playerCard[0];
-            this.grpCard_0_1.source = 'qznn_card_' + data._obj.playerCard[1];  
+            this.grpCard_0_1.source = 'qznn_card_' + data._obj.playerCard[1];
             this.puke_0_0.source = 'qznn_card_' + data._obj.playerCard[1];
             this.puke_0_0.visible = true;
             this.puke_0_1.source = 'qznn_card_' + data._obj.playerCard[0];
@@ -883,7 +883,7 @@ class BJLView extends eui.Component {
                 otherplayer.tp = 'baccarat_players_rankBg_png';
                 otherplayer.fot = true;
             }
-            otherplayer.index = data._obj.subList[i].index + 1;
+            otherplayer.index = i + 1;
             otherplayer.name = data._obj.subList[i].username;
             otherplayer.gold = data._obj.subList[i].goldcoins;
             otherplayer.gold1 = data._obj.subList[i].xss;
