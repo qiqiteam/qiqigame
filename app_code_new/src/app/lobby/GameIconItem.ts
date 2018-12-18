@@ -108,11 +108,11 @@ class GameIconItem extends eui.Component {
 			case Const.TYPE_JINGDIANBAIJIALE:
 				this.effectfront = new DragonBonesSprite('bg_baijiale',"Sprite");
 				this.effectfront.x = 70;
-				this.effectfront.y = 255;
+				this.effectfront.y = 253;
 
 				this.effectIcon = new DragonBonesSprite('bjl_rukou',"armatureName");
 				this.effectIcon.x = 70;
-				this.effectIcon.y = 255;
+				this.effectIcon.y = 253;
 		    	break;
 			case Const.TYPE_ERBAGANGJINDIAN:
 				this.effectfront = new DragonBonesSprite('bg_ewrbagang',"Sprite");
@@ -135,11 +135,11 @@ class GameIconItem extends eui.Component {
 			case Const.TYPE_JINGDIANJINHUA:
 				this.effectfront = new DragonBonesSprite('bg_zhajinhua',"Sprite");
 				this.effectfront.x = 350;
-				this.effectfront.y = 255;
+				this.effectfront.y = 252;
 
 				this.effectIcon = new DragonBonesSprite('zjh_rukou',"armatureName");
 				this.effectIcon.x = 350;
-				this.effectIcon.y = 255;
+				this.effectIcon.y = 252;
 		    	break;
 		}
 
