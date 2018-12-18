@@ -1071,16 +1071,37 @@ class BJLView extends eui.Component {
     /**翻牌动作效果 */
     private fanpaixiaog(index: number): void {
 
-        for (let i = 0; i < 2; i++) {
-            let _card1 = this["puke_" + index + "_" + i];
-            let _card2 = this["_bei_puke_" + index + "_" + i];
+        // for (let i = 0; i < 2; i++) {
+        //     let _card1 = this["puke_" + index + "_" + i];
+        //     let _card2 = this["_bei_puke_" + index + "_" + i];
+        //     _card1.x = 0;
+        //     _card1.y = this.orginPlayePos[index][i].y;
+        //     _card2.x = this.orginPlayePos[index][i].x;
+        //     _card2.y = this.orginPlayePos[index][i].y;
+        //     egret.Tween.get(_card1).to({ x: 170, y: 0 }, 800);
+        //     egret.Tween.get(_card2).to({ x: 0, y: 0 }, 600);
+        // }
+
+        let _card1 = this["puke_" + index + "_0"];
+        let _card2 = this["_bei_puke_" + index + "_0"];
+        _card1.x = 0;
+        _card1.y = this.orginPlayePos[index][0].y;
+        _card2.x = this.orginPlayePos[index][0].x;
+        _card2.y = this.orginPlayePos[index][0].y;
+        egret.Tween.get(_card1).to({ x: 170, y: 0 }, 500);
+        egret.Tween.get(_card2).to({ x: 0, y: 0 }, 450);
+
+        setTimeout(() => {
+            let _card1 = this["puke_" + index + "_1"];
+            let _card2 = this["_bei_puke_" + index + "_1"];
             _card1.x = 0;
-            _card1.y = this.orginPlayePos[index][i].y;
-            _card2.x = this.orginPlayePos[index][i].x;
-            _card2.y = this.orginPlayePos[index][i].y;
-            egret.Tween.get(_card1).to({ x: 170, y: 0 }, 1200);
-            egret.Tween.get(_card2).to({ x: 0, y: 0 }, 800);
-        }
+            _card1.y = this.orginPlayePos[index][1].y;
+            _card2.x = this.orginPlayePos[index][1].x;
+            _card2.y = this.orginPlayePos[index][1].y;
+            egret.Tween.get(_card1).to({ x: 170, y: 0 }, 500);
+            egret.Tween.get(_card2).to({ x: 0, y: 0 }, 450);
+        }, 800);
+
 
     }
 
@@ -1166,8 +1187,8 @@ class BJLView extends eui.Component {
         _card2.x = this.orginPlayePos[index][2].x;
         _card2.y = this.orginPlayePos[index][2].y;
 
-        egret.Tween.get(_card1).to({ x: 255 }, 1200);
-        egret.Tween.get(_card2).to({ x: 0 }, 800);
+        egret.Tween.get(_card1).to({ x: 255 }, 500);
+        egret.Tween.get(_card2).to({ x: 0 }, 450);
     }
 
     /**重置界面 */
@@ -1195,10 +1216,10 @@ class BJLView extends eui.Component {
 
         for (let i = 1; i < 6; i++) {
             if (this.arrCoin[i] != null) {
-                if(this.arrCoin[i].parent){
+                if (this.arrCoin[i].parent) {
                     this.arrCoin[i].parent.removeChild(this.arrCoin[i]);
                 }
-                
+
             }
         }
         this.arrCoin = [];
@@ -1209,66 +1230,6 @@ class BJLView extends eui.Component {
         this.turn_score_arr = [];
         this.initData();
     }
-
-    //========================== Second Panel ==============================
-    //牌型
-    //private onTouchCardType(): void {
-    //    this.grpSecondPanel.visible = true;
-    //    this.grpCardType.visible = true;
-    //    this.grpHistory.visible = false;
-    //}
-
-    //走势
-    //private onTouchCardHistory(): void {
-    //    Net.send(Protocol.NIUNIU_GAME_RECORD, {}, this.getHistoryCallback.bind(this));
-    //}
-
-    // private getHistoryCallback(msg): void {
-    //     var list = msg.data;
-    //     for (var i = 0; i < 10; i++) {
-    //         if (i < list.length) {
-    //             this['grpHistroy' + i].visible = true;
-    //             var arr = list[i];
-    //             for (var j = 0; j < 4; j++) {
-    //                 this['grpHistroy' + j + '_' + i].source = arr[j] == 1 ? 'nn.a8' : 'nn.a7';
-    //             }
-    //         }
-    //         else {
-    //             this['grpHistroy' + i].visible = false;
-    //         }
-    //     }
-    //     // this.grpSecondPanel.visible = true;
-    //     // this.grpCardType.visible = false;
-    //     // this.grpHistory.visible = true;
-    // }
-
-    //private onTouchCloseSecondPanel(): void {
-    //    this.grpSecondPanel.visible = false;
-    //}
-
-    //============================================红包
-    //private redPanel: RedBoxPanel = null;
-    //private onTouchRedBox(): void {
-    //    PanelManage.openRedBox(2, 1);
-    //}
-
-    //private operateBoxComplete(): void {
-    //    lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-    //}
-
-    // private updateDataGold(): void {
-    //     //EffectUtils.numEffect(this.titleLabMoney, parseInt(GlobalData.user.gold));
-    // }
-
-
-    //public dispose(): void {
-    //MusicManage.closeMuisc();
-    //    if (this.parent) {
-    //        this.parent.removeChild(this);
-    //    }
-    //EventManage.removeEvent(this);
-    //}
-
 
 
     public playClickSound(res): void {
