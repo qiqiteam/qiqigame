@@ -400,7 +400,7 @@ class ZJHView extends eui.Component {
             }
             this.orginPlayerCardPos[index] = cardPos;
             this.orginPlayerCard[index] = cardPos;
-            
+
         }
         for (var index = 1; index < 5; index++) {
             this['img_abandon' + index].source = '';
@@ -851,7 +851,7 @@ class ZJHView extends eui.Component {
             for (let i = 0; i < 3; i++) {
                 if (i != 1) {
                     var card0 = this['grpCard' + seatnum + '_' + i];
-            
+
                     card0.anchorOffsetX = card0.width / 2;
                     card0.anchorOffsetY = card0.height / 2;
                     card0.y = card0.y + card0.anchorOffsetY;
@@ -1118,10 +1118,12 @@ class ZJHView extends eui.Component {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             //关闭自动跟注
-            this.anniuliuguang.stop("Sprite");
-            if (this.anniuliuguang.parent) {
-                this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-                this.anniuliuguang = null;
+            if (this.anniuliuguang) {
+                this.anniuliuguang.stop("Sprite");
+                if (this.anniuliuguang.parent) {
+                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                    this.anniuliuguang = null;
+                }
             }
             console.log("++++++++++++++++++++++++++data.param.state == 200", data);
             this.img_autogenzhu.visible = true;
@@ -1168,21 +1170,17 @@ class ZJHView extends eui.Component {
                     this._btn_kanpai.visible = false;
                     this.playerOperatingState[0] = 3
                     this.abandonStateBtn();
+                    if (this.anniuliuguang) {
+                        this.anniuliuguang.stop("Sprite");
+                        if (this.anniuliuguang.parent) {
+                            this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                            this.anniuliuguang = null;
+                        }
+                    }
                 }
-
+                /**剩余人数2个 */
                 if (data.param.playerNum == 2) {
 
-                    var point: egret.Point = ZJHUtil.getInstance().operateTypeBGPos(data.param.index);
-                    // let zjheffectwin2: ZJHEffectWin2View = new ZJHEffectWin2View();
-                    // zjheffectwin2.x=this.orginPlayerCardPos[data.param.index].x;
-                    // zjheffectwin2.y=this.orginPlayerCardPos[data.param.index].y;
-                    // this.addChild(zjheffectwin2);
-
-
-                    /*  let zjheffectwin1: ZJHEffectWin1View = new ZJHEffectWin1View();
-                      zjheffectwin1.x = 220;
-                      zjheffectwin1.y = 150;
-                      this.addChild(zjheffectwin1);*/
                 }
             } else if (UserInfo.getInstance().uid != data.param.userId) {
                 //执行AI图像被轰炸动作{}................AI比牌输
@@ -1226,7 +1224,13 @@ class ZJHView extends eui.Component {
             this.playerOperatingState[data.param.index] = 3;
             this.abandonStateBtn();
             UserInfo.getInstance().isGameStart = false;
-
+            if (this.anniuliuguang) {
+                this.anniuliuguang.stop("Sprite");
+                if (this.anniuliuguang.parent) {
+                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                    this.anniuliuguang = null;
+                }
+            }
         }
     }
     /**存储所有玩家id信息 */
@@ -1305,11 +1309,6 @@ class ZJHView extends eui.Component {
             pos.y = card.y;
             cardPos[j] = pos;
         }
-        // this.anniuliuguang.stop("Sprite");
-        // if (this.anniuliuguang.parent) {
-        //     this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-        //     this.anniuliuguang = null;
-        // }
         //this.orginPlayerCardPos[seatPos] = cardPos;
         this.playerOperatingState[seatPos] = 3;//其他玩家弃牌状态
 
@@ -1336,11 +1335,13 @@ class ZJHView extends eui.Component {
             this.playerOperatingState[data.param.index] = 3;//玩家弃牌状态
             this.abandonStateBtn();
             UserInfo.getInstance().isGameStart = false;
-            //this.anniuliuguang.stop("Sprite");
-            // if (this.anniuliuguang.parent) {
-            //     this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-            //     this.anniuliuguang = null;
-            // }
+            if (this.anniuliuguang) {
+                this.anniuliuguang.stop("Sprite");
+                if (this.anniuliuguang.parent) {
+                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                    this.anniuliuguang = null;
+                }
+            }
         }
     }
 
@@ -1369,26 +1370,29 @@ class ZJHView extends eui.Component {
     /**结算游戏结束 */
     private settleaccount(data: any): void {
         if (data.param.code == 200) {
-            /* console.log("结算:" + data);
-             let poke = {
-                 type: data.param.cardGenre,//牌型
-                 value: data.param.cardtype //牌值
-             };
-             for (var i = 0; i < 3; i++) {
-                 let val = poke.value[i];
-                 var card = this['grpCard' + data.param.index + '_' + i];
-                 card.source = 'gf_poker0_png';
-                 egret.Tween.get(card).to({ scaleX: 0 }, 200).call(function () {
-                     this[0].source = 'qznn_card_' + this[1];
-                     egret.Tween.get(this[0]).to({ scaleX: 1 }, 100);
-                 }, [card, val]);
-             }*/
-            //this.[]
-            /*this.anniuliuguang.stop("Sprite");
-            if (this.anniuliuguang.parent) {
-                this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-                this.anniuliuguang = null;
-            }*/
+            if (this.playerOperatingState[data.param.index] != 2) {
+                let poke = {
+                    type: data.param.cardGenre,//牌型
+                    value: data.param.cardtype //牌值
+                };
+                for (var i = 0; i < 3; i++) {
+                    let val = poke.value[i];
+                    var card = this['grpCard' + data.param.index + '_' + i];
+                    card.source = 'gf_poker0_png';
+                    egret.Tween.get(card).to({ scaleX: 0 }, 200).call(function () {
+                        this[0].source = 'qznn_card_' + this[1];
+                        egret.Tween.get(this[0]).to({ scaleX: 1 }, 100);
+                    }, [card, val]);
+                }
+            }
+            this.operateTimer.play();
+            if (this.anniuliuguang) {
+                this.anniuliuguang.stop("Sprite");
+                if (this.anniuliuguang.parent) {
+                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                    this.anniuliuguang = null;
+                }
+            }
             if (data.param.index != 0) {
                 var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
                 let zjheffectwin2: ZJHEffectWin2View = new ZJHEffectWin2View();
@@ -1411,7 +1415,7 @@ class ZJHView extends eui.Component {
                 setTimeout(() => {
                     zjheffectwin0.stop();
                     zjheffectwin0.visible = false;
-            }, 1000)
+                }, 1000)
             }
 
             console.log('+++++++++++++++++++0000000000', point.x);
@@ -1675,8 +1679,8 @@ class ZJHView extends eui.Component {
                 this['grpCard' + index + '_' + j].source = '';
                 this['grpCard' + index + '_' + j].x = this.orginPlayerCard[index][j].x;
                 this['grpCard' + index + '_' + j].x = this.orginPlayerCard[index][j].y;
-                this['grpCard' + index + '_' + j].anchorOffsetX=0;
-                this['grpCard' + index + '_' + j].anchorOffsetY=0;
+                this['grpCard' + index + '_' + j].anchorOffsetX = 0;
+                this['grpCard' + index + '_' + j].anchorOffsetY = 0;
 
             }
             this['lab_xzgold' + index].text = '';
