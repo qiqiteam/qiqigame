@@ -790,11 +790,8 @@ class TBNNView extends eui.Component {
 
     /**开始倒计时*/
     private startCountDown(time: number): void {
-        if (time < 10) {
-            this.timeTxt.text = "0" + time;
-        } else {
-            this.timeTxt.text = "" + time;
-        }
+
+        this.timeTxt.text = "" + time;
 
         this.timeTxt.visible = true;
         this.time = time;
@@ -809,13 +806,7 @@ class TBNNView extends eui.Component {
     /**倒计时处理*/
     private timerFunc(evt: egret.TimerEvent): void {
         if (this.time >= 0) {
-            if (this.time >= 10) {
-                this.timeTxt.text = "" + this.time;
-            }
-            else {
-                this.timeTxt.text = "0" + this.time;
-
-            }
+            this.timeTxt.text = "" + this.time;
             this.time--;
         }
         else {
@@ -824,7 +815,7 @@ class TBNNView extends eui.Component {
                 //this._my_pai.visible = true;
                 this.oneFanPai();
             }
-            this.timeTxt.text = "00";
+            this.timeTxt.text = "0";
             this.clearTime();
         }
     }
