@@ -14,6 +14,10 @@ class BJLroomView extends eui.Component implements eui.UIComponent {
 	public constructor() {
 		super();
 		this.skinName = "BJLroomViewSkin";
+
+		let musicBg = ["bjl_35_bg_imi_mp3"];
+		xlLib.SoundMgr.instance.playBgMusic(musicBg);
+		
 	}
 
 	protected childrenCreated(): void {
@@ -91,6 +95,8 @@ class BJLroomView extends eui.Component implements eui.UIComponent {
 	}
 
 	public dispose(): void {
+		let musicBg = ["hall_bg_mp3"];
+		xlLib.SoundMgr.instance.playBgMusic(musicBg);
 		xlLib.PopUpMgr.removePopUp(this, 1);
 	}
 

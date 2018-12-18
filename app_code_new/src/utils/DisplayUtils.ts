@@ -102,18 +102,110 @@ module xlLib {
         /**
          * 创建DragonBones显示对象
          */
-        public static createDragonBonesDisplay(source: string,bones?: string, cache?: number): dragonBones.Armature {
+        public static createDragonBonesDisplay(source: string,bones?: string,compFunc?: Function, thisObject?: any):void {
+            let armatureDisplay:dragonBones.EgretArmatureDisplay = new dragonBones.EgretArmatureDisplay();
             let dragonbonesData = RES.getRes(source + "_ske_json");
             let textureData = RES.getRes(source + "_tex_json");
             let texture = RES.getRes(source + "_tex_png");
-            if (!dragonbonesData || !textureData || !texture)
-            {
-               console.log("资源" +source + "不存在");
-               return;
-            }
             if (StringUtils.stringIsNullOrEmpty(bones))
             {
                 bones = "armature";
+            }
+            var armature: dragonBones.Armature;
+            if(dragonbonesData)
+            {
+                armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                if(armature){
+                    armatureDisplay = armature.display;
+                    if (thisObject != null) {
+                        compFunc.call(thisObject,armatureDisplay);
+                    } else {
+                        if (compFunc)
+                            compFunc(armatureDisplay);
+                    }
+                }
+            }
+            else
+            {
+                xlLib.ResUtils.getRes(source + "_ske_json",(db:any,url:string)=>{
+                    dragonbonesData = db
+                    armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                    if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                    }
+                }
+                });
+            }
+            if(textureData)
+            {
+               armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                  if(armature){
+                    armatureDisplay = armature.display;
+                    if (thisObject != null) {
+                        compFunc.call(thisObject,armatureDisplay);
+                    } else {
+                        if (compFunc)
+                            compFunc(armatureDisplay);
+                    }
+                  }
+            }
+            else
+            {
+               xlLib.ResUtils.getRes(source + "_tex_json",(td:any,url:string)=>{
+                    textureData = td;
+                    armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                    if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                        }
+                    }
+                });
+            }
+            if(texture)
+            {
+                armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                        }
+                    }
+            }
+            else
+            {
+                 xlLib.ResUtils.getRes(source + "_tex_png",(tr:any,url:string)=>{
+                    texture = tr;
+                    armature = this.creatArmature(dragonbonesData,textureData,texture,bones);
+                    if(armature){
+                        armatureDisplay = armature.display;
+                        if (thisObject != null) {
+                            compFunc.call(thisObject,armatureDisplay);
+                        } else {
+                            if (compFunc)
+                                compFunc(armatureDisplay);
+                        }
+                    }
+                });
+            }
+        }
+
+        private static creatArmature(dragonbonesData,textureData,texture,bones?:string):dragonBones.Armature
+        {
+            if (!dragonbonesData || !textureData || !texture)
+            {
+               return;
             }
             var armature: dragonBones.Armature;
             var dragonbonesFactory:dragonBones.EgretFactory = new dragonBones.EgretFactory();
@@ -121,24 +213,16 @@ module xlLib {
             dragonbonesFactory.addDragonBonesData(db);
             var tx:dragonBones.EgretTextureAtlas = new dragonBones.EgretTextureAtlas(texture, textureData);
             dragonbonesFactory.addTextureAtlasData(tx);
-            if (cache) {
-                armature = dragonbonesFactory.buildFastArmature(bones);
-                armature.enableAnimationCache(cache);
-            } else
-                armature = dragonbonesFactory.buildArmature(bones);
+            armature = dragonbonesFactory.buildArmature(bones);
             return armature;
         }
 
         private static ticketStarted: boolean=false;
 
 
-        public static stopDragonBonesArmature(armature:dragonBones.Armature):void
+        public static stopDragonBonesArmature(armature:dragonBones.Armature,animationName?:string):void
         {
-            var _time:number;
-            egret.stopTick((timeStamp)=>{
-                return true;
-            }, armature);
-            armature.animation.stop();
+            armature.animation.stop(animationName);
             dragonBones.WorldClock.clock.remove(armature);
         }
         /**
@@ -189,7 +273,7 @@ module xlLib {
         /**
          * 删除龙骨动画
          */ 
-        public static destoryDragonBonesArmature(armature:any,animationName: string) {
+        public static destoryDragonBonesArmature(armature:any) {
             if(armature == null) {
                 xlLib.Console.error("armature不能为空");
                 return;

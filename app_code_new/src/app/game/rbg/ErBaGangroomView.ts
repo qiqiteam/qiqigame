@@ -71,7 +71,7 @@ class ErBaGangroomView extends eui.Component implements  eui.UIComponent {
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
 	}
 	public destroy(): void {
-		xlLib.DisplayUtils.destoryDragonBonesArmature(this.playerDb,"newAnimation");
+		xlLib.DisplayUtils.destoryDragonBonesArmature(this.playerDb);
 		this.ebgroomeff.stop();
 		this.gameIconData = null;
 		this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);

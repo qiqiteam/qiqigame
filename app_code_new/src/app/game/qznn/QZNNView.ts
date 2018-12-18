@@ -245,7 +245,7 @@ class QZNNView extends eui.Component {
     private tongsha: QZNNTongsha;
     private tongpei: QZNNTongpei;
     private pinpaicuowu: egret.MovieClip;
-    private texiao: NiuJiao;
+    private texiao: DragonBonesSprite;
     private niuniuTX: ZhuangIconTX;
     private niuniukuang: NiuZhang0;
     private niuniukuang1: NiuZhang1;
@@ -303,11 +303,10 @@ class QZNNView extends eui.Component {
         inthematch.TYPE_TAP = Const.TYPE_TBNN;
 
         UserInfo.getInstance().isGameStart = true;
-
-        this.texiao = new NiuJiao();
-        this.texiao.x = -180;
-        this.texiao.y = -150;
-        this._niujia.addChild(this.texiao);
+        this.texiao = new DragonBonesSprite('bg_qznn_niujiao',"armatureName");
+	    this.texiao.x = 50;
+        this.texiao.y = 50;
+		this._niujia.addChild(this.texiao);
     }
 
     /**
@@ -1538,7 +1537,7 @@ class QZNNView extends eui.Component {
             return;
         }
         this._pingpai.visible = true;
-        this.texiao.play();
+        this.texiao.play("newAnimation");
         var card: eui.Image = this['_puke_' + this.flyBankerIndex];
         card.x = xlLib.Global.screenWidth / 2;
         card.y = xlLib.Global.screenHeight / 2;

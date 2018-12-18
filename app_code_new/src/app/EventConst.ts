@@ -116,6 +116,8 @@ class EventConst {
     public static onSendJetton: string = "onSendJetton";
     /**(个人限红通知)*/
     public static OnUpdateLimitItem: string = "OnUpdateLimitItem";
+    /**(中途加入房间)*/
+    public static onSendGameRoom: string = "OnUpdateLimitItem";
     // /**（赔率）*/
     // public static onBJLjoinroom: string = "onBJLjoinroom";
     // /**（可以开始下注5秒倒计时）*/
@@ -159,7 +161,7 @@ class EventConst {
     public static gamestatus: string = "gamestatus";
     /**(推送*玩家下注类型)*/
     public static onUserBetSelect: string = "onUserBetSelect";
-     /**(推送*AI下注类型)*/
+    /**(推送*AI下注类型)*/
     public static onAiOperate: string = "onAiOperate";
     /**(推送*金花AI下注)*/
     public static onAiBetOrderUpdate: string = "onAiBetOrderUpdate";
@@ -177,7 +179,7 @@ class EventConst {
     public static gambleType: string = "gambleType";
     /**(结算)*/
     public static settlement: string = "settlement";
-   /**(推送*点击退出按钮,离开房间)*/
+    /**(推送*点击退出按钮,离开房间)*/
     public static onUserIsLeave: string = "onUserIsLeave";
     /**(推送*点击退出面板,确定按钮离开房间)*/
     public static onUserOutRoom: string = "onUserOutRoom";

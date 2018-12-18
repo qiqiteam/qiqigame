@@ -8,173 +8,172 @@ class RBGView extends eui.Component {
     }
 
     public grpHead0:RBGHead;
-public grpHead1:RBGHead;
-public grpHead2:RBGHead;
-public grpHead3:RBGHead;
-public _img_zx_0:eui.Image;
-public _img_zx_1:eui.Image;
-public _img_zx_2:eui.Image;
-public _img_zx_3:eui.Image;
-public _group_qiang_point_0:eui.Group;
-public _label_qiang_0:eui.BitmapLabel;
-public _group_qiang_point_1:eui.Group;
-public _label_qiang_1:eui.BitmapLabel;
-public _group_qiang_point_2:eui.Group;
-public _label_qiang_2:eui.BitmapLabel;
-public _group_qiang_point_3:eui.Group;
-public _label_qiang_3:eui.BitmapLabel;
-public _group_bet_point_0:eui.Group;
-public _label_bet_0:eui.BitmapLabel;
-public _group_bet_point_1:eui.Group;
-public _label_bet_1:eui.BitmapLabel;
-public _group_bet_point_2:eui.Group;
-public _label_bet_2:eui.BitmapLabel;
-public _group_bet_point_3:eui.Group;
-public _label_bet_3:eui.BitmapLabel;
-public _buqiang_point_0:eui.Image;
-public _buqiang_point_1:eui.Image;
-public _buqiang_point_2:eui.Image;
-public _buqiang_point_3:eui.Image;
-public _bar_thinking_group_1:eui.Group;
-public _bar_thinking_1_0:eui.Image;
-public _bar_thinking_1_1:eui.Image;
-public _bar_thinking_1_2:eui.Image;
-public _bar_thinking_group_2:eui.Group;
-public _bar_thinking_2_0:eui.Image;
-public _bar_thinking_2_1:eui.Image;
-public _bar_thinking_2_2:eui.Image;
-public _bar_thinking_group_3:eui.Group;
-public _bar_thinking_3_0:eui.Image;
-public _bar_thinking_3_1:eui.Image;
-public _bar_thinking_3_2:eui.Image;
-public grpCoins:eui.Group;
-public grpCard:eui.Group;
-public grpCard_0_0:RBGMahjong;
-public grpCard_0_1:RBGMahjong;
-public labCardType_bg_0:eui.Image;
-public labCardType0:eui.Image;
-public grpCard_1_0:RBGMahjong;
-public grpCard_1_1:RBGMahjong;
-public labCardType_bg_1:eui.Image;
-public labCardType1:eui.Image;
-public grpCard_2_0:RBGMahjong;
-public grpCard_2_1:RBGMahjong;
-public labCardType_bg_2:eui.Image;
-public labCardType2:eui.Image;
-public grpCard_3_0:RBGMahjong;
-public grpCard_3_1:RBGMahjong;
-public labCardType_bg_3:eui.Image;
-public labCardType3:eui.Image;
-public _card_an_0_0:eui.Image;
-public _card_an_0_1:eui.Image;
-public _card_an_1_0:eui.Image;
-public _card_an_1_1:eui.Image;
-public _card_an_2_0:eui.Image;
-public _card_an_2_1:eui.Image;
-public _card_an_3_0:eui.Image;
-public _card_an_3_1:eui.Image;
-public btnCardHistroy:eui.Image;
-public _group_bar_histroy:eui.Group;
-public _label_bar_0:eui.BitmapLabel;
-public _label_bar_1:eui.BitmapLabel;
-public _label_bar_2:eui.BitmapLabel;
-public _label_bar_3:eui.BitmapLabel;
-public _label_bar_4:eui.BitmapLabel;
-public _label_bar_5:eui.BitmapLabel;
-public _label_bar_6:eui.BitmapLabel;
-public _label_bar_7:eui.BitmapLabel;
-public _label_bar_8:eui.BitmapLabel;
-public _label_bar_9:eui.BitmapLabel;
-public grpCountdown:eui.Group;
-public labCountdown:eui.BitmapLabel;
-public grpResult:eui.Group;
-public grpMax:eui.Group;
-public grpMaxHead:eui.Image;
-public grpMaxGold:eui.Label;
-public grpMaxName:eui.Label;
-public grpBankerHead:eui.Image;
-public grpBankerType:eui.Image;
-public labelBankerType:eui.Label;
-public grpBankerBeishu:eui.Label;
-public grpBankerGold:eui.Label;
-public grpBankerName:eui.Label;
-public labResult0_0:eui.Label;
-public labResult1_0:eui.Label;
-public labResult2_0:eui.Label;
-public labResult0_1:eui.Label;
-public labResult1_1:eui.Label;
-public labResult2_1:eui.Label;
-public labResult0_2:eui.Label;
-public labResult1_2:eui.Label;
-public labResult2_2:eui.Label;
-public labResult0_3:eui.Label;
-public labResult1_3:eui.Label;
-public labResult2_3:eui.Label;
-public labResultValue:eui.Label;
-public resultType0:eui.Label;
-public resultType1:eui.Label;
-public resultType2:eui.Label;
-public resultType3:eui.Label;
-public _group_coin_area:eui.Group;
-public _start_qz:eui.Image;
-public _start_xz:eui.Image;
-public _btn_close:eui.Button;
-public _btn_meun:eui.Button;
-public _group_bz:eui.Group;
-public _img_bz_d:eui.Image;
-public _dice_0:eui.Image;
-public _dice_1:eui.Image;
-public _img_bz_g:eui.Image;
-public _img_bz:eui.Image;
-public _group_wait:eui.Group;
-public _label_wait:eui.Label;
-public _btn_ret:eui.Button;
-public _btn_switch:eui.Group;
-public _btn_double_1:eui.Button;
-public _btn_double_2:eui.Button;
-public _btn_double_3:eui.Button;
-public _btn_double_4:eui.Button;
-public _btn_double_5:eui.Button;
-public _group_qiang:eui.Group;
-public _btn_buqiang:eui.Button;
-public _btn_qiang_1:eui.Button;
-public _btn_qiang_2:eui.Button;
-public _btn_qiang_3:eui.Button;
-public _btn_qiang_4:eui.Button;
-public _continue_btn_0:eui.Button;
-public _continue_img_0:eui.Image;
-public _group_settlement:eui.Group;
-public _rect_re_touch:eui.Rect;
-public _img_re_bg:eui.Image;
-public _img_guang:eui.Image;
-public _img_huangguan:eui.Image;
-public _img_tmp:eui.Image;
-public _player_name_0:eui.Label;
-public _player_name_1:eui.Label;
-public _player_name_2:eui.Label;
-public _player_name_3:eui.Label;
-public _player_fen_0:eui.Label;
-public _player_fen_1:eui.Label;
-public _player_fen_2:eui.Label;
-public _player_fen_3:eui.Label;
-public _player_bet_0:eui.Label;
-public _player_bet_1:eui.Label;
-public _player_bet_2:eui.Label;
-public _player_bet_3:eui.Label;
-public _player_gold_0:eui.Label;
-public _player_gold_1:eui.Label;
-public _player_gold_2:eui.Label;
-public _player_gold_3:eui.Label;
-public _player_zhuang_0:eui.Image;
-public _player_zhuang_1:eui.Image;
-public _player_zhuang_2:eui.Image;
-public _player_zhuang_3:eui.Image;
-public _close_btn:eui.Button;
-public _label_timing:eui.Label;
-public _label_des:eui.Label;
-public _continue_btn_1:eui.Button;
-public _continue_img_1:eui.Image;
-
+    public grpHead1:RBGHead;
+    public grpHead2:RBGHead;
+    public grpHead3:RBGHead;
+    public _img_zx_0:eui.Image;
+    public _img_zx_1:eui.Image;
+    public _img_zx_2:eui.Image;
+    public _img_zx_3:eui.Image;
+    public _group_qiang_point_0:eui.Group;
+    public _label_qiang_0:eui.BitmapLabel;
+    public _group_qiang_point_1:eui.Group;
+    public _label_qiang_1:eui.BitmapLabel;
+    public _group_qiang_point_2:eui.Group;
+    public _label_qiang_2:eui.BitmapLabel;
+    public _group_qiang_point_3:eui.Group;
+    public _label_qiang_3:eui.BitmapLabel;
+    public _group_bet_point_0:eui.Group;
+    public _label_bet_0:eui.BitmapLabel;
+    public _group_bet_point_1:eui.Group;
+    public _label_bet_1:eui.BitmapLabel;
+    public _group_bet_point_2:eui.Group;
+    public _label_bet_2:eui.BitmapLabel;
+    public _group_bet_point_3:eui.Group;
+    public _label_bet_3:eui.BitmapLabel;
+    public _buqiang_point_0:eui.Image;
+    public _buqiang_point_1:eui.Image;
+    public _buqiang_point_2:eui.Image;
+    public _buqiang_point_3:eui.Image;
+    public _bar_thinking_group_1:eui.Group;
+    public _bar_thinking_1_0:eui.Image;
+    public _bar_thinking_1_1:eui.Image;
+    public _bar_thinking_1_2:eui.Image;
+    public _bar_thinking_group_2:eui.Group;
+    public _bar_thinking_2_0:eui.Image;
+    public _bar_thinking_2_1:eui.Image;
+    public _bar_thinking_2_2:eui.Image;
+    public _bar_thinking_group_3:eui.Group;
+    public _bar_thinking_3_0:eui.Image;
+    public _bar_thinking_3_1:eui.Image;
+    public _bar_thinking_3_2:eui.Image;
+    public grpCoins:eui.Group;
+    public grpCard:eui.Group;
+    public grpCard_0_0:RBGMahjong;
+    public grpCard_0_1:RBGMahjong;
+    public labCardType_bg_0:eui.Image;
+    public labCardType0:eui.Image;
+    public grpCard_1_0:RBGMahjong;
+    public grpCard_1_1:RBGMahjong;
+    public labCardType_bg_1:eui.Image;
+    public labCardType1:eui.Image;
+    public grpCard_2_0:RBGMahjong;
+    public grpCard_2_1:RBGMahjong;
+    public labCardType_bg_2:eui.Image;
+    public labCardType2:eui.Image;
+    public grpCard_3_0:RBGMahjong;
+    public grpCard_3_1:RBGMahjong;
+    public labCardType_bg_3:eui.Image;
+    public labCardType3:eui.Image;
+    public _card_an_0_0:eui.Image;
+    public _card_an_0_1:eui.Image;
+    public _card_an_1_0:eui.Image;
+    public _card_an_1_1:eui.Image;
+    public _card_an_2_0:eui.Image;
+    public _card_an_2_1:eui.Image;
+    public _card_an_3_0:eui.Image;
+    public _card_an_3_1:eui.Image;
+    public btnCardHistroy:eui.Image;
+    public _group_bar_histroy:eui.Group;
+    public _label_bar_0:eui.BitmapLabel;
+    public _label_bar_1:eui.BitmapLabel;
+    public _label_bar_2:eui.BitmapLabel;
+    public _label_bar_3:eui.BitmapLabel;
+    public _label_bar_4:eui.BitmapLabel;
+    public _label_bar_5:eui.BitmapLabel;
+    public _label_bar_6:eui.BitmapLabel;
+    public _label_bar_7:eui.BitmapLabel;
+    public _label_bar_8:eui.BitmapLabel;
+    public _label_bar_9:eui.BitmapLabel;
+    public grpCountdown:eui.Group;
+    public labCountdown:eui.BitmapLabel;
+    public grpResult:eui.Group;
+    public grpMax:eui.Group;
+    public grpMaxHead:eui.Image;
+    public grpMaxGold:eui.Label;
+    public grpMaxName:eui.Label;
+    public grpBankerHead:eui.Image;
+    public grpBankerType:eui.Image;
+    public labelBankerType:eui.Label;
+    public grpBankerBeishu:eui.Label;
+    public grpBankerGold:eui.Label;
+    public grpBankerName:eui.Label;
+    public labResult0_0:eui.Label;
+    public labResult1_0:eui.Label;
+    public labResult2_0:eui.Label;
+    public labResult0_1:eui.Label;
+    public labResult1_1:eui.Label;
+    public labResult2_1:eui.Label;
+    public labResult0_2:eui.Label;
+    public labResult1_2:eui.Label;
+    public labResult2_2:eui.Label;
+    public labResult0_3:eui.Label;
+    public labResult1_3:eui.Label;
+    public labResult2_3:eui.Label;
+    public labResultValue:eui.Label;
+    public resultType0:eui.Label;
+    public resultType1:eui.Label;
+    public resultType2:eui.Label;
+    public resultType3:eui.Label;
+    public _group_coin_area:eui.Group;
+    public _start_qz:eui.Image;
+    public _start_xz:eui.Image;
+    public _btn_close:eui.Button;
+    public _btn_meun:eui.Button;
+    public _group_bz:eui.Group;
+    public _img_bz_d:eui.Image;
+    public _dice_0:eui.Image;
+    public _dice_1:eui.Image;
+    public _img_bz_g:eui.Image;
+    public _img_bz:eui.Image;
+    public _group_wait:eui.Group;
+    public _label_wait:eui.Label;
+    public _btn_ret:eui.Button;
+    public _btn_switch:eui.Group;
+    public _btn_double_1:eui.Button;
+    public _btn_double_2:eui.Button;
+    public _btn_double_3:eui.Button;
+    public _btn_double_4:eui.Button;
+    public _btn_double_5:eui.Button;
+    public _group_qiang:eui.Group;
+    public _btn_buqiang:eui.Button;
+    public _btn_qiang_1:eui.Button;
+    public _btn_qiang_2:eui.Button;
+    public _btn_qiang_3:eui.Button;
+    public _btn_qiang_4:eui.Button;
+    public _continue_btn_0:eui.Button;
+    public _continue_img_0:eui.Image;
+    public _group_settlement:eui.Group;
+    public _rect_re_touch:eui.Rect;
+    public _img_re_bg:eui.Image;
+    public _img_guang:eui.Image;
+    public _img_huangguan:eui.Image;
+    public _img_tmp:eui.Image;
+    public _player_name_0:eui.Label;
+    public _player_name_1:eui.Label;
+    public _player_name_2:eui.Label;
+    public _player_name_3:eui.Label;
+    public _player_fen_0:eui.Label;
+    public _player_fen_1:eui.Label;
+    public _player_fen_2:eui.Label;
+    public _player_fen_3:eui.Label;
+    public _player_bet_0:eui.Label;
+    public _player_bet_1:eui.Label;
+    public _player_bet_2:eui.Label;
+    public _player_bet_3:eui.Label;
+    public _player_gold_0:eui.Label;
+    public _player_gold_1:eui.Label;
+    public _player_gold_2:eui.Label;
+    public _player_gold_3:eui.Label;
+    public _player_zhuang_0:eui.Image;
+    public _player_zhuang_1:eui.Image;
+    public _player_zhuang_2:eui.Image;
+    public _player_zhuang_3:eui.Image;
+    public _close_btn:eui.Button;
+    public _label_timing:eui.Label;
+    public _label_des:eui.Label;
+    public _continue_btn_1:eui.Button;
+    public _continue_img_1:eui.Image;
 
 
     //-----------------------------------------------
@@ -199,6 +198,10 @@ public _continue_img_1:eui.Image;
     private gameStartEff: RBGSEff;
 
     private _coin_arr = [];                 //筹码池
+
+    private tianWang:DragonBonesSprite;
+
+    private tongSha:DragonBonesSprite;
 
     //-----------------------------------------------
 
@@ -384,6 +387,7 @@ public _continue_img_1:eui.Image;
             } else {
                 this._group_bar_histroy.visible = false;
             }
+            this.playTongSha();
         } else if(e.target == this._rect_re_touch) {
             this._rect_re_touch.touchEnabled = false;
             this._group_settlement.visible = false;
@@ -511,6 +515,8 @@ public _continue_img_1:eui.Image;
         this.gameStartEff.touchEnabled = false;
         this.gameStartEff.touchChildren = false;
         this.addChild(this.gameStartEff);
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(1));
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(2));
 
         clearInterval(this.gamePlayIndex);
         this.waitTime = 0;
@@ -572,6 +578,9 @@ public _continue_img_1:eui.Image;
 
     /**监听定庄 */
     private onDingzhuang(data: any):void {
+        if(this.grpCountdown.visible == true) {
+            this.stopTime();
+        }
         this.acceptbanker(data);
     }
 
@@ -592,7 +601,7 @@ public _continue_img_1:eui.Image;
        
         let value = this.random_arr[this.timeNum];
         this["grpHead" + this.qz_player_arr[value]].setZhuangEf(true);
-        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(13));
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(3));
         this.timeNum++;
     }
 
@@ -647,12 +656,15 @@ public _continue_img_1:eui.Image;
         }
         this.dingZhuangEff.play();
         this.addChild(this.dingZhuangEff);
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(4));
     }
 
     /**监听下注 */
     private onbetBack(data: any): void {
         //console.log(data._obj.index + "号投注");
-        this._btn_switch.visible = true;
+        if(this.zhaungIndex != 0) {
+            this._btn_switch.visible = true;
+        }
         this._start_xz.visible = true;
         
         for(let i=1; i<4; i++) {
@@ -687,6 +699,7 @@ public _continue_img_1:eui.Image;
         this.setGrabBanker(_group);
         /**抛出筹码 */
         this.showCoins(index);
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(5));
     }
 
     //显示筹码
@@ -728,6 +741,7 @@ public _continue_img_1:eui.Image;
         this._group_bz.visible = true;
         this.numTime = 0;
         this.diceInterval = setInterval(this.setDiceAnimation.bind(this), 200);
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(6));
     }
 
     //----------------------------------------------------------------------------------
@@ -861,7 +875,7 @@ public _continue_img_1:eui.Image;
 
     private numTime:number = 0;
     public setDiceAnimation() {
-        if(this.numTime == 8) {
+        if(this.numTime == 10) {
             clearInterval(this.diceInterval);
             this.numTime = 0;
             //egret.Tween.removeTweens(this._img_bz);
@@ -959,7 +973,7 @@ public _continue_img_1:eui.Image;
                 egret.Tween.removeTweens(coin);
             }, [coin])
         }
-
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(5));
         this.flyIntval = setInterval(this.flyCoinByPlayer.bind(this), 300);
     }
 
@@ -1119,6 +1133,24 @@ public _continue_img_1:eui.Image;
         //this.flyIntval = setInterval(this.showGameResult.bind(this), 4000);
     }
 
+    private playTianWang():void
+    {
+        this.tianWang = new DragonBonesSprite('bg_ebg_tianwang',"Sprite");
+        this.tianWang.x = 1230;
+        this.tianWang.y = 400;
+        this.addChild(this.tianWang);
+        this.tianWang.play("Sprite");
+    }
+
+    private playTongSha():void
+    {
+        this.tongSha = new DragonBonesSprite('bg_ebg_tongsha',"Sprite");
+        this.tongSha.x = 500;
+        this.tongSha.y = 300;
+        this.addChild(this.tongSha);
+        this.tongSha.play("Sprite", 1);
+    }
+
     //-------------------------------服务器回调------------------------------
 
     /**
@@ -1142,8 +1174,9 @@ public _continue_img_1:eui.Image;
             this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins + "";
             this.imghead0.source = "F1_03_png";
         }
-
-        let dd = UserInfo.getInstance().playes;*/
+	*/
+        //let my = UserInfo.getInstance().myPlayer.id;
+        //let dd = UserInfo.getInstance().playes;
         //设置其他玩家信息
         for (let i = 0; i < UserInfo.getInstance().playes.length; i++) {
             if (data._obj.player[i] != null) {
@@ -1181,13 +1214,17 @@ public _continue_img_1:eui.Image;
             this.cdNum--;
         }
         else {
-            this.cdTimer.stop();
-            this.cdNum = 0;
-            this.grpCountdown.visible = false;
-            this._group_qiang.visible = false;
-            this._btn_switch.visible = false;
+            this.stopTime();
         }
         this.labCountdown.text = this.cdNum + '';
+    }
+
+    private stopTime():void {
+        this.cdTimer.stop();
+        this.cdNum = 0;
+        this.grpCountdown.visible = false;
+        this._group_qiang.visible = false;
+        this._btn_switch.visible = false;
     }
 
     /**
@@ -1216,7 +1253,8 @@ public _continue_img_1:eui.Image;
         this.gamePlayIndex = -1;
         let index = UserInfo.getInstance().findSeatNumber(this.cardResult.index);
         this.initPaiPos(index);
-        this.flyIntval = setInterval(this.playCardFly.bind(this), 180);
+        this.flyIntval = setInterval(this.playCardFly.bind(this), 150);
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(7));
     }
 
     private initPaiPos(index:number):void {
@@ -1258,8 +1296,8 @@ public _continue_img_1:eui.Image;
         for(let i=0; i<2; i++) {
             var card:RBGMahjong = this['grpCard_' + this.flyIndex0 + '_' + i];
             var pos = this.orginPlayerCardPos[this.flyIndex0][i];
-            this.playClickSound(RBGUtil.getInstance().getSoundEffect(6));
-            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300).call(function(){
+            //this.playClickSound(RBGUtil.getInstance().getSoundEffect(6));
+            egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 250).call(function(){
                 egret.Tween.removeTweens(card);
                 _proup.visible = false;
             }, [card,_proup]);
@@ -1282,7 +1320,6 @@ public _continue_img_1:eui.Image;
             return;
         }
         
-        this.playClickSound(RBGUtil.getInstance().getSoundEffect(7));
         var poke = null;
         for(let i=0; i<4; i++) {
             if(UserInfo.getInstance().findSeatNumber(this.cardResult.players[i].index) == this.effectPlayerIndex0) {
@@ -1303,11 +1340,13 @@ public _continue_img_1:eui.Image;
         var card_1 = this['grpCard_' + this.effectPlayerIndex0 + '_' + 1];
         card_1.setPai(null);
         card_1.setAnPai(true);
+        this.playClickSound(RBGUtil.getInstance().getSoundEffect(8));
 
         egret.Tween.get(card_1).to({  }, 10).wait(300).call(function () {
             this[0].setPai(this[1]);
             this[0].setAnPai(false);
-        }, [card_1, poke.cardsList[1]]);
+            this[2].playClickSound(RBGUtil.getInstance().getSoundEffect(8));
+        }, [card_1, poke.cardsList[1], this]);
 
         var _group_bg = this["labCardType_bg_" + this.effectPlayerIndex0];
         var _group = this["labCardType" + this.effectPlayerIndex0];
@@ -1352,7 +1391,11 @@ public _continue_img_1:eui.Image;
         for(let i=0; i<10; i++) {
             this["_label_bar_" + i].text = value.count[i] + "";
         }
-
+        this._img_re_bg.source = "bar_over_lose_bg_png";
+        this._img_guang.source = "bar_over_lose_light_png";
+        this._img_huangguan.source = "bar_over_lose_hat_png";
+        this._img_tmp.source = "bar_over_lose_title_png";
+        //let my = UserInfo.getInstance().myPlayer.id;
         for(let i=0; i<4; i++) {
             let index = UserInfo.getInstance().findSeatNumber(value.players[i].index);
             if(index == this.zhaungIndex) {
@@ -1366,11 +1409,7 @@ public _continue_img_1:eui.Image;
                 this._img_guang.source = "bar_over_win_light_png";
                 this._img_huangguan.source = "bar_over_win_hat_png";
                 this._img_tmp.source = "bar_over_win_title_png";
-            } else {
-                this._img_re_bg.source = "bar_over_lose_bg_png";
-                this._img_guang.source = "bar_over_lose_light_png";
-                this._img_huangguan.source = "bar_over_lose_hat_png";
-                this._img_tmp.source = "bar_over_lose_title_png";
+                this.playClickSound(RBGUtil.getInstance().getSoundEffect(9));
             }
             
             this["_player_name_" + i].text = value.players[i].username;
@@ -1401,7 +1440,7 @@ public _continue_img_1:eui.Image;
         //this._close_btn.visible = false;
 
         this.resetGame();
-
+        
         if(value.gameRoomOver == true) {
             this._label_timing.visible = false;
             this._label_des.visible = false;

@@ -1,4 +1,4 @@
-class QZNNroomView extends eui.Component implements eui.UIComponent {
+class QZNNroomView extends eui.Component{
 	public _menu:eui.Button;
 	public _rule:eui.Button;
 	public _coin_label:eui.Label;
@@ -8,7 +8,7 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 
 
 	private gameIconData: GameIconData;
-	private playerDb:dragonBones.Armature;
+	private playerDb:DragonBonesSprite;
 	private qzroomeff:QZNNroomEff;
 
 	public constructor() {
@@ -20,14 +20,12 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 
 	private playPlayerDragonBones():void
     {
-        this.playerDb = xlLib.DisplayUtils.createDragonBonesDisplay('qznn_nvrenwu',"armatureName");
-        dragonBones.WorldClock.clock.add(this.playerDb);
-        let armatureDisplay:dragonBones.EgretArmatureDisplay = this.playerDb.getDisplay();
-		armatureDisplay.scaleX = armatureDisplay.scaleY = 1.2;
-        armatureDisplay.x = 300;
-        armatureDisplay.y = 500;
-        this.addChild(armatureDisplay);
-        xlLib.DisplayUtils.runDragonBonesArmature(this.playerDb,"newAnimation");
+        this.playerDb = new DragonBonesSprite('qznn_nvrenwu',"armatureName");
+		this.playerDb.scaleX = this.playerDb.scaleY = 1.2;
+        this.playerDb.x = 300;
+        this.playerDb.y = 500;
+        this.addChild(this.playerDb);
+        this.playerDb.play("newAnimation");
     }
 
 	protected childrenCreated(): void {
@@ -83,7 +81,7 @@ class QZNNroomView extends eui.Component implements eui.UIComponent {
 		xlLib.SoundMgr.instance.playSound("Special_menu_mp3");
 	}
 	public destroy(): void {
-		xlLib.DisplayUtils.destoryDragonBonesArmature(this.playerDb,"newAnimation");
+		this.playerDb.stop();
 		this.qzroomeff.stop();
 		this.gameIconData = null;
 		this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.dispose, this);

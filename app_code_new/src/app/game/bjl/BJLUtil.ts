@@ -50,17 +50,42 @@ class BJLUtil {
         }
         return src;
     }
+    /**点数音乐 */
+    public dianshuSoundEffect(type): string {
+        switch (type) {
+            case 0:
+                return 'bjl_00_zero';    //0点
+            case 1:
+                return 'bjl_11_one';    //1点
+            case 2:
+                return 'bjl_12_two';    //2点
+            case 3:
+                return 'bjl_13_three';    //3点
+            case 4:
+                return 'bjl_14_four';    //4点
+            case 5:
+                return 'bjl_15_five';    //5点
+            case 6:
+                return 'bjl_16_six';    //6点
+            case 7:
+                return 'bjl_17_seven';    //7点
+            case 8:
+                return 'bjl_18_eight';    //8点
+            case 9:
+                return 'bjl_19_nine';    //9点
+        }
+    }
     /**音乐 */
     public getSoundEffect(type): string {
         switch (type) {
             case 0:
-                return 'bgm';    //背景音乐
+                return 'bjl_35_bg_imi';    //背景音乐
             case 1:
                 return 'jh.jackpot'; //自己赢得最多
             case 2:
-                return 'jh.start';   //下注开始
+                return 'bjl_02_start';   //下注开始
             case 3:
-                return 'jh.end'; //下注结束
+                return 'bjl_03_stop'; //下注结束
             case 4:
                 return 'jh.ts';  //通杀
             case 5:
@@ -70,7 +95,23 @@ class BJLUtil {
             case 7:
                 return 'jh.openCard';  //开牌
             case 8:
-                return 'jh.stake';   //筹码
+                return 'lh_chipfly_long';   //筹码
+            case 9:
+                return 'Special_menu';   //按钮点击
+            case 10:
+                return 'bjl_01_deal';   //我发牌了
+            case 11:
+                return 'bjl_20_bankwin';   //庄赢
+            case 12:
+                return 'bjl_21_playwin';   //闲赢
+            case 13:
+                return 'bjl_22_tie';   //和
+            case 14:
+                return 'bjl_08_player';   //闲家
+            case 15:
+                return 'bjl_09_banker';   //庄家 
+            case 16:
+                return 'bjl_10_draw';   //补牌
         }
     }
 
@@ -82,7 +123,7 @@ class BJLUtil {
                 point.y = 240;
                 break;
             case 2:                 // 2是闲
-                point.x = 240;
+                point.x = 260;
                 point.y = 240;
                 break;
             case 3:                 // 3是和       
@@ -119,43 +160,31 @@ class BJLUtil {
     }
 
     //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(pos: egret.Point, num: number): Array<eui.Image> {
-        var coinArr = [];
-        var coinNum: number = 0;
+    public coinsType(pos: egret.Point, num: number):eui.Image {
         var src: string = '';
         if (num == 4) {  //4
-            coinNum = num;
             src = 'baccarat_game_icon_chouma_4_png';
         }
         else if (num == 10) {   //10
-            coinNum = num;
             src = 'baccarat_game_icon_chouma_10_png';
         }
         else if (num == 20) {   //10
-            coinNum = num;
             src = 'baccarat_game_icon_chouma_20_png';
         }
         else if (num == 50) { //50
-            coinNum = num;
             src = 'baccarat_game_icon_chouma_50_png';
         }
         else if (num == 100) { //100
-            coinNum = num;
             src = 'baccarat_game_icon_chouma_100_png';
         } else if (num == 200) { //500
-            coinNum = num;
             src = 'baccarat_game_icon_chouma_200_png';
         }
-        // for (var i = 0; i < Math.round(coinNum); i++) {
         var coin: eui.Image = new eui.Image(src);
-        //var p: egret.Point = this.coinPos();
         coin.x = pos.x;
         coin.y = pos.y;
         coin.scaleX = 0.3;
         coin.scaleY = 0.3;
-        coinArr.push(coin);
-        // }
-        return coinArr;
+        return coin;
     }
 
 
