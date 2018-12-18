@@ -69,6 +69,10 @@ class LobbyView extends eui.Component {
 		this.qznnGameIcon.y = 158;
 		this.qznnGameIcon.setGameIconData(this.qznnGameIconData);
 		this.addChild(this.qznnGameIcon);
+
+
+		let cmp:ComparisonCardView = new ComparisonCardView();
+		this.addChild(cmp);
 	}
 
 	private onClick2(e: egret.TouchEvent): void {

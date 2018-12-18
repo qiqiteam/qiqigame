@@ -190,9 +190,17 @@ declare class WelfareTypeItemSkin extends eui.Skin{
 }
 declare class WelfareViewSkin extends eui.Skin{
 }
+declare class NiyingleSkin extends eui.Skin{
+}
+declare class NiyingleVSSkin extends eui.Skin{
+}
 declare class ZhajhhelpTypeSkin extends eui.Skin{
 }
 declare class ZhajhroomViewSkin extends eui.Skin{
+}
+declare class ZJHEffectWin1Skin extends eui.Skin{
+}
+declare class ZJHEffectWin2Skin extends eui.Skin{
 }
 declare class ZJHHeadSkin extends eui.Skin{
 }

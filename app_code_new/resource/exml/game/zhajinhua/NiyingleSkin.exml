@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NiyingleSkin" width="1200" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="donghua">
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{5.32}" alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{1}" x="{250.69}" y="{327.35}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image0}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{898.68}" alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{1}" x="{657.39}" y="{327.32}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1.2}" scaleY="{1.2}" alpha="{0.2}" x="{442.33}" y="{239.67}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{1}" scaleY="{1}" scaleX="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.7}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object scaleX="{1.1}" scaleY="{1.1}" alpha="{0}" x="{417.34}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image3}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="150"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.5}" scaleX="{1.2}" scaleY="{1.2}" y="{328.02}" x="{394.06}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{1}" scaleY="{1}" scaleX="{1}" y="{338.66}" x="{415.34}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image4}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="250"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1.2}" scaleY="{1.2}" alpha="{0.5}" x="{522.69}" y="{326.7}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}" alpha="{1}" y="{338.67}" x="{529.34}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image5}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="250"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.5}" scaleX="{1.1}" scaleY="{1.1}" x="{452.69}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}" scaleY="{1}" scaleX="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image6}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="350"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1.2}" scaleY="{1.2}" alpha="{0.5}" y="{321.37}" x="{632.68}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{1}" scaleY="{1}" scaleX="{1}" x="{638}" y="{334.67}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image7}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="400"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.5}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}" alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image8}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="500"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.2}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{1}" scaleY="{1}" scaleX="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image id="image" source="zjh_effect_youwin_tex_1 0_png" x="249.32" y="327.34" alpha="0"/>
+	<e:Image id="image0" source="zjh_effect_youwin_tex_1_png" x="658.68" y="327.33" alpha="0"/>
+	<e:Image id="image1" source="zjh_effect_youwin_tex_7_png" verticalCenter="0" horizontalCenter="0" alpha="0"/>
+	<e:Image id="image5" source="zjh_effect_youwin_tex_62_png" verticalCenter="0" horizontalCenter="0"/>
+	<e:Image id="image4" source="zjh_effect_youwin_tex_3_png" x="530.67" y="340" alpha="0"/>
+	<e:Image id="image2" source="zjh_effect_youwin_tex_8_png" verticalCenter="0" horizontalCenter="0" alpha="0"/>
+	<e:Image id="image3" source="zjh_effect_youwin_tex_22_png" x="420.66" y="338.66"/>
+	<e:Image id="image6" source="zjh_effect_youwin_tex_4_png" x="638" y="334.67" alpha="0"/>
+	<e:Image id="image7" source="zjh_effect_youwin_tex_52_png" x="120" y="365.99"/>
+	<e:Image id="image8" source="zjh_effect_youwin_tex_52_png" x="366" y="282.65"/>
+</e:Skin>
