@@ -1,5 +1,6 @@
 {
 	"search.exclude": {
+		"editor.fontSize": 18,
 		"**/bin-debug": true,
 		"**/bin-release": true
 	}

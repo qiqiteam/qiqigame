@@ -5,243 +5,241 @@ class BRNNView extends eui.Component {
     constructor() {
         super();
         this.skinName = "BRNNViewSkin";
-        //this.r = r;
     }
-    //private r: any = null;
 
-    public _btn_close: eui.Button;
-    public _btn_meun: eui.Button;
-    public grpCoins: eui.Group;
-    public grade_text_0_0: eui.Label;
-    public grade_text_0_1: eui.Label;
-    public effectTouch0: eui.Image;
-    public grade_text_1_0: eui.Label;
-    public grade_text_1_1: eui.Label;
-    public effectTouch1: eui.Image;
-    public grade_text_2_0: eui.Label;
-    public grade_text_2_1: eui.Label;
-    public effectTouch2: eui.Image;
-    public grade_text_3_0: eui.Label;
-    public grade_text_3_1: eui.Label;
-    public effectTouch3: eui.Image;
-    public grpCard: eui.Group;
-    public bankerCard_0: eui.Image;
-    public bankerCard_1: eui.Image;
-    public bankerCard_2: eui.Image;
-    public bankerCard_3: eui.Image;
-    public bankerCard_4: eui.Image;
-    public grpCard_0_0: eui.Image;
-    public grpCard_0_1: eui.Image;
-    public grpCard_0_2: eui.Image;
-    public grpCard_0_3: eui.Image;
-    public grpCard_0_4: eui.Image;
-    public grpCard_1_0: eui.Image;
-    public grpCard_1_1: eui.Image;
-    public grpCard_1_2: eui.Image;
-    public grpCard_1_3: eui.Image;
-    public grpCard_1_4: eui.Image;
-    public grpCard_2_0: eui.Image;
-    public grpCard_2_1: eui.Image;
-    public grpCard_2_2: eui.Image;
-    public grpCard_2_3: eui.Image;
-    public grpCard_2_4: eui.Image;
-    public grpCard_3_0: eui.Image;
-    public grpCard_3_1: eui.Image;
-    public grpCard_3_2: eui.Image;
-    public grpCard_3_3: eui.Image;
-    public grpCard_3_4: eui.Image;
-    public labCardTypeBanker: eui.Image;
-    public labCardType0: eui.Image;
-    public labCardType1: eui.Image;
-    public labCardType2: eui.Image;
-    public labCurChip: eui.Label;
-    public labCardType3: eui.Image;
-    public btnCardHistroy: eui.Image;
-    public btnCardType: eui.Image;
-    public btnRedBox: eui.Image;
-    public labHandsel: eui.BitmapLabel;
-    public grpBankerInfo: eui.Group;
-    public btnDownBanker: eui.Image;
-    public btnBankerDown: eui.Image;
-    public btnUpBanker: eui.Image;
-    public bankerHead: eui.Image;
-    public labBankerMoney: eui.BitmapLabel;
-    public bankerName: eui.Label;
-    public labBankerLastNum: eui.Label;
-    public labBankerRank: eui.Label;
-    public btnVip0: eui.Image;
-    public labBankerVip: eui.Label;
-    public grpCountdown: eui.Group;
-    public timeTxt: eui.Label;
-    public btnBet0y: eui.Image;
-    public btnBet1y: eui.Image;
-    public btnBet2y: eui.Image;
-    public btnBet3y: eui.Image;
-    public btnBet4y: eui.Image;
-    public btnBet5y: eui.Image;
-    public labBet0: eui.Label;
-    public labBet1: eui.Label;
-    public labBet2: eui.Label;
-    public labBet3: eui.Label;
-    public labBet4: eui.Label;
-    public labBet5: eui.Label;
-    public grpBankerList: eui.Group;
-    public bankerListItem0: eui.Group;
-    public itemRank0: eui.Label;
-    public itemName0: eui.Label;
-    public itemMoney0: eui.Label;
-    public itemVip0: eui.BitmapLabel;
-    public bankerListItem1: eui.Group;
-    public itemRank1: eui.Label;
-    public itemName1: eui.Label;
-    public itemMoney1: eui.Label;
-    public itemVip1: eui.BitmapLabel;
-    public bankerListItem2: eui.Group;
-    public itemRank2: eui.Label;
-    public itemName2: eui.Label;
-    public itemMoney2: eui.Label;
-    public itemVip2: eui.BitmapLabel;
-    public bankerListItem3: eui.Group;
-    public itemRank3: eui.Label;
-    public itemName3: eui.Label;
-    public itemMoney3: eui.Label;
-    public itemVip3: eui.BitmapLabel;
-    public bankerListItem4: eui.Group;
-    public itemRank4: eui.Label;
-    public itemName4: eui.Label;
-    public itemMoney4: eui.Label;
-    public itemVip4: eui.BitmapLabel;
-    public bankerListItem5: eui.Group;
-    public itemRank5: eui.Label;
-    public itemName5: eui.Label;
-    public itemMoney5: eui.Label;
-    public itemVip5: eui.BitmapLabel;
-    public bankerListItem6: eui.Group;
-    public itemRank6: eui.Label;
-    public itemName6: eui.Label;
-    public itemMoney6: eui.Label;
-    public itemVip6: eui.BitmapLabel;
-    public bankerListItem7: eui.Group;
-    public itemRank7: eui.Label;
-    public itemName7: eui.Label;
-    public itemMoney7: eui.Label;
-    public itemVip7: eui.BitmapLabel;
-    public bankerListItem8: eui.Group;
-    public itemRank8: eui.Label;
-    public itemName8: eui.Label;
-    public itemMoney8: eui.Label;
-    public itemVip8: eui.BitmapLabel;
-    public bankerListItem9: eui.Group;
-    public itemRank9: eui.Label;
-    public itemName9: eui.Label;
-    public itemMoney9: eui.Label;
-    public itemVip9: eui.BitmapLabel;
-    public grpSecondPanel: eui.Group;
-    public grpHistory: eui.Group;
-    public grpHistroy0: eui.Group;
-    public grpHistroy0_0: eui.Image;
-    public grpHistroy1_0: eui.Image;
-    public grpHistroy2_0: eui.Image;
-    public grpHistroy3_0: eui.Image;
-    public grpHistroy1: eui.Group;
-    public grpHistroy0_1: eui.Image;
-    public grpHistroy1_1: eui.Image;
-    public grpHistroy2_1: eui.Image;
-    public grpHistroy3_1: eui.Image;
-    public grpHistroy2: eui.Group;
-    public grpHistroy0_2: eui.Image;
-    public grpHistroy1_2: eui.Image;
-    public grpHistroy2_2: eui.Image;
-    public grpHistroy3_2: eui.Image;
-    public grpHistroy3: eui.Group;
-    public grpHistroy0_3: eui.Image;
-    public grpHistroy1_3: eui.Image;
-    public grpHistroy2_3: eui.Image;
-    public grpHistroy3_3: eui.Image;
-    public grpHistroy4: eui.Group;
-    public grpHistroy0_4: eui.Image;
-    public grpHistroy1_4: eui.Image;
-    public grpHistroy2_4: eui.Image;
-    public grpHistroy3_4: eui.Image;
-    public grpHistroy5: eui.Group;
-    public grpHistroy0_5: eui.Image;
-    public grpHistroy1_5: eui.Image;
-    public grpHistroy2_5: eui.Image;
-    public grpHistroy3_5: eui.Image;
-    public grpHistroy6: eui.Group;
-    public grpHistroy0_6: eui.Image;
-    public grpHistroy1_6: eui.Image;
-    public grpHistroy2_6: eui.Image;
-    public grpHistroy3_6: eui.Image;
-    public grpHistroy7: eui.Group;
-    public grpHistroy0_7: eui.Image;
-    public grpHistroy1_7: eui.Image;
-    public grpHistroy2_7: eui.Image;
-    public grpHistroy3_7: eui.Image;
-    public grpHistroy8: eui.Group;
-    public grpHistroy0_8: eui.Image;
-    public grpHistroy1_8: eui.Image;
-    public grpHistroy2_8: eui.Image;
-    public grpHistroy3_8: eui.Image;
-    public grpHistroy9: eui.Group;
-    public grpHistroy0_9: eui.Image;
-    public grpHistroy1_9: eui.Image;
-    public grpHistroy2_9: eui.Image;
-    public grpHistroy3_9: eui.Image;
-    public grpCardType: eui.Group;
-    public secondClose: eui.Image;
-    public grpResult: eui.Group;
-    public grpMax: eui.Group;
-    public grpMaxHead: eui.Image;
-    public grpMaxGold: eui.Label;
-    public grpMaxName: eui.Label;
-    public grpBankerHead: eui.Image;
-    public grpBankerType: eui.Image;
-    public labelBankerType: eui.Label;
-    public grpBankerBeishu: eui.Label;
-    public grpBankerGold: eui.Label;
-    public grpBankerName: eui.Label;
-    public labResult0_0: eui.Label;
-    public labResult1_0: eui.Label;
-    public labResult2_0: eui.Label;
-    public labResult0_1: eui.Label;
-    public labResult1_1: eui.Label;
-    public labResult2_1: eui.Label;
-    public labResult0_2: eui.Label;
-    public labResult1_2: eui.Label;
-    public labResult2_2: eui.Label;
-    public labResult0_3: eui.Label;
-    public labResult1_3: eui.Label;
-    public labResult2_3: eui.Label;
-    public labResultValue: eui.Label;
-    public resultType0: eui.Label;
-    public resultType1: eui.Label;
-    public resultType2: eui.Label;
-    public resultType3: eui.Label;
-    public grpTips: eui.Group;
-    public grpTipsbg: eui.Image;
-    public grpTipsInfo: eui.Image;
-    public imgBaoZhuang: eui.Image;
-    public grpCaijin: eui.Group;
-    public grpCaijinLabel: eui.Label;
-    public _group_di: eui.Group;
-    public grpHead0: eui.Group;
-    public imghead0: eui.Image;
-    public labelHead0: eui.Label;
-    public labelGold0: eui.Label;
-    public _btn_switch: eui.Group;
-    public _btn_double_1: eui.Image;
-    public _btn_double_2: eui.Image;
-    public _btn_double_3: eui.Image;
-    public _btn_double_4: eui.Image;
-    public _btn_double_5: eui.Image;
-    public _xuanzho: eui.Image;
-    public wanjia: eui.Group;
-    public packup: eui.Image;
-    public scroller: eui.Scroller;
-    public userlist: eui.List;
-    public wanjialist: eui.Button;
-
+    public grpCoins:eui.Group;
+    public grade_text_0_0:eui.Label;
+    public grade_text_0_1:eui.Label;
+    public effectTouch0:eui.Image;
+    public grade_text_1_0:eui.Label;
+    public grade_text_1_1:eui.Label;
+    public effectTouch1:eui.Image;
+    public grade_text_2_0:eui.Label;
+    public grade_text_2_1:eui.Label;
+    public effectTouch2:eui.Image;
+    public grade_text_3_0:eui.Label;
+    public grade_text_3_1:eui.Label;
+    public effectTouch3:eui.Image;
+    public grpCard:eui.Group;
+    public bankerCard_0:eui.Image;
+    public bankerCard_1:eui.Image;
+    public bankerCard_2:eui.Image;
+    public bankerCard_3:eui.Image;
+    public bankerCard_4:eui.Image;
+    public grpCard_0_0:eui.Image;
+    public grpCard_0_1:eui.Image;
+    public grpCard_0_2:eui.Image;
+    public grpCard_0_3:eui.Image;
+    public grpCard_0_4:eui.Image;
+    public grpCard_1_0:eui.Image;
+    public grpCard_1_1:eui.Image;
+    public grpCard_1_2:eui.Image;
+    public grpCard_1_3:eui.Image;
+    public grpCard_1_4:eui.Image;
+    public grpCard_2_0:eui.Image;
+    public grpCard_2_1:eui.Image;
+    public grpCard_2_2:eui.Image;
+    public grpCard_2_3:eui.Image;
+    public grpCard_2_4:eui.Image;
+    public grpCard_3_0:eui.Image;
+    public grpCard_3_1:eui.Image;
+    public grpCard_3_2:eui.Image;
+    public grpCard_3_3:eui.Image;
+    public grpCard_3_4:eui.Image;
+    public labCardTypeBanker:eui.Image;
+    public labCardType0:eui.Image;
+    public labCardType1:eui.Image;
+    public labCardType2:eui.Image;
+    public labCardType3:eui.Image;
+    public btnCardHistroy:eui.Image;
+    public btnCardType:eui.Image;
+    public btnRedBox:eui.Image;
+    public labHandsel:eui.BitmapLabel;
+    public grpBankerInfo:eui.Group;
+    public btnDownBanker:eui.Image;
+    public btnBankerDown:eui.Image;
+    public btnUpBanker:eui.Image;
+    public bankerHead:eui.Image;
+    public labBankerMoney:eui.BitmapLabel;
+    public bankerName:eui.Label;
+    public labBankerLastNum:eui.Label;
+    public labBankerRank:eui.Label;
+    public btnVip0:eui.Image;
+    public labBankerVip:eui.Label;
+    public grpCountdown:eui.Group;
+    public timeTxt:eui.Label;
+    public btnBet0y:eui.Image;
+    public btnBet1y:eui.Image;
+    public btnBet2y:eui.Image;
+    public btnBet3y:eui.Image;
+    public btnBet4y:eui.Image;
+    public btnBet5y:eui.Image;
+    public labBet0:eui.Label;
+    public labBet1:eui.Label;
+    public labBet2:eui.Label;
+    public labBet3:eui.Label;
+    public labBet4:eui.Label;
+    public labBet5:eui.Label;
+    public grpBankerList:eui.Group;
+    public bankerListItem0:eui.Group;
+    public itemRank0:eui.Label;
+    public itemName0:eui.Label;
+    public itemMoney0:eui.Label;
+    public itemVip0:eui.BitmapLabel;
+    public bankerListItem1:eui.Group;
+    public itemRank1:eui.Label;
+    public itemName1:eui.Label;
+    public itemMoney1:eui.Label;
+    public itemVip1:eui.BitmapLabel;
+    public bankerListItem2:eui.Group;
+    public itemRank2:eui.Label;
+    public itemName2:eui.Label;
+    public itemMoney2:eui.Label;
+    public itemVip2:eui.BitmapLabel;
+    public bankerListItem3:eui.Group;
+    public itemRank3:eui.Label;
+    public itemName3:eui.Label;
+    public itemMoney3:eui.Label;
+    public itemVip3:eui.BitmapLabel;
+    public bankerListItem4:eui.Group;
+    public itemRank4:eui.Label;
+    public itemName4:eui.Label;
+    public itemMoney4:eui.Label;
+    public itemVip4:eui.BitmapLabel;
+    public bankerListItem5:eui.Group;
+    public itemRank5:eui.Label;
+    public itemName5:eui.Label;
+    public itemMoney5:eui.Label;
+    public itemVip5:eui.BitmapLabel;
+    public bankerListItem6:eui.Group;
+    public itemRank6:eui.Label;
+    public itemName6:eui.Label;
+    public itemMoney6:eui.Label;
+    public itemVip6:eui.BitmapLabel;
+    public bankerListItem7:eui.Group;
+    public itemRank7:eui.Label;
+    public itemName7:eui.Label;
+    public itemMoney7:eui.Label;
+    public itemVip7:eui.BitmapLabel;
+    public bankerListItem8:eui.Group;
+    public itemRank8:eui.Label;
+    public itemName8:eui.Label;
+    public itemMoney8:eui.Label;
+    public itemVip8:eui.BitmapLabel;
+    public bankerListItem9:eui.Group;
+    public itemRank9:eui.Label;
+    public itemName9:eui.Label;
+    public itemMoney9:eui.Label;
+    public itemVip9:eui.BitmapLabel;
+    public grpSecondPanel:eui.Group;
+    public grpHistory:eui.Group;
+    public grpHistroy0:eui.Group;
+    public grpHistroy0_0:eui.Image;
+    public grpHistroy1_0:eui.Image;
+    public grpHistroy2_0:eui.Image;
+    public grpHistroy3_0:eui.Image;
+    public grpHistroy1:eui.Group;
+    public grpHistroy0_1:eui.Image;
+    public grpHistroy1_1:eui.Image;
+    public grpHistroy2_1:eui.Image;
+    public grpHistroy3_1:eui.Image;
+    public grpHistroy2:eui.Group;
+    public grpHistroy0_2:eui.Image;
+    public grpHistroy1_2:eui.Image;
+    public grpHistroy2_2:eui.Image;
+    public grpHistroy3_2:eui.Image;
+    public grpHistroy3:eui.Group;
+    public grpHistroy0_3:eui.Image;
+    public grpHistroy1_3:eui.Image;
+    public grpHistroy2_3:eui.Image;
+    public grpHistroy3_3:eui.Image;
+    public grpHistroy4:eui.Group;
+    public grpHistroy0_4:eui.Image;
+    public grpHistroy1_4:eui.Image;
+    public grpHistroy2_4:eui.Image;
+    public grpHistroy3_4:eui.Image;
+    public grpHistroy5:eui.Group;
+    public grpHistroy0_5:eui.Image;
+    public grpHistroy1_5:eui.Image;
+    public grpHistroy2_5:eui.Image;
+    public grpHistroy3_5:eui.Image;
+    public grpHistroy6:eui.Group;
+    public grpHistroy0_6:eui.Image;
+    public grpHistroy1_6:eui.Image;
+    public grpHistroy2_6:eui.Image;
+    public grpHistroy3_6:eui.Image;
+    public grpHistroy7:eui.Group;
+    public grpHistroy0_7:eui.Image;
+    public grpHistroy1_7:eui.Image;
+    public grpHistroy2_7:eui.Image;
+    public grpHistroy3_7:eui.Image;
+    public grpHistroy8:eui.Group;
+    public grpHistroy0_8:eui.Image;
+    public grpHistroy1_8:eui.Image;
+    public grpHistroy2_8:eui.Image;
+    public grpHistroy3_8:eui.Image;
+    public grpHistroy9:eui.Group;
+    public grpHistroy0_9:eui.Image;
+    public grpHistroy1_9:eui.Image;
+    public grpHistroy2_9:eui.Image;
+    public grpHistroy3_9:eui.Image;
+    public grpCardType:eui.Group;
+    public secondClose:eui.Image;
+    public grpResult:eui.Group;
+    public grpMax:eui.Group;
+    public grpMaxHead:eui.Image;
+    public grpMaxGold:eui.Label;
+    public grpMaxName:eui.Label;
+    public grpBankerHead:eui.Image;
+    public grpBankerType:eui.Image;
+    public labelBankerType:eui.Label;
+    public grpBankerBeishu:eui.Label;
+    public grpBankerGold:eui.Label;
+    public grpBankerName:eui.Label;
+    public labResult0_0:eui.Label;
+    public labResult1_0:eui.Label;
+    public labResult2_0:eui.Label;
+    public labResult0_1:eui.Label;
+    public labResult1_1:eui.Label;
+    public labResult2_1:eui.Label;
+    public labResult0_2:eui.Label;
+    public labResult1_2:eui.Label;
+    public labResult2_2:eui.Label;
+    public labResult0_3:eui.Label;
+    public labResult1_3:eui.Label;
+    public labResult2_3:eui.Label;
+    public labResultValue:eui.Label;
+    public resultType0:eui.Label;
+    public resultType1:eui.Label;
+    public resultType2:eui.Label;
+    public resultType3:eui.Label;
+    public grpTips:eui.Group;
+    public grpTipsbg:eui.Image;
+    public grpTipsInfo:eui.Image;
+    public imgBaoZhuang:eui.Image;
+    public grpCaijin:eui.Group;
+    public grpCaijinLabel:eui.Label;
+    public _group_di:eui.Group;
+    public grpHead0:eui.Group;
+    public imghead0:eui.Image;
+    public labelHead0:eui.Label;
+    public labelGold0:eui.Label;
+    public _btn_switch:eui.Group;
+    public _btn_double_1:eui.Image;
+    public _btn_double_2:eui.Image;
+    public _btn_double_3:eui.Image;
+    public _btn_double_4:eui.Image;
+    public _btn_double_5:eui.Image;
+    public _xuanzho:eui.Image;
+    public wanjia:eui.Group;
+    public packup:eui.Image;
+    public scroller:eui.Scroller;
+    public userlist:eui.List;
+    public _xiPai_bg:eui.Rect;
+    public _btn_close:eui.Button;
+    public _btn_meun:eui.Button;
+    public wanjialist:eui.Button;
+    public _faPaiPos:eui.Image;
 
 
 
@@ -260,6 +258,22 @@ class BRNNView extends eui.Component {
     public isPaly: boolean = false;                 //是否下过注
     public isWin: boolean = false;                  //是否输赢
     public isScore: number = 0;                     //输赢金币
+
+
+
+
+
+
+
+
+    private _tipGameEff:uiCore.Animator = null;
+    private _faPaiEff_0:uiCore.Animator = null;
+    private _faPaiEff_1:uiCore.Animator = null;
+    private _faPaiEff_2:uiCore.Animator = null;
+    private _faPaiEff_3:uiCore.Animator = null;
+    //private  _faPaiEff:DragonBonesSprite;
+    private _faPai_arr = [];
+    private brnnShuffle:BrnnShuffle = null;
 
     //-----------------------------------------------
     private interval: number = -1;      // 游戏计时器间隔
@@ -361,6 +375,7 @@ class BRNNView extends eui.Component {
         this.isPaly = false;
         this.isWin = false;
         this.isScore = 0;
+
     }
 
     //获取原始扑克的位置
@@ -398,6 +413,7 @@ class BRNNView extends eui.Component {
         this.wanjialist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
+        this._btn_meun.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -415,6 +431,7 @@ class BRNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
 
+        
     }
     /**游戏状态 */
     private GameStatus(data: any): void {
@@ -453,12 +470,14 @@ class BRNNView extends eui.Component {
 
     /**准备 */
     private onprepare(data: any): void {
-        this.startCountDown(data._obj.seconds);
+        this.tipGameEff("brnn_effect_gamestart");
+        //this.startCountDown(data._obj.seconds);
     }
     /**下注 */
     private onbetBack(data: any): void {
+        this.tipGameEff("brnn_effect_xiazhu");
         this.startCountDown(data._obj.seconds);
-        this.showGameTips(2);
+        //this.showGameTips(2);
         this.isAction = true;
         for (let i = 0; i < 4; i++) {
             if (data._obj.hogList[i].allow) {
@@ -474,8 +493,9 @@ class BRNNView extends eui.Component {
     }
     /**停止下注(千人牛牛开牌) */
     private onstopBack(data: any): void {
+        this.tipGameEff("brnn_effect_stop");
         this.isAction = false;
-        this.showGameTips(3);
+        //this.showGameTips(3);
         this.startCountDown(data._obj.seconds);
 
 
@@ -534,10 +554,17 @@ class BRNNView extends eui.Component {
     private onshuffle(data: any): void {
 
         this.resetGame();
-        this.startCountDown(data._obj.seconds);
+        this.brnnShuffle = new BrnnShuffle;
+        this.addChild(this.brnnShuffle);
+        this._xiPai_bg.visible = true;
+        //this.startCountDown(data._obj.seconds);
     }
     /**百人牛牛发牌 */
     private onfapai(data: any): void {
+        this.tipGameEff("brnn_effect_begining");
+        this.brnnShuffle.removeAllEffect();
+        this.brnnShuffle.parent.removeChild(this.brnnShuffle);
+        this._xiPai_bg.visible = false;
         this.startCountDown(data._obj.seconds);
         this.cardEffect();
     }
@@ -645,6 +672,15 @@ class BRNNView extends eui.Component {
             }
         } else if (e.target == this._btn_close) {
             this.buttonClose();
+        } else if (e.target == this._btn_meun) {
+/*
+            if(this._faPai_arr != []) {
+                for(let i=0; i<this._faPai_arr.length; i++) {
+                    this._faPai_arr[i].parent.removeChild(this._faPai_arr[i]);
+                }
+                this._faPai_arr = [];
+            }
+            this.numIndex = setInterval(this.faPaiEff.bind(this), 500);*/
         }
     }
 
@@ -922,10 +958,192 @@ class BRNNView extends eui.Component {
     private flyIndex1: number = 0;  //扑克(指定位置1，2，3)
     private flyBankerIndex: number = 0;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private flyIntval_1: number = 0;  //
+    private flyIntval_2: number = 0;  //
+    private flyIntval_3: number = 0;  //
+    private flyIntval_4: number = 0;  //
+    private flyIntval_5: number = 0;  //
+
+    private flyIndex_1: number = 0;
+    private flyIndex_2: number = 0;
+    private flyIndex_3: number = 0;
+    private flyIndex_4: number = 0;
+    private flyIndex_5: number = 0;
+
+    private faPaiTime = 50;
+    private flyPaiTime = 500;
+    private pauseTime = 950;
+    private expandPaiTime = 400;
+
     private cardEffect(): void {
-        this.isCardEffectShow = true;
-        this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
+        //this.isCardEffectShow = true;
+        //this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
+
+
+        this.flyIntval_1 = setInterval(this.playCardFly_1.bind(this), this.faPaiTime);
+        this.flyIntval_2 = setInterval(this.playCardFly_2.bind(this), this.faPaiTime);
+        this.flyIntval_3 = setInterval(this.playCardFly_3.bind(this), this.faPaiTime);
+        this.flyIntval_4 = setInterval(this.playCardFly_4.bind(this), this.faPaiTime);
+        this.flyIntval_5 = setInterval(this.playCardFly_5.bind(this), this.faPaiTime);
     }
+
+
+    private playCardFly_1(): void {
+        var card: eui.Image = this['bankerCard_'+ this.flyIndex_1];
+        card.source = 'brnn_card_100_png';
+        card.x = 930;
+        card.y = 130;
+        card.anchorOffsetX = card.width / 2;
+        card.x += card.width / 2;
+        //card.alpha = 0;
+        //card.scaleX = 0.2;
+        //card.scaleY = 0.2;
+        var pos = this.orginBankerCardPos[this.flyIndex_1];
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
+        egret.Tween.get(card).wait(0).to({ x: pos.x, y: pos.y/*, alpha: 1, scaleX: 1, scaleY: 1*/ }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+
+        if (this.flyIndex_1 == 4) {
+            this.flyIndex_1 = 0;
+            clearInterval(this.flyIntval_1);
+            //this.expandIntval_1 = setInterval(this.expandPai_1.bind(this), this.pauseTime);
+        } else {
+            this.flyIndex_1++;
+        }
+    }
+
+    private playCardFly_2(): void {
+        var card: eui.Image = this['grpCard_' + 0 + '_' + this.flyIndex_2];
+        card.source = 'brnn_card_100_png';
+        card.x = 930;
+        card.y = 130;
+        card.anchorOffsetX = card.width / 2;
+        card.x += card.width / 2;
+        //card.alpha = 0;
+        //card.scaleX = 0.2;
+        //card.scaleY = 0.2;
+        var pos = this.orginPlayerCardPos[0][this.flyIndex_2];
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
+        egret.Tween.get(card).wait(200).to({ x: pos.x, y: pos.y/*, alpha: 1, scaleX: 1, scaleY: 1*/ }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_2 == 4) {
+            this.flyIndex_2 = 0;
+            clearInterval(this.flyIntval_2);
+            //this.expandIntval_2 = setInterval(this.expandPai_2.bind(this), this.pauseTime);
+        } else {
+            this.flyIndex_2++;
+        }
+    }
+
+    private playCardFly_3(): void {
+        var card: eui.Image = this['grpCard_' + 1 + '_' + this.flyIndex_3];
+        card.source = 'brnn_card_100_png';
+        card.x = 930;
+        card.y = 130;
+        card.anchorOffsetX = card.width / 2;
+        card.x += card.width / 2;
+        //card.alpha = 0;
+        //card.scaleX = 0.2;
+        //card.scaleY = 0.2;
+        var pos = this.orginPlayerCardPos[1][this.flyIndex_3];
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
+        egret.Tween.get(card).wait(400).to({ x: pos.x, y: pos.y/*, alpha: 1, scaleX: 1, scaleY: 1*/ }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_3 == 4) {
+            this.flyIndex_3 = 0;
+            clearInterval(this.flyIntval_3);
+            //this.expandIntval_3 = setInterval(this.expandPai_3.bind(this), this.pauseTime);
+        } else {
+            this.flyIndex_3++;
+        }
+    }
+
+    private playCardFly_4(): void {
+        var card: eui.Image = this['grpCard_' + 2 + '_' + this.flyIndex_4];
+        card.source = 'brnn_card_100_png';
+        card.x = 930;
+        card.y = 130;
+        card.anchorOffsetX = card.width / 2;
+        card.x += card.width / 2;
+        //card.alpha = 0;
+        //card.scaleX = 0.2;
+        //card.scaleY = 0.2;
+        var pos = this.orginPlayerCardPos[2][this.flyIndex_4];
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
+        egret.Tween.get(card).wait(600).to({ x: pos.x, y: pos.y/*, alpha: 1, scaleX: 1, scaleY: 1*/ }, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_4 == 4) {
+            this.flyIndex_4 = 0;
+            clearInterval(this.flyIntval_4);
+            //this.expandIntval_4 = setInterval(this.expandPai_4.bind(this), this.pauseTime);
+        } else {
+            this.flyIndex_4++;
+        }
+    }
+
+    private playCardFly_5(): void {
+        var card: eui.Image = this['grpCard_' + 3 + '_' + this.flyIndex_5];
+        card.source = 'brnn_card_100_png';
+        card.x = 930;
+        card.y = 130;
+        card.anchorOffsetX = card.width / 2;
+        card.x += card.width / 2;
+        //card.alpha = 0;
+        //card.scaleX = 0.2;
+        //card.scaleY = 0.2;
+        var pos = this.orginPlayerCardPos[3][this.flyIndex_5];
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
+        egret.Tween.get(card).wait(800).to({ x: pos.x, y: pos.y/*, alpha: 1, scaleX: 1, scaleY: 1 */}, this.flyPaiTime, egret.Ease.sineInOut);
+        //egret.Tween.get(card).to({ x: z_pos.x, y: z_pos.y, alpha: 0.6, scaleX: 1, scaleY: 1 }, this.flyPaiTime, egret.Ease.sineIn).to({ x: pos.x, y: pos.y, alpha: 1 }, this.flyPaiTime, egret.Ease.sineOut);
+        if (this.flyIndex_5 == 4) {
+            this.flyIndex_5 = 0;
+            clearInterval(this.flyIntval_5);
+            //this.expandIntval_5 = setInterval(this.expandPai_5.bind(this), this.pauseTime);
+        } else {
+            this.flyIndex_5++;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
     private playCardFly(): void {
         var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
@@ -973,9 +1191,10 @@ class BRNNView extends eui.Component {
         egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400);
         this.flyBankerIndex++;
     }
+*/
+
 
     private effectPlayerIndex = 0;
-
     private playerCardRotation(): void {
         if (this.effectPlayerIndex == 4) {
             clearInterval(this.interval)
@@ -988,9 +1207,9 @@ class BRNNView extends eui.Component {
         var index = this.effectPlayerIndex;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
-            card.source = 'qznn_card_100';
+            card.source = 'brnn_card_100_png';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'nn.card_' + this[1];
+                this[0].source = 'brnn_card_' + this[1] + '_png';
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke[index + 1].value[i]]);
             // console.log('poke_' + this.effectPlayerIndex + ': ' + poke[this.effectPlayerIndex].value[i]);
@@ -1020,9 +1239,9 @@ class BRNNView extends eui.Component {
         var poke = this.cardResult.pokes[0];
         for (var i = 0; i < 5; i++) {
             var card = this['bankerCard_' + i];
-            card.source = 'qznn_card_100';
+            card.source = 'brnn_card_100_png';
             egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'nn.card_' + this[1];
+                this[0].source = 'brnn_card_' + this[1] + '_png';
                 egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
             }, [card, poke.value[i]])
             // console.log('poke_banker: ' + poke.value[i]);
@@ -1079,12 +1298,98 @@ class BRNNView extends eui.Component {
         }
     }
 
+    //============================================  Game Animation
+
+    private tipGameEff(str:string):void
+    {
+        if(this._tipGameEff == null) {
+            this._tipGameEff = new uiCore.Animator();
+            this._tipGameEff.defentAnimationName = str;
+            this._tipGameEff.source = str;
+            this._tipGameEff.scaleX = 1;
+            this._tipGameEff.scaleY = 1;
+            this._tipGameEff.x = xlLib.Global.screenWidth / 2;
+            this._tipGameEff.y = xlLib.Global.screenHeight / 2;
+            this.addChild(this._tipGameEff);
+        }
+        
+        this._tipGameEff.play(str, 1);
+        this.startGameEffect(this._tipGameEff);
+    }
+
+    public startGameEffect(animation) {
+        animation.alpha = 0;
+        animation.horizontalCenter = -200;
+        animation.visible = true;
+        egret.Tween.get(animation).to({
+            horizontalCenter: 0,
+            alpha: 1
+        },
+        200, egret.Ease.bounceOut).wait(300).to({
+            horizontalCenter: 200,
+            alpha: 0
+        },
+        200, egret.Ease.bounceOut).call(function() {
+            animation.visible = false;
+            egret.Tween.removeTweens(animation);
+            animation.parent.removeChild(animation);
+        },
+        [animation]);
+        this._tipGameEff = null;
+    }
+/*
+    private numIndex:number = -1;
+    private count = 0;
+    private faPaiEff():void {
+        
+        if(this.count == 4) {
+            clearInterval(this.numIndex);
+            this.count = 0;
+            return;
+        }
+        //if(this._faPaiEff_0 != null) {
+        //    this._faPaiEff_0.parent.removeChild(this._faPaiEff_0);
+        //    this._faPaiEff_0 = null;
+        //}
+
+        var fapai = new uiCore.Animator();
+        fapai.defentAnimationName = "Sprite";
+        fapai.source = "brnn_fapai_" + (this.count + 1);
+        fapai.scaleX = 1;
+        fapai.scaleY = 1;
+        fapai.x = this._faPaiPos.x;
+        fapai.y = this._faPaiPos.y;
+        this.addChild(fapai);
+        this._faPai_arr.push(fapai);
+        fapai.play("Sprite", 1);
+        this.count++;
+*/
+/*
+        this._faPaiEff = new DragonBonesSprite('brnn_fapai_1',"Sprite");
+		this._faPaiEff.x = 80;
+		this._faPaiEff.y = 92;
+        this._faPaiEff.x = xlLib.Global.screenWidth / 2;
+            this._faPaiEff.y = xlLib.Global.screenHeight / 2;
+		this.addChild(this._faPaiEff);
+		this._faPaiEff.play("Sprite", 1);
+        this._faPaiEff.onPlayComplete  = ()=>{
+            this._faPaiEff.parent.removeChild(this._faPaiEff);
+        }
+*/
+    //}
+
+    
+
+
+
+
+
     //============================================  Game Result
     private showGameResult(): void {
         clearInterval(this.interval);
         //lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.CHAT_GAME_RESULT));
         var data = this.cardResult;
-        this.grpResult.visible = true;
+        //this.grpResult.visible = true;
         if (this.maxUserData != null) {
             this.grpMax.visible = true;
             this.grpMaxHead.source = this.maxUserData.headurl;
@@ -1326,6 +1631,7 @@ class BRNNView extends eui.Component {
         this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.buttonClose, this);
+        this._btn_meun.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);

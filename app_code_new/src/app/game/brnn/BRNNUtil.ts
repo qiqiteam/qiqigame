@@ -109,33 +109,33 @@ class BRNNUtil {
     public getCardType(index): string {
         switch (index) {
             case 0:
-                return 'nn.n1';
+                return 'brnntype_normal_0_png';
             case 1:
-                return 'nn.n2';
+                return 'brnntype_normal_1_png';
             case 2:
-                return 'nn.n3';
+                return 'brnntype_normal_2_png';
             case 3:
-                return 'nn.n4';
+                return 'brnntype_normal_3_png';
             case 4:
-                return 'nn.n5';
+                return 'brnntype_normal_4_png';
             case 5:
-                return 'nn.n6';
+                return 'brnntype_normal_5_png';
             case 6:
-                return 'nn.n7';
+                return 'brnntype_normal_6_png';
             case 7:
-                return 'nn.n8';
+                return 'brnntype_normal_7_png';
             case 8:
-                return 'nn.n9';
+                return 'brnntype_normal_8_png';
             case 9:
-                return 'nn.n10';
+                return 'brnntype_normal_9_png';
             case 10:
-                return 'nn.n11';
+                return 'brnntype_win_0_png';
             case 11:
-                return 'nn.n13';
+                return 'brnntype_normal_14_png';
             case 12:
-                return 'nn.n14';
+                return 'brnntype_normal_13_png';
             case 13:
-                return 'nn.n12';
+                return 'brnntype_normal_12_png';
         }
     }
     public getCardMusicType(index): string {

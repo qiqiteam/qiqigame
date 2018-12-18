@@ -155,160 +155,28 @@ module uiCore {
         }
     }
 
-
-    /**
-     * 自定义String
-     */
-    export class SoundManager {
-
-        public effectList = [];
-        public _musicVolume = 1;
-        public _effectVolume = 1;
-        public music: egret.SoundChannel = null;
-
-        constructor() {
-
-        }
-
-        public static playEffect(i) {
-            
-        }
-/*
-        public get musicVolume() {
-            return this._musicVolume;
-        }
-
-        public set musicVolume(e) {
-            this._musicVolume = e;
-            this.music && this.music.volume = e;
-        }
-
-        return Object.defineProperty(t, "musicVolume", {
-            get: function() {
-                return this._musicVolume
-            },
-            set: function(e) {
-                this._musicVolume = e,
-                this.music && this.music.volume(e)
-            },
-            enumerable: !0,
-            configurable: !0
-        }),
-        Object.defineProperty(t, "effectVolume", {
-            get: function() {
-                return this._effectVolume
-            },
-            set: function(e) {
-                this._effectVolume = e;
-                for (var t = 0; t < this.effectList.length; t++)
-                    this.effectList[t].volume(e)
-            },
-            enumerable: !0,
-            configurable: !0
-        }),
-        t.init = function() {
-            this.isInited || (this.isInited = !0,
-            e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_PAUSE, this.onAppPause, this),
-            e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_RESUME, this.onAppResume, this))
-        }
-        ,
-        t.onAppPause = function() {
-            this._lastmusicVolume = this.musicVolume,
-            0 != this.musicVolume && (this.musicVolume = 0),
-            this._lasteffectVolume = this.effectVolume,
-            0 != this.effectVolume && (this.effectVolume = 0),
-            this.stopAllEffects()
-        }
-        ,
-        t.onAppResume = function() {
-            void 0 != this._lastmusicVolume && (this.musicVolume = this._lastmusicVolume,
-            this._lastmusicVolume = 0),
-            void 0 != this._lasteffectVolume && (this.effectVolume = this._lasteffectVolume,
-            this._lasteffectVolume = 0)
-        }
-        ,
-        t.playMusic = function(e, t, i, a, n) {
-            var s = this;
-            if (void 0 === t && (t = !0),
-            void 0 === i && (i = 0),
-            void 0 === a && (a = null),
-            void 0 === n && (n = null),
-            this.init(),
-            this.music) {
-                if (this.musicSource == e)
-                    return;
-                this.music.stop(),
-                this.music = null
-            }
-            this.musicSource = e,
-            this.musicLoop = t;
-            var r = RES.getRes(e);
-            r ? (this.music = new Howl({
-                src: [r.url],
-                loop: t,
-                volume: this._musicVolume
-            }),
-            this.music.play()) : RES.getResAsync(e, function(e, t) {
-                t == s.musicSource && s.playMusic(s.musicSource, s.musicLoop)
-            }, this)
-        }
-        ,
-        t.stopMusic = function() {
-            this.musicSource = null,
-            this.music && (this.music.stop(),
-            this.music = null)
-        }
-        ,
-        t.playEffect = function(t, i) {
-            void 0 === i && (i = !1),
-            this.init();
-            var a = RES.getRes(t);
-            if (a) {
-                var n = new Howl({
-                    src: [a.url],
-                    loop: i,
-                    volume: this._effectVolume,
-                    onend: function() {
-                        for (var t = 0; t < e.SoundManager.effectList.length; t++)
-                            e.SoundManager.effectList[t] == n && e.SoundManager.effectList.splice(t, 1)
-                    }
-                });
-                e.SoundManager.effectList.push(n),
-                n.play()
-            } else
-                RES.getResAsync(t, function(e, t) {}, this)
-        }
-        ,
-        t.stopAllEffects = function() {
-            for (; this.effectList.length; )
-                this.effectList.shift().stop()
-        }
-*/
-    }
-
+    /**龙骨动画 */
     export class Animator extends eui.Group {
         
         public source: string = "";
         public sourceGroup: string = "";
-        public speed: number = 1;
         public autoPlay: boolean = true;
         public playOnce: boolean = false;
         public defentAnimationName: string = "";
         public stopAndVisible: boolean = false;
         public _isLoaded: boolean = false;
-        
 
+        //public speed: number = 1;
         public isAdvanceTime = false;
         public EVENT_LOADCOMPLETE = "loadComplete";
+        public armature:dragonBones.EgretArmatureDisplay;
 
-        public armature;
-        public okHander;
-        public thisObject;
-        public params;
+        //public okHander;
+        //public thisObject;
+        //public params;
 
         constructor() {
             super();
-
         }
 
         public get isPlaying(): boolean {
@@ -320,26 +188,20 @@ module uiCore {
         }
 
         public getResource() {
-            "" != this.source && ("" != this.sourceGroup ? RES.isGroupLoaded(this.sourceGroup) ? this.armature && this.contains(this.armature) ? (this.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
-            this.removeChild(this.armature)) : this.init() : (RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this),
-            RES.loadGroup(this.sourceGroup)) : this.loadRESComplete() && (RES.getResAsync(this.source + "_ske_json", this.loadRESComplete, this),
-            RES.getResAsync(this.source + "_tex_json", this.loadRESComplete, this),
-            RES.getResAsync(this.source + "_tex_png", this.loadRESComplete, this)))
+            "" != this.source && ("" != this.sourceGroup ? RES.isGroupLoaded(this.sourceGroup) ? this.armature && this.contains(this.armature) ? (this.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this), this.removeChild(this.armature)) : this.init() : (RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this), RES.loadGroup(this.sourceGroup)) : this.loadRESComplete() && (RES.getResAsync(this.source + "_ske_json", this.loadRESComplete, this), RES.getResAsync(this.source + "_tex_json", this.loadRESComplete, this), RES.getResAsync(this.source + "_tex_png", this.loadRESComplete, this)))
         }
         
         public loadRESComplete() {
-            return RES.getRes(this.source + "_ske_json") && RES.getRes(this.source + "_tex_json") && RES.getRes(this.source + "_tex_png") ? (this.init(),
-            !1) : true
+            return RES.getRes(this.source + "_ske_json") && RES.getRes(this.source + "_tex_json") && RES.getRes(this.source + "_tex_png") ? (this.init(), !1) : !0
         }
         
         public onResourceLoadComplete = function(e) {
-            e.groupName == this.sourceGroup && (RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this),
-            this.init())
+            e.groupName == this.sourceGroup && (RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this), this.init())
         }
         
-        public childrenCreated() {
-            this.addEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemovedFromStage, this),
-            this.getResource()
+        protected childrenCreated(): void {
+            this.addEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemovedFromStage, this);
+            this.getResource();
         }
 
         public warn(e) {
@@ -348,82 +210,58 @@ module uiCore {
         
         public init() {
             this._isLoaded = !0;
-            var e = RES.getRes(this.source + "_ske_json")
-              , i = RES.getRes(this.source + "_tex_json")
-              , a = RES.getRes(this.source + "_tex_png");
-            if (!e || !i || !a)
-                return void this.warn("资源" + this.source + "不存在");
+            var e = RES.getRes(this.source + "_ske_json"),
+            i = RES.getRes(this.source + "_tex_json"),
+            a = RES.getRes(this.source + "_tex_png");
+            if (!e || !i || !a) return void this.warn("资源" + this.source + "不存在");
             this.armature && this.removeChild(this.armature);
             var n = dragonBones.EgretFactory.factory;
-            n.getDragonBonesData(this.source) || (n.parseDragonBonesData(e),
-            n.parseTextureAtlasData(i, a)),
-            this.armature = n.buildArmatureDisplay(this.source, this.source);
-            var s = n.getAllDragonBonesData()
-              , r = s[this.source]
-              , o = r.armatureNames[0];
-            if (this.armature = n.buildArmatureDisplay(o, this.source),
-            this.addChild(this.armature),
-            this.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
-            this.visible = !this.stopAndVisible,
-            this.autoPlay) {
-                var l = -1 == this.armature.animation.animationList.indexOf(this.defentAnimationName) ? this.armature.animation.animationList[0] : this.defentAnimationName;
-                this.playOnce ? this.play(l, 1).timeScale = this.speed : this.play(l, 1).timeScale = this.speed
+            if (n.getDragonBonesData(this.source) || (n.parseDragonBonesData(e), n.parseTextureAtlasData(i, a)), this.armature = n.buildArmatureDisplay(this.defentAnimationName, this.source), this.addChild(this.armature), this.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this), this.visible = !this.stopAndVisible, this.autoPlay) {
+                var s = -1 == this.armature.animation.animationList.indexOf(this.defentAnimationName) ? this.armature.animation.animationList[0] : this.defentAnimationName;
+                this.playOnce ? this.play(s, 1) : this.play(s)
             }
-            this.isAdvanceTime || (egret.Ticker.getInstance().register(this.onTicker, this),
-            this.isAdvanceTime = !0),
+            this.isAdvanceTime || (egret.Ticker.getInstance().register(this.onTicker, this), this.isAdvanceTime = !0),
             this.dispatchEventWith(this.EVENT_LOADCOMPLETE)
         }
-        
+
         public onTicker(e) {
-            dragonBones.WorldClock.clock.advanceTime(e / 1e3)
+            dragonBones.WorldClock.clock.advanceTime(e / 1000)
         }
         
         public onRemovedFromStage(e) {
             this.stop(),
             this.isAdvanceTime || egret.Ticker.getInstance().unregister(this.onTicker, this),
-            this.armature && (this.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
-            this.armature.dispose(true),
-            this.armature && this.armature.parent && this.armature.parent.removeChild(this.armature)),
-            dragonBones.EgretFactory.factory.getDragonBonesData(this.source) && dragonBones.EgretFactory.factory.removeDragonBonesData(this.source, false),
-            this.armature = null,
-            this.okHander = null,
-            this.thisObject = null,
-            this.params = null
+            this.armature && (this.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this), this.armature.dispose(!0), this.armature && this.armature.parent && this.armature.parent.removeChild(this.armature)),
+            dragonBones.EgretFactory.factory.getDragonBonesData(this.source) && dragonBones.EgretFactory.factory.removeDragonBonesData(this.source, !1),
+            this.armature = null
+            //this.okHander = null,
+            //this.thisObject = null,
+            //this.params = null
         }
         
         public onAnimationComplete(e) {
             this.visible = !this.stopAndVisible,
-            this.dispatchEvent(e),
-            this.okHander && this.okHander.apply(this.thisObject, this.params)
+            this.dispatchEvent(e)
+            //this.okHander && this.okHander.apply(this.thisObject, this.params)
         }
         
-        public play(e, t) {
-            return this.armature ? (this.armature.animation.stop(),
-            this.visible = true,
-            this.armature.animation.play(e, t)) : void 0
+        public play(e, t=-1) {
+            this.armature && (this.armature.animation.stop(), this.visible = !0, this.armature.animation.play(e, t))
         }
         
         public stop() {
-            this.armature && this.armature.animation && (this.armature.animation.stop(),
-            this.visible = !this.stopAndVisible)
+            this.armature && this.armature.animation && (this.armature.animation.stop(), this.visible = !this.stopAndVisible)
         }
         
         public getAnimDuration() {
             return 1e3 * this.armature.animation.getState(this.armature.animation.animationList[0]).totalTime
         }
         
-        public addHander(e, t, i) {
-            this.okHander = e,
-            this.thisObject = t,
-            this.params = i
-        }
-        
-        public replaceSlot(e, t) {
-            var i = this.armature.armature.getSlot(e);
-            i.displayController = "none",
-            i.displayIndex = t
-        }
-
+        //public addHander(e, t, i) {
+            //this.okHander = e,
+            //this.thisObject = t,
+            //this.params = i
+        //}
     }
 
     /** 
@@ -473,6 +311,8 @@ module uiCore {
         }
     }
 
+
+
     export class KShape extends egret.Shape {
 
         constructor() {
@@ -487,266 +327,3 @@ module uiCore {
         }
     }
 }
-/*
-    var uiCore;
-!function(e) {
-    var t = function(e) {
-        function t() {
-            var t = e.call(this) || this;
-            return t.source = "",
-            t.sourceGroup = "",
-            t.speed = 1,
-            t.autoPlay = !0,
-            t.playOnce = !1,
-            t.defentAnimationName = "",
-            t.stopAndVisible = !1,
-            t._isLoaded = !1,
-            t
-        }
-        return __extends(t, e),
-        Object.defineProperty(t.prototype, "isPlaying", {
-            get: function() {
-                return this.armature ? this.armature.animation.isPlaying : !1
-            },
-            enumerable: !0,
-            configurable: !0
-        }),
-        Object.defineProperty(t.prototype, "isLoaded", {
-            get: function() {
-                return this._isLoaded
-            },
-            enumerable: !0,
-            configurable: !0
-        }),
-        t.prototype.getResource = function() {
-            "" != this.source && ("" != this.sourceGroup ? RES.isGroupLoaded(this.sourceGroup) ? this.armature && this.contains(this.armature) ? (this.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
-            this.removeChild(this.armature)) : this.init() : (RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this),
-            RES.loadGroup(this.sourceGroup)) : this.loadRESComplete() && (RES.getResAsync(this.source + "_ske_json", this.loadRESComplete, this),
-            RES.getResAsync(this.source + "_tex_json", this.loadRESComplete, this),
-            RES.getResAsync(this.source + "_tex_png", this.loadRESComplete, this)))
-        }
-        ,
-        t.prototype.loadRESComplete = function() {
-            return RES.getRes(this.source + "_ske_json") && RES.getRes(this.source + "_tex_json") && RES.getRes(this.source + "_tex_png") ? (this.init(),
-            !1) : !0
-        }
-        ,
-        t.prototype.onResourceLoadComplete = function(e) {
-            e.groupName == this.sourceGroup && (RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this),
-            this.init())
-        }
-        ,
-        t.prototype.childrenCreated = function() {
-            this.addEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemovedFromStage, this),
-            this.getResource()
-        }
-        ,
-        t.prototype.init = function() {
-            this._isLoaded = !0;
-            var e = RES.getRes(this.source + "_ske_json")
-              , i = RES.getRes(this.source + "_tex_json")
-              , a = RES.getRes(this.source + "_tex_png");
-            if (!e || !i || !a)
-                return void warn("资源" + this.source + "不存在");
-            this.armature && this.removeChild(this.armature);
-            var n = dragonBones.EgretFactory.factory;
-            n.getDragonBonesData(this.source) || (n.parseDragonBonesData(e),
-            n.parseTextureAtlasData(i, a)),
-            this.armature = n.buildArmatureDisplay(this.source, this.source);
-            var s = n.getAllDragonBonesData()
-              , r = s[this.source]
-              , o = r.armatureNames[0];
-            if (this.armature = n.buildArmatureDisplay(o, this.source),
-            this.addChild(this.armature),
-            this.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
-            this.visible = !this.stopAndVisible,
-            this.autoPlay) {
-                var l = -1 == this.armature.animation.animationList.indexOf(this.defentAnimationName) ? this.armature.animation.animationList[0] : this.defentAnimationName;
-                this.playOnce ? this.play(l, 1).timeScale = this.speed : this.play(l).timeScale = this.speed
-            }
-            t.isAdvanceTime || (egret.Ticker.getInstance().register(t.onTicker, this),
-            t.isAdvanceTime = !0),
-            this.dispatchEventWith(t.EVENT_LOADCOMPLETE)
-        }
-        ,
-        t.onTicker = function(e) {
-            dragonBones.WorldClock.clock.advanceTime(e / 1e3)
-        }
-        ,
-        t.prototype.onRemovedFromStage = function(e) {
-            this.stop(),
-            t.isAdvanceTime || egret.Ticker.getInstance().unregister(t.onTicker, this),
-            this.armature && (this.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
-            this.armature.dispose(!0),
-            this.armature && this.armature.parent && this.armature.parent.removeChild(this.armature)),
-            dragonBones.EgretFactory.factory.getDragonBonesData(this.source) && dragonBones.EgretFactory.factory.removeDragonBonesData(this.source, !1),
-            this.armature = null,
-            this.okHander = null,
-            this.thisObject = null,
-            this.params = null
-        }
-        ,
-        t.prototype.onAnimationComplete = function(e) {
-            this.visible = !this.stopAndVisible,
-            this.dispatchEvent(e),
-            this.okHander && this.okHander.apply(this.thisObject, this.params)
-        }
-        ,
-        t.prototype.play = function(e, t) {
-            return this.armature ? (this.armature.animation.stop(),
-            this.visible = !0,
-            this.armature.animation.play(e, t)) : void 0
-        }
-        ,
-        t.prototype.stop = function() {
-            this.armature && this.armature.animation && (this.armature.animation.stop(),
-            this.visible = !this.stopAndVisible)
-        }
-        ,
-        t.prototype.getAnimDuration = function() {
-            return 1e3 * this.armature.animation.getState(this.armature.animation.animationList[0]).totalTime
-        }
-        ,
-        t.prototype.addHander = function(e, t, i) {
-            this.okHander = e,
-            this.thisObject = t,
-            this.params = i
-        }
-        ,
-        t.prototype.replaceSlot = function(e, t) {
-            var i = this.armature.armature.getSlot(e);
-            i.displayController = "none",
-            i.displayIndex = t
-        }
-        ,
-        t.isAdvanceTime = !1,
-        t.EVENT_LOADCOMPLETE = "loadComplete",
-        t
-    }(eui.Group);
-    e.Animator = t,
-    __reflect(t.prototype, "uiCore.Animator")
-}(uiCore || (uiCore = {}));
-}
-*/
-
-
-
-
-
-
-
-/*
-var uiCore;
-!function(e) {
-    var t = function() {
-        function t() {}
-        return Object.defineProperty(t, "musicVolume", {
-            get: function() {
-                return this._musicVolume
-            },
-            set: function(e) {
-                this._musicVolume = e,
-                this.music && this.music.volume(e)
-            },
-            enumerable: !0,
-            configurable: !0
-        }),
-        Object.defineProperty(t, "effectVolume", {
-            get: function() {
-                return this._effectVolume
-            },
-            set: function(e) {
-                this._effectVolume = e;
-                for (var t = 0; t < this.effectList.length; t++)
-                    this.effectList[t].volume(e)
-            },
-            enumerable: !0,
-            configurable: !0
-        }),
-        t.init = function() {
-            this.isInited || (this.isInited = !0,
-            e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_PAUSE, this.onAppPause, this),
-            e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_RESUME, this.onAppResume, this))
-        }
-        ,
-        t.onAppPause = function() {
-            this._lastmusicVolume = this.musicVolume,
-            0 != this.musicVolume && (this.musicVolume = 0),
-            this._lasteffectVolume = this.effectVolume,
-            0 != this.effectVolume && (this.effectVolume = 0),
-            this.stopAllEffects()
-        }
-        ,
-        t.onAppResume = function() {
-            void 0 != this._lastmusicVolume && (this.musicVolume = this._lastmusicVolume,
-            this._lastmusicVolume = 0),
-            void 0 != this._lasteffectVolume && (this.effectVolume = this._lasteffectVolume,
-            this._lasteffectVolume = 0)
-        }
-        ,
-        t.playMusic = function(e, t, i, a, n) {
-            var s = this;
-            if (void 0 === t && (t = !0),
-            void 0 === i && (i = 0),
-            void 0 === a && (a = null),
-            void 0 === n && (n = null),
-            this.init(),
-            this.music) {
-                if (this.musicSource == e)
-                    return;
-                this.music.stop(),
-                this.music = null
-            }
-            this.musicSource = e,
-            this.musicLoop = t;
-            var r = RES.getRes(e);
-            r ? (this.music = new Howl({
-                src: [r.url],
-                loop: t,
-                volume: this._musicVolume
-            }),
-            this.music.play()) : RES.getResAsync(e, function(e, t) {
-                t == s.musicSource && s.playMusic(s.musicSource, s.musicLoop)
-            }, this)
-        }
-        ,
-        t.stopMusic = function() {
-            this.musicSource = null,
-            this.music && (this.music.stop(),
-            this.music = null)
-        }
-        ,
-        t.playEffect = function(t, i) {
-            void 0 === i && (i = !1),
-            this.init();
-            var a = RES.getRes(t);
-            if (a) {
-                var n = new Howl({
-                    src: [a.url],
-                    loop: i,
-                    volume: this._effectVolume,
-                    onend: function() {
-                        for (var t = 0; t < e.SoundManager.effectList.length; t++)
-                            e.SoundManager.effectList[t] == n && e.SoundManager.effectList.splice(t, 1)
-                    }
-                });
-                e.SoundManager.effectList.push(n),
-                n.play()
-            } else
-                RES.getResAsync(t, function(e, t) {}, this)
-        }
-        ,
-        t.stopAllEffects = function() {
-            for (; this.effectList.length; )
-                this.effectList.shift().stop()
-        }
-        ,
-        t.effectList = [],
-        t._musicVolume = 1,
-        t._effectVolume = 1,
-        t
-    }();
-    e.SoundManager = t,
-    __reflect(t.prototype, "uiCore.SoundManager")
-}(uiCore || (uiCore = {}));
-*/

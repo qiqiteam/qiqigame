@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,anniuliuguang_tex_png,anniuliuguang_tex_json,anniuliuguang_ske_json",
+			"keys": "loading_png,anniuliuguang_tex_png,anniuliuguang_tex_json,anniuliuguang_ske_json,bar_effect_lost_0_png,brnn_effect_begining_ske_json,brnn_effect_begining_tex_json,brnn_effect_begining_tex_png,brnn_effect_gamestart_ske_json,brnn_effect_gamestart_tex_json,brnn_effect_gamestart_tex_png,brnn_effect_stop_ske_json,brnn_effect_stop_tex_json,brnn_effect_stop_tex_png,brnn_effect_xiazhu_ske_json,brnn_effect_xiazhu_tex_json,brnn_effect_xiazhu_tex_png,brnn_fapai_1_ske_json,brnn_fapai_1_tex_json,brnn_fapai_1_tex_png,brnn_fapai_2_ske_json,brnn_fapai_2_tex_json,brnn_fapai_2_tex_png,brnn_fapai_3_ske_json,brnn_fapai_3_tex_json,brnn_fapai_3_tex_png,brnn_fapai_4_ske_json,brnn_fapai_4_tex_json,brnn_fapai_4_tex_png,brnn_fapai_5_ske_json,brnn_fapai_5_tex_json,brnn_fapai_5_tex_png,brnn_card_106_png,brnn_card_107_png,brnn_card_108_png,brnn_card_109_png,brnn_card_110_png,brnn_card_111_png,brnn_card_112_png,brnn_card_113_png,brnn_card_201_png,brnn_card_202_png,brnn_card_203_png,brnn_card_204_png,brnn_card_205_png,brnn_card_206_png,brnn_card_207_png,brnn_card_208_png,brnn_card_209_png,brnn_card_210_png,brnn_card_211_png,brnn_card_212_png,brnn_card_213_png,brnn_card_301_png,brnn_card_302_png,brnn_card_303_png,brnn_card_304_png,brnn_card_305_png,brnn_card_306_png,brnn_card_307_png,brnn_card_308_png,brnn_card_309_png,brnn_card_310_png,brnn_card_311_png,brnn_card_312_png,brnn_card_313_png,brnn_card_401_png,brnn_card_402_png,brnn_card_403_png,brnn_card_404_png,brnn_card_405_png,brnn_card_406_png,brnn_card_407_png,brnn_card_408_png,brnn_card_409_png,brnn_card_410_png,brnn_card_411_png,brnn_card_412_png,brnn_card_413_png,brnn_effect_begining_tex2_png,brnn_effect_begining_tex1_png,brnntype_bgimg_1_png,brnntype_bgimg_2_png,brnntype_bgimg_3_png,brnntype_bgimg_4_png,brnntype_lose_0_png,brnntype_lose_1_png,brnntype_lose_3_png,brnntype_lose_4_png,brnntype_lose_6_png,brnntype_lose_7_png,brnntype_lose_9_png,brnntype_lose_10_png,brnntype_lose_11_png,brnntype_lose_12_png,brnntype_lose_13_png,brnntype_lose_14_png,brnntype_normal_0_png,brnntype_normal_1_png,brnntype_normal_2_png,brnntype_normal_3_png,brnntype_normal_4_png,brnntype_normal_5_png,brnntype_normal_6_png,brnntype_normal_7_png,brnntype_normal_8_png,brnntype_normal_9_png,brnntype_normal_11_png,brnntype_normal_12_png,brnntype_normal_13_png,brnntype_normal_14_png,brnntype_win_0_png,brnntype_win_1_png,brnntype_win_2_png,brnntype_win_3_png,brnntype_win_4_png,brnntype_win_5_png,brnntype_win_6_png,brnntype_win_7_png,brnntype_win_8_png,brnntype_win_9_png,brnntype_win_11_png,brnntype_win_12_png,brnntype_win_13_png,brnntype_win_14_png,brnn_card_0_png,brnn_card_1_png,brnn_card_10_png,brnn_card_11_png,brnn_card_12_png,brnn_card_13_png,brnn_card_14_png,brnn_card_15_png,brnn_card_16_png,brnn_card_17_png,brnn_card_18_png,brnn_card_19_png,brnn_card_2_png,brnn_card_20_png,brnn_card_21_png,brnn_card_22_png,brnn_card_23_png,brnn_card_24_png,brnn_card_25_png,brnn_card_26_png,brnn_card_27_png,brnn_card_28_png,brnn_card_29_png,brnn_card_3_png,brnn_card_30_png,brnn_card_31_png,brnn_card_32_png,brnn_card_33_png,brnn_card_34_png,brnn_card_35_png,brnn_card_36_png,brnn_card_37_png,brnn_card_38_png,brnn_card_39_png,brnn_card_4_png,brnn_card_40_png,brnn_card_41_png,brnn_card_42_png,brnn_card_43_png,brnn_card_44_png,brnn_card_45_png,brnn_card_46_png,brnn_card_47_png,brnn_card_48_png,brnn_card_49_png,brnn_card_5_png,brnn_card_50_png,brnn_card_51_png,brnn_card_52_png,brnn_card_53_png,brnn_card_54_png,brnn_card_6_png,brnn_card_7_png,brnn_card_8_png,brnn_card_9_png,brnn_card_532_png,brnn_card_542_png,brnn_card_100_png,brnn_card_101_png,brnn_card_102_png,brnn_card_103_png,brnn_card_104_png,brnn_card_105_png,hall2_json",
 			"name": "preload"
 		},
 		{
@@ -6463,6 +6463,932 @@
 			"url": "assets/game/zhajh/gf_icon_chip_sm3.png",
 			"type": "image",
 			"name": "gf_icon_chip_sm3_png"
+		},
+		{
+			"url": "assets/game/erbagang/bar_effect_lost_0.png",
+			"type": "image",
+			"name": "bar_effect_lost_0_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_ske.json",
+			"type": "json",
+			"name": "brnn_effect_begining_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_tex.json",
+			"type": "json",
+			"name": "brnn_effect_begining_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_tex.png",
+			"type": "image",
+			"name": "brnn_effect_begining_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_ske.json",
+			"type": "json",
+			"name": "brnn_effect_gamestart_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_tex.json",
+			"type": "json",
+			"name": "brnn_effect_gamestart_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_tex.png",
+			"type": "image",
+			"name": "brnn_effect_gamestart_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_ske.json",
+			"type": "json",
+			"name": "brnn_effect_stop_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_tex.json",
+			"type": "json",
+			"name": "brnn_effect_stop_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_tex.png",
+			"type": "image",
+			"name": "brnn_effect_stop_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_ske.json",
+			"type": "json",
+			"name": "brnn_effect_xiazhu_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_tex.json",
+			"type": "json",
+			"name": "brnn_effect_xiazhu_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_tex.png",
+			"type": "image",
+			"name": "brnn_effect_xiazhu_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_1/brnn_fapai_1_ske.json",
+			"type": "json",
+			"name": "brnn_fapai_1_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_1/brnn_fapai_1_tex.json",
+			"type": "json",
+			"name": "brnn_fapai_1_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_1/brnn_fapai_1_tex.png",
+			"type": "image",
+			"name": "brnn_fapai_1_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_2/brnn_fapai_2_ske.json",
+			"type": "json",
+			"name": "brnn_fapai_2_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_2/brnn_fapai_2_tex.json",
+			"type": "json",
+			"name": "brnn_fapai_2_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_2/brnn_fapai_2_tex.png",
+			"type": "image",
+			"name": "brnn_fapai_2_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_3/brnn_fapai_3_ske.json",
+			"type": "json",
+			"name": "brnn_fapai_3_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_3/brnn_fapai_3_tex.json",
+			"type": "json",
+			"name": "brnn_fapai_3_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_3/brnn_fapai_3_tex.png",
+			"type": "image",
+			"name": "brnn_fapai_3_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_4/brnn_fapai_4_ske.json",
+			"type": "json",
+			"name": "brnn_fapai_4_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_4/brnn_fapai_4_tex.json",
+			"type": "json",
+			"name": "brnn_fapai_4_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_4/brnn_fapai_4_tex.png",
+			"type": "image",
+			"name": "brnn_fapai_4_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_5/brnn_fapai_5_ske.json",
+			"type": "json",
+			"name": "brnn_fapai_5_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_5/brnn_fapai_5_tex.json",
+			"type": "json",
+			"name": "brnn_fapai_5_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_fapai_5/brnn_fapai_5_tex.png",
+			"type": "image",
+			"name": "brnn_fapai_5_tex_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_106.png",
+			"type": "image",
+			"name": "brnn_card_106_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_107.png",
+			"type": "image",
+			"name": "brnn_card_107_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_108.png",
+			"type": "image",
+			"name": "brnn_card_108_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_109.png",
+			"type": "image",
+			"name": "brnn_card_109_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_110.png",
+			"type": "image",
+			"name": "brnn_card_110_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_111.png",
+			"type": "image",
+			"name": "brnn_card_111_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_112.png",
+			"type": "image",
+			"name": "brnn_card_112_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_113.png",
+			"type": "image",
+			"name": "brnn_card_113_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_201.png",
+			"type": "image",
+			"name": "brnn_card_201_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_202.png",
+			"type": "image",
+			"name": "brnn_card_202_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_203.png",
+			"type": "image",
+			"name": "brnn_card_203_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_204.png",
+			"type": "image",
+			"name": "brnn_card_204_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_205.png",
+			"type": "image",
+			"name": "brnn_card_205_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_206.png",
+			"type": "image",
+			"name": "brnn_card_206_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_207.png",
+			"type": "image",
+			"name": "brnn_card_207_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_208.png",
+			"type": "image",
+			"name": "brnn_card_208_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_209.png",
+			"type": "image",
+			"name": "brnn_card_209_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_210.png",
+			"type": "image",
+			"name": "brnn_card_210_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_211.png",
+			"type": "image",
+			"name": "brnn_card_211_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_212.png",
+			"type": "image",
+			"name": "brnn_card_212_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_213.png",
+			"type": "image",
+			"name": "brnn_card_213_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_301.png",
+			"type": "image",
+			"name": "brnn_card_301_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_302.png",
+			"type": "image",
+			"name": "brnn_card_302_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_303.png",
+			"type": "image",
+			"name": "brnn_card_303_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_304.png",
+			"type": "image",
+			"name": "brnn_card_304_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_305.png",
+			"type": "image",
+			"name": "brnn_card_305_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_306.png",
+			"type": "image",
+			"name": "brnn_card_306_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_307.png",
+			"type": "image",
+			"name": "brnn_card_307_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_308.png",
+			"type": "image",
+			"name": "brnn_card_308_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_309.png",
+			"type": "image",
+			"name": "brnn_card_309_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_310.png",
+			"type": "image",
+			"name": "brnn_card_310_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_311.png",
+			"type": "image",
+			"name": "brnn_card_311_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_312.png",
+			"type": "image",
+			"name": "brnn_card_312_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_313.png",
+			"type": "image",
+			"name": "brnn_card_313_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_401.png",
+			"type": "image",
+			"name": "brnn_card_401_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_402.png",
+			"type": "image",
+			"name": "brnn_card_402_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_403.png",
+			"type": "image",
+			"name": "brnn_card_403_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_404.png",
+			"type": "image",
+			"name": "brnn_card_404_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_405.png",
+			"type": "image",
+			"name": "brnn_card_405_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_406.png",
+			"type": "image",
+			"name": "brnn_card_406_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_407.png",
+			"type": "image",
+			"name": "brnn_card_407_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_408.png",
+			"type": "image",
+			"name": "brnn_card_408_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_409.png",
+			"type": "image",
+			"name": "brnn_card_409_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_410.png",
+			"type": "image",
+			"name": "brnn_card_410_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_411.png",
+			"type": "image",
+			"name": "brnn_card_411_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_412.png",
+			"type": "image",
+			"name": "brnn_card_412_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_413.png",
+			"type": "image",
+			"name": "brnn_card_413_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_effect_begining_tex.png",
+			"type": "image",
+			"name": "brnn_effect_begining_tex2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_effect_begining_tex1.png",
+			"type": "image",
+			"name": "brnn_effect_begining_tex1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_bgimg_1.png",
+			"type": "image",
+			"name": "brnntype_bgimg_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_bgimg_2.png",
+			"type": "image",
+			"name": "brnntype_bgimg_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_bgimg_3.png",
+			"type": "image",
+			"name": "brnntype_bgimg_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_bgimg_4.png",
+			"type": "image",
+			"name": "brnntype_bgimg_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_0.png",
+			"type": "image",
+			"name": "brnntype_lose_0_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_1.png",
+			"type": "image",
+			"name": "brnntype_lose_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_3.png",
+			"type": "image",
+			"name": "brnntype_lose_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_4.png",
+			"type": "image",
+			"name": "brnntype_lose_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_6.png",
+			"type": "image",
+			"name": "brnntype_lose_6_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_7.png",
+			"type": "image",
+			"name": "brnntype_lose_7_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_9.png",
+			"type": "image",
+			"name": "brnntype_lose_9_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_10.png",
+			"type": "image",
+			"name": "brnntype_lose_10_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_11.png",
+			"type": "image",
+			"name": "brnntype_lose_11_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_12.png",
+			"type": "image",
+			"name": "brnntype_lose_12_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_13.png",
+			"type": "image",
+			"name": "brnntype_lose_13_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_14.png",
+			"type": "image",
+			"name": "brnntype_lose_14_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_0.png",
+			"type": "image",
+			"name": "brnntype_normal_0_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_1.png",
+			"type": "image",
+			"name": "brnntype_normal_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_2.png",
+			"type": "image",
+			"name": "brnntype_normal_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_3.png",
+			"type": "image",
+			"name": "brnntype_normal_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_4.png",
+			"type": "image",
+			"name": "brnntype_normal_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_5.png",
+			"type": "image",
+			"name": "brnntype_normal_5_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_6.png",
+			"type": "image",
+			"name": "brnntype_normal_6_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_7.png",
+			"type": "image",
+			"name": "brnntype_normal_7_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_8.png",
+			"type": "image",
+			"name": "brnntype_normal_8_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_9.png",
+			"type": "image",
+			"name": "brnntype_normal_9_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_11.png",
+			"type": "image",
+			"name": "brnntype_normal_11_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_12.png",
+			"type": "image",
+			"name": "brnntype_normal_12_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_13.png",
+			"type": "image",
+			"name": "brnntype_normal_13_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_14.png",
+			"type": "image",
+			"name": "brnntype_normal_14_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_0.png",
+			"type": "image",
+			"name": "brnntype_win_0_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_1.png",
+			"type": "image",
+			"name": "brnntype_win_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_2.png",
+			"type": "image",
+			"name": "brnntype_win_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_3.png",
+			"type": "image",
+			"name": "brnntype_win_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_4.png",
+			"type": "image",
+			"name": "brnntype_win_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_5.png",
+			"type": "image",
+			"name": "brnntype_win_5_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_6.png",
+			"type": "image",
+			"name": "brnntype_win_6_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_7.png",
+			"type": "image",
+			"name": "brnntype_win_7_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_8.png",
+			"type": "image",
+			"name": "brnntype_win_8_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_9.png",
+			"type": "image",
+			"name": "brnntype_win_9_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_11.png",
+			"type": "image",
+			"name": "brnntype_win_11_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_12.png",
+			"type": "image",
+			"name": "brnntype_win_12_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_13.png",
+			"type": "image",
+			"name": "brnntype_win_13_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_14.png",
+			"type": "image",
+			"name": "brnntype_win_14_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_0.png",
+			"type": "image",
+			"name": "brnn_card_0_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_1.png",
+			"type": "image",
+			"name": "brnn_card_1_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_10.png",
+			"type": "image",
+			"name": "brnn_card_10_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_11.png",
+			"type": "image",
+			"name": "brnn_card_11_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_12.png",
+			"type": "image",
+			"name": "brnn_card_12_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_13.png",
+			"type": "image",
+			"name": "brnn_card_13_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_14.png",
+			"type": "image",
+			"name": "brnn_card_14_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_15.png",
+			"type": "image",
+			"name": "brnn_card_15_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_16.png",
+			"type": "image",
+			"name": "brnn_card_16_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_17.png",
+			"type": "image",
+			"name": "brnn_card_17_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_18.png",
+			"type": "image",
+			"name": "brnn_card_18_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_19.png",
+			"type": "image",
+			"name": "brnn_card_19_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_2.png",
+			"type": "image",
+			"name": "brnn_card_2_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_20.png",
+			"type": "image",
+			"name": "brnn_card_20_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_21.png",
+			"type": "image",
+			"name": "brnn_card_21_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_22.png",
+			"type": "image",
+			"name": "brnn_card_22_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_23.png",
+			"type": "image",
+			"name": "brnn_card_23_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_24.png",
+			"type": "image",
+			"name": "brnn_card_24_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_25.png",
+			"type": "image",
+			"name": "brnn_card_25_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_26.png",
+			"type": "image",
+			"name": "brnn_card_26_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_27.png",
+			"type": "image",
+			"name": "brnn_card_27_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_28.png",
+			"type": "image",
+			"name": "brnn_card_28_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_29.png",
+			"type": "image",
+			"name": "brnn_card_29_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_3.png",
+			"type": "image",
+			"name": "brnn_card_3_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_30.png",
+			"type": "image",
+			"name": "brnn_card_30_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_31.png",
+			"type": "image",
+			"name": "brnn_card_31_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_32.png",
+			"type": "image",
+			"name": "brnn_card_32_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_33.png",
+			"type": "image",
+			"name": "brnn_card_33_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_34.png",
+			"type": "image",
+			"name": "brnn_card_34_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_35.png",
+			"type": "image",
+			"name": "brnn_card_35_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_36.png",
+			"type": "image",
+			"name": "brnn_card_36_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_37.png",
+			"type": "image",
+			"name": "brnn_card_37_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_38.png",
+			"type": "image",
+			"name": "brnn_card_38_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_39.png",
+			"type": "image",
+			"name": "brnn_card_39_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_4.png",
+			"type": "image",
+			"name": "brnn_card_4_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_40.png",
+			"type": "image",
+			"name": "brnn_card_40_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_41.png",
+			"type": "image",
+			"name": "brnn_card_41_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_42.png",
+			"type": "image",
+			"name": "brnn_card_42_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_43.png",
+			"type": "image",
+			"name": "brnn_card_43_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_44.png",
+			"type": "image",
+			"name": "brnn_card_44_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_45.png",
+			"type": "image",
+			"name": "brnn_card_45_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_46.png",
+			"type": "image",
+			"name": "brnn_card_46_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_47.png",
+			"type": "image",
+			"name": "brnn_card_47_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_48.png",
+			"type": "image",
+			"name": "brnn_card_48_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_49.png",
+			"type": "image",
+			"name": "brnn_card_49_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_5.png",
+			"type": "image",
+			"name": "brnn_card_5_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_50.png",
+			"type": "image",
+			"name": "brnn_card_50_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_51.png",
+			"type": "image",
+			"name": "brnn_card_51_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_52.png",
+			"type": "image",
+			"name": "brnn_card_52_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_53.png",
+			"type": "image",
+			"name": "brnn_card_53_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_54.png",
+			"type": "image",
+			"name": "brnn_card_54_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_6.png",
+			"type": "image",
+			"name": "brnn_card_6_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_7.png",
+			"type": "image",
+			"name": "brnn_card_7_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_8.png",
+			"type": "image",
+			"name": "brnn_card_8_png"
+		},
+		{
+			"url": "assets/game/brnn/card/brnn_card_9.png",
+			"type": "image",
+			"name": "brnn_card_9_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_53.png",
+			"type": "image",
+			"name": "brnn_card_532_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_54.png",
+			"type": "image",
+			"name": "brnn_card_542_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_100.png",
+			"type": "image",
+			"name": "brnn_card_100_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_101.png",
+			"type": "image",
+			"name": "brnn_card_101_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_102.png",
+			"type": "image",
+			"name": "brnn_card_102_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_103.png",
+			"type": "image",
+			"name": "brnn_card_103_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_104.png",
+			"type": "image",
+			"name": "brnn_card_104_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_105.png",
+			"type": "image",
+			"name": "brnn_card_105_png"
+		},
+		{
+			"url": "assets/hall.json",
+			"type": "sheet",
+			"name": "hall2_json",
+			"subkeys": "blackjack,btnBenchi,btnChong,btnDa,btnDdz,btnEmail,btnFreeGold,btnHuoDong,btnHuoDongLiang,btnJiang,btnJiangLiang,btnJinHua,btnJinSha,btnJingCaiHuanle,btnKeFu,btnMoney,btnNiuNiu,btnRank,btnSet,btnSetLiang,btnShiSanshui,btnShop,btnShopLiang,btnShuiGuo,btnTask,btnTeHui,btnXiaoChou,btnYao,btnYue,c.btnchakan,c.btncharge,c.btnclose,c.btnclose2,c.btnclose3,c.btnsure,c.female,c.itembg,c.labbg0,c.labbg1,c.male,c.yuan,fc.title,gain_panel,gonggao.bgg,hall.goldbg,hall.helptips,hd.btnrue,hd.btnturn,hd.hot,hd.new,hd.title,headbg,imgvip1,liang1,liang2,light,lottery.btncharge,lottery.current,lottery.lottery,lottery.title,lottery.wrapcircle_bg,lottery.wrapcircle_bg2,pk,say.txtbg,sign.btnget,sign.btnget2,sign.btnup,sign.coinbar,sign.coinbg,sign.coins0,sign.coins1,sign.day1,sign.day2,sign.day3,sign.day4,sign.day5,sign.day6,sign.day7,sign.has,sign.itembg,sign.line,sign.nextvip,sign.title,vipbg,zhuan"
 		}
 	]
 }
