@@ -32,7 +32,7 @@ class BJLroomView extends eui.Component implements eui.UIComponent {
 		EventUtil.addEventListener(EventConst.onTimelyNotify, this.OnbaccaratOnJoinRoom, this);
 		EventUtil.addEventListener(EventConst.onGameStatusChange, this.GameStatus, this);
 
-		// this._btn_enter.touchEnabled = true;
+		this._btn_enter.touchEnabled = true;
 	}
 	/**游戏状态 */
 	private GameStatus(data: any): void {
@@ -83,15 +83,15 @@ class BJLroomView extends eui.Component implements eui.UIComponent {
 		if (!this.gameIconData) {
 			return;
 		}
-		let gameData: gameData = UserInfo.getInstance().getGameDataByindex(this.gameIconData.game);
-		let typeData: typeData = gameData.getTypeDataByindex(this.gameIconData.type);
-		let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
-		let senddata: any = {
-			userid: UserInfo.getInstance().uid,
-			token: UserInfo.getInstance().token, playway: playway.id
-		};
-		xlLib.WebSocketMgr.getInstance().send(EventConst.BaccaratEfcsh, senddata, (data) => {
-		}, this);
+		// let gameData: gameData = UserInfo.getInstance().getGameDataByindex(this.gameIconData.game);
+		// let typeData: typeData = gameData.getTypeDataByindex(this.gameIconData.type);
+		// let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+		// let senddata: any = {
+		// 	userid: UserInfo.getInstance().uid,
+		// 	token: UserInfo.getInstance().token, playway: playway.id
+		// };
+		// xlLib.WebSocketMgr.getInstance().send(EventConst.BaccaratEfcsh, senddata, (data) => {
+		// }, this);
 	}
 
 	public dispose(): void {

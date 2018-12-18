@@ -681,7 +681,7 @@ class BJLView extends eui.Component {
             if (index != i) {
                 for (let j = 0; j < this['coin_' + i + '_arr'].length; j++) {
                     var chouma = this['coin_' + i + '_arr'][j];
-                    egret.Tween.get(chouma).wait(5 * j * i).to({ x: p.x, y: p.y }, 600);
+                    egret.Tween.get(chouma).wait(5 * j * i).to({ x: p.x, y: p.y }, 300);
                 }
             }
         }
