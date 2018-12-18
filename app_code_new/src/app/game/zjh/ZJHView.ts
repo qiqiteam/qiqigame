@@ -344,6 +344,7 @@ class ZJHView extends eui.Component {
         this.addChild(operateTimer);
         this.setChildIndex(operateTimer, this.numChildren - 1);*/
         /**----------------------------------------------------------- */
+
     }
     /**玩家加注金币 */
     private botpGolds(state: boolean): void {
@@ -499,6 +500,7 @@ class ZJHView extends eui.Component {
             this.sendamessage(EventConst.pressure, null);
             this.onGenZhuClick(0, this.shortGold);
         } else if (e.target == this._btn_qipai) {
+            GlobalData.liveCloseBtn = false;
             this.sendamessage(EventConst.abandon, null);
             xlLib.TipsUtils.showFloatWordTips("弃牌");
         } else if (e.target == this._btn_bipai) {
@@ -510,6 +512,7 @@ class ZJHView extends eui.Component {
             this.sendamessage(EventConst.zjhLeave, null);
             this.sendamessage(EventConst.joinroom, null);
             UserInfo.getInstance().isGameStart = true;
+            GlobalData.liveCloseBtn=false;
             this.resetGame();//重置游戏场景
             xlLib.TipsUtils.showFloatWordTips("继续游戏");
         } else if (e.target == this.grpHead1) {
@@ -778,12 +781,14 @@ class ZJHView extends eui.Component {
     private gamestatue(data: any): void {
         /**0.准备中  1.开始游戏 2.游戏结束*/
         if (data.roomStatus == 0) {
+            GlobalData.rooType = data.roomStatus;
             console.log("游戏状态是0");
             //this.grpprepare.visible = false;//准备提示弹框
             let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHpaprePanl, this, true, true, null, 1);
             zjhpaprePanl.TYPE_TAP = Const.TYPE_JINGDIANJINHUA;
             this.shortTimegameStatue = data.roomStatus;
         } else if (data.roomStatus == 1) {
+            GlobalData.rooType = data.roomStatus;
             this['img_light' + data.index].visible = true;
             this.playerSeria = data.index;
             console.log("游戏开始，发牌");
@@ -804,6 +809,7 @@ class ZJHView extends eui.Component {
             this.cardEffect();//飞牌动动作
 
         } else if (data.roomStatus == 2) {
+            GlobalData.rooType = data.roomStatus;
             this.shortTimegameStatue = data.roomStatus;
             console.log("游戏结束");
         }
@@ -1344,8 +1350,6 @@ class ZJHView extends eui.Component {
             }
         }
     }
-
-
     public mygameTyp: boolean;//是否有可以离开游戏
     /**取消准备 */
     private cancelpapre(data: any): void {
@@ -1366,7 +1370,9 @@ class ZJHView extends eui.Component {
             }
         }
     }
-
+    private niyingeffect: NiyingleEffect = new NiyingleEffect();
+    private zjheffectwin2: ZJHEffectWin2View = new ZJHEffectWin2View();
+    private zjheffectwin0: ZJHEffectWin1View = new ZJHEffectWin1View();
     /**结算游戏结束 */
     private settleaccount(data: any): void {
         if (data.param.code == 200) {
@@ -1385,7 +1391,7 @@ class ZJHView extends eui.Component {
                     }, [card, val]);
                 }
             }
-            this.operateTimer.play();
+            this.operateTimer.stop();
             if (this.anniuliuguang) {
                 this.anniuliuguang.stop("Sprite");
                 if (this.anniuliuguang.parent) {
@@ -1395,33 +1401,25 @@ class ZJHView extends eui.Component {
             }
             if (data.param.index != 0) {
                 var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
-                let zjheffectwin2: ZJHEffectWin2View = new ZJHEffectWin2View();
-                zjheffectwin2.x = point.x;
-                zjheffectwin2.y = point.y;
-                this.addChild(zjheffectwin2);
-                zjheffectwin2.play();
-                setTimeout(() => {
-                    zjheffectwin2.stop();
-                    zjheffectwin2.visible = false;
-                }, 1000)
-
-            } else {
+                this.zjheffectwin2.x = point.x;
+                this.zjheffectwin2.y = point.y;
+                this.addChild(this.zjheffectwin2);
+                this.zjheffectwin2.play();
+            } else if (data.param.index == 0) {
                 var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
-                let zjheffectwin0: ZJHEffectWin1View = new ZJHEffectWin1View();
-                zjheffectwin0.x = point.x;
-                zjheffectwin0.y = point.y;
-                this.addChild(zjheffectwin0);
-                zjheffectwin0.play();
+                this.zjheffectwin0.x = point.x;
+                this.zjheffectwin0.y = point.y;
+                this.addChild(this.zjheffectwin0);
+                this.zjheffectwin0.play();
+                this.niyingeffect.x = 180;
+                this.niyingeffect.y = -50;
+                this.addChild(this.niyingeffect);
+                this.niyingeffect.play();
                 setTimeout(() => {
-                    zjheffectwin0.stop();
-                    zjheffectwin0.visible = false;
-                }, 1000)
+                    this.niyingeffect.stop();
+                    this.niyingeffect.visible = false;
+                }, 2000)
             }
-
-            console.log('+++++++++++++++++++0000000000', point.x);
-            console.log(point.y);
-
-
             this.operateTimer.stop();
             this.abandonStateBtn();
         }
@@ -1698,6 +1696,12 @@ class ZJHView extends eui.Component {
         for (var index = 1; index < 5; index++) {
             this['img_abandon' + index].source = '';
         }
+        this.niyingeffect.stop();
+        this.niyingeffect.visible = false;
+        this.zjheffectwin2.stop();
+        this.zjheffectwin2.visible = false;
+        this.zjheffectwin0.stop();
+        this.zjheffectwin0.visible = false;
         this.operateTimer.stop();
         this.playerOperatingState = [0, 0, 0, 0, 0];
         this.lab_deskGolds.text = "";

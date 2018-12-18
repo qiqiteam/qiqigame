@@ -87,6 +87,8 @@ class EventConst {
     /**牛牛匹配中退出游戏、游戏结束退出*/
     public static onUserLeave: string = "onUserLeave";
 
+     /**点击关闭准备面板按钮游戏结束退出*/
+    public static onUserXClose: string = "onUserXClose";
 
     /**监听抢庄按钮*/
     public static hog: string = "hog";
