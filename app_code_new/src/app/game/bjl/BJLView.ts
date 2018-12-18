@@ -703,7 +703,6 @@ class BJLView extends eui.Component {
                         egret.Tween.get(chouma).wait(5 * j * i).to({ x: p1.x, y: p1.y }, 300);
                     }
                 }
-
                 if (golb > 0) {
                     var p: egret.Point = new egret.Point();
                     for (let i = 0; i < 20; i++) {
@@ -717,8 +716,8 @@ class BJLView extends eui.Component {
                         egret.Tween.get(coin).wait(5 * i).to({ x: 68, y: 762 }, 300);
                     }
                 }
-            }, 500);
-        }, 500);
+            }, 700);
+        }, 700);
 
     }
     /**当前牌局的 庄赢 闲赢  和 */
@@ -779,8 +778,13 @@ class BJLView extends eui.Component {
     /**已丢筹码恢复 */
     private choumahuifu(data: any) {
 
-        // var point: egret.Point = BJLUtil.getInstance().getCoinsPos(data.msg);
-        // var arr = BJLUtil.getInstance().coinsType(point, data.num);
+        var point: egret.Point = BJLUtil.getInstance().getCoinsPos(data.msg);
+        var p: egret.Point = new egret.Point();
+        p.x = point.x + Math.random() * 250;
+        p.y = point.y + Math.random() * 80;
+        var coin = BJLUtil.getInstance().coinsType(p, data.num);
+        this.grpCoins.addChild(coin);
+        this.coin_1_arr.push(coin);
 
     }
 
@@ -879,7 +883,7 @@ class BJLView extends eui.Component {
                 otherplayer.tp = 'baccarat_players_rankBg_png';
                 otherplayer.fot = true;
             }
-            otherplayer.index = data._obj.subList[i].index + 1;
+            otherplayer.index = i + 1;
             otherplayer.name = data._obj.subList[i].username;
             otherplayer.gold = data._obj.subList[i].goldcoins;
             otherplayer.gold1 = data._obj.subList[i].xss;
@@ -1114,6 +1118,7 @@ class BJLView extends eui.Component {
         var coin = BJLUtil.getInstance().coinsType(pos, num);
         var tx = point.x + Math.random() * 250;
         var ty = point.y + Math.random() * 80;
+        coin.touchEnabled = false;
         this.grpCoins.addChild(coin);
         egret.Tween.get(coin).to({ x: tx, y: ty }, 200);
         switch (msg) {

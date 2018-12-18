@@ -303,10 +303,10 @@ class QZNNView extends eui.Component {
         inthematch.TYPE_TAP = Const.TYPE_TBNN;
 
         UserInfo.getInstance().isGameStart = true;
-        this.texiao = new DragonBonesSprite('bg_qznn_niujiao',"armatureName");
-	    this.texiao.x = 50;
+        this.texiao = new DragonBonesSprite('bg_qznn_niujiao', "armatureName");
+        this.texiao.x = 50;
         this.texiao.y = 50;
-		this._niujia.addChild(this.texiao);
+        this._niujia.addChild(this.texiao);
     }
 
     /**
@@ -467,12 +467,12 @@ class QZNNView extends eui.Component {
         }
         for (let i = 0; i < 4; i++) {
             var pos: egret.Point = new egret.Point;
-            if(i==0 || i==2) {
-                pos.x = this['grpHead' + i].x+45;
-                pos.y = this['grpHead' + i].y+45;
+            if (i == 0 || i == 2) {
+                pos.x = this['grpHead' + i].x + 45;
+                pos.y = this['grpHead' + i].y + 45;
             } else {
-                pos.x = this['grpHead' + i].x+55;
-                pos.y = this['grpHead' + i].y+70;
+                pos.x = this['grpHead' + i].x + 55;
+                pos.y = this['grpHead' + i].y + 70;
             }
             this.orginPlayerHeadPos[i] = pos;
         }
@@ -1165,12 +1165,8 @@ class QZNNView extends eui.Component {
     }
     /**开始倒计时*/
     private startCountDown(time: number): void {
-        if (time < 10) {
-            this.timeTxt.text = "0" + time;
-        } else {
-            this.timeTxt.text = "" + time;
-        }
 
+        this.timeTxt.text = "" + time;
 
         this.timeTxt.visible = true;
         this.time = time;
@@ -1185,16 +1181,11 @@ class QZNNView extends eui.Component {
     /**倒计时处理*/
     private timerFunc(evt: egret.TimerEvent): void {
         if (this.time >= 0) {
-            if (this.time >= 10) {
-                this.timeTxt.text = "" + this.time;
-            }
-            else {
-                this.timeTxt.text = "0" + this.time;
-            }
+            this.timeTxt.text = "" + this.time;
             this.time--;
         }
         else {
-            this.timeTxt.text = "00";
+            this.timeTxt.text = "0";
             this.clearTime();
         }
     }
