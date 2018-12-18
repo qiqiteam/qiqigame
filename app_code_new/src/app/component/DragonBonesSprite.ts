@@ -60,7 +60,7 @@ class DragonBonesSprite  extends egret.DisplayObjectContainer{
 	}
 
 	public destroy(){
-		this.isDestroy = false;
+		this.isDestroy = true;
 		this.isPlay = false;
 		this.isStop = false;
 		if(this.armatureDisplay){
