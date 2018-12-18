@@ -23,13 +23,11 @@ class ZJHpaprePanl extends eui.Component {
         this.initData();
         this._btn_hintclose.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
-        EventUtil.addEventListener(EventConst.onUserOutRoom, this.onleave, this);
+        EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
     }
     private onleave(data: any) {
         if (data._obj.code == 200) {
-            GlobalData.isLiveRoom=data._obj.close;
             xlLib.PopUpMgr.removePopUp(ZJHpaprePanl, 1);
-
             let musicBg = ["hall_bg_mp3"];
             xlLib.SoundMgr.instance.playBgMusic(musicBg);
         }
@@ -37,7 +35,6 @@ class ZJHpaprePanl extends eui.Component {
     }
 
     private onClick(e: egret.TouchEvent) {
-        GlobalData.liveCloseBtn = true;
         this.quxiaopipei();
     }
     /**取消匹配 */
@@ -49,7 +46,7 @@ class ZJHpaprePanl extends eui.Component {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token, playway: playway.id
         };
-        xlLib.WebSocketMgr.getInstance().send(EventConst.outRoom, senddata, (data) => {
+        xlLib.WebSocketMgr.getInstance().send(EventConst.zjhLeave, senddata, (data) => {
         }, this);
     }
 
@@ -93,6 +90,6 @@ class ZJHpaprePanl extends eui.Component {
     public destroy(): void {
         this.TYPE_TAP = "";
         this._btn_hintclose.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        EventUtil.removeEventListener(EventConst.onUserOutRoom, this.onleave, this);
+        EventUtil.removeEventListener(EventConst.onUserLeave, this.onleave, this);
     }
 }

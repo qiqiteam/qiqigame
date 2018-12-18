@@ -23,18 +23,10 @@ class ZJHIsLiveRoom extends eui.ItemRenderer {
 
     }
     private onClick(e: egret.TouchEvent) {
-        if (GlobalData.liveCloseBtn == false) {
-            this.sendInfo(EventConst.zjhLeave, 1);
-        } else if (GlobalData.liveCloseBtn == true) {
-            GlobalData.liveCloseBtn = false;
-            xlLib.PopUpMgr.removePopUp(ZJHIsLiveRoom, 1);
-            let musicBg = ["hall_bg_mp3"];
-            xlLib.SoundMgr.instance.playBgMusic(musicBg);
-            xlLib.SceneMgr.instance.changeScene(Lobby);
-        }
+        this.sendInfo(EventConst.zjhLeave, true);
         console.log("点击确定");
     }
-    public sendInfo(sendstr: string, data: number) {
+    public sendInfo(sendstr: string, statue: boolean) {
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
         let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_JINGDIANJINHUA);
         let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
@@ -42,7 +34,7 @@ class ZJHIsLiveRoom extends eui.ItemRenderer {
             userid: UserInfo.getInstance().uid,
             token: UserInfo.getInstance().token,
             playway: playway.id,
-            data: data
+            leaveState: statue
         };
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
         }, this);
@@ -52,6 +44,7 @@ class ZJHIsLiveRoom extends eui.ItemRenderer {
             xlLib.PopUpMgr.removePopUp(ZJHIsLiveRoom, 1);
             let musicBg = ["hall_bg_mp3"];
             xlLib.SoundMgr.instance.playBgMusic(musicBg);
+            //xlLib.SceneMgr.instance.changeScene(ZJHroom);
             xlLib.SceneMgr.instance.changeScene(Lobby);
         }
         this.destroy();
