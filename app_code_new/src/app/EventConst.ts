@@ -117,7 +117,7 @@ class EventConst {
     /**(个人限红通知)*/
     public static OnUpdateLimitItem: string = "OnUpdateLimitItem";
     /**(中途加入房间)*/
-    public static onSendGameRoom: string = "OnUpdateLimitItem";
+    public static onSendGameRoom: string = "onSendGameRoom";
     // /**（赔率）*/
     // public static onBJLjoinroom: string = "onBJLjoinroom";
     // /**（可以开始下注5秒倒计时）*/
