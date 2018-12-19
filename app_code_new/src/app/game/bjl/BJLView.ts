@@ -102,16 +102,22 @@ class BJLView extends eui.Component {
     public time: number;        //秒数
     public timer: egret.Timer;  //计时器
     public arrCoin = [];        //下注筹码池   
-    public isAction: boolean = false;               //能否下注    
+    public isAction: boolean = false;               //是否可以下注   
     public multipleList: number[] = [0, 0, 0, 0, 0, 0];   //倍数表
 
     private orginPlayePos = [];    // 存储玩家扑克位置
 
     public xjzjdianshu: number[] = [0, 0];  //闲庄的点数
 
-    public istzxzDh: boolean = false;
+    public istzxzDh: boolean = false;       //是否播放停止下注动画
 
-    public turn_score_arr: eui.BitmapLabel[] = [];
+    private interval: number = -1;      // 游戏计时器间隔
+
+    public turn_score_arr: eui.BitmapLabel[] = [];      //位图文本 金币滚动框
+
+    private orginPlayerCardPos = [];    // 存储玩家原始扑克的位置
+
+    private lastTouchBetIndex: number = 1; //上一次点击的筹码
 
     private jiesuan_1: BJLjiesuan1;
     private jiesuan_2: BJLjiesuan2;
@@ -127,58 +133,6 @@ class BJLView extends eui.Component {
     private coin_5_arr = [];
 
     //----------------------------------------------------------------
-
-
-    //public labHandsel: eui.BitmapLabel;
-    //private grpSelectBet: eui.Group;    //筹码底背景
-    //public labCurChip: eui.Label;
-
-
-    //-----------------------------------------------
-    private interval: number = -1;      // 游戏计时器间隔
-    private selfbetsNum = {};           // 下注总计 
-    private betsPostion: number = -1;   // 下注位置 self
-    private betsNum: number = 0;        // 下注金额 self
-    private cardResult = null;          // 结算扑克结果(最后展示处理)
-
-    private isChangeBanker: boolean = false;    // 判断是否更换庄家
-    private changeBankerObj: Object = {};       // 更换庄家消息(在下一句开始处理)
-    private isCanBets: boolean = true;  // 是否可以下注(判断封盘)
-    private poolBetArray = {};  // 奖池筹码
-
-    private limitGold: number = 0;  // 上庄限制 金币
-    private limitVip: number = 0;   // 上庄限制 Vip
-
-    private curBankerRanking: number = -1;	// 当前庄的排位
-    private isApplyBanker: boolean = false;	// 是否正在申请上庄
-
-    private lastGameBankerNum: number = 0;	// 剩余坐庄次数
-    private isSysBanker: boolean = false;	// 判断庄是否是系统
-
-    private orginBankerCardPos = [];    // 存储庄家扑克位置
-    private orginPlayerCardPos = [];    // 存储玩家扑克位置
-
-    private isBanker: boolean = false; 	// 是否当庄 (判断是否可以退出)
-    private isBets: boolean = false;	// 是否下注 (判断是否可以退出)
-
-    private maxUserData = null;  // 最大玩家数据 (结算处理)
-    private banker_total_gold: number = 0;  // 庄家自身携带的金币
-    private isBoomBanker: boolean = false;  // 是否爆庄
-    private resultCaijin: number = 0;
-    private totalCaijin: number = 0;
-
-    private cdNum: number = 10;     //倒计时计数
-    private cdTimer: egret.Timer;   //倒计时时间
-
-    private lastTouchBetIndex: number = 1; //上一次点击的筹码
-
-    private coinsNumArr = {}; //计数桌面4个方位的筹码个数
-
-    private isCoinsReturn: boolean = true;
-    private curRate: number = 0;
-    private lastTouchBetTime: number = 0;
-
-    private isCardEffectShow: boolean = false; //是否正在显示扑克动画
 
     protected childrenCreated(): void {
         let musicBg = ["bjl_37_bg_play_mp3"];
@@ -226,7 +180,7 @@ class BJLView extends eui.Component {
         this.coin_5_arr = [];
         this.coin_4_arr = [];
 
-        this.tishi_zi_0.visible = false;
+        this.tishi_zi_0.visible = true;
         this.tishi_zi_1.visible = false;
         this.wjlistkuang.visible = false;
         this.dianshu_0.visible = false;
@@ -261,8 +215,6 @@ class BJLView extends eui.Component {
             for (var j = 0; j < 3; j++) {
                 var card: eui.Image = this['grpCard_' + index + '_' + j];
                 card.source = '';
-                // card.anchorOffsetX = card.width / 2;
-                // card.x += card.width / 2;
                 var pos: egret.Point = new egret.Point;
                 pos.x = card.x;
                 pos.y = card.y;
@@ -406,7 +358,7 @@ class BJLView extends eui.Component {
     }
     /**游戏状态 */
     private GameStatus(data: any): void {
-        console.log("收到----------------------------------------" + data._obj.roomStatus);
+        // console.log("收到----------------------------------------" + data._obj.roomStatus);
         switch (data._obj.roomStatus) {
             case 1: this.zhunbeizho(data); break;    //准备中
             case 2: this.onStartBetonBack(data); break;    //下注
@@ -469,8 +421,8 @@ class BJLView extends eui.Component {
     }
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
-        console.log(UserInfo.getInstance().uid);
-        console.log(data._obj.userid);
+        // console.log(UserInfo.getInstance().uid);
+        // console.log(data._obj.userid);
         if (data._obj.code == 200) {
             if (UserInfo.getInstance().uid == data._obj.userid) {
                 UserInfo.getInstance().isGameStart = true;  //游戏状态
@@ -488,15 +440,12 @@ class BJLView extends eui.Component {
     }
     /**闲家咪牌 */
     private xianjiamipai(data: any) {
-        this.isAction = false;
-        for (let i = 0; i < 5; i++) {
-            this['effectTouch' + i].alpha = 0;
-        }
+
         this.tishi_zi_0.visible = false;
         this.tishi_zi_1.visible = true;
         this.tishi_zi_1.source = 'baccarat_font_stage_5_png';
 
-        this.istzxzDh = false;
+
         this.startCountDown(data._obj.seconds);
         this.xjzjdianshu[0] = data._obj.playersce;
 
@@ -541,8 +490,8 @@ class BJLView extends eui.Component {
         this.xian_tishi.visible = false;
         this.zhuang_tishi.visible = true;
         this.zhuang_Label.text = "庄家咪牌中";
-        this.grpCard_1_0.source = 'qznn_card_' + data._obj.bankerCard[0];
-        this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[1];
+        this.grpCard_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
+        this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
         this.puke_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
 
         this.puke_1_0.visible = true;
@@ -631,8 +580,6 @@ class BJLView extends eui.Component {
         this.tishi_zi_0.source = 'baccarat_font_stage_1_png';
         this.feixingEffect(data._obj.base, data._obj.userwingolb);
 
-        console.log(data._obj.base + '----------------------------------------' + data._obj.userwingolb);
-
         if (data._obj.userwingolb > 0) {
             let label = new eui.BitmapLabel;
             let str: string = "";
@@ -668,40 +615,32 @@ class BJLView extends eui.Component {
     }
     /**结算筹码飞行效果 */
     private feixingEffect(index: number, golb: number) {
-        var point: egret.Point = BJLUtil.getInstance().getCoinsPos(index);
-        var p: egret.Point = new egret.Point();
+        var point: egret.Point = BJLUtil.getInstance().getCoinsPos(index);  //胜利区域坐标
+        var p: egret.Point = new egret.Point(); //荷官坐标
         p.x = 736;
         p.y = 150;
 
-        var p1: egret.Point = new egret.Point();
-        p1.x = 50;
-        p1.y = 604;
+        var p1: egret.Point = new egret.Point();    //玩家列表坐标
+        p1.x = 10;
+        p1.y = 600;
 
         for (let i = 1; i < 6; i++) {
             if (index != i) {
-                for (let j = 0; j < this['coin_' + i + '_arr'].length; j++) {
-                    var chouma = this['coin_' + i + '_arr'][j];
-                    egret.Tween.get(chouma).wait(5 * j * i).to({ x: p.x, y: p.y }, 300);
-                }
+                this.quyuchoumafeixing(i, p, 0);
             }
         }
         setTimeout(() => {
             for (let i = 1; i < 6; i++) {
                 if (index != i) {
-                    for (let j = 0; j < this['coin_' + i + '_arr'].length; j++) {
-                        var chouma = this['coin_' + i + '_arr'][j];
-                        var tx = point.x + (Math.random() * 250);
-                        var ty = point.y + (Math.random() * 80);
-                        egret.Tween.get(chouma).wait(5 * j * i).to({ x: tx, y: ty }, 300);
-                    }
+
+                    this.quyuchoumafeixing(i, point, 2);
                 }
             }
             setTimeout(() => {
                 for (let i = 1; i < 6; i++) {
-                    for (let j = 0; j < this['coin_' + i + '_arr'].length; j++) {
-                        var chouma = this['coin_' + i + '_arr'][j];
-                        egret.Tween.get(chouma).wait(5 * j * i).to({ x: p1.x, y: p1.y }, 300);
-                    }
+
+                    this.quyuchoumafeixing(i, p1, 1);
+
                 }
                 if (golb > 0) {
                     var p: egret.Point = new egret.Point();
@@ -720,6 +659,29 @@ class BJLView extends eui.Component {
         }, 700);
 
     }
+    /**区域筹码飞行 */
+    private quyuchoumafeixing(index: number, pos: egret.Point, istype) {
+        for (let i = 0; i < this['coin_' + index + '_arr'].length; i++) {
+            var chouma = this['coin_' + index + '_arr'][i];
+            if (istype == 0) {
+                egret.Tween.get(chouma).wait(i + 5).to({ x: pos.x, y: pos.y }, 200);
+
+            } else if (istype == 1) {
+                var position: egret.Point = new egret.Point();
+                position.x = pos.x + (Math.random() * 30);
+                position.y = pos.y + (Math.random() * 10);
+                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 200);
+
+            } else if (istype == 2) {
+                var position: egret.Point = new egret.Point();
+                position.x = pos.x + (Math.random() * 250);
+                position.y = pos.y + (Math.random() * 80);
+                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 200);
+            }
+
+        }
+    }
+
     /**当前牌局的 庄赢 闲赢  和 */
     private bofangEffect(index: number) {
         if (index == 1) {
@@ -733,18 +695,28 @@ class BJLView extends eui.Component {
 
     /**中途加入房间，数据恢复 */
     private Joinhalfway(data: any) {
-        console.log(data);
+        // console.log(data);
         this.juegengxin(data._obj.jushu);              //局数恢复
 
         this.tishizithuifu(data._obj.roomStatus);   /**提示字恢复 */
+
+        console.log('-----------------------------------------------' + data._obj.roomStatus + '----------------------------');
 
         this.startCountDown(data._obj.seconds); //倒计时恢复
 
         this.sypai_0.text = data._obj.leftcardlh + '';  //剩余牌数恢复
         this.sypai_1.text = data._obj.deskcards + '';
 
+        //恢复牌背显示
+        if (data._obj.roomStatus == 2) {
+            this.grpCard_0_0.source = 'gf_poker0_png';
+            this.grpCard_0_1.source = 'gf_poker0_png';
+            this.grpCard_1_0.source = 'gf_poker0_png';
+            this.grpCard_1_1.source = 'gf_poker0_png';
+        }
+
         //庄家牌面信息恢复 加点数
-        if (data._obj.bankerCard != null) {
+        if (data._obj.bankerCard != null && data._obj.bankerCard.length > 0) {
 
             this.grpCard_1_0.source = 'qznn_card_' + data._obj.bankerCard[0];
             this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[1];
@@ -758,7 +730,7 @@ class BJLView extends eui.Component {
             }
         }
         //闲家牌面信息恢复 加点数
-        if (data._obj.playerCard != null) {
+        if (data._obj.playerCard != null && data._obj.playerCard.length > 0) {
             this.grpCard_0_0.source = 'qznn_card_' + data._obj.playerCard[0];
             this.grpCard_0_1.source = 'qznn_card_' + data._obj.playerCard[1];
             this.puke_0_0.source = 'qznn_card_' + data._obj.playerCard[1];
@@ -770,37 +742,73 @@ class BJLView extends eui.Component {
                 this.dianshu_img_0.source = 'baccarat_game_point_' + data._obj.playersce + '_png';
             }
         }
-        //已丢筹码恢复
-        if (data._obj.board.playerList != null) {
-            this.choumahuifu(data._obj.board.playerList);
+
+        if (data._obj.roomStatus != 1) {
+            //已丢筹码恢复
+            if (data.param.board.betonList != null && data.param.board.betonList.length > 0) {
+                this.choumahuifu(data.param.board.betonList);
+                this.grade_text_0_0.text = "" + data.param.board.zhuang;
+                this.grade_text_1_0.text = "" + data.param.board.xian;
+                this.grade_text_2_0.text = "" + data.param.board.he;
+                this.grade_text_3_0.text = "" + data.param.board.zhuangdui;
+                this.grade_text_4_0.text = "" + data.param.board.xiandui;
+            }
         }
     }
     /**已丢筹码恢复 */
     private choumahuifu(data: any) {
 
-        var point: egret.Point = BJLUtil.getInstance().getCoinsPos(data.msg);
-        var p: egret.Point = new egret.Point();
-        p.x = point.x + Math.random() * 250;
-        p.y = point.y + Math.random() * 80;
-        var coin = BJLUtil.getInstance().coinsType(p, data.num);
-        this.grpCoins.addChild(coin);
-        this.coin_1_arr.push(coin);
+        for (let i = 0; i < data.length; i++) {
+            var point: egret.Point = BJLUtil.getInstance().getCoinsPos(data[i].bass);
+            var p: egret.Point = new egret.Point();
+            p.x = point.x + Math.random() * 250;
+            p.y = point.y + Math.random() * 80;
+            var coin = BJLUtil.getInstance().coinsType(p, data[i].moneys);
+            coin.touchEnabled = false;
+
+            switch (data[i].bass) {
+                case 1:                 // 1是庄
+                    this.coin_1_arr.push(coin);
+                    break;
+                case 2:                 // 2是闲
+                    this.coin_2_arr.push(coin);
+                    break;
+                case 3:                 // 3是和       
+                    this.coin_3_arr.push(coin);
+                    break;
+                case 4:                 // 4是庄对
+                    this.coin_4_arr.push(coin);
+                    break;
+                case 5:                 // 5是闲对
+                    this.coin_5_arr.push(coin);
+                    break;
+            }
+
+            this.grpCoins.addChild(coin);
+        }
 
     }
 
     /**提示字恢复 */
     private tishizithuifu(index: number) {
         switch (index) {
-            case 1: this.tishi_zi_0.visible = true;
+            case 1: this.tishi_zi_0.visible = true;                             //准备中
                 this.tishi_zi_1.visible = false;
                 this.tishi_zi_0.source = 'baccarat_font_stage_3_png';
                 break;    //准备中
             case 2: this.tishi_zi_0.visible = true;
                 this.tishi_zi_1.visible = false;
-                this.tishi_zi_0.source = 'baccarat_font_stage_6_png'; break;    //下注中
+                this.tishi_zi_0.source = 'baccarat_font_stage_6_png';
+                this.istzxzDh = true;
+                this.isAction = true;
+                for (let i = 0; i < 5; i++) {
+                    this['effectTouch' + i].alpha = 1;
+                }
+                break;                                                           //下注中
             case 5: this.tishi_zi_0.visible = true;
                 this.tishi_zi_1.visible = false;
-                this.tishi_zi_0.source = 'baccarat_font_stage_2_png'; break;    //发牌（动画）
+                this.tishi_zi_0.source = 'baccarat_font_stage_2_png';
+                this.fapai(); break;                                            //发牌（动画）
             case 3: this.Themitoken.visible = true;
                 this.tishi_zi_0.visible = false;
                 this.tishi_zi_1.visible = true;
@@ -1033,6 +1041,13 @@ class BJLView extends eui.Component {
             this.time--;
             if (this.time == 0) {
                 if (this.istzxzDh) {
+
+                    this.istzxzDh = false;
+                    this.isAction = false;
+                    for (let i = 0; i < 5; i++) {
+                        this['effectTouch' + i].alpha = 0;
+                    }
+
                     this.playClickSound(BJLUtil.getInstance().getSoundEffect(3));
                     this.tingzhi_Effect();
                 }
@@ -1132,7 +1147,7 @@ class BJLView extends eui.Component {
                 this.coin_3_arr.push(coin);
                 break;
             case 4:                 // 4是庄对
-                this.coin_1_arr.push(coin);
+                this.coin_4_arr.push(coin);
                 break;
             case 5:                 // 5是闲对
                 this.coin_5_arr.push(coin);
@@ -1233,6 +1248,7 @@ class BJLView extends eui.Component {
             this.turn_score_arr[i].parent.removeChild(this.turn_score_arr[i]);
         }
         this.turn_score_arr = [];
+
         this.initData();
     }
 

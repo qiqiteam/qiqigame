@@ -8,238 +8,162 @@ class BRNNView extends eui.Component {
     }
 
     public grpCoins:eui.Group;
-    public grade_text_0_0:eui.Label;
-    public grade_text_0_1:eui.Label;
-    public effectTouch0:eui.Image;
-    public grade_text_1_0:eui.Label;
-    public grade_text_1_1:eui.Label;
-    public effectTouch1:eui.Image;
-    public grade_text_2_0:eui.Label;
-    public grade_text_2_1:eui.Label;
-    public effectTouch2:eui.Image;
-    public grade_text_3_0:eui.Label;
-    public grade_text_3_1:eui.Label;
-    public effectTouch3:eui.Image;
-    public grpCard:eui.Group;
-    public bankerCard_0:eui.Image;
-    public bankerCard_1:eui.Image;
-    public bankerCard_2:eui.Image;
-    public bankerCard_3:eui.Image;
-    public bankerCard_4:eui.Image;
-    public grpCard_0_0:eui.Image;
-    public grpCard_0_1:eui.Image;
-    public grpCard_0_2:eui.Image;
-    public grpCard_0_3:eui.Image;
-    public grpCard_0_4:eui.Image;
-    public grpCard_1_0:eui.Image;
-    public grpCard_1_1:eui.Image;
-    public grpCard_1_2:eui.Image;
-    public grpCard_1_3:eui.Image;
-    public grpCard_1_4:eui.Image;
-    public grpCard_2_0:eui.Image;
-    public grpCard_2_1:eui.Image;
-    public grpCard_2_2:eui.Image;
-    public grpCard_2_3:eui.Image;
-    public grpCard_2_4:eui.Image;
-    public grpCard_3_0:eui.Image;
-    public grpCard_3_1:eui.Image;
-    public grpCard_3_2:eui.Image;
-    public grpCard_3_3:eui.Image;
-    public grpCard_3_4:eui.Image;
-    public labCardTypeBanker:eui.Image;
-    public labCardType0:eui.Image;
-    public labCardType1:eui.Image;
-    public labCardType2:eui.Image;
-    public labCardType3:eui.Image;
-    public btnCardHistroy:eui.Image;
-    public btnCardType:eui.Image;
-    public btnRedBox:eui.Image;
-    public labHandsel:eui.BitmapLabel;
-    public grpBankerInfo:eui.Group;
-    public btnDownBanker:eui.Image;
-    public btnBankerDown:eui.Image;
-    public btnUpBanker:eui.Image;
-    public bankerHead:eui.Image;
-    public labBankerMoney:eui.BitmapLabel;
-    public bankerName:eui.Label;
-    public labBankerLastNum:eui.Label;
-    public labBankerRank:eui.Label;
-    public btnVip0:eui.Image;
-    public labBankerVip:eui.Label;
-    public grpCountdown:eui.Group;
-    public timeTxt:eui.Label;
-    public btnBet0y:eui.Image;
-    public btnBet1y:eui.Image;
-    public btnBet2y:eui.Image;
-    public btnBet3y:eui.Image;
-    public btnBet4y:eui.Image;
-    public btnBet5y:eui.Image;
-    public labBet0:eui.Label;
-    public labBet1:eui.Label;
-    public labBet2:eui.Label;
-    public labBet3:eui.Label;
-    public labBet4:eui.Label;
-    public labBet5:eui.Label;
-    public grpBankerList:eui.Group;
-    public bankerListItem0:eui.Group;
-    public itemRank0:eui.Label;
-    public itemName0:eui.Label;
-    public itemMoney0:eui.Label;
-    public itemVip0:eui.BitmapLabel;
-    public bankerListItem1:eui.Group;
-    public itemRank1:eui.Label;
-    public itemName1:eui.Label;
-    public itemMoney1:eui.Label;
-    public itemVip1:eui.BitmapLabel;
-    public bankerListItem2:eui.Group;
-    public itemRank2:eui.Label;
-    public itemName2:eui.Label;
-    public itemMoney2:eui.Label;
-    public itemVip2:eui.BitmapLabel;
-    public bankerListItem3:eui.Group;
-    public itemRank3:eui.Label;
-    public itemName3:eui.Label;
-    public itemMoney3:eui.Label;
-    public itemVip3:eui.BitmapLabel;
-    public bankerListItem4:eui.Group;
-    public itemRank4:eui.Label;
-    public itemName4:eui.Label;
-    public itemMoney4:eui.Label;
-    public itemVip4:eui.BitmapLabel;
-    public bankerListItem5:eui.Group;
-    public itemRank5:eui.Label;
-    public itemName5:eui.Label;
-    public itemMoney5:eui.Label;
-    public itemVip5:eui.BitmapLabel;
-    public bankerListItem6:eui.Group;
-    public itemRank6:eui.Label;
-    public itemName6:eui.Label;
-    public itemMoney6:eui.Label;
-    public itemVip6:eui.BitmapLabel;
-    public bankerListItem7:eui.Group;
-    public itemRank7:eui.Label;
-    public itemName7:eui.Label;
-    public itemMoney7:eui.Label;
-    public itemVip7:eui.BitmapLabel;
-    public bankerListItem8:eui.Group;
-    public itemRank8:eui.Label;
-    public itemName8:eui.Label;
-    public itemMoney8:eui.Label;
-    public itemVip8:eui.BitmapLabel;
-    public bankerListItem9:eui.Group;
-    public itemRank9:eui.Label;
-    public itemName9:eui.Label;
-    public itemMoney9:eui.Label;
-    public itemVip9:eui.BitmapLabel;
-    public grpSecondPanel:eui.Group;
-    public grpHistory:eui.Group;
-    public grpHistroy0:eui.Group;
-    public grpHistroy0_0:eui.Image;
-    public grpHistroy1_0:eui.Image;
-    public grpHistroy2_0:eui.Image;
-    public grpHistroy3_0:eui.Image;
-    public grpHistroy1:eui.Group;
-    public grpHistroy0_1:eui.Image;
-    public grpHistroy1_1:eui.Image;
-    public grpHistroy2_1:eui.Image;
-    public grpHistroy3_1:eui.Image;
-    public grpHistroy2:eui.Group;
-    public grpHistroy0_2:eui.Image;
-    public grpHistroy1_2:eui.Image;
-    public grpHistroy2_2:eui.Image;
-    public grpHistroy3_2:eui.Image;
-    public grpHistroy3:eui.Group;
-    public grpHistroy0_3:eui.Image;
-    public grpHistroy1_3:eui.Image;
-    public grpHistroy2_3:eui.Image;
-    public grpHistroy3_3:eui.Image;
-    public grpHistroy4:eui.Group;
-    public grpHistroy0_4:eui.Image;
-    public grpHistroy1_4:eui.Image;
-    public grpHistroy2_4:eui.Image;
-    public grpHistroy3_4:eui.Image;
-    public grpHistroy5:eui.Group;
-    public grpHistroy0_5:eui.Image;
-    public grpHistroy1_5:eui.Image;
-    public grpHistroy2_5:eui.Image;
-    public grpHistroy3_5:eui.Image;
-    public grpHistroy6:eui.Group;
-    public grpHistroy0_6:eui.Image;
-    public grpHistroy1_6:eui.Image;
-    public grpHistroy2_6:eui.Image;
-    public grpHistroy3_6:eui.Image;
-    public grpHistroy7:eui.Group;
-    public grpHistroy0_7:eui.Image;
-    public grpHistroy1_7:eui.Image;
-    public grpHistroy2_7:eui.Image;
-    public grpHistroy3_7:eui.Image;
-    public grpHistroy8:eui.Group;
-    public grpHistroy0_8:eui.Image;
-    public grpHistroy1_8:eui.Image;
-    public grpHistroy2_8:eui.Image;
-    public grpHistroy3_8:eui.Image;
-    public grpHistroy9:eui.Group;
-    public grpHistroy0_9:eui.Image;
-    public grpHistroy1_9:eui.Image;
-    public grpHistroy2_9:eui.Image;
-    public grpHistroy3_9:eui.Image;
-    public grpCardType:eui.Group;
-    public secondClose:eui.Image;
-    public grpResult:eui.Group;
-    public grpMax:eui.Group;
-    public grpMaxHead:eui.Image;
-    public grpMaxGold:eui.Label;
-    public grpMaxName:eui.Label;
-    public grpBankerHead:eui.Image;
-    public grpBankerType:eui.Image;
-    public labelBankerType:eui.Label;
-    public grpBankerBeishu:eui.Label;
-    public grpBankerGold:eui.Label;
-    public grpBankerName:eui.Label;
-    public labResult0_0:eui.Label;
-    public labResult1_0:eui.Label;
-    public labResult2_0:eui.Label;
-    public labResult0_1:eui.Label;
-    public labResult1_1:eui.Label;
-    public labResult2_1:eui.Label;
-    public labResult0_2:eui.Label;
-    public labResult1_2:eui.Label;
-    public labResult2_2:eui.Label;
-    public labResult0_3:eui.Label;
-    public labResult1_3:eui.Label;
-    public labResult2_3:eui.Label;
-    public labResultValue:eui.Label;
-    public resultType0:eui.Label;
-    public resultType1:eui.Label;
-    public resultType2:eui.Label;
-    public resultType3:eui.Label;
-    public grpTips:eui.Group;
-    public grpTipsbg:eui.Image;
-    public grpTipsInfo:eui.Image;
-    public imgBaoZhuang:eui.Image;
-    public grpCaijin:eui.Group;
-    public grpCaijinLabel:eui.Label;
-    public _group_di:eui.Group;
-    public grpHead0:eui.Group;
-    public imghead0:eui.Image;
-    public labelHead0:eui.Label;
-    public labelGold0:eui.Label;
-    public _btn_switch:eui.Group;
-    public _btn_double_1:eui.Image;
-    public _btn_double_2:eui.Image;
-    public _btn_double_3:eui.Image;
-    public _btn_double_4:eui.Image;
-    public _btn_double_5:eui.Image;
-    public _xuanzho:eui.Image;
-    public wanjia:eui.Group;
-    public packup:eui.Image;
-    public scroller:eui.Scroller;
-    public userlist:eui.List;
-    public _xiPai_bg:eui.Rect;
-    public _btn_close:eui.Button;
-    public _btn_meun:eui.Button;
-    public wanjialist:eui.Button;
-    public _faPaiPos:eui.Image;
+public _playLight_0:eui.Image;
+public grade_text_0_0:eui.BitmapLabel;
+public grade_text_0_1:eui.BitmapLabel;
+public effectTouch0:eui.Image;
+public _playLight_1:eui.Image;
+public grade_text_1_0:eui.BitmapLabel;
+public grade_text_1_1:eui.BitmapLabel;
+public effectTouch1:eui.Image;
+public _playLight_2:eui.Image;
+public grade_text_2_0:eui.BitmapLabel;
+public grade_text_2_1:eui.BitmapLabel;
+public effectTouch2:eui.Image;
+public _playLight_3:eui.Image;
+public grade_text_3_0:eui.BitmapLabel;
+public grade_text_3_1:eui.BitmapLabel;
+public effectTouch3:eui.Image;
+public grpCard:eui.Group;
+public bankerCard_0:eui.Image;
+public bankerCard_1:eui.Image;
+public bankerCard_2:eui.Image;
+public bankerCard_3:eui.Image;
+public bankerCard_4:eui.Image;
+public grpCard_0_0:eui.Image;
+public grpCard_0_1:eui.Image;
+public grpCard_0_2:eui.Image;
+public grpCard_0_3:eui.Image;
+public grpCard_0_4:eui.Image;
+public grpCard_1_0:eui.Image;
+public grpCard_1_1:eui.Image;
+public grpCard_1_2:eui.Image;
+public grpCard_1_3:eui.Image;
+public grpCard_1_4:eui.Image;
+public grpCard_2_0:eui.Image;
+public grpCard_2_1:eui.Image;
+public grpCard_2_2:eui.Image;
+public grpCard_2_3:eui.Image;
+public grpCard_2_4:eui.Image;
+public grpCard_3_0:eui.Image;
+public grpCard_3_1:eui.Image;
+public grpCard_3_2:eui.Image;
+public grpCard_3_3:eui.Image;
+public grpCard_3_4:eui.Image;
+public labCardTypeBanker:eui.Image;
+public labCardType0:eui.Image;
+public labCardType1:eui.Image;
+public labCardType2:eui.Image;
+public labCardType3:eui.Image;
+public grpCountdown:eui.Group;
+public timeTxt:eui.BitmapLabel;
+public _label_tip:eui.Label;
+public grpSecondPanel:eui.Group;
+public grpHistory:eui.Group;
+public grpHistroy0:eui.Group;
+public grpHistroy0_0:eui.Image;
+public grpHistroy1_0:eui.Image;
+public grpHistroy2_0:eui.Image;
+public grpHistroy3_0:eui.Image;
+public grpHistroy1:eui.Group;
+public grpHistroy0_1:eui.Image;
+public grpHistroy1_1:eui.Image;
+public grpHistroy2_1:eui.Image;
+public grpHistroy3_1:eui.Image;
+public grpHistroy2:eui.Group;
+public grpHistroy0_2:eui.Image;
+public grpHistroy1_2:eui.Image;
+public grpHistroy2_2:eui.Image;
+public grpHistroy3_2:eui.Image;
+public grpHistroy3:eui.Group;
+public grpHistroy0_3:eui.Image;
+public grpHistroy1_3:eui.Image;
+public grpHistroy2_3:eui.Image;
+public grpHistroy3_3:eui.Image;
+public grpHistroy4:eui.Group;
+public grpHistroy0_4:eui.Image;
+public grpHistroy1_4:eui.Image;
+public grpHistroy2_4:eui.Image;
+public grpHistroy3_4:eui.Image;
+public grpHistroy5:eui.Group;
+public grpHistroy0_5:eui.Image;
+public grpHistroy1_5:eui.Image;
+public grpHistroy2_5:eui.Image;
+public grpHistroy3_5:eui.Image;
+public grpHistroy6:eui.Group;
+public grpHistroy0_6:eui.Image;
+public grpHistroy1_6:eui.Image;
+public grpHistroy2_6:eui.Image;
+public grpHistroy3_6:eui.Image;
+public grpHistroy7:eui.Group;
+public grpHistroy0_7:eui.Image;
+public grpHistroy1_7:eui.Image;
+public grpHistroy2_7:eui.Image;
+public grpHistroy3_7:eui.Image;
+public grpHistroy8:eui.Group;
+public grpHistroy0_8:eui.Image;
+public grpHistroy1_8:eui.Image;
+public grpHistroy2_8:eui.Image;
+public grpHistroy3_8:eui.Image;
+public grpHistroy9:eui.Group;
+public grpHistroy0_9:eui.Image;
+public grpHistroy1_9:eui.Image;
+public grpHistroy2_9:eui.Image;
+public grpHistroy3_9:eui.Image;
+public grpCardType:eui.Group;
+public secondClose:eui.Image;
+public grpResult:eui.Group;
+public grpMax:eui.Group;
+public grpMaxHead:eui.Image;
+public grpMaxGold:eui.Label;
+public grpMaxName:eui.Label;
+public grpBankerHead:eui.Image;
+public grpBankerType:eui.Image;
+public labelBankerType:eui.Label;
+public grpBankerBeishu:eui.Label;
+public grpBankerGold:eui.Label;
+public grpBankerName:eui.Label;
+public labResult0_0:eui.Label;
+public labResult1_0:eui.Label;
+public labResult2_0:eui.Label;
+public labResult0_1:eui.Label;
+public labResult1_1:eui.Label;
+public labResult2_1:eui.Label;
+public labResult0_2:eui.Label;
+public labResult1_2:eui.Label;
+public labResult2_2:eui.Label;
+public labResult0_3:eui.Label;
+public labResult1_3:eui.Label;
+public labResult2_3:eui.Label;
+public labResultValue:eui.Label;
+public resultType0:eui.Label;
+public resultType1:eui.Label;
+public resultType2:eui.Label;
+public resultType3:eui.Label;
+public _group_di:eui.Group;
+public grpHead0:eui.Group;
+public imghead0:eui.Image;
+public labelHead0:eui.Label;
+public labelGold0:eui.Label;
+public _btn_switch:eui.Group;
+public _btn_double_1:eui.Image;
+public _btn_double_2:eui.Image;
+public _btn_double_3:eui.Image;
+public _btn_double_4:eui.Image;
+public _btn_double_5:eui.Image;
+public _xuanzho:eui.Image;
+public wanjia:eui.Group;
+public packup:eui.Image;
+public scroller:eui.Scroller;
+public userlist:eui.List;
+public _xiPai_bg:eui.Rect;
+public _btn_close:eui.Button;
+public _btn_meun:eui.Button;
+public wanjialist:eui.Button;
+public _faPaiPos:eui.Image;
+
+
+
 
 
 
@@ -259,73 +183,32 @@ class BRNNView extends eui.Component {
     public isWin: boolean = false;                  //是否输赢
     public isScore: number = 0;                     //输赢金币
 
-
-
-
-
-
-
-
     private _tipGameEff:uiCore.Animator = null;
-    private _faPaiEff_0:uiCore.Animator = null;
-    private _faPaiEff_1:uiCore.Animator = null;
-    private _faPaiEff_2:uiCore.Animator = null;
-    private _faPaiEff_3:uiCore.Animator = null;
     //private  _faPaiEff:DragonBonesSprite;
-    private _faPai_arr = [];
+    //private _faPai_arr = [];
     private brnnShuffle:BrnnShuffle = null;
 
     //-----------------------------------------------
     private interval: number = -1;      // 游戏计时器间隔
-    private selfbetsNum = {};           // 下注总计 
-    private betsPostion: number = -1;   // 下注位置 self
-    private betsNum: number = 0;        // 下注金额 self
     private cardResult = null;          // 结算扑克结果(最后展示处理)
 
-    private isChangeBanker: boolean = false;    // 判断是否更换庄家
-    private changeBankerObj: Object = {};       // 更换庄家消息(在下一句开始处理)
-    private isCanBets: boolean = true;  // 是否可以下注(判断封盘)
-    private poolBetArray = {};  // 奖池筹码
 
-    private limitGold: number = 0;  // 上庄限制 金币
-    private limitVip: number = 0;   // 上庄限制 Vip
-
-    private curBankerRanking: number = -1;	// 当前庄的排位
-    private isApplyBanker: boolean = false;	// 是否正在申请上庄
-
-    private lastGameBankerNum: number = 0;	// 剩余坐庄次数
-    private isSysBanker: boolean = false;	// 判断庄是否是系统
+    private betsNum: number = 0;        // 下注金额 self
 
     private orginBankerCardPos = [];    // 存储庄家扑克位置
     private orginPlayerCardPos = [];    // 存储玩家扑克位置
 
-    private isBanker: boolean = false; 	// 是否当庄 (判断是否可以退出)
-    private isBets: boolean = false;	// 是否下注 (判断是否可以退出)
-
-    private maxUserData = null;  // 最大玩家数据 (结算处理)
-    private banker_total_gold: number = 0;  // 庄家自身携带的金币
-    private isBoomBanker: boolean = false;  // 是否爆庄
-    private resultCaijin: number = 0;
-    private totalCaijin: number = 0;
-
-    private cdNum: number = 10;     //倒计时计数
+    private cdNum: number = 5;     //倒计时计数
     private cdTimer: egret.Timer;   //倒计时时间
 
     private lastTouchBetIndex: number = 1; //上一次点击的筹码
 
-    private coinsNumArr = {}; //计数桌面4个方位的筹码个数
-
-    private isCoinsReturn: boolean = true;
-    private curRate: number = 0;
-    private lastTouchBetTime: number = 0;
-
-    private isCardEffectShow: boolean = false; //是否正在显示扑克动画
     protected childrenCreated(): void {
 
         this.getOrginCardPos();
         this.addEvent();
         this.initData();
-
+        this.setCountdown();
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
@@ -348,28 +231,18 @@ class BRNNView extends eui.Component {
         this.scroller.viewport = this.userlist;
     }
     private initData(): void {
-        this.labBankerRank.text = '';
-        this.labBankerLastNum.text = '';
-        this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.grpBankerList.visible = false;
-        this.grpTips.touchEnabled = false;
-        this.grpTips.touchChildren = false;
         this.grpSecondPanel.visible = false;
-        this.btnUpBanker.visible = true;
-        this.btnDownBanker.visible = false;
-        this.grpTips.visible = false;
         this.grpResult.visible = false;
-        this.imgBaoZhuang.visible = false;
+
         this.grpCardType.touchChildren = false;
         this.grpCardType.touchEnabled = false;
-        this.grpCaijin.visible = false;
+
         this.grpCard.visible = true;
         this.isAction = false;
         for (let i = 0; i < 4; i++) {
             this['grade_text_' + i + '_0'].text = '';
             this['grade_text_' + i + '_1'].text = '';
+            this["_playLight_" + i].visible = false;
         }
         this.wanjia.x = -237;
         this.isPaly = false;
@@ -419,6 +292,7 @@ class BRNNView extends eui.Component {
         this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         this.effectTouch0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -468,15 +342,48 @@ class BRNNView extends eui.Component {
         this)
     }*/
 
+    /**
+     * 定时器
+     */
+    private setCountdown(): void {
+        this.cdTimer = new egret.Timer(1000);
+        this.cdTimer.addEventListener(egret.TimerEvent.TIMER, this.clacTimer, this);
+    }
+
+    private clacTimer(): void {
+        if (this.cdNum > 0) {
+            this.cdNum--;
+        }
+        else {
+            this.stopTime();
+        }
+        this.timeTxt.text = this.cdNum + '';
+    }
+
+    private stopTime():void {
+        this.cdTimer.stop();
+        this.cdNum = 0;
+        this.timeTxt.text = "";
+    }
+
+    private setTiming(num:number) {
+        this.cdNum = num;
+        this.timeTxt.text = num+"";
+        this.cdTimer.start();
+    }
+
     /**准备 */
+    private gameIndex:number = -1;
     private onprepare(data: any): void {
         this.tipGameEff("brnn_effect_gamestart");
-        //this.startCountDown(data._obj.seconds);
+
+        //this.gamePlayIndex = setInterval(this.waitLabelTurn.bind(this), 600);
     }
     /**下注 */
     private onbetBack(data: any): void {
         this.tipGameEff("brnn_effect_xiazhu");
-        this.startCountDown(data._obj.seconds);
+        //this.startCountDown(data._obj.seconds);
+        this.setTiming(data._obj.seconds);
         //this.showGameTips(2);
         this.isAction = true;
         for (let i = 0; i < 4; i++) {
@@ -485,6 +392,8 @@ class BRNNView extends eui.Component {
                 this['_btn_double_' + i].touchEnabled = false;
                 this['_btn_double_' + i].visible = false;
             }
+            let img = this["_playLight_" + i];
+            this.showLightEffect(img, true);
         }
 
         for (let i = 0; i < 5; i++) {
@@ -496,8 +405,8 @@ class BRNNView extends eui.Component {
         this.tipGameEff("brnn_effect_stop");
         this.isAction = false;
         //this.showGameTips(3);
-        this.startCountDown(data._obj.seconds);
-
+        //this.startCountDown(data._obj.seconds);
+        this.setTiming(data._obj.seconds);
 
         this.isPaly = data._obj.play;
         this.isWin = data._obj.win;
@@ -531,7 +440,8 @@ class BRNNView extends eui.Component {
     }
     /**结算、百人牛牛派奖中 */
     private onjiesuan(data: any): void {
-        this.startCountDown(data._obj.seconds);
+       // this.startCountDown(data._obj.seconds);
+       this.setTiming(data._obj.seconds);
 
         this.victoryEffect();
 
@@ -546,7 +456,8 @@ class BRNNView extends eui.Component {
     }
     /**游戏结束,百人牛牛休息 */
     private onrest(data: any): void {
-        this.startCountDown(data._obj.seconds);
+        //this.startCountDown(data._obj.seconds);
+        this.setTiming(data._obj.seconds);
         UserInfo.getInstance().isGameStart = false;
 
     }
@@ -565,7 +476,8 @@ class BRNNView extends eui.Component {
         this.brnnShuffle.removeAllEffect();
         this.brnnShuffle.parent.removeChild(this.brnnShuffle);
         this._xiPai_bg.visible = false;
-        this.startCountDown(data._obj.seconds);
+        //this.startCountDown(data._obj.seconds);
+        this.setTiming(data._obj.seconds);
         this.cardEffect();
     }
     /**更新下注通知(所有人) */
@@ -673,14 +585,19 @@ class BRNNView extends eui.Component {
         } else if (e.target == this._btn_close) {
             this.buttonClose();
         } else if (e.target == this._btn_meun) {
-/*
+
+            /*
             if(this._faPai_arr != []) {
                 for(let i=0; i<this._faPai_arr.length; i++) {
                     this._faPai_arr[i].parent.removeChild(this._faPai_arr[i]);
                 }
                 this._faPai_arr = [];
             }
-            this.numIndex = setInterval(this.faPaiEff.bind(this), 500);*/
+            this.numIndex = setInterval(this.faPaiEff.bind(this), 500);
+            */
+            this.cdNum = 20;
+            this.timeTxt.text = "20";
+            this.cdTimer.start();
         }
     }
 
@@ -774,6 +691,7 @@ class BRNNView extends eui.Component {
     }
 
     /**开始倒计时*/
+    /*
     private startCountDown(time: number): void {
 
         this.timeTxt.visible = true;
@@ -783,9 +701,10 @@ class BRNNView extends eui.Component {
             this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
             this.timer.start();
         }
-    }
+    }*/
 
     /**倒计时处理*/
+    /*
     private timerFunc(evt: egret.TimerEvent): void {
         if (this.time >= 0) {
             this.timeTxt.text = "" + this.time;
@@ -795,15 +714,15 @@ class BRNNView extends eui.Component {
             this.timeTxt.text = "0";
             this.clearTime();
         }
-    }
+    }*/
     /**清除倒计时*/
-    private clearTime(): void {
-        if (this.timer) {
-            this.timer.stop();
-            this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
-            this.timer = null;
-        }
-    }
+    //private clearTime(): void {
+    //    if (this.timer) {
+    //        this.timer.stop();
+    //        this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+    //        this.timer = null;
+    //    }
+    //}
 
     //筹码选择
     private onTouchBet(index): void {
@@ -819,9 +738,6 @@ class BRNNView extends eui.Component {
             case 5: this._xuanzho.x = 695.9; break;
         }
     }
-
-
-
 
     private moneyStr(money: number): string {
         if (money >= 10000 && money < 100000000) {
@@ -842,98 +758,8 @@ class BRNNView extends eui.Component {
         }
         return str + "";
     }
-    /*
-        private isFirstSetBanker: boolean = true;
-        //设置庄家的消息
-        private setBankerInfo(banker): void {
-            if (banker.sys == 1) {
-                this.bankerHead.source = 'nn.head';
-                this.bankerHead.width = this.bankerHead.height = 55;
-                this.bankerName.text = '萌萌哒';
-                this.labBankerMoney.text = QuickManage.moneyStr(88888880000);
-                this.isSysBanker = true;
-                this.labBankerLastNum.text = '剩余' + parseInt(banker.num) + '次';
-                this.lastGameBankerNum = banker.num;
-                this.isBanker = false;
-                this.labBankerVip.text = 'v10';
-            }
-            else {
-                if (banker.id == GlobalData.openid + '@' + GlobalData.platform) {
-                    this.isBanker = true;
-                    this.labBankerRank.text = '';
-                }
-                else {
-                    if (this.isApplyBanker) {
-                        if (banker.pos < this.curBankerRanking) {
-                            this.curBankerRanking--;
-                            this.labBankerRank.text = '排庄' + this.curBankerRanking;
-                        }
-                    }
-                    else {
-                        this.labBankerRank.text = '';
-                        this.btnDownBanker.visible = false;
-                        this.btnUpBanker.visible = true;
-                    }
-                    this.isBanker = false;
-                }
-                if (this.bankerName.text != '萌萌哒') {
-                    if (!this.isFirstSetBanker) {
-                        PanelManage.chat.sendGameChat(this.bankerName.text + '下庄了');
-                    }
-                }
-                this.bankerHead.source = banker.headurl//GlobalData.user.headurl;
-                this.bankerHead.width = this.bankerHead.height = 55;
-                this.bankerName.text = banker.nick;
-                this.labBankerMoney.text = QuickManage.moneyStr(banker.gold);
-                this.labBankerLastNum.text = '剩余' + parseInt(banker.num) + '次';
-                this.lastGameBankerNum = banker.num;
-                this.isSysBanker = false;
-                this.labBankerVip.text = 'v' + banker.vip;
-                if (!this.isFirstSetBanker) {
-                    PanelManage.chat.sendGameChat(this.bankerName.text + '上庄了');
-                }
-            }
-            this.isFirstSetBanker = false;
-        }
-    
-        //设置开奖记录
-        private setHistory(): void {
-            for (var i = 0; i < 10; i++) {
-                this['grpHistory' + i].visible = false;
-                for (var m = 0; m < 4; m++) {
-                    this['grpHistory' + m + '_' + i].source = '';
-                }
-            }
-        }
-    
-        private updateGold(): void {
-            Net.send(Protocol.NIUNIU_GET_GOLD, {}, this.getGoldCallback.bind(this));
-        }
-    
-        private getGoldCallback(data): void {
-            if (data.code == 200) {
-                GlobalData.user.gold = data.data.gold;
-                lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-            }
-        }
-    */
 
     //========================== Effect Show ===============================
-
-    //提示信息  2开始下注  3下注结束 4 庄家通杀  5 庄家通赔
-    private showGameTips(type): void {
-        this.grpTipsInfo.source = BRNNUtil.getInstance().getMsgSource(type);
-        this.grpTips.visible = true;
-        this.grpTipsbg.alpha = 0;
-        this.grpTipsInfo.x = 640;
-        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(type));
-        egret.Tween.get(this.grpTipsbg).to({ alpha: 1 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ alpha: 0 }, 400);
-        }, this.grpTipsbg);
-        egret.Tween.get(this.grpTipsInfo).to({ x: 0 }, 400).wait(400).call(function () {
-            egret.Tween.get(this).to({ x: -1640 }, 400);
-        }, this.grpTipsInfo);
-    }
 
     //显示筹码
     private showCoins(pos: egret.Point, num: number, msg: number): void {
@@ -953,25 +779,6 @@ class BRNNView extends eui.Component {
             }, this, [arr[i]]);
         }
     }
-    private flyIntval: number = 0;  //
-    private flyIndex0: number = 0;  //扑克位置(东西南北)
-    private flyIndex1: number = 0;  //扑克(指定位置1，2，3)
-    private flyBankerIndex: number = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private flyIntval_1: number = 0;  //
     private flyIntval_2: number = 0;  //
@@ -991,17 +798,12 @@ class BRNNView extends eui.Component {
     private expandPaiTime = 400;
 
     private cardEffect(): void {
-        //this.isCardEffectShow = true;
-        //this.flyIntval = setInterval(this.playCardFly.bind(this), 200);
-
-
         this.flyIntval_1 = setInterval(this.playCardFly_1.bind(this), this.faPaiTime);
         this.flyIntval_2 = setInterval(this.playCardFly_2.bind(this), this.faPaiTime);
         this.flyIntval_3 = setInterval(this.playCardFly_3.bind(this), this.faPaiTime);
         this.flyIntval_4 = setInterval(this.playCardFly_4.bind(this), this.faPaiTime);
         this.flyIntval_5 = setInterval(this.playCardFly_5.bind(this), this.faPaiTime);
     }
-
 
     private playCardFly_1(): void {
         var card: eui.Image = this['bankerCard_'+ this.flyIndex_1];
@@ -1021,7 +823,6 @@ class BRNNView extends eui.Component {
         if (this.flyIndex_1 == 4) {
             this.flyIndex_1 = 0;
             clearInterval(this.flyIntval_1);
-            //this.expandIntval_1 = setInterval(this.expandPai_1.bind(this), this.pauseTime);
         } else {
             this.flyIndex_1++;
         }
@@ -1044,7 +845,6 @@ class BRNNView extends eui.Component {
         if (this.flyIndex_2 == 4) {
             this.flyIndex_2 = 0;
             clearInterval(this.flyIntval_2);
-            //this.expandIntval_2 = setInterval(this.expandPai_2.bind(this), this.pauseTime);
         } else {
             this.flyIndex_2++;
         }
@@ -1067,7 +867,6 @@ class BRNNView extends eui.Component {
         if (this.flyIndex_3 == 4) {
             this.flyIndex_3 = 0;
             clearInterval(this.flyIntval_3);
-            //this.expandIntval_3 = setInterval(this.expandPai_3.bind(this), this.pauseTime);
         } else {
             this.flyIndex_3++;
         }
@@ -1090,7 +889,6 @@ class BRNNView extends eui.Component {
         if (this.flyIndex_4 == 4) {
             this.flyIndex_4 = 0;
             clearInterval(this.flyIntval_4);
-            //this.expandIntval_4 = setInterval(this.expandPai_4.bind(this), this.pauseTime);
         } else {
             this.flyIndex_4++;
         }
@@ -1113,85 +911,10 @@ class BRNNView extends eui.Component {
         if (this.flyIndex_5 == 4) {
             this.flyIndex_5 = 0;
             clearInterval(this.flyIntval_5);
-            //this.expandIntval_5 = setInterval(this.expandPai_5.bind(this), this.pauseTime);
         } else {
             this.flyIndex_5++;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-    private playCardFly(): void {
-        var card: eui.Image = this['grpCard_' + this.flyIndex0 + '_' + this.flyIndex1];
-        card.source = 'qznn_card_100';
-        card.x = 713.5;
-        card.y = 250;
-        card.anchorOffsetX = card.width / 2;
-        card.x += card.width / 2;
-        var pos = this.orginPlayerCardPos[this.flyIndex0][this.flyIndex1];
-        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 300);
-        if (this.flyIndex1 == 4) {
-            if (this.flyIndex0 == 3) {
-                this.flyIndex0 = 0;
-                this.flyIndex1 = 0;
-                clearInterval(this.flyIntval);
-                this.flyBankerIndex = 0;
-                this.flyIntval = setInterval(this.bankerCardFly.bind(this), 200);
-            }
-            else {
-                this.flyIndex1 = 0;
-                this.flyIndex0++;
-            }
-        }
-        else {
-            this.flyIndex1++;
-        }
-    }
-    private bankerCardFly(): void {
-        if (this.flyBankerIndex == 5) {
-            this.flyBankerIndex = 0;
-            clearInterval(this.flyIntval);
-            // this.interval = setInterval(this.playerCardRotation.bind(this), 800);
-            return;
-        }
-        var card: eui.Image = this['bankerCard_' + this.flyBankerIndex];
-        card.x = 713.5;
-        card.y = 250;
-        card.source = 'qznn_card_100';
-        card.anchorOffsetX = card.width / 2;
-        card.x += card.width / 2;
-        this.orginBankerCardPos;
-        var pos = this.orginBankerCardPos[this.flyBankerIndex];
-        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400);
-        this.flyBankerIndex++;
-    }
-*/
 
 
     private effectPlayerIndex = 0;
@@ -1283,11 +1006,9 @@ class BRNNView extends eui.Component {
         var isShow: boolean = false;
         //显示比牌结果，显示是否通赔或者通杀
         if (data.result[0] == 1 && data.result[1] == 1 && data.result[2] == 1 && data.result[3] == 1) {
-            this.showGameTips(5);
             isShow = true;
         }
         if (data.result[0] == 0 && data.result[1] == 0 && data.result[2] == 0 && data.result[3] == 0) {
-            this.showGameTips(4);
             isShow = true;
         }
         if (isShow) {
@@ -1337,6 +1058,7 @@ class BRNNView extends eui.Component {
         [animation]);
         this._tipGameEff = null;
     }
+
 /*
     private numIndex:number = -1;
     private count = 0;
@@ -1347,39 +1069,92 @@ class BRNNView extends eui.Component {
             this.count = 0;
             return;
         }
-        //if(this._faPaiEff_0 != null) {
-        //    this._faPaiEff_0.parent.removeChild(this._faPaiEff_0);
-        //    this._faPaiEff_0 = null;
-        //}
 
         var fapai = new uiCore.Animator();
         fapai.defentAnimationName = "Sprite";
         fapai.source = "brnn_fapai_" + (this.count + 1);
         fapai.scaleX = 1;
         fapai.scaleY = 1;
+        fapai.playOnce = true;
         fapai.x = this._faPaiPos.x;
         fapai.y = this._faPaiPos.y;
         this.addChild(fapai);
         this._faPai_arr.push(fapai);
         fapai.play("Sprite", 1);
         this.count++;
-*/
-/*
-        this._faPaiEff = new DragonBonesSprite('brnn_fapai_1',"Sprite");
-		this._faPaiEff.x = 80;
-		this._faPaiEff.y = 92;
-        this._faPaiEff.x = xlLib.Global.screenWidth / 2;
-            this._faPaiEff.y = xlLib.Global.screenHeight / 2;
-		this.addChild(this._faPaiEff);
-		this._faPaiEff.play("Sprite", 1);
-        this._faPaiEff.onPlayComplete  = ()=>{
-            this._faPaiEff.parent.removeChild(this._faPaiEff);
-        }
-*/
-    //}
+
+        
+        //this._faPaiEff = new DragonBonesSprite('brnn_fapai_1',"Sprite");
+		//this._faPaiEff.x = 80;
+		//this._faPaiEff.y = 92;
+        //this._faPaiEff.x = xlLib.Global.screenWidth / 2;
+        //this._faPaiEff.y = xlLib.Global.screenHeight / 2;
+		//this.addChild(this._faPaiEff);
+		//this._faPaiEff.play("Sprite", 1);
+        //this._faPaiEff.onPlayComplete  = ()=>{
+        //    this._faPaiEff.parent.removeChild(this._faPaiEff);
+        //}
+
+    }*/
 
     
-
+    public showLightEffect(playLight, value) {
+        playLight.visible = true;
+        playLight.alpha = 0;
+        if(value == true) {
+            egret.Tween.get(playLight).to({
+                alpha: 1
+            },
+            300).to({
+                alpha: .5
+            },
+            200).to({
+                alpha: 1
+            },
+            300).to({
+                alpha: .5
+            },
+            200).to({
+                alpha: 1
+            },
+            300).to({
+                alpha: .5
+            },
+            200).to({
+                alpha: 1
+            },
+            200).to({
+                alpha: 0
+            },
+            300).call(function() {
+                playLight.visible = false;
+                egret.Tween.removeTweens(playLight);
+            }, [playLight]);
+        } else {
+            egret.Tween.get(playLight).to({
+                alpha: 1
+            },
+            300).to({
+                alpha: .5
+            },
+            200).to({
+                alpha: 1
+            },
+            300).to({
+                alpha: .5
+            },
+            200).to({
+                alpha: 1
+            },
+            200).to({
+                alpha: 0
+            },
+            300).call(function() {
+                playLight.visible = false;
+                egret.Tween.removeTweens(playLight);
+            }, [playLight]);
+        }
+    }
 
 
 
@@ -1387,6 +1162,7 @@ class BRNNView extends eui.Component {
     //============================================  Game Result
     private showGameResult(): void {
         clearInterval(this.interval);
+        /*
         //lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.CHAT_GAME_RESULT));
         var data = this.cardResult;
         //this.grpResult.visible = true;
@@ -1481,9 +1257,9 @@ class BRNNView extends eui.Component {
         // }
         //this.updateGold();
         //更新来自更新彩金时所带的庄家金币
-        if (!this.isSysBanker) {
+        //if (!this.isSysBanker) {
             //this.labBankerMoney.text = QuickManage.moneyStr(this.banker_total_gold);
-        }
+        //}
         //this.setHandsel(this.totalCaijin);
         if (userGold > 0 && this.resultCaijin > 0) {
             //this.interval = setInterval(this.caijinShow.bind(this), 3000);
@@ -1496,45 +1272,9 @@ class BRNNView extends eui.Component {
                 this.interval = setInterval(this.boomShow.bind(this), 3000);
             }
         }
+        */
     }
 
-    private boomShow(): void {
-        this.grpCaijin.visible = false;
-        this.imgBaoZhuang.visible = true;
-        clearInterval(this.interval);
-        this.interval = setInterval(this.setStartBet.bind(this), 4000);
-    }
-
-    /*
-        private caijinShow(msg): void {
-            PanelManage.chat.sendGameChat('恭喜你获得彩金 ' + this.resultCaijin);
-            this.grpCaijinLabel.text = '恭喜你获得' + this.resultCaijin + '彩金';
-            this.grpCaijin.visible = true;
-            clearInterval(this.interval);
-            if (this.cardResult.bomb == 0) {
-                this.interval = setInterval(this.setStartBet.bind(this), 4000);
-            }
-            else {
-                this.interval = setInterval(this.boomShow.bind(this), 3000);
-            }
-        }
-    */
-    private setStartBet(): void {
-        // this.resetGame();
-        this.grpResult.visible = false;
-        clearInterval(this.interval);
-        this.showGameTips(2);
-        this.grpCountdown.visible = true;
-        if (!this.isSysBanker && !this.isChangeBanker) {
-            this.lastGameBankerNum--;
-            this.labBankerLastNum.text = '剩余' + Math.round(this.lastGameBankerNum) + '次';
-        }
-        if (this.isChangeBanker) {
-            this.isChangeBanker = false;
-            //this.setBankerInfo(this.changeBankerObj);
-            this.grpBankerList.visible = false; //切庄的时候隐藏庄家列表
-        }
-    }
     /**游戏场景重置 */
     private resetGame(): void {
   
@@ -1554,62 +1294,19 @@ class BRNNView extends eui.Component {
                 egret.Tween.removeTweens(card);
             }
         }
-        this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.poolBetArray = { '1': 0, '2': 0, '3': 0, '4': 0 };
-        this.coinsNumArr = { '1': 0, '2': 0, '3': 0, '4': 0 };
 
-        this.isCanBets = true;
-        this.isBets = false;
-        this.imgBaoZhuang.visible = false;
-        this.resultCaijin = 0;
-        this.grpCaijin.visible = false;
-        this.isCoinsReturn = true;
-        this.isCardEffectShow = false;
+
+
+
+
+
+
 
         this.initData();
 
     }
 
-    //========================== Second Panel ==============================
-
-    private getHistoryCallback(msg): void {
-        var list = msg.data;
-        for (var i = 0; i < 10; i++) {
-            if (i < list.length) {
-                this['grpHistroy' + i].visible = true;
-                var arr = list[i];
-                for (var j = 0; j < 4; j++) {
-                    this['grpHistroy' + j + '_' + i].source = arr[j] == 1 ? 'nn.a8' : 'nn.a7';
-                }
-            }
-            else {
-                this['grpHistroy' + i].visible = false;
-            }
-        }
-        this.grpSecondPanel.visible = true;
-        this.grpCardType.visible = false;
-        this.grpHistory.visible = true;
-    }
-
-    private onTouchCloseSecondPanel(): void {
-        this.grpSecondPanel.visible = false;
-    }
-
     //============================================红包
-    //private redPanel: RedBoxPanel = null;
-    private onTouchRedBox(): void {
-        //PanelManage.openRedBox(2, 1);
-    }
-
-    private operateBoxComplete(): void {
-        //lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.UPDATE_MAIN));
-    }
-
-    private updateDataGold(): void {
-        //EffectUtils.numEffect(this.titleLabMoney, parseInt(GlobalData.user.gold));
-    }
-
-
     public dispose(): void {
         //MusicManage.closeMuisc();
         if (this.parent) {
@@ -1618,13 +1315,24 @@ class BRNNView extends eui.Component {
         //EventManage.removeEvent(this);
     }
 
-    public setTouchEnabled(): void {
-        //QuickManage.setTouchEnabled(this);
-    }
-
-
     public playClickSound(res): void {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
+    }
+
+    public Onquit(): void {
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
+        //if (UserInfo.getInstance().isGameStart) {
+            //xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
+            //return;
+        //}
+
+        xlLib.SoundMgr.instance.stopBgMusic();
+
+        let musicBg = ["hall_bg_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
+
+        xlLib.SceneMgr.instance.changeScene(Lobby);
+        UserInfo.getInstance().playes = [];
     }
 
     public destroy(): void {
@@ -1637,6 +1345,7 @@ class BRNNView extends eui.Component {
         this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         this.effectTouch0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
