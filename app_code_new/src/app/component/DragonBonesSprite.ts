@@ -19,8 +19,6 @@ class DragonBonesSprite  extends egret.DisplayObjectContainer{
 	private onDragonBonesCreate(armatureDisplay:dragonBones.EgretArmatureDisplay):void
 	{
         this.armatureDisplay = armatureDisplay;
-		// this.armatureDisplay.anchorOffsetX = -this.armatureDisplay.width/2;
-		// this.armatureDisplay.anchorOffsetY = -this.armatureDisplay.height/2;
 		this.armatureDisplay.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this);
 		this.addChild(this.armatureDisplay);
 		if(this.isPlay){

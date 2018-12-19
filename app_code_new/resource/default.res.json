@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
 			"name": "preload"
 		},
 		{
@@ -21,7 +21,7 @@
 			"name": "zhajinhua"
 		},
 		{
-			"keys": "loding_json,loding_bg_jpg",
+			"keys": "loding_json,loding_bg_jpg,bjl_00_zero_mp3,bjl_01_deal_mp3,bjl_02_start_mp3,bjl_03_stop_mp3,bjl_08_player_mp3,bjl_09_banker_mp3,bjl_10_draw_mp3,bjl_11_one_mp3,bjl_12_two_mp3,bjl_13_three_mp3,bjl_14_four_mp3,bjl_15_five_mp3,bjl_16_six_mp3,bjl_17_seven_mp3,bjl_18_eight_mp3,bjl_19_nine_mp3,bjl_20_bankwin_mp3,bjl_21_playwin_mp3,bjl_22_tie_mp3,bjl_35_bg_imi_mp3,bjl_37_bg_play_mp3,lh_chipfly_long_mp3,hall_bg_mp3,Special_menu_mp3,gold_diaoluo_mp3,nn_gamestart_mp3,nn_LampEnd_mp3,nn_LampRun_mp3,nn_montageerror_mp3,nn_wingold_mp3,nn.dealCard_mp3,nn.end_mp3,nn.jackpot_mp3,nn.niu0_mp3,nn.niu1_mp3,nn.niu10_mp3,nn.niu11_mp3,nn.niu12_mp3,nn.niu13_mp3,nn.niu14_mp3,nn.niu2_mp3,nn.niu3_mp3,nn.niu4_mp3,nn.niu5_mp3,nn.niu6_mp3,nn.niu7_mp3,nn.niu8_mp3,nn.niu9_mp3,nn.niuniu_mp3,nn.openCard_mp3,nn.playNiu5hua_mp3,nn.playNiuXiao5_mp3,nn.playNiuZhadan_mp3,nn.stake_mp3,nn.start_mp3,nn.tp_mp3,nn.ts_mp3,qznn_bg_mp3,qznn_tongpei_mp3,qznn_win_all_mp3,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_0_mp3,bar_game_start_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3,tbnn_gamebgMusic_mp3,anniuliuguang_ske_json,anniuliuguang_tex_json,anniuliuguang_tex_png,bg_baijiale_ske_json,bg_baijiale_tex_json,bg_baijiale_tex_png,bg_bairenniuniu_ske_json,bg_bairenniuniu_tex_json,bg_bairenniuniu_tex_png,bg_daliuguang_ske_json,bg_daliuguang_tex_json,bg_daliuguang_tex_png,bg_ebg_tianwang_ske_json,bg_ebg_tianwang_tex_json,bg_ebg_tianwang_tex_png,bg_ebg_tongsha_ske_json,bg_ebg_tongsha_tex_json,bg_ebg_tongsha_tex_png,bg_ewrbagang_ske_json,bg_ewrbagang_tex_json,bg_ewrbagang_tex_png,bg_qiangzhuangniuniu_ske_json,bg_qiangzhuangniuniu_tex_json,bg_qiangzhuangniuniu_tex_png,bg_qznn_niujiao_ske_json,bg_qznn_niujiao_tex_json,bg_qznn_niujiao_tex_png,bg_remen_ske_json,bg_remen_tex_json,bg_remen_tex_png,bg_tongbiniuniu_ske_json,bg_tongbiniuniu_tex_json,bg_tongbiniuniu_tex_png,bg_xiaoliuguang_ske_json,bg_xiaoliuguang_tex_json,bg_xiaoliuguang_tex_png,bg_xin_ske_json,bg_xin_tex_json,bg_xin_tex_png,bg_zhajinhua_ske_json,bg_zhajinhua_tex_json,bg_zhajinhua_tex_png,bjl_rukou_ske_json,bjl_rukou_tex_json,bjl_rukou_tex_png,brnn_effect_begining_ske_json,brnn_effect_begining_tex_json,brnn_effect_begining_tex_png,brnn_effect_gamestart_ske_json,brnn_effect_gamestart_tex_json,brnn_effect_gamestart_tex_png,brnn_effect_stop_ske_json,brnn_effect_stop_tex_json,brnn_effect_stop_tex_png,brnn_effect_xiazhu_ske_json,brnn_effect_xiazhu_tex_json,brnn_effect_xiazhu_tex_png,brnn_fapai_1_ske_json,brnn_fapai_1_tex_json,brnn_fapai_1_tex_png,brnn_fapai_2_ske_json,brnn_fapai_2_tex_json,brnn_fapai_2_tex_png,brnn_fapai_3_ske_json,brnn_fapai_3_tex_json,brnn_fapai_3_tex_png,brnn_fapai_4_ske_json,brnn_fapai_4_tex_json,brnn_fapai_4_tex_png,brnn_fapai_5_ske_json,brnn_fapai_5_tex_json,brnn_fapai_5_tex_png,brnn_rukou_ske_json,brnn_rukou_tex_json,brnn_rukou_tex_png,ebg_rukou_ske_json,ebg_rukou_tex_json,ebg_rukou_tex_png,guzhuyizhi_ske_json,guzhuyizhi_tex_json,guzhuyizhi_tex_png,qznn_nvrenwu_ske_json,qznn_nvrenwu_tex_json,qznn_nvrenwu_tex_png,qznn_rukou_ske_json,qznn_rukou_tex_json,qznn_rukou_tex_png,tbnn_rukou_ske_json,tbnn_rukou_tex_json,tbnn_rukou_tex_png,tongbiniuniu_ske_json,tongbiniuniu_tex_json,tongbiniuniu_tex_png,vshuahen_ske_json,vshuahen_tex_json,vshuahen_tex_png,zjh_rukou_ske_json,zjh_rukou_tex_json,zjh_rukou_tex_png",
 			"name": "load"
 		}
 	],
@@ -7383,6 +7383,21 @@
 			"url": "assets/game/brnn/brnn_card_105.png",
 			"type": "image",
 			"name": "brnn_card_105_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.png",
+			"type": "image",
+			"name": "bg_qznn_niujiao_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_ske.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_ske_json"
 		}
 	]
 }
