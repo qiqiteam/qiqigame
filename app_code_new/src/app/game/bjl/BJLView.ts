@@ -440,15 +440,12 @@ class BJLView extends eui.Component {
     }
     /**闲家咪牌 */
     private xianjiamipai(data: any) {
-        this.isAction = false;
-        for (let i = 0; i < 5; i++) {
-            this['effectTouch' + i].alpha = 0;
-        }
+
         this.tishi_zi_0.visible = false;
         this.tishi_zi_1.visible = true;
         this.tishi_zi_1.source = 'baccarat_font_stage_5_png';
 
-        this.istzxzDh = false;
+
         this.startCountDown(data._obj.seconds);
         this.xjzjdianshu[0] = data._obj.playersce;
 
@@ -493,8 +490,8 @@ class BJLView extends eui.Component {
         this.xian_tishi.visible = false;
         this.zhuang_tishi.visible = true;
         this.zhuang_Label.text = "庄家咪牌中";
-        this.grpCard_1_0.source = 'qznn_card_' + data._obj.bankerCard[0];
-        this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[1];
+        this.grpCard_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
+        this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
         this.puke_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
 
         this.puke_1_0.visible = true;
@@ -710,6 +707,14 @@ class BJLView extends eui.Component {
         this.sypai_0.text = data._obj.leftcardlh + '';  //剩余牌数恢复
         this.sypai_1.text = data._obj.deskcards + '';
 
+        //恢复牌背显示
+        if (data._obj.roomStatus == 2) {
+            this.grpCard_0_0.source = 'gf_poker0_png';
+            this.grpCard_0_1.source = 'gf_poker0_png';
+            this.grpCard_1_0.source = 'gf_poker0_png';
+            this.grpCard_1_1.source = 'gf_poker0_png';
+        }
+
         //庄家牌面信息恢复 加点数
         if (data._obj.bankerCard != null && data._obj.bankerCard.length > 0) {
 
@@ -793,7 +798,13 @@ class BJLView extends eui.Component {
                 break;    //准备中
             case 2: this.tishi_zi_0.visible = true;
                 this.tishi_zi_1.visible = false;
-                this.tishi_zi_0.source = 'baccarat_font_stage_6_png'; break;    //下注中
+                this.tishi_zi_0.source = 'baccarat_font_stage_6_png';
+                this.istzxzDh = true;
+                this.isAction = true;
+                for (let i = 0; i < 5; i++) {
+                    this['effectTouch' + i].alpha = 1;
+                }
+                break;                                                           //下注中
             case 5: this.tishi_zi_0.visible = true;
                 this.tishi_zi_1.visible = false;
                 this.tishi_zi_0.source = 'baccarat_font_stage_2_png';
@@ -1030,6 +1041,13 @@ class BJLView extends eui.Component {
             this.time--;
             if (this.time == 0) {
                 if (this.istzxzDh) {
+
+                    this.istzxzDh = false;
+                    this.isAction = false;
+                    for (let i = 0; i < 5; i++) {
+                        this['effectTouch' + i].alpha = 0;
+                    }
+
                     this.playClickSound(BJLUtil.getInstance().getSoundEffect(3));
                     this.tingzhi_Effect();
                 }

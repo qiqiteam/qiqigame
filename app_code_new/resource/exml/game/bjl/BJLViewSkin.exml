@@ -34,7 +34,7 @@
 	</e:Group>
 
 
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
 		<e:Image id="grpCard_0_1" x="559.38" y="284.76" scaleX="1" scaleY="1" width="74" height="104" source="img_puke_7_png"/>
 		<e:Image id="grpCard_0_0" x="641.87" y="284.76" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104"/>
 		<e:Image id="grpCard_0_2" x="558.94" y="279.7" scaleX="1" scaleY="1" source="img_puke_7_png" width="74" height="104" rotation="-90"/>
