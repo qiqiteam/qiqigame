@@ -194,9 +194,9 @@ class RBGView extends eui.Component {
 
     private qz_player_arr = [];             //记录抢庄玩家本场景的座位号
 
-    private dingZhuangEff: RBGVEff;
+    private dingZhuangEff: RBGVEff = null;
 
-    private gameStartEff: RBGSEff;
+    private gameStartEff: RBGSEff = null;
 
     private _coin_arr = [];                 //筹码池
 
@@ -1448,7 +1448,7 @@ class RBGView extends eui.Component {
             }
             
             this["_player_name_" + i].text = value.players[i].username;
-            this["_player_fen_" + i].text = value.players[i].score;
+            this["_player_fen_" + i].text = value.players[i].ratio;
             this["_player_bet_" + i].text = value.players[i].multiple;
             if(value.players[i].win) {
                 this["_player_gold_" + i].text = "+"+value.players[i].dealGold;
@@ -1535,6 +1535,12 @@ class RBGView extends eui.Component {
         this.qz_player_arr = [];
         this.cardResult = null;
         this.cdNum = 5;
+
+        this.dingZhuangEff.parent.removeChild(this.dingZhuangEff);
+        this.dingZhuangEff = null;
+
+        this.gameStartEff.parent.removeChild(this.gameStartEff);
+        this.gameStartEff = null;
     }
 
     public playClickSound(res): void {
