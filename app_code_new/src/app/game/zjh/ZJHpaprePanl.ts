@@ -23,7 +23,7 @@ class ZJHpaprePanl extends eui.Component {
         this.initData();
         this._btn_hintclose.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
-        EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
+        EventUtil.addEventListener(EventConst.onUserXClose, this.onleave, this);
     }
     private onleave(data: any) {
         if (data._obj.code == 200) {
@@ -35,18 +35,21 @@ class ZJHpaprePanl extends eui.Component {
     }
 
     private onClick(e: egret.TouchEvent) {
-        this.quxiaopipei();
+        GlobalData.liveCloseBtn = true;
+        this.quxiaopipei(EventConst.zjhLeave,1);
     }
     /**取消匹配 */
-    private quxiaopipei() {
+    private quxiaopipei(sendstr: string, num: number) {
         let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_ZHAJINHUA);
         let typeData: typeData = gameData.getTypeDataByindex(this.TYPE_TAP);
         let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
         let senddata: any = {
             userid: UserInfo.getInstance().uid,
-            token: UserInfo.getInstance().token, playway: playway.id
+            token: UserInfo.getInstance().token,
+            playway: playway.id,
+            logo: num
         };
-        xlLib.WebSocketMgr.getInstance().send(EventConst.zjhLeave, senddata, (data) => {
+        xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
         }, this);
     }
 
@@ -90,6 +93,6 @@ class ZJHpaprePanl extends eui.Component {
     public destroy(): void {
         this.TYPE_TAP = "";
         this._btn_hintclose.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        EventUtil.removeEventListener(EventConst.onUserLeave, this.onleave, this);
+        EventUtil.removeEventListener(EventConst.onUserXClose, this.onleave, this);
     }
 }
