@@ -292,6 +292,7 @@ public _faPaiPos:eui.Image;
         this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         this.effectTouch0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1318,6 +1319,22 @@ public _faPaiPos:eui.Image;
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     }
 
+    public Onquit(): void {
+        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
+        //if (UserInfo.getInstance().isGameStart) {
+            //xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
+            //return;
+        //}
+
+        xlLib.SoundMgr.instance.stopBgMusic();
+
+        let musicBg = ["hall_bg_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
+
+        xlLib.SceneMgr.instance.changeScene(Lobby);
+        UserInfo.getInstance().playes = [];
+    }
+
     public destroy(): void {
         this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1328,6 +1345,7 @@ public _faPaiPos:eui.Image;
         this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
         this.effectTouch0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
