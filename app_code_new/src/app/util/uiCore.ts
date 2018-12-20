@@ -216,7 +216,12 @@ module uiCore {
             if (!e || !i || !a) return void this.warn("资源" + this.source + "不存在");
             this.armature && this.removeChild(this.armature);
             var n = dragonBones.EgretFactory.factory;
-            if (n.getDragonBonesData(this.source) || (n.parseDragonBonesData(e), n.parseTextureAtlasData(i, a)), this.armature = n.buildArmatureDisplay(this.defentAnimationName, this.source), this.addChild(this.armature), this.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this), this.visible = !this.stopAndVisible, this.autoPlay) {
+            if (n.getDragonBonesData(this.source) || (n.parseDragonBonesData(e), n.parseTextureAtlasData(i, a)),
+            this.armature = n.buildArmatureDisplay(this.defentAnimationName, this.source), 
+            this.addChild(this.armature), 
+            this.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
+             this.visible = !this.stopAndVisible, this.autoPlay) 
+            {
                 var s = -1 == this.armature.animation.animationList.indexOf(this.defentAnimationName) ? this.armature.animation.animationList[0] : this.defentAnimationName;
                 this.playOnce ? this.play(s, 1) : this.play(s)
             }

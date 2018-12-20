@@ -472,7 +472,7 @@ class ZJHView extends eui.Component {
             this.img_cancelautogenzhu0.visible = true;
             this.img_cancelautogenzhu1.visible = true;
             this.sendamessage(EventConst.onAutoFollow, null);
-            this.anniuliuguang = new DragonBonesSprite('anniuliuguang', "Sprite");
+            this.anniuliuguang = new DragonBonesSprite('bg_zjh_zidong', "Sprite");
             this.anniuliuguang.width = this.width;
             this.anniuliuguang.height = this.height;
             this.anniuliuguang.x = 1300;
@@ -488,7 +488,7 @@ class ZJHView extends eui.Component {
             this.img_cancelautogenzhu1.visible = false;
             this.sendamessage(EventConst.closeAutoFollow, null);
             if (this.anniuliuguang) {
-                this.anniuliuguang.stop("Sprite");
+                this.anniuliuguang.stop();
                 if (this.anniuliuguang.parent) {
                     this.anniuliuguang.parent.removeChild(this.anniuliuguang);
                     this.anniuliuguang = null;
@@ -1214,7 +1214,7 @@ class ZJHView extends eui.Component {
             //关闭自动跟注
             this.isAntoGenZhu = false;
             // if (this.anniuliuguang) {
-            //     this.anniuliuguang.stop("Sprite");
+            //     this.anniuliuguang.stop();
             //     if (this.anniuliuguang.parent) {
             //         this.anniuliuguang.parent.removeChild(this.anniuliuguang);
             //         this.anniuliuguang = null;
@@ -1253,7 +1253,7 @@ class ZJHView extends eui.Component {
                     this['imgCardType' + data.param.index].visible = false;
                 }
                 if (this.anniuliuguang) {
-                    this.anniuliuguang.stop("Sprite");
+                    this.anniuliuguang.stop();
                     if (this.anniuliuguang.parent) {
                         this.anniuliuguang.parent.removeChild(this.anniuliuguang);
                         this.anniuliuguang = null;
@@ -1306,7 +1306,7 @@ class ZJHView extends eui.Component {
             this.abandonStateBtn();
             UserInfo.getInstance().isGameStart = false;
             if (this.anniuliuguang) {
-                this.anniuliuguang.stop("Sprite");
+                this.anniuliuguang.stop();
                 if (this.anniuliuguang.parent) {
                     this.anniuliuguang.parent.removeChild(this.anniuliuguang);
                     this.anniuliuguang = null;
@@ -1449,7 +1449,7 @@ class ZJHView extends eui.Component {
             this.abandonStateBtn();
             UserInfo.getInstance().isGameStart = false;
             if (this.anniuliuguang) {
-                this.anniuliuguang.stop("Sprite");
+                this.anniuliuguang.stop();
                 if (this.anniuliuguang.parent) {
                     this.anniuliuguang.parent.removeChild(this.anniuliuguang);
                     this.anniuliuguang = null;
@@ -1534,7 +1534,7 @@ class ZJHView extends eui.Component {
             }
             this.operateTimer.stop();
             if (this.anniuliuguang) {
-                this.anniuliuguang.stop("Sprite");
+                this.anniuliuguang.stop();
                 if (this.anniuliuguang.parent) {
                     this.anniuliuguang.parent.removeChild(this.anniuliuguang);
                     this.anniuliuguang = null;
