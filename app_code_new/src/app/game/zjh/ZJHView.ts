@@ -46,6 +46,11 @@ class ZJHView extends eui.Component {
     public imgCardType2: eui.Image;
     public imgCardType3: eui.Image;
     public imgCardType4: eui.Image;
+    public imgbipai_lose0: eui.Image;
+    public imgbipai_lose1: eui.Image;
+    public imgbipai_lose2: eui.Image;
+    public imgbipai_lose3: eui.Image;
+    public imgbipai_lose4: eui.Image;
     public imgis_kanpai0: eui.Image;
     public imgis_kanpai1: eui.Image;
     public imgis_kanpai2: eui.Image;
@@ -85,14 +90,14 @@ class ZJHView extends eui.Component {
     public img_abandon2: eui.Image;
     public img_abandon3: eui.Image;
     public img_abandon4: eui.Image;
-    public grpHead1: ZJHHead;
-    public grpHead2: ZJHHead;
-    public grpHead3: ZJHHead;
-    public grpHead4: ZJHHead;
     public img_bipailight1: eui.Image;
     public img_bipailight2: eui.Image;
     public img_bipailight3: eui.Image;
     public img_bipailight4: eui.Image;
+    public grpHead1: ZJHHead;
+    public grpHead2: ZJHHead;
+    public grpHead3: ZJHHead;
+    public grpHead4: ZJHHead;
     public grpCountdown: eui.Group;
     public labCountdown0: eui.BitmapLabel;
     public labCountdown1: eui.BitmapLabel;
@@ -158,6 +163,7 @@ class ZJHView extends eui.Component {
     public img_light3: eui.Image;
     public img_light4: eui.Image;
     public _btn_kanpai: eui.Button;
+
 
 
 
@@ -252,6 +258,7 @@ class ZJHView extends eui.Component {
     }
 
     private anniuliuguang: DragonBonesSprite;
+    private guzhuyizhi: DragonBonesSprite;
 
     //public isClickjixuGameBtn: boolean = false;//是否点击过继续游戏按钮
     //public isClickqipaiBtn: boolean = false;//是否点击过弃牌按钮
@@ -306,13 +313,18 @@ class ZJHView extends eui.Component {
         this.botpGolds(false);
         this.playersLight(false);
         /***++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-        // this.anniuliuguang = new DragonBonesSprite('anniuliuguang', "Sprite");
-        // this.anniuliuguang.width = this.width;
-        // this.anniuliuguang.height = this.height;
-        // this.anniuliuguang.x = 350;
-        // this.anniuliuguang.y = 250;
-        // this.addChild(this.anniuliuguang);
-        // this.anniuliuguang.play("Sprite");
+
+        // this.guzhuyizhi = new DragonBonesSprite('guzhuyizhi', "Sprite");
+        // this.guzhuyizhi.width = this.width;
+        // this.guzhuyizhi.height = this.height;
+        // this.guzhuyizhi.x = 670;
+        // this.guzhuyizhi.y = 300;
+        // this.addChild(this.guzhuyizhi);
+        // this.guzhuyizhi.play("Sprite");
+        // setTimeout(() => {
+        //     this.guzhuyizhi.stop();
+        //     this.guzhuyizhi.visible = false;
+        // }, 6000)
         // let zjheffectwin1: ZJHEffectWin2View = new ZJHEffectWin2View();
         // zjheffectwin1.x = -125;
         // zjheffectwin1.y = -315;
@@ -385,6 +397,7 @@ class ZJHView extends eui.Component {
             this['labstatus' + index].text = '';
             this['imgstatus_bg' + index].alpha = 1;
             this['imgstatus' + index].alpha = 1;
+            this['imgbipai_lose' + index].source = '';
             for (let i = 0; i < 3; i++) {
                 this['grpCard' + index + '_' + i].alpha = 1;
             }
@@ -401,6 +414,11 @@ class ZJHView extends eui.Component {
             }
             this.orginPlayerCardPos[index] = cardPos;
             this.orginPlayerCard[index] = cardPos;
+            for (let i = 0; i < 3; i++) {
+                console.log("++++++++++++", this.orginPlayerCard[index][i].x);
+                console.log("++++++++++++", this.orginPlayerCard[index][i].y);
+            }
+
 
         }
         for (var index = 1; index < 5; index++) {
@@ -430,11 +448,36 @@ class ZJHView extends eui.Component {
                 xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
             }
         } else if (e.target == this._btn_autogenzhu) {
+            this.img_autogenzhu.visible = false;
+            this.img_autogenzhu.visible = false;
+            this._btn_cancelautogenzhu.visible = true;
+            this.img_cancelautogenzhu0.visible = true;
+            this.img_cancelautogenzhu1.visible = true;
             this.sendamessage(EventConst.onAutoFollow, null);
+            this.anniuliuguang = new DragonBonesSprite('anniuliuguang', "Sprite");
+            this.anniuliuguang.width = this.width;
+            this.anniuliuguang.height = this.height;
+            this.anniuliuguang.x = 1300;
+            this.anniuliuguang.y = 778;
+            this.addChild(this.anniuliuguang);
+            this.anniuliuguang.play("Sprite");
             xlLib.TipsUtils.showFloatWordTips("自动跟注");
             this.playerOperatingState[0] = 4;//玩家自动跟注
         } else if (e.target == this._btn_cancelautogenzhu) {
+            this.img_autogenzhu.visible = true;
+            this._btn_autogenzhu.visible = true;
+            this._btn_cancelautogenzhu.visible = false;
+            this.img_cancelautogenzhu0.visible = false;
+            this.img_cancelautogenzhu1.visible = false;
             this.sendamessage(EventConst.closeAutoFollow, null);
+            if (this.anniuliuguang) {
+                this.anniuliuguang.stop("Sprite");
+                if (this.anniuliuguang.parent) {
+                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                    this.anniuliuguang = null;
+                }
+            }
+
             xlLib.TipsUtils.showFloatWordTips("取消自动跟注");
         } else if (e.target == this._btn_jiazhu) {
             this.grp_btncm0.visible = true;
@@ -512,31 +555,35 @@ class ZJHView extends eui.Component {
             this.sendamessage(EventConst.zjhLeave, null);
             this.sendamessage(EventConst.joinroom, null);
             UserInfo.getInstance().isGameStart = true;
-            GlobalData.liveCloseBtn=false;
+            GlobalData.liveCloseBtn = false;
             this.resetGame();//重置游戏场景
             xlLib.TipsUtils.showFloatWordTips("继续游戏");
-        } else if (e.target == this.grpHead1) {
+        } else if (e.target == this.img_bipailight1) {
             xlLib.TipsUtils.showFloatWordTips("点击玩家1");
             console.log("可以与1号玩家比牌");
+            this.img_bipailight1.touchEnabled = false;
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[1]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
             console.log(this.byOpenId);
-        } else if (e.target == this.grpHead2) {
+        } else if (e.target == this.img_bipailight2) {
             xlLib.TipsUtils.showFloatWordTips("点击玩家2");
+            this.img_bipailight2.touchEnabled = false;
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[2]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
             console.log("可以与2号玩家比牌");
             console.log(this.byOpenId);
-        } else if (e.target == this.grpHead3) {
+        } else if (e.target == this.img_bipailight3) {
+            this.img_bipailight3.touchEnabled = false;
             xlLib.TipsUtils.showFloatWordTips("点击玩家3");
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[3]);
             this.sendamessage(EventConst.botpour, this.callnum);
             xlLib.TipsUtils.showFloatWordTips("跟注:" + this.callnum);
             console.log("可以与3号玩家比牌");
             console.log(this.byOpenId);
-        } else if (e.target == this.grpHead4) {
+        } else if (e.target == this.img_bipailight4) {
+            this.img_bipailight4.touchEnabled = false;
             xlLib.TipsUtils.showFloatWordTips("点击玩家4");
             this.sendamessage2(EventConst.compareCard, this.UsId, this.byOpenId[4]);
             this.sendamessage(EventConst.botpour, this.callnum);
@@ -585,8 +632,11 @@ class ZJHView extends eui.Component {
             if (this.playerOperatingState[i] != 3) {
                 let user = UserInfo.getInstance().playes[i];
                 this['img_bipailight' + i].visible = true;
-                this["grpHead" + i].touchEnabled = true;
-                this["grpHead" + i].touchChildren = false;
+                this['img_bipailight' + i].touchEnabled = true;
+                this["img_bipailight" + i].touchChildren = false;
+
+                //this["grpHead" + i].touchEnabled = true;
+                //this["grpHead" + i].touchChildren = false;
                 this.byOpenId[i] = this.OtherPlayer[i];
                 if (this.abandonId.length == 3) {
                     this.sendamessage2(EventConst.compareCard, this.UsId, this.OtherPlayer[i]);
@@ -679,9 +729,9 @@ class ZJHView extends eui.Component {
         EventUtil.addEventListener(EventConst.onAiWaiveCard, this.otherdiscard, this);
         EventUtil.addEventListener(EventConst.onUserExceWaiveCard, this.disAutoCard, this);
         EventUtil.addEventListener(EventConst.onCheckout, this.settleaccount, this);
-        EventUtil.addEventListener(EventConst.onUserLeave, this.cancelpapre, this);
+        //EventUtil.addEventListener(EventConst.onUserLeave, this.cancelpapre, this);
+        EventUtil.addEventListener(EventConst.onUserXClose, this.cancelpapre, this);
         EventUtil.addEventListener(EventConst.onUserIsLeave, this.onClickoutBtn, this);
-        //EventUtil.addEventListener(EventConst.onUserOutRoom, this.ocClickContuite, this);
         EventUtil.addEventListener(EventConst.onAiOperate, this.aioperate, this);
 
 
@@ -703,10 +753,10 @@ class ZJHView extends eui.Component {
         this._btn_autogenzhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_cancelautogenzhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         //----------------------------------------------------------------------------------
-        this["grpHead" + 1].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this["grpHead" + 2].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this["grpHead" + 3].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this["grpHead" + 4].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 1].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 2].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 3].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 4].addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
 
         this._btn_out.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_setting.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
@@ -773,7 +823,7 @@ class ZJHView extends eui.Component {
     public dizhu: number;//玩家地注
     public shortTimegameStatue: number;//游戏状态
     public nowroundNum: number = 0;//当前轮数
-
+    public nowPlayerNum: number = 0;//当前玩家人数
     private onGameStatusChange(data: any): void {
         this._btn_continuegame.visible = false;
         this.gamestatue(data.param);
@@ -862,13 +912,19 @@ class ZJHView extends eui.Component {
                     card0.anchorOffsetY = card0.height / 2;
                     card0.y = card0.y + card0.anchorOffsetY;
                     if (i == 0) {
-                        egret.Tween.get(card0).to({ rotation: -18 }, 600, egret.Ease.sineIn);
+                        //egret.Tween.get(card0).to({ rotation: -18 }, 600, egret.Ease.sineIn);
+                        egret.Tween.get(card0).to({ rotation: -18 }, 600, egret.Ease.sineIn).call(() => {
+                            // card0.anchorOffsetX = 0;
+                            // card0.anchorOffsetY = 0;
+                            // card0.y = this.orginPlayerCard[seatnum][i].y;
+                        }, );
                     } else if (i == 2) {
-                        egret.Tween.get(card0).to({ rotation: 18 }, 600, egret.Ease.sineIn);
+                        egret.Tween.get(card0).to({ rotation: 18 }, 600, egret.Ease.sineIn).call(() => {
+
+                        }, );
                     }
 
                 }
-
             }
             this['imgstatus_bg' + seatnum].source = 'gf_dialogue_png';
             this['imgstatus' + seatnum].source = 'gf_dialogue_kanpai_png';
@@ -889,6 +945,7 @@ class ZJHView extends eui.Component {
     /**判断玩家操作 接收下注类型，操作时间*/
     private gametype(data: any): void {
         if (data.param.code == 200) {
+            this.nowPlayerNum = data.param.playerNum;
             this['img_light' + this.playerSeria].visible = false;
             this['img_light' + data.param.index].visible = true;
             this.playerSeria = data.param.index;
@@ -977,6 +1034,7 @@ class ZJHView extends eui.Component {
         if (data.param.code == 200) {
             var point: egret.Point = ZJHUtil.getInstance().getPlayerIconPos(data.param.index);
             //let operateTimer: OperateTimer = new OperateTimer();
+            this.nowPlayerNum = data.param.playerNum;
             this.operateTimer.x = point.x + 65;
             this.operateTimer.y = point.y + 84;
             this.addChild(this.operateTimer);
@@ -1054,8 +1112,18 @@ class ZJHView extends eui.Component {
 
     /**全压*/
     private ALLIN(data: any): void {
-        //if (data.param.command == "onUserAllPress" && data.param.code == 200) {
         if (data.param.code == 200) {
+            this.guzhuyizhi = new DragonBonesSprite('guzhuyizhi', "Sprite");
+            this.guzhuyizhi.width = this.width;
+            this.guzhuyizhi.height = this.height;
+            this.guzhuyizhi.x = 670;
+            this.guzhuyizhi.y = 300;
+            this.addChild(this.guzhuyizhi);
+            this.guzhuyizhi.play("Sprite");
+            setTimeout(() => {
+                this.guzhuyizhi.stop();
+                this.guzhuyizhi.visible = false;
+            }, 2000)
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             console.log("金币不足玩家全压", data);
@@ -1107,36 +1175,36 @@ class ZJHView extends eui.Component {
         } else if (data.param.command == "onTimelyNotify" && data.param.autoButState == 100) {
             this.nowroundNum = data.param.circleNum;
             //开启自动跟注
-            this.anniuliuguang = new DragonBonesSprite('anniuliuguang', "Sprite");
-            this.anniuliuguang.width = this.width;
-            this.anniuliuguang.height = this.height;
-            this.anniuliuguang.x = 1300;
-            this.anniuliuguang.y = 778;
-            this.addChild(this.anniuliuguang);
-            this.anniuliuguang.play("Sprite");
+            // this.anniuliuguang = new DragonBonesSprite('anniuliuguang', "Sprite");
+            // this.anniuliuguang.width = this.width;
+            // this.anniuliuguang.height = this.height;
+            // this.anniuliuguang.x = 1300;
+            // this.anniuliuguang.y = 778;
+            // this.addChild(this.anniuliuguang);
+            // this.anniuliuguang.play("Sprite");
             console.log("++++++++++++++++++++++++++data.param.state == 100", data);
-            this.img_autogenzhu.visible = false;
-            this.img_autogenzhu.visible = false;
-            this._btn_cancelautogenzhu.visible = true;
-            this.img_cancelautogenzhu0.visible = true;
-            this.img_cancelautogenzhu1.visible = true;
+            // this.img_autogenzhu.visible = false;
+            // this.img_autogenzhu.visible = false;
+            // this._btn_cancelautogenzhu.visible = true;
+            // this.img_cancelautogenzhu0.visible = true;
+            // this.img_cancelautogenzhu1.visible = true;
         } else if (data.param.command == "onTimelyNotify" && data.param.autoButState != 100 && data.param.autoButState != 300) {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             //关闭自动跟注
-            if (this.anniuliuguang) {
-                this.anniuliuguang.stop("Sprite");
-                if (this.anniuliuguang.parent) {
-                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-                    this.anniuliuguang = null;
-                }
-            }
+            // if (this.anniuliuguang) {
+            //     this.anniuliuguang.stop("Sprite");
+            //     if (this.anniuliuguang.parent) {
+            //         this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+            //         this.anniuliuguang = null;
+            //     }
+            // }
             console.log("++++++++++++++++++++++++++data.param.state == 200", data);
-            this.img_autogenzhu.visible = true;
-            this._btn_autogenzhu.visible = true;
-            this._btn_cancelautogenzhu.visible = false;
-            this.img_cancelautogenzhu0.visible = false;
-            this.img_cancelautogenzhu1.visible = false;
+            // this.img_autogenzhu.visible = true;
+            // this._btn_autogenzhu.visible = true;
+            // this._btn_cancelautogenzhu.visible = false;
+            // this.img_cancelautogenzhu0.visible = false;
+            // this.img_cancelautogenzhu1.visible = false;
         }
     }
 
@@ -1154,54 +1222,40 @@ class ZJHView extends eui.Component {
                 type: data.param.json.loseType //牌型
             };
             this.operateTimer.stop();
-            //执行玩家图像被轰炸动作{}................玩家自己比牌输
             if (UserInfo.getInstance().uid == data.param.userId) {
+                //执行玩家图像被轰炸动作{}................玩家自己比牌输
                 if (this.playerOperatingState[data.param.index] != 2) {
-                    this._btn_kanpai.visible = false;
                     this.onKanPaiClick(losepoke);
-                    this['imgCardType' + data.param.index].source = 'gf_flag_bpsb_png';
+                    this['imgbipai_lose' + data.param.index].source = 'gf_flag_bpsb_png';
                     this.playerOperatingState[data.param.index] = 3
-                    this.abandonStateBtn();
                 } else if (this.playerOperatingState[data.param.index] == 2) {
-                    this.playClickSound(ZJHUtil.getInstance().getSoundEffect(7));
-                    for (var i = 0; i < 3; i++) {
-                        var card = this['grpCard' + 0 + '_' + i];
-                        card.source = 'gf_poker0_png';
-                        this[0].source = 'qznn_card_' + this[1];
-                        [card, losepoke.value[i]]
-                    }
-                    this['imgCardbg' + data.param.index].source = 'gf_pxzs_png';
-                    this['imgCardType' + data.param.index].visible = true;
-                    this['imgCardType' + data.param.index].source = 'gf_flag_bpsb_png';
-                    this._btn_kanpai.visible = false;
-                    this.playerOperatingState[0] = 3
-                    this.abandonStateBtn();
-                    if (this.anniuliuguang) {
-                        this.anniuliuguang.stop("Sprite");
-                        if (this.anniuliuguang.parent) {
-                            this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-                            this.anniuliuguang = null;
-                        }
+                    this['imgCardType' + data.param.index].visible = false;
+                }
+                if (this.anniuliuguang) {
+                    this.anniuliuguang.stop("Sprite");
+                    if (this.anniuliuguang.parent) {
+                        this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                        this.anniuliuguang = null;
                     }
                 }
-                /**剩余人数2个 */
-                if (data.param.playerNum == 2) {
-
-                }
+                this.playerOperatingState[0] = 3
+                this._btn_kanpai.visible = false;
+                this.playClickSound(ZJHUtil.getInstance().getSoundEffect(7));
+                this['imgCardbg' + data.param.index].source = '';
+                this['imgbipai_lose' + data.param.index].source = 'gf_flag_bpsb_png';
+                this.abandonStateBtn();
             } else if (UserInfo.getInstance().uid != data.param.userId) {
                 //执行AI图像被轰炸动作{}................AI比牌输
+                if (this.nowPlayerNum == 2) {
+                    this.onPlayerKanPai(data.param.index, losepoke);
+                    this['imgbipai_lose' + data.param.index].source = 'gf_flag_bpsb_png';
+                } else if (this.nowPlayerNum > 2) {
+                    this['imgbipai_lose' + data.param.index].source = 'gf_flag_bpsb_png';
+                }
                 this['imgis_kanpai' + data.param.index].visible = false;
-                this.onPlayerKanPai(data.param.index, losepoke);
-                this['imgCardType' + data.param.index].source = 'gf_flag_bpsb_png';
+                this['imgCardbg' + data.param.index].source = '';
                 this.playerOperatingState[data.param.index] = 3
-                xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
-                this._btn_autogenzhu.visible = true;
-                this.img_autogenzhu.visible = true;
-
             }
-
-            //this.anotherDontCard(data.param.index);
-            //UserInfo.getInstance().playes[i]
         }
     }
 
@@ -1256,12 +1310,44 @@ class ZJHView extends eui.Component {
                 var pos: egret.Point = new egret.Point;
                 pos.x = point.x;
                 pos.y = point.y;
+                /********************************************* */
+                // card0.anchorOffsetX = 0;
+                // card0.anchorOffsetY = 0;
+                // card0.y = this.orginPlayerCard[seatnum][i].y;
                 /**弃牌完整动作 */
-                /* egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 0 }, 200).call((index:number)=> {
-                     card.x=this.orginPlayerCardPos[data.param.index][index].x;
-                     card.y=this.orginPlayerCardPos[data.param.index][index].y;
-                     card.alpha = 1;
-                 },this,[i]);*/
+                /*if (this.playerOperatingState[data.param.index] == 2) {
+                    if (i == 0) {
+                        egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 0 }, 6000).call((index: number) => {
+                            //egret.Tween.get(card).to({ x: pos.x, y: pos.y, alpha: 0 }, 6000, egret.Ease.sineIn);
+                            card.alpha = 1;
+                            card.x = this.orginPlayerCard[data.param.index][index].x;
+                            card.y = this.orginPlayerCard[data.param.index][index].y;
+                            card.anchorOffsetX = 0;
+                            card.anchorOffsetY = 0;
+
+                        }, this, [i]);
+                    } else if (i == 1) {
+                        egret.Tween.get(card).to({ x: pos.x, y: pos.y, anchorOffsetX: 0, anchorOffsetY: 0, alpha: 0 }, 6000).call((index: number) => {
+                            card.x = this.orginPlayerCard[data.param.index][i].x;
+                            card.y = this.orginPlayerCard[data.param.index][i].y;
+                            console.log("我的index1", this.orginPlayerCard[data.param.index][i].x);
+                            console.log("我的index1", this.orginPlayerCard[data.param.index][i].y);
+                        }, this, [i]);
+                    } else if (i == 2) {
+                        egret.Tween.get(card).to({ x: pos.x, y: pos.y, rotation: 18, alpha: 0 }, 6000).call((index: number) => {
+                            card.anchorOffsetX = 0;
+                            card.anchorOffsetY = 0;
+                            //egret.Tween.get(card).to({ rotation: -18 }, 6000, egret.Ease.sineIn);
+                            card.x = this.orginPlayerCard[data.param.index][index].x;
+                            card.y = this.orginPlayerCard[data.param.index][index].y;
+                            console.log("我的index2", this.orginPlayerCard[data.param.index][index].x);
+                            console.log("我的index2", this.orginPlayerCard[data.param.index][index].y);
+                            card.alpha = 1;
+                        }, this, [i]);
+                        //egret.Tween.get(card).to({ rotation: 18 }, 6000, egret.Ease.sineIn);
+
+                    }
+                }*/
             }
             /************************************** */
             this.operateTimer.stop();
@@ -1376,36 +1462,27 @@ class ZJHView extends eui.Component {
     /**结算游戏结束 */
     private settleaccount(data: any): void {
         if (data.param.code == 200) {
-            if (this.playerOperatingState[data.param.index] != 2) {
-                let poke = {
-                    type: data.param.cardGenre,//牌型
-                    value: data.param.cardtype //牌值
-                };
-                for (var i = 0; i < 3; i++) {
-                    let val = poke.value[i];
-                    var card = this['grpCard' + data.param.index + '_' + i];
-                    card.source = 'gf_poker0_png';
-                    egret.Tween.get(card).to({ scaleX: 0 }, 200).call(function () {
-                        this[0].source = 'qznn_card_' + this[1];
-                        egret.Tween.get(this[0]).to({ scaleX: 1 }, 100);
-                    }, [card, val]);
-                }
+            let poke = {
+                type: data.param.cardGenre,//牌型
+                value: data.param.cardtype //牌值
+            };
+            for (var i = 0; i < 3; i++) {
+                let val = poke.value[i];
+                var card = this['grpCard' + data.param.index + '_' + i];
+                card.source = 'gf_poker0_png';
+                egret.Tween.get(card).to({ scaleX: 0 }, 200).call(function () {
+                    this[0].source = 'qznn_card_' + this[1];
+                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 100);
+                }, [card, val]);
             }
-            this.operateTimer.stop();
-            if (this.anniuliuguang) {
-                this.anniuliuguang.stop("Sprite");
-                if (this.anniuliuguang.parent) {
-                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-                    this.anniuliuguang = null;
+            /**赢得是玩家 */
+            if (data.param.index == 0) {
+                if (this.playerOperatingState[data.param.index] != 2) {
+                    this['imgCardbg' + data.param.index].source = 'gf_pxzs_png';
+                    this['imgCardType' + data.param.index].source = ZJHUtil.getInstance().getCardType(poke.type);
+                } else if (this.playerOperatingState[data.param.index] == 2) {
+
                 }
-            }
-            if (data.param.index != 0) {
-                var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
-                this.zjheffectwin2.x = point.x;
-                this.zjheffectwin2.y = point.y;
-                this.addChild(this.zjheffectwin2);
-                this.zjheffectwin2.play();
-            } else if (data.param.index == 0) {
                 var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
                 this.zjheffectwin0.x = point.x;
                 this.zjheffectwin0.y = point.y;
@@ -1420,10 +1497,56 @@ class ZJHView extends eui.Component {
                     this.niyingeffect.visible = false;
                 }, 2000)
             }
+            /**赢得是其他玩家 */
+            else if (data.param.index != 0) {
+                if (this.playerOperatingState[data.param.index] != 2) {
+                    this['imgCardbg' + data.param.index].source = 'gf_pxzs_png';
+                    this['imgCardType' + data.param.index].source = ZJHUtil.getInstance().getCardType(poke.type);
+                } else if (this.playerOperatingState[data.param.index] == 2) {
+
+                }
+                var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
+                this.zjheffectwin2.x = point.x;
+                this.zjheffectwin2.y = point.y;
+                this.addChild(this.zjheffectwin2);
+                this.zjheffectwin2.play();
+            }
+            this.operateTimer.stop();
+            if (this.anniuliuguang) {
+                this.anniuliuguang.stop("Sprite");
+                if (this.anniuliuguang.parent) {
+                    this.anniuliuguang.parent.removeChild(this.anniuliuguang);
+                    this.anniuliuguang = null;
+                }
+            }
+            for (let i = 0; i < 5; i++) {
+                this['img_light' + i].visible = false;
+            }
             this.operateTimer.stop();
             this.abandonStateBtn();
+/**
+ * 2018.12.19+++++++++++++++++++++++++++
+ * 
+ * 
+ */
+            if (data.param.json.winGlods > 0) {
+                let label = new eui.BitmapLabel;
+                let str: string = "";
+                label.font = "qznn_win_fnt";
+                label.text = "0";
+                str = "+";
+                label.x = 400;
+                label.y = 300;
+
+                this.grpHead0.addChild(label);
+                this.turn_score_arr.push(label);
+                uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data.param.json.winGlods / 100, regulator: 50 }, str);
+            }
+/** ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ */
         }
     }
+    public turn_score_arr: eui.BitmapLabel[] = [];
 
     //加入房间新玩家
     public playerJoinRoom(data): void {
@@ -1689,6 +1812,7 @@ class ZJHView extends eui.Component {
             this['imgstatus' + index].source = '';
             this['labstatus' + index].text = '';
             this['imgCardbg' + index].source = '';
+            this['imgbipai_lose' + index].source = '';
             this['imgCardType' + index].source = '';
             this['imgstatus_bg' + index].alpha = 1;
             this['imgstatus' + index].alpha = 1;
@@ -1718,7 +1842,7 @@ class ZJHView extends eui.Component {
         this.dizhu = 0;
         this.shortTimegameStatue = 0;
         this.nowroundNum = 0;
-
+        this.nowPlayerNum = 0;
         this.numtime = 0;
         this.betarr = [];
         this.callnum = 0;
@@ -1746,6 +1870,12 @@ class ZJHView extends eui.Component {
         this.grpCoins.removeChildren();
         this.playerSeria = 0;
         this.playersData = [];
+
+        for (let i = 0; i < this.turn_score_arr.length; i++) {
+            this.turn_score_arr[i].parent.removeChild(this.turn_score_arr[i]);
+        }
+        this.turn_score_arr = [];
+
         //this.labCountdown0.text = '0';
         //this.labCountdown1.text = '0';
         /*this.selfbetsNum = { '1': 0, '2': 0, '3': 0, '4': 0 };
@@ -1800,9 +1930,9 @@ class ZJHView extends eui.Component {
         EventUtil.removeEventListener(EventConst.onUserExceWaiveCard, this.disAutoCard, this);
         EventUtil.removeEventListener(EventConst.onCheckout, this.settleaccount, this);
         EventUtil.removeEventListener(EventConst.onAiOperate, this.aioperate, this);
-        EventUtil.removeEventListener(EventConst.onUserLeave, this.cancelpapre, this);
+        EventUtil.removeEventListener(EventConst.onUserXClose, this.cancelpapre, this);
         EventUtil.removeEventListener(EventConst.onUserIsLeave, this.onClickoutBtn, this);
-        //EventUtil.removeEventListener(EventConst.onUserOutRoom, this.ocClickContuite, this);
+        //EventUtil.addEventListener(EventConst.onUserXClose, this.cancelpapre, this);
         this._btn_menu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_kanpai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_jiazhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
@@ -1820,10 +1950,10 @@ class ZJHView extends eui.Component {
         this._btn_autogenzhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_cancelautogenzhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
 
-        this["grpHead" + 1].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this["grpHead" + 2].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this["grpHead" + 3].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
-        this["grpHead" + 4].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 1].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 2].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 3].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
+        this["img_bipailight" + 4].removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_out.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_setting.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);
         this._btn_record.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClick, this);

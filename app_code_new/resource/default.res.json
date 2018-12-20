@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
 			"name": "preload"
 		},
 		{
@@ -21,7 +21,7 @@
 			"name": "zhajinhua"
 		},
 		{
-			"keys": "loding_json,loding_bg_jpg",
+			"keys": "loding_json,loding_bg_jpg,bjl_00_zero_mp3,bjl_01_deal_mp3,bjl_02_start_mp3,bjl_03_stop_mp3,bjl_08_player_mp3,bjl_09_banker_mp3,bjl_10_draw_mp3,bjl_11_one_mp3,bjl_12_two_mp3,bjl_13_three_mp3,bjl_14_four_mp3,bjl_15_five_mp3,bjl_16_six_mp3,bjl_17_seven_mp3,bjl_18_eight_mp3,bjl_19_nine_mp3,bjl_20_bankwin_mp3,bjl_21_playwin_mp3,bjl_22_tie_mp3,bjl_35_bg_imi_mp3,bjl_37_bg_play_mp3,lh_chipfly_long_mp3,Special_menu_mp3,gold_diaoluo_mp3,nn_gamestart_mp3,nn_LampEnd_mp3,nn_LampRun_mp3,nn_montageerror_mp3,nn_wingold_mp3,nn.dealCard_mp3,nn.end_mp3,nn.jackpot_mp3,nn.niu0_mp3,nn.niu1_mp3,nn.niu10_mp3,nn.niu11_mp3,nn.niu12_mp3,nn.niu13_mp3,nn.niu14_mp3,nn.niu2_mp3,nn.niu3_mp3,nn.niu4_mp3,nn.niu5_mp3,nn.niu6_mp3,nn.niu7_mp3,nn.niu8_mp3,nn.niu9_mp3,nn.niuniu_mp3,nn.openCard_mp3,nn.playNiu5hua_mp3,nn.playNiuXiao5_mp3,nn.playNiuZhadan_mp3,nn.stake_mp3,nn.start_mp3,nn.tp_mp3,nn.ts_mp3,qznn_bg_mp3,qznn_tongpei_mp3,qznn_win_all_mp3,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_0_mp3,bar_game_start_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3,tbnn_gamebgMusic_mp3,jh.dealCard_mp3,jh.end_mp3,jh.jackpot_mp3,jh.openCard_mp3,jh.stake_mp3,jh.start_mp3,jh.tp_mp3,jh.ts_mp3,bg_input-code_png,bg_input_png,bg_inputphone_png,bg_wxtswindow_png,bg_yhinput_png,bindbankcard_png,bindphon_down_btn_png,bindphon_up_btn_png,boy_btn_png,btn_bindbankcard_down_png,btn_bindbankcard_up_png,btn_bindzfb_down_png,btn_bindzfb_up_png,btn_getcode_down_png,btn_getcode_up_png,btn_info_down_png,btn_manager_down_png,btn_manager_up_png,btn_mypack_up_png,btn_mywallet_down_png,btn_mywallet_up_png,btn_pack_down_png,btn_pack_up_png,btn_recharge_down_png,btn_recharge_up_png,btn_set_down_png,btn_set_up_png,changeNam_down_btn_png,changeNam_up_btn_png,copy_down_btn_png,copy_up_btn_png,girl_btn_png,Img_packItem_bg_png,Img_xl_bg_png,lab_bankcard_png,lab_bindphone_png,lab_bindzfb_png,lab_Carry cash_png,lab_changname_png,lab_cn_png,lab_nhsykzt_png,lab_nzzbddsjh_png,lab_pay_png,lab_safebox_png,lab_tittle_png,lab_touxiang_png,lab_ts_png,lab_tshyhk_png,lab_tshzfb_png,lab_writeyhinfo_png,lab_yhts_png,lab_zfbts1_png,lab_zfbts2_png,tittle_info_png,VIP_down_btn_png,VIP_up_btn_png,xaila_png,bg_qznn_niujiao_ske_json,bg_qznn_niujiao_tex_json,bg_qznn_niujiao_tex_png",
 			"name": "load"
 		}
 	],
@@ -71,346 +71,6 @@
 			"url": "assets/game/baijiale/img_zuoxia.png",
 			"type": "image",
 			"name": "img_zuoxia_png"
-		},
-		{
-			"url": "assets/game/brnn/bg_sz.png",
-			"type": "image",
-			"name": "bg_sz_png"
-		},
-		{
-			"url": "assets/game/brnn/btn_bg.png",
-			"type": "image",
-			"name": "btn_bg2_png"
-		},
-		{
-			"url": "assets/game/brnn/btn_brnn_up_menu.png",
-			"type": "image",
-			"name": "btn_brnn_up_menu_png"
-		},
-		{
-			"url": "assets/game/brnn/btn_brnn_up_return.png",
-			"type": "image",
-			"name": "btn_brnn_up_return_png"
-		},
-		{
-			"url": "assets/game/brnn/btn_brnn_up_taking.png",
-			"type": "image",
-			"name": "btn_brnn_up_taking_png"
-		},
-		{
-			"url": "assets/game/brnn/btn_brnn_up_yuyin.png",
-			"type": "image",
-			"name": "btn_brnn_up_yuyin_png"
-		},
-		{
-			"url": "assets/game/brnn/Img_brnn_goldbg.png",
-			"type": "image",
-			"name": "Img_brnn_goldbg_png"
-		},
-		{
-			"url": "assets/game/brnn/Img_brnn_playerbg.png",
-			"type": "image",
-			"name": "Img_brnn_playerbg_png"
-		},
-		{
-			"url": "assets/game/brnn/Img_ds.png",
-			"type": "image",
-			"name": "Img_ds_png"
-		},
-		{
-			"url": "assets/game/brnn/Img_gold.png",
-			"type": "image",
-			"name": "Img_gold_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bg_input-code.png",
-			"type": "image",
-			"name": "bg_input-code_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bg_input.png",
-			"type": "image",
-			"name": "bg_input_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bg_inputphone.png",
-			"type": "image",
-			"name": "bg_inputphone_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bg_wxtswindow.png",
-			"type": "image",
-			"name": "bg_wxtswindow_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bg_yhinput.png",
-			"type": "image",
-			"name": "bg_yhinput_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bindbankcard.png",
-			"type": "image",
-			"name": "bindbankcard_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bindphon_down_btn.png",
-			"type": "image",
-			"name": "bindphon_down_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/bindphon_up_btn.png",
-			"type": "image",
-			"name": "bindphon_up_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/boy_btn.png",
-			"type": "image",
-			"name": "boy_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_bindbankcard_down.png",
-			"type": "image",
-			"name": "btn_bindbankcard_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_bindbankcard_up.png",
-			"type": "image",
-			"name": "btn_bindbankcard_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_bindzfb_down.png",
-			"type": "image",
-			"name": "btn_bindzfb_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_bindzfb_up.png",
-			"type": "image",
-			"name": "btn_bindzfb_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_getcode_down.png",
-			"type": "image",
-			"name": "btn_getcode_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_getcode_up.png",
-			"type": "image",
-			"name": "btn_getcode_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_info_down.png",
-			"type": "image",
-			"name": "btn_info_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_info_up.png",
-			"type": "image",
-			"name": "btn_info_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_manager_down.png",
-			"type": "image",
-			"name": "btn_manager_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_manager_up.png",
-			"type": "image",
-			"name": "btn_manager_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_mypack_up.png",
-			"type": "image",
-			"name": "btn_mypack_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_mywallet_down.png",
-			"type": "image",
-			"name": "btn_mywallet_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_mywallet_up.png",
-			"type": "image",
-			"name": "btn_mywallet_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_pack_down.png",
-			"type": "image",
-			"name": "btn_pack_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_pack_up.png",
-			"type": "image",
-			"name": "btn_pack_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_recharge_down.png",
-			"type": "image",
-			"name": "btn_recharge_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_recharge_up.png",
-			"type": "image",
-			"name": "btn_recharge_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_set_down.png",
-			"type": "image",
-			"name": "btn_set_down_png"
-		},
-		{
-			"url": "assets/game/playerInfo/btn_set_up.png",
-			"type": "image",
-			"name": "btn_set_up_png"
-		},
-		{
-			"url": "assets/game/playerInfo/changeNam_down_btn.png",
-			"type": "image",
-			"name": "changeNam_down_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/changeNam_up_btn.png",
-			"type": "image",
-			"name": "changeNam_up_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/copy_down_btn.png",
-			"type": "image",
-			"name": "copy_down_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/copy_up_btn.png",
-			"type": "image",
-			"name": "copy_up_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/girl_btn.png",
-			"type": "image",
-			"name": "girl_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/Img_packItem_bg.png",
-			"type": "image",
-			"name": "Img_packItem_bg_png"
-		},
-		{
-			"url": "assets/game/playerInfo/Img_xl_bg.png",
-			"type": "image",
-			"name": "Img_xl_bg_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_bankcard.png",
-			"type": "image",
-			"name": "lab_bankcard_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_bindphone.png",
-			"type": "image",
-			"name": "lab_bindphone_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_bindzfb.png",
-			"type": "image",
-			"name": "lab_bindzfb_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_Carry cash.png",
-			"type": "image",
-			"name": "lab_Carry cash_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_changname.png",
-			"type": "image",
-			"name": "lab_changname_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_cn.png",
-			"type": "image",
-			"name": "lab_cn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_nhsykzt.png",
-			"type": "image",
-			"name": "lab_nhsykzt_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_nzzbddsjh.png",
-			"type": "image",
-			"name": "lab_nzzbddsjh_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_pay.png",
-			"type": "image",
-			"name": "lab_pay_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_safebox.png",
-			"type": "image",
-			"name": "lab_safebox_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_tittle.png",
-			"type": "image",
-			"name": "lab_tittle_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_touxiang.png",
-			"type": "image",
-			"name": "lab_touxiang_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_ts.png",
-			"type": "image",
-			"name": "lab_ts_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_tshyhk.png",
-			"type": "image",
-			"name": "lab_tshyhk_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_tshzfb.png",
-			"type": "image",
-			"name": "lab_tshzfb_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_writeyhinfo.png",
-			"type": "image",
-			"name": "lab_writeyhinfo_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_yhts.png",
-			"type": "image",
-			"name": "lab_yhts_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_zfbts1.png",
-			"type": "image",
-			"name": "lab_zfbts1_png"
-		},
-		{
-			"url": "assets/game/playerInfo/lab_zfbts2.png",
-			"type": "image",
-			"name": "lab_zfbts2_png"
-		},
-		{
-			"url": "assets/game/playerInfo/tittle_info.png",
-			"type": "image",
-			"name": "tittle_info_png"
-		},
-		{
-			"url": "assets/game/playerInfo/VIP_down_btn.png",
-			"type": "image",
-			"name": "VIP_down_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/VIP_up_btn.png",
-			"type": "image",
-			"name": "VIP_up_btn_png"
-		},
-		{
-			"url": "assets/game/playerInfo/xaila.png",
-			"type": "image",
-			"name": "xaila_png"
 		},
 		{
 			"url": "assets/game/recharge/btn_1000money_0.png",
@@ -3263,221 +2923,6 @@
 			"name": "zjh_effect_xz_tex005_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_0.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_0_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_1.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_1_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_2.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_2_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_3.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_3_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_4.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_4_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_5.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_5_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_6.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_6_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_7.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_7_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_8.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_8_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_bg_9.png",
-			"type": "image",
-			"name": "brnn_betBtn_bg_9_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_betBtn_light.png",
-			"type": "image",
-			"name": "brnn_betBtn_light_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_1_1.png",
-			"type": "image",
-			"name": "brnn_couma_1_1_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_1_2.png",
-			"type": "image",
-			"name": "brnn_couma_1_2_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_1_3.png",
-			"type": "image",
-			"name": "brnn_couma_1_3_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_1_4.png",
-			"type": "image",
-			"name": "brnn_couma_1_4_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_1_5.png",
-			"type": "image",
-			"name": "brnn_couma_1_5_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_2_1.png",
-			"type": "image",
-			"name": "brnn_couma_2_1_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_2_2.png",
-			"type": "image",
-			"name": "brnn_couma_2_2_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_2_3.png",
-			"type": "image",
-			"name": "brnn_couma_2_3_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_2_4.png",
-			"type": "image",
-			"name": "brnn_couma_2_4_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_2_5.png",
-			"type": "image",
-			"name": "brnn_couma_2_5_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_3_1.png",
-			"type": "image",
-			"name": "brnn_couma_3_1_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_3_2.png",
-			"type": "image",
-			"name": "brnn_couma_3_2_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_3_3.png",
-			"type": "image",
-			"name": "brnn_couma_3_3_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_3_4.png",
-			"type": "image",
-			"name": "brnn_couma_3_4_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_3_5.png",
-			"type": "image",
-			"name": "brnn_couma_3_5_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_4_1.png",
-			"type": "image",
-			"name": "brnn_couma_4_1_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_4_2.png",
-			"type": "image",
-			"name": "brnn_couma_4_2_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_4_3.png",
-			"type": "image",
-			"name": "brnn_couma_4_3_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_4_4.png",
-			"type": "image",
-			"name": "brnn_couma_4_4_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_couma_5_5.png",
-			"type": "image",
-			"name": "brnn_couma_5_5_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_alarm.png",
-			"type": "image",
-			"name": "brnn_game_alarm_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_bg.png",
-			"type": "image",
-			"name": "brnn_game_bg_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_bgdown.png",
-			"type": "image",
-			"name": "brnn_game_bgdown_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_bigbg.png",
-			"type": "image",
-			"name": "brnn_game_bigbg_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_hardbg.png",
-			"type": "image",
-			"name": "brnn_game_hardbg_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_head.png",
-			"type": "image",
-			"name": "brnn_game_head_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_moreplayer.png",
-			"type": "image",
-			"name": "brnn_game_moreplayer_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_open.png",
-			"type": "image",
-			"name": "brnn_game_open_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_open1.png",
-			"type": "image",
-			"name": "brnn_game_open1_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_game_pitch1.png",
-			"type": "image",
-			"name": "brnn_game_pitch1_png"
-		},
-		{
-			"url": "assets/game/brnn/brnn_tiandihengtiao.png",
-			"type": "image",
-			"name": "brnn_tiandihengtiao_png"
-		},
-		{
-			"url": "assets/game/brnn/lh_game_left_headBg2.png",
-			"type": "image",
-			"name": "lh_game_left_headBg2_png"
-		},
-		{
 			"url": "assets/game/zhajh/Img_zjh_headbg.png",
 			"type": "image",
 			"name": "Img_zjh_headbg_png"
@@ -4411,46 +3856,6 @@
 			"url": "assets/game/zhajh/Btn/zidonggenzhu.png",
 			"type": "image",
 			"name": "zidonggenzhu_png"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.dealCard.mp3",
-			"type": "sound",
-			"name": "jh.dealCard_mp3"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.end.mp3",
-			"type": "sound",
-			"name": "jh.end_mp3"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.jackpot.mp3",
-			"type": "sound",
-			"name": "jh.jackpot_mp3"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.openCard.mp3",
-			"type": "sound",
-			"name": "jh.openCard_mp3"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.stake.mp3",
-			"type": "sound",
-			"name": "jh.stake_mp3"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.start.mp3",
-			"type": "sound",
-			"name": "jh.start_mp3"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.tp.mp3",
-			"type": "sound",
-			"name": "jh.tp_mp3"
-		},
-		{
-			"url": "assets/game/zhajh/music/jh.ts.mp3",
-			"type": "sound",
-			"name": "jh.ts_mp3"
 		},
 		{
 			"url": "assets/game/zhajh/navigation/brnn_imformation.png",
@@ -6605,6 +6010,186 @@
 			"name": "brnn_fapai_5_tex_png"
 		},
 		{
+			"url": "assets/sound/zjh/jh.openCard.mp3",
+			"type": "sound",
+			"name": "jh.openCard_mp3"
+		},
+		{
+			"url": "assets/sound/zjh/jh.jackpot.mp3",
+			"type": "sound",
+			"name": "jh.jackpot_mp3"
+		},
+		{
+			"url": "assets/sound/zjh/jh.tp.mp3",
+			"type": "sound",
+			"name": "jh.tp_mp3"
+		},
+		{
+			"url": "assets/sound/zjh/jh.start.mp3",
+			"type": "sound",
+			"name": "jh.start_mp3"
+		},
+		{
+			"url": "assets/sound/zjh/jh.ts.mp3",
+			"type": "sound",
+			"name": "jh.ts_mp3"
+		},
+		{
+			"url": "assets/sound/zjh/jh.stake.mp3",
+			"type": "sound",
+			"name": "jh.stake_mp3"
+		},
+		{
+			"url": "assets/sound/zjh/jh.dealCard.mp3",
+			"type": "sound",
+			"name": "jh.dealCard_mp3"
+		},
+		{
+			"url": "assets/sound/zjh/jh.end.mp3",
+			"type": "sound",
+			"name": "jh.end_mp3"
+		},
+		{
+			"url": "assets/game/brnn/Img_brnn_goldbg.png",
+			"type": "image",
+			"name": "Img_brnn_goldbg_png"
+		},
+		{
+			"url": "assets/game/brnn/Img_brnn_playerbg.png",
+			"type": "image",
+			"name": "Img_brnn_playerbg_png"
+		},
+		{
+			"url": "assets/game/brnn/Img_ds.png",
+			"type": "image",
+			"name": "Img_ds_png"
+		},
+		{
+			"url": "assets/game/brnn/Img_gold.png",
+			"type": "image",
+			"name": "Img_gold_png"
+		},
+		{
+			"url": "assets/game/brnn/bg_sz.png",
+			"type": "image",
+			"name": "bg_sz_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_0.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_0_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_1.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_2.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_3.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_4.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_5.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_5_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_6.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_6_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_7.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_7_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_8.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_8_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_bg_9.png",
+			"type": "image",
+			"name": "brnn_betBtn_bg_9_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betBtn_light.png",
+			"type": "image",
+			"name": "brnn_betBtn_light_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betTotal_txt.fnt",
+			"type": "font",
+			"name": "brnn_betTotal_txt_fnt"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betTotal_txt.png",
+			"type": "image",
+			"name": "brnn_betTotal_txt_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betbtn_txt.fnt",
+			"type": "font",
+			"name": "brnn_betbtn_txt_fnt"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betbtn_txt.png",
+			"type": "image",
+			"name": "brnn_betbtn_txt_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betself_txt.fnt",
+			"type": "font",
+			"name": "brnn_betself_txt_fnt"
+		},
+		{
+			"url": "assets/game/brnn/brnn_betself_txt.png",
+			"type": "image",
+			"name": "brnn_betself_txt_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_100.png",
+			"type": "image",
+			"name": "brnn_card_100_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_101.png",
+			"type": "image",
+			"name": "brnn_card_101_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_102.png",
+			"type": "image",
+			"name": "brnn_card_102_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_103.png",
+			"type": "image",
+			"name": "brnn_card_103_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_104.png",
+			"type": "image",
+			"name": "brnn_card_104_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_card_105.png",
+			"type": "image",
+			"name": "brnn_card_105_png"
+		},
+		{
 			"url": "assets/game/brnn/brnn_card_106.png",
 			"type": "image",
 			"name": "brnn_card_106_png"
@@ -6840,14 +6425,179 @@
 			"name": "brnn_card_413_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_effect_begining_tex.png",
+			"url": "assets/game/brnn/brnn_couma_1_1.png",
 			"type": "image",
-			"name": "brnn_effect_begining_tex2_png"
+			"name": "brnn_couma_1_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_1_2.png",
+			"type": "image",
+			"name": "brnn_couma_1_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_1_3.png",
+			"type": "image",
+			"name": "brnn_couma_1_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_1_4.png",
+			"type": "image",
+			"name": "brnn_couma_1_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_1_5.png",
+			"type": "image",
+			"name": "brnn_couma_1_5_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_2_1.png",
+			"type": "image",
+			"name": "brnn_couma_2_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_2_2.png",
+			"type": "image",
+			"name": "brnn_couma_2_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_2_3.png",
+			"type": "image",
+			"name": "brnn_couma_2_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_2_4.png",
+			"type": "image",
+			"name": "brnn_couma_2_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_2_5.png",
+			"type": "image",
+			"name": "brnn_couma_2_5_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_3_1.png",
+			"type": "image",
+			"name": "brnn_couma_3_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_3_2.png",
+			"type": "image",
+			"name": "brnn_couma_3_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_3_3.png",
+			"type": "image",
+			"name": "brnn_couma_3_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_3_4.png",
+			"type": "image",
+			"name": "brnn_couma_3_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_3_5.png",
+			"type": "image",
+			"name": "brnn_couma_3_5_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_4_1.png",
+			"type": "image",
+			"name": "brnn_couma_4_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_4_2.png",
+			"type": "image",
+			"name": "brnn_couma_4_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_4_3.png",
+			"type": "image",
+			"name": "brnn_couma_4_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_4_4.png",
+			"type": "image",
+			"name": "brnn_couma_4_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_couma_5_5.png",
+			"type": "image",
+			"name": "brnn_couma_5_5_png"
 		},
 		{
 			"url": "assets/game/brnn/brnn_effect_begining_tex1.png",
 			"type": "image",
 			"name": "brnn_effect_begining_tex1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_alarm.png",
+			"type": "image",
+			"name": "brnn_game_alarm_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_bg.png",
+			"type": "image",
+			"name": "brnn_game_bg_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_bgdown.png",
+			"type": "image",
+			"name": "brnn_game_bgdown_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_bigbg.png",
+			"type": "image",
+			"name": "brnn_game_bigbg_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_hardbg.png",
+			"type": "image",
+			"name": "brnn_game_hardbg_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_head.png",
+			"type": "image",
+			"name": "brnn_game_head_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_moreplayer.png",
+			"type": "image",
+			"name": "brnn_game_moreplayer_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_open.png",
+			"type": "image",
+			"name": "brnn_game_open_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_open1.png",
+			"type": "image",
+			"name": "brnn_game_open1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_pitch.png",
+			"type": "image",
+			"name": "brnn_game_pitch_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_pitch1.png",
+			"type": "image",
+			"name": "brnn_game_pitch1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_tiandihengtiao.png",
+			"type": "image",
+			"name": "brnn_tiandihengtiao_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_timecount_txt.fnt",
+			"type": "font",
+			"name": "brnn_timecount_txt_fnt"
+		},
+		{
+			"url": "assets/game/brnn/brnn_timecount_txt.png",
+			"type": "image",
+			"name": "brnn_timecount_txt_png"
 		},
 		{
 			"url": "assets/game/brnn/brnntype_bgimg_1.png",
@@ -6880,31 +6630,6 @@
 			"name": "brnntype_lose_1_png"
 		},
 		{
-			"url": "assets/game/brnn/brnntype_lose_3.png",
-			"type": "image",
-			"name": "brnntype_lose_3_png"
-		},
-		{
-			"url": "assets/game/brnn/brnntype_lose_4.png",
-			"type": "image",
-			"name": "brnntype_lose_4_png"
-		},
-		{
-			"url": "assets/game/brnn/brnntype_lose_6.png",
-			"type": "image",
-			"name": "brnntype_lose_6_png"
-		},
-		{
-			"url": "assets/game/brnn/brnntype_lose_7.png",
-			"type": "image",
-			"name": "brnntype_lose_7_png"
-		},
-		{
-			"url": "assets/game/brnn/brnntype_lose_9.png",
-			"type": "image",
-			"name": "brnntype_lose_9_png"
-		},
-		{
 			"url": "assets/game/brnn/brnntype_lose_10.png",
 			"type": "image",
 			"name": "brnntype_lose_10_png"
@@ -6930,6 +6655,31 @@
 			"name": "brnntype_lose_14_png"
 		},
 		{
+			"url": "assets/game/brnn/brnntype_lose_3.png",
+			"type": "image",
+			"name": "brnntype_lose_3_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_4.png",
+			"type": "image",
+			"name": "brnntype_lose_4_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_6.png",
+			"type": "image",
+			"name": "brnntype_lose_6_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_7.png",
+			"type": "image",
+			"name": "brnntype_lose_7_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_9.png",
+			"type": "image",
+			"name": "brnntype_lose_9_png"
+		},
+		{
 			"url": "assets/game/brnn/brnntype_normal_0.png",
 			"type": "image",
 			"name": "brnntype_normal_0_png"
@@ -6938,6 +6688,26 @@
 			"url": "assets/game/brnn/brnntype_normal_1.png",
 			"type": "image",
 			"name": "brnntype_normal_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_11.png",
+			"type": "image",
+			"name": "brnntype_normal_11_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_12.png",
+			"type": "image",
+			"name": "brnntype_normal_12_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_13.png",
+			"type": "image",
+			"name": "brnntype_normal_13_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_normal_14.png",
+			"type": "image",
+			"name": "brnntype_normal_14_png"
 		},
 		{
 			"url": "assets/game/brnn/brnntype_normal_2.png",
@@ -6980,26 +6750,6 @@
 			"name": "brnntype_normal_9_png"
 		},
 		{
-			"url": "assets/game/brnn/brnntype_normal_11.png",
-			"type": "image",
-			"name": "brnntype_normal_11_png"
-		},
-		{
-			"url": "assets/game/brnn/brnntype_normal_12.png",
-			"type": "image",
-			"name": "brnntype_normal_12_png"
-		},
-		{
-			"url": "assets/game/brnn/brnntype_normal_13.png",
-			"type": "image",
-			"name": "brnntype_normal_13_png"
-		},
-		{
-			"url": "assets/game/brnn/brnntype_normal_14.png",
-			"type": "image",
-			"name": "brnntype_normal_14_png"
-		},
-		{
 			"url": "assets/game/brnn/brnntype_win_0.png",
 			"type": "image",
 			"name": "brnntype_win_0_png"
@@ -7008,6 +6758,26 @@
 			"url": "assets/game/brnn/brnntype_win_1.png",
 			"type": "image",
 			"name": "brnntype_win_1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_11.png",
+			"type": "image",
+			"name": "brnntype_win_11_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_12.png",
+			"type": "image",
+			"name": "brnntype_win_12_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_13.png",
+			"type": "image",
+			"name": "brnntype_win_13_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_14.png",
+			"type": "image",
+			"name": "brnntype_win_14_png"
 		},
 		{
 			"url": "assets/game/brnn/brnntype_win_2.png",
@@ -7050,24 +6820,34 @@
 			"name": "brnntype_win_9_png"
 		},
 		{
-			"url": "assets/game/brnn/brnntype_win_11.png",
+			"url": "assets/game/brnn/btn_bg.png",
 			"type": "image",
-			"name": "brnntype_win_11_png"
+			"name": "btn_bg_png"
 		},
 		{
-			"url": "assets/game/brnn/brnntype_win_12.png",
+			"url": "assets/game/brnn/btn_brnn_up_menu.png",
 			"type": "image",
-			"name": "brnntype_win_12_png"
+			"name": "btn_brnn_up_menu_png"
 		},
 		{
-			"url": "assets/game/brnn/brnntype_win_13.png",
+			"url": "assets/game/brnn/btn_brnn_up_return.png",
 			"type": "image",
-			"name": "brnntype_win_13_png"
+			"name": "btn_brnn_up_return_png"
 		},
 		{
-			"url": "assets/game/brnn/brnntype_win_14.png",
+			"url": "assets/game/brnn/btn_brnn_up_taking.png",
 			"type": "image",
-			"name": "brnntype_win_14_png"
+			"name": "btn_brnn_up_taking_png"
+		},
+		{
+			"url": "assets/game/brnn/btn_brnn_up_yuyin.png",
+			"type": "image",
+			"name": "btn_brnn_up_yuyin_png"
+		},
+		{
+			"url": "assets/game/brnn/lh_game_left_headBg2.png",
+			"type": "image",
+			"name": "lh_game_left_headBg2_png"
 		},
 		{
 			"url": "assets/game/brnn/card/brnn_card_0.png",
@@ -7345,44 +7125,309 @@
 			"name": "brnn_card_9_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_53.png",
+			"url": "assets/game/playerInfo/btn_mypack_up.png",
 			"type": "image",
-			"name": "brnn_card_532_png"
+			"name": "btn_mypack_up_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_54.png",
+			"url": "assets/game/playerInfo/btn_mywallet_up.png",
 			"type": "image",
-			"name": "brnn_card_542_png"
+			"name": "btn_mywallet_up_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_100.png",
+			"url": "assets/game/playerInfo/btn_pack_up.png",
 			"type": "image",
-			"name": "brnn_card_100_png"
+			"name": "btn_pack_up_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_101.png",
+			"url": "assets/game/playerInfo/btn_recharge_down.png",
 			"type": "image",
-			"name": "brnn_card_101_png"
+			"name": "btn_recharge_down_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_102.png",
+			"url": "assets/game/playerInfo/btn_pack_down.png",
 			"type": "image",
-			"name": "brnn_card_102_png"
+			"name": "btn_pack_down_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_103.png",
+			"url": "assets/game/playerInfo/btn_recharge_up.png",
 			"type": "image",
-			"name": "brnn_card_103_png"
+			"name": "btn_recharge_up_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_104.png",
+			"url": "assets/game/playerInfo/btn_set_down.png",
 			"type": "image",
-			"name": "brnn_card_104_png"
+			"name": "btn_set_down_png"
 		},
 		{
-			"url": "assets/game/brnn/brnn_card_105.png",
+			"url": "assets/game/playerInfo/btn_set_up.png",
 			"type": "image",
-			"name": "brnn_card_105_png"
+			"name": "btn_set_up_png"
+		},
+		{
+			"url": "assets/game/playerInfo/changeNam_down_btn.png",
+			"type": "image",
+			"name": "changeNam_down_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/changeNam_up_btn.png",
+			"type": "image",
+			"name": "changeNam_up_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/copy_down_btn.png",
+			"type": "image",
+			"name": "copy_down_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/copy_up_btn.png",
+			"type": "image",
+			"name": "copy_up_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/girl_btn.png",
+			"type": "image",
+			"name": "girl_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_mywallet_down.png",
+			"type": "image",
+			"name": "btn_mywallet_down_png"
+		},
+		{
+			"url": "assets/game/playerInfo/Img_packItem_bg.png",
+			"type": "image",
+			"name": "Img_packItem_bg_png"
+		},
+		{
+			"url": "assets/game/playerInfo/Img_xl_bg.png",
+			"type": "image",
+			"name": "Img_xl_bg_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_bindphone.png",
+			"type": "image",
+			"name": "lab_bindphone_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_bindzfb.png",
+			"type": "image",
+			"name": "lab_bindzfb_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_bankcard.png",
+			"type": "image",
+			"name": "lab_bankcard_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_Carry cash.png",
+			"type": "image",
+			"name": "lab_Carry cash_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_changname.png",
+			"type": "image",
+			"name": "lab_changname_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_nhsykzt.png",
+			"type": "image",
+			"name": "lab_nhsykzt_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_cn.png",
+			"type": "image",
+			"name": "lab_cn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_nzzbddsjh.png",
+			"type": "image",
+			"name": "lab_nzzbddsjh_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_pay.png",
+			"type": "image",
+			"name": "lab_pay_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_tittle.png",
+			"type": "image",
+			"name": "lab_tittle_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_safebox.png",
+			"type": "image",
+			"name": "lab_safebox_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_touxiang.png",
+			"type": "image",
+			"name": "lab_touxiang_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_ts.png",
+			"type": "image",
+			"name": "lab_ts_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_tshyhk.png",
+			"type": "image",
+			"name": "lab_tshyhk_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_tshzfb.png",
+			"type": "image",
+			"name": "lab_tshzfb_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_writeyhinfo.png",
+			"type": "image",
+			"name": "lab_writeyhinfo_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_yhts.png",
+			"type": "image",
+			"name": "lab_yhts_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_zfbts1.png",
+			"type": "image",
+			"name": "lab_zfbts1_png"
+		},
+		{
+			"url": "assets/game/playerInfo/lab_zfbts2.png",
+			"type": "image",
+			"name": "lab_zfbts2_png"
+		},
+		{
+			"url": "assets/game/playerInfo/tittle_info.png",
+			"type": "image",
+			"name": "tittle_info_png"
+		},
+		{
+			"url": "assets/game/playerInfo/VIP_down_btn.png",
+			"type": "image",
+			"name": "VIP_down_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/VIP_up_btn.png",
+			"type": "image",
+			"name": "VIP_up_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/xaila.png",
+			"type": "image",
+			"name": "xaila_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bg_input.png",
+			"type": "image",
+			"name": "bg_input_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bg_input-code.png",
+			"type": "image",
+			"name": "bg_input-code_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bg_inputphone.png",
+			"type": "image",
+			"name": "bg_inputphone_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bg_wxtswindow.png",
+			"type": "image",
+			"name": "bg_wxtswindow_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bg_yhinput.png",
+			"type": "image",
+			"name": "bg_yhinput_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bindbankcard.png",
+			"type": "image",
+			"name": "bindbankcard_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bindphon_down_btn.png",
+			"type": "image",
+			"name": "bindphon_down_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/bindphon_up_btn.png",
+			"type": "image",
+			"name": "bindphon_up_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/boy_btn.png",
+			"type": "image",
+			"name": "boy_btn_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_bindbankcard_down.png",
+			"type": "image",
+			"name": "btn_bindbankcard_down_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_bindbankcard_up.png",
+			"type": "image",
+			"name": "btn_bindbankcard_up_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_bindzfb_down.png",
+			"type": "image",
+			"name": "btn_bindzfb_down_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_bindzfb_up.png",
+			"type": "image",
+			"name": "btn_bindzfb_up_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_getcode_down.png",
+			"type": "image",
+			"name": "btn_getcode_down_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_getcode_up.png",
+			"type": "image",
+			"name": "btn_getcode_up_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_info_down.png",
+			"type": "image",
+			"name": "btn_info_down_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_manager_down.png",
+			"type": "image",
+			"name": "btn_manager_down_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_manager_up.png",
+			"type": "image",
+			"name": "btn_manager_up_png"
+		},
+		{
+			"url": "assets/game/playerInfo/btn_info_up.png",
+			"type": "image",
+			"name": "btn_info_up_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.png",
+			"type": "image",
+			"name": "bg_qznn_niujiao_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_ske.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_tex_json"
 		}
 	]
 }

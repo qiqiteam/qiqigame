@@ -25,7 +25,7 @@
 	<e:Image id="img_deskgoldIcon" width="30" height="35" y="113.77" source="gf_icon_chip_sm7_png" x="659" locked="true"/>
 	<e:Label id="lab_deskGolds" text="0" x="692" y="118.3" size="25" anchorOffsetX="0" width="113" textAlign="center" bold="true" textColor="0xf2c826" locked="true"/>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true"/>
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
 		<e:Image id="grpCard4_0" x="331.58" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
 		<e:Image id="grpCard4_1" x="360.7" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
 		<e:Image id="grpCard4_2" x="389.85" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
@@ -51,6 +51,11 @@
 		<e:Image id="imgCardType2" x="1076.64" y="271.68" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
 		<e:Image id="imgCardType3" x="302.57" y="270.99" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
 		<e:Image id="imgCardType4" x="345.92" y="503.05" scaleX="1" scaleY="1" width="93.8" height="54.9" source="gf_px2_png"/>
+		<e:Image id="imgbipai_lose0" x="733.15" y="588.56" scaleX="1" scaleY="1" width="169" height="57" source="gf_flag_bpsb_png" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image id="imgbipai_lose1" x="1010" y="506" scaleX="1" scaleY="1" width="130" height="46" source="gf_flag_bpsb_png" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image id="imgbipai_lose2" x="1050" y="275" scaleX="1" scaleY="1" width="130" height="46" source="gf_flag_bpsb_png" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image id="imgbipai_lose3" x="279" y="275" scaleX="1" scaleY="1" width="130" height="46" source="gf_flag_bpsb_png" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image id="imgbipai_lose4" x="327" y="506" scaleX="1" scaleY="1" width="130" height="46" source="gf_flag_bpsb_png" anchorOffsetX="0" anchorOffsetY="0"/>
 		<e:Image id="imgis_kanpai0" x="918.01" y="581.04" scaleX="1" scaleY="1" width="100" height="46" source="gf_flag_ykp_png" visible="false"/>
 		<e:Image id="imgis_kanpai1" x="1024.01" y="510" scaleX="1" scaleY="1" width="100" height="46" source="gf_flag_ykp_png"/>
 		<e:Image id="imgis_kanpai2" x="1064" y="276" scaleX="1" scaleY="1" width="100" height="46" source="gf_flag_ykp_png"/>
@@ -91,12 +96,7 @@
 		<e:Image width="90" height="89" x="296.5" y="220.33" source="gf_flag_qp_png" id="img_abandon3"/>
 		<e:Image width="90" height="89" x="341.2" y="451" source="gf_flag_qp_png" id="img_abandon4"/>
 	</e:Group>
-	<e:Group width="1472" height="828" x="0" y="0" locked="true">
-		<e:Image id="img_bipailight1" width="300" height="230" x="1000" y="387" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
-		<e:Image id="img_bipailight2" width="300" height="230" x="1043" y="154" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
-		<e:Image id="img_bipailight3" width="300" height="230" x="118.35" y="145" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
-		<e:Image id="img_bipailight4" width="300" height="230" x="169.01" y="387" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
-	</e:Group>
+
 	<e:Group x="0" y="0" width="1472" height="828" locked="true">
 		<ns1:ZJHHead id="grpHead1" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" x="1171" y="410"/>
 		<ns1:ZJHHead id="grpHead2" width="20" height="20" skinName="ZJHHeadSkin" scaleX="1" scaleY="1" y="175" x="1211"/>
@@ -108,7 +108,13 @@
 
 
 	</e:Group>
-	<e:Group id="grpCountdown" y="412" x="706" visible="false" locked="true">
+	<e:Group width="1472" height="828" x="0" y="0">
+		<e:Image id="img_bipailight1" width="300" height="230" x="1000" y="387" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
+		<e:Image id="img_bipailight2" width="300" height="230" x="1043" y="154" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
+		<e:Image id="img_bipailight3" width="300" height="230" x="118.35" y="145" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
+		<e:Image id="img_bipailight4" width="300" height="230" x="169.01" y="387" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
+	</e:Group>
+	<e:Group id="grpCountdown" y="412" x="706" locked="true" visible="false">
 		<e:Image source="a20" y="0" x="0" />
 		<e:BitmapLabel id="labCountdown0" x="9" y="11" font="bitmapnum0_fnt" text="0" width="20" />
 		<e:BitmapLabel id="labCountdown1" x="32" y="11" font="bitmapnum0_fnt" text="0" width="20" anchorOffsetX="0" />
@@ -383,7 +389,7 @@
 		</e:skinName>
 	</e:Button>
 	<e:Group x="624.43" y="55.34" locked="true">
-		<e:Image id="img_light0" width="203" height="464" y="111.64" source="gf_game_light_png" x="0" rotation="346.77" locked="true"/>
+		<e:Image id="img_light0" width="203" height="464" y="111.64" source="gf_game_light_png" x="0" rotation="346.77"/>
 		<e:Image id="img_light1" width="203" height="464" y="163.16" source="gf_game_light_png" x="28.27" rotation="314.02" locked="true"/>
 		<e:Image id="img_light2" y="189.05" source="gf_game_light_png" x="69.66" rotation="286.75" locked="true"/>
 		<e:Image id="img_light3" y="-7.34" source="gf_game_light_png" x="78.2" rotation="72.91" locked="true"/>

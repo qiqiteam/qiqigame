@@ -326,4 +326,197 @@ module uiCore {
 
         }
     }
+
+/*
+    export class SoundManager extends eui.Group {
+
+        public effectList = [];
+        public _musicVolume:number = 1;
+        public _effectVolume:number = 1;
+
+        public get musicVolume(): boolean {
+            return this._musicVolume;
+        }
+
+        public set musicVolume(e) {
+            this._musicVolume = e,
+                this.music && this.music.volume(e)
+        }
+
+        public get effectVolume(): boolean {
+            return this._effectVolume
+        }
+
+        public set effectVolume(e) {
+            this._effectVolume = e;
+            for (var t = 0; t < this.effectList.length; t++) this.effectList[t].volume(e)
+        }
+
+        public init() {
+            this.isInited || (this.isInited = !0, e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_PAUSE, this.onAppPause, this), e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_RESUME, this.onAppResume, this))
+        }
+
+        public onAppPause() {
+            this._lastmusicVolume = this.musicVolume,
+            0 != this.musicVolume && (this.musicVolume = 0),
+            this._lasteffectVolume = this.effectVolume,
+            0 != this.effectVolume && (this.effectVolume = 0),
+            this.stopAllEffects()
+        }
+
+        public onAppResume() {
+            void 0 != this._lastmusicVolume && (this.musicVolume = this._lastmusicVolume, this._lastmusicVolume = 0),
+            void 0 != this._lasteffectVolume && (this.effectVolume = this._lasteffectVolume, this._lasteffectVolume = 0)
+        }
+
+        public playMusic(e, t, i, a, n) {
+            var s = this;
+            if (void 0 === t && (t = !0), void 0 === i && (i = 0), void 0 === a && (a = null), void 0 === n && (n = null), this.init(), this.music) {
+                if (this.musicSource == e) return;
+                this.music.stop(),
+                this.music = null
+            }
+            this.musicSource = e,
+            this.musicLoop = t;
+            var r = RES.getRes(e);
+            r ? (this.music = new Howl({
+                src: [r.url],
+                loop: t,
+                volume: this._musicVolume
+            }), this.music.play()) : RES.getResAsync(e,
+            function(e, t) {
+                t == s.musicSource && s.playMusic(s.musicSource, s.musicLoop)
+            },
+            this)
+        }
+
+        public stopMusic() {
+            this.musicSource = null,
+            this.music && (this.music.stop(), this.music = null)
+        }
+
+        public playEffect(t, i) {
+            void 0 === i && (i = !1),
+            this.init();
+            var a = RES.getRes(t);
+            if (a) {
+                var n = new Howl({
+                    src: [a.url],
+                    loop: i,
+                    volume: this._effectVolume,
+                    onend: function() {
+                        for (var t = 0; t < e.SoundManager.effectList.length; t++) e.SoundManager.effectList[t] == n && e.SoundManager.effectList.splice(t, 1)
+                    }
+                });
+                e.SoundManager.effectList.push(n),
+                n.play()
+            } else RES.getResAsync(t,
+            function(e, t) {},
+            this)
+        }
+
+        public stopAllEffects() {
+            for (; this.effectList.length;) this.effectList.shift().stop()
+        }
+    }
+
+
+    var uiCore; !
+function(e) {
+    var t = function() {
+        function t() {}
+
+
+        return Object.defineProperty(t, "musicVolume", {
+            get: function() {
+                return this._musicVolume
+            },
+            set: function(e) {
+                this._musicVolume = e,
+                this.music && this.music.volume(e)
+            },
+            enumerable: !0,
+            configurable: !0
+        }),
+        Object.defineProperty(t, "effectVolume", {
+            get: function() {
+                return this._effectVolume
+            },
+            set: function(e) {
+                this._effectVolume = e;
+                for (var t = 0; t < this.effectList.length; t++) this.effectList[t].volume(e)
+            },
+            enumerable: !0,
+            configurable: !0
+        }),
+        t.init = function() {
+            this.isInited || (this.isInited = !0, e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_PAUSE, this.onAppPause, this), e.EventManager.getInstance(this).addEventListener(e.Application.APPEVENT_RESUME, this.onAppResume, this))
+        },
+        t.onAppPause = function() {
+            this._lastmusicVolume = this.musicVolume,
+            0 != this.musicVolume && (this.musicVolume = 0),
+            this._lasteffectVolume = this.effectVolume,
+            0 != this.effectVolume && (this.effectVolume = 0),
+            this.stopAllEffects()
+        },
+        t.onAppResume = function() {
+            void 0 != this._lastmusicVolume && (this.musicVolume = this._lastmusicVolume, this._lastmusicVolume = 0),
+            void 0 != this._lasteffectVolume && (this.effectVolume = this._lasteffectVolume, this._lasteffectVolume = 0)
+        },
+        t.playMusic = function(e, t, i, a, n) {
+            var s = this;
+            if (void 0 === t && (t = !0), void 0 === i && (i = 0), void 0 === a && (a = null), void 0 === n && (n = null), this.init(), this.music) {
+                if (this.musicSource == e) return;
+                this.music.stop(),
+                this.music = null
+            }
+            this.musicSource = e,
+            this.musicLoop = t;
+            var r = RES.getRes(e);
+            r ? (this.music = new Howl({
+                src: [r.url],
+                loop: t,
+                volume: this._musicVolume
+            }), this.music.play()) : RES.getResAsync(e,
+            function(e, t) {
+                t == s.musicSource && s.playMusic(s.musicSource, s.musicLoop)
+            },
+            this)
+        },
+        t.stopMusic = function() {
+            this.musicSource = null,
+            this.music && (this.music.stop(), this.music = null)
+        },
+        t.playEffect = function(t, i) {
+            void 0 === i && (i = !1),
+            this.init();
+            var a = RES.getRes(t);
+            if (a) {
+                var n = new Howl({
+                    src: [a.url],
+                    loop: i,
+                    volume: this._effectVolume,
+                    onend: function() {
+                        for (var t = 0; t < e.SoundManager.effectList.length; t++) e.SoundManager.effectList[t] == n && e.SoundManager.effectList.splice(t, 1)
+                    }
+                });
+                e.SoundManager.effectList.push(n),
+                n.play()
+            } else RES.getResAsync(t,
+            function(e, t) {},
+            this)
+        },
+        t.stopAllEffects = function() {
+            for (; this.effectList.length;) this.effectList.shift().stop()
+        },
+        t.effectList = [],
+        t._musicVolume = 1,
+        t._effectVolume = 1,
+        t
+    } ();
+    e.SoundManager = t,
+    __reflect(t.prototype, "uiCore.SoundManager")
+} (uiCore || (uiCore = {}));
+
+*/
 }
