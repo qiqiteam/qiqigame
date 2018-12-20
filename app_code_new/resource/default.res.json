@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,btn_info_up_png",
+			"keys": "loading_png,btn_info_up_png,qznn_win_fnt,qznn_win_png",
 			"name": "preload"
 		},
 		{
@@ -7410,9 +7410,9 @@
 			"name": "btn_manager_up_png"
 		},
 		{
-			"name": "btn_info_up_png",
+			"url": "assets/game/playerInfo/btn_info_up.png",
 			"type": "image",
-			"url": "assets/game/playerInfo/btn_info_up.png"
+			"name": "btn_info_up_png"
 		}
 	]
 }

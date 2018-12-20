@@ -1252,7 +1252,7 @@ class ZJHView extends eui.Component {
                 } else if (this.nowPlayerNum > 2) {
                     this['imgbipai_lose' + data.param.index].source = 'gf_flag_bpsb_png';
                 }
-                this['imgis_kanpai' + data.param.index].visible = false;
+                this['imgis_kanpai' + data.param.index].source = '';
                 this['imgCardbg' + data.param.index].source = '';
                 this.playerOperatingState[data.param.index] = 3
             }
@@ -1522,14 +1522,17 @@ class ZJHView extends eui.Component {
             for (let i = 0; i < 5; i++) {
                 this['img_light' + i].visible = false;
             }
+            this['imgis_kanpai' + data.param.index].source = '';
             this.operateTimer.stop();
             this.abandonStateBtn();
-/**
- * 2018.12.19+++++++++++++++++++++++++++
- * 
- * 
- */
-            if (data.param.json.winGlods > 0) {
+            /**
+             * 2018.12.19+++++++++++++++++++++++++++
+             * 
+             * 
+             */
+            if (data._obj.json.winGolds > 0) {
+                console.log(data._obj.json.winGolds);
+
                 let label = new eui.BitmapLabel;
                 let str: string = "";
                 label.font = "qznn_win_fnt";
@@ -1542,8 +1545,8 @@ class ZJHView extends eui.Component {
                 this.turn_score_arr.push(label);
                 uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data.param.json.winGlods / 100, regulator: 50 }, str);
             }
-/** ++++++++++++++++++++++++++++++++++++++++++++++++++++
- */
+            /** ++++++++++++++++++++++++++++++++++++++++++++++++++++
+             */
         }
     }
     public turn_score_arr: eui.BitmapLabel[] = [];
