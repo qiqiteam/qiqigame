@@ -130,7 +130,7 @@
 
 
 
-	<e:Group id="Themitoken" x="0" y="205" locked="true" visible="false">
+	<e:Group id="Themitoken" x="0" y="205" locked="true">
 		<e:Image scaleX="1" scaleY="1" width="1472" height="419" source="baccarat_game_mipai_bg_png" x="0" y="0" locked="true"/>
 
 

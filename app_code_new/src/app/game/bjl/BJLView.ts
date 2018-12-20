@@ -471,8 +471,8 @@ class BJLView extends eui.Component {
             this['_bei_puke_0_' + i].x = this.orginPlayePos[0][i].x;
             this['_bei_puke_0_' + i].y = this.orginPlayePos[0][i].y;
             this['_bei_puke_1_' + i].visible = true;
-            this['_bei_puke_1_' + i].x = this.orginPlayePos[0][i].x;
-            this['_bei_puke_1_' + i].y = this.orginPlayePos[0][i].y;
+            this['_bei_puke_1_' + i].x = this.orginPlayePos[1][i].x;
+            this['_bei_puke_1_' + i].y = this.orginPlayePos[1][i].y;
         }
 
         this.fanpaixiaog(0);
@@ -728,6 +728,7 @@ class BJLView extends eui.Component {
             this.puke_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
             this.puke_1_1.x = this.orginPlayePos[1][1].x;
             this.puke_1_1.y = this.orginPlayePos[1][1].y;
+            this.puke_0_1.visible = true;
 
             if (data._obj.bankersce != -1) {
                 this.dianshu_1.visible = true;
@@ -745,6 +746,7 @@ class BJLView extends eui.Component {
             this.puke_0_1.source = 'qznn_card_' + data._obj.playerCard[0];
             this.puke_0_1.x = this.orginPlayePos[0][1].x;
             this.puke_0_1.y = this.orginPlayePos[0][1].y;
+            this.puke_0_1.visible = true;
 
             if (data._obj.bankersce != -1) {
                 this.dianshu_0.visible = true;
