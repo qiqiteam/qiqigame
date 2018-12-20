@@ -25,7 +25,7 @@
 	<e:Image id="img_deskgoldIcon" width="30" height="35" y="113.77" source="gf_icon_chip_sm7_png" x="659" locked="true"/>
 	<e:Label id="lab_deskGolds" text="0" x="692" y="118.3" size="25" anchorOffsetX="0" width="113" textAlign="center" bold="true" textColor="0xf2c826" locked="true"/>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0"  locked="true"/>
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
 		<e:Image id="grpCard4_0" x="331.58" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
 		<e:Image id="grpCard4_1" x="360.7" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>
 		<e:Image id="grpCard4_2" x="389.85" y="449" scaleX="1" scaleY="1"  width="65.1" height="93.8" source="qzcard_json.qznn_card_101"/>

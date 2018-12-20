@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,brnn_betTotal_txt2_fnt,brnn_betTotal_txt2_png,brnn_betbtn_txt2_fnt,brnn_betbtn_txt2_png,brnn_betself_txt2_fnt,brnn_betself_txt2_png,brnn_game_pitch2_png,brnn_timecount_txt2_fnt,brnn_timecount_txt2_png,jh.dealCard2_mp3,jh.end2_mp3,jh.jackpot2_mp3,jh.openCard2_mp3,jh.stake2_mp3,jh.start2_mp3,jh.tp2_mp3,jh.ts2_mp3,tbnn_room_btn_tg_png,tbnn_room_btn_qxtg_png,tbnn_trustee_btnbg2_png,tbnn_trustee_cancel_btn_png,tbnn_trustee_sure_btn_png,tbnn_trustee_wenzi1_png,tbnn_trustee_btnbg_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
 			"name": "preload"
 		},
 		{
@@ -21,7 +21,7 @@
 			"name": "zhajinhua"
 		},
 		{
-			"keys": "loding_json,loding_bg_jpg,bjl_00_zero_mp3,bjl_01_deal_mp3,bjl_02_start_mp3,bjl_03_stop_mp3,bjl_08_player_mp3,bjl_09_banker_mp3,bjl_10_draw_mp3,bjl_11_one_mp3,bjl_12_two_mp3,bjl_13_three_mp3,bjl_14_four_mp3,bjl_15_five_mp3,bjl_16_six_mp3,bjl_17_seven_mp3,bjl_18_eight_mp3,bjl_19_nine_mp3,bjl_20_bankwin_mp3,bjl_21_playwin_mp3,bjl_22_tie_mp3,bjl_35_bg_imi_mp3,bjl_37_bg_play_mp3,lh_chipfly_long_mp3,Special_menu_mp3,gold_diaoluo_mp3,nn_gamestart_mp3,nn_LampEnd_mp3,nn_LampRun_mp3,nn_montageerror_mp3,nn_wingold_mp3,nn.dealCard_mp3,nn.end_mp3,nn.jackpot_mp3,nn.niu0_mp3,nn.niu1_mp3,nn.niu10_mp3,nn.niu11_mp3,nn.niu12_mp3,nn.niu13_mp3,nn.niu14_mp3,nn.niu2_mp3,nn.niu3_mp3,nn.niu4_mp3,nn.niu5_mp3,nn.niu6_mp3,nn.niu7_mp3,nn.niu8_mp3,nn.niu9_mp3,nn.niuniu_mp3,nn.openCard_mp3,nn.playNiu5hua_mp3,nn.playNiuXiao5_mp3,nn.playNiuZhadan_mp3,nn.stake_mp3,nn.start_mp3,nn.tp_mp3,nn.ts_mp3,qznn_bg_mp3,qznn_tongpei_mp3,qznn_win_all_mp3,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_0_mp3,bar_game_start_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3,tbnn_gamebgMusic_mp3,jh.dealCard_mp3,jh.end_mp3,jh.jackpot_mp3,jh.openCard_mp3,jh.stake_mp3,jh.start_mp3,jh.tp_mp3,jh.ts_mp3,bg_input-code_png,bg_input_png,bg_inputphone_png,bg_wxtswindow_png,bg_yhinput_png,bindbankcard_png,bindphon_down_btn_png,bindphon_up_btn_png,boy_btn_png,btn_bindbankcard_down_png,btn_bindbankcard_up_png,btn_bindzfb_down_png,btn_bindzfb_up_png,btn_getcode_down_png,btn_getcode_up_png,btn_info_down_png,btn_manager_down_png,btn_manager_up_png,btn_mypack_up_png,btn_mywallet_down_png,btn_mywallet_up_png,btn_pack_down_png,btn_pack_up_png,btn_recharge_down_png,btn_recharge_up_png,btn_set_down_png,btn_set_up_png,changeNam_down_btn_png,changeNam_up_btn_png,copy_down_btn_png,copy_up_btn_png,girl_btn_png,Img_packItem_bg_png,Img_xl_bg_png,lab_bankcard_png,lab_bindphone_png,lab_bindzfb_png,lab_Carry cash_png,lab_changname_png,lab_cn_png,lab_nhsykzt_png,lab_nzzbddsjh_png,lab_pay_png,lab_safebox_png,lab_tittle_png,lab_touxiang_png,lab_ts_png,lab_tshyhk_png,lab_tshzfb_png,lab_writeyhinfo_png,lab_yhts_png,lab_zfbts1_png,lab_zfbts2_png,tittle_info_png,VIP_down_btn_png,VIP_up_btn_png,xaila_png,bg_qznn_niujiao_ske_json,bg_qznn_niujiao_tex_json,bg_qznn_niujiao_tex_png",
+			"keys": "loding_json,loding_bg_jpg",
 			"name": "load"
 		}
 	],
@@ -5735,21 +5735,6 @@
 			"name": "lh_chipfly_long_mp3"
 		},
 		{
-			"url": "assets/dragonbones/anniuliuguang/anniuliuguang_tex.png",
-			"type": "image",
-			"name": "anniuliuguang_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/anniuliuguang/anniuliuguang_ske.json",
-			"type": "json",
-			"name": "anniuliuguang_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/anniuliuguang/anniuliuguang_tex.json",
-			"type": "json",
-			"name": "anniuliuguang_tex_json"
-		},
-		{
 			"url": "assets/dragonbones/vshuahen/vshuahen_tex.png",
 			"type": "image",
 			"name": "vshuahen_tex_png"
@@ -7430,124 +7415,19 @@
 			"name": "bg_qznn_niujiao_tex_json"
 		},
 		{
-			"name": "brnn_betTotal_txt2_fnt",
-			"type": "font",
-			"url": "assets/game/brnn/brnn_betTotal_txt.fnt"
-		},
-		{
-			"name": "brnn_betTotal_txt2_png",
+			"url": "assets/dragonbones/bg_zjh_zidong/bg_zjh_zidong_tex.png",
 			"type": "image",
-			"url": "assets/game/brnn/brnn_betTotal_txt.png"
+			"name": "bg_zjh_zidong_tex_png"
 		},
 		{
-			"name": "brnn_betbtn_txt2_fnt",
-			"type": "font",
-			"url": "assets/game/brnn/brnn_betbtn_txt.fnt"
+			"url": "assets/dragonbones/bg_zjh_zidong/bg_zjh_zidong_ske.json",
+			"type": "json",
+			"name": "bg_zjh_zidong_ske_json"
 		},
 		{
-			"name": "brnn_betbtn_txt2_png",
-			"type": "image",
-			"url": "assets/game/brnn/brnn_betbtn_txt.png"
-		},
-		{
-			"name": "brnn_betself_txt2_fnt",
-			"type": "font",
-			"url": "assets/game/brnn/brnn_betself_txt.fnt"
-		},
-		{
-			"name": "brnn_betself_txt2_png",
-			"type": "image",
-			"url": "assets/game/brnn/brnn_betself_txt.png"
-		},
-		{
-			"name": "brnn_game_pitch2_png",
-			"type": "image",
-			"url": "assets/game/brnn/brnn_game_pitch.png"
-		},
-		{
-			"name": "brnn_timecount_txt2_fnt",
-			"type": "font",
-			"url": "assets/game/brnn/brnn_timecount_txt.fnt"
-		},
-		{
-			"name": "brnn_timecount_txt2_png",
-			"type": "image",
-			"url": "assets/game/brnn/brnn_timecount_txt.png"
-		},
-		{
-			"name": "jh.dealCard2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.dealCard.mp3"
-		},
-		{
-			"name": "jh.end2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.end.mp3"
-		},
-		{
-			"name": "jh.jackpot2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.jackpot.mp3"
-		},
-		{
-			"name": "jh.openCard2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.openCard.mp3"
-		},
-		{
-			"name": "jh.stake2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.stake.mp3"
-		},
-		{
-			"name": "jh.start2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.start.mp3"
-		},
-		{
-			"name": "jh.tp2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.tp.mp3"
-		},
-		{
-			"name": "jh.ts2_mp3",
-			"type": "sound",
-			"url": "assets/sound/zjh/jh.ts.mp3"
-		},
-		{
-			"name": "tbnn_room_btn_tg_png",
-			"type": "image",
-			"url": "assets/game/tbnn/tbnn_room_btn_tg.png"
-		},
-		{
-			"name": "tbnn_room_btn_qxtg_png",
-			"type": "image",
-			"url": "assets/game/tbnn/tbnn_room_btn_qxtg.png"
-		},
-		{
-			"name": "tbnn_trustee_btnbg2_png",
-			"type": "image",
-			"url": "assets/game/tbnn/tbnn_trustee_btnbg2.png"
-		},
-		{
-			"name": "tbnn_trustee_cancel_btn_png",
-			"type": "image",
-			"url": "assets/game/tbnn/tbnn_trustee_cancel_btn.png"
-		},
-		{
-			"name": "tbnn_trustee_sure_btn_png",
-			"type": "image",
-			"url": "assets/game/tbnn/tbnn_trustee_sure_btn.png"
-		},
-		{
-			"name": "tbnn_trustee_wenzi1_png",
-			"type": "image",
-			"url": "assets/game/tbnn/tbnn_trustee_wenzi1.png"
-		},
-		{
-			"name": "tbnn_trustee_btnbg_png",
-			"type": "image",
-			"url": "assets/game/tbnn/tbnn_trustee_btnbg.png"
+			"url": "assets/dragonbones/bg_zjh_zidong/bg_zjh_zidong_tex.json",
+			"type": "json",
+			"name": "bg_zjh_zidong_tex_json"
 		}
 	]
 }

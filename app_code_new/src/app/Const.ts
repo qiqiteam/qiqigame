@@ -10,12 +10,12 @@ class Const {
     // public static GAME_HOST:string = "192.168.1.49";
     // public static GAME_PORT:string = "9081";
     // public static httpUrl:string = "http://192.168.1.49";
-    // public static GAME_HOST: string = "192.168.1.73";
-    // public static GAME_PORT: string = "9081";
-    // public static httpUrl: string = "http://192.168.1.73";
-    public static GAME_HOST: string = "192.168.1.12";
+    public static GAME_HOST: string = "192.168.1.73";
     public static GAME_PORT: string = "9081";
-    public static httpUrl: string = "http://192.168.1.12";
+    public static httpUrl: string = "http://192.168.1.73";
+    // public static GAME_HOST: string = "192.168.1.12";
+    // public static GAME_PORT: string = "9081";
+    // public static httpUrl: string = "http://192.168.1.12";
     //---------------------------游戏分类
     /**牛牛*/
     public static GAME_NIUNIU: string = "niuniu";
