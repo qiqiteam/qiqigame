@@ -35,7 +35,7 @@
     "ios": {
       "appname": "qiqigame",
       "packagename": "com.companyname",
-      "hybrid": true
+      "hybrid": false
     }
   }
 }

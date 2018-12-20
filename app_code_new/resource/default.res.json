@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,btn_info_up_png,qznn_win_fnt,qznn_win_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
 			"name": "preload"
 		},
 		{
@@ -21,7 +21,7 @@
 			"name": "zhajinhua"
 		},
 		{
-			"keys": "loding_json,loding_bg_jpg,bjl_00_zero_mp3,bjl_01_deal_mp3,bjl_02_start_mp3,bjl_03_stop_mp3,bjl_08_player_mp3,bjl_09_banker_mp3,bjl_10_draw_mp3,bjl_11_one_mp3,bjl_12_two_mp3,bjl_13_three_mp3,bjl_14_four_mp3,bjl_15_five_mp3,bjl_16_six_mp3,bjl_17_seven_mp3,bjl_18_eight_mp3,bjl_19_nine_mp3,bjl_20_bankwin_mp3,bjl_21_playwin_mp3,bjl_22_tie_mp3,bjl_35_bg_imi_mp3,bjl_37_bg_play_mp3,lh_chipfly_long_mp3,hall_bg_mp3,Special_menu_mp3,gold_diaoluo_mp3,nn_gamestart_mp3,nn_LampEnd_mp3,nn_LampRun_mp3,nn_montageerror_mp3,nn_wingold_mp3,nn.dealCard_mp3,nn.end_mp3,nn.jackpot_mp3,nn.niu0_mp3,nn.niu1_mp3,nn.niu10_mp3,nn.niu11_mp3,nn.niu12_mp3,nn.niu13_mp3,nn.niu14_mp3,nn.niu2_mp3,nn.niu3_mp3,nn.niu4_mp3,nn.niu5_mp3,nn.niu6_mp3,nn.niu7_mp3,nn.niu8_mp3,nn.niu9_mp3,nn.niuniu_mp3,nn.openCard_mp3,nn.playNiu5hua_mp3,nn.playNiuXiao5_mp3,nn.playNiuZhadan_mp3,nn.stake_mp3,nn.start_mp3,nn.tp_mp3,nn.ts_mp3,qznn_bg_mp3,qznn_tongpei_mp3,qznn_win_all_mp3,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_0_mp3,bar_game_start_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3,tbnn_gamebgMusic_mp3,jh.dealCard_mp3,jh.end_mp3,jh.jackpot_mp3,jh.openCard_mp3,jh.stake_mp3,jh.start_mp3,jh.tp_mp3,jh.ts_mp3,bg_input-code_png,bg_input_png,bg_inputphone_png,bg_wxtswindow_png,bg_yhinput_png,bindbankcard_png,bindphon_down_btn_png,bindphon_up_btn_png,boy_btn_png,btn_bindbankcard_down_png,btn_bindbankcard_up_png,btn_bindzfb_down_png,btn_bindzfb_up_png,btn_getcode_down_png,btn_getcode_up_png,btn_info_down_png,btn_manager_down_png,btn_manager_up_png,btn_mypack_up_png,btn_mywallet_down_png,btn_mywallet_up_png,btn_pack_down_png,btn_pack_up_png,btn_recharge_down_png,btn_recharge_up_png,btn_set_down_png,btn_set_up_png,changeNam_down_btn_png,changeNam_up_btn_png,copy_down_btn_png,copy_up_btn_png,girl_btn_png,Img_packItem_bg_png,Img_xl_bg_png,lab_bankcard_png,lab_bindphone_png,lab_bindzfb_png,lab_Carry cash_png,lab_changname_png,lab_cn_png,lab_nhsykzt_png,lab_nzzbddsjh_png,lab_pay_png,lab_safebox_png,lab_tittle_png,lab_touxiang_png,lab_ts_png,lab_tshyhk_png,lab_tshzfb_png,lab_writeyhinfo_png,lab_yhts_png,lab_zfbts1_png,lab_zfbts2_png,tittle_info_png,VIP_down_btn_png,VIP_up_btn_png,xaila_png",
+			"keys": "loding_json,loding_bg_jpg,bjl_00_zero_mp3,bjl_01_deal_mp3,bjl_02_start_mp3,bjl_03_stop_mp3,bjl_08_player_mp3,bjl_09_banker_mp3,bjl_10_draw_mp3,bjl_11_one_mp3,bjl_12_two_mp3,bjl_13_three_mp3,bjl_14_four_mp3,bjl_15_five_mp3,bjl_16_six_mp3,bjl_17_seven_mp3,bjl_18_eight_mp3,bjl_19_nine_mp3,bjl_20_bankwin_mp3,bjl_21_playwin_mp3,bjl_22_tie_mp3,bjl_35_bg_imi_mp3,bjl_37_bg_play_mp3,lh_chipfly_long_mp3,Special_menu_mp3,gold_diaoluo_mp3,nn_gamestart_mp3,nn_LampEnd_mp3,nn_LampRun_mp3,nn_montageerror_mp3,nn_wingold_mp3,nn.dealCard_mp3,nn.end_mp3,nn.jackpot_mp3,nn.niu0_mp3,nn.niu1_mp3,nn.niu10_mp3,nn.niu11_mp3,nn.niu12_mp3,nn.niu13_mp3,nn.niu14_mp3,nn.niu2_mp3,nn.niu3_mp3,nn.niu4_mp3,nn.niu5_mp3,nn.niu6_mp3,nn.niu7_mp3,nn.niu8_mp3,nn.niu9_mp3,nn.niuniu_mp3,nn.openCard_mp3,nn.playNiu5hua_mp3,nn.playNiuXiao5_mp3,nn.playNiuZhadan_mp3,nn.stake_mp3,nn.start_mp3,nn.tp_mp3,nn.ts_mp3,qznn_bg_mp3,qznn_tongpei_mp3,qznn_win_all_mp3,bar_drop_coin_mp3,bar_game_all_kill_mp3,bar_game_all_win_mp3,bar_game_kill_effect_mp3,bar_game_start_0_mp3,bar_game_start_mp3,bar_open_card_mp3,bar_player_select_mp3,bar_player_selected_mp3,bar_player_win_mp3,bar_send_card_mp3,bar_throw_dice_mp3,hall_bg2_mp3,window_open_mp3,tbnn_gamebgMusic_mp3,jh.dealCard_mp3,jh.end_mp3,jh.jackpot_mp3,jh.openCard_mp3,jh.stake_mp3,jh.start_mp3,jh.tp_mp3,jh.ts_mp3,bg_input-code_png,bg_input_png,bg_inputphone_png,bg_wxtswindow_png,bg_yhinput_png,bindbankcard_png,bindphon_down_btn_png,bindphon_up_btn_png,boy_btn_png,btn_bindbankcard_down_png,btn_bindbankcard_up_png,btn_bindzfb_down_png,btn_bindzfb_up_png,btn_getcode_down_png,btn_getcode_up_png,btn_info_down_png,btn_manager_down_png,btn_manager_up_png,btn_mypack_up_png,btn_mywallet_down_png,btn_mywallet_up_png,btn_pack_down_png,btn_pack_up_png,btn_recharge_down_png,btn_recharge_up_png,btn_set_down_png,btn_set_up_png,changeNam_down_btn_png,changeNam_up_btn_png,copy_down_btn_png,copy_up_btn_png,girl_btn_png,Img_packItem_bg_png,Img_xl_bg_png,lab_bankcard_png,lab_bindphone_png,lab_bindzfb_png,lab_Carry cash_png,lab_changname_png,lab_cn_png,lab_nhsykzt_png,lab_nzzbddsjh_png,lab_pay_png,lab_safebox_png,lab_tittle_png,lab_touxiang_png,lab_ts_png,lab_tshyhk_png,lab_tshzfb_png,lab_writeyhinfo_png,lab_yhts_png,lab_zfbts1_png,lab_zfbts2_png,tittle_info_png,VIP_down_btn_png,VIP_up_btn_png,xaila_png,bg_qznn_niujiao_ske_json,bg_qznn_niujiao_tex_json,bg_qznn_niujiao_tex_png",
 			"name": "load"
 		}
 	],
@@ -7413,6 +7413,21 @@
 			"url": "assets/game/playerInfo/btn_info_up.png",
 			"type": "image",
 			"name": "btn_info_up_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.png",
+			"type": "image",
+			"name": "bg_qznn_niujiao_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_ske.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.json",
+			"type": "json",
+			"name": "bg_qznn_niujiao_tex_json"
 		}
 	]
 }
