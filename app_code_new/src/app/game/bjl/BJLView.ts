@@ -111,6 +111,8 @@ class BJLView extends eui.Component {
 
     public istzxzDh: boolean = false;       //是否播放停止下注动画
 
+    public ischongzhi: boolean = false;     //是否重置界面
+
     private interval: number = -1;      // 游戏计时器间隔
 
     public turn_score_arr: eui.BitmapLabel[] = [];      //位图文本 金币滚动框
@@ -204,7 +206,7 @@ class BJLView extends eui.Component {
 
         this._bei_puke_0_2.visible = false;
         this._bei_puke_1_2.visible = false;
-
+        this.ischongzhi = false;
 
     }
     /**获取原始扑克的位置 */
@@ -387,13 +389,11 @@ class BJLView extends eui.Component {
         this.tishi_zi_0.visible = true;
         this.tishi_zi_0.source = 'baccarat_font_stage_3_png';
 
-        this.startCountDown(data._obj.seconds);
         this.juegengxin(data._obj.jushu);
         this.sypai_0.text = data._obj.leftcardlh + '';
         this.sypai_1.text = data._obj.deskcards + '';
 
     }
-
 
     /**(筹码) */
     private SendJetton(data: any): void {
@@ -722,8 +722,12 @@ class BJLView extends eui.Component {
             this.grpCard_1_0.source = 'qznn_card_' + data._obj.bankerCard[0];
             this.grpCard_1_1.source = 'qznn_card_' + data._obj.bankerCard[1];
             this.puke_1_0.source = 'qznn_card_' + data._obj.bankerCard[1];
+            this.puke_1_0.x = this.orginPlayePos[1][0].x;
+            this.puke_1_0.y = this.orginPlayePos[1][0].y;
             this.puke_1_0.visible = true;
             this.puke_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
+            this.puke_1_1.x = this.orginPlayePos[1][1].x;
+            this.puke_1_1.y = this.orginPlayePos[1][1].y;
 
             if (data._obj.bankersce != -1) {
                 this.dianshu_1.visible = true;
@@ -735,8 +739,12 @@ class BJLView extends eui.Component {
             this.grpCard_0_0.source = 'qznn_card_' + data._obj.playerCard[0];
             this.grpCard_0_1.source = 'qznn_card_' + data._obj.playerCard[1];
             this.puke_0_0.source = 'qznn_card_' + data._obj.playerCard[1];
+            this.puke_0_0.x = this.orginPlayePos[0][0].x;
+            this.puke_0_0.y = this.orginPlayePos[0][0].y;
             this.puke_0_0.visible = true;
             this.puke_0_1.source = 'qznn_card_' + data._obj.playerCard[0];
+            this.puke_0_1.x = this.orginPlayePos[0][1].x;
+            this.puke_0_1.y = this.orginPlayePos[0][1].y;
 
             if (data._obj.bankersce != -1) {
                 this.dianshu_0.visible = true;
@@ -828,7 +836,8 @@ class BJLView extends eui.Component {
                 this.zhuang_tishi.visible = true; break;    //庄家补牌
             case 4: this.tishi_zi_0.visible = true;
                 this.tishi_zi_1.visible = false;
-                this.tishi_zi_0.source = 'baccarat_font_stage_1_png'; break;    //派奖（结算）
+                this.tishi_zi_0.source = 'baccarat_font_stage_1_png';
+                this.ischongzhi = true; break;             //派奖（结算）
         }
     }
 
@@ -1051,6 +1060,9 @@ class BJLView extends eui.Component {
 
                     this.playClickSound(BJLUtil.getInstance().getSoundEffect(3));
                     this.tingzhi_Effect();
+                }
+                if (this.ischongzhi) {
+                    this.resetGame();
                 }
             }
         }
