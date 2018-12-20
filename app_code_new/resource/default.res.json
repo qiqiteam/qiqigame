@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,brnn_banker_txt_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
 			"name": "preload"
 		},
 		{
@@ -5730,21 +5730,6 @@
 			"name": "lh_chipfly_long_mp3"
 		},
 		{
-			"url": "assets/dragonbones/vshuahen/vshuahen_tex.png",
-			"type": "image",
-			"name": "vshuahen_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/vshuahen/vshuahen_ske.json",
-			"type": "json",
-			"name": "vshuahen_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/vshuahen/vshuahen_tex.json",
-			"type": "json",
-			"name": "vshuahen_tex_json"
-		},
-		{
 			"url": "assets/effects/niyingle/zjh_effect_youwin_tex_1 0.png",
 			"type": "image",
 			"name": "zjh_effect_youwin_tex_1 0_png"
@@ -7425,9 +7410,9 @@
 			"name": "bg_zjh_zidong_tex_json"
 		},
 		{
-			"name": "brnn_banker_txt_png",
+			"url": "assets/game/brnn/brnn_banker_txt.png",
 			"type": "image",
-			"url": "assets/game/brnn/brnn_banker_txt.png"
+			"name": "brnn_banker_txt_png"
 		}
 	]
 }
