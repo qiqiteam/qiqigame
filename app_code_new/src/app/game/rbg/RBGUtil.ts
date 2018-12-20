@@ -247,6 +247,8 @@ class RBGUtil {
                 return 'bar_game_all_win';//通赔
             case 12:
                 return 'bar_game_kill_effect';//通赔ef
+            case 13:
+                return 'Special_menu';   //按钮点击
         }
     }
 }

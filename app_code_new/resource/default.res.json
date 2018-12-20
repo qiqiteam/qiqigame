@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,brnn_banker_txt_png",
 			"name": "preload"
 		},
 		{
@@ -7423,6 +7423,11 @@
 			"url": "assets/dragonbones/bg_zjh_zidong/bg_zjh_zidong_tex.json",
 			"type": "json",
 			"name": "bg_zjh_zidong_tex_json"
+		},
+		{
+			"name": "brnn_banker_txt_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnn_banker_txt.png"
 		}
 	]
 }
