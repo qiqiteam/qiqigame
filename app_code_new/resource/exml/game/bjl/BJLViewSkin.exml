@@ -130,7 +130,7 @@
 
 
 
-	<e:Group id="Themitoken" x="0" y="205" locked="true" visible="false">
+	<e:Group id="Themitoken" x="0" y="205">
 		<e:Image scaleX="1" scaleY="1" width="1472" height="419" source="baccarat_game_mipai_bg_png" x="0" y="0" locked="true"/>
 
 
@@ -190,7 +190,7 @@
 			<e:Label id="zhuang_Label" text="庄家咪牌中" anchorOffsetX="0" width="401" height="32" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" x="0" y="2"/>
 		</e:Group>
 	</e:Group>
-	<e:Group id="wjlistkuang" x="311" y="183" visible="false" locked="true">
+	<e:Group id="wjlistkuang" x="311" y="183" locked="true" visible="false">
 		<e:Image width="850" height="463" source="baccarat_playersBg_png" x="0" y="0" locked="true"/>
 		<e:Image id="packup" width="128" height="57" source="baccarat_tips_close_png" y="2.66" x="711.36" locked="true"/>
 		<e:Scroller id="scroller" width="816" height="330.67" y="83.34" anchorOffsetX="0" anchorOffsetY="0" x="17">

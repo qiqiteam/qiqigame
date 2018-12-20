@@ -171,9 +171,9 @@ module uiCore {
         public EVENT_LOADCOMPLETE = "loadComplete";
         public armature:dragonBones.EgretArmatureDisplay;
 
-        //public okHander;
-        //public thisObject;
-        //public params;
+        public okHander:Function;
+        public thisObject:any;
+        public params:any;
 
         constructor() {
             super();
@@ -216,12 +216,7 @@ module uiCore {
             if (!e || !i || !a) return void this.warn("资源" + this.source + "不存在");
             this.armature && this.removeChild(this.armature);
             var n = dragonBones.EgretFactory.factory;
-            if (n.getDragonBonesData(this.source) || (n.parseDragonBonesData(e), n.parseTextureAtlasData(i, a)),
-            this.armature = n.buildArmatureDisplay(this.defentAnimationName, this.source), 
-            this.addChild(this.armature), 
-            this.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this),
-             this.visible = !this.stopAndVisible, this.autoPlay) 
-            {
+            if (n.getDragonBonesData(this.source) || (n.parseDragonBonesData(e), n.parseTextureAtlasData(i, a)), this.armature = n.buildArmatureDisplay(this.defentAnimationName, this.source), this.addChild(this.armature), this.armature.addEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this), this.visible = !this.stopAndVisible, this.autoPlay) {
                 var s = -1 == this.armature.animation.animationList.indexOf(this.defentAnimationName) ? this.armature.animation.animationList[0] : this.defentAnimationName;
                 this.playOnce ? this.play(s, 1) : this.play(s)
             }
@@ -238,16 +233,16 @@ module uiCore {
             this.isAdvanceTime || egret.Ticker.getInstance().unregister(this.onTicker, this),
             this.armature && (this.armature.removeEventListener(dragonBones.EventObject.COMPLETE, this.onAnimationComplete, this), this.armature.dispose(!0), this.armature && this.armature.parent && this.armature.parent.removeChild(this.armature)),
             dragonBones.EgretFactory.factory.getDragonBonesData(this.source) && dragonBones.EgretFactory.factory.removeDragonBonesData(this.source, !1),
-            this.armature = null
-            //this.okHander = null,
-            //this.thisObject = null,
-            //this.params = null
+            this.armature = null,
+            this.okHander = null,
+            this.thisObject = null,
+            this.params = null
         }
         
         public onAnimationComplete(e) {
             this.visible = !this.stopAndVisible,
-            this.dispatchEvent(e)
-            //this.okHander && this.okHander.apply(this.thisObject, this.params)
+            this.dispatchEvent(e),
+            this.okHander && this.okHander.apply(this.thisObject, this.params)
         }
         
         public play(e, t=-1) {
@@ -262,11 +257,11 @@ module uiCore {
             return 1e3 * this.armature.animation.getState(this.armature.animation.animationList[0]).totalTime
         }
         
-        //public addHander(e, t, i) {
-            //this.okHander = e,
-            //this.thisObject = t,
-            //this.params = i
-        //}
+        public addHander(e:Function, t:any, ...args) {
+            this.okHander = e,
+            this.thisObject = t,
+            this.params = args
+        }
     }
 
     /** 
@@ -275,10 +270,8 @@ module uiCore {
         */
     export class LabelEffect {
         private static _instance:LabelEffect;
-        public static get instance():LabelEffect
-        {
-            if( null == LabelEffect._instance )
-            {
+        public static get instance():LabelEffect {
+            if( null == LabelEffect._instance ) {
                 LabelEffect._instance = new LabelEffect();
             }
             return LabelEffect._instance;
