@@ -132,6 +132,7 @@ class TBNNView extends eui.Component {
     public _btn_tanpai: eui.Button;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
+    public _btn_Hosting: eui.Button;
     public _tishi: eui.Group;
     public _tishi_text: eui.Label;
 
@@ -499,6 +500,8 @@ class TBNNView extends eui.Component {
             this.sendamessage(EventConst.niuniu_dobet, this.multipleList[4]);
         } else if (e.target == this._btn_tanpai) {
             this.returntanpai();
+        } else if (e.target == this._btn_Hosting) {
+            //托管
         }
     }
     /**发送摊牌命令 */
@@ -530,6 +533,7 @@ class TBNNView extends eui.Component {
     private addEvent(): void {
         this._btn_meun.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_Hosting.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);

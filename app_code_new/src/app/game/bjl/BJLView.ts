@@ -284,6 +284,7 @@ class BJLView extends eui.Component {
             // this.addjiesuan_3Effect();
             // this.feixingEffect(5, 40000);
             // this.onBeginBteonBack(40000);
+
         } else if (e.target == this.packup) {
             this.wjlistkuang.visible = false;
         } else if (e.target == this._btn_close) {

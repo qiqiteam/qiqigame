@@ -1524,12 +1524,12 @@ class ZJHView extends eui.Component {
             }
             this.operateTimer.stop();
             this.abandonStateBtn();
-/**
- * 2018.12.19+++++++++++++++++++++++++++
- * 
- * 
- */
-            if (data.param.json.winGlods > 0) {
+            /**
+             * 2018.12.19+++++++++++++++++++++++++++
+             * 
+             * 
+             */
+            if (data.param.json.winGolds > 0) {
                 let label = new eui.BitmapLabel;
                 let str: string = "";
                 label.font = "qznn_win_fnt";
@@ -1540,10 +1540,10 @@ class ZJHView extends eui.Component {
 
                 this.grpHead0.addChild(label);
                 this.turn_score_arr.push(label);
-                uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data.param.json.winGlods / 100, regulator: 50 }, str);
+                uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data.param.json.winGolds / 100, regulator: 50 }, str);
             }
-/** ++++++++++++++++++++++++++++++++++++++++++++++++++++
- */
+            /** ++++++++++++++++++++++++++++++++++++++++++++++++++++
+             */
         }
     }
     public turn_score_arr: eui.BitmapLabel[] = [];

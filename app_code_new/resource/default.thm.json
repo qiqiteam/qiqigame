@@ -78,6 +78,7 @@
 		"resource/exml/game/set/SetTypeItemSkin.exml",
 		"resource/exml/game/set/SetViewSkin.exml",
 		"resource/exml/game/tbnn/TBNNHeadSkin.exml",
+		"resource/exml/game/tbnn/TBNNInthematch.exml",
 		"resource/exml/game/tbnn/TBNNroomEffSkin.exml",
 		"resource/exml/game/tbnn/TBNNroomViewSkin.exml",
 		"resource/exml/game/tbnn/TBNNViewSkin.exml",

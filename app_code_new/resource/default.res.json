@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,brnn_betTotal_txt2_fnt,brnn_betTotal_txt2_png,brnn_betbtn_txt2_fnt,brnn_betbtn_txt2_png,brnn_betself_txt2_fnt,brnn_betself_txt2_png,brnn_game_pitch2_png,brnn_timecount_txt2_fnt,brnn_timecount_txt2_png,jh.dealCard2_mp3,jh.end2_mp3,jh.jackpot2_mp3,jh.openCard2_mp3,jh.stake2_mp3,jh.start2_mp3,jh.tp2_mp3,jh.ts2_mp3,tbnn_room_btn_tg_png,tbnn_room_btn_qxtg_png,tbnn_trustee_btnbg2_png,tbnn_trustee_cancel_btn_png,tbnn_trustee_sure_btn_png,tbnn_trustee_wenzi1_png,tbnn_trustee_btnbg_png",
 			"name": "preload"
 		},
 		{
@@ -7428,6 +7428,126 @@
 			"url": "assets/dragonbones/bg_qznn_niujiao/bg_qznn_niujiao_tex.json",
 			"type": "json",
 			"name": "bg_qznn_niujiao_tex_json"
+		},
+		{
+			"name": "brnn_betTotal_txt2_fnt",
+			"type": "font",
+			"url": "assets/game/brnn/brnn_betTotal_txt.fnt"
+		},
+		{
+			"name": "brnn_betTotal_txt2_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnn_betTotal_txt.png"
+		},
+		{
+			"name": "brnn_betbtn_txt2_fnt",
+			"type": "font",
+			"url": "assets/game/brnn/brnn_betbtn_txt.fnt"
+		},
+		{
+			"name": "brnn_betbtn_txt2_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnn_betbtn_txt.png"
+		},
+		{
+			"name": "brnn_betself_txt2_fnt",
+			"type": "font",
+			"url": "assets/game/brnn/brnn_betself_txt.fnt"
+		},
+		{
+			"name": "brnn_betself_txt2_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnn_betself_txt.png"
+		},
+		{
+			"name": "brnn_game_pitch2_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnn_game_pitch.png"
+		},
+		{
+			"name": "brnn_timecount_txt2_fnt",
+			"type": "font",
+			"url": "assets/game/brnn/brnn_timecount_txt.fnt"
+		},
+		{
+			"name": "brnn_timecount_txt2_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnn_timecount_txt.png"
+		},
+		{
+			"name": "jh.dealCard2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.dealCard.mp3"
+		},
+		{
+			"name": "jh.end2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.end.mp3"
+		},
+		{
+			"name": "jh.jackpot2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.jackpot.mp3"
+		},
+		{
+			"name": "jh.openCard2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.openCard.mp3"
+		},
+		{
+			"name": "jh.stake2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.stake.mp3"
+		},
+		{
+			"name": "jh.start2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.start.mp3"
+		},
+		{
+			"name": "jh.tp2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.tp.mp3"
+		},
+		{
+			"name": "jh.ts2_mp3",
+			"type": "sound",
+			"url": "assets/sound/zjh/jh.ts.mp3"
+		},
+		{
+			"name": "tbnn_room_btn_tg_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_room_btn_tg.png"
+		},
+		{
+			"name": "tbnn_room_btn_qxtg_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_room_btn_qxtg.png"
+		},
+		{
+			"name": "tbnn_trustee_btnbg2_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_trustee_btnbg2.png"
+		},
+		{
+			"name": "tbnn_trustee_cancel_btn_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_trustee_cancel_btn.png"
+		},
+		{
+			"name": "tbnn_trustee_sure_btn_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_trustee_sure_btn.png"
+		},
+		{
+			"name": "tbnn_trustee_wenzi1_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_trustee_wenzi1.png"
+		},
+		{
+			"name": "tbnn_trustee_btnbg_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_trustee_btnbg.png"
 		}
 	]
 }
