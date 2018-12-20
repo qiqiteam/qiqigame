@@ -324,7 +324,7 @@ class BJLView extends eui.Component {
         this.wanjialist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
-        // EventUtil.addEventListener(EventConst.onSendGameRoom, this.Joinhalfway, this);
+        EventUtil.addEventListener(EventConst.onSendGameRoom, this.Joinhalfway, this);
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.OnUpdateLimitItem, this.UpdateLimitItem, this);
         EventUtil.addEventListener(EventConst.onSendJetton, this.SendJetton, this);
@@ -743,7 +743,7 @@ class BJLView extends eui.Component {
             }
         }
 
-        if (data._obj.roomStatus != 1) {
+        if (data._obj.roomStatus != 1 && data._obj.roomStatus != 5) {
             //已丢筹码恢复
             if (data.param.board.betonList != null && data.param.board.betonList.length > 0) {
                 this.choumahuifu(data.param.board.betonList);
@@ -1291,7 +1291,7 @@ class BJLView extends eui.Component {
         this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.packup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
-        // EventUtil.addEventListener(EventConst.onSendGameRoom, this.Joinhalfway, this);
+        EventUtil.addEventListener(EventConst.onSendGameRoom, this.Joinhalfway, this);
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.OnUpdateLimitItem, this.UpdateLimitItem, this);
         EventUtil.removeEventListener(EventConst.onSendJetton, this.SendJetton, this);
