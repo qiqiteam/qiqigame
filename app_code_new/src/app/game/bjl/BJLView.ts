@@ -107,6 +107,8 @@ class BJLView extends eui.Component {
 
     private orginPlayePos = [];    // 存储玩家扑克位置
 
+    private orginPlayePos1 = [];    // 存储玩家显示原始扑克的位置
+
     public xjzjdianshu: number[] = [0, 0];  //闲庄的点数
 
     public istzxzDh: boolean = false;       //是否播放停止下注动画
@@ -235,6 +237,18 @@ class BJLView extends eui.Component {
                 cardPos[j] = pos;
             }
             this.orginPlayePos[index] = cardPos;
+        }
+
+        for (var index = 0; index < 2; index++) {
+            var cardPos = [];
+            for (var j = 0; j < 3; j++) {
+                var card: eui.Image = this['puke_' + index + '_' + j];
+                var pos: egret.Point = new egret.Point;
+                pos.x = card.x;
+                pos.y = card.y;
+                cardPos[j] = pos;
+            }
+            this.orginPlayePos1[index] = cardPos;
         }
 
     }
@@ -728,7 +742,7 @@ class BJLView extends eui.Component {
             this.puke_1_1.source = 'qznn_card_' + data._obj.bankerCard[0];
             this.puke_1_1.x = this.orginPlayePos[1][1].x;
             this.puke_1_1.y = this.orginPlayePos[1][1].y;
-            this.puke_0_1.visible = true;
+            this.puke_1_1.visible = true;
 
             if (data._obj.bankersce != -1) {
                 this.dianshu_1.visible = true;
@@ -1228,6 +1242,14 @@ class BJLView extends eui.Component {
 
     /**重置界面 */
     private resetGame(): void {
+
+        for (var i = 0; i < 2; i++) {
+            for (var j = 0; j < 3; j++) {
+                this['puke_' + i + '_' + j].x = this.orginPlayePos1[i][j].x;
+                this['puke_' + i + '_' + j].y = this.orginPlayePos1[i][j].y;
+            }
+        }
+
         for (var index = 0; index < 2; index++) {
             for (var j = 0; j < 3; j++) {
                 let card: eui.Image = this['grpCard_' + index + '_' + j];
