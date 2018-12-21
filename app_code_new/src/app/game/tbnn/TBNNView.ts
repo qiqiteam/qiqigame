@@ -594,7 +594,6 @@ class TBNNView extends eui.Component {
 
         }, this);
     }
-
     /**抢庄 sendstr 命令 bet 倍数 0~5*/
     private sendamessage(sendstr: string, bet: number): void {
         let senddata: any = {
@@ -666,7 +665,9 @@ class TBNNView extends eui.Component {
             case 4: this.onbetBack(data); break;        //下注
             case 5: ; break;
             case 6: this.onThecardtype(data); break;    //所有玩家 牌面信息 结算
-            case 12: this.onRestartGame();; break;      //继续游戏
+            case 12: this.onRestartGame(); break;      //继续游戏
+            // case 13: this.sendamessage(EventConst.niuniu_dobet, 5); break;   //托管倍数
+            
         }
     }
     /**胜利 */

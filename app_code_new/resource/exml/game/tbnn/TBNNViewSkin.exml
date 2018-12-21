@@ -377,8 +377,9 @@
 	<e:Group id="_tuoguankuang" width="805" height="454" x="334" y="187" locked="true" visible="false">
 		<e:Image width="805" height="454" source="tbnn_tuoguan_bg_png" y="0" x="0" locked="true"/>
 		<e:Image width="77" height="37" y="8.48" source="tbnn_trustee_wenzi1_png" x="364" locked="true"/>
-		<e:Label text="托管后由系统自动执行下注、摊牌、继续游戏操作。确定要进行托管吗？" y="75" size="26" fontFamily="Microsoft YaHei" width="602" height="68" verticalAlign="middle" textAlign="center" x="102" textColor="0xe4e8ff" locked="true"/>
+		<e:Label text="托管后由系统自动执行下注、摊牌、继续游戏操作。确定要进行托管吗？" y="75" size="26" fontFamily="Microsoft YaHei" width="602" height="68" verticalAlign="middle" textAlign="center" x="102" textColor="0xd5d9f1" locked="true"/>
 		<e:Label text="请选择托管下注倍数：" y="194.33" size="26" fontFamily="Microsoft YaHei" width="277" height="40" verticalAlign="middle" textAlign="center" x="105.62" textColor="0xfaffa4" locked="true"/>
+		<e:Label text="（如果最大可下注倍数小于可设定倍数，那么押最大可下注倍数）" fontFamily="Microsoft YaHei" size="18" textColor="0xb2d3d8" height="40" verticalAlign="middle" textAlign="center" y="308.32" horizontalCenter="0.5"/>
 		<e:Group x="102" y="268" locked="true">
 			<e:RadioButton id="radio_1" label="" x="0" y="0" width="45" height="45" selected="true">
 				<e:skinName>
