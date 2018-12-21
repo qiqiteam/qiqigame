@@ -8,23 +8,28 @@ class BRNNView extends eui.Component {
     }
 
     public grpCoins:eui.Group;
+public _nnwt_0:eui.Group;
 public _playLight_0:eui.Image;
 public grade_text_0_0:eui.BitmapLabel;
 public grade_text_0_1:eui.BitmapLabel;
 public effectTouch0:eui.Image;
+public _nnwt_1:eui.Group;
 public _playLight_1:eui.Image;
 public grade_text_1_0:eui.BitmapLabel;
 public grade_text_1_1:eui.BitmapLabel;
 public effectTouch1:eui.Image;
+public _nnwt_2:eui.Group;
 public _playLight_2:eui.Image;
 public grade_text_2_0:eui.BitmapLabel;
 public grade_text_2_1:eui.BitmapLabel;
 public effectTouch2:eui.Image;
+public _nnwt_3:eui.Group;
 public _playLight_3:eui.Image;
 public grade_text_3_0:eui.BitmapLabel;
 public grade_text_3_1:eui.BitmapLabel;
 public effectTouch3:eui.Image;
 public grpCard:eui.Group;
+public _brnn_banker_txt:eui.Image;
 public bankerCard_0:eui.Image;
 public bankerCard_1:eui.Image;
 public bankerCard_2:eui.Image;
@@ -166,7 +171,7 @@ public _btn_close:eui.Button;
 public _btn_meun:eui.Button;
 public wanjialist:eui.Button;
 public _faPaiPos:eui.Image;
-public _brnn_banker_txt:eui.Image;
+
 
 
 
@@ -795,20 +800,54 @@ public _brnn_banker_txt:eui.Image;
     private showCoins(pos: egret.Point, num: number, msg: number): void {
         this.playClickSound(BRNNUtil.getInstance().getSoundEffect(8));
         var point: egret.Point = BRNNUtil.getInstance().getCoinsPos(msg);
-        var arr = BRNNUtil.getInstance().coinsType(pos, num);
-        for (var i = 0; i < arr.length; i++) {
-            var tx = point.x + Math.random() * 80;
-            var ty = point.y + Math.random() * 80;
-            this.grpCoins.addChild(arr[i]);
+        var coin = BRNNUtil.getInstance().coinsType(pos, num);
+        var tx = point.x + Math.random() * 80;
+        var ty = point.y + Math.random() * 80;
+        this.grpCoins.addChild(coin);
+        //egret.Tween.get(coin).to({ x: tx, y: ty }, 200);
 
-            egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call((mc) => {
+        let _group = this["effectTouch" + (msg-1)];
+        let _nnwt = this["_nnwt_" + (msg-1)];
+        let _x = _group.x+_nnwt.x;
+        let _y = _group.y+_nnwt.y;
 
-            }, this, [arr[i]]);
-        }
-
-
-        
+        coin.anchorOffsetX = coin.width / 2,
+        coin.anchorOffsetY = coin.height / 2;
+        var l = Math.floor(700 * Math.random()) + 100;
+        egret.Tween.get(coin).to({
+            x: _x + Math.floor(Math.random() * _group.width * 0.8),
+            y: _y + Math.floor(Math.random() * _group.height * 0.8),
+            rotation: (360 * Math.random()).toFixed(2)
+        },
+        l, egret.Ease.cubicInOut);
     }
+/*
+    setImgPos = function(e, t, i, a, n, s) {
+        void 0 === n && (n = "brnnBankerView"),
+        void 0 === s && (s = !1);
+        var r = s ? this.userInfo.localToGlobal(this[n].x, this[n].y) : this.localToGlobal(this[n].x, this[n].y);
+        if (r = e.globalToLocal(r.x, r.y), "brnnBankerView" == n ? (t.x = r.x + .25 * this[n].width, t.y = r.y + this[n].height / 2) : "players" == n ? (t.x = r.x + Math.floor(Math.random() * this[n].width * .5), t.y = r.y + Math.floor(Math.random() * this[n].height * .8) + 10) : (t.x = r.x, t.y = r.y), e.addChild(t), this[a][i].length > 200) {
+            var o = this[a][i].shift();
+            o.parent && o.parent.removeChild(o)
+        }
+        this[a][i].push(t),
+        t.anchorOffsetX = t.width / 2,
+        t.anchorOffsetY = t.height / 2;
+        var l = Math.floor(700 * Math.random()) + 100;
+        if(uiCore.Application.isGameHide) {
+            (t.x = Math.floor(Math.random() * e.width), t.y = Math.floor(Math.random() * e.height * .9), t.rotation = (360 * Math.random()).toFixed(2))
+        } else {
+            egret.Tween.get(t).to({
+                x: Math.floor(Math.random() * e.width),
+                y: Math.floor(Math.random() * e.height * 0.9),
+                rotation: (360 * Math.random()).toFixed(2)
+            },
+            l, egret.Ease.cubicInOut)
+        }
+        
+        
+        
+    }*/
 
     private flyIntval_1: number = 0;  //
     private flyIntval_2: number = 0;  //
