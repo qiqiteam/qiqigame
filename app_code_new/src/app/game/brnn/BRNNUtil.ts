@@ -172,40 +172,29 @@ class BRNNUtil {
     }
 
     //筹码类型        1000w   5000w   1y  3y  5y
-    public coinsType(pos: egret.Point, num: number): Array<eui.Image> {
-        var coinArr = [];
-        var coinNum: number = 0;
+    public coinsType(pos: egret.Point, num: number) {
         var src: string = '';
         if (num == 2) {  //2
-            coinNum = num;
             src = 'brnn_couma_1_1_png';
         }
         else if (num == 5) {   //5
-            coinNum = num;
             src = 'brnn_couma_1_2_png';
         }
         else if (num == 10) {   //10
-            coinNum = num;
             src = 'brnn_couma_1_3_png';
         }
         else if (num == 20) { //20
-            coinNum = num;
             src = 'brnn_couma_1_4_png';
         }
         else if (num == 50) { //50
-            coinNum = num;
             src = 'brnn_couma_1_5_png';
         }
-        // for (var i = 0; i < Math.round(coinNum); i++) {
-            var coin: eui.Image = new eui.Image(src);
-            //var p: egret.Point = this.coinPos();
-            coin.x = pos.x;
-            coin.y = pos.y;
-            coin.scaleX = 0.3;
-            coin.scaleY = 0.3;
-            coinArr.push(coin);
-        // }
-        return coinArr;
+        var coin: eui.Image = new eui.Image(src);
+        coin.x = pos.x;
+        coin.y = pos.y;
+        coin.scaleX = 0.3;
+        coin.scaleY = 0.3;
+        return coin;
     }
 
     private coinPos(): egret.Point {
