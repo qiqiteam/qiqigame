@@ -150,6 +150,7 @@
 		"bin-debug/app/login/LoginView.js",
 		"bin-debug/app/util/AnimationUtil.js",
 		"bin-debug/app/util/EventUtil.js",
+		"bin-debug/app/util/GameUtils.js",
 		"bin-debug/app/util/GlobalFunction.js",
 		"bin-debug/app/util/uiCore.js",
 		"bin-debug/consts/CommonConsts.js",
