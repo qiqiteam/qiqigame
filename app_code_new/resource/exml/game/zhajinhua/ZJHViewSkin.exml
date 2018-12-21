@@ -108,6 +108,7 @@
 
 
 	</e:Group>
+	<e:Image id="img_bpEffect_bg" width="1472" height="258" y="251.09" source="gf_bg_pk1_png" horizontalCenter="0" visible="false"/>
 	<e:Group width="1472" height="828" x="0" y="0">
 		<e:Image id="img_bipailight1" width="300" height="230" x="1000" y="387" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>
 		<e:Image id="img_bipailight2" width="300" height="230" x="1043" y="154" source="gf_bipaiguang_png" anchorOffsetY="0" touchEnabled="false"/>

@@ -164,6 +164,8 @@ class ZJHView extends eui.Component {
     public img_light4: eui.Image;
     public _btn_kanpai: eui.Button;
 
+    public img_bpEffect_bg: eui.Image;
+
 
 
 
@@ -259,7 +261,6 @@ class ZJHView extends eui.Component {
 
     private anniuliuguang: DragonBonesSprite;
     private guzhuyizhi: DragonBonesSprite;
-
     //public isClickjixuGameBtn: boolean = false;//是否点击过继续游戏按钮
     //public isClickqipaiBtn: boolean = false;//是否点击过弃牌按钮
     private initData(): void {
@@ -343,36 +344,24 @@ class ZJHView extends eui.Component {
         //     this.guzhuyizhi.stop();
         //     this.guzhuyizhi.visible = false;
         // }, 6000)
-        // let zjheffectwin1: ZJHEffectWin2View = new ZJHEffectWin2View();
-        // zjheffectwin1.x = -125;
-        // zjheffectwin1.y = -315;
-        // this.addChild(zjheffectwin1);
-        // let zjheffectwin2: ZJHEffectWin2View = new ZJHEffectWin2View();
-        // zjheffectwin2.x = -85;
-        // zjheffectwin2.y = -550;
-        // this.addChild(zjheffectwin2);
 
-        // let zjheffectwin3: ZJHEffectWin2View = new ZJHEffectWin2View();
-        // zjheffectwin3.x = -860;
-        // zjheffectwin3.y = -550;
-        // this.addChild(zjheffectwin3);
 
-        // let zjheffectwin4: ZJHEffectWin2View = new ZJHEffectWin2View();
-        // zjheffectwin4.x = -810;
-        // zjheffectwin4.y = -315;
-        // this.addChild(zjheffectwin4);
 
-        // let zjheffectwin0: ZJHEffectWin1View = new ZJHEffectWin1View();
-        // zjheffectwin0.x = 220;
-        // zjheffectwin0.y = 160;
-        // this.addChild(zjheffectwin0);
+        // let Comparison: ComparisonCardView = new ComparisonCardView();
+        // this.addChild(Comparison);
 
-        /*var point: egret.Point = ZJHUtil.getInstance().getPlayerIconPos(0);
-        let operateTimer: OperateTimer = new OperateTimer();
-        operateTimer.x = point.x + 65;
-        operateTimer.y = point.y + 84;
-        this.addChild(operateTimer);
-        this.setChildIndex(operateTimer, this.numChildren - 1);*/
+
+
+        // niyinglvs.x = 0;
+        // niyinglvs.y = 15;
+        // setTimeout(() => {
+        //     this.addChild(niyinglvs);
+        //     niyinglvs.play();
+        //     this.setChildIndex(niyinglvs, this.numChildren - 1);
+        // }, 6000)
+        // setTimeout(() => {
+        //     niyinglvs.stop();
+        // }, 2000)
         /**----------------------------------------------------------- */
 
     }
@@ -467,7 +456,7 @@ class ZJHView extends eui.Component {
             }
         } else if (e.target == this._btn_autogenzhu) {
             this.img_autogenzhu.visible = false;
-            this.img_autogenzhu.visible = false;
+            this._btn_autogenzhu.visible = false;
             this._btn_cancelautogenzhu.visible = true;
             this.img_cancelautogenzhu0.visible = true;
             this.img_cancelautogenzhu1.visible = true;
@@ -477,12 +466,15 @@ class ZJHView extends eui.Component {
             this.anniuliuguang.height = this.height;
             this.anniuliuguang.x = 1300;
             this.anniuliuguang.y = 778;
+            this.anniuliuguang.touchEnabled = false;
+            this.anniuliuguang.touchChildren = false;
             this.addChild(this.anniuliuguang);
             this.anniuliuguang.play("Sprite");
             xlLib.TipsUtils.showFloatWordTips("自动跟注");
         } else if (e.target == this._btn_cancelautogenzhu) {
             this.img_autogenzhu.visible = true;
             this._btn_autogenzhu.visible = true;
+            //this.isAntoGenZhu = false;
             this._btn_cancelautogenzhu.visible = false;
             this.img_cancelautogenzhu0.visible = false;
             this.img_cancelautogenzhu1.visible = false;
@@ -651,9 +643,6 @@ class ZJHView extends eui.Component {
                 this['img_bipailight' + i].visible = true;
                 this['img_bipailight' + i].touchEnabled = true;
                 this["img_bipailight" + i].touchChildren = false;
-
-                //this["grpHead" + i].touchEnabled = true;
-                //this["grpHead" + i].touchChildren = false;
                 this.byOpenId[i] = this.OtherPlayer[i];
                 if (this.abandonId.length == 3) {
                     this.sendamessage2(EventConst.compareCard, this.UsId, this.OtherPlayer[i]);
@@ -966,85 +955,85 @@ class ZJHView extends eui.Component {
             this['img_light' + data.param.index].visible = true;
             this.playerSeria = data.param.index;
             //if (this.isAntoGenZhu != true) {
-                this.nowPlayerNum = data.param.playerNum;
-                this.nowroundNum = data.param.circleNum;
-                this.lab_now_roundNum.text = this.nowroundNum.toString();
-                this._btn_autogenzhu.visible = false;
-                this.img_autogenzhu.visible = false;
-                this.img_genzhu.visible = true;
-                this._btn_genzhu.visible = true;
-                this.betarr = [];
-                this.numtime = data.param.seconds;
-                this.UsId = data.param.userId;
-                console.log(data);
-                if (this.playerOperatingState[data.param.index] != 2) {
-                    this.startCountDown(this.numtime);
+            this.nowPlayerNum = data.param.playerNum;
+            this.nowroundNum = data.param.circleNum;
+            this.lab_now_roundNum.text = this.nowroundNum.toString();
+            this._btn_autogenzhu.visible = false;
+            this.img_autogenzhu.visible = false;
+            this.img_genzhu.visible = true;
+            this._btn_genzhu.visible = true;
+            this.betarr = [];
+            this.numtime = data.param.seconds;
+            this.UsId = data.param.userId;
+            console.log(data);
+            if (this.playerOperatingState[data.param.index] != 2) {
+                this.startCountDown(this.numtime);
+            }
+            /**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+            var point: egret.Point = ZJHUtil.getInstance().getPlayerIconPos(data.param.index);
+            //let operateTimer: OperateTimer = new OperateTimer();
+            this.operateTimer.x = point.x + 65;
+            this.operateTimer.y = point.y + 84;
+            this.addChild(this.operateTimer);
+            this.operateTimer.play();
+            this.setChildIndex(this.operateTimer, this.numChildren - 1);
+            /**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+            //this.betarr = data.param.limit.split(",");
+            console.log("可以进行加注操作*********************************");
+            this._btn_jiazhu.visible = true;
+            this._btn_jiazhu.touchEnabled = true;
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, true);//按钮恢复颜色
+            let index: number = 0;
+            let all: boolean = false;
+            for (let key in data.param.butPourMap) {
+                console.log("--------------" + key);
+                console.log("------------" + data.param.butPourMap[key]);
+                this.betarr.push(key);
+                this['labchip' + index].text = key;
+                if (data.param.butPourMap[key] == false) {
+                    this["_btn_jiacm_" + index].touchEnabled = false;
+                } else {
+                    all = true;
                 }
-                /**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-                var point: egret.Point = ZJHUtil.getInstance().getPlayerIconPos(data.param.index);
-                //let operateTimer: OperateTimer = new OperateTimer();
-                this.operateTimer.x = point.x + 65;
-                this.operateTimer.y = point.y + 84;
-                this.addChild(this.operateTimer);
-                this.operateTimer.play();
-                this.setChildIndex(this.operateTimer, this.numChildren - 1);
-                /**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-                //this.betarr = data.param.limit.split(",");
-                console.log("可以进行加注操作*********************************");
-                this._btn_jiazhu.visible = true;
-                this._btn_jiazhu.touchEnabled = true;
-                xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, true);//按钮恢复颜色
-                let index: number = 0;
-                let all: boolean = false;
-                for (let key in data.param.butPourMap) {
-                    console.log("--------------" + key);
-                    console.log("------------" + data.param.butPourMap[key]);
-                    this.betarr.push(key);
-                    this['labchip' + index].text = key;
-                    if (data.param.butPourMap[key] == false) {
-                        this["_btn_jiacm_" + index].touchEnabled = false;
-                    } else {
-                        all = true;
-                    }
-                    index++
-                }
-                if (!all) {
-                    this._btn_jiazhu.touchEnabled = false;
-                    xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
-                }
-                /**可以进行比牌 */
-                if (data.param.compare == true && data.param.code == 200) {
-                    console.log("compare=true可以比牌");
-                    this.lab_tankNumber.text = data.param.followPour;
-                    this.lab_tankNumber.visible = true;
-                    this._btn_bipai.visible = true;
-                    this._btn_bipai.touchEnabled = true;
-                    xlLib.DisplayUtils.setComponentEnabled(this._btn_bipai, true);//按钮恢复颜色
-                }
-                /**可以进行跟注 */
-                this.isCall = true;
-                this.img_genzhu.source = "lab_genzhu_png";
-                this.callnum = data.param.followPour;
-                this.lab_callNumber.text = data.param.followPour;
-                this.lab_callNumber.visible = true;
-                this._btn_genzhu.touchEnabled = true;
-                xlLib.DisplayUtils.setComponentEnabled(this._btn_genzhu, true);//按钮恢复颜色
-                this.isoperat = true;
+                index++
+            }
+            if (!all) {
+                this._btn_jiazhu.touchEnabled = false;
+                xlLib.DisplayUtils.setComponentEnabled(this._btn_jiazhu, false);
+            }
+            /**可以进行比牌 */
+            if (data.param.compare == true && data.param.code == 200) {
+                console.log("compare=true可以比牌");
+                this.lab_tankNumber.text = data.param.followPour;
+                this.lab_tankNumber.visible = true;
+                this._btn_bipai.visible = true;
+                this._btn_bipai.touchEnabled = true;
+                xlLib.DisplayUtils.setComponentEnabled(this._btn_bipai, true);//按钮恢复颜色
+            }
+            /**可以进行跟注 */
+            this.isCall = true;
+            this.img_genzhu.source = "lab_genzhu_png";
+            this.callnum = data.param.followPour;
+            this.lab_callNumber.text = data.param.followPour;
+            this.lab_callNumber.visible = true;
+            this._btn_genzhu.touchEnabled = true;
+            xlLib.DisplayUtils.setComponentEnabled(this._btn_genzhu, true);//按钮恢复颜色
+            this.isoperat = true;
 
-                /**金币不足 全压 */
-                //this.nowUserGolds=this.goldarr[0] / 100;
-                console.log("当前玩家剩余金币，其他玩家下的注，当前应下注数" + this.nowUserGolds, this.notAbandbotp, data.param.followPour);
-                if (this.nowUserGolds < this.notAbandbotp || (this.nowUserGolds >= this.notAbandbotp && this.nowUserGolds < data.param.followPour)) {
+            /**金币不足 全压 */
+            //this.nowUserGolds=this.goldarr[0] / 100;
+            console.log("当前玩家剩余金币，其他玩家下的注，当前应下注数" + this.nowUserGolds, this.notAbandbotp, data.param.followPour);
+            if (this.nowUserGolds < this.notAbandbotp || (this.nowUserGolds >= this.notAbandbotp && this.nowUserGolds < data.param.followPour)) {
 
-                    this.lab_tankNumber.visible = false;
-                    this._btn_bipai.visible = false;
-                    this._btn_quanxia.visible = true;
-                    this.img_quanya.visible = true;
-                    this.lab_quanyaNumber.visible = true;
-                    this.lab_quanyaNumber.text = (this.nowUserGolds).toString();
-                    this.shortGold = this.nowUserGolds;
-                }
-           // }
+                this.lab_tankNumber.visible = false;
+                this._btn_bipai.visible = false;
+                this._btn_quanxia.visible = true;
+                this.img_quanya.visible = true;
+                this.lab_quanyaNumber.visible = true;
+                this.lab_quanyaNumber.text = (this.nowUserGolds).toString();
+                this.shortGold = this.nowUserGolds;
+            }
+            //}
         }
     }
     private operateTimer: OperateTimer = new OperateTimer();
@@ -1154,7 +1143,7 @@ class ZJHView extends eui.Component {
             //执行比牌动作..........{}
         }
     }
-    /***(推送*异常及时通知 比牌结果推送)*/
+    /***(推送*异常及时通知 （开启自动跟注，取消自动跟注，全压比牌结果推送）100，！=200&&300,300)*/
     private timeInfo(data: any): void {
         if (data.param.command == "onTimelyNotify" && data.param.autoButState == 300) {
             this.nowroundNum = data.param.circleNum;
@@ -1194,41 +1183,14 @@ class ZJHView extends eui.Component {
         } else if (data.param.command == "onTimelyNotify" && data.param.autoButState == 100) {
             this.nowroundNum = data.param.circleNum;
             //开启自动跟注
-            this.isAntoGenZhu = true;
-            // this.anniuliuguang = new DragonBonesSprite('anniuliuguang', "Sprite");
-            // this.anniuliuguang.width = this.width;
-            // this.anniuliuguang.height = this.height;
-            // this.anniuliuguang.x = 1300;
-            // this.anniuliuguang.y = 778;
-            // this.addChild(this.anniuliuguang);
-            // this.anniuliuguang.play("Sprite");
             console.log("++++++++++++++++++++++++++data.param.state == 100", data);
-            // this.img_autogenzhu.visible = false;
-            // this.img_autogenzhu.visible = false;
-            // this._btn_cancelautogenzhu.visible = true;
-            // this.img_cancelautogenzhu0.visible = true;
-            // this.img_cancelautogenzhu1.visible = true;
         } else if (data.param.command == "onTimelyNotify" && data.param.autoButState != 100 && data.param.autoButState != 300) {
             this.nowroundNum = data.param.circleNum;
             this.lab_now_roundNum.text = this.nowroundNum.toString();
-            //关闭自动跟注
-            this.isAntoGenZhu = false;
-            // if (this.anniuliuguang) {
-            //     this.anniuliuguang.stop();
-            //     if (this.anniuliuguang.parent) {
-            //         this.anniuliuguang.parent.removeChild(this.anniuliuguang);
-            //         this.anniuliuguang = null;
-            //     }
-            // }
             console.log("++++++++++++++++++++++++++data.param.state == 200", data);
-            // this.img_autogenzhu.visible = true;
-            // this._btn_autogenzhu.visible = true;
-            // this._btn_cancelautogenzhu.visible = false;
-            // this.img_cancelautogenzhu0.visible = false;
-            // this.img_cancelautogenzhu1.visible = false;
         }
     }
-
+    //private Comparison: ComparisonCardView = new ComparisonCardView();
     /**玩家比牌结果*/
     private Thancard(data: any): void {
         if (data.param.code == 200) {
@@ -1243,6 +1205,17 @@ class ZJHView extends eui.Component {
                 type: data.param.json.loseType //牌型
             };
             this.operateTimer.stop();
+             // if (data.param.userMap.open < data.param.userMap.byopen) {
+
+            // }
+            let Comparison: ComparisonCardView = new ComparisonCardView(); 
+            Comparison.setIcon(data.param.userMap.open, data.param.userMap.byopen);
+            this.addChild(Comparison);
+            setTimeout(() => {
+                Comparison.touchEnabled = false;
+                Comparison.touchChildren = false;
+                Comparison.visible = false;
+            }, 2500)
             if (UserInfo.getInstance().uid == data.param.userId) {
                 //执行玩家图像被轰炸动作{}................玩家自己比牌输
                 if (this.playerOperatingState[data.param.index] != 2) {
@@ -1482,6 +1455,9 @@ class ZJHView extends eui.Component {
     private zjheffectwin0: ZJHEffectWin1View = new ZJHEffectWin1View();
     /**结算游戏结束 */
     private settleaccount(data: any): void {
+
+        //this.labelGold0.text = String(data.param.Glod/ 100)
+        //UserInfo.getInstance().goldcoins=data.param.Glod;
         if (data.param.code == 200) {
             let poke = {
                 type: data.param.cardGenre,//牌型
@@ -1857,10 +1833,11 @@ class ZJHView extends eui.Component {
         this.isBets = false;
         //this.isCardEffectShow = false;
         this.byOpenId = ['', '', '', '', ''];
+        //this.Comparison.removeChildren();
         this.abandonId = [];
         this.addtime = 0;
 
-        this.isAntoGenZhu=false;
+        this.isAntoGenZhu = false;
         this.oldMybotpGold = 1;
         this.oldOtherbotpGold = [1, 1, 1, 1, 1];
         this.goldarr = [];

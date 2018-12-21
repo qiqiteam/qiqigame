@@ -249,7 +249,7 @@ class BRNNUtil {
             case 6:
                 return 'nn.dealCard';  //发牌
             case 7:
-                return 'nn.openCard';  //开牌
+                return 'brnn_fanpai';  //开牌
             case 8:
                 return 'nn.stake';   //筹码
         }

@@ -671,7 +671,8 @@ class TBNNView extends eui.Component {
                 type: data._obj.players[i].pai.niu,
                 value: data._obj.players[i].cardsList,
                 win: data._obj.players[i].win,
-                score: data._obj.players[i].score
+                score: data._obj.players[i].score,
+                index: data._obj.players[i].index
             };
             result.pokes.push(err);
         }
@@ -1404,9 +1405,16 @@ class TBNNView extends eui.Component {
     private cardEffectEnd(): void {
         clearInterval(this.interval);
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(9));
-        let zhuangPos = {
-            x: this.orginPlayerHeadPos[this.zhaungIndex].x,
-            y: this.orginPlayerHeadPos[this.zhaungIndex].y
+        //let zhuangPos = {
+        //    x: this.orginPlayerHeadPos[this.zhaungIndex].x,
+        //   y: this.orginPlayerHeadPos[this.zhaungIndex].y
+        //}
+        let win_pos = 0;
+        for(let i = 0; i < this.cardResult.pokes.length; i++) {
+            if(this.cardResult.pokes[i].win == true) {
+                let index = UserInfo.getInstance().findSeatNumber(this.cardResult.pokes[i].index);
+                win_pos = index;
+            }
         }
 
         let pos = {
@@ -1415,38 +1423,40 @@ class TBNNView extends eui.Component {
         }
 
         for (let i = 0; i < this.cardResult.pokes.length; i++) {
-            pos.x = this.orginPlayerHeadPos[i].x;
-            pos.y = this.orginPlayerHeadPos[i].y;
+
+            let index = UserInfo.getInstance().findSeatNumber(this.cardResult.pokes[i].index);
+
+            pos.x = this.orginPlayerHeadPos[index].x;
+            pos.y = this.orginPlayerHeadPos[index].y;
 
             if (this.cardResult.pokes[i].win == true) {
                 //xlLib.TipsUtils.showTipsDownToUp("+" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
-                this.updatePlayerGold(i, this.cardResult.pokes[i].score, true);
+                this.updatePlayerGold(index, this.cardResult.pokes[i].score, true);
             } else {
                 //xlLib.TipsUtils.showTipsDownToUp("-" + this.cardResult.pokes[i].score, numPos.x, numPos.y, false);
-                this.updatePlayerGold(i, this.cardResult.pokes[i].score, false);
+                this.updatePlayerGold(index, this.cardResult.pokes[i].score, false);
             }
 
-            if (this.zhaungIndex == i) {
-                continue;
-            }
+            //if (this.zhaungIndex == index) {
+            //    continue;
+            //}
 
             //var goldFlyAnimator: uiCore.Animation;
 
             if (this.cardResult.pokes[i].win == true) {
                 //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_20_png", "qznn_showScore" + this.zhaungIndex + "-" + i + "_tex_{0}_png");
-                EffectUtils.coinsFly_1(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
+                //EffectUtils.coinsFly_1(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
                 //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
-                EffectUtils.coinsFly_1(this, pos.x, pos.y, zhuangPos.x, zhuangPos.y);
+                
+                EffectUtils.coinsFly_1(this, pos.x, pos.y, this.orginPlayerHeadPos[win_pos].x, this.orginPlayerHeadPos[win_pos].y);
             }
             //this.addChild(goldFlyAnimator);
             //this.goldFlyAnimatorarr.push(goldFlyAnimator);
             //goldFlyAnimator.play();
+            this.suiCoreGameEndScoreResultEffect(index, this['grpHead' + index], this.cardResult.pokes[i].win, this.cardResult.pokes[i].score);
         }
 
-        for (let i = 0; i < this.cardResult.pokes.length; i++) {
-            this.suiCoreGameEndScoreResultEffect(i, this['grpHead' + i], this.cardResult.pokes[i].win, this.cardResult.pokes[i].score);
-        }
 
         this.interval = setInterval(this.victoryEffect.bind(this), 2000);
     }

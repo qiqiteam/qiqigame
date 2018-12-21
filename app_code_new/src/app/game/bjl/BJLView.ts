@@ -20,6 +20,7 @@ class BJLView extends eui.Component {
     public js_ge: eui.Image;
     public tishi_zi_0: eui.Image;
     public tishi_zi_1: eui.Image;
+    public _paijubh: eui.Label;
     public grpCard: eui.Group;
     public grpCard_0_1: eui.Image;
     public grpCard_0_0: eui.Image;
@@ -36,13 +37,6 @@ class BJLView extends eui.Component {
     public _image_4: eui.Image;
     public _image_5: eui.Image;
     public _image_6: eui.Image;
-    public grpHead0: eui.Group;
-    public imghead0: eui.Image;
-    public labelHead0: eui.Label;
-    public labelGold0: eui.Label;
-    public _btn_close: eui.Button;
-    public _btn_meun: eui.Button;
-    public wanjialist: eui.Button;
     public grpCoins: eui.Group;
     public effectTouch0: eui.Image;
     public grade_text_0_0: eui.Label;
@@ -59,10 +53,6 @@ class BJLView extends eui.Component {
     public effectTouch4: eui.Image;
     public grade_text_4_0: eui.Label;
     public grade_text_4_1: eui.Label;
-    public wjlistkuang: eui.Group;
-    public packup: eui.Image;
-    public scroller: eui.Scroller;
-    public userlist: eui.List;
     public Themitoken: eui.Group;
     public cardgrp_0: eui.Group;
     public _bei_puke_0_0: eui.Image;
@@ -92,6 +82,18 @@ class BJLView extends eui.Component {
     public xian_Label: eui.Label;
     public zhuang_tishi: eui.Group;
     public zhuang_Label: eui.Label;
+    public wjlistkuang: eui.Group;
+    public packup: eui.Image;
+    public scroller: eui.Scroller;
+    public userlist: eui.List;
+    public _btn_close: eui.Button;
+    public _btn_meun: eui.Button;
+    public wanjialist: eui.Button;
+    public grpHead0: eui.Group;
+    public imghead0: eui.Image;
+    public labelHead0: eui.Label;
+    public labelGold0: eui.Label;
+
 
 
 
@@ -148,7 +150,7 @@ class BJLView extends eui.Component {
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
-        this.juegengxin(1);
+        // this.juegengxin(1);
 
         // for (let i = 0; i < 20; i++) {
         //     this.onPlayerGenZhu(4, 1);
@@ -354,20 +356,22 @@ class BJLView extends eui.Component {
     /**局数更新 */
     private juegengxin(index: number): void {
         this.jushu_bg.visible = true;
-        if (index >= 10 && index < 20) {
-            this.js_shi.visible = true;
-            this.js_ge.visible = true;
-            this.jushu_bg.source = 'baccarat_font_bureau_diju2_png';
-            this.js_shi.source = 'baccarat_font_bureau_1_png';
-            this.js_ge.source = 'baccarat_font_bureau_' + index % 10 + '_png';
-            this.js_ge.x = 601;
-        } else {
+
+        if (index > 0 && index < 10) {
             this.js_shi.visible = false;
             this.js_ge.visible = true;
             this.jushu_bg.source = 'baccarat_font_bureau_diju1_png';
             this.js_ge.source = 'baccarat_font_bureau_' + index + '_png';
             this.js_ge.x = 593;
+        } else if (index >= 10 && index < 100) {
+            this.js_shi.visible = true;
+            this.js_ge.visible = true;
+            this.jushu_bg.source = 'baccarat_font_bureau_diju2_png';
+            this.js_shi.source = 'baccarat_font_bureau_' + index / 10 % 10 + '_png';
+            this.js_ge.source = 'baccarat_font_bureau_' + index % 10 + '_png';
+            this.js_ge.x = 601;
         }
+
     }
     /**个人限红通知 */
     private UpdateLimitItem(data: any) {
@@ -406,6 +410,8 @@ class BJLView extends eui.Component {
         this.juegengxin(data._obj.jushu);
         this.sypai_0.text = data._obj.leftcardlh + '';
         this.sypai_1.text = data._obj.deskcards + '';
+
+        // this._paijubh.text = data._obj.inningId + '';   //牌局编号恢复
 
     }
 
@@ -712,7 +718,7 @@ class BJLView extends eui.Component {
     private Joinhalfway(data: any) {
         // console.log(data);
         this.juegengxin(data._obj.jushu);              //局数恢复
-
+        // this._paijubh.text = data._obj.inningId + '';   //牌局编号恢复
         this.tishizithuifu(data._obj.roomStatus);   /**提示字恢复 */
 
         console.log('-----------------------------------------------' + data._obj.roomStatus + '----------------------------');

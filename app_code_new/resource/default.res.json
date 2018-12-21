@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png,zjh_huaheng_ske2_json,zjh_huaheng_tex2_json,zjh_huaheng_tex2_png",
 			"name": "preload"
 		},
 		{
@@ -21,7 +21,7 @@
 			"name": "zhajinhua"
 		},
 		{
-			"keys": "loding_json,loding_bg_jpg",
+			"keys": "loding_json,loding_bg_jpg,bg_baijiale_ske_json,bg_baijiale_tex_json,bg_baijiale_tex_png,bg_bairenniuniu_ske_json,bg_bairenniuniu_tex_json,bg_bairenniuniu_tex_png,bg_daliuguang_ske_json,bg_daliuguang_tex_json,bg_daliuguang_tex_png,bg_ebg_tianwang_ske_json,bg_ebg_tianwang_tex_json,bg_ebg_tianwang_tex_png,bg_ebg_tongsha_ske_json,bg_ebg_tongsha_tex_json,bg_ebg_tongsha_tex_png,bg_ewrbagang_ske_json,bg_ewrbagang_tex_json,bg_ewrbagang_tex_png,bg_qiangzhuangniuniu_ske_json,bg_qiangzhuangniuniu_tex_json,bg_qiangzhuangniuniu_tex_png,bg_qznn_niujiao_ske_json,bg_qznn_niujiao_tex_json,bg_qznn_niujiao_tex_png,bg_remen_ske_json,bg_remen_tex_json,bg_remen_tex_png,bg_tongbiniuniu_ske_json,bg_tongbiniuniu_tex_json,bg_tongbiniuniu_tex_png,bg_xiaoliuguang_ske_json,bg_xiaoliuguang_tex_json,bg_xiaoliuguang_tex_png,bg_xin_ske_json,bg_xin_tex_json,bg_xin_tex_png,bg_zhajinhua_ske_json,bg_zhajinhua_tex_json,bg_zhajinhua_tex_png,bg_zjh_zidong_ske_json,bg_zjh_zidong_tex_json,bg_zjh_zidong_tex_png,bjl_rukou_ske_json,bjl_rukou_tex_json,bjl_rukou_tex_png,brnn_effect_begining_ske_json,brnn_effect_begining_tex_json,brnn_effect_begining_tex_png,brnn_effect_gamestart_ske_json,brnn_effect_gamestart_tex_json,brnn_effect_gamestart_tex_png,brnn_effect_stop_ske_json,brnn_effect_stop_tex_json,brnn_effect_stop_tex_png,brnn_effect_xiazhu_ske_json,brnn_effect_xiazhu_tex_json,brnn_effect_xiazhu_tex_png,brnn_fapai_1_ske_json,brnn_fapai_1_tex_json,brnn_fapai_1_tex_png,brnn_fapai_2_ske_json,brnn_fapai_2_tex_json,brnn_fapai_2_tex_png,brnn_fapai_3_ske_json,brnn_fapai_3_tex_json,brnn_fapai_3_tex_png,brnn_fapai_4_ske_json,brnn_fapai_4_tex_json,brnn_fapai_4_tex_png,brnn_fapai_5_ske_json,brnn_fapai_5_tex_json,brnn_fapai_5_tex_png,brnn_rukou_ske_json,brnn_rukou_tex_json,brnn_rukou_tex_png,ebg_rukou_ske_json,ebg_rukou_tex_json,ebg_rukou_tex_png,guzhuyizhi_ske_json,guzhuyizhi_tex_json,guzhuyizhi_tex_png,qznn_nvrenwu_ske_json,qznn_nvrenwu_tex_json,qznn_nvrenwu_tex_png,qznn_rukou_ske_json,qznn_rukou_tex_json,qznn_rukou_tex_png,tbnn_rukou_ske_json,tbnn_rukou_tex_json,tbnn_rukou_tex_png,tongbiniuniu_ske_json,tongbiniuniu_tex_json,tongbiniuniu_tex_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png,zjh_rukou_ske_json,zjh_rukou_tex_json,zjh_rukou_tex_png",
 			"name": "load"
 		}
 	],
@@ -5730,21 +5730,6 @@
 			"name": "lh_chipfly_long_mp3"
 		},
 		{
-			"url": "assets/dragonbones/vshuahen/vshuahen_tex.png",
-			"type": "image",
-			"name": "vshuahen_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/vshuahen/vshuahen_ske.json",
-			"type": "json",
-			"name": "vshuahen_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/vshuahen/vshuahen_tex.json",
-			"type": "json",
-			"name": "vshuahen_tex_json"
-		},
-		{
 			"url": "assets/effects/niyingle/zjh_effect_youwin_tex_1 0.png",
 			"type": "image",
 			"name": "zjh_effect_youwin_tex_1 0_png"
@@ -7423,6 +7408,96 @@
 			"url": "assets/dragonbones/bg_zjh_zidong/bg_zjh_zidong_tex.json",
 			"type": "json",
 			"name": "bg_zjh_zidong_tex_json"
+		},
+		{
+			"url": "assets/game/brnn/brnn_banker_txt.png",
+			"type": "image",
+			"name": "brnn_banker_txt_png"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_ske.json",
+			"type": "json",
+			"name": "zjh_huaheng_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_tex.json",
+			"type": "json",
+			"name": "zjh_huaheng_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_tex.png",
+			"type": "image",
+			"name": "zjh_huaheng_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_ske.json",
+			"type": "json",
+			"name": "zjh_huaheng_ske2_json"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_tex.json",
+			"type": "json",
+			"name": "zjh_huaheng_tex2_json"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_tex.png",
+			"type": "image",
+			"name": "zjh_huaheng_tex2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_banker_txt.png",
+			"type": "image",
+			"name": "brnn_banker_txt2_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_tuoguan_bg.png",
+			"type": "image",
+			"name": "tbnn_tuoguan_bg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_tuoguan_btn2.png",
+			"type": "image",
+			"name": "tbnn_tuoguan_btn2_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_tuoguan_btn1.png",
+			"type": "image",
+			"name": "tbnn_tuoguan_btn1_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_room_btn_qxtg.png",
+			"type": "image",
+			"name": "tbnn_room_btn_qxtg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_room_btn_tg.png",
+			"type": "image",
+			"name": "tbnn_room_btn_tg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_btnbg.png",
+			"type": "image",
+			"name": "tbnn_trustee_btnbg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_btnbg2.png",
+			"type": "image",
+			"name": "tbnn_trustee_btnbg2_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_cancel_btn.png",
+			"type": "image",
+			"name": "tbnn_trustee_cancel_btn_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_sure_btn.png",
+			"type": "image",
+			"name": "tbnn_trustee_sure_btn_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_wenzi1.png",
+			"type": "image",
+			"name": "tbnn_trustee_wenzi1_png"
 		}
 	]
 }
