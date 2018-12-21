@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BRNNViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Group horizontalCenter="0" verticalCenter="0" locked="true">
-		<e:Image y="0" x="0" source="brnn_game_bg_png" locked="true"/>
-		<e:Image x="0" y="0" source="brnn_game_bigbg_png" locked="true"/>
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image y="0" x="0" source="brnn_game_bg_png"/>
+		<e:Image x="0" y="0" source="brnn_game_bigbg_png"/>
 
 
-		<e:Group width="420" height="118" scaleX="1" scaleY="1" horizontalCenter="0" top="0" locked="true">
+		<e:Group id="_group_ding" width="420" height="118" scaleX="1" scaleY="1" horizontalCenter="0" top="0">
 			<e:Image scaleX="1" scaleY="1" source="brnn_game_hardbg_png" x="0" y="0"/>
-			<e:Image scaleX="1" scaleY="1" x="34" source="brnn_game_head_png" y="13"/>
+			<e:Image id="_heguan" scaleX="1" scaleY="1" x="34" source="brnn_game_head_png" y="13"/>
+
 			<e:Image width="86" height="84" source="women7_png" y="16.66" x="37.32"/>
 		</e:Group>
 	</e:Group>
@@ -508,8 +509,8 @@
 
 	</e:Group>
 	<e:Group id="wanjia" width="237" height="476" anchorOffsetY="0" y="164" x="0" locked="true">
-		<e:Image width="237" height="413" source="brnn_game_open_png" horizontalCenter="0" y="0" locked="true"/>
-		<e:Image id="packup" width="237" height="63" source="brnn_game_open1_png" y="413" x="0" locked="true"/>
+		<e:Image width="237" height="413" source="brnn_game_open_png" horizontalCenter="0" y="0"/>
+		<e:Image id="packup" width="237" height="63" source="brnn_game_open1_png" y="413" x="0"/>
 		<e:Scroller id="scroller" width="230" height="360" y="47.04" x="4" scrollPolicyV="on">
 			<e:Group>
 				<e:List id="userlist" height="100%" y="0" width="100%" x="0" anchorOffsetY="0" scaleX="1" scaleY="1" itemRenderer="BRNNframe">
