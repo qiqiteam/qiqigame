@@ -18,6 +18,8 @@ class EventConst {
     public static niuniu_start: string = "niuniu_start";
     /**抢庄*/
     public static niuniu_dohog: string = "niuniu_dohog";
+    /**牛牛托管*/
+    public static niuniu_trust: string = "niuniu_trust";
     /**投注倍数*/
     public static niuniu_dobet: string = "niuniu_dobet";
     /**取消匹配 */
@@ -80,6 +82,10 @@ class EventConst {
     public static onUserList: string = "onUserList";
     /**新玩家加入*/
     public static onNewUserEnterGame: string = "onNewUserEnterGame";
+    /**托管成功*/
+    public static onTrust: string = "onTrust";
+    /**取消托管*/
+    public static onCancelTrust: string = "onCancelTrust";
     /**下注通知(所有人)*/
     public static onUserBetOrderUpdate: string = "onUserBetOrderUpdate";
     /**抢庄通知(所有人)*/
@@ -87,7 +93,7 @@ class EventConst {
     /**牛牛匹配中退出游戏、游戏结束退出*/
     public static onUserLeave: string = "onUserLeave";
 
-     /**点击关闭准备面板按钮游戏结束退出*/
+    /**点击关闭准备面板按钮游戏结束退出*/
     public static onUserXClose: string = "onUserXClose";
 
     /**监听抢庄按钮*/

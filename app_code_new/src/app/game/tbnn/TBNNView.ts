@@ -132,9 +132,18 @@ class TBNNView extends eui.Component {
     public _btn_tanpai: eui.Button;
     public _btn_close: eui.Button;
     public _btn_meun: eui.Button;
+    public _btn_quxiaosting: eui.Button;
     public _btn_Hosting: eui.Button;
     public _tishi: eui.Group;
     public _tishi_text: eui.Label;
+    public _tuoguankuang: eui.Group;
+    public radio_1: eui.RadioButton;
+    public radio_2: eui.RadioButton;
+    public radio_3: eui.RadioButton;
+    public radio_4: eui.RadioButton;
+    public radio_5: eui.RadioButton;
+    public _quxiao: eui.Button;
+    public _qding: eui.Button;
 
 
 
@@ -174,6 +183,8 @@ class TBNNView extends eui.Component {
 
     public time: number;        //秒数
     public timer: egret.Timer;  //游戏计时器间隔
+
+    public istuoguan: boolean = false;      //是否在托管中
 
     //计时器回调状态
 
@@ -348,6 +359,7 @@ class TBNNView extends eui.Component {
         this._xiabei_5.visible = false
 
         this._jixu.visible = false;
+        this.istuoguan = false;
 
         this._pingpai.visible = false;
         this._my_pai.visible = false;
@@ -392,6 +404,8 @@ class TBNNView extends eui.Component {
         this.grpHead5.visible = false;
 
         this._tishi.visible = false;
+
+        this._tuoguankuang.visible = false;
 
         this._zhuang_img0.visible = false;
         this._zhuang_img1.visible = false;
@@ -486,23 +500,85 @@ class TBNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
         if (e.target == this._btn_begin) {
             this.onRestartGame();
+            if (this.istuoguan) {
+                this.quxiaotuoguan();
+            }
         } else if (e.target == this._btn_meun) {
             //this.addNNEff();
         } else if (e.target == this._btn_double_1) {
             this.sendamessage(EventConst.niuniu_dobet, this.multipleList[0]);
+            if (this.istuoguan) {
+                this.quxiaotuoguan();
+            }
         } else if (e.target == this._btn_double_2) {
             this.sendamessage(EventConst.niuniu_dobet, this.multipleList[1]);
+            if (this.istuoguan) {
+                this.quxiaotuoguan();
+            }
         } else if (e.target == this._btn_double_3) {
             this.sendamessage(EventConst.niuniu_dobet, this.multipleList[2]);
+            if (this.istuoguan) {
+                this.quxiaotuoguan();
+            }
         } else if (e.target == this._btn_double_4) {
             this.sendamessage(EventConst.niuniu_dobet, this.multipleList[3]);
+            if (this.istuoguan) {
+                this.quxiaotuoguan();
+            }
         } else if (e.target == this._btn_double_5) {
             this.sendamessage(EventConst.niuniu_dobet, this.multipleList[4]);
+            if (this.istuoguan) {
+                this.quxiaotuoguan();
+            }
         } else if (e.target == this._btn_tanpai) {
             this.returntanpai();
+            if (this.istuoguan) {
+                this.quxiaotuoguan();
+            }
         } else if (e.target == this._btn_Hosting) {
-            //托管
+            this._tuoguankuang.visible = true;
+        } else if (e.target == this._btn_quxiaosting) {
+            this.quxiaotuoguan();
+        } else if (e.target == this._quxiao) {
+            this._tuoguankuang.visible = false;
+        } else if (e.target == this._qding) {
+            this.tuoguan();
         }
+    }
+    /**托管命令 */
+    private tuoguan(): void {
+        var num: number = 0;
+        for (let i = 1; i < 6; i++) {
+            if (this['radio_' + i].selected) {
+                num = i;
+            }
+        }
+        let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+        let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_TBNN);
+        let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+        let senddata: any = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+            playway: playway.id,
+            trust: true,
+            data: num
+        };
+        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_trust, senddata, (data) => {
+        }, this);
+    }
+    /**取消托管命令 */
+    private quxiaotuoguan(): void {
+        let gameData: gameData = UserInfo.getInstance().getGameDataByindex(Const.GAME_NIUNIU);
+        let typeData: typeData = gameData.getTypeDataByindex(Const.TYPE_TBNN);
+        let playway: playWayData = typeData.getPlayWayByindex(Const.PLAYWAY_CHUJICHANG);
+        let senddata: any = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+            playway: playway.id,
+            trust: false
+        };
+        xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_trust, senddata, (data) => {
+        }, this);
     }
     /**发送摊牌命令 */
     private returntanpai() {
@@ -534,6 +610,9 @@ class TBNNView extends eui.Component {
         this._btn_meun.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_Hosting.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_quxiaosting.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._quxiao.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._qding.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         this._btn_double_1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -544,6 +623,8 @@ class TBNNView extends eui.Component {
         this._btn_tanpai.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
+        EventUtil.addEventListener(EventConst.onTrust, this.tuoguanchenggo, this);
+        EventUtil.addEventListener(EventConst.onCancelTrust, this.quxiaotuoguanchenggo, this);
         EventUtil.addEventListener(EventConst.onUserShowOrderUpdate, this.onShowOrder, this);
         EventUtil.addEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.addEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);
@@ -551,16 +632,28 @@ class TBNNView extends eui.Component {
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
 
     }
-
+    /**托管成功 */
+    private tuoguanchenggo(data): void {
+        if (data._obj.code == 200) {
+            this._tuoguankuang.visible = false;
+            this._btn_Hosting.visible = false;
+            this._btn_quxiaosting.visible = true;
+            this.istuoguan = true;
+        }
+    }
+    /**取消托管成功 */
+    private quxiaotuoguanchenggo(data): void {
+        if (data._obj.code == 200) {
+            this._btn_Hosting.visible = true;
+            this._btn_quxiaosting.visible = false;
+            this.istuoguan = false;
+        }
+    }
     /**抢庄牛牛摊牌通知 */
     private onShowOrder(data: any): void {
         console.log(data._obj.index + "号摊牌");
         this.isTanPai[data._obj.index] = true;
-        //if (data._obj.index == 0) {
-        //this.myFanPai();
-        //} else {
         this.onePlayerFanPai(data._obj.index);
-        //}
     }
 
     /**游戏状态 */
@@ -573,8 +666,7 @@ class TBNNView extends eui.Component {
             case 4: this.onbetBack(data); break;        //下注
             case 5: ; break;
             case 6: this.onThecardtype(data); break;    //所有玩家 牌面信息 结算
-            case 7: ; break;
-            case 8: ; break;
+            case 12: this.onRestartGame();; break;      //继续游戏
         }
     }
     /**胜利 */
@@ -643,8 +735,8 @@ class TBNNView extends eui.Component {
                 this['beishu_0_' + i].source = 'img_BQ_0_' + data._obj.hogList[i].hogOrBet % 10 + '_png';
                 this['bs_img_' + i].visible = true;
             } else if (data._obj.hogList[i].hogOrBet < 10) {
-                this['beishu_' + i].visible = false;
-                this['beishu_' + i].source = '';
+                this['beishu_' + i].visible = true;
+                this['beishu_' + i].source = 'img_BQ_0_0_png';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_BQ_0_' + data._obj.hogList[i].hogOrBet + '_png';
                 // console.log(data._obj.hogList[i].hogOrBet);
@@ -1410,8 +1502,8 @@ class TBNNView extends eui.Component {
         //   y: this.orginPlayerHeadPos[this.zhaungIndex].y
         //}
         let win_pos = 0;
-        for(let i = 0; i < this.cardResult.pokes.length; i++) {
-            if(this.cardResult.pokes[i].win == true) {
+        for (let i = 0; i < this.cardResult.pokes.length; i++) {
+            if (this.cardResult.pokes[i].win == true) {
                 let index = UserInfo.getInstance().findSeatNumber(this.cardResult.pokes[i].index);
                 win_pos = index;
             }
@@ -1448,7 +1540,7 @@ class TBNNView extends eui.Component {
                 //EffectUtils.coinsFly_1(this, zhuangPos.x, zhuangPos.y, pos.x, pos.y);
             } else {
                 //goldFlyAnimator = AnimationUtils.goldFlyAnimation("qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_20_png", "qznn_showScore" + i + "-" + this.zhaungIndex + "_tex_{0}_png");
-                
+
                 EffectUtils.coinsFly_1(this, pos.x, pos.y, this.orginPlayerHeadPos[win_pos].x, this.orginPlayerHeadPos[win_pos].y);
             }
             //this.addChild(goldFlyAnimator);
@@ -1664,6 +1756,8 @@ class TBNNView extends eui.Component {
         this.beishu_0_4.visible = false;
 
         this.grpCountdown.visible = true;
+        this._tuoguankuang.visible = false;
+        this.istuoguan = false;
 
         this._xiabei_0.x = 751.67;
         this._xiabei_1.x = 337.84;
@@ -1787,9 +1881,12 @@ class TBNNView extends eui.Component {
     }
 
     public destroy(): void {
-
         this._btn_meun.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_begin.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_Hosting.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._btn_quxiaosting.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._quxiao.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
+        this._qding.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         this._btn_double_1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_2.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1800,6 +1897,8 @@ class TBNNView extends eui.Component {
         this._btn_tanpai.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
 
+        EventUtil.removeEventListener(EventConst.onTrust, this.tuoguanchenggo, this);
+        EventUtil.removeEventListener(EventConst.onCancelTrust, this.quxiaotuoguanchenggo, this);
         EventUtil.removeEventListener(EventConst.onUserShowOrderUpdate, this.onShowOrder, this);
         EventUtil.removeEventListener(EventConst.players, this.addPlayers, this);
         EventUtil.removeEventListener(EventConst.onNewUserEnterGame, this.playerJoinRoom, this);

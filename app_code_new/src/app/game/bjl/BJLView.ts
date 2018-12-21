@@ -673,7 +673,7 @@ class BJLView extends eui.Component {
                         var coin = BJLUtil.getInstance().coinsType(p, 10);
                         this.arrCoin.push(coin);
                         this.grpCoins.addChild(coin);
-                        egret.Tween.get(coin).wait(5 * i).to({ x: 68, y: 762 }, 300);
+                        egret.Tween.get(coin).wait(5 * i).to({ x: 68, y: 762 }, 500);
                     }
                 }
             }, 700);
@@ -685,19 +685,19 @@ class BJLView extends eui.Component {
         for (let i = 0; i < this['coin_' + index + '_arr'].length; i++) {
             var chouma = this['coin_' + index + '_arr'][i];
             if (istype == 0) {
-                egret.Tween.get(chouma).wait(i + 5).to({ x: pos.x, y: pos.y }, 200);
+                egret.Tween.get(chouma).wait(i + 5).to({ x: pos.x, y: pos.y }, 500);
 
             } else if (istype == 1) {
                 var position: egret.Point = new egret.Point();
                 position.x = pos.x + (Math.random() * 30);
                 position.y = pos.y + (Math.random() * 10);
-                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 200);
+                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 500);
 
             } else if (istype == 2) {
                 var position: egret.Point = new egret.Point();
                 position.x = pos.x + (Math.random() * 250);
                 position.y = pos.y + (Math.random() * 80);
-                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 200);
+                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 500);
             }
 
         }

@@ -176,8 +176,6 @@ declare class SetViewSkin extends eui.Skin{
 }
 declare class TBNNHeadSkin extends eui.Skin{
 }
-declare class TBNNInthematch extends eui.Skin{
-}
 declare class TBNNroomEffSkin extends eui.Skin{
 }
 declare class TBNNroomViewSkin extends eui.Skin{

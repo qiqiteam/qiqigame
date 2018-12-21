@@ -33,20 +33,22 @@ module xlLib {
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.betnum, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.summary, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.play, this.onMessage);
-			
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onTrust, this.onMessage, this);
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onCancelTrust, this.onMessage, this);
+
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.OnUpdateLimitItem, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUpdateUserBalance, this.onMessage);
-			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onSendJetton, this.onMessage);		
+			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onSendJetton, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.userwin, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserLeaveGame, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onSendGameRoom, this.onMessage);
-			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.startBeton, this.onMessage, this);
-			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.baccaratOnJoinRoom, this.onMessage, this);
+
+			
 			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.dealCatch, this.onMessage, this);
 			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.beginBteon, this.onMessage, this);
 			// xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.bsogc, this.onMessage, this);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserXClose, this.onMessage, this);
-			
+
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserBetSelect, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onAiOperate, this.onMessage);
 			xlLib.WebSocketMgr.getInstance().registerMsgHandler(EventConst.onUserSeeCard, this.onMessage);
@@ -73,8 +75,8 @@ module xlLib {
 				case EventConst.onGameStatusChange:
 					//处理逻辑----------
 					UserInfo.getInstance().gameStatu(msg);
-					EventUtil.dispatchEvent(msg.command,msg);
-					return ;
+					EventUtil.dispatchEvent(msg.command, msg);
+					return;
 				case EventConst.players:
 					console.log(msg);
 					UserInfo.getInstance().addPlayes(msg);
