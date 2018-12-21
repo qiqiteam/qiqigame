@@ -31,8 +31,8 @@
 		<e:Image id="js_ge" width="14" height="26" x="601" y="161" source="baccarat_font_bureau_5_png" locked="true"/>
 		<e:Image id="tishi_zi_0" width="100" height="30" x="698" y="159" source="baccarat_font_stage_3_png" locked="true"/>
 		<e:Image id="tishi_zi_1" width="180" height="30" x="652" y="159" source="baccarat_font_stage_5_png" locked="true" visible="false"/>
-		<e:Image width="118" height="40" x="889.73" y="12" source="gameID" locked="true"/>
-		<e:Label id="_paijubh" text="50-1543687800-31296807-1" x="1010.29" y="19" height="26" verticalAlign="middle" textAlign="left" size="26" textColor="0xe0a500" locked="true"/>
+		<e:Image width="118" height="40" x="848.09" y="12" source="gameID" locked="true"/>
+		<e:Label id="_paijubh" text="50-1543687800-31296807-1" x="968.65" y="19" height="26" verticalAlign="middle" textAlign="left" size="26" textColor="0xe0a500" locked="true"/>
 	</e:Group>
 
 
