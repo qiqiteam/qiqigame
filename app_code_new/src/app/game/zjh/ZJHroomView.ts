@@ -25,7 +25,7 @@ class ZJHroomView extends eui.Component implements eui.UIComponent {
 		this._return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
 		this._record.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
 		this._help.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onclickpanl, this);
-		this._coin_label.text = "" + UserInfo.getInstance().goldcoins;
+		this._coin_label.text = "" + UserInfo.getInstance().goldcoins/100;
 		this._btn_cjc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onEnterGame, this);
 		EventUtil.addEventListener(EventConst.onGameStatusChange, this.JoinRoomPrepare, this);
 

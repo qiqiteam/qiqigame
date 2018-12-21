@@ -108,7 +108,7 @@ class ZJHUtil {
         switch (index) {
              case 0:
                 point.x = 220;
-                point.y = 160;
+                point.y = 140;
                 break;
             case 1:
                 point.x = -125;
