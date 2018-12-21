@@ -709,7 +709,7 @@ class RBGView extends eui.Component {
         }
 
         let player = this["grpHead" + index];
-        player.setGold(this.fmoney(data._obj.balance,2));
+        player.setGold(this.fmoney(data._obj.balance/100,2));
 
         let _group = this["_group_bet_point_" + index];
          _group.visible = true;
@@ -1092,7 +1092,7 @@ class RBGView extends eui.Component {
         for(let i=0; i<4; i++) {
             let index = UserInfo.getInstance().findSeatNumber(data.players[i].index);
             let player = this["grpHead" + index];
-            player.setGold(this.fmoney(data.players[i].balance,2));
+            player.setGold(this.fmoney(data.players[i].balance/100,2));
 
             let label = new eui.BitmapLabel;
             let img = new eui.Image;
@@ -1116,7 +1116,7 @@ class RBGView extends eui.Component {
                 str = "-";
                 img.source = "bar_reduce_bg_png";
             }
-            label.text = str + data.players[i].dealGold;
+            label.text = str + this.fmoney(data.players[i].dealGold/100,2);
             label.scaleX = label.scaleY = 0.2;
             label.alpha = 0;
             img.scaleX = img.scaleY = 0.2;
@@ -1264,7 +1264,7 @@ class RBGView extends eui.Component {
         //设置其他玩家信息
         for (let i = 0; i < UserInfo.getInstance().playes.length; i++) {
             if (data._obj.player[i] != null) {
-                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, this.fmoney(UserInfo.getInstance().playes[i].goldcoins,2), "women6_png");//data._obj.player[i].headimg
+                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, this.fmoney(UserInfo.getInstance().playes[i].goldcoins/100,2), "women6_png");//data._obj.player[i].headimg
             } else {
                 //this['grpHead' + i].setUserInfo("圣诞节回复", "100000", "F4_03_png");
                 this['grpHead' + i].setUserInfo("", "", "");
@@ -1279,7 +1279,7 @@ class RBGView extends eui.Component {
         if (data._obj.player.id == UserInfo.getInstance().myPlayer.id) {
 
         } else {
-            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, this.fmoney(data._obj.player.goldcoins,2), "women6_png");
+            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, this.fmoney(data._obj.player.goldcoins/100,2), "women6_png");
         }
     }
     
@@ -1514,9 +1514,9 @@ class RBGView extends eui.Component {
             this["_player_fen_" + i].text = value.players[i].ratio;
             this["_player_bet_" + i].text = value.players[i].multiple;
             if(value.players[i].win) {
-                this["_player_gold_" + i].text = "+"+value.players[i].dealGold;
+                this["_player_gold_" + i].text = "+" + this.fmoney(value.players[i].dealGold/100, 2);
             } else {
-                this["_player_gold_" + i].text = "-"+value.players[i].dealGold;
+                this["_player_gold_" + i].text = "-" + this.fmoney(value.players[i].dealGold/100, 2);
             }
             
             if(index==0) {

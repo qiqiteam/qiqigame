@@ -79,6 +79,15 @@ class Main extends xlLib.GameDoc {
         RES.loadConfig("resource/default.res.json", "resource/");
         xlLib.SoundMgr.instance.musicOpen = true;
         xlLib.SoundMgr.instance.soundOpen = true;
+        
+        let host:string = GameUtils.getGetParameter("host");
+        let port:string = GameUtils.getGetParameter("port");
+        if(host!=""){
+            Const.GAME_HOST= host;
+        }
+        if(port!=""){
+            Const.GAME_PORT= port;
+        }
     }
  
     private  loadingIcon: egret.Bitmap;

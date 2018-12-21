@@ -375,7 +375,7 @@
 		</e:skinName>
 	</e:Button>
 	<e:Image id="_continue_img_0" y="496.35" source="bar_btn_txt_continue_png" touchEnabled="false" scaleX="1" scaleY="1" x="674" locked="true" visible="false"/>
-	<e:Group id="_group_settlement" width="1472" height="828" x="0" y="0" locked="true" visible="false">
+	<e:Group id="_group_settlement" width="1472" height="828" x="0" y="0" visible="false" locked="true">
 		<e:Rect id="_rect_re_touch" width="1472" height="828" y="0" fillAlpha="0.4" x="0"/>
 		<e:Image id="_img_re_bg" y="152" x="105" touchEnabled="false" source="bar_over_lose_bg_png"/>
 		<e:Image id="_img_guang" source="bar_over_lose_light_png" y="-72.75" x="400"/>
@@ -401,10 +401,10 @@
 		<e:Label id="_player_bet_1" text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" textAlign="center" width="105" x="776" y="415"/>
 		<e:Label text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" textAlign="center" id="_player_bet_2" width="105" x="776" y="475"/>
 		<e:Label text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" textAlign="center" id="_player_bet_3" width="105" x="776" y="534"/>
-		<e:Label id="_player_gold_0" text="0" fontFamily="SimHei" size="35" textAlign="center" textColor="0xFBD901" width="105" x="907" y="357"/>
-		<e:Label id="_player_gold_1" text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" textAlign="center" width="105" x="907" y="415"/>
-		<e:Label text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" textAlign="center" id="_player_gold_2" width="105" x="907" y="475"/>
-		<e:Label text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" id="_player_gold_3" textAlign="center" width="105" x="907" y="534"/>
+		<e:Label id="_player_gold_0" text="0" fontFamily="SimHei" size="35" textAlign="center" textColor="0xFBD901" y="357" width="158" x="881"/>
+		<e:Label id="_player_gold_1" text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" textAlign="center" width="158" y="415" x="881"/>
+		<e:Label text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" textAlign="center" id="_player_gold_2" width="158" y="475" x="881"/>
+		<e:Label text="0" textColor="0xFFFFFF" fontFamily="SimHei" size="35" id="_player_gold_3" textAlign="center" width="158" y="534" x="881"/>
 		<e:Image id="_player_zhuang_0" y="354" x="360" source="bar_over_banker_png"/>
 		<e:Image y="412.48" source="bar_over_banker_png" x="360" id="_player_zhuang_1"/>
 		<e:Image y="473" source="bar_over_banker_png" x="360" id="_player_zhuang_2"/>

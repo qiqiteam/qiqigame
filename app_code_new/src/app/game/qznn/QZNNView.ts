@@ -705,7 +705,7 @@ class QZNNView extends eui.Component {
             case 5: ; break;
             case 6: this.onThecardtype(data); break;    //自己的牌
             case 7: this.oncloseanaccount(data); break; //其他玩家的牌型  结算
-            case 8: ; break;        // 游戏结束
+            case 11: this.acceptbanker(data); break;        // 定庄
         }
     }
     /**监听抢庄 */
@@ -770,9 +770,9 @@ class QZNNView extends eui.Component {
         this._group_qiang.visible = false;
         this._btn_switch.visible = true;
 
-        if (data._obj.roomStatus == 4) {
-            this.acceptbanker(data);
-        }
+        // if (data._obj.roomStatus == 4) {
+        //     this.acceptbanker(data);
+        // }
 
         for (let i = 0; i < data._obj.hogList.length; i++) {
             this['_btn_double_' + (i + 1)].visible = true;
@@ -956,8 +956,9 @@ class QZNNView extends eui.Component {
     /**随机庄家动画 */
     private bet_data: any = [];
     private acceptbanker(data: any): void {
+
         this.bet_data = [];
-        this.bet_data = data;
+        this.bet_data = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
 
         var max = -1;
         this.betNum = [];
@@ -977,14 +978,14 @@ class QZNNView extends eui.Component {
             this.turn0 = setInterval(this.turnBankerShow.bind(this), 100);
             return;
         } else {
-            this.setbanker(data);
+            this.setbanker(data._obj.banker.index);
             this.bet_data = [];
         }
 
     }
     /**设置庄家 */
     private setbanker(data) {
-        let num = UserInfo.getInstance().findSeatNumber(data._obj.banker.index);
+        let num = UserInfo.getInstance().findSeatNumber(data);
         this['_zhuang_img' + num].visible = true;
         if (num % 2 == 0) {
             if (!this.niuniukuang) {
