@@ -58,7 +58,7 @@ class LoginView extends eui.Component {
 
 	private _onVisitorLogin(e: egret.TouchEvent): void {
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
-		xlLib.HttpManager.getInstance().send(HttpAddress.guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
+		xlLib.HttpManager.getInstance().send(HttpAddress.getInstance().guestUrl,null,null,this.onLoginSucess,this.onLoginFail);
 	}
 
 	private _onAccountLogin(e: egret.TouchEvent): void {
@@ -68,7 +68,7 @@ class LoginView extends eui.Component {
 
 
 	private onGetCode(e: egret.TouchEvent): void {
-		xlLib.HttpManager.getInstance().send(HttpAddress.sendmsgUrl, { mobile: this._phone_txt.text }
+		xlLib.HttpManager.getInstance().send(HttpAddress.getInstance().sendmsgUrl, { mobile: this._phone_txt.text }
 			, null, (mes) => {
 				xlLib.TipsUtils.showFloatWordTips("发送验证码成功！");
 			}, (mes) => {
@@ -86,7 +86,7 @@ class LoginView extends eui.Component {
 			return;
 		}
 		xlLib.UIMgr.instance.showLoading(TipsLoading);
-		xlLib.HttpManager.getInstance().send(HttpAddress.login, { mobile: this._phone_txt.text, verifyCode: this._verify_code_txt.text },
+		xlLib.HttpManager.getInstance().send(HttpAddress.getInstance().loginUrl, { mobile: this._phone_txt.text, verifyCode: this._verify_code_txt.text },
 			null, this.onLoginSucess, this.onLoginFail);
 	}
 

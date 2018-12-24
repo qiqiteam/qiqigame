@@ -1,8 +1,21 @@
 class HttpAddress {
+    private static _instance: HttpAddress;
+    /**
+     * http请求管理器单例
+     */
+    public static getInstance(): HttpAddress {
+        if (!this._instance) {
+            this._instance = new HttpAddress();
+        }
+        return this._instance;
+    }
+    public constructor() {
+    }
+    public  httpUrl:string = "http://"+Const.GAME_HOST+":80";
     /**游客登录地址 */
-    public static guestUrl:string = Const.httpUrl + "/api/guest";
+    public  guestUrl:string = this.httpUrl + "/api/guest";
     /**游客登录地址 */
-    public static sendmsgUrl:string = Const.httpUrl + "/api/sendmsg";
+    public  sendmsgUrl:string = this.httpUrl + "/api/sendmsg";
     /**注册登录地址 */
-    public static login:string = Const.httpUrl + "/api/login";
+    public  loginUrl:string = this.httpUrl + "/api/login";
 }
