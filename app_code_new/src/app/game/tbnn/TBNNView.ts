@@ -667,7 +667,7 @@ class TBNNView extends eui.Component {
             case 6: this.onThecardtype(data); break;    //所有玩家 牌面信息 结算
             case 12: this.onRestartGame(); break;      //继续游戏
             // case 13: this.sendamessage(EventConst.niuniu_dobet, 5); break;   //托管倍数
-            
+
         }
     }
     /**胜利 */
@@ -708,12 +708,12 @@ class TBNNView extends eui.Component {
     }
     /**监听下注 */
     private onbetBack(data: any): void {
-        // this._tishi.visible = false;
+        this._paijubh.text = data._obj.inningId + '';
+
         xlLib.PopUpMgr.removePopUp(Inthematch, 1);
         this.time = 0;
         this.grpCountdown.visible = true;
         this.startCountDown(data._obj.seconds);
-        // this._group_qiang.visible = false;
         this._btn_switch.visible = true;
 
         if (!this.gamestarEff) {
@@ -731,7 +731,7 @@ class TBNNView extends eui.Component {
 
             if (data._obj.hogList[i].hogOrBet >= 10) {
                 this['beishu_' + i].visible = true;
-                this['beishu_' + i].source = 'img_BQ_0_1_png';
+                this['beishu_' + i].source = 'img_BQ_0_' + data._obj.hogList[i].hogOrBet / 10 % 10 + '_png';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_BQ_0_' + data._obj.hogList[i].hogOrBet % 10 + '_png';
                 this['bs_img_' + i].visible = true;
@@ -740,7 +740,6 @@ class TBNNView extends eui.Component {
                 this['beishu_' + i].source = 'img_BQ_0_0_png';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_BQ_0_' + data._obj.hogList[i].hogOrBet + '_png';
-                // console.log(data._obj.hogList[i].hogOrBet);
                 this['bs_img_' + i].visible = true;
             }
             this.multipleList[i] = data._obj.hogList[i].hogOrBet;
@@ -776,40 +775,6 @@ class TBNNView extends eui.Component {
         this.startCountDown(data._obj.seconds);
         this.cardEffect();
 
-    }
-    /**其他玩家的牌型   结算 */
-    private oncloseanaccount(data: any) {
-
-        // this.game_result = data._obj.result;
-
-        // this.time = 0;
-        // // this.grpCountdown.visible = false;
-
-        // let result = {
-        //     pokes: [],
-        //     result: [1, 0, 0, 0],
-        //     bankerWin: 0,
-        //     rate: "0.05",
-        //     bomb: "0"
-        // };
-        // for (let i = 0; i < data._obj.players.length; i++) {
-        //     let err = {
-        //         num: data._obj.players[i].pai.ratio,
-        //         type: data._obj.players[i].pai.niu,
-        //         value: data._obj.players[i].cardsList,
-        //         win: data._obj.players[i].win,
-        //         score: data._obj.players[i].score
-        //     };
-        //     result.pokes.push(err);
-        // }
-        // this.zijipokes = data._obj.players[0].cardsList;
-        // this.cardResult = result;
-
-        // this._pingpai.visible = false;
-
-        // this._my_pai.visible = true;
-
-        // this.interval = setInterval(this.playerCardRotation.bind(this), 800);
     }
 
     /**更新下注通知(所有人) */
@@ -1565,6 +1530,7 @@ class TBNNView extends eui.Component {
         }
         UserInfo.getInstance().playes[num].goldcoins = _gold;
         if (num == 0) {
+            UserInfo.getInstance().goldcoins = _gold;
             this.labelGold0.text = GlobalFunction.Formatconversion(_gold);
         } else {
             this['grpHead' + num];

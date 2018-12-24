@@ -170,6 +170,8 @@ declare class SafeBoxTypeItemSkin extends eui.Skin{
 }
 declare class SafeBoxViewSkin extends eui.Skin{
 }
+declare class SANGOroomViewSkin extends eui.Skin{
+}
 declare class SetTypeItemSkin extends eui.Skin{
 }
 declare class SetViewSkin extends eui.Skin{

@@ -1170,7 +1170,7 @@ class BJLView extends eui.Component {
         var ty = point.y + Math.random() * 80;
         coin.touchEnabled = false;
         this.grpCoins.addChild(coin);
-        egret.Tween.get(coin).to({ x: tx, y: ty }, 200);
+        egret.Tween.get(coin).wait(Math.floor(100 * Math.random())).to({ x: tx, y: ty }, 200);
         switch (msg) {
             case 1:                 // 1是庄
                 this.coin_1_arr.push(coin);
