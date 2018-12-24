@@ -53,6 +53,7 @@
 		"bin-debug/app/game/bjl/BJLUtil.js",
 		"bin-debug/app/game/bjl/BJLView.js",
 		"bin-debug/app/game/bjl/BJLxiazhu.js",
+		"bin-debug/app/game/brnn/BRNNCoin.js",
 		"bin-debug/app/game/brnn/BRNNframe.js",
 		"bin-debug/app/game/brnn/BRNNHead.js",
 		"bin-debug/app/game/brnn/BrnnMainView.js",

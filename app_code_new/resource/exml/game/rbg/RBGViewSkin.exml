@@ -95,7 +95,7 @@
 		</e:Group>
 	</e:Group>
 	<e:Group id="grpCoins" width="1472" height="828" x="0" y="0" locked="true"/>
-	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true" visible="false">
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" visible="false" locked="true">
 		<ns1:RBGMahjong id="grpCard_0_0" width="20" height="20" x="499" y="600" skinName="RBGMahjongSkin" scaleX="1" scaleY="1"/>
 		<ns1:RBGMahjong width="20" height="20" x="580" y="600" skinName="RBGMahjongSkin" scaleX="1" scaleY="1" id="grpCard_0_1"/>
 		<e:Image x="578" y="748" scaleX="1" scaleY="1" source="bar_point_bg_0_png" id="labCardType_bg_0" anchorOffsetX="127.5" anchorOffsetY="33"/>

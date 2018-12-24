@@ -189,11 +189,15 @@ class BRNNUtil {
         else if (num == 50) { //50
             src = 'brnn_couma_1_5_png';
         }
-        var coin: eui.Image = new eui.Image(src);
+        var coin:BRNNCoin = new BRNNCoin();
+        coin.source = src;
+        //coin.anchorOffsetX = coin.width / 2,
+        //coin.anchorOffsetY = coin.height / 2;
         coin.x = pos.x;
         coin.y = pos.y;
         coin.scaleX = 0.3;
         coin.scaleY = 0.3;
+        coin.setType(num);
         return coin;
     }
 

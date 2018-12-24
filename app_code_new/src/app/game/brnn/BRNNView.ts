@@ -210,6 +210,7 @@ public _faPaiPos:eui.Image;
     private _coin_banker_arr = [];
     private _win_arr = [];
     private _coin_total = [];
+    private _coin_myxin = [];
 
     //-----------------------------------------------
     private interval: number = -1;      // 游戏计时器间隔
@@ -220,6 +221,7 @@ public _faPaiPos:eui.Image;
 
     private orginBankerCardPos = [];    // 存储庄家扑克位置
     private orginPlayerCardPos = [];    // 存储玩家扑克位置
+    private orginCoinPos = [];          // 筹码位置
 
     private cdNum: number = 5;     //倒计时计数
     private cdTimer: egret.Timer;   //倒计时时间
@@ -278,6 +280,7 @@ public _faPaiPos:eui.Image;
         this._coin_banker_arr = [];
         this._win_arr = [];
         this._coin_total = [];
+        this._coin_myxin = [];
         this.interval = -1;
     }
 
@@ -295,6 +298,10 @@ public _faPaiPos:eui.Image;
         }
         this.labCardTypeBanker.visible = false;
         this.labCardTypeBanker_bg.visible = false;
+        //this.labCardTypeBanker.anchorOffsetX = this.labCardTypeBanker.width / 2;
+        //this.labCardTypeBanker.anchorOffsetY = this.labCardTypeBanker.height / 2;
+        //this.labCardTypeBanker.x = this.labCardTypeBanker.x + this.labCardTypeBanker.width / 2;
+        //this.labCardTypeBanker.y = this.labCardTypeBanker.y + this.labCardTypeBanker.height / 2;
 
         for (var index = 0; index < 4; index++) {
 
@@ -312,6 +319,13 @@ public _faPaiPos:eui.Image;
                 cardPos[j] = pos;
             }
             this.orginPlayerCardPos[index] = cardPos;
+        }
+
+        for (var n = 0; n < 4; n++) {
+            var pos: egret.Point = new egret.Point;
+            pos.x = this["_nnwt_" + n].x + 3;
+            pos.y = this["_nnwt_" + n].y + 50;
+            this.orginCoinPos[n] = pos;
         }
     }
 
@@ -462,6 +476,7 @@ public _faPaiPos:eui.Image;
     private onjiesuan(data: any): void {
         this.setTiming(6);
         this._label_tip.text = data._obj.message;
+        this.labelGold0.text = this.fmoney(this.cardResult.balance/100,2);
 
         let _x = this._group_ding.x + this._heguan.x + this._heguan.width/2;
         let _y = this._group_ding.y + this._heguan.y + this._heguan.height/2;
@@ -471,7 +486,9 @@ public _faPaiPos:eui.Image;
                     this.coinFly(this["_coin_arr_" + (i-1)][j], _x, _y);
                 }
             } else {
-                this._win_arr.push(i);
+                this._win_arr.push(i);//加入的是服务器的编号
+                let img = this["_playLight_" + (i-1)];
+                this.showLightEffect(img, true);
             }
         }
         //this.removeChipIcon();
@@ -484,7 +501,6 @@ public _faPaiPos:eui.Image;
 
     private chouMaToGroup():void {
         clearInterval(this.interval);
-        //console.log("++++++++++++++++++++" + this._coin_banker_arr.length);
         let num = parseInt(this._coin_banker_arr.length/this._win_arr.length + "");
         for(let i=0; i<this._coin_banker_arr.length; i++) {
             if(this._win_arr[0] && i<num) {
@@ -507,10 +523,13 @@ public _faPaiPos:eui.Image;
     public chouMaToGroup1() {
         clearInterval(this.interval);
         for(let i=0; i<this._coin_total.length; i++) {
-            egret.Tween.removeTweens(this._coin_total[i]);
-            let x = 0 - this._coin_total[i].width - 10;
-            let y = (Math.floor(Math.random() * (this.wanjia.height-50))*0.8 + 50 + this.wanjia.y);
-            this.coinFly(this._coin_total[i], x, y);
+            if(this._coin_total[i].getIsMy() == true && this.cardResult.players[this._coin_total[i].getZhuoNum()+1].win == true) {
+                this.myWinCoinFly(this._coin_total[i]);
+            } else {
+                let x = 0 - this._coin_total[i].width - 10;
+                let y = (Math.floor(Math.random() * (this.wanjia.height-50))*0.8 + 50 + this.wanjia.y);
+                this.coinFly(this._coin_total[i], x, y);
+            }
         }
     }
 
@@ -576,14 +595,14 @@ public _faPaiPos:eui.Image;
         var p: egret.Point = new egret.Point();
         p.x = 268;
         p.y = 792;
-        this.showCoins(p, num, index);
+        this.showCoins(p, num, index, true);
     }
     /**其他玩家跟注 (丢筹码动作) */
     private onPlayerGenZhu(num: number, index: number) {
         var p: egret.Point = new egret.Point();
         p.x = 80;
         p.y = 400 + Math.random() * 80;
-        this.showCoins(p, num, index);
+        this.showCoins(p, num, index, false);
     }
     /**筹码池分数(总分)  */
     private onJettongrade(num: number, index: number) {
@@ -676,6 +695,7 @@ public _faPaiPos:eui.Image;
             data: num,
             money: bet
         };
+        console.log("发送消息：" + senddata);
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
         }, this);
     }
@@ -796,29 +816,27 @@ public _faPaiPos:eui.Image;
     //========================== Effect Show ===============================
 
     //显示筹码
-    private showCoins(pos: egret.Point, num: number, msg: number): void {
+    private showCoins(pos: egret.Point, num: number, msg: number, isMy: boolean): void {
         this.playClickSound(BRNNUtil.getInstance().getSoundEffect(8));
-        var point: egret.Point = BRNNUtil.getInstance().getCoinsPos(msg);
         var coin = BRNNUtil.getInstance().coinsType(pos, num);
-        var tx = point.x + Math.random() * 80;
-        var ty = point.y + Math.random() * 80;
         this.grpCoins.addChild(coin);
-
-        let _group = this["effectTouch" + (msg-1)];
-        let _nnwt = this["_nnwt_" + (msg-1)];
-        let _x = _group.x+_nnwt.x;
-        let _y = _group.y+_nnwt.y;
-
         coin.anchorOffsetX = coin.width / 2,
         coin.anchorOffsetY = coin.height / 2;
+        //let _group = this["effectTouch" + (msg-1)];
+        //let _nnwt = this["_nnwt_" + (msg-1)];
+        //let _x = _group.x+_nnwt.x;
+        //let _y = _group.y+_nnwt.y;
+
         var l = Math.floor(700 * Math.random()) + 100;
+        let p = this.randomCoinArea((msg-1), coin);
         egret.Tween.get(coin).to({
-            x: _x + Math.floor(Math.random() * _group.width * 0.8+20),
-            y: _y + Math.floor(Math.random() * _group.height * 0.8+10),
+            //x: _x + Math.floor(Math.random() * _group.width * 0.8+20),
+            //y: _y + Math.floor(Math.random() * _group.height * 0.8+10),
+            x: p.x,
+            y: p.y,
             rotation: (360 * Math.random()).toFixed(2)
         },
         l, egret.Ease.cubicInOut);
-
 
         if(msg == 1) {
             this._coin_arr_0.push(coin);
@@ -829,22 +847,18 @@ public _faPaiPos:eui.Image;
         } else if(msg == 4) {
             this._coin_arr_3.push(coin);
         }
+        coin.setIsMy(isMy);
+        coin.setZhuoNum(msg-1);
         this._coin_total.push(coin);
     }
 
     public coinFlyPlayer(coin, index):void {
         egret.Tween.removeTweens(coin);
-        let _group = this["effectTouch" + (index-1)];
-        let _nnwt = this["_nnwt_" + (index-1)];
-        let _x = _group.x+_nnwt.x;
-        let _y = _group.y+_nnwt.y;
-
-        coin.anchorOffsetX = coin.width / 2,
-        coin.anchorOffsetY = coin.height / 2;
         var l = Math.floor(700 * Math.random()) + 100;
+        let p = this.randomCoinArea((index-1), coin);
         egret.Tween.get(coin).to({
-            x: _x + Math.floor(Math.random() * _group.width * 0.8+20),
-            y: _y + Math.floor(Math.random() * _group.height * 0.8+10),
+            x: p.x,
+            y: p.y,
             rotation: (360 * Math.random()).toFixed(2)
         },
         l, egret.Ease.cubicInOut);
@@ -853,8 +867,8 @@ public _faPaiPos:eui.Image;
     public coinFly(coin, _x, _y):void {
         egret.Tween.removeTweens(coin);
         this._coin_banker_arr.push(coin);
-        coin.anchorOffsetX = coin.width / 2;
-        coin.anchorOffsetY = coin.height / 2;
+        //coin.anchorOffsetX = coin.width / 2;
+        //coin.anchorOffsetY = coin.height / 2;
         var s = Math.floor(600 * Math.random()) + 100;
         egret.Tween.get(coin).wait(Math.floor(100 * Math.random())).to({
             x: _x,
@@ -862,6 +876,67 @@ public _faPaiPos:eui.Image;
             rotation: (360 * Math.random()).toFixed(2)
         },
         s, egret.Ease.cubicOut);
+    }
+
+    public myWinCoinFly(myCoin):void {
+        egret.Tween.removeTweens(myCoin);
+        for(let i=0; i< 20; i++) {
+            var pos: egret.Point = new egret.Point;
+            pos.x = myCoin.x;
+            pos.y = myCoin.y;
+            var coin = BRNNUtil.getInstance().coinsType(pos, myCoin.getType());
+            coin.anchorOffsetX = coin.width / 2;
+            coin.anchorOffsetY = coin.height / 2;
+            this.grpCoins.addChild(coin);
+            this._coin_myxin.push(coin);
+            let p = this.randomCoinArea(myCoin.getZhuoNum(), coin);
+            coin.x = p.x;
+            coin.y = p.y;
+            let _x = this._group_di.x + this.grpHead0.x + this.imghead0.x + Math.floor(Math.random()*100);
+            let _y = this._group_di.y + this.grpHead0.y + this.imghead0.y + 44;
+            this.coinFly(coin, _x, _y);
+        }
+        let z_x = this._group_di.x + this.grpHead0.x + this.imghead0.x + Math.floor(Math.random()*100);
+        let z_y = this._group_di.y + this.grpHead0.y + this.imghead0.y + 44;
+        this.coinFly(myCoin, z_x, z_y);
+    }
+
+    /**随机筹码区域 */
+    public randomCoinArea(index, coin): egret.Point {
+        var p: egret.Point = new egret.Point();
+        //p.x = this.orginCoinPos[index].x + coin.width/2 + Math.floor(Math.random() * (230 - coin.width));
+        //p.y = this.orginCoinPos[index].y + coin.height/2 + Math.floor(Math.random() * (160 - coin.height));
+
+        let _group = this["effectTouch" + index];
+        let _nnwt = this["_nnwt_" + index];
+        let _x = _group.x+_nnwt.x;
+        let _y = _group.y+_nnwt.y;
+        p.x = _x + Math.floor(Math.random() * _group.width * 0.8+20);
+        p.y = _y + Math.floor(Math.random() * _group.height * 0.8+10);
+
+        return p;
+    }
+
+    public area(x, y, width, height) {
+        var square:egret.Shape = new egret.Shape();
+        square.x = x;
+        square.y = y;
+        square.alpha = 0.3;
+        square.graphics.beginFill(0xff0000);
+        square.graphics.drawRect(0,0,width,height);
+        square.graphics.endFill();
+        this.addChild(square);
+    }
+
+    private fmoney(s, n) {
+        n = n > 0 && n <= 20 ? n : 2;
+        s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";
+        var l = s.split(".")[0].split("").reverse(), r = s.split(".")[1];
+        var t = "";
+        for (var i = 0; i < l.length; i++) {
+            t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? "," : "");
+        }
+        return t.split("").reverse().join("") + "." + r;
     }
 
 //24940 BrnnGameEffectPanel
@@ -1009,12 +1084,29 @@ public _faPaiPos:eui.Image;
         
         var poke = this.cardResult.players[0];
         let cardType = this.labCardTypeBanker;
+        let cardTypeBg = this.labCardTypeBanker_bg;
+
+        cardType.source = "brnntype_normal_"+ poke.pai.niu + "_png";
+        if(poke.pai.ratio == 1) {
+            cardTypeBg.source = "brnntype_bgimg_2_png";
+        } else if(poke.pai.ratio == 2) {
+            cardTypeBg.source = "brnntype_bgimg_3_png";
+        } else if(poke.pai.ratio >= 3) {
+            cardTypeBg.source = "brnntype_bgimg_4_png";
+        } else {
+            cardTypeBg.source = "brnntype_bgimg_1_png";
+        }
+
         cardType.anchorOffsetX = cardType.width / 2;
         cardType.anchorOffsetY = cardType.height / 2;
         cardType.x = cardType.x + cardType.width / 2;
         cardType.y = cardType.y + cardType.height / 2;
 
-        let cardTypeBg = this.labCardTypeBanker_bg;
+        cardTypeBg.anchorOffsetX = cardTypeBg.width / 2;
+        cardTypeBg.anchorOffsetY = cardTypeBg.height / 2;
+        cardTypeBg.x = cardTypeBg.x + cardTypeBg.width / 2;
+        cardTypeBg.y = cardTypeBg.y + cardTypeBg.height / 2;
+
         for (var i = 0; i < 5; i++) {
             var card = this['bankerCard_' + i];
             card.source = 'brnn_card_100_png';
@@ -1049,11 +1141,34 @@ public _faPaiPos:eui.Image;
         var index = this.effectPlayerIndex;
 
         let cardType = this["labCardType" + index];
+        let cardTypeBg = this["labCardType_bg_" + index];
+
+        if(poke[index + 1].win == true) {
+            cardType.source = "brnntype_win_"+ poke[index + 1].pai.niu + "_png";
+                if(poke[index + 1].pai.ratio == 1) {
+                cardTypeBg.source = "brnntype_bgimg_2_png";
+            } else if(poke[index + 1].pai.ratio == 2) {
+                cardTypeBg.source = "brnntype_bgimg_3_png";
+            } else if(poke[index + 1].pai.ratio >= 3) {
+                cardTypeBg.source = "brnntype_bgimg_4_png";
+            } else {
+                cardTypeBg.source = "brnntype_bgimg_1_png";
+            }
+        } else {
+            cardType.source = "brnntype_lose_"+ poke[index + 1].pai.niu + "_png";
+            cardTypeBg.source = "brnntype_bgimg_1_png";
+        }
+
         cardType.anchorOffsetX = cardType.width / 2;
         cardType.anchorOffsetY = cardType.height / 2;
         cardType.x = cardType.x + cardType.width / 2;
         cardType.y = cardType.y + cardType.height / 2;
-        let cardTypeBg = this["labCardType_bg_" + index];
+
+        cardTypeBg.anchorOffsetX = cardTypeBg.width / 2;
+        cardTypeBg.anchorOffsetY = cardTypeBg.height / 2;
+        cardTypeBg.x = cardTypeBg.x + cardTypeBg.width / 2;
+        cardTypeBg.y = cardTypeBg.y + cardTypeBg.height / 2;
+        
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
             card.source = 'brnn_card_100_png';
@@ -1266,7 +1381,14 @@ public _faPaiPos:eui.Image;
             egret.Tween.removeTweens(this._coin_total[i]);
             this._coin_total[i].parent.removeChild(this._coin_total[i]);
         }
+        this._coin_total = [];
 
+        for(let i=0; i<this._coin_myxin.length; i++) {
+            egret.Tween.removeTweens(this._coin_myxin[i]);
+            this._coin_myxin[i].parent.removeChild(this._coin_myxin[i]);
+        }
+        this._coin_myxin = [];
+        
         this.initData();
     }
 
