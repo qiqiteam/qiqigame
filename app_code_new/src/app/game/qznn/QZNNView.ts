@@ -780,7 +780,7 @@ class QZNNView extends eui.Component {
 
             if (data._obj.hogList[i].hogOrBet >= 10) {
                 this['beishu_' + i].visible = true;
-                this['beishu_' + i].source = 'img_XB_1_png';
+                this['beishu_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet / 10 % 10 + '_png';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet % 10 + '_png';
                 this['bs_img_' + i].visible = true;
