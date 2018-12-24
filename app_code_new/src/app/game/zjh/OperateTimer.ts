@@ -4,6 +4,7 @@ class OperateTimer extends egret.Sprite {
     private _shape: egret.Shape;
     private angle: number = 0;
     private index:number = 1;
+    private num:number=0;
     constructor() {
         super();
         this.initGraphics();
@@ -46,7 +47,7 @@ class OperateTimer extends egret.Sprite {
     {
         var shape: egret.Shape = this._shape;
         changeGraphics(this.angle);
-        this.angle += 1;
+        this.angle += 0.4;
         if (this.angle >= 360) {
             this.angle = this.angle % 360;
             this.index *= -1;
@@ -72,12 +73,11 @@ class OperateTimer extends egret.Sprite {
     private changeGraphics(): void {
         var shape: egret.Shape = this._shape;
 
-        /*** 本示例关键代码段开始 ***/
 
         this.index = 1;
         this.angle = 0;
         egret.startTick(this.onTick, this);
-        /*** 本示例关键代码段结束 ***/
+       
     }
 }
 

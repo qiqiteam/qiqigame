@@ -89,10 +89,6 @@ class ZJHView extends eui.Component {
     public img_abandon2: eui.Image;
     public img_abandon3: eui.Image;
     public img_abandon4: eui.Image;
-    public img_bipailight1: eui.Image;
-    public img_bipailight2: eui.Image;
-    public img_bipailight3: eui.Image;
-    public img_bipailight4: eui.Image;
     public grpHead1: ZJHHead;
     public grpHead2: ZJHHead;
     public grpHead3: ZJHHead;
@@ -126,6 +122,7 @@ class ZJHView extends eui.Component {
     public lab_quanyaNumber: eui.Label;
     public lab_callNumber: eui.Label;
     public grp_btncm0: eui.Group;
+    public img_cmBG: eui.Image;
     public _btn_jiacm_0: eui.Button;
     public _btn_jiacm_1: eui.Button;
     public _btn_jiacm_2: eui.Button;
@@ -146,9 +143,6 @@ class ZJHView extends eui.Component {
     public _btn_record: eui.Button;
     public _btn_playmethod: eui.Button;
     public _btn_feedback: eui.Button;
-    public grp_out_hint: eui.Group;
-    public _btn_cancel: eui.Button;
-    public _btn_quite: eui.Button;
     public grp_setting_hint: eui.Group;
     public _btn_set_close: eui.Button;
     public grp_feedback_panel: eui.Group;
@@ -161,9 +155,13 @@ class ZJHView extends eui.Component {
     public img_light2: eui.Image;
     public img_light3: eui.Image;
     public img_light4: eui.Image;
-    public _btn_kanpai: eui.Button;
-    public img_cmBG: eui.Image;
     public grp_bpLight: eui.Group;
+    public img_bipailight1: eui.Image;
+    public img_bipailight2: eui.Image;
+    public img_bipailight3: eui.Image;
+    public img_bipailight4: eui.Image;
+    public _btn_kanpai: eui.Button;
+
 
 
 
@@ -220,10 +218,7 @@ class ZJHView extends eui.Component {
         //this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
-        this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
-        let annular: Annular = new Annular(300, 300, 0, 200, 0xffffff);
-        let opepro: Opeprogress = new Opeprogress(173, 219, 10);
-        this.addChild(opepro);
+        this.labelGold0.text = "" + GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
         this.gamestatue(UserInfo.getInstance().gameData);
 
 
@@ -268,7 +263,6 @@ class ZJHView extends eui.Component {
         this.img_quanya.visible = false;
         this._btn_quanxia.visible = false;
         this.grp_menu.visible = false;
-        this.grp_out_hint.visible = false;
         this.grp_setting_hint.visible = false;
         this.grp_feedback_panel.visible = false;
         this.grp_roungNum.visible = false;
@@ -282,7 +276,9 @@ class ZJHView extends eui.Component {
         this.deskNum(false);
         this.botpGolds(false);
         this.playersLight(false);
-
+        for (var index = 0; index < 5; index++) {
+            this['imgCardType' + index].source = '';
+        }
         // this.niyingeffect.visible = true;
 
         // this.zjheffectwin2.visible = true;
@@ -371,7 +367,6 @@ class ZJHView extends eui.Component {
     private getOrginCardPos(): void {
         for (var index = 0; index < 5; index++) {
             this['imgCardbg' + index].source = '';
-            this['imgCardType' + index].source = '';
             this['imgstatus_bg' + index].source = '';
             this['imgis_kanpai' + index].source = '';
             this['imgstatus' + index].source = '';
@@ -713,7 +708,6 @@ class ZJHView extends eui.Component {
         EventUtil.addEventListener(EventConst.onAiWaiveCard, this.otherdiscard, this);
         EventUtil.addEventListener(EventConst.onUserExceWaiveCard, this.disAutoCard, this);
         EventUtil.addEventListener(EventConst.onCheckout, this.settleaccount, this);
-        //EventUtil.addEventListener(EventConst.onUserLeave, this.cancelpapre, this);
         EventUtil.addEventListener(EventConst.onUserXClose, this.cancelpapre, this);
         EventUtil.addEventListener(EventConst.onUserIsLeave, this.onClickoutBtn, this);
         EventUtil.addEventListener(EventConst.onAiOperate, this.aioperate, this);
@@ -804,11 +798,9 @@ class ZJHView extends eui.Component {
         }
     }
 
-    private addtime: number;//计时器从0+到10
+    public static addtime: number;//计时器从0+到10
     /**开始倒计时*/
     private startCountDown(time: number): void {
-        // this.timeTxt.text = 10-time + "";
-        //this.timeTxt.visible = true;
         this.time = time;
         if (this.timer == null) {
             this.timer = new egret.Timer(1000);
@@ -820,7 +812,7 @@ class ZJHView extends eui.Component {
     private timerFunc(evt: egret.TimerEvent): void {
         if (this.time >= 0 && this.time <= 15) {
             this.time--;
-            this.addtime = 15 - this.time;
+            ZJHView.addtime = 15 - this.time;
             console.log("addtime", 15 - this.time);
             //console.log(this.time);
         }
@@ -832,7 +824,6 @@ class ZJHView extends eui.Component {
     private clearTime(): void {
         if (this.timer) {
             this.timer.stop();
-            // this.timeTxt.visible = false;
             this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
             this.timer = null;
         }
@@ -889,11 +880,11 @@ class ZJHView extends eui.Component {
             console.log("------------" + data.goldMap[key]);
             this.nowUserGolds = this.goldarr[0] / 100;
             this.goldarr.push(data.goldMap[key]);
-            this.labelGold0.text = String(this.goldarr[0] / 100);
+            this.labelGold0.text = String(GlobalFunction.Formatconversion(this.goldarr[0]));
         }
 
         for (let i = 1; i < this.goldarr.length; i++) {
-            this['grpHead' + i].setOtherGold(this.goldarr[i] / 100);
+            this['grpHead' + i].setOtherGold(this.goldarr[i]);
         }
         this._btn_kanpai.touchEnabled = true;
 
@@ -981,21 +972,23 @@ class ZJHView extends eui.Component {
             this.lab_now_roundNum.text = this.nowroundNum.toString();
             this._btn_autogenzhu.visible = false;
             this.img_autogenzhu.visible = false;
-            this._btn_cancelautogenzhu.visible=false;
-            this.img_cancelautogenzhu0.visible=false;
-            this.img_cancelautogenzhu1.visible=false;
+            this._btn_cancelautogenzhu.visible = false;
+            this.img_cancelautogenzhu0.visible = false;
+            this.img_cancelautogenzhu1.visible = false;
             this.img_genzhu.visible = true;
             this._btn_genzhu.visible = true;
             this.betarr = [];
             this.numtime = data.param.seconds;
+            console.log('玩家操作时间', data.param.seconds);
+
             this.UsId = data.param.userId;
             console.log(data);
             if (this.IsKanpai[data.param.index] == false) {
-                this.startCountDown(this.numtime);
+                //this.startCountDown(this.numtime);
             }
+            this.startCountDown(this.numtime);
             /**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
             var point: egret.Point = ZJHUtil.getInstance().getPlayerIconPos(data.param.index);
-            //let operateTimer: OperateTimer = new OperateTimer();
             this.operateTimer.x = point.x + 65;
             this.operateTimer.y = point.y + 84;
             this.addChild(this.operateTimer);
@@ -1094,7 +1087,7 @@ class ZJHView extends eui.Component {
             for (let key in data.param.goldMap) {
                 console.log("--------------" + key);
                 console.log("------------" + data.param.goldMap[key]);
-                this.labelGold0.text = String(data.param.goldMap[key] / 100);//玩家下注更新金币数
+                this.labelGold0.text = String(GlobalFunction.Formatconversion(data.param.goldMap[key]));//玩家下注更新金币数
                 this.nowUserGolds = data.param.goldMap[key] / 100;
             }
             this.tempBpNum = data.param.data / 100;
@@ -1131,7 +1124,7 @@ class ZJHView extends eui.Component {
             }
             for (let i = 1; i < this.OtherPlayer.length; i++) {
                 if (this.OtherPlayer[i] == this.otherId) {
-                    this['grpHead' + i].setOtherGold(this.therGolds / 100);
+                    this['grpHead' + i].setOtherGold(this.therGolds);
                 }
             }
             this.oldOtherbotpGold[data.param.index] += data.param.data / 100;
@@ -1164,7 +1157,7 @@ class ZJHView extends eui.Component {
             for (let key in data.param.goldMap) {
                 console.log("--------------" + key);
                 console.log("------------" + data.param.goldMap[key]);
-                this.labelGold0.text = String(data.param.goldMap[key]);//全压更新玩家金币数
+                this.labelGold0.text = String(GlobalFunction.Formatconversion(data.param.goldMap[key]));//全压更新玩家金币数
             }
             //执行比牌动作..........{}
         }
@@ -1283,7 +1276,7 @@ class ZJHView extends eui.Component {
                 this['imgCardbg' + data.param.index].source = '';
                 this.playerOperatingState[data.param.index] = 3;//玩家弃牌状态
             }
-
+            this['imgbipai_lose' + data.param.index].source = 'gf_flag_bpsb_png';
 
             //++++++++++++++++++++
         }
@@ -1445,7 +1438,7 @@ class ZJHView extends eui.Component {
     /**超时自动弃牌*///自己不进行任何操作超过操作时间 视为弃牌状态 
     private disAutoCard(data: any): void {
         if (data.param.code == 200) {
-            console.log(this.addtime);
+            console.log(ZJHView.addtime);
             let poke = {
                 type: data.param.cardGenre,//牌型
                 value: data.param.cardtype //牌值
@@ -1511,7 +1504,7 @@ class ZJHView extends eui.Component {
         }
         for (let i = 1; i < this.OtherPlayer.length; i++) {
             if (this.OtherPlayer[i] == TempId) {
-                this['grpHead' + data.param.index].setOtherGold(data.param.goldMap[TempId] / 100);
+                this['grpHead' + data.param.index].setOtherGold(data.param.goldMap[TempId]);
             }
         }
 
@@ -1537,7 +1530,7 @@ class ZJHView extends eui.Component {
                 } else if (this.playerOperatingState[data.param.index] == 2) {
 
                 }
-                this.labelGold0.text = String(data.param.goldMap[TempId] / 100);
+                this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.goldMap[TempId] / 100);
                 UserInfo.getInstance().goldcoins = data.param.goldMap[TempId] / 100;
                 var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
                 this.zjheffectwin0.x = point.x;
@@ -1620,7 +1613,7 @@ class ZJHView extends eui.Component {
 
         } else {
             this['grpHead' + data._obj.player.index].visible = true;
-            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins / 100, "women7_png");
+            this['grpHead' + data._obj.player.index].setUserInfo(data._obj.player.username, data._obj.player.goldcoins, "women7_png");
         }
         xlLib.PopUpMgr.removePopUp(ZJHpaprePanl, 1);
 
@@ -1637,7 +1630,7 @@ class ZJHView extends eui.Component {
         if (data._obj.player[0].id == UserInfo.getInstance().myPlayer.id) {
             this.grpHead0.visible = true;
             this.labelHead0.text = UserInfo.getInstance().myPlayer.username;
-            this.labelGold0.text = UserInfo.getInstance().myPlayer.goldcoins / 100 + "";
+            this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().myPlayer.goldcoins) + "";
             this.imghead0.source = "women7_png";
             this.playerOperatingState[0] = 0;
         }
@@ -1646,7 +1639,7 @@ class ZJHView extends eui.Component {
             this.playerOperatingState[i] = 0;
             if (data._obj.player[i] != null) {
                 this['grpHead' + i].visible = true;
-                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins / 100, "women7_png");//data._obj.player[i].headimg  
+                this['grpHead' + i].setUserInfo(UserInfo.getInstance().playes[i].username, UserInfo.getInstance().playes[i].goldcoins, "women7_png");//data._obj.player[i].headimg  
                 //this.nodiscard.push(data._obj.player[i].id);
             } else {
                 this['grpHead' + i].setUserInfo("", "", "", "");
@@ -1878,7 +1871,7 @@ class ZJHView extends eui.Component {
             this['imgstatus_bg' + index].alpha = 1;
             this['imgstatus' + index].alpha = 1;
             this['img_light' + index].visible = false;
-            this['imgCardType' + index].source = '';
+            //this['imgCardType' + index].source = '';
         }
         for (var index = 1; index < 5; index++) {
             this['img_abandon' + index].source = '';
@@ -1898,7 +1891,7 @@ class ZJHView extends eui.Component {
         this.byOpenId = ['', '', '', '', ''];
         //this.Comparison.removeChildren();
         this.abandonId = [];
-        this.addtime = 0;
+        ZJHView.addtime = 0;
         this.tempBpNum = 1;
         this.isAntoGenZhu = false;
         this.oldMybotpGold = 1;
