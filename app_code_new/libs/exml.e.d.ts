@@ -100,6 +100,8 @@ declare class ErBaGangroomViewSkin extends eui.Skin{
 }
 declare class ErBaGangViewSkin extends eui.Skin{
 }
+declare class ESYDViewSkin extends eui.Skin{
+}
 declare class SystemMsgItemSkin extends eui.Skin{
 }
 declare class SystemMsgTypeItemSkin extends eui.Skin{

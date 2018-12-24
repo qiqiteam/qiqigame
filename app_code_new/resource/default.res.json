@@ -7620,94 +7620,164 @@
 			"name": "sg_word_png"
 		},
 		{
-			"name": "sg_base_bg2_png",
+			"url": "assets/game/sango/sg_base_bg.png",
 			"type": "image",
-			"url": "assets/game/sango/sg_base_bg.png"
+			"name": "sg_base_bg2_png"
 		},
 		{
-			"name": "SG_bg_hall2_png",
+			"url": "assets/game/sango/SG_bg_hall.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_bg_hall.png"
+			"name": "SG_bg_hall2_png"
 		},
 		{
-			"name": "SG_card12_png",
+			"url": "assets/game/sango/SG_card1.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_card1.png"
+			"name": "SG_card12_png"
 		},
 		{
-			"name": "SG_card22_png",
+			"url": "assets/game/sango/SG_card2.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_card2.png"
+			"name": "SG_card22_png"
 		},
 		{
-			"name": "SG_card32_png",
+			"url": "assets/game/sango/SG_card3.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_card3.png"
+			"name": "SG_card32_png"
 		},
 		{
-			"name": "SG_card42_png",
+			"url": "assets/game/sango/SG_card4.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_card4.png"
+			"name": "SG_card42_png"
 		},
 		{
-			"name": "SG_card52_png",
+			"url": "assets/game/sango/SG_card5.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_card5.png"
+			"name": "SG_card52_png"
 		},
 		{
-			"name": "SG_card62_png",
+			"url": "assets/game/sango/SG_card6.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_card6.png"
+			"name": "SG_card62_png"
 		},
 		{
-			"name": "SG_title12_png",
+			"url": "assets/game/sango/SG_title1.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_title1.png"
+			"name": "SG_title12_png"
 		},
 		{
-			"name": "SG_title22_png",
+			"url": "assets/game/sango/SG_title2.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_title2.png"
+			"name": "SG_title22_png"
 		},
 		{
-			"name": "SG_title32_png",
+			"url": "assets/game/sango/SG_title3.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_title3.png"
+			"name": "SG_title32_png"
 		},
 		{
-			"name": "SG_title42_png",
+			"url": "assets/game/sango/SG_title4.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_title4.png"
+			"name": "SG_title42_png"
 		},
 		{
-			"name": "SG_title52_png",
+			"url": "assets/game/sango/SG_title5.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_title5.png"
+			"name": "SG_title52_png"
 		},
 		{
-			"name": "SG_title62_png",
+			"url": "assets/game/sango/SG_title6.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_title6.png"
+			"name": "SG_title62_png"
 		},
 		{
-			"name": "SG_title_zhunrun2_png",
+			"url": "assets/game/sango/SG_title_zhunrun.png",
 			"type": "image",
-			"url": "assets/game/sango/SG_title_zhunrun.png"
+			"name": "SG_title_zhunrun2_png"
 		},
 		{
-			"name": "sg_word2_png",
+			"url": "assets/game/sango/sg_word.png",
 			"type": "image",
-			"url": "assets/game/sango/sg_word.png"
+			"name": "sg_word2_png"
 		},
 		{
-			"name": "tbnn_tuoguan_btn12_png",
+			"url": "assets/tbnn_tuoguan_btn1.png",
 			"type": "image",
-			"url": "assets/tbnn_tuoguan_btn1.png"
+			"name": "tbnn_tuoguan_btn12_png"
 		},
 		{
-			"name": "tbnn_tuoguan_btn22_png",
+			"url": "assets/tbnn_tuoguan_btn2.png",
 			"type": "image",
-			"url": "assets/tbnn_tuoguan_btn2.png"
+			"name": "tbnn_tuoguan_btn22_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/bg_esyd_ditu.jpg",
+			"type": "image",
+			"name": "bg_esyd_ditu_jpg"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_btn_continiu.png",
+			"type": "image",
+			"name": "black_qz21_game_btn_continiu_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_icon_3_1.png",
+			"type": "image",
+			"name": "black_qz21_game_icon_3_1_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_01.png",
+			"type": "image",
+			"name": "black_qz21_game_other_01_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_02.png",
+			"type": "image",
+			"name": "black_qz21_game_other_02_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_03.png",
+			"type": "image",
+			"name": "black_qz21_game_other_03_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_04.png",
+			"type": "image",
+			"name": "black_qz21_game_other_04_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_05.png",
+			"type": "image",
+			"name": "black_qz21_game_other_05_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table.png",
+			"type": "image",
+			"name": "black_qz21_game_table_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_1.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_1_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_2.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_2_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_3.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_3_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_4.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_4_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_5.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_5_png"
 		}
 	]
 }
