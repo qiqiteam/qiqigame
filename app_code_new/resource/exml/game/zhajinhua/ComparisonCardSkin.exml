@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComparisonCardSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="-50" y="179" locked="true">
+		<e:Image id="image" source="gf_bg_pk1_png" y="106" x="50"/>
+		<e:Image id="image0" source="zjh_vs_tex1_png" x="0" y="37"/>
+		<e:Image id="image1" source="zjh_vs_tex2_png" x="652" y="116"/>
+		<e:Image id="image2" source="zjh_vs_tex3_png" x="569" y="0"/>
+		<e:Image id="image3" source="zjh_vs_tex5_png" x="641" y="58"/>
+		<e:Image id="image4" source="zjh_vs_tex6_png" x="729" y="180"/>
+	</e:Group>
+</e:Skin>
