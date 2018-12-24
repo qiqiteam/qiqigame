@@ -710,6 +710,7 @@ class QZNNView extends eui.Component {
     }
     /**监听抢庄 */
     private onHogBack(data: any): void {
+        this._paijubh.text = data._obj.inningId + '';
 
         xlLib.PopUpMgr.removePopUp(Inthematch, 1);
         this.grpCountdown.visible = true;
@@ -1804,6 +1805,7 @@ class QZNNView extends eui.Component {
         }
         UserInfo.getInstance().playes[num].goldcoins = _gold;
         if (num == 0) {
+            UserInfo.getInstance().goldcoins = _gold;
             this.labelGold0.text = GlobalFunction.Formatconversion(_gold);
         } else {
             this['grpHead' + num];

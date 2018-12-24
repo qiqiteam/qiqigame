@@ -2,7 +2,7 @@
 <e:Skin class="TBNNroomViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 
 
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" source="ding" horizontalCenter="0" top="0"/>
 		<e:Button id="_menu" label="" x="1278.58" y="1">
 			<e:skinName>
@@ -27,7 +27,7 @@
 
 
 
-		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
+		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" width="214" height="40" anchorOffsetX="0" anchorOffsetY="0" x="646"/>
 		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1278.58" source="room_meun_btn_0"/>
 		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1096.45" source="room_rule_btn_0"/>
 
@@ -50,9 +50,9 @@
 		</e:Button>
 
 	</e:Group>
-	<e:Image width="154" height="76" touchEnabled="false" x="913" y="3" source="root_record_btn_0"/>
+	<e:Image width="154" height="76" touchEnabled="false" x="913" y="3" source="root_record_btn_0" locked="true"/>
 
-	<e:Button id="_btn_cjc" x="584.88" y="138" alpha="0">
+	<e:Button id="_btn_cjc" x="584.88" y="138" alpha="0" locked="true">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="qznn_pic1" source.down="qznn_pic1"/>
