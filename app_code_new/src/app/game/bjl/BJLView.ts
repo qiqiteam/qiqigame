@@ -612,8 +612,7 @@ class BJLView extends eui.Component {
 
             this.grpHead0.addChild(label);
             this.turn_score_arr.push(label);
-            uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data._obj.userwingolb / 100, regulator: 50 }, str);
-
+            uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data._obj.userwingolb, regulator: 50, splitnum: 2, splitstr: "." }, str);
         }
 
         this.playClickSound(BJLUtil.getInstance().getSoundEffect(14));
@@ -720,8 +719,6 @@ class BJLView extends eui.Component {
         this.juegengxin(data._obj.jushu);              //局数恢复
         this._paijubh.text = data._obj.inningId + '';   //牌局编号恢复
         this.tishizithuifu(data._obj.roomStatus);   /**提示字恢复 */
-
-        console.log('-----------------------------------------------' + data._obj.roomStatus + '----------------------------');
 
         this.startCountDown(data._obj.seconds); //倒计时恢复
 

@@ -49,17 +49,6 @@ class LoginView extends eui.Component {
 		this.logineffectView = new LoginEffectView();
         this.addChildAt(this.logineffectView,1);
 		this.logineffectView.play();
-
-   		let label = new eui.BitmapLabel;
-        label.textAlign = egret.HorizontalAlign.CENTER;
-        let str: string = "";
-		label.font = "qznn_win_fnt";
-		label.text = "0";
-		str = "+";
-		label.x = 400;
-		label.y = 500;
-		uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: 100000, regulator: 50,splitnum:3,splitstr:"." }, str);
-		this.addChild(label);
 	}
 
 	private onBlack(e: egret.TouchEvent): void {

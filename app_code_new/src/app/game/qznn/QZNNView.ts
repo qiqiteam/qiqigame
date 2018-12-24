@@ -1887,7 +1887,7 @@ class QZNNView extends eui.Component {
         label.scaleY = 1;
         player.addChild(label);
         this.turn_score_arr.push(label);
-        uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score / 100, regulator: 50,splitnum:3,splitstr:"," }, str);
+        uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: score, regulator: 50, splitnum: 2, splitstr: "." }, str);
     }
     /**播放 胜利 通杀 通赔 动画 */
     public victoryEffect(): void {
