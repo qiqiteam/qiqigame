@@ -7,24 +7,31 @@ class BRNNView extends eui.Component {
         this.skinName = "BRNNViewSkin";
     }
 
-    public grpCoins:eui.Group;
+    public _group_ding:eui.Group;
+public _heguan:eui.Image;
+public grpCoins:eui.Group;
+public _nnwt_0:eui.Group;
 public _playLight_0:eui.Image;
 public grade_text_0_0:eui.BitmapLabel;
 public grade_text_0_1:eui.BitmapLabel;
 public effectTouch0:eui.Image;
+public _nnwt_1:eui.Group;
 public _playLight_1:eui.Image;
 public grade_text_1_0:eui.BitmapLabel;
 public grade_text_1_1:eui.BitmapLabel;
 public effectTouch1:eui.Image;
+public _nnwt_2:eui.Group;
 public _playLight_2:eui.Image;
 public grade_text_2_0:eui.BitmapLabel;
 public grade_text_2_1:eui.BitmapLabel;
 public effectTouch2:eui.Image;
+public _nnwt_3:eui.Group;
 public _playLight_3:eui.Image;
 public grade_text_3_0:eui.BitmapLabel;
 public grade_text_3_1:eui.BitmapLabel;
 public effectTouch3:eui.Image;
 public grpCard:eui.Group;
+public _brnn_banker_txt:eui.Image;
 public bankerCard_0:eui.Image;
 public bankerCard_1:eui.Image;
 public bankerCard_2:eui.Image;
@@ -166,7 +173,9 @@ public _btn_close:eui.Button;
 public _btn_meun:eui.Button;
 public wanjialist:eui.Button;
 public _faPaiPos:eui.Image;
-public _brnn_banker_txt:eui.Image;
+
+
+
 
 
 
@@ -181,18 +190,26 @@ public _brnn_banker_txt:eui.Image;
 
     public multipleList: number[] = [0, 0, 0, 0, 0];   //倍数表
 
-    public game_result: number = 0;                   //动画状态
+    //public game_result: number = 0;                   //动画状态
 
     public isAction: boolean = false;               //能否下注
 
-    public isPaly: boolean = false;                 //是否下过注
-    public isWin: boolean = false;                  //是否输赢
-    public isScore: number = 0;                     //输赢金币
+    //public isPaly: boolean = false;                 //是否下过注
+    //public isWin: boolean = false;                  //是否输赢
+    //public isScore: number = 0;                     //输赢金币
 
     private _tipGameEff:uiCore.Animator = null;
     //private  _faPaiEff:DragonBonesSprite;
     //private _faPai_arr = [];
     private brnnShuffle:BrnnShuffle = null;
+
+    private _coin_arr_0 = [];
+    private _coin_arr_1 = [];
+    private _coin_arr_2 = [];
+    private _coin_arr_3 = [];
+    private _coin_banker_arr = [];
+    private _win_arr = [];
+    private _coin_total = [];
 
     //-----------------------------------------------
     private interval: number = -1;      // 游戏计时器间隔
@@ -251,10 +268,17 @@ public _brnn_banker_txt:eui.Image;
             this["_playLight_" + i].visible = false;
         }
         this.wanjia.x = -237;
-        this.isPaly = false;
-        this.isWin = false;
-        this.isScore = 0;
-
+        //this.isPaly = false;
+        //this.isWin = false;
+        //this.isScore = 0;
+        this._coin_arr_0 = [];
+        this._coin_arr_1 = [];
+        this._coin_arr_2 = [];
+        this._coin_arr_3 = [];
+        this._coin_banker_arr = [];
+        this._win_arr = [];
+        this._coin_total = [];
+        this.interval = -1;
     }
 
     //获取原始扑克的位置
@@ -396,10 +420,8 @@ public _brnn_banker_txt:eui.Image;
     /**下注 */
     private onbetBack(data: any): void {
         this.tipGameEff("brnn_effect_xiazhu");
-        //this.startCountDown(data._obj.seconds);
         this.setTiming(20);
         this._label_tip.text = "请下注...";
-        //this.showGameTips(2);
         this.isAction = true;
         for (let i = 0; i < 4; i++) {
             if (data._obj.hogList[i].allow) {
@@ -420,60 +442,76 @@ public _brnn_banker_txt:eui.Image;
         this.tipGameEff("brnn_effect_stop");
         this._label_tip.text = "停止下注...";
         this.isAction = false;
-        //this.showGameTips(3);
-        //this.startCountDown(data._obj.seconds);
         this.setTiming(6);
-
-        this.isPaly = data._obj.play;
-        this.isWin = data._obj.win;
         UserInfo.getInstance().goldcoins = data._obj.balance;
-        this.isScore = data._obj.score;
-
-
-        this.game_result = data._obj.result;
-
-        let result = {
-            pokes: [],
-            result: [1, 0, 0, 0],
-            bankerWin: 0,
-            rate: "0.05",
-            bomb: "0"
-        };
-        for (let i = 0; i < data._obj.players.length; i++) {
-            let err = {
-                // num: data._obj.players[i].ratio,
-                type: data._obj.players[i].pai.niu,
-                value: data._obj.players[i].cardsList,
-                // win: data._obj.players[i].win,
-                // score: data._obj.players[i].score
-            };
-            result.pokes.push(err);
+        this.cardResult = data._obj;
+        for(let i=0; i<this.cardResult.players.length; i++) {
+            if(i==0) {
+                //this.labCardTypeBanker.source = "";
+                //this.labCardTypeBanker_bg.source = "";
+            } else {
+                //this["labCardType_bg_" + (i-1)].source = "";
+                //this["labCardType" + (i-1)].source = "";
+            }
         }
-        this.cardResult = result;
 
-        this.interval = setInterval(this.playerCardRotation.bind(this), 800);
+        this.interval = setInterval(this.bankerCardRotation.bind(this), 800);
 
     }
     /**结算、百人牛牛派奖中 */
     private onjiesuan(data: any): void {
-        // this.startCountDown(data._obj.seconds);
         this.setTiming(6);
+        this._label_tip.text = data._obj.message;
 
+        let _x = this._group_ding.x + this._heguan.x + this._heguan.width/2;
+        let _y = this._group_ding.y + this._heguan.y + this._heguan.height/2;
+        for(let i=1; i<5; i++){
+            if(this.cardResult.players[i].win == false) {
+                for(let j=0; j<this["_coin_arr_" + (i-1)].length; j++) {
+                    this.coinFly(this["_coin_arr_" + (i-1)][j], _x, _y);
+                }
+            } else {
+                this._win_arr.push(i);
+            }
+        }
+        //this.removeChipIcon();
+        if(this._win_arr.length > 0) {
+            this.interval = setInterval(this.chouMaToGroup.bind(this), 1000);
+        } else {
+            this.interval = setInterval(this.showGameResult.bind(this), 2000);
+        }
+    }
 
+    private chouMaToGroup():void {
+        clearInterval(this.interval);
+        //console.log("++++++++++++++++++++" + this._coin_banker_arr.length);
+        let num = parseInt(this._coin_banker_arr.length/this._win_arr.length + "");
+        for(let i=0; i<this._coin_banker_arr.length; i++) {
+            if(this._win_arr[0] && i<num) {
+                this.coinFlyPlayer(this._coin_banker_arr[i], this._win_arr[0]);
+            } 
+            if(this._win_arr[1] && (i>=num && i<2*num)) {
+                this.coinFlyPlayer(this._coin_banker_arr[i], this._win_arr[1]);
+            } 
+            if(this._win_arr[2] && (i>=2*num && i<3*num)) {
+                this.coinFlyPlayer(this._coin_banker_arr[i], this._win_arr[2]);
+            } 
+            if(this._win_arr[3] && i>=num*3) {
+                this.coinFlyPlayer(this._coin_banker_arr[i], this._win_arr[3]);
+            }
+        }
 
+        this.interval = setInterval(this.chouMaToGroup1.bind(this), 1000);
+    }
 
-
-
-        //this.victoryEffect();
-
-        //if (this.isPaly) {
-            //执行金币加减动画
-            //this.isWin   //(代表输赢)
-            //this.isScore //(代表输赢金币数量)
-            //更新界面金币数量显示
-            //this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
-        //}
-
+    public chouMaToGroup1() {
+        clearInterval(this.interval);
+        for(let i=0; i<this._coin_total.length; i++) {
+            egret.Tween.removeTweens(this._coin_total[i]);
+            let x = 0 - this._coin_total[i].width - 10;
+            let y = (Math.floor(Math.random() * (this.wanjia.height-50))*0.8 + 50 + this.wanjia.y);
+            this.coinFly(this._coin_total[i], x, y);
+        }
     }
 
     /** */
@@ -484,11 +522,10 @@ public _brnn_banker_txt:eui.Image;
 
     /**游戏结束,百人牛牛休息 */
     private onrest(data: any): void {
-        //this.startCountDown(data._obj.seconds);
         this.setTiming(data._obj.seconds);
+        this._label_tip.text = "休息时间...";
         this.resetGame();
         //UserInfo.getInstance().isGameStart = false;
-
     }
     /**百人牛牛洗牌 */
     private onshuffle(data: any): void {
@@ -703,6 +740,7 @@ public _brnn_banker_txt:eui.Image;
     public victoryEffect(): void {
         clearInterval(this.interval);
         this.interval = 0;
+        /*
         if (this.game_result == 1) {
             // this.addNNVictoryEffect();
             this.game_result = 0;
@@ -712,47 +750,13 @@ public _brnn_banker_txt:eui.Image;
         } else if (this.game_result == 3) {
             // this.addTongpei();
             this.game_result = 0;
-        }
+        }*/
 
     }
 
     public resize(): void {
 
     }
-
-    /**开始倒计时*/
-    /*
-    private startCountDown(time: number): void {
-
-        this.timeTxt.visible = true;
-        this.time = time;
-        if (this.timer == null) {
-            this.timer = new egret.Timer(1000);
-            this.timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
-            this.timer.start();
-        }
-    }*/
-
-    /**倒计时处理*/
-    /*
-    private timerFunc(evt: egret.TimerEvent): void {
-        if (this.time >= 0) {
-            this.timeTxt.text = "" + this.time;
-            this.time--;
-        }
-        else {
-            this.timeTxt.text = "0";
-            this.clearTime();
-        }
-    }*/
-    /**清除倒计时*/
-    //private clearTime(): void {
-    //    if (this.timer) {
-    //        this.timer.stop();
-    //        this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
-    //        this.timer = null;
-    //    }
-    //}
 
     //筹码选择
     private onTouchBet(index): void {
@@ -795,20 +799,72 @@ public _brnn_banker_txt:eui.Image;
     private showCoins(pos: egret.Point, num: number, msg: number): void {
         this.playClickSound(BRNNUtil.getInstance().getSoundEffect(8));
         var point: egret.Point = BRNNUtil.getInstance().getCoinsPos(msg);
-        var arr = BRNNUtil.getInstance().coinsType(pos, num);
-        for (var i = 0; i < arr.length; i++) {
-            var tx = point.x + Math.random() * 80;
-            var ty = point.y + Math.random() * 80;
-            this.grpCoins.addChild(arr[i]);
+        var coin = BRNNUtil.getInstance().coinsType(pos, num);
+        var tx = point.x + Math.random() * 80;
+        var ty = point.y + Math.random() * 80;
+        this.grpCoins.addChild(coin);
 
-            egret.Tween.get(arr[i]).to({ x: tx, y: ty }, 200).call((mc) => {
+        let _group = this["effectTouch" + (msg-1)];
+        let _nnwt = this["_nnwt_" + (msg-1)];
+        let _x = _group.x+_nnwt.x;
+        let _y = _group.y+_nnwt.y;
 
-            }, this, [arr[i]]);
+        coin.anchorOffsetX = coin.width / 2,
+        coin.anchorOffsetY = coin.height / 2;
+        var l = Math.floor(700 * Math.random()) + 100;
+        egret.Tween.get(coin).to({
+            x: _x + Math.floor(Math.random() * _group.width * 0.8+20),
+            y: _y + Math.floor(Math.random() * _group.height * 0.8+10),
+            rotation: (360 * Math.random()).toFixed(2)
+        },
+        l, egret.Ease.cubicInOut);
+
+
+        if(msg == 1) {
+            this._coin_arr_0.push(coin);
+        } else if(msg == 2) {
+            this._coin_arr_1.push(coin);
+        } else if(msg == 3) {
+            this._coin_arr_2.push(coin);
+        } else if(msg == 4) {
+            this._coin_arr_3.push(coin);
         }
-
-
-        
+        this._coin_total.push(coin);
     }
+
+    public coinFlyPlayer(coin, index):void {
+        egret.Tween.removeTweens(coin);
+        let _group = this["effectTouch" + (index-1)];
+        let _nnwt = this["_nnwt_" + (index-1)];
+        let _x = _group.x+_nnwt.x;
+        let _y = _group.y+_nnwt.y;
+
+        coin.anchorOffsetX = coin.width / 2,
+        coin.anchorOffsetY = coin.height / 2;
+        var l = Math.floor(700 * Math.random()) + 100;
+        egret.Tween.get(coin).to({
+            x: _x + Math.floor(Math.random() * _group.width * 0.8+20),
+            y: _y + Math.floor(Math.random() * _group.height * 0.8+10),
+            rotation: (360 * Math.random()).toFixed(2)
+        },
+        l, egret.Ease.cubicInOut);
+    }
+
+    public coinFly(coin, _x, _y):void {
+        egret.Tween.removeTweens(coin);
+        this._coin_banker_arr.push(coin);
+        coin.anchorOffsetX = coin.width / 2;
+        coin.anchorOffsetY = coin.height / 2;
+        var s = Math.floor(600 * Math.random()) + 100;
+        egret.Tween.get(coin).wait(Math.floor(100 * Math.random())).to({
+            x: _x,
+            y: _y,
+            rotation: (360 * Math.random()).toFixed(2)
+        },
+        s, egret.Ease.cubicOut);
+    }
+
+//24940 BrnnGameEffectPanel
 
     private flyIntval_1: number = 0;  //
     private flyIntval_2: number = 0;  //
@@ -947,17 +1003,49 @@ public _brnn_banker_txt:eui.Image;
         }
     }
 
+    private bankerCardRotation(): void {
+        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
+        clearInterval(this.interval);
+        
+        var poke = this.cardResult.players[0];
+        let cardType = this.labCardTypeBanker;
+        cardType.anchorOffsetX = cardType.width / 2;
+        cardType.anchorOffsetY = cardType.height / 2;
+        cardType.x = cardType.x + cardType.width / 2;
+        cardType.y = cardType.y + cardType.height / 2;
+
+        let cardTypeBg = this.labCardTypeBanker_bg;
+        for (var i = 0; i < 5; i++) {
+            var card = this['bankerCard_' + i];
+            card.source = 'brnn_card_100_png';
+            var s = card.x;
+            egret.Tween.get(card).to({
+                x: this['bankerCard_' + 2].x
+            },
+            200).call(function() {
+                this[0].source = 'brnn_card_' + this[1] + '_png';
+            }, [card, poke.cardsList[i]]).wait(100).to({
+                x: s
+            },
+            200).call(this.showAllCardType, this, [cardTypeBg, cardType]);
+            this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
+        }
+
+        this.effectPlayerIndex = 0;
+        this.interval = setInterval(this.playerCardRotation.bind(this), 800);
+    }
+
 
     private effectPlayerIndex = 0;
     private playerCardRotation(): void {
         if (this.effectPlayerIndex == 4) {
             clearInterval(this.interval)
             this.effectPlayerIndex = 0;
-            this.bankerCardRotation();
             return;
         }
+
         //this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
-        var poke = this.cardResult.pokes;
+        var poke = this.cardResult.players;
         var index = this.effectPlayerIndex;
 
         let cardType = this["labCardType" + index];
@@ -975,38 +1063,12 @@ public _brnn_banker_txt:eui.Image;
             },
             200).call(function() {
                 this[0].source = 'brnn_card_' + this[1] + '_png';
-            }, [card, poke[index + 1].value[i]]).wait(100).to({
+            }, [card, poke[index + 1].cardsList[i]]).wait(100).to({
                 x: s
             },
             200).call(this.showAllCardType, this, [cardTypeBg, cardType]);
             this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
-
-            /*
-            egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'brnn_card_' + this[1] + '_png';
-                egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-            }, [card, poke[index + 1].value[i]]);*/
-            // console.log('poke_' + this.effectPlayerIndex + ': ' + poke[this.effectPlayerIndex].value[i]);
         }
-
-        //this['labCardType' + index].source = BRNNUtil.getInstance().getCardType(poke[index + 1].type);
-        //this.playClickSound(BRNNUtil.getInstance().getCardMusicType(poke[index + 1].type));
-        //this['labCardType' + index].visible = true;;
-        //this['labCardType' + index].width = 98;
-        //this['labCardType' + index].height = 44;
-        // this['labCardResult' + index].text = '';//this.cardResult.result[index] == 1 ? '赢' : '输';
-        /*
-        if (poke[index + 1].type != 0) {
-            for (var i = 0; i < 5; i++) {
-                var card = this['grpCard_' + index + '_' + i];
-                if (i < 3) {
-                    egret.Tween.get(card).wait(700).to({ x: card.x - 10 }, 100);
-                }
-                else {
-                    egret.Tween.get(card).wait(700).to({ x: card.x + 10 }, 100);
-                }
-            }
-        }*/
         this.effectPlayerIndex++;
     }
 
@@ -1021,63 +1083,7 @@ public _brnn_banker_txt:eui.Image;
         200);
     }
 
-    private bankerCardRotation(): void {
-        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
-        var poke = this.cardResult.pokes[0];
-        let cardType = this.labCardTypeBanker;
-        cardType.anchorOffsetX = cardType.width / 2;
-        cardType.anchorOffsetY = cardType.height / 2;
-        cardType.x = cardType.x + cardType.width / 2;
-        cardType.y = cardType.y + cardType.height / 2;
-
-        let cardTypeBg = this.labCardTypeBanker_bg;
-        for (var i = 0; i < 5; i++) {
-            var card = this['bankerCard_' + i];
-            card.source = 'brnn_card_100_png';
-            var s = card.x;
-            egret.Tween.get(card).to({
-                x: this['bankerCard_' + 2].x
-            },
-            200).call(function() {
-                this[0].source = 'brnn_card_' + this[1] + '_png';
-            }, [card, poke.value[i]]).wait(100).to({
-                x: s
-            },
-            200).call(this.showAllCardType, this, [cardTypeBg, cardType]);
-            this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
-            
-            /*
-            var card = this['bankerCard_' + i];
-            card.source = 'brnn_card_100_png';
-            egret.Tween.get(card).to({ scaleX: 0 }, 300).call(function () {
-                this[0].source = 'brnn_card_' + this[1] + '_png';
-                egret.Tween.get(this[0]).to({ scaleX: 1 }, 300);
-            }, [card, poke.value[i]])
-            */
-            // console.log('poke_banker: ' + poke.value[i]);
-        }
-
-        /*
-        this.labCardTypeBanker.source = BRNNUtil.getInstance().getCardType(poke.type);
-        this.playClickSound(BRNNUtil.getInstance().getCardMusicType(poke.type));
-        this.labCardTypeBanker.visible = true;
-        this.labCardTypeBanker.width = 98;
-        this.labCardTypeBanker.height = 44;
-        if (poke.type != 0) {
-            for (var i = 0; i < 5; i++) {
-                var card = this['bankerCard_' + i];
-                if (i < 3) {
-                    egret.Tween.get(card).wait(700).to({ x: card.x - 10 }, 100);
-                }
-                else {
-                    egret.Tween.get(card).wait(700).to({ x: card.x + 10 }, 100);
-                }
-            }
-        }
-        */
-        //this.interval = setInterval(this.blinkEffect.bind(this), 500);
-
-    }
+    
 
     private blinkEffect(): void {
         clearInterval(this.interval);
@@ -1149,45 +1155,6 @@ public _brnn_banker_txt:eui.Image;
         [animation]);
         this._tipGameEff = null;
     }
-
-/*
-    private numIndex:number = -1;
-    private count = 0;
-    private faPaiEff():void {
-        
-        if(this.count == 4) {
-            clearInterval(this.numIndex);
-            this.count = 0;
-            return;
-        }
-
-        var fapai = new uiCore.Animator();
-        fapai.defentAnimationName = "Sprite";
-        fapai.source = "brnn_fapai_" + (this.count + 1);
-        fapai.scaleX = 1;
-        fapai.scaleY = 1;
-        fapai.playOnce = true;
-        fapai.x = this._faPaiPos.x;
-        fapai.y = this._faPaiPos.y;
-        this.addChild(fapai);
-        this._faPai_arr.push(fapai);
-        fapai.play("Sprite", 1);
-        this.count++;
-
-        
-        //this._faPaiEff = new DragonBonesSprite('brnn_fapai_1',"Sprite");
-		//this._faPaiEff.x = 80;
-		//this._faPaiEff.y = 92;
-        //this._faPaiEff.x = xlLib.Global.screenWidth / 2;
-        //this._faPaiEff.y = xlLib.Global.screenHeight / 2;
-		//this.addChild(this._faPaiEff);
-		//this._faPaiEff.play("Sprite", 1);
-        //this._faPaiEff.onPlayComplete  = ()=>{
-        //    this._faPaiEff.parent.removeChild(this._faPaiEff);
-        //}
-
-    }*/
-
     
     public showLightEffect(playLight, value) {
         playLight.visible = true;
@@ -1254,20 +1221,13 @@ public _brnn_banker_txt:eui.Image;
         coin.anchorOffsetY = coin.height / 2;
         var s = Math.floor(600 * Math.random()) + 100;
 
-
-        //if (uiCore.Application.isGameHide) {
-        //    var r = n.indexOf(e); - 1 != r && (e.parent && e.parent.removeChild(e), n.splice(r, 1))
-        //} else egret.Tween.removeTweens(e),
-
-
-
         egret.Tween.get(coin).wait(Math.floor(100 * Math.random())).to({
             x: t.x,
             y: t.y,
             rotation: (360 * Math.random()).toFixed(2)
         },
         s, egret.Ease.cubicOut).call(function(e, t) {
-            //var i = t.indexOf(e); - 1 != i && (e.parent && e.parent.removeChild(e), t.splice(i, 1))
+
         },
         this, [coin]);
     }
@@ -1278,122 +1238,11 @@ public _brnn_banker_txt:eui.Image;
     //============================================  Game Result
     private showGameResult(): void {
         clearInterval(this.interval);
-        /*
-        //lcp.LListener.getInstance().dispatchEvent(new lcp.LEvent(EventData.CHAT_GAME_RESULT));
-        var data = this.cardResult;
-        //this.grpResult.visible = true;
-        if (this.maxUserData != null) {
-            this.grpMax.visible = true;
-            this.grpMaxHead.source = this.maxUserData.headurl;
-            this.grpMaxHead.width = this.grpMaxHead.height = 70;
-            //this.grpMaxGold.text = '赢 ' + QuickManage.moneyStr(this.maxUserData.gold);
-            this.grpMaxName.text = this.maxUserData.name;
-            //if (this.maxUserData.name == GlobalData.user.nickname) {
-            //    MusicManage.playMuisc(BRNNUtil.getInstance().getSoundEffect(1));
-            //}
-        }
-        else {
-            this.grpMax.visible = false;
-        }
-
-        this.grpBankerHead.source = this.bankerHead.source; //
-        this.grpBankerName.text = this.bankerName.text;
-
-        this.grpBankerBeishu.text = data.pokes[0].num + '倍';
-        this.grpBankerType.source = '';//this.getCardType(data.pokes[0].type);//;
-        this.labelBankerType.text = BRNNUtil.getInstance().getCardType2(data.pokes[0].type);
-        if (parseInt(data.bankerWin) < 0) {
-            //this.grpBankerGold.text = '输 ' + QuickManage.moneyStr(Math.abs(data.bankerWin));
-            //PanelManage.chat.sendGameChat('庄家输了 ' + QuickManage.moneyStr(Math.abs(data.bankerWin)));
-        }
-        else {
-            //this.grpBankerGold.text = '赢 ' + QuickManage.moneyStr(data.bankerWin);
-            if (data.bankerWin != 0) {
-                //PanelManage.chat.sendGameChat('庄家赢了 ' + QuickManage.moneyStr(Math.abs(data.bankerWin)));
-            }
-        }
-
-        var userGold: number = 0;
-        for (var i = 0; i < 4; i++) {
-            var betss = parseInt(data.pokes[i + 1].num)
-            this['resultType' + i].text = BRNNUtil.getInstance().getCardType2(data.pokes[i + 1].type);
-            this['labResult0_' + i].text = betss + '倍';//倍率
-            this['labResult1_' + i].text = this.moneyStr(this.selfbetsNum[i + 1]); //押注
-            var gold = this.selfbetsNum[i + 1];
-            if (gold != 0) {
-                this['labResult2_' + i].text = '';
-                if (data.result[i] == 1) {
-                    var bets0 = 0;
-                    if (this.isBanker) {
-                        bets0 = parseInt(data.pokes[0].num)
-                    }
-                    else {
-                        bets0 = parseInt(data.pokes[i + 1].num)
-                    }
-                    userGold += parseInt(gold) * (bets0 + 1);
-                }
-                else {
-                    var bets1 = 0;//1倍不再减少
-                    if (this.isBanker) {
-                        bets1 = parseInt(data.pokes[i + 1].num)
-                    }
-                    else {
-                        bets1 = parseInt(data.pokes[0].num)
-                    }
-                    if (bets1 == 1) {
-                        // userGold -= parseInt(gold);
-                    }
-                    else {
-                        userGold -= parseInt(gold) * (bets1 - 1);
-                    }
-                }
-            }
-            else {
-                this['labResult2_' + i].text = 0;
-            }
-        }
-
-        var betsGold = 0;
-        for (var i = 1; i < 5; i++) {
-            betsGold += this.selfbetsNum[i];
-        }
-        if (userGold > 0 || userGold == 0) {
-            // userGold *= (1 - data.rate);
-            userGold *= (1 - this.curRate);
-        }
-        userGold -= betsGold;
-        if (userGold > 0 || userGold == 0) {
-            //this.labResultValue.text = '结算：' + QuickManage.moneyStr(userGold);
-        }
-        else {
-            //this.labResultValue.text = '结算：-' + QuickManage.moneyStr(Math.abs(userGold));
-        }
-        // if (userGold > 0) {
-        //     EffectUtils.coinsFly(this, 320, 500);
-        // }
-        //this.updateGold();
-        //更新来自更新彩金时所带的庄家金币
-        //if (!this.isSysBanker) {
-            //this.labBankerMoney.text = QuickManage.moneyStr(this.banker_total_gold);
-        //}
-        //this.setHandsel(this.totalCaijin);
-        if (userGold > 0 && this.resultCaijin > 0) {
-            //this.interval = setInterval(this.caijinShow.bind(this), 3000);
-        }
-        else {
-            if (this.cardResult.bomb == 0) {
-                this.interval = setInterval(this.setStartBet.bind(this), 4000);
-            }
-            else {
-                this.interval = setInterval(this.boomShow.bind(this), 3000);
-            }
-        }
-        */
+        
     }
 
     /**游戏场景重置 */
     private resetGame(): void {
-  
         for (var i = 0; i < 5; i++) {
             let card: eui.Image = this['bankerCard_' + i];
             card.source = '';
@@ -1412,15 +1261,13 @@ public _brnn_banker_txt:eui.Image;
             }
         }
 
-
         this._brnn_banker_txt.visible = false;
-
-
-
-
+        for(let i=0; i<this._coin_total.length; i++) {
+            egret.Tween.removeTweens(this._coin_total[i]);
+            this._coin_total[i].parent.removeChild(this._coin_total[i]);
+        }
 
         this.initData();
-
     }
 
     //============================================红包

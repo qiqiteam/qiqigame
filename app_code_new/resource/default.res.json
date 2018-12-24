@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png,zjh_huaheng_ske2_json,zjh_huaheng_tex2_json,zjh_huaheng_tex2_png",
 			"name": "preload"
 		},
 		{
@@ -7428,6 +7428,116 @@
 			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_tex.png",
 			"type": "image",
 			"name": "zjh_huaheng_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_ske.json",
+			"type": "json",
+			"name": "zjh_huaheng_ske2_json"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_tex.json",
+			"type": "json",
+			"name": "zjh_huaheng_tex2_json"
+		},
+		{
+			"url": "assets/dragonbones/zjh_huaheng/zjh_huaheng_tex.png",
+			"type": "image",
+			"name": "zjh_huaheng_tex2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_banker_txt.png",
+			"type": "image",
+			"name": "brnn_banker_txt2_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_room_btn_qxtg.png",
+			"type": "image",
+			"name": "tbnn_room_btn_qxtg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_room_btn_tg.png",
+			"type": "image",
+			"name": "tbnn_room_btn_tg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_btnbg.png",
+			"type": "image",
+			"name": "tbnn_trustee_btnbg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_btnbg2.png",
+			"type": "image",
+			"name": "tbnn_trustee_btnbg2_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_cancel_btn.png",
+			"type": "image",
+			"name": "tbnn_trustee_cancel_btn_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_sure_btn.png",
+			"type": "image",
+			"name": "tbnn_trustee_sure_btn_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_trustee_wenzi1.png",
+			"type": "image",
+			"name": "tbnn_trustee_wenzi1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_2.png",
+			"type": "image",
+			"name": "brnntype_lose_2_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_5.png",
+			"type": "image",
+			"name": "brnntype_lose_5_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_8.png",
+			"type": "image",
+			"name": "brnntype_lose_8_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_10.png",
+			"type": "image",
+			"name": "brnntype_win_10_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_2.png",
+			"type": "image",
+			"name": "brnntype_lose_22_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_5.png",
+			"type": "image",
+			"name": "brnntype_lose_52_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_lose_8.png",
+			"type": "image",
+			"name": "brnntype_lose_82_png"
+		},
+		{
+			"url": "assets/game/brnn/brnntype_win_10.png",
+			"type": "image",
+			"name": "brnntype_win_102_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_tuoguan_bg.png",
+			"type": "image",
+			"name": "tbnn_tuoguan_bg_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_tuoguan_btn2.png",
+			"type": "image",
+			"name": "tbnn_tuoguan_btn2_png"
+		},
+		{
+			"url": "assets/game/tbnn/tbnn_tuoguan_btn1.png",
+			"type": "image",
+			"name": "tbnn_tuoguan_btn1_png"
 		}
 	]
 }
