@@ -147,7 +147,7 @@
 				</tween:To>
 				<tween:To duration="650">
 					<tween:props>
-						<e:Object y="{151}" x="{630.88}"/>
+						<e:Object y="{151}" x="{630.88}" height="{171}"/>
 					</tween:props>
 				</tween:To>
 			</tween:TweenItem>
@@ -645,10 +645,10 @@
 	<e:Image id="image7" source="qznn_pic3" x="1162.06" y="136" locked="true"/>
 	<e:Image id="image6" source="qznn_pic2" x="875.38" y="136" locked="true"/>
 	<e:Image source="qznn_pic1" x="584.88" y="136" locked="true"/>
-	<e:Image id="image11" source="qznn_hall_effect_1_tex003" x="630.88" y="151" locked="true"/>
-	<e:Image id="image12" source="qznn_hall_effect_1_tex001" x="722.94" y="236.3" anchorOffsetX="112" anchorOffsetY="112" scaleX="0.46" scaleY="0.46" locked="true"/>
-	<e:Image id="image13" source="qznn_hall_effect_1_tex002" x="712.02" y="246.94" anchorOffsetX="0" width="67" anchorOffsetY="0" height="59.43" locked="true"/>
-	<e:Image id="image14" source="qznn_hall_effect_2_tex002" x="922" y="143" locked="true"/>
+	<e:Image id="image11" source="qznn_hall_effect_1_tex003" x="630.88" y="151"/>
+	<e:Image id="image12" source="qznn_hall_effect_1_tex001" x="722.94" y="236.3" anchorOffsetX="112" anchorOffsetY="112" scaleX="0.46" scaleY="0.46"/>
+	<e:Image id="image13" source="qznn_hall_effect_1_tex002" x="712.02" y="246.94" anchorOffsetX="0" width="67" anchorOffsetY="0" height="59.43"/>
+	<e:Image id="image14" source="qznn_hall_effect_2_tex002" x="922" y="143"/>
 	<e:Image id="image15" source="qznn_hall_effect_2_tex002" x="923" y="142" locked="true"/>
 	<e:Image id="image16" source="qznn_hall_effect_2_tex001" x="931" y="168" locked="true"/>
 	<e:Image id="image17" source="qznn_hall_effect_2_tex004" x="909" y="232" locked="true"/>

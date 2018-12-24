@@ -411,7 +411,7 @@ class BJLView extends eui.Component {
         this.sypai_0.text = data._obj.leftcardlh + '';
         this.sypai_1.text = data._obj.deskcards + '';
 
-        // this._paijubh.text = data._obj.inningId + '';   //牌局编号恢复
+        this._paijubh.text = data._obj.inningId + '';   //牌局编号恢复
 
     }
 
@@ -673,7 +673,7 @@ class BJLView extends eui.Component {
                         var coin = BJLUtil.getInstance().coinsType(p, 10);
                         this.arrCoin.push(coin);
                         this.grpCoins.addChild(coin);
-                        egret.Tween.get(coin).wait(5 * i).to({ x: 68, y: 762 }, 500);
+                        egret.Tween.get(coin).wait(Math.floor(100 * Math.random())).to({ x: 68, y: 762 }, 500);
                     }
                 }
             }, 700);
@@ -685,19 +685,19 @@ class BJLView extends eui.Component {
         for (let i = 0; i < this['coin_' + index + '_arr'].length; i++) {
             var chouma = this['coin_' + index + '_arr'][i];
             if (istype == 0) {
-                egret.Tween.get(chouma).wait(i + 5).to({ x: pos.x, y: pos.y }, 500);
+                egret.Tween.get(chouma).wait(Math.floor(100 * Math.random())).to({ x: pos.x, y: pos.y }, 500);
 
             } else if (istype == 1) {
                 var position: egret.Point = new egret.Point();
                 position.x = pos.x + (Math.random() * 30);
                 position.y = pos.y + (Math.random() * 10);
-                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 500);
+                egret.Tween.get(chouma).wait(Math.floor(100 * Math.random())).to({ x: position.x, y: position.y }, 500);
 
             } else if (istype == 2) {
                 var position: egret.Point = new egret.Point();
                 position.x = pos.x + (Math.random() * 250);
                 position.y = pos.y + (Math.random() * 80);
-                egret.Tween.get(chouma).wait(i + 5).to({ x: position.x, y: position.y }, 500);
+                egret.Tween.get(chouma).wait(Math.floor(100 * Math.random())).to({ x: position.x, y: position.y }, 500);
             }
 
         }
@@ -718,7 +718,7 @@ class BJLView extends eui.Component {
     private Joinhalfway(data: any) {
         // console.log(data);
         this.juegengxin(data._obj.jushu);              //局数恢复
-        // this._paijubh.text = data._obj.inningId + '';   //牌局编号恢复
+        this._paijubh.text = data._obj.inningId + '';   //牌局编号恢复
         this.tishizithuifu(data._obj.roomStatus);   /**提示字恢复 */
 
         console.log('-----------------------------------------------' + data._obj.roomStatus + '----------------------------');
@@ -1170,7 +1170,7 @@ class BJLView extends eui.Component {
         var ty = point.y + Math.random() * 80;
         coin.touchEnabled = false;
         this.grpCoins.addChild(coin);
-        egret.Tween.get(coin).to({ x: tx, y: ty }, 200);
+        egret.Tween.get(coin).wait(Math.floor(100 * Math.random())).to({ x: tx, y: ty }, 200);
         switch (msg) {
             case 1:                 // 1是庄
                 this.coin_1_arr.push(coin);

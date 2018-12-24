@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LobbyViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<e:Image id="bgImg" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" source="Bg_img_jpg" locked="true"/>
-	<e:Group width="100%" height="96" top="0" horizontalCenter="0">
+	<e:Group width="100%" height="96" top="0" horizontalCenter="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" top="0" source="lobby_json.ding"/>
 		<e:Button id="_set" label="" x="1278.58" y="1">
 			<e:skinName>
@@ -31,7 +31,7 @@
 		</e:Button>
 		<e:Image x="383.37" y="4" source="v"/>
 		<e:Label id="_head_label" text="中国第一赌神" x="151.26" y="29" scaleX="1" scaleY="1" size="35" fontFamily="KaiTi"/>
-		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
+		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" width="208.79" height="40" anchorOffsetX="0" x="646"/>
 		<e:Image width="154" height="76" y="1" touchEnabled="false" x="1278.58" source="btn_set_0"/>
 		<e:Image width="154" height="76" y="1" touchEnabled="false" x="1096.18" source="btn_kefu_0"/>
 		<e:Image x="34.5" y="0" source="F10_03_png" anchorOffsetX="0" width="86.26" anchorOffsetY="0" height="86.86" id="icon_img" touchEnabled="false"/>

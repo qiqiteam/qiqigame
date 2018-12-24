@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BJLroomViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="bgImg" width="100%" height="100%" source="room_zjh_bg_jpg" horizontalCenter="0" verticalCenter="0"/>
-	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+	<e:Image id="bgImg" width="100%" height="100%" source="room_zjh_bg_jpg" horizontalCenter="0" verticalCenter="0" locked="true"/>
+	<e:Group width="100%" height="100%" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" locked="true">
 		<e:Image scaleX="1" scaleY="1" x="125.21" bottom="-2" source="baccarat_hall_person"/>
 		<e:Image source="baccarat_hall_json.baccarat_hall_list_bg" x="542.21" y="191"/>
 		<e:Image source="baccarat_hall_json.baccarat_hall_list_choosed_4" x="543" y="194"/>
@@ -49,7 +49,7 @@
 		<e:Image source="baccarat_hall_json.baccarat_hall_title3_0" x="573" y="526" touchEnabled="false"/>
 		<e:Image source="baccarat_hall_json.baccarat_hall_title4_0" x="573" y="666.5" touchEnabled="false"/>
 	</e:Group>
-	<e:Group width="100%" height="96" horizontalCenter="0" verticalCenter="-366">
+	<e:Group width="100%" height="96" horizontalCenter="0" verticalCenter="-366" locked="true">
 		<e:Image scaleX="1" scaleY="1" source="ding" horizontalCenter="0" top="0"/>
 		<e:Button id="_menu" label="" x="1278.58" y="1">
 			<e:skinName>
@@ -74,7 +74,7 @@
 
 
 
-		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Arial" verticalAlign="middle" textAlign="center" width="180" height="34" horizontalCenter="0"/>
+		<e:Label id="_coin_label" text="" y="27" scaleX="1" scaleY="1" size="34" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" width="217" height="40" anchorOffsetX="0" x="646"/>
 		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1278.58" source="room_meun_btn_0"/>
 		<e:Image width="154" height="76" y="2" touchEnabled="false" x="1096.45" source="room_rule_btn_0"/>
 
