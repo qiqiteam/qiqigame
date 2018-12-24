@@ -289,6 +289,15 @@ module uiCore {
                 step = (finalNum-options.initNum) / (time / regulator),/*每30ms增加的数值--*/       
                 count =  options.initNum, //计数器       
                 initial = options.initNum;
+
+            var splitnum = 0;
+            if(options.splitnum){
+                splitnum=options.splitnum;
+            }
+            var splitstr = "";
+            if(options.splitstr){
+                splitstr = options.splitstr
+            }
             var timer = setInterval(()=> {          
             count = count + step;          
             if(count >= finalNum&&options.initNum<finalNum) {        
@@ -303,8 +312,16 @@ module uiCore {
                 //t未发生改变的话就直接返回         
                 var t = Math.floor(count);       
                 if(t == initial) return;          
-                initial = t;          
-                target.text = str + initial+"";
+                initial = t;
+                var txt:string =  initial+"";
+                if(txt.length>splitnum){
+                   var sub1 = txt.substr(0,txt.length-splitnum);
+                   var sub2 = txt.substr(txt.length-splitnum,splitnum);
+                   txt = sub1+splitstr+sub2;
+                }
+                target.text = str +txt;
+                console.log(target.text+"-----------------------");
+                
             }, 30);     
         }
     }

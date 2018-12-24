@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ESYDViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group width="1472" height="828" horizontalCenter="0" verticalCenter="0">
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" width="100%" height="100%" source="bg_esyd_ditu_jpg" locked="true"/>
+		<e:Image horizontalCenter="0" verticalCenter="0" source="black_qz21_game_table_png" locked="true"/>
+
+		<e:Label id="_paijubh" text="50-1543687800-31296807-1" x="113.49" y="145.5" size="9" rotation="-15" anchorOffsetX="0" width="170.98" height="14" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" bold="true" textColor="0x0a0700" locked="true"/>
+		<e:Label text="300" x="209.68" y="138.24" size="10" rotation="-15" anchorOffsetX="0" width="30.68" height="14" fontFamily="Microsoft YaHei" textAlign="center" textColor="0x16140d" bold="true" verticalAlign="middle" locked="true"/>
+	</e:Group>
+
+
+	<e:Group id="grpCard" width="1472" height="828" x="0" y="0">
+		<e:Group id="_my_pai" width="300" height="140" y="370.18" x="586">
+			<e:Image id="bankerCard_0" x="45.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
+			<e:Image id="bankerCard_1" x="78.25" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
+			<e:Image id="bankerCard_2" x="110.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
+			<e:Image id="bankerCard_3" x="142.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
+			<e:Image id="bankerCard_4" x="174.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="34"/>
+
+
+		</e:Group>
+
+
+
+
+
+		<e:Image id="grpCard_0_4" x="356.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+		<e:Image id="grpCard_0_3" x="324" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+		<e:Image id="grpCard_0_2" x="292" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+		<e:Image id="grpCard_0_1" x="260" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+		<e:Image id="grpCard_0_0" x="227.5" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100" y="364"/>
+
+
+		<e:Image id="grpCard_1_0" x="634.55" y="162.95" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_1" x="668" y="162.95" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_2" x="701" y="162.95" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_3" x="734" y="162.95" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_1_4" x="766.55" y="162.95" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+
+
+		<e:Image id="grpCard_2_0" x="1034.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_1" x="1066" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_2" x="1099" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_3" x="1131" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+		<e:Image id="grpCard_2_4" x="1163.07" y="358.75" scaleX="1" scaleY="1" source="nn.card_101" width="80" height="100"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</e:Group>
+	<e:Group x="0" y="0" width="1472" height="828">
+		<e:Group id="grpHead0" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" y="580.35" x="674">
+			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
+			<e:Image id="imghead0" width="120" height="120" source="women7_png" x="1.52" y="18"/>
+			<e:Label id="labelHead0" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25" width="120" height="20"/>
+			<e:Label id="labelGold0" text="1000000" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="9.02" y="131.37" width="107" height="26"/>
+		</e:Group>
+		<e:Group id="grpHead1" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" y="505.21" x="291.57">
+			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
+			<e:Image id="imghead1" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>
+			<e:Label id="labelHead1" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25" width="120" height="20"/>
+			<e:Label id="labelGold1" text="1000000" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="9.02" y="131.37" width="107" height="26"/>
+
+
+		</e:Group>
+		<e:Group id="grpHead2" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" y="394" x="15.19">
+			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
+			<e:Image id="imghead2" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>
+			<e:Label id="labelHead2" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25" width="120" height="20"/>
+			<e:Label id="labelGold2" text="1000000" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="9.02" y="131.37" width="107" height="26"/>
+		</e:Group>
+
+		<e:Group id="grpHead3" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" x="1273.4" y="334">
+			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
+			<e:Image id="imghead3" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>
+			<e:Label id="labelHead3" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25" width="120" height="20"/>
+			<e:Label id="labelGold3" text="1000000" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="10.35" y="131.37" width="107" height="26"/>
+
+
+		</e:Group>
+		<e:Group id="grpHead4" scaleX="1" scaleY="1" width="125" anchorOffsetY="0" height="161" anchorOffsetX="0" x="1051.58" y="548.56">
+			<e:Image width="125" height="161" anchorOffsetX="0" anchorOffsetY="0" source="qznn_txkbg1_png"/>
+			<e:Image id="imghead4" width="88" height="88" y="37.17" x="19.05" source="women7_png"/>
+			<e:Label id="labelHead4" text="世界第一赌神" size="20" fontFamily="SimHei" textAlign="center" scaleX="1" scaleY="1" textColor="0xFFFFFF" x="3" y="8.25" width="120" height="20"/>
+			<e:Label id="labelGold4" text="1000000" size="26" fontFamily="Microsoft YaHei" textColor="0xF4D727" textAlign="center" scaleX="1" scaleY="1" x="10.35" y="131.37" width="107" height="26"/>
+		</e:Group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</e:Group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<e:Group id="_jixu" width="250" height="79" y="743.98" anchorOffsetX="0" anchorOffsetY="0" x="611">
+		<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="0" y="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_continiu_png" source.down="black_qz21_game_btn_continiu_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+
+
+		</e:Button>
+
+	</e:Group>
+
+	<e:Button id="_btn_close" label="" x="15" y="20" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_fanhui_png" source.down="btn_fanhui1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="_btn_meun" label="" x="1365" y="20" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_caidan_png" source.down="btn_caidan1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+
+
+</e:Skin>

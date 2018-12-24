@@ -780,7 +780,7 @@ class QZNNView extends eui.Component {
 
             if (data._obj.hogList[i].hogOrBet >= 10) {
                 this['beishu_' + i].visible = true;
-                this['beishu_' + i].source = 'img_XB_1_png';
+                this['beishu_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet / 10 % 10 + '_png';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet % 10 + '_png';
                 this['bs_img_' + i].visible = true;
@@ -1887,7 +1887,7 @@ class QZNNView extends eui.Component {
         label.scaleY = 1;
         player.addChild(label);
         this.turn_score_arr.push(label);
-        uiCore.LabelEffect.instance.playEffect(label, { time: 3000, initNum: 1, num: score / 100, regulator: 50 }, str);
+        uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: score, regulator: 50, splitnum: 2, splitstr: "." }, str);
     }
     /**播放 胜利 通杀 通赔 动画 */
     public victoryEffect(): void {

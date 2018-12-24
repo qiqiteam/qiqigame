@@ -1605,7 +1605,8 @@ class ZJHView extends eui.Component {
                 this['grpHead' + data.param.index].addChild(label);
 
                 this.turn_score_arr.push(label);
-                uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data._obj.json.winGolds / 100, regulator: 50 }, str);
+                uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data._obj.json.winGolds, regulator: 50, splitnum: 2, splitstr: "." }, str);
+                // uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: data._obj.json.winGolds / 100, regulator: 50 }, str);
             }
             /** ++++++++++++++++++++++++++++++++++++++++++++++++++++
              */
