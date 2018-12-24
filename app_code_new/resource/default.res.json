@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png,zjh_huaheng_ske2_json,zjh_huaheng_tex2_json,zjh_huaheng_tex2_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png,zjh_huaheng_ske2_json,zjh_huaheng_tex2_json,zjh_huaheng_tex2_png,sg_base_bg2_png,SG_bg_hall2_png,SG_card12_png,SG_card22_png,SG_card32_png,SG_card42_png,SG_card52_png,SG_card62_png,SG_title12_png,SG_title22_png,SG_title32_png,SG_title42_png,SG_title52_png,SG_title62_png,SG_title_zhunrun2_png,sg_word2_png,tbnn_tuoguan_btn12_png,tbnn_tuoguan_btn22_png",
 			"name": "preload"
 		},
 		{
@@ -7618,6 +7618,96 @@
 			"url": "assets/game/sango/sg_word.png",
 			"type": "image",
 			"name": "sg_word_png"
+		},
+		{
+			"name": "sg_base_bg2_png",
+			"type": "image",
+			"url": "assets/game/sango/sg_base_bg.png"
+		},
+		{
+			"name": "SG_bg_hall2_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_bg_hall.png"
+		},
+		{
+			"name": "SG_card12_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_card1.png"
+		},
+		{
+			"name": "SG_card22_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_card2.png"
+		},
+		{
+			"name": "SG_card32_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_card3.png"
+		},
+		{
+			"name": "SG_card42_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_card4.png"
+		},
+		{
+			"name": "SG_card52_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_card5.png"
+		},
+		{
+			"name": "SG_card62_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_card6.png"
+		},
+		{
+			"name": "SG_title12_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_title1.png"
+		},
+		{
+			"name": "SG_title22_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_title2.png"
+		},
+		{
+			"name": "SG_title32_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_title3.png"
+		},
+		{
+			"name": "SG_title42_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_title4.png"
+		},
+		{
+			"name": "SG_title52_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_title5.png"
+		},
+		{
+			"name": "SG_title62_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_title6.png"
+		},
+		{
+			"name": "SG_title_zhunrun2_png",
+			"type": "image",
+			"url": "assets/game/sango/SG_title_zhunrun.png"
+		},
+		{
+			"name": "sg_word2_png",
+			"type": "image",
+			"url": "assets/game/sango/sg_word.png"
+		},
+		{
+			"name": "tbnn_tuoguan_btn12_png",
+			"type": "image",
+			"url": "assets/tbnn_tuoguan_btn1.png"
+		},
+		{
+			"name": "tbnn_tuoguan_btn22_png",
+			"type": "image",
+			"url": "assets/tbnn_tuoguan_btn2.png"
 		}
 	]
 }
