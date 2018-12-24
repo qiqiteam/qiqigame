@@ -7,9 +7,9 @@
 		<e:Image source="gf_table_png" anchorOffsetX="0" width="1891" x="-209" y="0"/>
 		<e:Image source="gf_bg_leaf_png" width="180" x="1292" y="0" scaleX="1" scaleY="1"/>
 	</e:Group>
-	<e:Group id="grp_roungNum" width="378" height="104" y="4" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" locked="true">
+	<e:Group id="grp_roungNum" width="378" height="104" y="4" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
 		<e:Label text="牌局编号：" x="-436.98" y="13.64" size="25" anchorOffsetX="0" width="128" textAlign="left" textColor="0x827f77" bold="true" fontFamily="SimHei" scaleX="1" scaleY="1"/>
-		<e:Label id="lab_paijuNum" text="50-154492645-358995561" x="-316.31" y="13.64" size="25" anchorOffsetX="0" width="300" textAlign="left" textColor="0x827F77" fontFamily="SimHei" height="25" scaleX="1" scaleY="1"/>
+		<e:Label id="lab_paijuNum" text="50-154492645-358995561" x="-316.31" y="13.64" size="25" anchorOffsetX="0" width="345" textAlign="left" textColor="0x827F77" fontFamily="SimHei" height="25" scaleX="1" scaleY="1"/>
 		<e:Image id="img_dizhu_dinhzhu_bg" width="320" height="32" y="11.01" horizontalCenter="0" source="gf_game_bet_bg_png" x="29" scaleX="1" scaleY="1"/>
 		<e:Label text="底注：" x="83" y="15.3" size="23" anchorOffsetX="0" textAlign="center" fontFamily="SimHei" textColor="0xb2aeae" width="77" scaleX="1" scaleY="1"/>
 		<e:Label text="顶注：" x="196" y="15.3" size="23" anchorOffsetX="0" width="77" textAlign="center" fontFamily="SimHei" textColor="0xb5b1b1" scaleX="1" scaleY="1"/>

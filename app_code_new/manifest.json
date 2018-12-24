@@ -105,8 +105,8 @@
 		"bin-debug/app/game/safebox/SafeBoxTypeItem.js",
 		"bin-debug/app/game/safebox/SafeBoxView.js",
 		"bin-debug/app/game/set/SetTypeItem.js",
-		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/Global.js",
+		"bin-debug/app/game/tbnn/TBNNHead.js",
 		"bin-debug/app/game/tbnn/TBNNroomEff.js",
 		"bin-debug/app/game/tbnn/TBNNroomView.js",
 		"bin-debug/app/game/tbnn/TBNNScene.js",
@@ -116,11 +116,9 @@
 		"bin-debug/app/game/welfare/LotteryPanel.js",
 		"bin-debug/app/game/welfare/WelfareTypeItem.js",
 		"bin-debug/app/game/welfare/WelfareView.js",
-		"bin-debug/app/game/zjh/Annular.js",
 		"bin-debug/app/game/zjh/ComparisonCardView.js",
 		"bin-debug/app/game/zjh/NiyingleEffect.js",
 		"bin-debug/app/game/zjh/NiyingleVSEffect.js",
-		"bin-debug/app/game/zjh/Opeprogress.js",
 		"bin-debug/app/game/zjh/OperateTimer.js",
 		"bin-debug/app/game/zjh/ZJHEffectWin1View.js",
 		"bin-debug/app/game/zjh/ZJHEffectWin2View.js",
@@ -201,6 +199,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/Main.js",
-		"bin-debug/app/game/tbnn/TBNNHead.js"
+		"bin-debug/app/game/set/SetView.js"
 	]
 }

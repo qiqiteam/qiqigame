@@ -218,7 +218,7 @@ class ZJHView extends eui.Component {
         //this.resize();
 
         this.labelHead0.text = UserInfo.getInstance().username;
-        this.labelGold0.text = "" + GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
+        this.labelGold0.text = "" + UserInfo.getInstance().goldcoins;
         this.gamestatue(UserInfo.getInstance().gameData);
 
 
@@ -618,6 +618,7 @@ class ZJHView extends eui.Component {
                 this.byOpenId[i] = this.OtherPlayer[i];
 
                 if (this.abandonId.length == 3) {
+                    this['img_bipailight' + i].visible = false;
                     this.sendamessage(EventConst.botpour, this.callnum);
                     this.sendamessage2(EventConst.compareCard, this.UsId, this.OtherPlayer[i]);
                 }
@@ -845,7 +846,7 @@ class ZJHView extends eui.Component {
         if (data.roomStatus == 0) {
             GlobalData.rooType = data.roomStatus;
             console.log("游戏状态是0");
-            //this.grpprepare.visible = false;//准备提示弹框
+            this.lab_paijuNum.text = data.inningId;
             let zjhpaprePanl: ZJHpaprePanl = xlLib.PopUpMgr.addPopUp(ZJHpaprePanl, this, true, true, null, 1);
             zjhpaprePanl.TYPE_TAP = Const.TYPE_JINGDIANJINHUA;
             this.shortTimegameStatue = data.roomStatus;
@@ -1192,7 +1193,8 @@ class ZJHView extends eui.Component {
                     }
                     UserInfo.getInstance().isGameStart = false;
                 }
-
+                this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.userGolds);
+                UserInfo.getInstance().goldcoins = data.param.userGolds;
                 this.abandonStateBtn();
             } else if (data.param.data == 0) {
                 //执行AI玩家图像被轰炸动作{}................
@@ -1279,6 +1281,9 @@ class ZJHView extends eui.Component {
             this['imgbipai_lose' + data.param.index].source = 'gf_flag_bpsb_png';
 
             //++++++++++++++++++++
+            this.abandonId.push(data.param.userId);
+            this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.userGolds);
+            UserInfo.getInstance().goldcoins = data.param.userGolds;
         }
     }
 
@@ -1303,12 +1308,12 @@ class ZJHView extends eui.Component {
             }
             this['imgCardbg' + data.param.index].source = 'gf_pxzs_png';
             this['imgCardType' + data.param.index].source = ZJHUtil.getInstance().getCardType(poke.type);
-            if (data.param.index != 0) {
-                this.abandonId.push(data.param.userId);
-            }
+            this.abandonId.push(data.param.userId);
             this.operateTimer.stop();
+            this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.userGolds);
+            UserInfo.getInstance().goldcoins = data.param.userGolds;
             this.OnOperateQipao(data.param.index);
-            if (data.param.index != 0) {
+            if (data.param.userId != UserInfo.getInstance().uid) {
                 this.playerOperatingState[data.param.index] = 3;
             }
 
@@ -1458,6 +1463,7 @@ class ZJHView extends eui.Component {
             }
             this.operateTimer.stop();
             xlLib.TipsUtils.showFloatWordTips("自动弃牌");
+            this.abandonId.push(data.param.userId);
             //this.playerOperatingState[data.param.index] = 3;//玩家弃牌状态
             this.abandonStateBtn();
             UserInfo.getInstance().isGameStart = false;
@@ -1468,6 +1474,8 @@ class ZJHView extends eui.Component {
                     this.anniuliuguang = null;
                 }
             }
+            this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.userGolds);
+            UserInfo.getInstance().goldcoins = data.param.userGolds;
         }
     }
     public mygameTyp: boolean;//是否有可以离开游戏
@@ -1523,15 +1531,15 @@ class ZJHView extends eui.Component {
                 }, [card, val]);
             }
             /**赢得是玩家 */
-            if (data.param.index == 0) {
+            if (data.param.userId == UserInfo.getInstance().uid) {
                 if (this.playerOperatingState[data.param.index] != 2) {
                     this['imgCardbg' + data.param.index].source = 'gf_pxzs_png';
                     this['imgCardType' + data.param.index].source = ZJHUtil.getInstance().getCardType(poke.type);
                 } else if (this.playerOperatingState[data.param.index] == 2) {
 
                 }
-                this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.goldMap[TempId] / 100);
-                UserInfo.getInstance().goldcoins = data.param.goldMap[TempId] / 100;
+                // this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.goldMap[TempId]);
+                // UserInfo.getInstance().goldcoins = data.param.goldMap[TempId] / 100;
                 var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
                 this.zjheffectwin0.x = point.x;
                 this.zjheffectwin0.y = point.y;
@@ -1550,7 +1558,7 @@ class ZJHView extends eui.Component {
                 }, 2000)
             }
             /**赢得是其他玩家 */
-            else if (data.param.index != 0) {
+            else if (data.param.userId != UserInfo.getInstance().uid) {
                 this['imgCardbg' + data.param.index].source = 'gf_pxzs_png';
                 this['imgCardType' + data.param.index].source = ZJHUtil.getInstance().getCardType(poke.type);
                 var point: egret.Point = ZJHUtil.getInstance().getP(data.param.index);
@@ -1573,6 +1581,9 @@ class ZJHView extends eui.Component {
             for (let i = 0; i < 5; i++) {
                 this['img_light' + i].visible = false;
             }
+            this.labelGold0.text = '' + GlobalFunction.Formatconversion(data.param.userGolds);
+            UserInfo.getInstance().goldcoins = data.param.userGolds;
+
             this['imgis_kanpai' + data.param.index].source = '';
             this.operateTimer.stop();
             this.abandonStateBtn();
