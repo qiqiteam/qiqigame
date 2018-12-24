@@ -1,3 +1,4 @@
+/**玩家信息 */
 class UserInfo {
     public uid: string;
     public username: string;

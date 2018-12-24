@@ -117,7 +117,7 @@
 		<e:Label id="timeTxt" text="10" x="-126" y="-48" scaleX="1" scaleY="1" textColor="0xfc1c07" bold="true" anchorOffsetX="0" width="53.7" anchorOffsetY="0" height="42.12" size="40" visible="false"/>
 	</e:Group>
 
-	<e:Group id="grpHead0" width="130" height="173" anchorOffsetY="0" anchorOffsetX="0" x="516" y="486">
+	<e:Group id="grpHead0" width="130" height="173" anchorOffsetY="0" anchorOffsetX="0" x="516" y="486" locked="true">
 		<e:Image id="img_time0" anchorOffsetY="0" height="180" anchorOffsetX="0" width="136" source="gf_wait_png" x="-3" y="-3" visible="false"/>
 		<e:Image anchorOffsetY="0" height="161" anchorOffsetX="0" width="125" source="gf_Avatar_box_png" x="3" y="6"/>
 
@@ -305,29 +305,7 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-	<e:Group id="grp_out_hint" width="666" height="335" y="114.08" horizontalCenter="0" locked="true" visible="false">
-		<e:Image width="666" height="335" x="0" y="0" source="gf_match_bg_png"/>
-		<e:Image width="69" height="35" y="8.5" source="gf_tip_ts_png" x="299"/>
-		<e:Button id="_btn_cancel" label="" y="224.52" x="74.88">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="qznn_btn_beishu1_png" source.down="qznn_btn_beishu1_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="_btn_quite" label="" y="224.52" x="390.64">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="qznn_btn_beishu1_png" source.down="qznn_btn_beishu1_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Image width="69" height="35" y="239.69" x="113.57" source="quxiao_png"/>
-		<e:Image width="69" height="35" y="239.72" x="437.18" source="queding_png"/>
-		<e:Label text="确定要退出游戏吗？" y="65.97" bold="true" anchorOffsetY="0" height="142.12" anchorOffsetX="0" width="569.94" textAlign="center" verticalAlign="middle" x="51"/>
-	</e:Group>
+
 	<e:Group id="grp_setting_hint" width="666" height="262" y="114.08" horizontalCenter="0" locked="true" visible="false">
 		<e:Image width="666" height="262" source="gf_bg_match_png" x="0" y="0"/>
 		<e:Image width="69" height="35" y="8.5" source="gf_tip_ts_png" x="299"/>

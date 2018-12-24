@@ -192,6 +192,8 @@ declare class WelfareTypeItemSkin extends eui.Skin{
 }
 declare class WelfareViewSkin extends eui.Skin{
 }
+declare class ComparisonCardSkin extends eui.Skin{
+}
 declare class NiyingleSkin extends eui.Skin{
 }
 declare class NiyingleVSSkin extends eui.Skin{
