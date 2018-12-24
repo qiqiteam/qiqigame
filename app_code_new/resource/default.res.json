@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png,zjh_huaheng_ske2_json,zjh_huaheng_tex2_json,zjh_huaheng_tex2_png,brnntype_lose_2_png,brnntype_lose_5_png,brnntype_lose_8_png,brnntype_win_10_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,zjh_huaheng_ske_json,zjh_huaheng_tex_json,zjh_huaheng_tex_png,zjh_huaheng_ske2_json,zjh_huaheng_tex2_json,zjh_huaheng_tex2_png,brnntype_lose_2_png,brnntype_lose_5_png,brnntype_lose_8_png,brnntype_win_10_png,brnntype_lose_22_png,brnntype_lose_52_png,brnntype_lose_82_png,brnntype_win_102_png,tbnn_tuoguan_bg_png,tbnn_tuoguan_btn1_png,tbnn_tuoguan_btn2_png",
 			"name": "preload"
 		},
 		{
@@ -7503,6 +7503,41 @@
 			"name": "brnntype_win_10_png",
 			"type": "image",
 			"url": "assets/game/brnn/brnntype_win_10.png"
+		},
+		{
+			"name": "brnntype_lose_22_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnntype_lose_2.png"
+		},
+		{
+			"name": "brnntype_lose_52_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnntype_lose_5.png"
+		},
+		{
+			"name": "brnntype_lose_82_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnntype_lose_8.png"
+		},
+		{
+			"name": "brnntype_win_102_png",
+			"type": "image",
+			"url": "assets/game/brnn/brnntype_win_10.png"
+		},
+		{
+			"name": "tbnn_tuoguan_bg_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_tuoguan_bg.png"
+		},
+		{
+			"name": "tbnn_tuoguan_btn1_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_tuoguan_btn1.png"
+		},
+		{
+			"name": "tbnn_tuoguan_btn2_png",
+			"type": "image",
+			"url": "assets/game/tbnn/tbnn_tuoguan_btn2.png"
 		}
 	]
 }

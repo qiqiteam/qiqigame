@@ -35,12 +35,12 @@ class ZJHHead extends eui.Component {
     public setUserInfo(_name, _gold, _imghead): void {
         this.imghead.source = _imghead;
         this.labelName.text = _name;
-        this.labelGold.text = _gold;
+        this.labelGold.text = GlobalFunction.Formatconversion(_gold);
     }
 
     //设置其他玩家更新金币
     public setOtherGold(_gold): void {
-        this.labelGold.text = _gold;
+        this.labelGold.text = GlobalFunction.Formatconversion(_gold);
     }
 
     public destroy(): void {
