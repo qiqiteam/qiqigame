@@ -173,7 +173,7 @@
 
 	<e:Group id="grpCountdown" horizontalCenter="0" y="343" locked="true">
 		<e:Image y="0" x="0"  source="progressTimerFontBg_png" width="142"/>
-		<e:Label id="timeTxt" text="0" size="54" bold="true" height="63" width="89.18" textColor="0xf4fffe" fontFamily="Microsoft YaHei" anchorOffsetX="0" verticalCenter="-2.5" verticalAlign="middle" textAlign="center" horizontalCenter="-0.5"/>
+		<e:Label id="timeTxt" text="0" size="54" bold="true" height="63" width="89.18" textColor="0xf4fffe" fontFamily="Microsoft YaHei" anchorOffsetX="0" verticalAlign="middle" textAlign="center" y="40" horizontalCenter="-0.5"/>
 
 
 	</e:Group>

@@ -367,7 +367,7 @@ class BJLView extends eui.Component {
             this.js_shi.visible = true;
             this.js_ge.visible = true;
             this.jushu_bg.source = 'baccarat_font_bureau_diju2_png';
-            this.js_shi.source = 'baccarat_font_bureau_' + index / 10 % 10 + '_png';
+            this.js_shi.source = 'baccarat_font_bureau_' + parseInt((index / 10) + '') + '_png';
             this.js_ge.source = 'baccarat_font_bureau_' + index % 10 + '_png';
             this.js_ge.x = 601;
         }

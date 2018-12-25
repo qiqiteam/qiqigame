@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png",
+			"keys": "loading_png,wzqp_ske_json,wzqp_tex_json,wzqp_tex_png,black_qz21_game_chair_1_png,black_qz21_game_chair_2_png,black_qz21_game_chair_3_png,black_qz21_game_heguan_02_png,black_qz21_game_heguan_03_png,black_qz21_game_heguan_04_png,black_qz21_game_heguan_05_png,black_scene_seatNOBg_png,black_scene_seatNOBg1_png,black_scene_seatNOBg2_png,black_scene_seatNOBg3_png,black_scene_seatNOBg4_png,black_scene_seatNOBg5_png,black_qz21_game_btn_normal_yaopai_png,black_qz21_game_btn_gray_png,black_qz21_game_btn_normal_png,black_qz21_game_icon_insurance_big_png,black_qz21_game_heguan_01_png,black_qz21_game_money_bg_2_png,black_qz21_game_money_bg_1_png,black_qz21_game_btn_0_png,black_qz21_game_btn_2_png,black_qz21_game_slider_bg_png",
 			"name": "preload"
 		},
 		{
@@ -7778,6 +7778,121 @@
 			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_5.png",
 			"type": "image",
 			"name": "black_qz21_game_table_chip_5_png"
+		},
+		{
+			"name": "black_qz21_game_chair_1_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_chair_1.png"
+		},
+		{
+			"name": "black_qz21_game_chair_2_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_chair_2.png"
+		},
+		{
+			"name": "black_qz21_game_chair_3_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_chair_3.png"
+		},
+		{
+			"name": "black_qz21_game_heguan_02_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_heguan_02.png"
+		},
+		{
+			"name": "black_qz21_game_heguan_03_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_heguan_03.png"
+		},
+		{
+			"name": "black_qz21_game_heguan_04_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_heguan_04.png"
+		},
+		{
+			"name": "black_qz21_game_heguan_05_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_heguan_05.png"
+		},
+		{
+			"name": "black_scene_seatNOBg_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_scene_seatNOBg.png"
+		},
+		{
+			"name": "black_scene_seatNOBg1_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_scene_seatNOBg1.png"
+		},
+		{
+			"name": "black_scene_seatNOBg2_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_scene_seatNOBg2.png"
+		},
+		{
+			"name": "black_scene_seatNOBg3_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_scene_seatNOBg3.png"
+		},
+		{
+			"name": "black_scene_seatNOBg4_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_scene_seatNOBg4.png"
+		},
+		{
+			"name": "black_scene_seatNOBg5_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_scene_seatNOBg5.png"
+		},
+		{
+			"name": "black_qz21_game_btn_normal_yaopai_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_btn_normal_yaopai.png"
+		},
+		{
+			"name": "black_qz21_game_btn_gray_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_btn_gray.png"
+		},
+		{
+			"name": "black_qz21_game_btn_normal_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_btn_normal.png"
+		},
+		{
+			"name": "black_qz21_game_icon_insurance_big_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_icon_insurance_big.png"
+		},
+		{
+			"name": "black_qz21_game_heguan_01_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_heguan_01.png"
+		},
+		{
+			"name": "black_qz21_game_money_bg_2_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_money_bg_2.png"
+		},
+		{
+			"name": "black_qz21_game_money_bg_1_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_money_bg_1.png"
+		},
+		{
+			"name": "black_qz21_game_btn_0_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_btn_0.png"
+		},
+		{
+			"name": "black_qz21_game_btn_2_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_btn_2.png"
+		},
+		{
+			"name": "black_qz21_game_slider_bg_png",
+			"type": "image",
+			"url": "assets/game/ershiyidian/black_qz21_game_slider_bg.png"
 		}
 	]
 }
