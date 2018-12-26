@@ -263,7 +263,7 @@
 		<e:Image id="Chip_3" width="119" height="115" x="1121.89" y="6.03" source="black_qz21_game_table_chip_5_png"/>
 		<e:Image id="Chip_4" width="136" height="67" x="865.42" y="178.55" source="black_qz21_game_table_chip_4_png"/>
 	</e:Group>
-	<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="611" y="742.92" locked="true">
+	<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="611" y="742.92" locked="true" visible="false">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="black_qz21_game_btn_continiu_png" source.down="black_qz21_game_btn_continiu_png"/>
@@ -271,63 +271,115 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Group x="31.92" y="750.52" locked="true">
-		<e:Button id="minimum" label="" scaleX="1" scaleY="1" y="0" x="0">
+
+
+
+	<e:Group x="31.92" y="750.52" locked="true" visible="false">
+		<e:Group x="0" y="0">
+			<e:Button id="minimum" label="" scaleX="1" scaleY="1" y="0" x="0">
 			<e:skinName>
-			<e:Skin states="up,down,disabled">
+				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+				</e:Skin>
 			</e:skinName>
-		</e:Button>
-		<e:Label id="minimum_label" text="最小注（3）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" horizontalCenter="0" touchEnabled="false"/>
-	</e:Group>
-	<e:Group x="312.84" y="750.52" locked="true">
-		<e:Button id="maxmum" label="" scaleX="1" scaleY="1" y="0" x="0">
+			</e:Button>
+			<e:Label id="minimum_label" text="最小注（3）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" horizontalCenter="0" touchEnabled="false"/>
+		</e:Group>
+		<e:Group x="280.92" y="0">
+			<e:Button id="maxmum" label="" scaleX="1" scaleY="1" y="0" x="0">
 			<e:skinName>
-			<e:Skin states="up,down,disabled">
+				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+				</e:Skin>
 			</e:skinName>
-		</e:Button>
-		<e:Label id="maxmum_label" text="最大注（300）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
-	</e:Group>
-	<e:Group x="935.79" y="751" visible="false">
-		<e:Button id="determine" label="" scaleX="1" scaleY="1" y="0" x="0">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
-		</e:Button>
-		<e:Label id="bet_label0" text="确定" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
-		<e:Image width="180" height="528" source="black_qz21_game_slider_bg_png" x="24" y="-528"/>
-		<e:Image width="188" height="120" y="-148.81" source="black_qz21_game_btn_0_png" x="20"/>
-	</e:Group>
-	<e:Group x="935.79" y="751">
-		<e:Button id="bet" label="" scaleX="1" scaleY="1" y="0" x="0">
-		<e:skinName>
-			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-		</e:skinName>
-		</e:Button>
-		<e:Label id="bet_label" text="下注" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
-	</e:Group>
-	<e:Group x="1212.7" y="751" locked="true">
-		<e:Button id="renew" label="" scaleX="1" scaleY="1" y="0" x="0">
+			</e:Button>
+			<e:Label id="maxmum_label" text="最大注（300）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+		</e:Group>
+		<e:Group x="903.87" y="0.48">
+			<e:Button id="determine" label="" scaleX="1" scaleY="1" y="0" x="0">
 			<e:skinName>
-			<e:Skin states="up,down,disabled">
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Label id="bet_label0" text="确定" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
+			<e:Image width="180" height="528" source="black_qz21_game_slider_bg_png" x="24" y="-528"/>
+			<e:Image width="188" height="120" y="-148.81" source="black_qz21_game_btn_0_png" x="20"/>
+		</e:Group>
+		<e:Group x="903.87" y="0.48">
+			<e:Button id="bet" label="" scaleX="1" scaleY="1" y="0" x="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Label id="bet_label" text="下注" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+		</e:Group>
+		<e:Group x="1180.78" y="0.48">
+			<e:Button id="renew" label="" scaleX="1" scaleY="1" y="0" x="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_yaopai_png" source.down="black_qz21_game_btn_normal_yaopai_png" source.disabled="black_qz21_game_btn_gray_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+				</e:Skin>
 			</e:skinName>
-		</e:Button>
-		<e:Label id="renew_label" text="续押" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			</e:Button>
+			<e:Label id="renew_label" text="续押" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+		</e:Group>
 	</e:Group>
+	<e:Group x="131.79" y="751" locked="true" visible="false">
+		<e:Group x="0" y="0">
+			<e:Button id="fenpai" label="" scaleX="1" scaleY="1" y="0" x="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Label id="fenpai_label" text="分牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+		</e:Group>
+		<e:Group x="276" y="0">
+			<e:Button id="Double" label="" scaleX="1" scaleY="1" y="0" x="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Label id="Double_label" text="双倍" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+		</e:Group>
+		<e:Group x="708" y="0">
+			<e:Button id="tingpai" label="" scaleX="1" scaleY="1" y="0" x="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Label id="tingpai_label" text="停牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+		</e:Group>
+		<e:Group x="984" y="0">
+			<e:Button id="yaopai" label="" scaleX="1" scaleY="1" y="0" x="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_png" source.down="black_qz21_game_btn_normal_png" source.disabled="black_qz21_game_btn_gray_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Label id="yaopai_label" text="要牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+		</e:Group>
+	</e:Group>
+	<e:Image width="62" height="41" x="780.36" y="421.22" source="black_qz21_game_acount_bg_1_png"/>
 
 
 </e:Skin>

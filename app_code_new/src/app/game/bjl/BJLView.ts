@@ -1341,6 +1341,8 @@ class BJLView extends eui.Component {
 
         EventUtil.removeEventListener(EventConst.onTimelyNotify, this.TimelyNotify, this);
 
+        this.clearTime();
+
     }
 }
 

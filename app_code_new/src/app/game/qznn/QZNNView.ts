@@ -384,7 +384,7 @@ class QZNNView extends eui.Component {
         this.pinpaiType1.visible = false;
         this.pinpaiType2.visible = false;
 
-        this._xiabei_0.x = 295.61;
+        this._xiabei_0.x = 353.24;
         this._xiabei_1.x = 368.16;
         this._xiabei_2.x = 530.48;
         this._xiabei_3.x = 1146.78;
@@ -1820,17 +1820,17 @@ class QZNNView extends eui.Component {
             str = "-";
         }
         if (index == 0) {
-            label.x = 0;
+            label.x = -30;
             label.y = -40;
             label.textAlign = egret.HorizontalAlign.RIGHT;
         } else if (index == 1) {
-            label.x = 30;
+            label.x = -30;
             label.y = -40;
         } else if (index == 2) {
-            label.x = 90;
+            label.x = 60;
             label.y = -40;
         } else if (index == 3) {
-            label.x = 30;
+            label.x = -30;
             label.y = -40;
         }
         label.scaleX = 1;
@@ -1966,7 +1966,7 @@ class QZNNView extends eui.Component {
         this.pinpaiType2.visible = false;
         this.grpCountdown.visible = true;
 
-        this._xiabei_0.x = 295.61;
+        this._xiabei_0.x = 353.24;
         this._xiabei_1.x = 368.16;
         this._xiabei_2.x = 530.48;
         this._xiabei_3.x = 1146.78;
@@ -2112,6 +2112,7 @@ class QZNNView extends eui.Component {
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clearTimer, this);
         }
+        this.clearTime();
         this.removeEff(this.nnbankerEff);
     }
 }
