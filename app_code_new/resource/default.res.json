@@ -7908,6 +7908,123 @@
 			"url": "assets/game/ershiyidian/black_qz21_game_acount_bg_4.png",
 			"type": "image",
 			"name": "black_qz21_game_acount_bg_4_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_baodan.png",
+			"type": "image",
+			"name": "ddz_baodan_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_baojing.png",
+			"type": "image",
+			"name": "ddz_baojing_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_baozha.png",
+			"type": "image",
+			"name": "ddz_baozha_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_chuntian.png",
+			"type": "image",
+			"name": "ddz_chuntian_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_feiji.png",
+			"type": "image",
+			"name": "ddz_feiji_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_huojian.png",
+			"type": "image",
+			"name": "ddz_huojian_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_liandui.png",
+			"type": "image",
+			"name": "ddz_liandui_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_shengli.png",
+			"type": "image",
+			"name": "ddz_shengli_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_shibai.png",
+			"type": "image",
+			"name": "ddz_shibai_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_shunzi.png",
+			"type": "image",
+			"name": "ddz_shunzi_png"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_baodan.json",
+			"type": "json",
+			"name": "ddz_baodan_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_chuntian.json",
+			"type": "json",
+			"name": "ddz_chuntian_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_liandui.json",
+			"type": "json",
+			"name": "ddz_liandui_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_huojian.json",
+			"type": "json",
+			"name": "ddz_huojian_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_shibai.json",
+			"type": "json",
+			"name": "ddz_shibai_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_shunzi.json",
+			"type": "json",
+			"name": "ddz_shunzi_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_shengli.json",
+			"type": "json",
+			"name": "ddz_shengli_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_baozha.json",
+			"type": "json",
+			"name": "ddz_baozha_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_baojing.json",
+			"type": "json",
+			"name": "ddz_baojing_json"
+		},
+		{
+			"url": "assets/effects/ddz/ddz_feiji.json",
+			"type": "json",
+			"name": "ddz_feiji_json"
+		},
+		{
+			"url": "assets/game/ddz/ddz_yx_zhuo.jpg",
+			"type": "image",
+			"name": "ddz_yx_zhuo_jpg"
+		},
+		{
+			"url": "assets/game/ddz/room_ui.json",
+			"type": "sheet",
+			"name": "room_ui_json",
+			"subkeys": "ddz_js_dk,ddz_js_dz,ddz_js_jxyx,ddz_js_sd,ddz_js_sl,ddz_js_tcyx,ddz_pjjs_dk,ddz_pjjs_fxan,ddz_pjjs_fz,ddz_pjjs_id1,ddz_pjjs_id2,ddz_pjjs_js,ddz_yx_1f,ddz_yx_1f2,ddz_yx_2f,ddz_yx_2f2,ddz_yx_3f,ddz_yx_3f3,ddz_yx_bc,ddz_yx_bcanniu,ddz_yx_bj,ddz_yx_bjan,ddz_yx_bs,ddz_yx_buyao,ddz_yx_cp,ddz_yx_cp2,ddz_yx_cxtg,ddz_yx_df,ddz_yx_dizhu,ddz_yx_dz,ddz_yx_dz2,ddz_yx_dz3,ddz_yx_guo,ddz_yx_sj,ddz_yx_tg,ddz_yx_ts,ddz_yx_txk,ddz_yx_txk2,ddz_yx_txk3,ddz_yx_wxyq,ddz_yx_yaobuqi,ddz_yx_zb,ddz_yx_zbz,ddz_yx_zhezao,fangjian_erfen,fangjian_sanfen,fangjian_yifen,zjh_dianchi01,zjh_dianchi02,zjh_wifi"
+		},
+		{
+			"url": "assets/game/ddz/room_poker.json",
+			"type": "sheet",
+			"name": "room_poker_json",
+			"subkeys": "card_0_1,card_0_10,card_0_11,card_0_12,card_0_13,card_0_2,card_0_3,card_0_4,card_0_5,card_0_6,card_0_7,card_0_8,card_0_9,card_1_1,card_1_10,card_1_11,card_1_12,card_1_13,card_1_2,card_1_3,card_1_4,card_1_5,card_1_6,card_1_7,card_1_8,card_1_9,card_2_1,card_2_10,card_2_11,card_2_12,card_2_13,card_2_2,card_2_3,card_2_4,card_2_5,card_2_6,card_2_7,card_2_8,card_2_9,card_3_1,card_3_10,card_3_11,card_3_12,card_3_13,card_3_2,card_3_3,card_3_4,card_3_5,card_3_6,card_3_7,card_3_8,card_3_9,card_dawang,card_xiaowang,dating_beimian,dating_pukepaimengban,small_0_1,small_0_10,small_0_11,small_0_12,small_0_13,small_0_2,small_0_3,small_0_4,small_0_5,small_0_6,small_0_7,small_0_8,small_0_9,small_1_1,small_1_10,small_1_11,small_1_12,small_1_13,small_1_2,small_1_3,small_1_4,small_1_5,small_1_6,small_1_7,small_1_8,small_1_9,small_2_1,small_2_10,small_2_11,small_2_12,small_2_13,small_2_2,small_2_3,small_2_4,small_2_5,small_2_6,small_2_7,small_2_8,small_2_9,small_3_1,small_3_10,small_3_11,small_3_12,small_3_13,small_3_2,small_3_3,small_3_4,small_3_5,small_3_6,small_3_7,small_3_8,small_3_9,small_beimian,small_dawang,small_xiaowang"
 		}
 	]
 }

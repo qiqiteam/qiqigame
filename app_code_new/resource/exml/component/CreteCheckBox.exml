@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CreteCheckBox" xmlns:e="http://ns.egret.com/eui" states="up,down,disabled" >
+	<e:Image fillMode="scale" alpha="1" source="cjfj_xuanzhekuang_png" source.down="cjfj_xuanzhe_png"/>
+	<e:Label id="labelDisplay" size="28" textAlign="center" verticalAlign="middle" fontFamily="Tahoma" bold="true" text="叫地主" y="7" x="51" textColor="0x9F5928"/>
+</e:Skin>
