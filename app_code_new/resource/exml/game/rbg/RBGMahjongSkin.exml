@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="RBGMahjongSkin" width="84" height="120" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="_mahjong_turn" x="0" y="0" source="mahjong_turn_png"/>
-	<e:Image id="_mahjong_card" x="14" y="6" source="mahjong_0_png"/>
-	<e:Image id="_mahjong_cover" x="0" y="0" source="mahjong_cover_png" visible="false"/>
-</e:Skin>

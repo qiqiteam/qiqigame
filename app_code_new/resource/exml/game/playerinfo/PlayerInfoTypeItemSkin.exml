@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="PlayerInfoTypeItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled">
-
-	<e:Image id="icon_img" source.down="{data.down_url}" source.up="{data.up_url}" x="0" y="0" scaleX="1" scaleY="1" anchorOffsetX="0" width="299" anchorOffsetY="0" height="109"/>
-</e:Skin>
