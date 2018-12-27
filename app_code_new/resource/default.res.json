@@ -7778,6 +7778,1936 @@
 			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_5.png",
 			"type": "image",
 			"name": "black_qz21_game_table_chip_5_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/bg_esyd_ditu.jpg",
+			"type": "image",
+			"name": "bg_esyd_ditu2_jpg"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_btn_continiu.png",
+			"type": "image",
+			"name": "black_qz21_game_btn_continiu2_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_icon_3_1.png",
+			"type": "image",
+			"name": "black_qz21_game_icon_3_12_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_01.png",
+			"type": "image",
+			"name": "black_qz21_game_other_012_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_02.png",
+			"type": "image",
+			"name": "black_qz21_game_other_022_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_03.png",
+			"type": "image",
+			"name": "black_qz21_game_other_032_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_04.png",
+			"type": "image",
+			"name": "black_qz21_game_other_042_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_other_05.png",
+			"type": "image",
+			"name": "black_qz21_game_other_052_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table.png",
+			"type": "image",
+			"name": "black_qz21_game_table2_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_1.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_12_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_2.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_22_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_3.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_32_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_4.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_42_png"
+		},
+		{
+			"url": "assets/game/ershiyidian/black_qz21_game_table_chip_5.png",
+			"type": "image",
+			"name": "black_qz21_game_table_chip_52_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_0.png",
+			"type": "image",
+			"name": "sg_card_0_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_1.png",
+			"type": "image",
+			"name": "sg_card_1_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_10.png",
+			"type": "image",
+			"name": "sg_card_10_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_11.png",
+			"type": "image",
+			"name": "sg_card_11_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_12.png",
+			"type": "image",
+			"name": "sg_card_12_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_13.png",
+			"type": "image",
+			"name": "sg_card_13_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_14.png",
+			"type": "image",
+			"name": "sg_card_14_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_15.png",
+			"type": "image",
+			"name": "sg_card_15_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_16.png",
+			"type": "image",
+			"name": "sg_card_16_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_17.png",
+			"type": "image",
+			"name": "sg_card_17_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_18.png",
+			"type": "image",
+			"name": "sg_card_18_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_19.png",
+			"type": "image",
+			"name": "sg_card_19_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_2.png",
+			"type": "image",
+			"name": "sg_card_2_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_20.png",
+			"type": "image",
+			"name": "sg_card_20_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_21.png",
+			"type": "image",
+			"name": "sg_card_21_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_22.png",
+			"type": "image",
+			"name": "sg_card_22_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_23.png",
+			"type": "image",
+			"name": "sg_card_23_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_24.png",
+			"type": "image",
+			"name": "sg_card_24_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_25.png",
+			"type": "image",
+			"name": "sg_card_25_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_26.png",
+			"type": "image",
+			"name": "sg_card_26_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_27.png",
+			"type": "image",
+			"name": "sg_card_27_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_28.png",
+			"type": "image",
+			"name": "sg_card_28_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_29.png",
+			"type": "image",
+			"name": "sg_card_29_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_3.png",
+			"type": "image",
+			"name": "sg_card_3_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_30.png",
+			"type": "image",
+			"name": "sg_card_30_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_31.png",
+			"type": "image",
+			"name": "sg_card_31_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_32.png",
+			"type": "image",
+			"name": "sg_card_32_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_33.png",
+			"type": "image",
+			"name": "sg_card_33_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_34.png",
+			"type": "image",
+			"name": "sg_card_34_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_35.png",
+			"type": "image",
+			"name": "sg_card_35_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_36.png",
+			"type": "image",
+			"name": "sg_card_36_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_37.png",
+			"type": "image",
+			"name": "sg_card_37_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_38.png",
+			"type": "image",
+			"name": "sg_card_38_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_39.png",
+			"type": "image",
+			"name": "sg_card_39_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_4.png",
+			"type": "image",
+			"name": "sg_card_4_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_40.png",
+			"type": "image",
+			"name": "sg_card_40_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_41.png",
+			"type": "image",
+			"name": "sg_card_41_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_42.png",
+			"type": "image",
+			"name": "sg_card_42_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_43.png",
+			"type": "image",
+			"name": "sg_card_43_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_44.png",
+			"type": "image",
+			"name": "sg_card_44_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_45.png",
+			"type": "image",
+			"name": "sg_card_45_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_46.png",
+			"type": "image",
+			"name": "sg_card_46_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_47.png",
+			"type": "image",
+			"name": "sg_card_47_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_48.png",
+			"type": "image",
+			"name": "sg_card_48_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_49.png",
+			"type": "image",
+			"name": "sg_card_49_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_5.png",
+			"type": "image",
+			"name": "sg_card_5_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_50.png",
+			"type": "image",
+			"name": "sg_card_50_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_51.png",
+			"type": "image",
+			"name": "sg_card_51_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_52.png",
+			"type": "image",
+			"name": "sg_card_52_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_6.png",
+			"type": "image",
+			"name": "sg_card_6_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_7.png",
+			"type": "image",
+			"name": "sg_card_7_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_8.png",
+			"type": "image",
+			"name": "sg_card_8_png"
+		},
+		{
+			"url": "assets/game/sangong/brand/sg_card_9.png",
+			"type": "image",
+			"name": "sg_card_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_1.png",
+			"type": "image",
+			"name": "sg_countdown_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_2.png",
+			"type": "image",
+			"name": "sg_countdown_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_0.png",
+			"type": "image",
+			"name": "sg_countdown_number_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_1.png",
+			"type": "image",
+			"name": "sg_countdown_number_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_2.png",
+			"type": "image",
+			"name": "sg_countdown_number_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_3.png",
+			"type": "image",
+			"name": "sg_countdown_number_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_4.png",
+			"type": "image",
+			"name": "sg_countdown_number_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_5.png",
+			"type": "image",
+			"name": "sg_countdown_number_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_6.png",
+			"type": "image",
+			"name": "sg_countdown_number_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_7.png",
+			"type": "image",
+			"name": "sg_countdown_number_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_8.png",
+			"type": "image",
+			"name": "sg_countdown_number_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Countdown/sg_countdown_number_9.png",
+			"type": "image",
+			"name": "sg_countdown_number_9_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_0.png",
+			"type": "image",
+			"name": "sg_effect_sweep_0_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_1.png",
+			"type": "image",
+			"name": "sg_effect_sweep_1_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_10.png",
+			"type": "image",
+			"name": "sg_effect_sweep_10_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_11.png",
+			"type": "image",
+			"name": "sg_effect_sweep_11_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_12.png",
+			"type": "image",
+			"name": "sg_effect_sweep_12_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_13.png",
+			"type": "image",
+			"name": "sg_effect_sweep_13_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_14.png",
+			"type": "image",
+			"name": "sg_effect_sweep_14_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_15.png",
+			"type": "image",
+			"name": "sg_effect_sweep_15_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_16.png",
+			"type": "image",
+			"name": "sg_effect_sweep_16_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_17.png",
+			"type": "image",
+			"name": "sg_effect_sweep_17_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_18.png",
+			"type": "image",
+			"name": "sg_effect_sweep_18_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_19.png",
+			"type": "image",
+			"name": "sg_effect_sweep_19_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_2.png",
+			"type": "image",
+			"name": "sg_effect_sweep_2_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_20.png",
+			"type": "image",
+			"name": "sg_effect_sweep_20_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_21.png",
+			"type": "image",
+			"name": "sg_effect_sweep_21_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_22.png",
+			"type": "image",
+			"name": "sg_effect_sweep_22_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_23.png",
+			"type": "image",
+			"name": "sg_effect_sweep_23_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_24.png",
+			"type": "image",
+			"name": "sg_effect_sweep_24_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_25.png",
+			"type": "image",
+			"name": "sg_effect_sweep_25_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_26.png",
+			"type": "image",
+			"name": "sg_effect_sweep_26_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_27.png",
+			"type": "image",
+			"name": "sg_effect_sweep_27_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_28.png",
+			"type": "image",
+			"name": "sg_effect_sweep_28_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_29.png",
+			"type": "image",
+			"name": "sg_effect_sweep_29_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_3.png",
+			"type": "image",
+			"name": "sg_effect_sweep_3_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_30.png",
+			"type": "image",
+			"name": "sg_effect_sweep_30_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_31.png",
+			"type": "image",
+			"name": "sg_effect_sweep_31_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_32.png",
+			"type": "image",
+			"name": "sg_effect_sweep_32_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_33.png",
+			"type": "image",
+			"name": "sg_effect_sweep_33_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_4.png",
+			"type": "image",
+			"name": "sg_effect_sweep_4_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_5.png",
+			"type": "image",
+			"name": "sg_effect_sweep_5_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_6.png",
+			"type": "image",
+			"name": "sg_effect_sweep_6_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_7.png",
+			"type": "image",
+			"name": "sg_effect_sweep_7_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_8.png",
+			"type": "image",
+			"name": "sg_effect_sweep_8_png"
+		},
+		{
+			"url": "assets/game/sangong/EatAlleffect/sg_effect_sweep_9.png",
+			"type": "image",
+			"name": "sg_effect_sweep_9_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_0.png",
+			"type": "image",
+			"name": "sg_effect_banker1_0_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_1.png",
+			"type": "image",
+			"name": "sg_effect_banker1_1_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_10.png",
+			"type": "image",
+			"name": "sg_effect_banker1_10_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_11.png",
+			"type": "image",
+			"name": "sg_effect_banker1_11_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_12.png",
+			"type": "image",
+			"name": "sg_effect_banker1_12_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_13.png",
+			"type": "image",
+			"name": "sg_effect_banker1_13_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_14.png",
+			"type": "image",
+			"name": "sg_effect_banker1_14_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_15.png",
+			"type": "image",
+			"name": "sg_effect_banker1_15_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_16.png",
+			"type": "image",
+			"name": "sg_effect_banker1_16_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_17.png",
+			"type": "image",
+			"name": "sg_effect_banker1_17_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_18.png",
+			"type": "image",
+			"name": "sg_effect_banker1_18_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_19.png",
+			"type": "image",
+			"name": "sg_effect_banker1_19_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_2.png",
+			"type": "image",
+			"name": "sg_effect_banker1_2_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_20.png",
+			"type": "image",
+			"name": "sg_effect_banker1_20_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_21.png",
+			"type": "image",
+			"name": "sg_effect_banker1_21_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_22.png",
+			"type": "image",
+			"name": "sg_effect_banker1_22_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_3.png",
+			"type": "image",
+			"name": "sg_effect_banker1_3_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_4.png",
+			"type": "image",
+			"name": "sg_effect_banker1_4_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_5.png",
+			"type": "image",
+			"name": "sg_effect_banker1_5_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_6.png",
+			"type": "image",
+			"name": "sg_effect_banker1_6_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_7.png",
+			"type": "image",
+			"name": "sg_effect_banker1_7_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_8.png",
+			"type": "image",
+			"name": "sg_effect_banker1_8_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker1_9.png",
+			"type": "image",
+			"name": "sg_effect_banker1_9_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_0.png",
+			"type": "image",
+			"name": "sg_effect_banker_0_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_1.png",
+			"type": "image",
+			"name": "sg_effect_banker_1_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_10.png",
+			"type": "image",
+			"name": "sg_effect_banker_10_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_11.png",
+			"type": "image",
+			"name": "sg_effect_banker_11_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_12.png",
+			"type": "image",
+			"name": "sg_effect_banker_12_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_13.png",
+			"type": "image",
+			"name": "sg_effect_banker_13_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_14.png",
+			"type": "image",
+			"name": "sg_effect_banker_14_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_15.png",
+			"type": "image",
+			"name": "sg_effect_banker_15_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_16.png",
+			"type": "image",
+			"name": "sg_effect_banker_16_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_17.png",
+			"type": "image",
+			"name": "sg_effect_banker_17_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_18.png",
+			"type": "image",
+			"name": "sg_effect_banker_18_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_19.png",
+			"type": "image",
+			"name": "sg_effect_banker_19_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_2.png",
+			"type": "image",
+			"name": "sg_effect_banker_2_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_20.png",
+			"type": "image",
+			"name": "sg_effect_banker_20_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_21.png",
+			"type": "image",
+			"name": "sg_effect_banker_21_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_22.png",
+			"type": "image",
+			"name": "sg_effect_banker_22_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_23.png",
+			"type": "image",
+			"name": "sg_effect_banker_23_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_3.png",
+			"type": "image",
+			"name": "sg_effect_banker_3_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_4.png",
+			"type": "image",
+			"name": "sg_effect_banker_4_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_5.png",
+			"type": "image",
+			"name": "sg_effect_banker_5_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_6.png",
+			"type": "image",
+			"name": "sg_effect_banker_6_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_7.png",
+			"type": "image",
+			"name": "sg_effect_banker_7_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_8.png",
+			"type": "image",
+			"name": "sg_effect_banker_8_png"
+		},
+		{
+			"url": "assets/game/sangong/effect/sg_effect_banker_9.png",
+			"type": "image",
+			"name": "sg_effect_banker_9_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/fapai1_31.png",
+			"type": "image",
+			"name": "fapai1_31_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/fapai2_31.png",
+			"type": "image",
+			"name": "fapai2_31_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/fapai3_31.png",
+			"type": "image",
+			"name": "fapai3_31_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/fapai4_31.png",
+			"type": "image",
+			"name": "fapai4_31_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/fapai5_31.png",
+			"type": "image",
+			"name": "fapai5_31_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/sg_effect_deal_1_tex.png",
+			"type": "image",
+			"name": "sg_effect_deal_1_tex_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/sg_effect_deal_2_tex.png",
+			"type": "image",
+			"name": "sg_effect_deal_2_tex_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/sg_effect_deal_3_tex.png",
+			"type": "image",
+			"name": "sg_effect_deal_3_tex_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/sg_effect_deal_4_tex.png",
+			"type": "image",
+			"name": "sg_effect_deal_4_tex_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/sg_effect_deal_5_tex.png",
+			"type": "image",
+			"name": "sg_effect_deal_5_tex_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/sg_effect_draw1_tex.png",
+			"type": "image",
+			"name": "sg_effect_draw1_tex_png"
+		},
+		{
+			"url": "assets/game/sangong/fapaieffect/sg_effect_draw_tex.png",
+			"type": "image",
+			"name": "sg_effect_draw_tex_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/0/sg_effect_point_0_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_0_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/1/sg_effect_point_1_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_1_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/2/sg_effect_point_2_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_2_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/3/sg_effect_point_3_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_3_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/4/sg_effect_point_4_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_4_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/5/sg_effect_point_5_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_5_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/6/sg_effect_point_6_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_6_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/7/sg_effect_point_7_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_7_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/8/sg_effect_point_8_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_8_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_0.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_0_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_1.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_1_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_10.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_10_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_11.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_11_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_2.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_2_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_3.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_3_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_4.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_4_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_5.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_5_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_6.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_6_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_7.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_7_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_8.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_8_png"
+		},
+		{
+			"url": "assets/game/sangong/Pointeffect/9/sg_effect_point_9_tex_9.png",
+			"type": "image",
+			"name": "sg_effect_point_9_tex_9_png"
+		},
+		{
+			"url": "assets/game/sangong/resumeGameBg.png",
+			"type": "image",
+			"name": "resumeGameBg2_png"
+		},
+		{
+			"url": "assets/game/sangong/resumeGameFont.png",
+			"type": "image",
+			"name": "resumeGameFont2_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/sg_base_bg.png",
+			"type": "image",
+			"name": "sg_base_bg3_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_bg_hall.png",
+			"type": "image",
+			"name": "SG_bg_hall3_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_card1.png",
+			"type": "image",
+			"name": "SG_card13_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_card2.png",
+			"type": "image",
+			"name": "SG_card23_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_card3.png",
+			"type": "image",
+			"name": "SG_card33_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_card4.png",
+			"type": "image",
+			"name": "SG_card43_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_card5.png",
+			"type": "image",
+			"name": "SG_card53_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_card6.png",
+			"type": "image",
+			"name": "SG_card63_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_title1.png",
+			"type": "image",
+			"name": "SG_title13_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_title2.png",
+			"type": "image",
+			"name": "SG_title23_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_title3.png",
+			"type": "image",
+			"name": "SG_title33_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_title4.png",
+			"type": "image",
+			"name": "SG_title43_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_title5.png",
+			"type": "image",
+			"name": "SG_title53_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_title6.png",
+			"type": "image",
+			"name": "SG_title63_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/SG_title_zhunrun.png",
+			"type": "image",
+			"name": "SG_title_zhunrun3_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/sg_word.png",
+			"type": "image",
+			"name": "sg_word3_png"
+		},
+		{
+			"url": "assets/game/sangong/sgroom/房间效果图.png",
+			"type": "image",
+			"name": "房间效果图_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_banker_index.png",
+			"type": "image",
+			"name": "sg_banker_index_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_banker_index_1.png",
+			"type": "image",
+			"name": "sg_banker_index_1_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_bg_game.png",
+			"type": "image",
+			"name": "sg_bg_game_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_bg_table_0.png",
+			"type": "image",
+			"name": "sg_bg_table_0_png"
+		},
+		{
+			"url": "assets/game/sangong/SG_btn_cacel.png",
+			"type": "image",
+			"name": "SG_btn_cacel_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_btn_no.png",
+			"type": "image",
+			"name": "sg_btn_no_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_btn_open.png",
+			"type": "image",
+			"name": "sg_btn_open_png"
+		},
+		{
+			"url": "assets/game/sangong/SG_btn_sure.png",
+			"type": "image",
+			"name": "SG_btn_sure_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_btn_txt_grab.png",
+			"type": "image",
+			"name": "sg_btn_txt_grab_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_btn_txt_no_grab.png",
+			"type": "image",
+			"name": "sg_btn_txt_no_grab_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_btn_txt_open.png",
+			"type": "image",
+			"name": "sg_btn_txt_open_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_icon_notice.png",
+			"type": "image",
+			"name": "sg_icon_notice_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_info_banker1.png",
+			"type": "image",
+			"name": "sg_info_banker1_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_info_bg.png",
+			"type": "image",
+			"name": "sg_info_bg_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_info_bg_1.png",
+			"type": "image",
+			"name": "sg_info_bg_1_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_resule_bg_1.png",
+			"type": "image",
+			"name": "sg_resule_bg_1_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_resule_bg_2.png",
+			"type": "image",
+			"name": "sg_resule_bg_2_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_table_thing.png",
+			"type": "image",
+			"name": "sg_table_thing_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_top_left.png",
+			"type": "image",
+			"name": "sg_top_left_png"
+		},
+		{
+			"url": "assets/game/sangong/sg_top_right.png",
+			"type": "image",
+			"name": "sg_top_right_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_0.png",
+			"type": "image",
+			"name": "sg_lost_number_0_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_1.png",
+			"type": "image",
+			"name": "sg_lost_number_1_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_2.png",
+			"type": "image",
+			"name": "sg_lost_number_2_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_3.png",
+			"type": "image",
+			"name": "sg_lost_number_3_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_4.png",
+			"type": "image",
+			"name": "sg_lost_number_4_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_5.png",
+			"type": "image",
+			"name": "sg_lost_number_5_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_6.png",
+			"type": "image",
+			"name": "sg_lost_number_6_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_7.png",
+			"type": "image",
+			"name": "sg_lost_number_7_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_8.png",
+			"type": "image",
+			"name": "sg_lost_number_8_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_9.png",
+			"type": "image",
+			"name": "sg_lost_number_9_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_comma.png",
+			"type": "image",
+			"name": "sg_lost_number_comma_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_Less.png",
+			"type": "image",
+			"name": "sg_lost_number_Less_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_lost_number_period.png",
+			"type": "image",
+			"name": "sg_lost_number_period_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_0.png",
+			"type": "image",
+			"name": "sg_win_number_0_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_1.png",
+			"type": "image",
+			"name": "sg_win_number_1_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_2.png",
+			"type": "image",
+			"name": "sg_win_number_2_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_3.png",
+			"type": "image",
+			"name": "sg_win_number_3_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_4.png",
+			"type": "image",
+			"name": "sg_win_number_4_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_5.png",
+			"type": "image",
+			"name": "sg_win_number_5_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_6.png",
+			"type": "image",
+			"name": "sg_win_number_6_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_7.png",
+			"type": "image",
+			"name": "sg_win_number_7_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_8.png",
+			"type": "image",
+			"name": "sg_win_number_8_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_9.png",
+			"type": "image",
+			"name": "sg_win_number_9_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_comma.png",
+			"type": "image",
+			"name": "sg_win_number_comma_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_increase.png",
+			"type": "image",
+			"name": "sg_win_number_increase_png"
+		},
+		{
+			"url": "assets/game/sangong/WinorloseNum/sg_win_number_period.png",
+			"type": "image",
+			"name": "sg_win_number_period_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_0.png",
+			"type": "image",
+			"name": "sg_betStatus_number_0_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_1.png",
+			"type": "image",
+			"name": "sg_betStatus_number_1_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_2.png",
+			"type": "image",
+			"name": "sg_betStatus_number_2_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_3.png",
+			"type": "image",
+			"name": "sg_betStatus_number_3_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_4.png",
+			"type": "image",
+			"name": "sg_betStatus_number_4_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_5.png",
+			"type": "image",
+			"name": "sg_betStatus_number_5_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_6.png",
+			"type": "image",
+			"name": "sg_betStatus_number_6_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_7.png",
+			"type": "image",
+			"name": "sg_betStatus_number_7_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_8.png",
+			"type": "image",
+			"name": "sg_betStatus_number_8_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_9.png",
+			"type": "image",
+			"name": "sg_betStatus_number_9_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_bei.png",
+			"type": "image",
+			"name": "sg_betStatus_number_bei_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_comma.png",
+			"type": "image",
+			"name": "sg_betStatus_number_comma_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_period.png",
+			"type": "image",
+			"name": "sg_betStatus_number_period_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_betStatus_number_xia.png",
+			"type": "image",
+			"name": "sg_betStatus_number_xia_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_0.png",
+			"type": "image",
+			"name": "sg_bet_number_0_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_1.png",
+			"type": "image",
+			"name": "sg_bet_number_1_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_2.png",
+			"type": "image",
+			"name": "sg_bet_number_2_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_3.png",
+			"type": "image",
+			"name": "sg_bet_number_3_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_4.png",
+			"type": "image",
+			"name": "sg_bet_number_4_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_5.png",
+			"type": "image",
+			"name": "sg_bet_number_5_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_6.png",
+			"type": "image",
+			"name": "sg_bet_number_6_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_7.png",
+			"type": "image",
+			"name": "sg_bet_number_7_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_8.png",
+			"type": "image",
+			"name": "sg_bet_number_8_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_9.png",
+			"type": "image",
+			"name": "sg_bet_number_9_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_bei.png",
+			"type": "image",
+			"name": "sg_bet_number_bei_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_comma.png",
+			"type": "image",
+			"name": "sg_bet_number_comma_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_period.png",
+			"type": "image",
+			"name": "sg_bet_number_period_png"
+		},
+		{
+			"url": "assets/game/sangong/xiabeiNum/sg_bet_number_xia.png",
+			"type": "image",
+			"name": "sg_bet_number_xia_png"
+		},
+		{
+			"url": "assets/game/sangong/gf_heguan.png",
+			"type": "image",
+			"name": "gf_heguan_png"
 		}
 	]
 }

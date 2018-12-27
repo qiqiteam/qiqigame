@@ -21,8 +21,8 @@ class ZJHpaprePanl extends eui.Component {
     protected childrenCreated(): void {
         super.childrenCreated();
         this.initData();
+        this.once(egret.Event.REMOVED_FROM_STAGE, this.destroy, this);
         this._btn_hintclose.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-
         EventUtil.addEventListener(EventConst.onUserXClose, this.onleave, this);
     }
     private onleave(data: any) {
@@ -66,8 +66,6 @@ class ZJHpaprePanl extends eui.Component {
             this.timer.start();
         }
     }
-
-
     /**倒计时处理*/
     private timerFunc(evt: egret.TimerEvent): void {
         for (let i: number = 0; i <= this.time % 4; i++) {
@@ -85,14 +83,15 @@ class ZJHpaprePanl extends eui.Component {
     private clearTime(): void {
         if (this.timer) {
             this.timer.stop();
-            // this.timeTxt.visible = false;
             this.timer.removeEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
             this.timer = null;
         }
     }
     public destroy(): void {
         this.TYPE_TAP = "";
+         GlobalData.liveCloseBtn = false;
         this._btn_hintclose.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         EventUtil.removeEventListener(EventConst.onUserXClose, this.onleave, this);
+        this.clearTime();
     }
 }

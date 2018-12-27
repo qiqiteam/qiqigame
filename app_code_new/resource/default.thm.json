@@ -77,6 +77,7 @@
 		"resource/exml/game/safebox/SafeBoxTypeItemSkin.exml",
 		"resource/exml/game/safebox/SafeBoxViewSkin.exml",
 		"resource/exml/game/sango/SANGOroomViewSkin.exml",
+		"resource/exml/game/sangong/SGViewSkin.exml",
 		"resource/exml/game/set/SetTypeItemSkin.exml",
 		"resource/exml/game/set/SetViewSkin.exml",
 		"resource/exml/game/tbnn/TBNNHeadSkin.exml",

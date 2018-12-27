@@ -23,10 +23,11 @@ class ZJHIsLiveRoom extends eui.ItemRenderer {
 
     }
     private onClick(e: egret.TouchEvent) {
-        if(GlobalData.rooType==0){
+        if (GlobalData.rooType == 0) {
             this.sendInfo(EventConst.zjhLeave, true);
-        }else if(GlobalData.liveCloseBtn==false){
-            this.sendInfo(EventConst.zjhLeave,null);
+        }
+        if (GlobalData.liveCloseBtn == false) {
+            this.sendInfo(EventConst.zjhLeave, null);
         }
         console.log("点击确定");
     }
@@ -49,7 +50,7 @@ class ZJHIsLiveRoom extends eui.ItemRenderer {
             let musicBg = ["hall_bg_mp3"];
             xlLib.SoundMgr.instance.playBgMusic(musicBg);
             xlLib.SceneMgr.instance.changeScene(Lobby);
-            GlobalData.liveCloseBtn=false;
+            GlobalData.liveCloseBtn = false;
         }
         this.destroy();
     }
