@@ -11,12 +11,12 @@
 
 
 	<e:Group id="grpCard" width="1472" height="828" x="0" y="0" locked="true">
-		<e:Group y="210.89" x="654" locked="true">
-			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" x="0" y="0"/>
-			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" x="25.5" y="0"/>
-			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" x="51" y="0"/>
-			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" x="76.5" y="0"/>
-			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" x="102" y="0"/>
+		<e:Group y="210.89" x="672">
+			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="0" y="0"/>
+			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="20" y="0"/>
+			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="41" y="0"/>
+			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="61" y="0"/>
+			<e:Image scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="82.24" y="0"/>
 		</e:Group>
 
 
@@ -24,12 +24,13 @@
 
 
 
-		<e:Group y="380.66" anchorOffsetX="95.5" anchorOffsetY="41" rotation="0" x="736.5">
-			<e:Image id="grpCard_0_0" x="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" y="0"/>
-			<e:Image id="grpCard_0_1" x="32.5" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" y="0"/>
-			<e:Image id="grpCard_0_2" x="64.5" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" y="0"/>
-			<e:Image id="grpCard_0_3" x="96.5" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" y="0"/>
-			<e:Image id="grpCard_0_4" x="129" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82" y="0"/>
+		<e:Group y="380.66" anchorOffsetX="64" anchorOffsetY="30" rotation="0" x="736">
+			<e:Image id="grpCard_0_0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" y="0" x="0"/>
+			<e:Image id="grpCard_0_1" x="20.5" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" y="0"/>
+			<e:Image id="grpCard_0_2" x="41.5" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" y="0"/>
+			<e:Image id="grpCard_0_3" x="62.05" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" y="0"/>
+			<e:Image id="grpCard_0_4" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" y="0" x="83"/>
+
 		</e:Group>
 
 
@@ -41,12 +42,14 @@
 
 
 
-		<e:Group x="497.96" y="352.82" anchorOffsetX="95.5" anchorOffsetY="41" rotation="30" width="191">
-			<e:Image id="grpCard_1_0" x="0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_1_1" x="33.45" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_1_2" x="66.45" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_1_3" x="99.45" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_1_4" x="132" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
+		<e:Group x="497.96" y="352.82" anchorOffsetX="64" anchorOffsetY="30" rotation="30">
+			<e:Image id="grpCard_1_0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="0"/>
+			<e:Image id="grpCard_1_1" x="20.950000000000003" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_1_2" x="41.45" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_1_3" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="62.5"/>
+			<e:Image id="grpCard_1_4" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="83"/>
+
+
 		</e:Group>
 
 
@@ -54,26 +57,26 @@
 
 
 
-		<e:Group x="319.04" y="243.81" anchorOffsetX="95.5" anchorOffsetY="41" rotation="45">
-			<e:Image id="grpCard_2_0" x="0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_2_1" x="31.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_2_2" x="64.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_2_3" x="96.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_2_4" x="129" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
+		<e:Group x="319.04" y="243.81" anchorOffsetX="64" anchorOffsetY="30" rotation="45">
+			<e:Image id="grpCard_2_0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_2_1" x="21.18" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_2_2" x="41.43000000000001" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_2_3" x="62.68000000000001" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_2_4" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="83"/>
 		</e:Group>
-		<e:Group x="1159.58" y="248.4" anchorOffsetX="95.5" anchorOffsetY="41" rotation="-45">
-			<e:Image id="grpCard_3_0" x="0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_3_1" x="31.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_3_2" x="64.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_3_3" x="96.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_3_4" x="129" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
+		<e:Group x="1159.58" y="248.4" anchorOffsetX="64" anchorOffsetY="30" rotation="-45">
+			<e:Image id="grpCard_3_0" x="0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_3_1" x="20.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_3_2" x="41.93000000000001" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_3_3" x="61.93000000000001" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_3_4" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="83"/>
 		</e:Group>
-		<e:Group x="974.67" y="359.25" anchorOffsetX="95.5" anchorOffsetY="41" rotation="-30">
-			<e:Image id="grpCard_4_0" x="0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_4_1" x="31.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_4_2" x="64.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_4_3" x="96.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
-			<e:Image id="grpCard_4_4" x="129" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="62" height="82"/>
+		<e:Group x="974.67" y="359.25" anchorOffsetX="64" anchorOffsetY="30" rotation="-30">
+			<e:Image id="grpCard_4_0" x="0" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_4_1" x="20.93" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_4_2" x="41.93000000000001" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_4_3" x="61.93000000000001" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60"/>
+			<e:Image id="grpCard_4_4" y="0" scaleX="1" scaleY="1" source="nn.card_101" width="45" height="60" x="83"/>
 		</e:Group>
 
 
@@ -117,7 +120,7 @@
 
 
 	</e:Group>
-	<e:Image id="heguan" width="605" height="296" x="434" y="0" source="black_qz21_game_heguan_01_png"/>
+	<e:Image id="heguan" width="605" height="296" y="0" source="black_qz21_game_heguan_png" horizontalCenter="0" locked="true"/>
 	<e:Group id="chair" x="23.69" y="471.09" locked="true">
 		<e:Image id="chair_0" width="211" height="363" source="black_qz21_game_chair_1_png" y="197" x="607.31"/>
 		<e:Image id="chair_1" width="211" height="363" y="110.85" x="230.67" source="black_qz21_game_chair_3_png"/>
@@ -256,13 +259,23 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Group id="Chip" x="116.01" y="285.62" locked="true">
+	<e:Group id="Chip" x="116.01" y="285.62" locked="true" visible="false">
 		<e:Image id="Chip_0" width="175" height="43" x="482.99" y="234.94" source="black_qz21_game_table_chip_3_png"/>
 		<e:Image id="Chip_1" width="114" height="68" x="198.01" y="161.93" source="black_qz21_game_table_chip_2_png"/>
 		<e:Image id="Chip_2" width="83" height="95" x="0" y="0" source="black_qz21_game_table_chip_1_png"/>
 		<e:Image id="Chip_3" width="119" height="115" x="1121.89" y="6.03" source="black_qz21_game_table_chip_5_png"/>
 		<e:Image id="Chip_4" width="136" height="67" x="865.42" y="178.55" source="black_qz21_game_table_chip_4_png"/>
 	</e:Group>
+	<e:Image width="116" height="112" x="113.91" y="290.49" source="black_qz21_game_other_01_png" locked="true"/>
+	<e:Label text="世界第一赌神" x="169.87" y="348.19" width="120" height="20" size="20" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" anchorOffsetX="60" anchorOffsetY="10" rotation="50" locked="true"/>
+	<e:Image width="169" height="78" x="311.74" y="450.52" source="black_qz21_game_other_02_png" locked="true"/>
+	<e:Label text="世界第一赌神" x="390.81" y="489.52" width="120" height="20" size="20" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" anchorOffsetX="60" anchorOffsetY="10" rotation="20" locked="true"/>
+	<e:Image width="271" height="37" x="602.07" y="524.85" source="black_qz21_game_other_03_png" locked="true"/>
+	<e:Label text="世界第一赌神" y="547.08" width="120" height="20" size="20" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" anchorOffsetX="60" anchorOffsetY="10" x="736" locked="true"/>
+	<e:Image width="169" height="77" x="985.86" y="451.78" source="black_qz21_game_other_04_png" locked="true"/>
+	<e:Label text="世界第一赌神" y="491.8" width="120" height="20" size="20" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" anchorOffsetX="60" anchorOffsetY="10" rotation="-20" x="1073.4" locked="true"/>
+	<e:Image width="116" height="112" x="1241.78" y="292.96" source="black_qz21_game_other_05_png" locked="true"/>
+	<e:Label text="世界第一赌神" y="350.48" width="120" height="20" size="20" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" anchorOffsetX="60" anchorOffsetY="10" rotation="-50" x="1299.5" locked="true"/>
 	<e:Button id="_btn_begin" label="" scaleX="1" scaleY="1" x="611" y="742.92" locked="true" visible="false">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
@@ -274,7 +287,7 @@
 
 
 
-	<e:Group x="31.92" y="750.52" locked="true" visible="false">
+	<e:Group id="xiazhujieduan" x="31.92" y="750.52" visible="false" locked="true">
 		<e:Group x="0" y="0">
 			<e:Button id="minimum" label="" scaleX="1" scaleY="1" y="0" x="0">
 			<e:skinName>
@@ -284,7 +297,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="minimum_label" text="最小注（3）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" horizontalCenter="0" touchEnabled="false"/>
+			<e:Label id="minimum_label" text="最小注（3）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="30"/>
 		</e:Group>
 		<e:Group x="280.92" y="0">
 			<e:Button id="maxmum" label="" scaleX="1" scaleY="1" y="0" x="0">
@@ -295,9 +308,9 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="maxmum_label" text="最大注（300）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			<e:Label id="maxmum_label" text="最大注（300）" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="12"/>
 		</e:Group>
-		<e:Group x="903.87" y="0.48">
+		<e:Group x="903.87" y="0.48" visible="false">
 			<e:Button id="determine" label="" scaleX="1" scaleY="1" y="0" x="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -319,7 +332,18 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="bet_label" text="下注" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			<e:Label id="bet_label" text="下注" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
+		</e:Group>
+		<e:Group x="1180.78" y="0.48">
+			<e:Button id="carryout" label="" scaleX="1" scaleY="1" y="0" x="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="black_qz21_game_btn_normal_yaopai_png" source.down="black_qz21_game_btn_normal_yaopai_png" source.disabled="black_qz21_game_btn_gray_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Label id="carryout_label" text="下注完成" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" touchEnabled="false" x="54" y="15"/>
 		</e:Group>
 		<e:Group x="1180.78" y="0.48">
 			<e:Button id="renew" label="" scaleX="1" scaleY="1" y="0" x="0">
@@ -330,10 +354,10 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="renew_label" text="续押" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			<e:Label id="renew_label" text="续押" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
 		</e:Group>
 	</e:Group>
-	<e:Group x="131.79" y="751" locked="true" visible="false">
+	<e:Group id="bupaijieduan" x="131.79" y="751" locked="true" visible="false">
 		<e:Group x="0" y="0">
 			<e:Button id="fenpai" label="" scaleX="1" scaleY="1" y="0" x="0">
 			<e:skinName>
@@ -343,7 +367,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="fenpai_label" text="分牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			<e:Label id="fenpai_label" text="分牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
 		</e:Group>
 		<e:Group x="276" y="0">
 			<e:Button id="Double" label="" scaleX="1" scaleY="1" y="0" x="0">
@@ -354,7 +378,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="Double_label" text="双倍" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			<e:Label id="Double_label" text="双倍" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
 		</e:Group>
 		<e:Group x="708" y="0">
 			<e:Button id="tingpai" label="" scaleX="1" scaleY="1" y="0" x="0">
@@ -365,7 +389,7 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="tingpai_label" text="停牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			<e:Label id="tingpai_label" text="停牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
 		</e:Group>
 		<e:Group x="984" y="0">
 			<e:Button id="yaopai" label="" scaleX="1" scaleY="1" y="0" x="0">
@@ -376,10 +400,55 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Label id="yaopai_label" text="要牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" y="15" touchEnabled="false"/>
+			<e:Label id="yaopai_label" text="要牌" height="40" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" y="15" touchEnabled="false" x="84"/>
 		</e:Group>
 	</e:Group>
-	<e:Image width="62" height="41" x="780.36" y="421.22" source="black_qz21_game_acount_bg_1_png"/>
+	<e:Group id="isTypedianshu_0" x="780.36" y="421.22" locked="true">
+		<e:Image id="countWith_0" width="62" height="41" x="0" y="0" source="black_qz21_game_acount_bg_1_png"/>
+		<e:Label id="countWith_label_0" text="20" size="20" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="isTypedianshu_1" x="525.23" y="440.36" anchorOffsetX="31" anchorOffsetY="20.5" rotation="30" locked="true">
+		<e:Image id="countWith_1" width="62" height="41" x="0" y="0" source="black_qz21_game_acount_bg_1_png"/>
+		<e:Label id="countWith_label_1" text="20" size="20" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="isTypedianshu_2" x="329.17" y="338.24" anchorOffsetX="31" anchorOffsetY="20.5" rotation="45" locked="true">
+		<e:Image id="countWith_2" width="62" height="41" x="0" y="0" source="black_qz21_game_acount_bg_1_png"/>
+		<e:Label id="countWith_label_2" text="20" size="20" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="isTypedianshu_3" x="1252.33" y="243.59" anchorOffsetX="31" anchorOffsetY="20.5" rotation="-45" locked="true">
+		<e:Image id="countWith_3" width="62" height="41" x="0" y="0" source="black_qz21_game_acount_bg_1_png"/>
+		<e:Label id="countWith_label_3" text="20" size="20" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="isTypedianshu_4" x="1069.9" y="374.85" anchorOffsetX="31" anchorOffsetY="20.5" rotation="-30" locked="true">
+		<e:Image id="countWith_4" width="62" height="41" x="0" y="0" source="black_qz21_game_acount_bg_1_png"/>
+		<e:Label id="countWith_label_4" text="20" size="20" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="isTypedianshu_5" x="825.2" y="253.95" locked="true">
+		<e:Image id="countWith_5" width="62" height="41" x="0" y="0" source="black_qz21_game_acount_bg_1_png"/>
+		<e:Label id="countWith_label_5" text="20" size="20" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="Quantity_0" x="695" y="490.64" width="74" height="22" locked="true">
+		<e:Image width="74" height="22" source="black_qz21_game_icon_3_1_png" x="0" y="0"/>
+		<e:Label id="ChipQuantity_0" text="123" width="74" height="22" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" size="18" x="0" y="0"/>
+	</e:Group>
+	<e:Group id="Quantity_1" x="426.97" y="451.14" width="74" height="22" anchorOffsetX="37" anchorOffsetY="11" rotation="30" locked="true">
+		<e:Image width="74" height="22" source="black_qz21_game_icon_3_1_png" x="0" y="0"/>
+		<e:Label text="123" width="74" height="22" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" size="18" x="0" y="0" id="ChipQuantity_1"/>
+	</e:Group>
+	<e:Group id="Quantity_2" x="238.52" y="332.33" width="74" height="22" anchorOffsetX="37" anchorOffsetY="11" rotation="45" locked="true">
+		<e:Image width="74" height="22" source="black_qz21_game_icon_3_1_png" x="0" y="0"/>
+		<e:Label text="123" width="74" height="22" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" size="18" x="0" y="0" id="ChipQuantity_2"/>
+	</e:Group>
+	<e:Group id="Quantity_3" x="1242.23" y="327.19" width="74" height="22" anchorOffsetX="37" anchorOffsetY="11" rotation="-45" locked="true">
+		<e:Image width="74" height="22" source="black_qz21_game_icon_3_1_png" x="0" y="0"/>
+		<e:Label text="123" width="74" height="22" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" size="18" x="0" y="0" id="ChipQuantity_3"/>
+	</e:Group>
+	<e:Group id="Quantity_4" x="1044.63" y="450.85" width="74" height="22" anchorOffsetX="37" anchorOffsetY="11" rotation="-30" locked="true">
+		<e:Image width="74" height="22" source="black_qz21_game_icon_3_1_png" x="0" y="0"/>
+		<e:Label text="123" width="74" height="22" fontFamily="Microsoft YaHei" textAlign="center" verticalAlign="middle" size="18" x="0" y="0" id="ChipQuantity_4"/>
+	</e:Group>
+	<e:Image width="113" height="38" x="679.24" y="707.65" source="black_qz21_game_money_bg_2_png" visible="false"/>
+	<e:Label text="下注完成" x="683.56" y="710.96" size="20" fontFamily="Microsoft YaHei" width="100" height="30" verticalAlign="middle" textAlign="center" visible="false"/>
 
 
 </e:Skin>

@@ -63,6 +63,9 @@
 		"bin-debug/app/game/brnn/BRNNUtil.js",
 		"bin-debug/app/game/brnn/BRNNView.js",
 		"bin-debug/app/game/ddz/DDZroomView.js",
+		"bin-debug/app/game/ershiyidian/ESYDScene.js",
+		"bin-debug/app/game/ershiyidian/ESYDUtil.js",
+		"bin-debug/app/game/ershiyidian/ESYDView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
 		"bin-debug/app/game/message/SystemMsgView.js",
@@ -105,8 +108,8 @@
 		"bin-debug/app/game/recharge/RechargeTypeItem.js",
 		"bin-debug/app/game/recharge/RechargeView.js",
 		"bin-debug/app/game/safebox/SafeBoxTypeItem.js",
-		"bin-debug/app/game/safebox/SafeBoxView.js",
 		"bin-debug/Global.js",
+		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/tbnn/TBNNHead.js",
 		"bin-debug/app/game/tbnn/TBNNroomEff.js",
@@ -201,6 +204,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/Main.js",
-		"bin-debug/app/game/set/SetTypeItem.js"
+		"bin-debug/app/game/safebox/SafeBoxView.js"
 	]
 }
