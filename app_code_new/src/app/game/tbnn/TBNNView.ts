@@ -651,8 +651,9 @@ class TBNNView extends eui.Component {
     /**抢庄牛牛摊牌通知 */
     private onShowOrder(data: any): void {
         console.log(data._obj.index + "号摊牌");
-        this.isTanPai[data._obj.index] = true;
-        this.onePlayerFanPai(data._obj.index);
+        var idx: number = UserInfo.getInstance().findSeatNumber(data._obj.index);
+        this.isTanPai[idx] = true;
+        this.onePlayerFanPai(idx);
     }
 
     /**游戏状态 */
@@ -780,13 +781,14 @@ class TBNNView extends eui.Component {
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
         // console.log(data._obj.index + "号下注");
+        var idx: number = UserInfo.getInstance().findSeatNumber(data._obj.index);
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._btn_switch.visible = false;
             this._tishi.visible = true;
             this._tishi_text.text = "请等待其他玩家下注...";
         }
         if (data._obj.code == 200) {
-            this.jiazhu(data._obj.hogOrBet, data._obj.index)
+            this.jiazhu(data._obj.hogOrBet, idx)
         }
     }
     /**是否下注 */
@@ -845,9 +847,10 @@ class TBNNView extends eui.Component {
 
     /** num 几号玩家  _name 名字    _gold 金币   _imghead 头像图片*/
     public setUserInfo(num, _name, _gold, _imghead): void {
-        this['imghead' + num].source = _imghead;
-        this['labelHead' + num].text = _name;
-        this['labelGold' + num].text = GlobalFunction.Formatconversion(_gold);
+        var idx: number = UserInfo.getInstance().findSeatNumber(num);
+        this['imghead' + idx].source = _imghead;
+        this['labelHead' + idx].text = _name;
+        this['labelGold' + idx].text = GlobalFunction.Formatconversion(_gold);
     }
 
 

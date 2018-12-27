@@ -686,8 +686,9 @@ class QZNNView extends eui.Component {
     /**抢庄牛牛拼牌通知 */
     private onShowOrder(data: any): void {
         // console.log(data._obj.index + "号准备");
-        if (data._obj.index > 0) {
-            this['pinpaiType' + (data._obj.index - 1)].visible = true;
+        var idx: number = UserInfo.getInstance().findSeatNumber(data._obj.index);
+        if (idx > 0) {
+            this['pinpaiType' + (idx - 1)].visible = true;
         } else {
             this.pinpaiType.visible = true;
             this._tishi.visible = true;
@@ -853,6 +854,7 @@ class QZNNView extends eui.Component {
     /**更新下注通知(所有人) */
     private OnBetUpdate(data: any): void {
         // console.log(data._obj.index + "号下注");
+        var idx: number = UserInfo.getInstance().findSeatNumber(data._obj.index);
         this._whether_.visible = false;
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._btn_switch.visible = false;
@@ -860,13 +862,14 @@ class QZNNView extends eui.Component {
             this._tishi_text.text = "请等待其他闲家下注...";
         }
         if (data._obj.code == 200) {
-            this.jiazhu(data._obj.hogOrBet, data._obj.index)
+            this.jiazhu(data._obj.hogOrBet, idx)
         }
     }
     /**更新抢庄通知(所有人) */
     private OnHogUpdate(data: any): void {
         // console.log(data._obj.index + "号抢庄");
-        this.intnum[data._obj.index] = data._obj.hogOrBet;
+        var idx: number = UserInfo.getInstance().findSeatNumber(data._obj.index);
+        this.intnum[idx] = data._obj.hogOrBet;
 
         if (UserInfo.getInstance().uid == data._obj.userid) {
             this._group_qiang.visible = false;
@@ -874,7 +877,7 @@ class QZNNView extends eui.Component {
             this._tishi_text.text = "请等待其他玩家抢庄...";
         }
         if (data._obj.code == 200) {
-            this.qiangzhuang(data._obj.hogOrBet, data._obj.index)
+            this.qiangzhuang(data._obj.hogOrBet,idx)
         }
     }
     /**是否抢庄 */
@@ -1773,10 +1776,10 @@ class QZNNView extends eui.Component {
         this._zhuang_img1.visible = false;
         this._zhuang_img2.visible = false;
         this._zhuang_img3.visible = false;
-
+        var idx: number = UserInfo.getInstance().findSeatNumber(index);
         if (state) {
 
-            if (index % 2 == 0) {
+            if (idx % 2 == 0) {
                 var num0 = new QZNNHEff();
                 num0.x = -84;
                 num0.y = -72;
@@ -1819,17 +1822,17 @@ class QZNNView extends eui.Component {
             label.text = "0";
             str = "-";
         }
-        if (index == 0) {
+        if (idx == 0) {
             label.x = -30;
             label.y = -40;
             label.textAlign = egret.HorizontalAlign.RIGHT;
-        } else if (index == 1) {
+        } else if (idx == 1) {
             label.x = -30;
             label.y = -40;
-        } else if (index == 2) {
+        } else if (idx == 2) {
             label.x = 60;
             label.y = -40;
-        } else if (index == 3) {
+        } else if (idx == 3) {
             label.x = -30;
             label.y = -40;
         }

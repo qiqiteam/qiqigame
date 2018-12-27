@@ -949,6 +949,7 @@ class BJLView extends eui.Component {
         let musicBg = ["hall_bg_mp3"];
         xlLib.SoundMgr.instance.playBgMusic(musicBg);
         xlLib.SceneMgr.instance.changeScene(Lobby);
+        UserInfo.getInstance().playes = [];
     }
 
     /**胜利 */
@@ -1310,6 +1311,7 @@ class BJLView extends eui.Component {
         xlLib.WebSocketMgr.getInstance().send(EventConst.BaccaratOnleave, senddata, (data) => {
 
         }, this);
+        UserInfo.getInstance().playes = [];
     }
 
     public destroy(): void {

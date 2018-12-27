@@ -8,199 +8,144 @@ class BRNNView extends eui.Component {
     }
 
     public _group_ding:eui.Group;
-public _heguan:eui.Image;
-public grpCoins:eui.Group;
-public _nnwt_0:eui.Group;
-public _playLight_0:eui.Image;
-public grade_text_0_0:eui.BitmapLabel;
-public grade_text_0_1:eui.BitmapLabel;
-public effectTouch0:eui.Image;
-public _nnwt_1:eui.Group;
-public _playLight_1:eui.Image;
-public grade_text_1_0:eui.BitmapLabel;
-public grade_text_1_1:eui.BitmapLabel;
-public effectTouch1:eui.Image;
-public _nnwt_2:eui.Group;
-public _playLight_2:eui.Image;
-public grade_text_2_0:eui.BitmapLabel;
-public grade_text_2_1:eui.BitmapLabel;
-public effectTouch2:eui.Image;
-public _nnwt_3:eui.Group;
-public _playLight_3:eui.Image;
-public grade_text_3_0:eui.BitmapLabel;
-public grade_text_3_1:eui.BitmapLabel;
-public effectTouch3:eui.Image;
-public grpCard:eui.Group;
-public _brnn_banker_txt:eui.Image;
-public bankerCard_0:eui.Image;
-public bankerCard_1:eui.Image;
-public bankerCard_2:eui.Image;
-public bankerCard_3:eui.Image;
-public bankerCard_4:eui.Image;
-public labCardTypeBanker_bg:eui.Image;
-public labCardTypeBanker:eui.Image;
-public grpCard_0_0:eui.Image;
-public grpCard_0_1:eui.Image;
-public grpCard_0_2:eui.Image;
-public grpCard_0_3:eui.Image;
-public grpCard_0_4:eui.Image;
-public labCardType_bg_0:eui.Image;
-public labCardType0:eui.Image;
-public grpCard_1_0:eui.Image;
-public grpCard_1_1:eui.Image;
-public grpCard_1_2:eui.Image;
-public grpCard_1_3:eui.Image;
-public grpCard_1_4:eui.Image;
-public labCardType_bg_1:eui.Image;
-public labCardType1:eui.Image;
-public grpCard_2_0:eui.Image;
-public grpCard_2_1:eui.Image;
-public grpCard_2_2:eui.Image;
-public grpCard_2_3:eui.Image;
-public grpCard_2_4:eui.Image;
-public labCardType_bg_2:eui.Image;
-public labCardType2:eui.Image;
-public grpCard_3_0:eui.Image;
-public grpCard_3_1:eui.Image;
-public grpCard_3_2:eui.Image;
-public grpCard_3_3:eui.Image;
-public grpCard_3_4:eui.Image;
-public labCardType_bg_3:eui.Image;
-public labCardType3:eui.Image;
-public grpCountdown:eui.Group;
-public timeTxt:eui.BitmapLabel;
-public _label_tip:eui.Label;
-public grpSecondPanel:eui.Group;
-public grpHistory:eui.Group;
-public grpHistroy0:eui.Group;
-public grpHistroy0_0:eui.Image;
-public grpHistroy1_0:eui.Image;
-public grpHistroy2_0:eui.Image;
-public grpHistroy3_0:eui.Image;
-public grpHistroy1:eui.Group;
-public grpHistroy0_1:eui.Image;
-public grpHistroy1_1:eui.Image;
-public grpHistroy2_1:eui.Image;
-public grpHistroy3_1:eui.Image;
-public grpHistroy2:eui.Group;
-public grpHistroy0_2:eui.Image;
-public grpHistroy1_2:eui.Image;
-public grpHistroy2_2:eui.Image;
-public grpHistroy3_2:eui.Image;
-public grpHistroy3:eui.Group;
-public grpHistroy0_3:eui.Image;
-public grpHistroy1_3:eui.Image;
-public grpHistroy2_3:eui.Image;
-public grpHistroy3_3:eui.Image;
-public grpHistroy4:eui.Group;
-public grpHistroy0_4:eui.Image;
-public grpHistroy1_4:eui.Image;
-public grpHistroy2_4:eui.Image;
-public grpHistroy3_4:eui.Image;
-public grpHistroy5:eui.Group;
-public grpHistroy0_5:eui.Image;
-public grpHistroy1_5:eui.Image;
-public grpHistroy2_5:eui.Image;
-public grpHistroy3_5:eui.Image;
-public grpHistroy6:eui.Group;
-public grpHistroy0_6:eui.Image;
-public grpHistroy1_6:eui.Image;
-public grpHistroy2_6:eui.Image;
-public grpHistroy3_6:eui.Image;
-public grpHistroy7:eui.Group;
-public grpHistroy0_7:eui.Image;
-public grpHistroy1_7:eui.Image;
-public grpHistroy2_7:eui.Image;
-public grpHistroy3_7:eui.Image;
-public grpHistroy8:eui.Group;
-public grpHistroy0_8:eui.Image;
-public grpHistroy1_8:eui.Image;
-public grpHistroy2_8:eui.Image;
-public grpHistroy3_8:eui.Image;
-public grpHistroy9:eui.Group;
-public grpHistroy0_9:eui.Image;
-public grpHistroy1_9:eui.Image;
-public grpHistroy2_9:eui.Image;
-public grpHistroy3_9:eui.Image;
-public grpCardType:eui.Group;
-public secondClose:eui.Image;
-public grpResult:eui.Group;
-public grpMax:eui.Group;
-public grpMaxHead:eui.Image;
-public grpMaxGold:eui.Label;
-public grpMaxName:eui.Label;
-public grpBankerHead:eui.Image;
-public grpBankerType:eui.Image;
-public labelBankerType:eui.Label;
-public grpBankerBeishu:eui.Label;
-public grpBankerGold:eui.Label;
-public grpBankerName:eui.Label;
-public labResult0_0:eui.Label;
-public labResult1_0:eui.Label;
-public labResult2_0:eui.Label;
-public labResult0_1:eui.Label;
-public labResult1_1:eui.Label;
-public labResult2_1:eui.Label;
-public labResult0_2:eui.Label;
-public labResult1_2:eui.Label;
-public labResult2_2:eui.Label;
-public labResult0_3:eui.Label;
-public labResult1_3:eui.Label;
-public labResult2_3:eui.Label;
-public labResultValue:eui.Label;
-public resultType0:eui.Label;
-public resultType1:eui.Label;
-public resultType2:eui.Label;
-public resultType3:eui.Label;
-public _group_di:eui.Group;
-public grpHead0:eui.Group;
-public imghead0:eui.Image;
-public labelHead0:eui.Label;
-public labelGold0:eui.Label;
-public _btn_switch:eui.Group;
-public _btn_double_1:eui.Image;
-public _btn_double_2:eui.Image;
-public _btn_double_3:eui.Image;
-public _btn_double_4:eui.Image;
-public _btn_double_5:eui.Image;
-public _xuanzho:eui.Image;
-public wanjia:eui.Group;
-public packup:eui.Image;
-public scroller:eui.Scroller;
-public userlist:eui.List;
-public _xiPai_bg:eui.Rect;
-public _btn_close:eui.Button;
-public _btn_meun:eui.Button;
-public wanjialist:eui.Button;
-public _faPaiPos:eui.Image;
+    public _heguan:eui.Image;
+    public grpCoins:eui.Group;
+    public _nnwt_0:eui.Group;
+    public _playLight_0:eui.Image;
+    public grade_text_0_0:eui.BitmapLabel;
+    public grade_text_0_1:eui.BitmapLabel;
+    public effectTouch0:eui.Image;
+    public _nnwt_1:eui.Group;
+    public _playLight_1:eui.Image;
+    public grade_text_1_0:eui.BitmapLabel;
+    public grade_text_1_1:eui.BitmapLabel;
+    public effectTouch1:eui.Image;
+    public _nnwt_2:eui.Group;
+    public _playLight_2:eui.Image;
+    public grade_text_2_0:eui.BitmapLabel;
+    public grade_text_2_1:eui.BitmapLabel;
+    public effectTouch2:eui.Image;
+    public _nnwt_3:eui.Group;
+    public _playLight_3:eui.Image;
+    public grade_text_3_0:eui.BitmapLabel;
+    public grade_text_3_1:eui.BitmapLabel;
+    public effectTouch3:eui.Image;
+    public grpCard:eui.Group;
+    public _brnn_banker_txt:eui.Image;
+    public bankerCard_0:eui.Image;
+    public bankerCard_1:eui.Image;
+    public bankerCard_2:eui.Image;
+    public bankerCard_3:eui.Image;
+    public bankerCard_4:eui.Image;
+    public labCardTypeBanker_bg:eui.Image;
+    public labCardTypeBanker:eui.Image;
+    public grpCard_0_0:eui.Image;
+    public grpCard_0_1:eui.Image;
+    public grpCard_0_2:eui.Image;
+    public grpCard_0_3:eui.Image;
+    public grpCard_0_4:eui.Image;
+    public labCardType_bg_0:eui.Image;
+    public labCardType0:eui.Image;
+    public grpCard_1_0:eui.Image;
+    public grpCard_1_1:eui.Image;
+    public grpCard_1_2:eui.Image;
+    public grpCard_1_3:eui.Image;
+    public grpCard_1_4:eui.Image;
+    public labCardType_bg_1:eui.Image;
+    public labCardType1:eui.Image;
+    public grpCard_2_0:eui.Image;
+    public grpCard_2_1:eui.Image;
+    public grpCard_2_2:eui.Image;
+    public grpCard_2_3:eui.Image;
+    public grpCard_2_4:eui.Image;
+    public labCardType_bg_2:eui.Image;
+    public labCardType2:eui.Image;
+    public grpCard_3_0:eui.Image;
+    public grpCard_3_1:eui.Image;
+    public grpCard_3_2:eui.Image;
+    public grpCard_3_3:eui.Image;
+    public grpCard_3_4:eui.Image;
+    public labCardType_bg_3:eui.Image;
+    public labCardType3:eui.Image;
+    public grpCountdown:eui.Group;
+    public timeTxt:eui.BitmapLabel;
+    public _label_tip:eui.Label;
+    public _paiLu_0_0:eui.Image;
+    public _paiLu_0_1:eui.Image;
+    public _paiLu_0_2:eui.Image;
+    public _paiLu_0_3:eui.Image;
+    public _paiLu_1_0:eui.Image;
+    public _paiLu_1_1:eui.Image;
+    public _paiLu_1_2:eui.Image;
+    public _paiLu_1_3:eui.Image;
+    public _paiLu_2_0:eui.Image;
+    public _paiLu_2_1:eui.Image;
+    public _paiLu_2_2:eui.Image;
+    public _paiLu_2_3:eui.Image;
+    public _paiLu_3_0:eui.Image;
+    public _paiLu_3_1:eui.Image;
+    public _paiLu_3_2:eui.Image;
+    public _paiLu_3_3:eui.Image;
+    public _paiLu_4_0:eui.Image;
+    public _paiLu_4_1:eui.Image;
+    public _paiLu_4_2:eui.Image;
+    public _paiLu_4_3:eui.Image;
+    public _paiLu_5_0:eui.Image;
+    public _paiLu_5_1:eui.Image;
+    public _paiLu_5_2:eui.Image;
+    public _paiLu_5_3:eui.Image;
+    public _paiLu_6_0:eui.Image;
+    public _paiLu_6_1:eui.Image;
+    public _paiLu_6_2:eui.Image;
+    public _paiLu_6_3:eui.Image;
+    public _paiLu_7_0:eui.Image;
+    public _paiLu_7_1:eui.Image;
+    public _paiLu_7_2:eui.Image;
+    public _paiLu_7_3:eui.Image;
+    public _paiLu_8_0:eui.Image;
+    public _paiLu_8_1:eui.Image;
+    public _paiLu_8_2:eui.Image;
+    public _paiLu_8_3:eui.Image;
+    public _paiLu_9_0:eui.Image;
+    public _paiLu_9_1:eui.Image;
+    public _paiLu_9_2:eui.Image;
+    public _paiLu_9_3:eui.Image;
+    public _paiLu_10_0:eui.Image;
+    public _paiLu_10_1:eui.Image;
+    public _paiLu_10_2:eui.Image;
+    public _paiLu_10_3:eui.Image;
+    public _group_di:eui.Group;
+    public grpHead0:eui.Group;
+    public imghead0:eui.Image;
+    public labelHead0:eui.Label;
+    public labelGold0:eui.Label;
+    public _btn_switch:eui.Group;
+    public _btn_double_1:eui.Image;
+    public _btn_double_2:eui.Image;
+    public _btn_double_3:eui.Image;
+    public _btn_double_4:eui.Image;
+    public _btn_double_5:eui.Image;
+    public _xuanzho:eui.Image;
+    public _chongfu_xiazhu:eui.Button;
+    public wanjia:eui.Group;
+    public packup:eui.Image;
+    public scroller:eui.Scroller;
+    public userlist:eui.List;
+    public _xiPai_bg:eui.Rect;
+    public _tongPei:eui.Image;
+    public _tongSha:eui.Image;
+    public _bianhao:eui.Label;
+    public _btn_close:eui.Button;
+    public _btn_meun:eui.Button;
+    public wanjialist:eui.Button;
+    public _faPaiPos:eui.Image;
 
 
 
-
-
-
-
-
-
-
-    public time: number;        //秒数
-    public timer: egret.Timer;  //游戏计时器间隔
-
-    public arr: number[] = [0, 0];
-
-    public multipleList: number[] = [0, 0, 0, 0, 0];   //倍数表
-
-    //public game_result: number = 0;                   //动画状态
-
-    public isAction: boolean = false;               //能否下注
-
-    //public isPaly: boolean = false;                 //是否下过注
-    //public isWin: boolean = false;                  //是否输赢
-    //public isScore: number = 0;                     //输赢金币
+    public multipleList: number[] = [0, 0, 0, 0, 0];    //倍数表
+    public isAction: boolean = false;                   //能否下注
 
     private _tipGameEff:uiCore.Animator = null;
-    //private  _faPaiEff:DragonBonesSprite;
-    //private _faPai_arr = [];
     private brnnShuffle:BrnnShuffle = null;
 
     private _coin_arr_0 = [];
@@ -212,12 +157,14 @@ public _faPaiPos:eui.Image;
     private _coin_total = [];
     private _coin_myxin = [];
 
+    private _scoreTurn_label:eui.BitmapLabel = null;
+    private _winEff:uiCore.Animator = null;
+
+    private _betList = [];//保存重复下注记录
+
     //-----------------------------------------------
     private interval: number = -1;      // 游戏计时器间隔
     private cardResult = null;          // 结算扑克结果(最后展示处理)
-
-
-    private betsNum: number = 0;        // 下注金额 self
 
     private orginBankerCardPos = [];    // 存储庄家扑克位置
     private orginPlayerCardPos = [];    // 存储玩家扑克位置
@@ -237,7 +184,8 @@ public _faPaiPos:eui.Image;
 
         this.labelHead0.text = UserInfo.getInstance().username;
         this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
-
+        this._betList = [];
+        this._tipGameEff = null;
     }
     /**设置金币最多的20个玩家数据 */
     private initGameIconList(data: any): void {
@@ -255,12 +203,11 @@ public _faPaiPos:eui.Image;
         this.userlist.dataProvider = new eui.ArrayCollection(dataArr);
         this.scroller.viewport = this.userlist;
     }
+
     private initData(): void {
-        this.grpSecondPanel.visible = false;
-        this.grpResult.visible = false;
         this._brnn_banker_txt.visible = false;
-        this.grpCardType.touchChildren = false;
-        this.grpCardType.touchEnabled = false;
+        this._tongPei.visible = false;
+        this._tongSha.visible = false;
 
         this.grpCard.visible = true;
         this.isAction = false;
@@ -270,9 +217,6 @@ public _faPaiPos:eui.Image;
             this["_playLight_" + i].visible = false;
         }
         this.wanjia.x = -237;
-        //this.isPaly = false;
-        //this.isWin = false;
-        //this.isScore = 0;
         this._coin_arr_0 = [];
         this._coin_arr_1 = [];
         this._coin_arr_2 = [];
@@ -282,6 +226,12 @@ public _faPaiPos:eui.Image;
         this._coin_total = [];
         this._coin_myxin = [];
         this.interval = -1;
+
+        this._scoreTurn_label = null;
+        this._winEff = null;
+        this.cardResult = null;
+        //this.cdNum = 0;
+        //this.lastTouchBetIndex = 1;
     }
 
     //获取原始扑克的位置
@@ -327,6 +277,16 @@ public _faPaiPos:eui.Image;
             pos.y = this["_nnwt_" + n].y + 50;
             this.orginCoinPos[n] = pos;
         }
+
+        //this._tongPei.anchorOffsetX = this._tongPei.width / 2;
+        //this._tongPei.anchorOffsetY = this._tongPei.height / 2;
+        //this._tongPei.x = this._tongPei.x + this._tongPei.width / 2;
+        //this._tongPei.y = this._tongPei.y + this._tongPei.height / 2;
+
+        //this._tongSha.anchorOffsetX = this._tongSha.width / 2;
+        //this._tongSha.anchorOffsetY = this._tongSha.height / 2;
+        //this._tongSha.x = this._tongSha.x + this._tongSha.width / 2;
+        //this._tongSha.y = this._tongSha.y + this._tongSha.height / 2;
     }
 
     private addEvent(): void {
@@ -339,7 +299,8 @@ public _faPaiPos:eui.Image;
         this._btn_double_3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+        //this._btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+        this._chongfu_xiazhu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         this.effectTouch0.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -352,42 +313,43 @@ public _faPaiPos:eui.Image;
         EventUtil.addEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.addEventListener(EventConst.onUserLeave, this.onleave, this);
 
-        
+        EventUtil.addEventListener(EventConst.onTimelyNotify, this.TimelyNotify, this);
     }
+
     /**游戏状态 */
     private GameStatus(data: any): void {
         console.log(data._obj.roomStatus);
         switch (data._obj.roomStatus) {
             case 1: this.onprepare(data); break;        //准备中
             case 4: this.onbetBack(data); break;        //下注
-            case 5: this.onstopBack(data); break;        //停止下注(千人牛牛开牌)
+            case 5: this.onstopBack(data); break;       //停止下注(千人牛牛开牌)
             case 7: this.onjiesuan(data); break;        //结算、百人牛牛派奖中
-            case 8: this.onrest(data); break;        //游戏结束,百人牛牛休息
+            case 8: this.onrest(data); break;           //游戏结束,百人牛牛休息
             case 9: this.onshuffle(data); break;        //百人牛牛洗牌
-            case 10: this.onfapai(data); break;       //百人牛牛发牌
+            case 10: this.onfapai(data); break;         //百人牛牛发牌
         }
     }
-/*
-    public startGameEffect(e) {
-        var t = this;
-        this.brnn_gameEffImg.source = e,
-        this.brnn_gameStart.alpha = 0,
-        this.brnn_gameStart.horizontalCenter = -200,
-        this.brnn_gameStart.visible = !0,
-        this.pushEffectList("brnn_gameStart"),
-        egret.Tween.get(this.brnn_gameStart).to({
-            horizontalCenter: 0,
-            alpha: 1
-        },
-        200, egret.Ease.bounceOut).wait(300).to({
-            horizontalCenter: 200,
-            alpha: 0
-        },
-        200, egret.Ease.bounceOut).call(function() {
-            t.brnn_gameStart.visible = !1
-        },
-        this)
-    }*/
+
+    /**通知类型 状态 */
+    private TimelyNotify(data) {
+        switch (data._obj.change) {
+            case 1: ; break;    //当前房间状态不能下注
+            case 2: ; break;    //余额不足
+            case 3: ; break;
+            case 5: this.tichufj(); break;    //5局不下注踢出房间
+            case 4: ; break;    //3局不下注提示
+            case 6: ; break;    //
+            case 7: ; break;    //金币不足
+        }
+    }
+    /**踢出房间 */
+    private tichufj(): void {
+        xlLib.SoundMgr.instance.stopBgMusic();
+        let musicBg = ["hall_bg_mp3"];
+        xlLib.SoundMgr.instance.playBgMusic(musicBg);
+        xlLib.SceneMgr.instance.changeScene(Lobby);
+        UserInfo.getInstance().playes = [];
+    }
 
     /**
      * 定时器
@@ -423,19 +385,40 @@ public _faPaiPos:eui.Image;
     }
 
     /**准备 */
-    private gameIndex:number = -1;
     private onprepare(data: any): void {
         this.setTiming(2);
         this._label_tip.text = "荷官准备中...";
-        this.tipGameEff("brnn_effect_gamestart");
         this._brnn_banker_txt.visible = true;
-        //this.gamePlayIndex = setInterval(this.waitLabelTurn.bind(this), 600);
+        this.tipGameEff("brnn_effect_gamestart");
+        UserInfo.getInstance().isGameStart = true;
     }
+
+    /**百人牛牛洗牌 */
+    private onshuffle(data: any): void {
+        this.setTiming(3);
+        this._label_tip.text = "荷官洗牌中...";
+        this.brnnShuffle = new BrnnShuffle;
+        this.addChild(this.brnnShuffle);
+        this._xiPai_bg.visible = true;
+    }
+
+    /**百人牛牛发牌 */
+    private onfapai(data: any): void {
+        this.setTiming(5);
+        this._label_tip.text = "荷官发牌中...";
+        this.brnnShuffle.removeAllEffect();
+        this.brnnShuffle.parent.removeChild(this.brnnShuffle);
+        this.brnnShuffle = null;
+        this._xiPai_bg.visible = false;
+        this.tipGameEff("brnn_effect_begining");
+        this.cardEffect();
+    }
+
     /**下注 */
     private onbetBack(data: any): void {
-        this.tipGameEff("brnn_effect_xiazhu");
         this.setTiming(20);
         this._label_tip.text = "请下注...";
+        this.tipGameEff("brnn_effect_xiazhu");
         this.isAction = true;
         for (let i = 0; i < 4; i++) {
             if (data._obj.hogList[i].allow) {
@@ -451,33 +434,74 @@ public _faPaiPos:eui.Image;
             this.multipleList[i] = data._obj.hogList[i].hogOrBet;
         }
     }
+
+    /**更新下注通知(所有人) */
+    private OnBetUpdate(data: any): void {
+        // console.log(data._obj.index + "号下注");
+        //console.log(UserInfo.getInstance().uid);
+        //console.log(data._obj.userid);
+
+        if (data._obj.code == 200) {
+            if (UserInfo.getInstance().uid == data._obj.userid) {
+                if(data._obj.repeat) {
+                    for(let i=0; i<4; i++) {
+                        this.fenChouMa(data._obj.moneyList[i], i+1);
+                        this.onplaygrade(data._obj.myMoneyList[i], i+1);
+                        this.onJettongrade(data._obj.totalMoneyList[i], i+1);
+                    }
+                    this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
+                    UserInfo.getInstance().goldcoins = data._obj.balance;
+                } else {
+                    //UserInfo.getInstance().isGameStart = true;  //游戏状态
+                    this.onGenZhuClick(data._obj.money, data._obj.deskNum);
+                    this.onplaygrade(data._obj.myMoney, data._obj.deskNum);
+                    this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
+                    UserInfo.getInstance().goldcoins = data._obj.balance;
+                    this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
+                }
+            } else {
+                this.onPlayerGenZhu(data._obj.money, data._obj.deskNum);
+                this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
+            }
+        } else {
+            xlLib.TipsUtils.showFloatWordTips(data._obj.message);
+        }
+    }
+
     /**停止下注(千人牛牛开牌) */
     private onstopBack(data: any): void {
-        this.tipGameEff("brnn_effect_stop");
-        this._label_tip.text = "停止下注...";
-        this.isAction = false;
         this.setTiming(6);
+        this._label_tip.text = "停止下注...";
+        this.tipGameEff("brnn_effect_stop");
+        this.isAction = false;
         UserInfo.getInstance().goldcoins = data._obj.balance;
         this.cardResult = data._obj;
-        for(let i=0; i<this.cardResult.players.length; i++) {
-            if(i==0) {
-                //this.labCardTypeBanker.source = "";
-                //this.labCardTypeBanker_bg.source = "";
-            } else {
-                //this["labCardType_bg_" + (i-1)].source = "";
-                //this["labCardType" + (i-1)].source = "";
-            }
-        }
-
+        this._betList = this.cardResult.betList;//保存重复下注记录
         this.interval = setInterval(this.bankerCardRotation.bind(this), 800);
-
     }
+
     /**结算、百人牛牛派奖中 */
     private onjiesuan(data: any): void {
         this.setTiming(6);
         this._label_tip.text = data._obj.message;
         this.labelGold0.text = this.fmoney(this.cardResult.balance/100,2);
 
+        this.interval = -1;
+        if(this.cardResult.result == 2) {//通杀
+            this.playAllWinOrLoseEffect(this._tongSha);
+            this.interval = setInterval(this.playChouMaEff.bind(this), 1500);
+        } else if(this.cardResult.result == 3) {//通赔
+            this.playAllWinOrLoseEffect(this._tongPei);
+            this.interval = setInterval(this.playChouMaEff.bind(this), 1500);
+        } else {
+            this.playChouMaEff();
+        }
+    }
+
+    public playChouMaEff():void {
+        if(this.interval != -1) {
+            clearInterval(this.interval);
+        }
         let _x = this._group_ding.x + this._heguan.x + this._heguan.width/2;
         let _y = this._group_ding.y + this._heguan.y + this._heguan.height/2;
         for(let i=1; i<5; i++){
@@ -494,9 +518,11 @@ public _faPaiPos:eui.Image;
         //this.removeChipIcon();
         if(this._win_arr.length > 0) {
             this.interval = setInterval(this.chouMaToGroup.bind(this), 1000);
-        } else {
-            this.interval = setInterval(this.showGameResult.bind(this), 2000);
-        }
+        } //else {
+            //this.interval = setInterval(this.showGameResult.bind(this), 2000);
+        //}
+
+        this.updateRecord(this.cardResult.retList);
     }
 
     private chouMaToGroup():void {
@@ -531,65 +557,72 @@ public _faPaiPos:eui.Image;
                 this.coinFly(this._coin_total[i], x, y);
             }
         }
+
+        if(this.cardResult.play == true) {
+            this.suiCoreGameEndScoreResultEffect(this.grpHead0, this.cardResult.win, this.cardResult.score);
+            this.playWinEff();
+        }
     }
-
-    /** */
-    private chouMaToUseEffect() {
-
-    }
-
 
     /**游戏结束,百人牛牛休息 */
     private onrest(data: any): void {
         this.setTiming(data._obj.seconds);
         this._label_tip.text = "休息时间...";
         this.resetGame();
-        //UserInfo.getInstance().isGameStart = false;
+        UserInfo.getInstance().isGameStart = false;
     }
-    /**百人牛牛洗牌 */
-    private onshuffle(data: any): void {
-        this._label_tip.text = "荷官洗牌中...";
-        this.brnnShuffle = new BrnnShuffle;
-        this.addChild(this.brnnShuffle);
-        this._xiPai_bg.visible = true;
-        this.setTiming(3);
-        //this.startCountDown(data._obj.seconds);
-    }
-    /**百人牛牛发牌 */
-    private onfapai(data: any): void {
-        this.setTiming(5);
-        this._label_tip.text = "荷官发牌中...";
-        this.tipGameEff("brnn_effect_begining");
-        this.brnnShuffle.removeAllEffect();
-        this.brnnShuffle.parent.removeChild(this.brnnShuffle);
-        this._xiPai_bg.visible = false;
-        //this.startCountDown(data._obj.seconds);
-        this.cardEffect();
-    }
-    /**更新下注通知(所有人) */
-    private OnBetUpdate(data: any): void {
-        // console.log(data._obj.index + "号下注");
-        console.log(UserInfo.getInstance().uid);
-        console.log(data._obj.userid);
 
-        if (data._obj.code == 200) {
-            if (UserInfo.getInstance().uid == data._obj.userid) {
-                UserInfo.getInstance().isGameStart = true;  //游戏状态
-                this.onGenZhuClick(data._obj.money, data._obj.deskNum);
-                this.onplaygrade(data._obj.myMoney, data._obj.deskNum);
-                this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
-                UserInfo.getInstance().goldcoins = data._obj.balance;
-                this.labelGold0.text = GlobalFunction.Formatconversion(UserInfo.getInstance().goldcoins);
-            } else {
-                this.onPlayerGenZhu(data._obj.money, data._obj.deskNum);
-                this.onJettongrade(data._obj.totalMoney, data._obj.deskNum);
-            }
-        } else {
-            xlLib.TipsUtils.showFloatWordTips(data._obj.message);
+    /**分筹码 */
+    private fenChouMa(betNum:number, index:number) {
+
+        //var  i=10;
+        //var  j=3;
+        //var  mo = Math.floor(i/j);
+        //var  yu = i%j;
+        //console.log("+++++++++++"+mo+"++++++++"+yu);
+        if(betNum <=0) {
+            return;
         }
 
-
+        let num = betNum;
+        let count = 0;
+        if(num>=50) {
+            count = Math.floor(num/50);
+            num = num%50;
+            for(let i=0; i<count; i++) {
+                this.onGenZhuClick(50, index);
+            }
+        }
+        if (num>=20) {
+            count = Math.floor(num/20);
+            num = num%20;
+            for(let i=0; i<count; i++) {
+                this.onGenZhuClick(20, index);
+            }
+        }
+        if (num>=10) {
+            count = Math.floor(num/10);
+            num = num%10;
+            for(let i=0; i<count; i++) {
+                this.onGenZhuClick(10, index);
+            }
+        }
+        if (num>=5) {
+            count = Math.floor(num/5);
+            num = num%5;
+            for(let i=0; i<count; i++) {
+                this.onGenZhuClick(5, index);
+            }
+        }
+        if (num>=2) {
+            count = Math.floor(num/2);
+            num = num%2;
+            for(let i=0; i<count; i++) {
+                this.onGenZhuClick(2, index);
+            }
+        }
     }
+
     /**自己点击跟注 (丢筹码动作) */
     private onGenZhuClick(num: number, index: number) {
         var p: egret.Point = new egret.Point();
@@ -597,6 +630,7 @@ public _faPaiPos:eui.Image;
         p.y = 792;
         this.showCoins(p, num, index, true);
     }
+
     /**其他玩家跟注 (丢筹码动作) */
     private onPlayerGenZhu(num: number, index: number) {
         var p: egret.Point = new egret.Point();
@@ -604,6 +638,7 @@ public _faPaiPos:eui.Image;
         p.y = 400 + Math.random() * 80;
         this.showCoins(p, num, index, false);
     }
+
     /**筹码池分数(总分)  */
     private onJettongrade(num: number, index: number) {
         var str = this['grade_text_' + (index - 1) + '_0'].text;
@@ -616,6 +651,7 @@ public _faPaiPos:eui.Image;
             }
         }
     }
+
     /**筹码池分数(自己)  */
     private onplaygrade(num: number, index: number) {
         var str = this['grade_text_' + (index - 1) + '_1'].text;
@@ -628,8 +664,10 @@ public _faPaiPos:eui.Image;
             }
         }
     }
+
     /**准备 开始回调 */
     public onClick(e: egret.TouchEvent): void {
+        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(13));
         if (e.target == this.wanjialist) {
             this.wanjialiebiao(EventConst.niuniu_player);
             this.wanjialist.visible = false;
@@ -668,22 +706,28 @@ public _faPaiPos:eui.Image;
             if (this.isAction) {
                 this.sendamessage(EventConst.niuniu_dobet, 4, this.multipleList[this.lastTouchBetIndex - 1]);
             }
+        } else if(e.target == this._chongfu_xiazhu) {
+            console.log(this.lastTouchBetIndex);
+            EffectUtils.playButtonEffect(e.target, (evt:egret.TouchEvent)=>{
+    
+            },this);
+            if (this.isAction) {
+                console.log("重复下注");
+                this.sendamessage_repeatBet(EventConst.niuniu_dobet, 0, this._betList);
+            }
+            this._betList;
         } else if (e.target == this._btn_close) {
             this.buttonClose();
         } else if (e.target == this._btn_meun) {
 
-            /*
-            if(this._faPai_arr != []) {
-                for(let i=0; i<this._faPai_arr.length; i++) {
-                    this._faPai_arr[i].parent.removeChild(this._faPai_arr[i]);
-                }
-                this._faPai_arr = [];
-            }
-            this.numIndex = setInterval(this.faPaiEff.bind(this), 500);
-            */
-            this.cdNum = 20;
-            this.timeTxt.text = "20";
-            this.cdTimer.start();
+            //var  i=10;
+            //var  j=3;
+            //var  mo = Math.floor(i/j);
+            //var  yu = i%j;
+            //console.log("+++++++++++"+mo+"++++++++"+yu);
+            
+            this.playAllWinOrLoseEffect(this._tongSha);
+            //this.suiCoreGameEndScoreResultEffect(this.grpHead0, true, 10000000);
         }
     }
 
@@ -699,6 +743,19 @@ public _faPaiPos:eui.Image;
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
         }, this);
     }
+
+     private sendamessage_repeatBet(sendstr: string, num: number, bet): void {
+        let senddata: any = {
+            userid: UserInfo.getInstance().uid,
+            token: UserInfo.getInstance().token,
+            data: num,
+            betList: bet
+        };
+        console.log("----发送消息：" + senddata);
+        xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
+        }, this);
+    }
+
     /**请求玩家列表*/
     private wanjialiebiao(sendstr: string): void {
         let senddata: any = {
@@ -708,6 +765,7 @@ public _faPaiPos:eui.Image;
         xlLib.WebSocketMgr.getInstance().send(sendstr, senddata, (data) => {
         }, this);
     }
+
 /**
  * 自己加入房间
  */
@@ -739,11 +797,11 @@ public _faPaiPos:eui.Image;
             xlLib.SceneMgr.instance.changeScene(Lobby);
         }
     }
+
     /**返回游戏大厅 */
     private buttonClose(): void {
-
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
-        if (UserInfo.getInstance().isGameStart) {
+        if (UserInfo.getInstance().isGameStart == true) {
             xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
             return;
         }
@@ -754,24 +812,7 @@ public _faPaiPos:eui.Image;
         };
         xlLib.WebSocketMgr.getInstance().send(EventConst.niuniu_leave, senddata, (data) => {
         }, this);
-    }
-
-    /**播放 胜利 通杀 通赔 动画 */
-    public victoryEffect(): void {
-        clearInterval(this.interval);
-        this.interval = 0;
-        /*
-        if (this.game_result == 1) {
-            // this.addNNVictoryEffect();
-            this.game_result = 0;
-        } else if (this.game_result == 2) {
-            // this.addTongsha();
-            this.game_result = 0;
-        } else if (this.game_result == 3) {
-            // this.addTongpei();
-            this.game_result = 0;
-        }*/
-
+        UserInfo.getInstance().playes = [];
     }
 
     public resize(): void {
@@ -847,6 +888,7 @@ public _faPaiPos:eui.Image;
         } else if(msg == 4) {
             this._coin_arr_3.push(coin);
         }
+        coin.touchEnabled = false;
         coin.setIsMy(isMy);
         coin.setZhuoNum(msg-1);
         this._coin_total.push(coin);
@@ -899,6 +941,63 @@ public _faPaiPos:eui.Image;
         let z_x = this._group_di.x + this.grpHead0.x + this.imghead0.x + Math.floor(Math.random()*100);
         let z_y = this._group_di.y + this.grpHead0.y + this.imghead0.y + 44;
         this.coinFly(myCoin, z_x, z_y);
+    }
+
+    public suiCoreGameEndScoreResultEffect(player, state, score) {
+        let label = new eui.BitmapLabel;
+        let str: string = "";
+        if (state == true) {
+            label.font = "bar_plus_font_fnt";
+            label.text = "0";
+            str = "+";
+        } else {
+            label.font = "bar_reduce_font_fnt";
+            label.text = "0";
+            str = "-";
+        }
+        label.x = 25;
+        label.y = -10;
+        label.scaleX = 0.5;
+        label.scaleY = 0.5;
+        this._scoreTurn_label = label;
+        player.addChild(label);
+        uiCore.LabelEffect.instance.playEffect(label, { time: 2000, initNum: 1, num: score, regulator: 50, splitnum: 2, splitstr: "." }, str);
+    }
+
+    private playWinEff():void {
+        if(this._winEff == null) {
+            this._winEff = new uiCore.Animator();
+            this._winEff.defentAnimationName = "Sprite";
+            this._winEff.source = "brnn_yingjia";
+            this._winEff.playOnce = true;
+            this._winEff.scaleX = 1;
+            this._winEff.scaleY = 1;
+            this._winEff.x = 69;
+            this._winEff.y = 71;
+            this.grpHead0.addChild(this._winEff);
+        }
+        this._winEff.play("Sprite", 1);
+        let animator = this._winEff;
+        this._winEff.addHander(function(){
+            animator.visible = false;
+        }, [animator]);
+        //this.playClickSound(RBGUtil.getInstance().getSoundEffect(10));
+    }
+
+    //通赔或通杀
+    public playAllWinOrLoseEffect(img) {
+        img.scaleX = img.scaleY = 2;
+        img.alpha = 0.3;
+        img.visible = true;
+        egret.Tween.get(img).to({
+            scaleX: 1,
+            scaleY: 1,
+            alpha: 1
+        },
+        500, egret.Ease.bounceOut).wait(1000).call(function() {
+            img.visible = false;
+        },
+        this, [img]);
     }
 
     /**随机筹码区域 */
@@ -1079,8 +1178,8 @@ public _faPaiPos:eui.Image;
     }
 
     private bankerCardRotation(): void {
-        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
         clearInterval(this.interval);
+        this.playClickSound(BRNNUtil.getInstance().getSoundEffect(7));
         
         var poke = this.cardResult.players[0];
         let cardType = this.labCardTypeBanker;
@@ -1200,42 +1299,48 @@ public _faPaiPos:eui.Image;
 
     
 
-    private blinkEffect(): void {
-        clearInterval(this.interval);
-        var result = this.cardResult.result;
-        for (var i = 0; i < 4; i++) {
-            if (result[i] == 1) {
-                // this['effectSelect' + i].visible = true;
-                // EffectUtils.blinkEffect(this['effectSelect' + i], 200);
-            }
-        }
-        this.interval = setInterval(this.cardEffectEnd.bind(this), 2000);
-    }
+    //private blinkEffect(): void {
+    //    clearInterval(this.interval);
+    //    var result = this.cardResult.result;
+    //    for (var i = 0; i < 4; i++) {
+    //        if (result[i] == 1) {
+    //            // this['effectSelect' + i].visible = true;
+    //            // EffectUtils.blinkEffect(this['effectSelect' + i], 200);
+    //        }
+    //    }
+    //    this.interval = setInterval(this.cardEffectEnd.bind(this), 2000);
+    //}
 
-    private cardEffectEnd(): void {
-        clearInterval(this.interval);
-        var data = this.cardResult;
-        var isShow: boolean = false;
-        //显示比牌结果，显示是否通赔或者通杀
-        if (data.result[0] == 1 && data.result[1] == 1 && data.result[2] == 1 && data.result[3] == 1) {
-            isShow = true;
-        }
-        if (data.result[0] == 0 && data.result[1] == 0 && data.result[2] == 0 && data.result[3] == 0) {
-            isShow = true;
-        }
-        if (isShow) {
-            this.interval = setInterval(this.showGameResult.bind(this), 1000);
-        }
-        else {
-            this.showGameResult();
-        }
-    }
+    //private cardEffectEnd(): void {
+    //    clearInterval(this.interval);
+    //    var data = this.cardResult;
+    //    var isShow: boolean = false;
+    //    //显示比牌结果，显示是否通赔或者通杀
+    //    if (data.result[0] == 1 && data.result[1] == 1 && data.result[2] == 1 && data.result[3] == 1) {
+    //        isShow = true;
+    //    }
+    //    if (data.result[0] == 0 && data.result[1] == 0 && data.result[2] == 0 && data.result[3] == 0) {
+    //        isShow = true;
+    //    }
+   //     if (isShow) {
+   //         this.interval = setInterval(this.showGameResult.bind(this), 1000);
+   //     }
+   //     else {
+   //         this.showGameResult();
+   //     }
+   // }
 
     //============================================  Game Animation
 
     private tipGameEff(str:string):void
     {
-        if(this._tipGameEff == null) {
+        if(this._tipGameEff != null) {
+            egret.Tween.removeTweens(this._tipGameEff);
+            this._tipGameEff.parent.removeChild(this._tipGameEff);
+            this._tipGameEff = null;
+        }
+
+        //if(this._tipGameEff == null) {
             this._tipGameEff = new uiCore.Animator();
             this._tipGameEff.defentAnimationName = str;
             this._tipGameEff.source = str;
@@ -1244,7 +1349,7 @@ public _faPaiPos:eui.Image;
             this._tipGameEff.x = xlLib.Global.screenWidth / 2;
             this._tipGameEff.y = xlLib.Global.screenHeight / 2;
             this.addChild(this._tipGameEff);
-        }
+        //}
         
         this._tipGameEff.play(str, 1);
         this.startGameEffect(this._tipGameEff);
@@ -1264,14 +1369,15 @@ public _faPaiPos:eui.Image;
         },
         200, egret.Ease.bounceOut).call(function() {
             animation.visible = false;
-            egret.Tween.removeTweens(animation);
-            animation.parent.removeChild(animation);
+            //egret.Tween.removeTweens(animation);
+            //animation.parent.removeChild(animation);
         },
         [animation]);
-        this._tipGameEff = null;
+        //this._tipGameEff = null;
     }
     
     public showLightEffect(playLight, value) {
+        egret.Tween.removeTweens(playLight);
         playLight.visible = true;
         playLight.alpha = 0;
         if(value == true) {
@@ -1301,7 +1407,7 @@ public _faPaiPos:eui.Image;
             },
             300).call(function() {
                 playLight.visible = false;
-                egret.Tween.removeTweens(playLight);
+                //egret.Tween.removeTweens(playLight);
             }, [playLight]);
         } else {
             egret.Tween.get(playLight).to({
@@ -1324,7 +1430,7 @@ public _faPaiPos:eui.Image;
             },
             300).call(function() {
                 playLight.visible = false;
-                egret.Tween.removeTweens(playLight);
+                //egret.Tween.removeTweens(playLight);
             }, [playLight]);
         }
     }
@@ -1347,13 +1453,33 @@ public _faPaiPos:eui.Image;
         this, [coin]);
     }
 
-
-
+    
 
     //============================================  Game Result
     private showGameResult(): void {
         clearInterval(this.interval);
         
+    }
+
+    /**更新记录 */
+    private updateRecord(record):void {
+        for(let i=0; i<record.length; i++) {
+            for(let j=0; j<4; j++) {
+                if(i==0) {
+                    if(record[i][j] == 0) {
+                        this["_paiLu_"+i+"_"+j].source = "brnn_game_wrong1_png";
+                    } else {
+                        this["_paiLu_"+i+"_"+j].source = "brnn_game_right1_png";
+                    }
+                } else {
+                    if(record[i][j] == 0) {
+                        this["_paiLu_"+i+"_"+j].source = "brnn_game_wrong_png";
+                    } else {
+                        this["_paiLu_"+i+"_"+j].source = "brnn_game_right_png";
+                    }
+                }
+            }
+        }
     }
 
     /**游戏场景重置 */
@@ -1364,9 +1490,11 @@ public _faPaiPos:eui.Image;
             egret.Tween.removeTweens(card);
 
         }
+        egret.Tween.removeTweens(this.labCardTypeBanker);
         this.labCardTypeBanker.visible = false;
         this.labCardTypeBanker_bg.visible = false;
         for (var index = 0; index < 4; index++) {
+            egret.Tween.removeTweens(this['labCardType' + index]);
             this['labCardType' + index].visible = false;
             this['labCardType_bg_' + index].visible = false;
             for (var j = 0; j < 5; j++) {
@@ -1388,6 +1516,30 @@ public _faPaiPos:eui.Image;
             this._coin_myxin[i].parent.removeChild(this._coin_myxin[i]);
         }
         this._coin_myxin = [];
+
+        if(this._winEff != null) {
+            this._winEff.parent.removeChild(this._winEff);
+            this._winEff = null;
+        }
+
+        egret.Tween.removeTweens(this._tongPei);
+        egret.Tween.removeTweens(this._tongSha);
+        if(this._scoreTurn_label != null) {
+            this._scoreTurn_label.parent.removeChild(this._scoreTurn_label);
+            this._scoreTurn_label = null;
+        }
+
+        if(this.brnnShuffle != null) {
+            this.brnnShuffle.removeAllEffect();
+            this.brnnShuffle.parent.removeChild(this.brnnShuffle);
+            this.brnnShuffle = null;
+        }
+
+        if(this._tipGameEff != null) {
+            egret.Tween.removeTweens(this._tipGameEff);
+            this._tipGameEff.parent.removeChild(this._tipGameEff);
+            this._tipGameEff = null;
+        }
         
         this.initData();
     }
@@ -1404,13 +1556,13 @@ public _faPaiPos:eui.Image;
     public playClickSound(res): void {
         xlLib.SoundMgr.instance.playSound(res + "_mp3");
     }
-
+/*
     public Onquit(): void {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(10));
-        //if (UserInfo.getInstance().isGameStart) {
-            //xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
-            //return;
-        //}
+        if (UserInfo.getInstance().isGameStart) {
+            xlLib.PopUpMgr.addPopUp(Hint, this, true, true, null, 1);
+            return;
+        }
 
         xlLib.SoundMgr.instance.stopBgMusic();
 
@@ -1419,7 +1571,7 @@ public _faPaiPos:eui.Image;
 
         xlLib.SceneMgr.instance.changeScene(Lobby);
         UserInfo.getInstance().playes = [];
-    }
+    }*/
 
     public destroy(): void {
         this.wanjialist.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1431,7 +1583,8 @@ public _faPaiPos:eui.Image;
         this._btn_double_3.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_4.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this._btn_double_5.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
-        this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+        //this._btn_close.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.Onquit, this);
+        this._chongfu_xiazhu.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
 
         this.effectTouch0.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.effectTouch1.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
@@ -1444,6 +1597,7 @@ public _faPaiPos:eui.Image;
         EventUtil.removeEventListener(EventConst.onUserBetOrderUpdate, this.OnBetUpdate, this);
         EventUtil.removeEventListener(EventConst.onUserLeave, this.onleave, this);
 
+        EventUtil.removeEventListener(EventConst.onTimelyNotify, this.TimelyNotify, this);
     }
 
 }
