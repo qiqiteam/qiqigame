@@ -53,6 +53,7 @@
 		"bin-debug/app/game/bjl/BJLUtil.js",
 		"bin-debug/app/game/bjl/BJLView.js",
 		"bin-debug/app/game/bjl/BJLxiazhu.js",
+		"bin-debug/app/game/brnn/BRNNCoin.js",
 		"bin-debug/app/game/brnn/BRNNframe.js",
 		"bin-debug/app/game/brnn/BRNNHead.js",
 		"bin-debug/app/game/brnn/BrnnMainView.js",
@@ -61,6 +62,7 @@
 		"bin-debug/app/game/brnn/BrnnShuffle.js",
 		"bin-debug/app/game/brnn/BRNNUtil.js",
 		"bin-debug/app/game/brnn/BRNNView.js",
+		"bin-debug/app/game/ddz/DDZroomView.js",
 		"bin-debug/app/game/message/SystemMsgItem.js",
 		"bin-debug/app/game/message/SystemMsgTypeItem.js",
 		"bin-debug/app/game/message/SystemMsgView.js",
@@ -104,8 +106,8 @@
 		"bin-debug/app/game/recharge/RechargeView.js",
 		"bin-debug/app/game/safebox/SafeBoxTypeItem.js",
 		"bin-debug/app/game/safebox/SafeBoxView.js",
-		"bin-debug/app/game/set/SetTypeItem.js",
 		"bin-debug/Global.js",
+		"bin-debug/app/game/set/SetView.js",
 		"bin-debug/app/game/tbnn/TBNNHead.js",
 		"bin-debug/app/game/tbnn/TBNNroomEff.js",
 		"bin-debug/app/game/tbnn/TBNNroomView.js",
@@ -199,6 +201,6 @@
 		"bin-debug/views/FloatTips.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/Main.js",
-		"bin-debug/app/game/set/SetView.js"
+		"bin-debug/app/game/set/SetTypeItem.js"
 	]
 }

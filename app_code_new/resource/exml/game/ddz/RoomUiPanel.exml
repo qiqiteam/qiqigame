@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RoomUiPanel" width="1280" height="720" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bg_img" source="ddz_yx_zhuo_jpg" width="100%" height="100%" locked="true"/>
+	<e:Component id="cardCont" width="1280" height="720" x="0" y="0" locked="true"/>
+	<e:Image rotation="0.32" left="451" top="7" source="room_ui_json.ddz_yx_df" locked="true"/>
+	<e:Image left="768" top="7" source="room_ui_json.ddz_yx_bs" locked="true"/>
+
+
+
+
+	<e:Label id="room_lab" text="房间号:175239" bold="true" size="24" fontFamily="Microsoft YaHei" textColor="0xffffff" left="103" top="38" locked="true"/>
+	<e:Label id="time_lbl" text="10:30" size="24" bold="true" textAlign="center" fontFamily="Microsoft YaHei" textColor="0xffffff" left="104" top="10" locked="true"/>
+	<e:Label id="rounds_lab" text="" x="281" y="36" size="24" bold="true" textAlign="center" textColor="0xFFFFFF" fontFamily="Microsoft YaHei" width="90" height="24" locked="true"/>
+	<e:BitmapLabel id="callScore_lab" text="" x="741.5" y="38.67" anchorOffsetX="0" font="ddz_beishu_fnt" textAlign="center" width="112" locked="true"/>
+	<e:BitmapLabel id="bomb_lab" text="" x="421.84" y="41.67" anchorOffsetX="0" font="ddz_difen_fnt" width="112" textAlign="center" locked="true"/>
+
+	<e:Image id="landpoker0_img" width="42" height="58" anchorOffsetX="21" anchorOffsetY="29" skewY="180" source="room_poker_json.small_beimian" left="568" top="11" locked="true"/>
+	<e:Image id="landpoker1_img" width="42" height="58" anchorOffsetX="21" anchorOffsetY="29" skewY="180" source="room_poker_json.small_beimian" left="619" top="11" locked="true"/>
+	<e:Image id="landpoker2_img" width="42" height="58" anchorOffsetX="21" anchorOffsetY="29" skewY="180" source="room_poker_json.small_beimian" left="670" top="11" locked="true"/>
+
+	<e:Image x="183.3" scaleX="1" scaleY="1" y="5" source="room_ui_json.zjh_wifi" visible="false" locked="true"/>
+	<e:Image x="235.84" scaleX="1" scaleY="1" y="12" scale9Grid="1,1,1,1" width="35" source="room_ui_json.zjh_dianchi02" visible="false" locked="true"/>
+	<e:Image x="232.8" scaleX="1" scaleY="1" y="9" source="room_ui_json.zjh_dianchi01" visible="false" locked="true"/>
+
+	<e:Component id="clock_com" x="130" y="400" skinName="ClockSkin" locked="true"/>
+
+
+
+
+
+
+	<e:Group id="playerGrp" width="100%" height="100%" verticalCenter="0" horizontalCenter="0" touchEnabled="false">
+
+
+
+		<e:Group id="tg_grp" width="1280" height="720" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+			<e:Image width="1137" height="224" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="30,30,30,30" bottom="0" horizontalCenter="68.5" source="ddz_yx_zhezao"/>
+			<game:BaseButton id="closeTg_btn" label="" anchorOffsetX="140" anchorOffsetY="41" horizontalCenter="0" bottom="78">
+				<game:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="room_ui_json.ddz_yx_cxtg"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</game:skinName>
+
+			</game:BaseButton>
+		</e:Group>
+		<e:Group id="out_grp" width="1280" height="720" touchEnabled="false" horizontalCenter="1" verticalCenter="-1">
+			<game:BaseButton id="okOut_btn" label="" anchorOffsetX="91.82" anchorOffsetY="38.98" verticalCenter="72" x="878.8199999999999">
+				<game:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="ddz_yx_cp" source.disabled="ddz_yx_cp2"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</game:skinName>
+
+			</game:BaseButton>
+			<game:BaseButton id="passOut_btn" label="" anchorOffsetX="93.15" anchorOffsetY="40.12" scaleX="1" scaleY="1" verticalCenter="71" x="451.15">
+				<game:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="ddz_yx_bcanniu"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</game:skinName>
+
+			</game:BaseButton>
+			<game:BaseButton id="tipOut_btn" label="" anchorOffsetX="94.66" anchorOffsetY="38.78" verticalCenter="72" x="668.66">
+				<game:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="ddz_yx_ts"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</game:skinName>
+
+			</game:BaseButton>
+		</e:Group>
+		<e:Group id="score_grp" width="1280" height="720" touchEnabled="false" horizontalCenter="0" verticalCenter="0">
+			<game:BaseButton id="noScore_btn" label="" anchorOffsetX="90.67" anchorOffsetY="37.34" verticalCenter="79" x="400.67">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ddz_yx_bjan"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+			</game:BaseButton>
+			<game:BaseButton id="oneScore_btn" label="" anchorOffsetX="82.67" anchorOffsetY="40.01" verticalCenter="76" x="608.67">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ddz_yx_1f" source.disabled="ddz_yx_1f2"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+			</game:BaseButton>
+			<game:BaseButton id="twoScore_btn" label="" anchorOffsetX="81.33" anchorOffsetY="37.34" verticalCenter="79" x="819.33">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ddz_yx_2f" source.disabled="ddz_yx_2f2"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+			</game:BaseButton>
+			<game:BaseButton id="threeScore_btn" label="" anchorOffsetX="81.33" anchorOffsetY="38.67" verticalCenter="77" x="1027.33">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ddz_yx_3f" source.disabled="ddz_yx_3f3"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+			</game:BaseButton>
+		</e:Group>
+		<e:Group id="player0_grp" touchEnabled="false" left="0" bottom="14">
+			<e:Image id="head0_img" x="14" y="6" width="100" height="100" source=""/>
+			<e:Image source="ddz_yx_txk" touchEnabled="false" bottom="61" left="6"/>
+			<e:Image id="land0_img" source="ddz_yx_dizhu" verticalCenter="-51.5" left="90"/>
+			<e:Image x="4" y="117.37" source="ddz_yx_txk3" width="130"/>
+			<e:Image id="goldIcon0_img" bottom="5" left="7" source="ty_jinbi_png"/>
+			<e:Label id="name0_lab" text="爱吃鱼的猫" size="16" anchorOffsetX="0" width="118" textAlign="center" height="16" fontFamily="Microsoft YaHei" bottom="36" left="6" anchorOffsetY="0"/>
+			<e:BitmapLabel id="gold0_lab" height="20" text="1000" font="ddz_gold_fnt" width="101" textAlign="center" bottom="6" left="36"/>
+		</e:Group>
+		<e:Group id="player1_grp" touchEnabled="false" right="4" top="165">
+			<e:Image id="head1_img" width="100" height="100" source="" right="19" top="5"/>
+			<e:Image source="ddz_yx_txk" scaleX="-1" touchEnabled="false" right="12" top="0"/>
+			<e:Image source="ddz_yx_txk3" width="130" top="120" right="0"/>
+			<e:Image id="land1_img" source="ddz_yx_dizhu" right="13" top="0"/>
+			<e:Image id="goldIcon1_img" top="147" right="101" source="ty_jinbi_png"/>
+			<e:Label id="name1_lab" text="爱吃鱼的猫" size="16" anchorOffsetX="0" width="118" textAlign="center" height="20" fontFamily="Microsoft YaHei" right="10" top="125"/>
+			<e:BitmapLabel id="gold1_lab" height="20" text="1000" font="ddz_gold_fnt" width="101" textAlign="center" top="151" right="0"/>
+		</e:Group>
+		<e:Group id="player2_grp" touchEnabled="false" left="0" top="165" x="0" y="165" scaleX="1" scaleY="1">
+			<e:Image id="head2_img" x="14" y="5.34" width="100" height="100" source=""/>
+			<e:Image source="ddz_yx_txk" touchEnabled="false" verticalCenter="-31.5" left="6"/>
+			<e:Image source="ddz_yx_txk3" width="130" verticalCenter="60" left="4"/>
+			<e:Image id="land2_img" source="ddz_yx_dizhu" left="90" verticalCenter="-52.5"/>
+			<e:Image id="goldIcon2_img" verticalCenter="69.5" left="8" source="ty_jinbi_png"/>
+			<e:Label id="name2_lab" text="爱吃鱼的猫" x="6.68" y="126" size="16" anchorOffsetX="0" width="118" textAlign="center" height="20" fontFamily="Microsoft YaHei"/>
+			<e:BitmapLabel id="gold2_lab" height="20" text="1000" font="ddz_gold_fnt" width="101" textAlign="center" verticalCenter="72.5" left="35"/>
+		</e:Group>
+
+
+
+		<e:Component id="amd0" width="20" height="20" left="130" bottom="169" x="126" y="531" scaleX="1" scaleY="1"/>
+		<e:Component id="amd2" width="20" height="20" left="132" top="165" x="132" y="165" scaleX="1" scaleY="1"/>
+		<e:Component id="amd1" width="20" height="20" right="131" top="165" x="1131" y="165" scaleX="1" scaleY="1"/>
+		<e:Image id="recd2_img" scaleX="1" scaleY="1" source="ddz_yx_zbz" left="158" top="195" x="158" y="195"/>
+		<e:Image id="recd0_img" source="ddz_yx_zbz" left="154" bottom="79" height="66" x="154" y="575" scaleX="1" scaleY="1"/>
+		<e:Image id="recd1_img" scaleX="1" scaleY="1" source="ddz_yx_zbz" right="168" top="215" x="988" y="215"/>
+		<e:Image id="outcar_com2" source="room_ui_json.ddz_yx_yaobuqi" x="342.5" y="195"/>
+		<e:Image id="outcar_com0" horizontalCenter="-1.5" source="room_ui_json.ddz_yx_yaobuqi" y="328"/>
+		<e:Image id="outcar_com1" source="room_ui_json.ddz_yx_yaobuqi" x="796" y="197"/>
+		<e:Image id="jf_com2" source="room_ui_json.ddz_yx_bj" verticalCenter="-131.5" horizontalCenter="-228.5" name="jf_com2"/>
+		<e:Image source="room_ui_json.ddz_yx_bj" id="jf_com1" verticalCenter="-130.5" horizontalCenter="263.5" name="jf_com1"/>
+		<e:Image source="room_ui_json.ddz_yx_bj" id="jf_com0" horizontalCenter="0.5" verticalCenter="-1.5" name="jf_com0"/>
+
+
+
+		<e:Component id="tx0" width="20" height="20" horizontalCenter="1" verticalCenter="-1"/>
+		<e:Component id="tx2" width="20" height="20" verticalCenter="-137" horizontalCenter="-219"/>
+		<e:Component id="tx1" width="20" height="20" horizontalCenter="256" verticalCenter="-139"/>
+		<game:BaseButton id="yuying_btn" label="" right="6" verticalCenter="87">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="zjh_yuying_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+
+		</game:BaseButton>
+		<game:BaseButton id="chat_btn" label="" anchorOffsetX="47" anchorOffsetY="47" left="13" verticalCenter="80">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="zjh_biaoqing_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+
+		</game:BaseButton>
+		<game:BaseButton id="tg_btn" label="" anchorOffsetX="47" anchorOffsetY="51" right="144" top="7">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ddz_yx_tg"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</game:skinName>
+		</game:BaseButton>
+		<game:BaseButton id="help_btn" label="" anchorOffsetX="47" anchorOffsetY="51" right="15" top="8" locked="true">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="zjh_bangzhu_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+
+		</game:BaseButton>
+		<game:BaseButton id="back_btn" label="" anchorOffsetX="44" anchorOffsetY="44.5" left="16" top="9" locked="true">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="zjh_caidan_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+
+		</game:BaseButton>
+		<game:BaseButton id="prepare_btn" label="" horizontalCenter="200" anchorOffsetX="158" anchorOffsetY="42" verticalCenter="73" locked="true">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ddz_yx_zb"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</game:skinName>
+		</game:BaseButton>
+		<game:BaseButton id="invite_btn" label="" anchorOffsetX="150" anchorOffsetY="42" horizontalCenter="-199.5" verticalCenter="73.5" locked="true">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ddz_yx_wxyq"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+
+		</game:BaseButton>
+	</e:Group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</e:Skin>

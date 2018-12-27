@@ -1,0 +1,25 @@
+﻿{
+"mc": {
+	"ddz_baojing": {
+		"frameRate":24,
+		"labels": [
+		],
+		"frames": [
+			{"res":"ddz_baojing0000","x":-43.6,"y":-43.7,"duration":2},
+			{"res":"ddz_baojing0002","x":-43.6,"y":-43.7,"duration":2},
+			{"res":"ddz_baojing0004","x":-43.6,"y":-43.7,"duration":2},
+			{"res":"ddz_baojing0006","x":-43.6,"y":-43.7,"duration":2},
+			{"res":"ddz_baojing0008","x":-43.6,"y":-43.7,"duration":2},
+			{"res":"ddz_baojing0010","x":-43.6,"y":-43.7,"duration":2}
+		]
+	}
+},
+"res": {
+	"ddz_baojing0000":{"x":0,"y":0,"w":88,"h":88},
+	"ddz_baojing0002":{"x":88,"y":0,"w":88,"h":88},
+	"ddz_baojing0004":{"x":0,"y":88,"w":88,"h":88},
+	"ddz_baojing0006":{"x":88,"y":88,"w":88,"h":88},
+	"ddz_baojing0008":{"x":0,"y":176,"w":88,"h":88},
+	"ddz_baojing0010":{"x":88,"y":176,"w":88,"h":88}
+}
+}

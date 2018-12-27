@@ -58,7 +58,7 @@
 
 	<e:Group id="grpCountdown0" horizontalCenter="132.5" verticalCenter="-240.5" width="71" height="72" locked="true">
 		<e:Image source="bg_timer_png" x="0" y="0"/>
-		<e:Label id="timeTxt" text="0" size="30" textColor="0xbf0b0b" textAlign="center" verticalAlign="middle" fontFamily="Microsoft YaHei" bold="true" y="17.29" horizontalCenter="0"/>
+		<e:Label id="timeTxt" text="0" size="30" textColor="0xbf0b0b" textAlign="center" verticalAlign="middle" fontFamily="Microsoft YaHei" bold="true" y="18.81" horizontalCenter="0"/>
 	</e:Group>
 
 

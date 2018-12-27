@@ -1595,22 +1595,22 @@ class TBNNView extends eui.Component {
             str = "-";
         }
         if (index == 0) {
-            label.x = 90;
+            label.x = 60;
             label.y = -40;
         } else if (index == 1) {
-            label.x = 30;
+            label.x = -20;
             label.y = -40;
         } else if (index == 2) {
-            label.x = 30;
+            label.x = -20;
             label.y = -40;
         } else if (index == 3) {
-            label.x = 90;
+            label.x = 60;
             label.y = -40;
         } else if (index == 4) {
-            label.x = 30;
+            label.x = -20;
             label.y = -40;
         } else if (index == 5) {
-            label.x = 30;
+            label.x = -20;
             label.y = -40;
         }
         label.scaleX = 1;
@@ -1876,6 +1876,7 @@ class TBNNView extends eui.Component {
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clearTimer, this);
         }
+        this.clearTime();
         this.removeEff(this.nnbankerEff);
 
         if (this.interval != 0) {

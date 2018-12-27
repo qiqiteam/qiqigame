@@ -60,6 +60,8 @@ declare class ComBoxItemSkin extends eui.Skin{
 }
 declare class ComBoxSkin extends eui.Skin{
 }
+declare class CreteCheckBox extends eui.Skin{
+}
 declare class HintSkin extends eui.Skin{
 }
 declare class InthematchSkin extends eui.Skin{
@@ -93,6 +95,10 @@ declare class BRNNHeadSkin extends eui.Skin{
 declare class BRNNroomViewSkin extends eui.Skin{
 }
 declare class BRNNViewSkin extends eui.Skin{
+}
+declare class DDZroomViewSkin extends eui.Skin{
+}
+declare class RoomUiPanel extends eui.Skin{
 }
 declare class ErBaGangroomEffSkin extends eui.Skin{
 }

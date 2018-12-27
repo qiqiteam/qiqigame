@@ -384,7 +384,7 @@ class QZNNView extends eui.Component {
         this.pinpaiType1.visible = false;
         this.pinpaiType2.visible = false;
 
-        this._xiabei_0.x = 295.61;
+        this._xiabei_0.x = 353.24;
         this._xiabei_1.x = 368.16;
         this._xiabei_2.x = 530.48;
         this._xiabei_3.x = 1146.78;
@@ -780,7 +780,7 @@ class QZNNView extends eui.Component {
 
             if (data._obj.hogList[i].hogOrBet >= 10) {
                 this['beishu_' + i].visible = true;
-                this['beishu_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet / 10 % 10 + '_png';
+                this['beishu_' + i].source = 'img_XB_' + parseInt((data._obj.hogList[i].hogOrBet / 10) + '') + '_png';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet % 10 + '_png';
                 this['bs_img_' + i].visible = true;
@@ -789,7 +789,6 @@ class QZNNView extends eui.Component {
                 this['beishu_' + i].source = '';
                 this['beishu_0_' + i].visible = true;
                 this['beishu_0_' + i].source = 'img_XB_' + data._obj.hogList[i].hogOrBet + '_png';
-                // console.log(data._obj.hogList[i].hogOrBet);
                 this['bs_img_' + i].visible = true;
             }
             this.multipleList[i] = data._obj.hogList[i].hogOrBet;
@@ -1548,61 +1547,11 @@ class QZNNView extends eui.Component {
         this.flyBankerIndex++;
     }
 
-    /**自己发牌动作 */
-    /*
-    private bankerCardFly(): void {
-        if (this.flyBankerIndex == 5) {
-            this.flyBankerIndex = 0;
-            clearInterval(this.flyIntval);
-            this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
-            var poke = this.zijipokes;
-            for (var i = 0; i < 5; i++) {
-                var card_my = this['_puke_' + i];
-                card_my.source = 'qznn_card_100';
-                egret.Tween.get(card_my).to({ scaleX: 0 }, 400).call(function () {
-                    this[0].source = 'qznn_card_' + this[1];
-                    egret.Tween.get(this[0]).to({ scaleX: 1 }, 400);
-                }, [card_my, poke[i]])
-                var str = poke[i].toString();
-                str = str.slice(1);
-                var intnum = parseInt(str);
-                if (intnum > 10) {
-                    intnum = 10;
-                }
-                this.score[i] = intnum;
-                var card_banker = this['bankerCard_' + i];
-                card_banker.source = 'qznn_card_100';
-            }
-            this.startCardRotation = true;
-            return;
-        }
-        this._pingpai.visible = true;
-        this.texiao.play();
-
-
-
-        var card: eui.Image = this['_puke_' + this.flyBankerIndex];
-        card.x = xlLib.Global.screenWidth / 2;
-        card.y = xlLib.Global.screenHeight / 2;
-        card.source = 'qznn_card_100';
-        card.anchorOffsetX = card.width / 2;
-        card.x += card.width / 2;
-        this.orginPinCardPos;
-        var pos = this.orginPinCardPos[this.flyBankerIndex];
-        this.playClickSound(QZNNUtil.getInstance().getSoundEffect(6));
-        egret.Tween.get(card).to({ x: pos.x, y: pos.y }, 400);
-        this.flyBankerIndex++;
-
-    }*/
 
     private effectPlayerIndex = 0;
     /**结算 其他玩家翻牌*/
     private playerCardRotation(): void {
         this._tishi.visible = false;
-        this.pinpaiType.visible = false;
-        for (let i = 0; i > 3; i++) {
-            this['pinpaiType' + i].visible = false;
-        }
 
         if (this.effectPlayerIndex == this.cardResult.pokes.length - 1) {
             clearInterval(this.interval)
@@ -1613,6 +1562,7 @@ class QZNNView extends eui.Component {
         this.playClickSound(QZNNUtil.getInstance().getSoundEffect(7));
         var poke = this.cardResult.pokes;
         var index = this.effectPlayerIndex;
+        this['pinpaiType' + index].visible = false;
         for (var i = 0; i < 5; i++) {
             var card = this['grpCard_' + index + '_' + i];
             if (index == 0) {
@@ -1870,17 +1820,17 @@ class QZNNView extends eui.Component {
             str = "-";
         }
         if (index == 0) {
-            label.x = 0;
+            label.x = -30;
             label.y = -40;
             label.textAlign = egret.HorizontalAlign.RIGHT;
         } else if (index == 1) {
-            label.x = 30;
+            label.x = -30;
             label.y = -40;
         } else if (index == 2) {
-            label.x = 90;
+            label.x = 60;
             label.y = -40;
         } else if (index == 3) {
-            label.x = 30;
+            label.x = -30;
             label.y = -40;
         }
         label.scaleX = 1;
@@ -2016,7 +1966,7 @@ class QZNNView extends eui.Component {
         this.pinpaiType2.visible = false;
         this.grpCountdown.visible = true;
 
-        this._xiabei_0.x = 295.61;
+        this._xiabei_0.x = 353.24;
         this._xiabei_1.x = 368.16;
         this._xiabei_2.x = 530.48;
         this._xiabei_3.x = 1146.78;
@@ -2162,6 +2112,7 @@ class QZNNView extends eui.Component {
         if (this.cdTimer != null) {
             this.cdTimer.removeEventListener(egret.TimerEvent.TIMER, this.clearTimer, this);
         }
+        this.clearTime();
         this.removeEff(this.nnbankerEff);
     }
 }
