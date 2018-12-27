@@ -486,13 +486,13 @@ module EffectUtils {
             coin.scaleX = 1;
             coin.scaleY = 1;
             obj.addChild(coin);
-            egret.Tween.get(coin).to({ x: endX, y: endY, scaleX: 1.1, scaleY: 1.1 }, 600)
+            egret.Tween.get(coin).to({ x: endX, y: endY, scaleX: 1.1, scaleY: 1.1 }, 300)
                 .wait(100)
                 .call(function () {
                     obj.removeChild(coin);
                 }, [obj, coin])
         }
-        interval = setInterval(flyEffect.bind(this), 100);
+        interval = setInterval(flyEffect.bind(this), 50);
     }
 
     /**

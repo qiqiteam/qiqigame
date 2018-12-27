@@ -320,7 +320,7 @@ module uiCore {
                    txt = sub1+splitstr+sub2;
                 }
                 target.text = str +txt;
-                console.log(target.text+"-----------------------");
+                //console.log(target.text+"-----------------------");
                 
             }, 30);     
         }
@@ -341,6 +341,425 @@ module uiCore {
 
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    export class DisplayUtils extends egret.Shape {
+
+        public _poolDisplay = {};
+        public _darkGroup = {};
+        constructor() {
+            super();
+        }
+
+        public childrenCreated() {
+
+        }
+
+        public static getSector(e, t, i, a) {
+            void 0 === e && (e = 100),
+            void 0 === t && (t = 0),
+            void 0 === i && (i = 360),
+            void 0 === a && (a = 16711680);
+            var n = new egret.Shape,
+            s = 0,
+            r = 0;
+            n.graphics.beginFill(a),
+            t = t * Math.PI / 180;
+            var o = !0;
+            return 0 > i && (o = !1),
+            n.graphics.drawArc(s, r, e, t, t + i * Math.PI / 180, !o),
+            n.graphics.lineTo(s, r),
+            n.graphics.lineTo(s + e * Math.cos(t), r + e * Math.sin(t)),
+            n.graphics.endFill(),
+            n
+        }
+
+        public getRect(e, t, i, a) {
+            void 0 === i && (i = 1),
+            void 0 === a && (a = 16711680);
+            var n = new egret.Shape;
+            return n.graphics.beginFill(a, i),
+            n.graphics.drawRect(0, 0, e, t),
+            n.graphics.endFill(),
+            n
+        }
+
+        public getPoolDisplayObject(e) {
+            var t = null,
+            i = [],
+            a = egret.getQualifiedClassName(e);
+            return this._poolDisplay[a] && (i = this._poolDisplay[a]),
+            t = i.length > 0 ? i.pop() : new e
+        }
+
+        public recyclePoolDisplayObject(e) {
+            e.parent && e.parent.removeChild(e),
+            e.alpha = 1,
+            e.visible = !0,
+            e.scaleX = e.scaleY = 1,
+            e.mask = null,
+            e.x = e.y = 0;
+            var t = [],
+            i = egret.getQualifiedClassName(e);
+            this._poolDisplay[i] ? t = this._poolDisplay[i] : this._poolDisplay[i] = t,
+            t.push(e)
+        }
+
+        public clearAllPoolDisplayObject() {
+            for (var e in this._poolDisplay) for (var t = this._poolDisplay[e]; t.length > 0;) {
+                var i = t.pop();
+                i = null
+            }
+            this._poolDisplay = {}
+        }
+
+        public restoreEuiImage(e) {
+            this._darkGroup && this._darkGroup[e.hashCode] && this.clearDarkImage(this._darkGroup[e.hashCode])
+        }
+
+        public darkEuiImage(e) {
+            this._darkGroup || (this._darkGroup = {});
+            var t, i;
+            if (this._darkGroup[e.hashCode]) t = this._darkGroup[e.hashCode],
+            i = t.getChildAt(0),
+            i.source = e.source;
+            else {
+                t = new eui.Group,
+                this._darkGroup[e.hashCode] = t,
+                i = new eui.Image,
+                i.source = e.source;
+                var a = new eui.Rect;
+                a.top = 0,
+                a.bottom = 0,
+                a.right = 0,
+                a.left = 0,
+                a.fillColor = 0,
+                a.fillAlpha = .3,
+                t.addChild(i),
+                t.addChild(a),
+                t.mask = i,
+                e.parent.contains(t) || (e.parent.addChild(t), t.addEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemoveGroup, this))
+            }
+        }
+
+        public onRemoveGroup(e) {
+            var t = e.currentTarget;
+            this.clearDarkImage(t)
+        }
+
+        public clearDarkImage(e) {
+            for (var t in this._darkGroup) if (this._darkGroup[t] == e) {
+                this._darkGroup[t] = null,
+                delete this._darkGroup[t];
+                break
+            }
+            e.removeEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemoveGroup, this),
+            e.parent && (e.parent.removeChild(e), e.mask = null)
+        }
+    }
+
+
+/*
+function(e) {
+    var t = function() {
+        function e() {}
+
+
+
+        return e.getSector = function(e, t, i, a) {
+            void 0 === e && (e = 100),
+            void 0 === t && (t = 0),
+            void 0 === i && (i = 360),
+            void 0 === a && (a = 16711680);
+            var n = new egret.Shape,
+            s = 0,
+            r = 0;
+            n.graphics.beginFill(a),
+            t = t * Math.PI / 180;
+            var o = !0;
+            return 0 > i && (o = !1),
+            n.graphics.drawArc(s, r, e, t, t + i * Math.PI / 180, !o),
+            n.graphics.lineTo(s, r),
+            n.graphics.lineTo(s + e * Math.cos(t), r + e * Math.sin(t)),
+            n.graphics.endFill(),
+            n
+        },
+        e.getRect = function(e, t, i, a) {
+            void 0 === i && (i = 1),
+            void 0 === a && (a = 16711680);
+            var n = new egret.Shape;
+            return n.graphics.beginFill(a, i),
+            n.graphics.drawRect(0, 0, e, t),
+            n.graphics.endFill(),
+            n
+        },
+        e.getPoolDisplayObject = function(e) {
+            var t = null,
+            i = [],
+            a = egret.getQualifiedClassName(e);
+            return this._poolDisplay[a] && (i = this._poolDisplay[a]),
+            t = i.length > 0 ? i.pop() : new e
+        },
+        e.recyclePoolDisplayObject = function(e) {
+            e.parent && e.parent.removeChild(e),
+            e.alpha = 1,
+            e.visible = !0,
+            e.scaleX = e.scaleY = 1,
+            e.mask = null,
+            e.x = e.y = 0;
+            var t = [],
+            i = egret.getQualifiedClassName(e);
+            this._poolDisplay[i] ? t = this._poolDisplay[i] : this._poolDisplay[i] = t,
+            t.push(e)
+        },
+        e.clearAllPoolDisplayObject = function() {
+            for (var e in this._poolDisplay) for (var t = this._poolDisplay[e]; t.length > 0;) {
+                var i = t.pop();
+                i = null
+            }
+            this._poolDisplay = {}
+        },
+        e.restoreEuiImage = function(e) {
+            this._darkGroup && this._darkGroup[e.hashCode] && this.clearDarkImage(this._darkGroup[e.hashCode])
+        },
+        e.darkEuiImage = function(e) {
+            this._darkGroup || (this._darkGroup = {});
+            var t, i;
+            if (this._darkGroup[e.hashCode]) t = this._darkGroup[e.hashCode],
+            i = t.getChildAt(0),
+            i.source = e.source;
+            else {
+                t = new eui.Group,
+                this._darkGroup[e.hashCode] = t,
+                i = new eui.Image,
+                i.source = e.source;
+                var a = new eui.Rect;
+                a.top = 0,
+                a.bottom = 0,
+                a.right = 0,
+                a.left = 0,
+                a.fillColor = 0,
+                a.fillAlpha = .3,
+                t.addChild(i),
+                t.addChild(a),
+                t.mask = i,
+                e.parent.contains(t) || (e.parent.addChild(t), t.addEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemoveGroup, this))
+            }
+        },
+        e.onRemoveGroup = function(e) {
+            var t = e.currentTarget;
+            this.clearDarkImage(t)
+        },
+        e.clearDarkImage = function(e) {
+            for (var t in this._darkGroup) if (this._darkGroup[t] == e) {
+                this._darkGroup[t] = null,
+                delete this._darkGroup[t];
+                break
+            }
+            e.removeEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemoveGroup, this),
+            e.parent && (e.parent.removeChild(e), e.mask = null)
+        },
+        e._poolDisplay = {},
+        e
+    } ();
+    e.DisplayUtils = t,
+    __reflect(t.prototype, "uiCore.DisplayUtils")
+} (uiCore || (uiCore = {}));
+*/
+    export class ProgressTimer extends eui.Image {
+
+        private shapeX: number = 0;
+        private shapeY: number = 0;
+        private _value: number = 0;
+        private shape;
+        private blink:eui.Image;
+        constructor() {
+            super();
+        }
+
+        public childrenCreated() {
+            this.shapeX = this.width / 2 + 0.1362 * this.width,
+            this.shapeY = this.height / 2
+        }
+
+
+        public get value(): number {
+            return this._value;
+        }
+
+        public set value(e) {
+            var t = this._value != e;
+            this._value = e,
+            t && this.updateNow()
+        }
+
+        public updateNow() {
+            this.visible = 0 != this.value,
+            this.blink.visible = 0 != this.value,
+            this.shape && this.parent.removeChild(this.shape);
+            var e = this.value / 100 * 360;
+            this.shape = uiCore.DisplayUtils.getSector(.6 * this.width, 0, e, 0),
+            this.shape.rotation = -90,
+            this.shape.x = this.shapeX,
+            this.shape.y = this.shapeY,
+            this.parent.addChild(this.shape),
+            this.mask = this.shape;
+            var t = this.getPoint(e + 90, {
+                x: this.x + this.width / 2,
+                y: this.y + this.height / 2
+            },
+            this.width / 2 - this.blink.width / 4);
+            this.blink.x = t.x,
+            this.blink.y = t.y
+        }
+
+        public startBlinkTween() {
+            egret.Tween.get(this.blink, {
+                loop: true
+            }).to({
+                rotation: 360
+            },
+            3e3)
+        }
+
+        public getPoint(e, t, i) {
+            var a = 2 * Math.PI / 360 * e;
+            return new egret.Point(t.x - Math.cos(a) * i, t.y - Math.sin(a) * i)
+        }
+    }
+/*
+var ProgressTimer1 = function(e) {
+    function t() {
+        var t = null !== e && e.apply(this, arguments) || this;
+        return t.shapeX = 0,
+        t.shapeY = 0,
+        t._value = 0,
+        t
+    }
+    return __extends(t, e),
+    Object.defineProperty(t.prototype, "value", {
+        get: function() {
+            return this._value
+        },
+        set: function(e) {
+            var t = this._value != e;
+            this._value = e,
+            t && this.updateNow()
+        },
+        enumerable: !0,
+        configurable: !0
+    }),
+    t.prototype.childrenCreated = function() {
+        this.shapeX = this.width / 2 + .1362 * this.width,
+        this.shapeY = this.height / 2
+    },
+    t.prototype.updateNow = function() {
+        this.visible = 0 != this.value,
+        this.blink.visible = 0 != this.value,
+        this.shape && this.parent.removeChild(this.shape);
+        var e = this.value / 100 * 360;
+        this.shape = uiCore.DisplayUtils.getSector(.6 * this.width, 0, e),
+        this.shape.rotation = -90,
+        this.shape.x = this.shapeX,
+        this.shape.y = this.shapeY,
+        this.parent.addChild(this.shape),
+        this.mask = this.shape;
+        var t = this.getPoint(e + 90, {
+            x: this.x + this.width / 2,
+            y: this.y + this.height / 2
+        },
+        this.width / 2 - this.blink.width / 4);
+        this.blink.x = t.x,
+        this.blink.y = t.y
+    },
+    t.prototype.startBlinkTween = function() {
+        egret.Tween.get(this.blink, {
+            loop: !0
+        }).to({
+            rotation: 360
+        },
+        3e3)
+    },
+    t.prototype.getPoint = function(e, t, i) {
+        var a = 2 * Math.PI / 360 * e;
+        return new egret.Point(t.x - Math.cos(a) * i, t.y - Math.sin(a) * i)
+    },
+    t
+} (eui.Image);
+__reflect(ProgressTimer.prototype, "ProgressTimer");
+*/
+/*
+var ProgressTimer = function(e) {
+    function t() {
+        var t = null !== e && e.apply(this, arguments) || this;
+        return t.shapeX = 0,
+        t.shapeY = 0,
+        t._value = 0,
+        t
+    }
+    return __extends(t, e),
+    Object.defineProperty(t.prototype, "value", {
+        get: function() {
+            return this._value
+        },
+        set: function(e) {
+            var t = this._value != e;
+            this._value = e,
+            t && this.updateNow()
+        },
+        enumerable: !0,
+        configurable: !0
+    }),
+    t.prototype.childrenCreated = function() {
+        this.shapeX = this.width / 2 + .1362 * this.width,
+        this.shapeY = this.height / 2
+    },
+    t.prototype.updateNow = function() {
+        this.visible = 0 != this.value,
+        this.blink.visible = 0 != this.value,
+        this.shape && this.parent.removeChild(this.shape);
+        var e = this.value / 100 * 360;
+        this.shape = uiCore.DisplayUtils.getSector(.6 * this.width, 0, e),
+        this.shape.rotation = -90,
+        this.shape.x = this.shapeX,
+        this.shape.y = this.shapeY,
+        this.parent.addChild(this.shape),
+        this.mask = this.shape;
+        var t = this.getPoint(e + 90, {
+            x: this.x + this.width / 2,
+            y: this.y + this.height / 2
+        },
+        this.width / 2 - this.blink.width / 4);
+        this.blink.x = t.x,
+        this.blink.y = t.y
+    },
+    t.prototype.startBlinkTween = function() {
+        egret.Tween.get(this.blink, {
+            loop: !0
+        }).to({
+            rotation: 360
+        },
+        3e3)
+    },
+    t.prototype.getPoint = function(e, t, i) {
+        var a = 2 * Math.PI / 360 * e;
+        return new egret.Point(t.x - Math.cos(a) * i, t.y - Math.sin(a) * i)
+    },
+    t
+} (eui.Image);
+__reflect(ProgressTimer.prototype, "ProgressTimer");
+*/
 
 /*
     export class SoundManager extends eui.Group {

@@ -100,6 +100,10 @@ declare class DDZroomViewSkin extends eui.Skin{
 }
 declare class RoomUiPanel extends eui.Skin{
 }
+declare class DZPKHeadSkin extends eui.Skin{
+}
+declare class DZPKViewSkin extends eui.Skin{
+}
 declare class ErBaGangroomEffSkin extends eui.Skin{
 }
 declare class ErBaGangroomViewSkin extends eui.Skin{

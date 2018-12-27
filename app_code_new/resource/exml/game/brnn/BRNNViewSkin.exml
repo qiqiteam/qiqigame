@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="BRNNViewSkin" width="1472" height="828" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
-	<e:Group horizontalCenter="0" verticalCenter="0">
+	<e:Group horizontalCenter="0" verticalCenter="0" locked="true">
 		<e:Image y="0" x="0" source="brnn_game_bg_png"/>
 		<e:Image x="0" y="0" source="brnn_game_bigbg_png"/>
 
@@ -174,313 +174,63 @@
 
 
 	</e:Group>
-
-
-	<e:Group id="grpSecondPanel" x="0" y="0" visible="false" locked="true">
-		<e:Rect width="640" height="1008" x="0" y="0" fillAlpha="0.2" locked="true" />
-		<e:Image source="nn.secondbg" scale9Grid="41,26,251,158" width="582" height="618" horizontalCenter="0" y="170"
-		         locked="true" />
-		<e:Group id="grpHistory" x="42" y="188" locked="true" visible="false">
-			<e:Image source="nn.t1" y="0" x="206" />
-			<e:Group x="48" y="38.35">
-				<e:Image source="nn.a3" x="0" y="0" />
-				<e:Image x="122" y="0" source="nn.a4" />
-				<e:Image x="245" y="0" source="nn.a5" />
-				<e:Image x="367" y="1" source="nn.a6" />
-			</e:Group>
-			<e:Group id="grpHistroy0" x="46" y="126.37">
-				<e:Image id="grpHistroy0_0" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_0" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_0" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_0" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy1" x="46" y="171">
-				<e:Image id="grpHistroy0_1" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_1" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_1" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_1" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy2" x="46" y="215">
-				<e:Image id="grpHistroy0_2" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_2" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_2" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_2" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy3" x="46" y="259">
-				<e:Image id="grpHistroy0_3" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_3" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_3" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_3" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy4" x="46" y="304">
-				<e:Image id="grpHistroy0_4" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_4" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_4" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_4" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy5" x="46" y="348">
-				<e:Image id="grpHistroy0_5" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_5" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_5" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_5" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy6" x="46" y="392">
-				<e:Image id="grpHistroy0_6" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_6" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_6" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_6" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy7" x="46" y="437">
-				<e:Image id="grpHistroy0_7" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_7" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_7" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_7" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy8" x="46" y="481">
-				<e:Image id="grpHistroy0_8" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_8" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_8" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_8" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Group id="grpHistroy9" x="46" y="525.37">
-				<e:Image id="grpHistroy0_9" source="nn.a7" x="0" y="0" />
-				<e:Image id="grpHistroy1_9" x="123.5" y="0" source="nn.a8" />
-				<e:Image id="grpHistroy2_9" source="nn.a7" x="247.5" y="0" />
-				<e:Image id="grpHistroy3_9" x="371" y="0" source="nn.a8" />
-			</e:Group>
-			<e:Image x="0" y="108.37" source="nn.a9" />
-		</e:Group>
-		<e:Group id="grpCardType" x="29" y="187" width="582" anchorOffsetY="0" height="580">
-			<e:Image y="0" source="nn.t3222" horizontalCenter="0" />
-			<e:Group x="50" y="48.66">
-				<e:Group x="0" y="0">
-					<e:Label text="五花牛" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x6" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xfff900"
-					         width="80" />
-					<e:Image x="80" y="0" scaleX="1" scaleY="1" source="nn.card_113" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_112" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_212" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_111" />
-				</e:Group>
-				<e:Group x="270" y="0">
-					<e:Label text="牛六" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x1" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_112" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_305" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_201" />
-				</e:Group>
-				<e:Image source="nn.a10" y="66" x="16" />
-			</e:Group>
-			<e:Group x="50" y="123.5">
-				<e:Group x="0" y="0">
-					<e:Label text="四炸" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x5" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_101" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_201" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_301" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_401" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_207" />
-				</e:Group>
-				<e:Group x="270" y="0">
-					<e:Label text="牛五" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x1" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_412" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_304" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_201" />
-				</e:Group>
-				<e:Image source="nn.a10" y="66" x="16" />
-			</e:Group>
-			<e:Group x="50" y="199.5">
-				<e:Group x="0" y="0">
-					<e:Label text="葫芦" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x4" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_101" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_201" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_301" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_413" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-				</e:Group>
-				<e:Group x="270" y="0">
-					<e:Label text="牛四" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x1" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_312" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_203" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_401" />
-				</e:Group>
-				<e:Image source="nn.a10" y="66" x="16" />
-			</e:Group>
-			<e:Group x="50" y="274.5">
-				<e:Group x="0" y="0">
-					<e:Label text="牛牛" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x3" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_402" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_105" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_203" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_113" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_413" />
-				</e:Group>
-				<e:Group x="270" y="0">
-					<e:Label text="牛三" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x1" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_312" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_401" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_101" />
-				</e:Group>
-				<e:Image source="nn.a10" y="66" x="16" />
-			</e:Group>
-			<e:Group x="50" y="349.5">
-				<e:Group x="0" y="0">
-					<e:Label text="牛九" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x2" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_312" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_408" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_101" />
-				</e:Group>
-				<e:Group x="270" y="0">
-					<e:Label text="牛二" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率*1" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_312" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_401" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_101" />
-				</e:Group>
-				<e:Image source="nn.a10" y="66" x="16" />
-			</e:Group>
-			<e:Group x="50" y="424.5">
-				<e:Group x="0" y="0">
-					<e:Label text="牛八" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x2" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_312" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_407" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_101" />
-				</e:Group>
-				<e:Group x="270" y="0">
-					<e:Label text="牛丁" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x1" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_312" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_410" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_101" />
-				</e:Group>
-				<e:Image source="nn.a10" y="66" x="16" />
-			</e:Group>
-			<e:Group x="50" y="500">
-				<e:Group x="0" y="0">
-					<e:Label text="牛七" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x2" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_312" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_406" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_101" />
-				</e:Group>
-				<e:Group x="270" y="0">
-					<e:Label text="无牛" x="0" y="2" scaleX="1" scaleY="1" size="24" anchorOffsetX="0" width="80" textAlign="center" />
-					<e:Label text="倍率x1" x="0" y="37" scaleX="1" scaleY="1" size="20" textAlign="center" textColor="0xFFF900"
-					         width="80" />
-					<e:Image source="nn.card_113" x="80" y="0" scaleX="1" scaleY="1" />
-					<e:Image x="104" y="0" scaleX="1" scaleY="1" source="nn.card_213" />
-					<e:Image x="128" y="0" scaleX="1" scaleY="1" source="nn.card_308" />
-					<e:Image x="151" y="0" scaleX="1" scaleY="1" source="nn.card_409" />
-					<e:Image x="175" y="0" scaleX="1" scaleY="1" source="nn.card_109" />
-				</e:Group>
-				<e:Image source="nn.a10" y="66" x="16" />
-			</e:Group>
-		</e:Group>
-		<e:Image id="secondClose" source="c.btnclose" x="515" y="184.34" width="40" height="40" />
-	</e:Group>
-	<e:Group id="grpResult" y="173" horizontalCenter="0" locked="true" visible="false">
-		<e:Image source="nn.a11" x="0" y="0" />
-		<e:Group id="grpMax" x="0" y="3">
-			<e:Image source="nn.a14" y="0" x="0" locked="true" />
-			<e:Image id="grpMaxHead" source="nn.head" x="33" y="39" width="70" height="70" />
-			<e:Label id="grpMaxGold" text="123456789万" x="116.67" y="76" size="30" anchorOffsetX="0" width="249.67"
-			         textColor="0xFAEE0A" bold="true" italic="true" />
-			<e:Label id="grpMaxName" text="名字名字" x="117.67" y="42.67" textColor="0xFAEE0A" size="24" anchorOffsetX="0"
-			         width="261.67" bold="true" italic="true" />
-		</e:Group>
-		<e:Group x="2" y="118">
-			<e:Image source="nn.a13" y="0" x="0" locked="true" />
-			<e:Image id="grpBankerHead" source="nn.head" x="30" y="5" width="80" height="80" />
-			<e:Image id="grpBankerType" source="nn.n1" x="279.35" y="0" scaleX="1" scaleY="1" width="73" height="33" />
-			<e:Label id="labelBankerType" text="顺子" x="265" y="12" size="20" width="71" textAlign="center" textColor="0xFA0A1F"
-			         bold="true" />
-			<e:Label id="grpBankerBeishu" text="11倍" x="336" y="12" textColor="0xFAEE0A" size="20" bold="true" />
-			<e:Label id="grpBankerGold" text="123456789万" x="124.67" y="48" size="30" anchorOffsetX="0" width="238.67"
-			         textColor="0xCF3536" bold="true" italic="true" />
-			<e:Label id="grpBankerName" text="名字名字名字" x="120.34" y="12" textColor="0x49CF35" size="20" anchorOffsetX="0"
-			         width="147.67" />
-		</e:Group>
-		<e:Group x="2" y="210">
-			<e:Image source="nn.a12" x="0" y="0" locked="true" />
-			<e:Label text="倍率" x="38" y="49" size="16" locked="true" />
-			<e:Label text="押注" x="38" y="69" size="16" locked="true" />
-			<e:Label text="输赢" x="38" y="88" size="16" locked="true" visible="false" />
-			<e:Group x="80" y="49.7">
-				<e:Label id="labResult0_0" text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" />
-				<e:Label id="labResult1_0" text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" />
-				<e:Label id="labResult2_0" text="0" x="0" y="39" size="16" width="70" textAlign="center" visible="false" />
-			</e:Group>
-			<e:Group x="157" y="49.7">
-				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_1" />
-				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_1" />
-				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_1" visible="false" />
-			</e:Group>
-			<e:Group x="232" y="49.7">
-				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_2" />
-				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_2" />
-				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_2" visible="false" />
-			</e:Group>
-			<e:Group x="308" y="49.7">
-				<e:Label text="2倍" x="0" y="0" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult0_3" />
-				<e:Label text="0" x="0" y="20" size="16" textColor="0xFAEE0A" width="70" textAlign="center" id="labResult1_3" />
-				<e:Label text="0" x="0" y="39" size="16" width="70" textAlign="center" id="labResult2_3" visible="false" />
-			</e:Group>
-			<e:Image source="nn.n1" x="79.33" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
-			<e:Image source="nn.n1" x="155.99" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
-			<e:Image source="nn.n1" x="232.66" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
-			<e:Image source="nn.n1" x="307.33" y="18.66" scaleX="1" scaleY="1" width="73" height="33" visible="false" />
-			<e:Label id="labResultValue" text="结算：9999999" x="10" y="108" size="24" bold="true" width="364" textAlign="center"
-			         italic="true" />
-			<e:Label id="resultType0" text="标签" x="78" y="23" size="24" width="76" bold="true" textAlign="center" />
-			<e:Label id="resultType1" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="155" />
-			<e:Label id="resultType2" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="231" />
-			<e:Label id="resultType3" y="23" text="标签" textAlign="center" bold="true" width="76" size="24" x="307" />
-		</e:Group>
+	<e:Group width="361" height="137" x="1111" y="0" locked="true">
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_tiandi1_png"/>
+		<e:Image id="_paiLu_0_0" scaleX="1" scaleY="1" x="50" y="6" source="brnn_game_wrong1_png"/>
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_wrong1_png" x="50" y="36" id="_paiLu_0_1"/>
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_wrong1_png" x="50" y="66" id="_paiLu_0_2"/>
+		<e:Image scaleX="1" scaleY="1" source="brnn_game_wrong1_png" x="50" y="96" id="_paiLu_0_3"/>
+		<e:Image id="_paiLu_1_0" scaleX="1" scaleY="1" x="78" y="6" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_1_1" scaleX="1" scaleY="1" x="78" y="36" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_1_2" scaleX="1" scaleY="1" x="78" y="66" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_1_3" scaleX="1" scaleY="1" x="78" y="96" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_2_0" scaleX="1" scaleY="1" x="106" y="6" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_2_1" scaleX="1" scaleY="1" x="106" y="36" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_2_2" scaleX="1" scaleY="1" x="106" y="66" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_2_3" scaleX="1" scaleY="1" x="106" y="96" source="brnn_game_wrong_png"/>
+		<e:Image id="_paiLu_3_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="134" y="6"/>
+		<e:Image id="_paiLu_3_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="134" y="36"/>
+		<e:Image id="_paiLu_3_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="134" y="66"/>
+		<e:Image id="_paiLu_3_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="134" y="96"/>
+		<e:Image id="_paiLu_4_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="162" y="6"/>
+		<e:Image id="_paiLu_4_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="162" y="36"/>
+		<e:Image id="_paiLu_4_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="162" y="66"/>
+		<e:Image id="_paiLu_4_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="162" y="96"/>
+		<e:Image id="_paiLu_5_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="190" y="6"/>
+		<e:Image id="_paiLu_5_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="190" y="36"/>
+		<e:Image id="_paiLu_5_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="190" y="66"/>
+		<e:Image id="_paiLu_5_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="190" y="96"/>
+		<e:Image id="_paiLu_6_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="218" y="6"/>
+		<e:Image id="_paiLu_6_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="218" y="36"/>
+		<e:Image id="_paiLu_6_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="218" y="66"/>
+		<e:Image id="_paiLu_6_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="218" y="96"/>
+		<e:Image id="_paiLu_7_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="246" y="6"/>
+		<e:Image id="_paiLu_7_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="246" y="36"/>
+		<e:Image id="_paiLu_7_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="246" y="66"/>
+		<e:Image id="_paiLu_7_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="246" y="96"/>
+		<e:Image id="_paiLu_8_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="274" y="6"/>
+		<e:Image id="_paiLu_8_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="274" y="36"/>
+		<e:Image id="_paiLu_8_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="274" y="66"/>
+		<e:Image id="_paiLu_8_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="274" y="96"/>
+		<e:Image id="_paiLu_9_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="302" y="6"/>
+		<e:Image id="_paiLu_9_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="302" y="36"/>
+		<e:Image id="_paiLu_9_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="302" y="66"/>
+		<e:Image id="_paiLu_9_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="302" y="96"/>
+		<e:Image id="_paiLu_10_0" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="330" y="6"/>
+		<e:Image id="_paiLu_10_1" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="330" y="36"/>
+		<e:Image id="_paiLu_10_2" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="330" y="66"/>
+		<e:Image id="_paiLu_10_3" scaleX="1" scaleY="1" source="brnn_game_wrong_png" x="330" y="96"/>
 	</e:Group>
 
 
 
 
 
-	<e:Group id="_group_di" width="1472" height="152" x="0" y="676">
+
+
+
+
+	<e:Group id="_group_di" width="1472" height="152" x="0" y="676" locked="true">
 		<e:Image width="1472" height="152" source="brnn_game_bgdown_png"/>
 
 		<e:Group id="grpHead0" scaleX="1" scaleY="1" x="15" y="19.08">
@@ -504,6 +254,15 @@
 			<e:Image id="_btn_double_5" width="111" height="109" x="698.79" y="43" source="brnn_couma_1_5_png"/>
 			<e:Image id="_xuanzho" width="111" height="109" x="92.49" source="brnn_betBtn_light_png" y="39" touchEnabled="false" scaleX="1" scaleY="1"/>
 		</e:Group>
+		<e:Button id="_chongfu_xiazhu" label="" x="1222.4" y="54">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="brnn_game_button_png" source.down="brnn_game_button_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image x="1250.28" y="78.16" source="brnn_text_repeatbet_png" touchEnabled="false"/>
 
 
 
@@ -523,6 +282,9 @@
 		</e:Scroller>
 	</e:Group>
 	<e:Rect id="_xiPai_bg" width="1472" height="828" x="0" y="0" fillAlpha="0.5" touchEnabled="false" locked="true" visible="false"/>
+	<e:Image id="_tongPei" source="brnn_text_lose_png" touchEnabled="false" horizontalCenter="0" verticalCenter="0" visible="false"/>
+	<e:Image id="_tongSha" source="brnn_text_win_png" touchEnabled="false" horizontalCenter="0" verticalCenter="0" visible="false"/>
+	<e:Label id="_bianhao" text="牌局编号：50-1545030875-33540657-1" x="965" y="145" size="21" textAlign="right" width="500" textColor="0xa1a3ba" fontFamily="SimHei"/>
 	<e:Button id="_btn_close" label="" x="15" y="20" scaleX="1" scaleY="1" locked="true">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
@@ -547,7 +309,7 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Image id="_faPaiPos" x="968.44" y="150.56" source="brnn_card_0_png" visible="false" locked="true"/>
+	<e:Image id="_faPaiPos" x="968.44" y="150.56" source="brnn_card_0_png" locked="true" visible="false"/>
 
 
 
