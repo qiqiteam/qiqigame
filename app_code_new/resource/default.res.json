@@ -5580,11 +5580,6 @@
 			"name": "bar_throw_dice_mp3"
 		},
 		{
-			"url": "assets/sound/rbg/hall_bg.mp3",
-			"type": "sound",
-			"name": "hall_bg2_mp3"
-		},
-		{
 			"url": "assets/sound/rbg/window_open.mp3",
 			"type": "sound",
 			"name": "window_open_mp3"
@@ -5838,141 +5833,6 @@
 			"url": "assets/game/erbagang/bar_effect_lost_0.png",
 			"type": "image",
 			"name": "bar_effect_lost_0_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_ske.json",
-			"type": "json",
-			"name": "brnn_effect_begining_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_tex.json",
-			"type": "json",
-			"name": "brnn_effect_begining_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_tex.png",
-			"type": "image",
-			"name": "brnn_effect_begining_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_ske.json",
-			"type": "json",
-			"name": "brnn_effect_gamestart_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_tex.json",
-			"type": "json",
-			"name": "brnn_effect_gamestart_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_tex.png",
-			"type": "image",
-			"name": "brnn_effect_gamestart_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_ske.json",
-			"type": "json",
-			"name": "brnn_effect_stop_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_tex.json",
-			"type": "json",
-			"name": "brnn_effect_stop_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_tex.png",
-			"type": "image",
-			"name": "brnn_effect_stop_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_ske.json",
-			"type": "json",
-			"name": "brnn_effect_xiazhu_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_tex.json",
-			"type": "json",
-			"name": "brnn_effect_xiazhu_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_tex.png",
-			"type": "image",
-			"name": "brnn_effect_xiazhu_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_1/brnn_fapai_1_ske.json",
-			"type": "json",
-			"name": "brnn_fapai_1_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_1/brnn_fapai_1_tex.json",
-			"type": "json",
-			"name": "brnn_fapai_1_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_1/brnn_fapai_1_tex.png",
-			"type": "image",
-			"name": "brnn_fapai_1_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_2/brnn_fapai_2_ske.json",
-			"type": "json",
-			"name": "brnn_fapai_2_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_2/brnn_fapai_2_tex.json",
-			"type": "json",
-			"name": "brnn_fapai_2_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_2/brnn_fapai_2_tex.png",
-			"type": "image",
-			"name": "brnn_fapai_2_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_3/brnn_fapai_3_ske.json",
-			"type": "json",
-			"name": "brnn_fapai_3_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_3/brnn_fapai_3_tex.json",
-			"type": "json",
-			"name": "brnn_fapai_3_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_3/brnn_fapai_3_tex.png",
-			"type": "image",
-			"name": "brnn_fapai_3_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_4/brnn_fapai_4_ske.json",
-			"type": "json",
-			"name": "brnn_fapai_4_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_4/brnn_fapai_4_tex.json",
-			"type": "json",
-			"name": "brnn_fapai_4_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_4/brnn_fapai_4_tex.png",
-			"type": "image",
-			"name": "brnn_fapai_4_tex_png"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_5/brnn_fapai_5_ske.json",
-			"type": "json",
-			"name": "brnn_fapai_5_ske_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_5/brnn_fapai_5_tex.json",
-			"type": "json",
-			"name": "brnn_fapai_5_tex_json"
-		},
-		{
-			"url": "assets/dragonbones/brnn_fapai_5/brnn_fapai_5_tex.png",
-			"type": "image",
-			"name": "brnn_fapai_5_tex_png"
 		},
 		{
 			"url": "assets/sound/zjh/jh.openCard.mp3",
@@ -8025,6 +7885,751 @@
 			"type": "sheet",
 			"name": "room_poker_json",
 			"subkeys": "card_0_1,card_0_10,card_0_11,card_0_12,card_0_13,card_0_2,card_0_3,card_0_4,card_0_5,card_0_6,card_0_7,card_0_8,card_0_9,card_1_1,card_1_10,card_1_11,card_1_12,card_1_13,card_1_2,card_1_3,card_1_4,card_1_5,card_1_6,card_1_7,card_1_8,card_1_9,card_2_1,card_2_10,card_2_11,card_2_12,card_2_13,card_2_2,card_2_3,card_2_4,card_2_5,card_2_6,card_2_7,card_2_8,card_2_9,card_3_1,card_3_10,card_3_11,card_3_12,card_3_13,card_3_2,card_3_3,card_3_4,card_3_5,card_3_6,card_3_7,card_3_8,card_3_9,card_dawang,card_xiaowang,dating_beimian,dating_pukepaimengban,small_0_1,small_0_10,small_0_11,small_0_12,small_0_13,small_0_2,small_0_3,small_0_4,small_0_5,small_0_6,small_0_7,small_0_8,small_0_9,small_1_1,small_1_10,small_1_11,small_1_12,small_1_13,small_1_2,small_1_3,small_1_4,small_1_5,small_1_6,small_1_7,small_1_8,small_1_9,small_2_1,small_2_10,small_2_11,small_2_12,small_2_13,small_2_2,small_2_3,small_2_4,small_2_5,small_2_6,small_2_7,small_2_8,small_2_9,small_3_1,small_3_10,small_3_11,small_3_12,small_3_13,small_3_2,small_3_3,small_3_4,small_3_5,small_3_6,small_3_7,small_3_8,small_3_9,small_beimian,small_dawang,small_xiaowang"
+		},
+		{
+			"url": "assets/sound/rbg/rb_hall_bg.mp3",
+			"type": "sound",
+			"name": "rb_hall_bg_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/dz_hall_bg.mp3",
+			"type": "sound",
+			"name": "dz_hall_bg_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/dz_window_open.mp3",
+			"type": "sound",
+			"name": "dz_window_open_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/br_chipfly_long.mp3",
+			"type": "sound",
+			"name": "br_chipfly_long_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/br_chipfly_short.mp3",
+			"type": "sound",
+			"name": "br_chipfly_short_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/br_nn_wingold.mp3",
+			"type": "sound",
+			"name": "br_nn_wingold_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_alllose.mp3",
+			"type": "sound",
+			"name": "brnn_alllose_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_allwin.mp3",
+			"type": "sound",
+			"name": "brnn_allwin_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_bet_countdown2.mp3",
+			"type": "sound",
+			"name": "brnn_bet_countdown2_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_bet_lasttime.mp3",
+			"type": "sound",
+			"name": "brnn_bet_lasttime_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_bet_start.mp3",
+			"type": "sound",
+			"name": "brnn_bet_start_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_bet_stop.mp3",
+			"type": "sound",
+			"name": "brnn_bet_stop_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_fanpai.mp3",
+			"type": "sound",
+			"name": "brnn_fanpai_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_gamebg.mp3",
+			"type": "sound",
+			"name": "brnn_gamebg_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/brnn_sendcard.mp3",
+			"type": "sound",
+			"name": "brnn_sendcard_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/cards_dealing.mp3",
+			"type": "sound",
+			"name": "cards_dealing_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_0.mp3",
+			"type": "sound",
+			"name": "femalecow_0_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_1.mp3",
+			"type": "sound",
+			"name": "femalecow_1_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_10.mp3",
+			"type": "sound",
+			"name": "femalecow_10_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_2.mp3",
+			"type": "sound",
+			"name": "femalecow_2_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_4.mp3",
+			"type": "sound",
+			"name": "femalecow_4_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_5.mp3",
+			"type": "sound",
+			"name": "femalecow_5_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_6.mp3",
+			"type": "sound",
+			"name": "femalecow_6_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_7.mp3",
+			"type": "sound",
+			"name": "femalecow_7_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_8.mp3",
+			"type": "sound",
+			"name": "femalecow_8_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/femalecow_9.mp3",
+			"type": "sound",
+			"name": "femalecow_9_mp3"
+		},
+		{
+			"url": "assets/sound/brnn/nn_scrollnumber.mp3",
+			"type": "sound",
+			"name": "nn_scrollnumber_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/dzpk_gamebg.mp3",
+			"type": "sound",
+			"name": "dzpk_gamebg_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_add.mp3",
+			"type": "sound",
+			"name": "effect_add_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_allin.mp3",
+			"type": "sound",
+			"name": "effect_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_bipai.mp3",
+			"type": "sound",
+			"name": "effect_bipai_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_chip.mp3",
+			"type": "sound",
+			"name": "effect_chip_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_chipflychizi.mp3",
+			"type": "sound",
+			"name": "effect_chipflychizi_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_chipflypeople.mp3",
+			"type": "sound",
+			"name": "effect_chipflypeople_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_fanpai.mp3",
+			"type": "sound",
+			"name": "effect_fanpai_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_fapai.mp3",
+			"type": "sound",
+			"name": "effect_fapai_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_hepai.mp3",
+			"type": "sound",
+			"name": "effect_hepai_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_huakuaidaoding.mp3",
+			"type": "sound",
+			"name": "effect_huakuaidaoding_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_newpass.mp3",
+			"type": "sound",
+			"name": "effect_newpass_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_qp.mp3",
+			"type": "sound",
+			"name": "effect_qp_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_turn0.mp3",
+			"type": "sound",
+			"name": "effect_turn0_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_turn2.mp3",
+			"type": "sound",
+			"name": "effect_turn2_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_win.mp3",
+			"type": "sound",
+			"name": "effect_win_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_win10.mp3",
+			"type": "sound",
+			"name": "effect_win10_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_win7.mp3",
+			"type": "sound",
+			"name": "effect_win7_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_win8.mp3",
+			"type": "sound",
+			"name": "effect_win8_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_win9.mp3",
+			"type": "sound",
+			"name": "effect_win9_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/effect_zhuanpai.mp3",
+			"type": "sound",
+			"name": "effect_zhuanpai_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_0_allin.mp3",
+			"type": "sound",
+			"name": "man_0_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_0_call.mp3",
+			"type": "sound",
+			"name": "man_0_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_0_fold.mp3",
+			"type": "sound",
+			"name": "man_0_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_0_raise.mp3",
+			"type": "sound",
+			"name": "man_0_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_1_allin.mp3",
+			"type": "sound",
+			"name": "man_1_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_1_call.mp3",
+			"type": "sound",
+			"name": "man_1_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_1_fold.mp3",
+			"type": "sound",
+			"name": "man_1_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_1_raise.mp3",
+			"type": "sound",
+			"name": "man_1_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_2_allin.mp3",
+			"type": "sound",
+			"name": "man_2_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_2_call.mp3",
+			"type": "sound",
+			"name": "man_2_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_2_fold.mp3",
+			"type": "sound",
+			"name": "man_2_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_2_raise.mp3",
+			"type": "sound",
+			"name": "man_2_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_3_allin.mp3",
+			"type": "sound",
+			"name": "man_3_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_3_call.mp3",
+			"type": "sound",
+			"name": "man_3_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_3_fold.mp3",
+			"type": "sound",
+			"name": "man_3_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_3_raise.mp3",
+			"type": "sound",
+			"name": "man_3_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_4_allin.mp3",
+			"type": "sound",
+			"name": "man_4_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_4_call.mp3",
+			"type": "sound",
+			"name": "man_4_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_4_fold.mp3",
+			"type": "sound",
+			"name": "man_4_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_4_raise.mp3",
+			"type": "sound",
+			"name": "man_4_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_5_allin.mp3",
+			"type": "sound",
+			"name": "man_5_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_5_call.mp3",
+			"type": "sound",
+			"name": "man_5_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_5_fold.mp3",
+			"type": "sound",
+			"name": "man_5_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_5_raise.mp3",
+			"type": "sound",
+			"name": "man_5_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_6_allin.mp3",
+			"type": "sound",
+			"name": "man_6_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_6_call.mp3",
+			"type": "sound",
+			"name": "man_6_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_6_fold.mp3",
+			"type": "sound",
+			"name": "man_6_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_6_raise.mp3",
+			"type": "sound",
+			"name": "man_6_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_7_allin.mp3",
+			"type": "sound",
+			"name": "man_7_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_7_call.mp3",
+			"type": "sound",
+			"name": "man_7_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_7_fold.mp3",
+			"type": "sound",
+			"name": "man_7_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/man_7_raise.mp3",
+			"type": "sound",
+			"name": "man_7_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_0_allin.mp3",
+			"type": "sound",
+			"name": "woman_0_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_0_call.mp3",
+			"type": "sound",
+			"name": "woman_0_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_0_fold.mp3",
+			"type": "sound",
+			"name": "woman_0_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_0_raise.mp3",
+			"type": "sound",
+			"name": "woman_0_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_1_allin.mp3",
+			"type": "sound",
+			"name": "woman_1_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_1_call.mp3",
+			"type": "sound",
+			"name": "woman_1_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_1_fold.mp3",
+			"type": "sound",
+			"name": "woman_1_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_1_raise.mp3",
+			"type": "sound",
+			"name": "woman_1_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_2_allin.mp3",
+			"type": "sound",
+			"name": "woman_2_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_2_call.mp3",
+			"type": "sound",
+			"name": "woman_2_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_2_fold.mp3",
+			"type": "sound",
+			"name": "woman_2_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_2_raise.mp3",
+			"type": "sound",
+			"name": "woman_2_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_3_allin.mp3",
+			"type": "sound",
+			"name": "woman_3_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_3_call.mp3",
+			"type": "sound",
+			"name": "woman_3_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_3_fold.mp3",
+			"type": "sound",
+			"name": "woman_3_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_3_raise.mp3",
+			"type": "sound",
+			"name": "woman_3_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_4_allin.mp3",
+			"type": "sound",
+			"name": "woman_4_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_4_call.mp3",
+			"type": "sound",
+			"name": "woman_4_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_4_fold.mp3",
+			"type": "sound",
+			"name": "woman_4_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_4_raise.mp3",
+			"type": "sound",
+			"name": "woman_4_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_5_allin.mp3",
+			"type": "sound",
+			"name": "woman_5_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_5_call.mp3",
+			"type": "sound",
+			"name": "woman_5_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_5_fold.mp3",
+			"type": "sound",
+			"name": "woman_5_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_5_raise.mp3",
+			"type": "sound",
+			"name": "woman_5_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_6_allin.mp3",
+			"type": "sound",
+			"name": "woman_6_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_6_call.mp3",
+			"type": "sound",
+			"name": "woman_6_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_6_fold.mp3",
+			"type": "sound",
+			"name": "woman_6_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_6_raise.mp3",
+			"type": "sound",
+			"name": "woman_6_raise_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_7_allin.mp3",
+			"type": "sound",
+			"name": "woman_7_allin_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_7_call.mp3",
+			"type": "sound",
+			"name": "woman_7_call_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_7_fold.mp3",
+			"type": "sound",
+			"name": "woman_7_fold_mp3"
+		},
+		{
+			"url": "assets/sound/dzpk/woman_7_raise.mp3",
+			"type": "sound",
+			"name": "woman_7_raise_mp3"
+		},
+		{
+			"url": "assets/dragonbones/brnn_yingjia/brnn_yingjia_tex.png",
+			"type": "image",
+			"name": "brnn_yingjia_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_yingjia/brnn_yingjia_ske.json",
+			"type": "json",
+			"name": "brnn_yingjia_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_yingjia/brnn_yingjia_tex.json",
+			"type": "json",
+			"name": "brnn_yingjia_tex_json"
+		},
+		{
+			"url": "assets/game/dzpk/dzpk_gameBg.png",
+			"type": "image",
+			"name": "dzpk_gameBg_png"
+		},
+		{
+			"url": "assets/game/dzpk/light1.png",
+			"type": "image",
+			"name": "light1_png"
+		},
+		{
+			"url": "assets/game/dzpk/light2.png",
+			"type": "image",
+			"name": "light2_png"
+		},
+		{
+			"url": "assets/game/dzpk/light3.png",
+			"type": "image",
+			"name": "light3_png"
+		},
+		{
+			"url": "assets/game/dzpk/light4.png",
+			"type": "image",
+			"name": "light4_png"
+		},
+		{
+			"url": "assets/game/dzpk/light5.png",
+			"type": "image",
+			"name": "light5_png"
+		},
+		{
+			"url": "assets/game/dzpk/light6.png",
+			"type": "image",
+			"name": "light6_png"
+		},
+		{
+			"url": "assets/game/dzpk/light7.png",
+			"type": "image",
+			"name": "light7_png"
+		},
+		{
+			"url": "assets/game/dzpk/light8.png",
+			"type": "image",
+			"name": "light8_png"
+		},
+		{
+			"url": "assets/game/dzpk/light9.png",
+			"type": "image",
+			"name": "light9_png"
+		},
+		{
+			"url": "assets/game/dzpk/progressTimerBg.png",
+			"type": "image",
+			"name": "progressTimerBg_png"
+		},
+		{
+			"url": "assets/game/dzpk/progressTimerBlink.png",
+			"type": "image",
+			"name": "progressTimerBlink_png"
+		},
+		{
+			"url": "assets/game/dzpk/table_blue_0.png",
+			"type": "image",
+			"name": "table_blue_0_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_button.png",
+			"type": "image",
+			"name": "brnn_game_button_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_right.png",
+			"type": "image",
+			"name": "brnn_game_right_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_right1.png",
+			"type": "image",
+			"name": "brnn_game_right1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_tiandi1.png",
+			"type": "image",
+			"name": "brnn_game_tiandi1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_wrong.png",
+			"type": "image",
+			"name": "brnn_game_wrong_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_text_lose.png",
+			"type": "image",
+			"name": "brnn_text_lose_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_game_wrong1.png",
+			"type": "image",
+			"name": "brnn_game_wrong1_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_text_win.png",
+			"type": "image",
+			"name": "brnn_text_win_png"
+		},
+		{
+			"url": "assets/game/brnn/brnn_text_repeatbet.png",
+			"type": "image",
+			"name": "brnn_text_repeatbet_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_tex.png",
+			"type": "image",
+			"name": "brnn_effect_xiazhu_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_tex.png",
+			"type": "image",
+			"name": "brnn_effect_stop_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_tex.png",
+			"type": "image",
+			"name": "brnn_effect_begining_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_tex.png",
+			"type": "image",
+			"name": "brnn_effect_gamestart_tex_png"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_ske.json",
+			"type": "json",
+			"name": "brnn_effect_xiazhu_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_ske.json",
+			"type": "json",
+			"name": "brnn_effect_stop_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_xiazhu/brnn_effect_xiazhu_tex.json",
+			"type": "json",
+			"name": "brnn_effect_xiazhu_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_stop/brnn_effect_stop_tex.json",
+			"type": "json",
+			"name": "brnn_effect_stop_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_ske.json",
+			"type": "json",
+			"name": "brnn_effect_gamestart_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_ske.json",
+			"type": "json",
+			"name": "brnn_effect_begining_ske_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_gamestart/brnn_effect_gamestart_tex.json",
+			"type": "json",
+			"name": "brnn_effect_gamestart_tex_json"
+		},
+		{
+			"url": "assets/dragonbones/brnn_effect_begining/brnn_effect_begining_tex.json",
+			"type": "json",
+			"name": "brnn_effect_begining_tex_json"
 		}
 	]
 }
