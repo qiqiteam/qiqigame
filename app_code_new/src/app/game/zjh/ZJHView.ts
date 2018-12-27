@@ -1137,9 +1137,10 @@ class ZJHView extends eui.Component {
                 if (this.IsKanpai[index] == false) {
                     this.timeIndex4 = setTimeout(() => {
                         this.onKanPaiClick(losepoke);
+                        this['imgCardType' + index].source = '';
                     }, 4000)
                 } else if (this.IsKanpai[index] == true) {
-                    this['imgCardType' + index].visible = false;
+                    this['imgCardType' + index].source = '';
                 }
                 if (this.anniuliuguang) {
                     this.anniuliuguang.stop();
@@ -1151,7 +1152,6 @@ class ZJHView extends eui.Component {
                 this.timeIndex5 = setTimeout(() => {
                     this._btn_kanpai.visible = false;
                     this.playClickSound(ZJHUtil.getInstance().getSoundEffect(7));
-                    this['imgCardbg' + index].source = '';
                     this['imgbipai_lose' + index].source = 'gf_flag_bpsb_png';
                     this.abandonStateBtn();
                 }, 4000)
@@ -1160,18 +1160,19 @@ class ZJHView extends eui.Component {
                 UserInfo.getInstance().goldcoins = data.param.userGolds;
             } else if (UserInfo.getInstance().uid != data.param.userId) {
                 //执行AI图像被轰炸动作{}................AI比牌输
+                console.log("当前玩家人数：", data.param.playerNum);
                 if (data.param.playerNum == 2) {
                     this.timeIndex6 = setTimeout(() => {
                         this.onPlayerKanPai(index, losepoke);
+                        this['imgCardType' + index].source = '';
                         this['imgbipai_lose' + index].source = 'gf_flag_bpsb_png';
                         this['imgCardbg' + index].source = 'gf_pxzs_png';
-                    }, 4000)
+                    }, 2000)
                 } else if (data.param.playerNum > 2) {
                     this.timeIndex7 = setTimeout(() => {
                         this['imgbipai_lose' + index].source = 'gf_flag_bpsb_png';
                     }, 4000)
                 }
-                this['imgCardType' + index].source = '';
                 this['imgis_kanpai' + index].source = '';
                 this['imgCardbg' + index].source = '';
                 this.playerOperatingState[index] = 3;//玩家弃牌状态
@@ -1468,9 +1469,10 @@ class ZJHView extends eui.Component {
                 this.zjheffectwin2.y = point.y;
                 this.addChild(this.zjheffectwin2);
                 this.zjheffectwin2.visible = true;
-                this.zjheffectwin2.play();
-                console.log("赢得是其他玩家");
 
+                this.zjheffectwin2.play();
+
+                console.log("赢得是其他玩家");
             }
             this.operateTimer.stop();
             if (this.anniuliuguang) {
